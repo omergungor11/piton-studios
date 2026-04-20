@@ -21,7 +21,7 @@ Pixel Ninja firmasinin video portfolyo websitesi. Video tabanli sunumlari sergil
 
 ## Mevcut Durum
 
-**Progress**: 0/7 task (%0) — Phase 0 basliyor.
+**Progress**: 15/17 task (%88) — Phase 2 tamamlandi, Phase 1 kismen devam ediyor.
 
 > Her yeni session'da `ninja-tasks/task-index.md` oku veya `/cold-start` calistir.
 
