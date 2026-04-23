@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { videoUrl } from '@/lib/media';
 import { STORIES } from '@/lib/data';
 
 export default function StoriesScene() {
@@ -52,7 +53,7 @@ export default function StoriesScene() {
             >
               <div className="story-media">
                 <span className="story-no">{s.no}</span>
-                <video src={s.video} autoPlay muted loop playsInline preload="metadata" />
+                <video src={videoUrl(s.video)} autoPlay muted loop playsInline preload="metadata" />
                 <div className="story-fade" />
                 <div className="story-meta-bottom">
                   <span>{s.year}</span>

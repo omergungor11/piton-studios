@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageShell from '@/components/page-shell';
+import { videoUrl } from '@/lib/media';
 
 interface GalleryImage {
   id: string;
@@ -14,16 +15,16 @@ interface GalleryImage {
 
 // Demo data — will be replaced by Supabase
 const DEMO_IMAGES: GalleryImage[] = [
-  { id: '1', src: '/assets/hero.mp4', title: 'Studio Reel', category: 'Motion', width: 16, height: 9 },
-  { id: '2', src: '/assets/story-01.mp4', title: 'Red Knight', category: 'Title', width: 9, height: 16 },
-  { id: '3', src: '/assets/story-02.mp4', title: 'Vertical / 26', category: 'Reel', width: 9, height: 16 },
-  { id: '4', src: '/assets/about.mp4', title: 'Studio', category: 'Behind', width: 9, height: 16 },
-  { id: '5', src: '/assets/story-03.mp4', title: 'Polaris Key 04', category: 'Motion', width: 9, height: 16 },
-  { id: '6', src: '/assets/red-knight.mp4', title: 'Red Knight Full', category: 'Title', width: 4, height: 5 },
-  { id: '7', src: '/assets/reel-b.mp4', title: 'Longitude Reel', category: 'Reel', width: 9, height: 16 },
-  { id: '8', src: '/assets/note.mp4', title: 'Note Film', category: 'Motion', width: 9, height: 16 },
-  { id: '9', src: '/assets/story-04.mp4', title: 'Untitled', category: 'Behind', width: 9, height: 16 },
-  { id: '10', src: '/assets/story-05.mp4', title: 'Night Cut', category: 'Motion', width: 9, height: 16 },
+  { id: '1', src: videoUrl('hero.mp4'), title: 'Studio Reel', category: 'Motion', width: 16, height: 9 },
+  { id: '2', src: videoUrl('story-01.mp4'), title: 'Red Knight', category: 'Title', width: 9, height: 16 },
+  { id: '3', src: videoUrl('story-02.mp4'), title: 'Vertical / 26', category: 'Reel', width: 9, height: 16 },
+  { id: '4', src: videoUrl('about.mp4'), title: 'Studio', category: 'Behind', width: 9, height: 16 },
+  { id: '5', src: videoUrl('story-03.mp4'), title: 'Polaris Key 04', category: 'Motion', width: 9, height: 16 },
+  { id: '6', src: videoUrl('red-knight.mp4'), title: 'Red Knight Full', category: 'Title', width: 4, height: 5 },
+  { id: '7', src: videoUrl('reel-b.mp4'), title: 'Longitude Reel', category: 'Reel', width: 9, height: 16 },
+  { id: '8', src: videoUrl('note.mp4'), title: 'Note Film', category: 'Motion', width: 9, height: 16 },
+  { id: '9', src: videoUrl('story-04.mp4'), title: 'Untitled', category: 'Behind', width: 9, height: 16 },
+  { id: '10', src: videoUrl('story-05.mp4'), title: 'Night Cut', category: 'Motion', width: 9, height: 16 },
 ];
 
 const CATEGORIES = ['All', ...Array.from(new Set(DEMO_IMAGES.map((i) => i.category)))];

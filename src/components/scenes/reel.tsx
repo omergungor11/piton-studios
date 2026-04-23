@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { videoUrl } from '@/lib/media';
 
 export default function ReelScene() {
   const t = useTranslations('reel');
@@ -32,7 +33,7 @@ export default function ReelScene() {
       </div>
       <div className="case-media reel-media" data-cursor="play" data-cursor-label="Play ↗">
         <span className="tag-img">{t('mediaTag')}</span>
-        <video className="case-img" src="/assets/reel-b.mp4" autoPlay muted loop playsInline preload="auto" />
+        <video className="case-img" src={videoUrl('reel-b.mp4')} autoPlay muted loop playsInline preload="auto" />
         <span className="scale">{t('scale')}</span>
       </div>
     </div>
