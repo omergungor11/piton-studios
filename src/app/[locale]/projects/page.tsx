@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { WORKS, STORIES } from '@/lib/data';
+import { videoUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
 
 const YEARS = ['All', ...Array.from(new Set([...WORKS.map((w) => w.year), ...STORIES.map((s) => s.year)])).sort((a, b) => b.localeCompare(a))];
@@ -89,7 +90,7 @@ export default function ProjectsPage() {
             {filteredStories.map((s) => (
               <Link key={s.no} href={`/projects/${s.slug}`} className="pp-story-card glass" data-cursor="play" data-cursor-label="Play">
                 <div className="pp-story-media">
-                  <video src={s.video} muted loop playsInline preload="metadata" />
+                  <video src={videoUrl(s.video)} muted loop playsInline preload="metadata" />
                   <div className="pp-story-fade" />
                   <span className="pp-story-no">{s.no}</span>
                   <div className="pp-story-meta-bottom">
