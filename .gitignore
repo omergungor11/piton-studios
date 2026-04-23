@@ -27,11 +27,12 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Videos (too large for git — use Supabase Storage)
-videos/*.mp4
-videos/*.mov
-videos/*.avi
-videos/*.webm
+# Videos & large assets (use Supabase Storage)
+videos/
+public/assets/*.mp4
+public/assets/optimized/
+Portgolio/
+Portgolio.zip
 
 # Debug
 npm-debug.log*

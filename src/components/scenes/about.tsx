@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+import { videoUrl } from '@/lib/media';
 
 export default function AboutScene() {
   const t = useTranslations('about');
@@ -49,7 +50,7 @@ export default function AboutScene() {
         </div>
         <div className="about-media" data-cursor="play" data-cursor-label="Play">
           <span className="about-media-tag">{t('mediaTag')}</span>
-          <video src="/assets/about.mp4" autoPlay muted loop playsInline preload="auto" />
+          <video src={videoUrl('about.mp4')} autoPlay muted loop playsInline preload="auto" />
           <div className="about-media-fade" />
           <div className="about-media-caption">
             <span>{t('location')}</span>

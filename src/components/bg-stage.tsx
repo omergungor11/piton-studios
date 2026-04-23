@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { videoUrl } from '@/lib/media';
 
 interface BgStageProps {
   active: string;
@@ -59,7 +60,7 @@ export default function BgStage({ active }: BgStageProps) {
     <div className="bg-stage" data-scene={active}>
       <video
         ref={vidRef}
-        src="/assets/hero.mp4"
+        src={videoUrl('hero.mp4')}
         autoPlay
         muted
         loop

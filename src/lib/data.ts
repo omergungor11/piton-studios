@@ -94,7 +94,7 @@ export const WORKS: Work[] = [
     year: "2024",
     role: "Design / Development",
     tags: ["WordPress", "SEO", "Multi-language", "CMS"],
-    video: "/assets/story-01.mp4",
+    video: "story-01.mp4",
     summary: "Construction company corporate site with product catalog.",
     body: [
       "Velis LTD için 25 yılı aşkın sektör deneyimini yansıtan kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerine ürün kataloğu, çok dilli yapı ve SEO optimizasyonu dahil.",
@@ -111,7 +111,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Multi-language", "SEO", "Responsive"],
-    video: "/assets/story-02.mp4",
+    video: "story-02.mp4",
     summary: "Multi-language elevator company website with SEO optimization.",
     body: [
       "BT Elevator için Eskişehir merkezli asansör firmasının kurumsal web sitesini tasarladık ve geliştirdik. Çok dilli yapı, SEO optimizasyonu ve modern tasarım anlayışıyla sektörde fark yaratan bir dijital varlık oluşturduk.",
@@ -128,7 +128,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Full-stack / Design",
     tags: ["Next.js", "Platform", "Classifieds", "SEO"],
-    video: "/assets/story-03.mp4",
+    video: "story-03.mp4",
     summary: "Free classifieds platform for North Cyprus with multiple categories.",
     body: [
       "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
@@ -145,7 +145,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
-    video: "/assets/story-04.mp4",
+    video: "story-04.mp4",
     summary: "Real estate and investment company website in North Cyprus.",
     body: [
       "Gazimağusa merkezli Nexon Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
@@ -162,7 +162,7 @@ export const WORKS: Work[] = [
     year: "2022",
     role: "Design / Development",
     tags: ["E-commerce", "Payment Integration", "WordPress", "WooCommerce"],
-    video: "/assets/story-05.mp4",
+    video: "story-05.mp4",
     summary: "E-commerce packaging supplies store with payment integration.",
     body: [
       "Bilecik merkezli Ambalaj Cini için online ambalaj malzemeleri satış platformu geliştirdik. Ödeme entegrasyonu, ürün yönetimi ve stok takibi dahil kapsamlı bir e-ticaret altyapısı kurduk.",
@@ -179,7 +179,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["WordPress", "Corporate", "Automotive", "Trading"],
-    video: "/assets/reel-b.mp4",
+    video: "reel-b.mp4",
     summary: "Automotive spare parts trading company corporate website.",
     body: [
       "Avie Global Trading için otomotiv yedek parça ticareti alanında kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerinde şirket profilini, ürün yelpazesini ve iş ortaklıklarını sergileyen profesyonel bir platform oluşturduk.",
@@ -613,7 +613,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Full-stack / Design",
     tags: ["Web App", "Transportation", "Mapping"],
-    video: "/assets/story-01.mp4",
+    video: "story-01.mp4",
     body: [
       "Toplu taşıma için minibüs güzergah takip sistemi olan Dolmuş web uygulamasını geliştirdik. Kullanıcılar güzergahları kolayca görüntüleyebiliyor ve seyahat planlaması yapabiliyor.",
       "Gerçek zamanlı güzergah bilgisi, kullanıcı dostu arayüz ve mobil uyumlu tasarım ile şehir içi ulaşımı kolaylaştırdık.",
@@ -628,7 +628,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Events", "London"],
-    video: "/assets/story-02.mp4",
+    video: "story-02.mp4",
     body: [
       "Londra merkezli Orchid Tent için çadır ve etkinlik kiralama hizmeti sunan kurumsal bir web sitesi tasarladık. Şık tasarım ve kolay navigasyon ile potansiyel müşterilerin hızlıca bilgi edinmesini sağladık.",
       "Etkinlik galerisi, fiyat teklifi formu ve responsive tasarım ile Londra'daki etkinlik sektöründe güçlü bir dijital varlık oluşturduk.",
@@ -643,7 +643,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["WordPress", "Event", "Conference"],
-    video: "/assets/story-03.mp4",
+    video: "story-03.mp4",
     body: [
       "Gabfest 2025 konferansı için WordPress altyapısında modern ve bilgilendirici bir etkinlik web sitesi tasarladık. Program, konuşmacılar ve kayıt bilgilerini düzenli bir şekilde sunduk.",
       "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık.",
@@ -658,7 +658,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "SEO / Development",
     tags: ["WordPress", "SEO", "Directory", "Entertainment"],
-    video: "/assets/story-04.mp4",
+    video: "story-04.mp4",
     body: [
       "KKTC'deki gece kulüplerini ve eğlence mekanlarını listeleyen SEO odaklı bir rehber sitesi geliştirdik. WordPress altyapısı üzerinde mekan profilleri, etkinlik takvimleri ve kullanıcı yorumları dahil.",
       "SEO optimizasyonu ile arama motorlarında gece hayatı aramaları için üst sıralarda yer almayı başardık. Kullanıcı deneyimi ve hızlı erişim önceliğimiz oldu.",
@@ -673,7 +673,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Transfer", "Booking"],
-    video: "/assets/story-05.mp4",
+    video: "story-05.mp4",
     body: [
       "Aydın Transfer için havalimanı ve şehir içi transfer hizmeti sunan kurumsal bir web sitesi tasarladık. Kolay rezervasyon akışı, fiyat hesaplama ve iletişim formları ile müşteri deneyimini optimize ettik.",
       "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık.",

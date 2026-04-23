@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+import { videoUrl } from '@/lib/media';
 
 const ICONS = [
   /* 0: Hızlı Teslimat */ <svg key="0" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="16" cy="16" r="10" /><path d="M16 6v10l6 4" /></svg>,
@@ -52,7 +53,7 @@ export default function ManifestoScene() {
       <Reveal variant="scaleIn" delay={0.2}>
       <div className="note-media" data-cursor="play" data-cursor-label="Play">
         <span className="note-media-tag">[ NOTE · FILM ]</span>
-        <video src="/assets/note.mp4" autoPlay muted loop playsInline preload="auto" />
+        <video src={videoUrl('note.mp4')} autoPlay muted loop playsInline preload="auto" />
         <div className="note-media-fade" />
         <div className="note-media-caption">
           <span>Loop</span><span>— PX · NJ</span>

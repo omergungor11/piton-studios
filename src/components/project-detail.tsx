@@ -3,6 +3,7 @@
 import { useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { videoUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 
@@ -24,7 +25,7 @@ export default function ProjectDetail({ project }: Props) {
   const year = project.year;
   const role = project.role;
   const tags = project.tags;
-  const video = project.type === 'work' ? project.video : project.video;
+  const video = videoUrl(project.type === 'work' ? project.video : project.video);
 
   const client = project.type === 'work' ? project.client : project.client;
   const kind = project.type === 'work' ? project.kind : undefined;
@@ -155,7 +156,7 @@ export default function ProjectDetail({ project }: Props) {
             >
               <div className="pd-nav-card-media">
                 <video
-                  src={prev.type === 'work' ? prev.video : prev.video}
+                  src={videoUrl(prev.type === 'work' ? prev.video : prev.video)}
                   muted
                   loop
                   playsInline
@@ -187,7 +188,7 @@ export default function ProjectDetail({ project }: Props) {
               </div>
               <div className="pd-nav-card-media">
                 <video
-                  src={next.type === 'work' ? next.video : next.video}
+                  src={videoUrl(next.type === 'work' ? next.video : next.video)}
                   muted
                   loop
                   playsInline
