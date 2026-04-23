@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { WORKS, STORIES } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 
@@ -9,6 +10,9 @@ const YEARS = ['All', ...Array.from(new Set([...WORKS.map((w) => w.year), ...STO
 
 export default function ProjectsPage() {
   const [activeYear, setActiveYear] = useState('All');
+  const t = useTranslations('projectsPage');
+  const tw = useTranslations('works');
+  const ts = useTranslations('stories');
 
   const filteredWorks = activeYear === 'All' ? WORKS : WORKS.filter((w) => w.year === activeYear);
   const filteredStories = activeYear === 'All' ? STORIES : STORIES.filter((s) => s.year === activeYear);
@@ -17,12 +21,14 @@ export default function ProjectsPage() {
     <PageShell>
       {/* Hero */}
       <section className="sp-hero">
-        <div className="sp-hero-eyebrow">Projects</div>
+        <div className="sp-hero-eyebrow">{t('title')}</div>
         <h1 className="sp-hero-title">
-          Selected <span className="em">works</span>.
+          {t.rich('headline', {
+            accent: (chunks) => <span className="em">{chunks}</span>,
+          })}
         </h1>
         <p className="sp-hero-sub">
-          A curated index of brand films, identities, editorial systems, and moving image — filed by the moment each was made.
+          {t('subtitle')}
         </p>
       </section>
 
@@ -35,7 +41,7 @@ export default function ProjectsPage() {
             onClick={() => setActiveYear(year)}
             data-cursor="hover"
           >
-            {year}
+            {year === 'All' ? t('filterAll') : year}
           </button>
         ))}
       </section>
@@ -43,16 +49,16 @@ export default function ProjectsPage() {
       {/* Projects table */}
       <section className="pp-section">
         <div className="pp-section-head">
-          <span className="pp-section-tag">§ 01 · Selected Works</span>
+          <span className="pp-section-tag">{t('worksSection')}</span>
           <span className="pp-section-count">[{String(filteredWorks.length).padStart(2, '0')}]</span>
         </div>
         <div className="pp-table glass">
           <div className="pp-table-header">
             <span>No.</span>
-            <span>Project</span>
-            <span className="pp-hide-mobile">Client</span>
-            <span className="pp-hide-mobile">Discipline</span>
-            <span>Year</span>
+            <span>{t('colProject')}</span>
+            <span className="pp-hide-mobile">{t('colClient')}</span>
+            <span className="pp-hide-mobile">{t('colDiscipline')}</span>
+            <span>{t('colYear')}</span>
           </div>
           {filteredWorks.map((w) => (
             <Link
@@ -63,9 +69,9 @@ export default function ProjectsPage() {
               data-cursor-label="View"
             >
               <span className="pp-row-n">[{w.n}]</span>
-              <span className="pp-row-title">{w.title}</span>
+              <span className="pp-row-title">{tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title}</span>
               <span className="pp-row-meta pp-hide-mobile">{w.client}</span>
-              <span className="pp-row-meta pp-hide-mobile">{w.kind}</span>
+              <span className="pp-row-meta pp-hide-mobile">{tw.has(`${w.slug}.kind`) ? tw(`${w.slug}.kind`) : w.kind}</span>
               <span className="pp-row-year">{w.year}</span>
             </Link>
           ))}
@@ -76,7 +82,7 @@ export default function ProjectsPage() {
       {filteredStories.length > 0 && (
         <section className="pp-section">
           <div className="pp-section-head">
-            <span className="pp-section-tag">§ 02 · Stories / Motion</span>
+            <span className="pp-section-tag">{t('storiesSection')}</span>
             <span className="pp-section-count">[{String(filteredStories.length).padStart(2, '0')}]</span>
           </div>
           <div className="pp-stories-grid">
@@ -94,13 +100,13 @@ export default function ProjectsPage() {
                 </div>
                 <div className="pp-story-body">
                   <div className="pp-story-title-row">
-                    <h3>{s.title}</h3>
+                    <h3>{ts.has(`${s.slug}.title`) ? ts(`${s.slug}.title`) : s.title}</h3>
                     <span className="pp-story-arrow">↗</span>
                   </div>
-                  <p>{s.sub}</p>
+                  <p>{ts.has(`${s.slug}.sub`) ? ts(`${s.slug}.sub`) : s.sub}</p>
                   <div className="pp-story-tags">
-                    {s.tags.map((t) => (
-                      <span key={t}>{t}</span>
+                    {s.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -113,11 +119,11 @@ export default function ProjectsPage() {
       {/* CTA */}
       <section className="sp-cta glass strong">
         <div className="sp-cta-text">
-          <h3>Bir sonraki projeniz için buradayız.</h3>
-          <p>Yaratıcı sürecinizi birlikte başlatalım.</p>
+          <h3>{t('ctaTitle')}</h3>
+          <p>{t('ctaSub')}</p>
         </div>
         <Link href="/#contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
-          <span>İletişime Geç</span>
+          <span>{t('ctaBtn')}</span>
           <span>↗</span>
         </Link>
       </section>

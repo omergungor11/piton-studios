@@ -1,13 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 
-const CATEGORIES = ['All', ...Array.from(new Set(SERVICES.map((s) => s.cat)))];
+const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
 export default function ServicesPage() {
+  const t = useTranslations('servicesPage');
+  const ts = useTranslations('servicesList');
   const [activeCat, setActiveCat] = useState('All');
 
   const filtered = activeCat === 'All' ? SERVICES : SERVICES.filter((s) => s.cat === activeCat);
@@ -16,30 +19,37 @@ export default function ServicesPage() {
     <PageShell>
       {/* Hero */}
       <section className="sp-hero">
-        <div className="sp-hero-eyebrow">Services</div>
+        <div className="sp-hero-eyebrow">{t('title')}</div>
         <h1 className="sp-hero-title">
-          What we <span className="em">ship</span>.
+          {t.rich('headline', {
+            accent: (chunks) => <span className="em">{chunks}</span>,
+          })}
         </h1>
         <p className="sp-hero-sub">
-          End-to-end capabilities — from brand identity to production infrastructure. Each practice is led by deep expertise, not surface-level familiarity.
+          {t('subtitle')}
         </p>
       </section>
 
       {/* Filter */}
       <section className="sp-filter">
-        {CATEGORIES.map((cat) => (
+        <button
+          className={`sp-filter-btn ${activeCat === 'All' ? 'active' : ''}`}
+          onClick={() => setActiveCat('All')}
+          data-cursor="hover"
+        >
+          {t('filterAll')}
+        </button>
+        {CAT_KEYS.map((cat) => (
           <button
             key={cat}
             className={`sp-filter-btn ${activeCat === cat ? 'active' : ''}`}
             onClick={() => setActiveCat(cat)}
             data-cursor="hover"
           >
-            {cat}
-            {cat !== 'All' && (
-              <span className="sp-filter-count">
-                {SERVICES.filter((s) => s.cat === cat).length}
-              </span>
-            )}
+            {t(`filterCat.${cat}`)}
+            <span className="sp-filter-count">
+              {SERVICES.filter((s) => s.cat === cat).length}
+            </span>
           </button>
         ))}
       </section>
@@ -50,12 +60,12 @@ export default function ServicesPage() {
           <Link key={s.n} href={`/services/${s.slug}`} className="sp-card glass" data-cursor="hover" data-cursor-label="+">
             <div className="sp-card-top">
               <span className="sp-card-n">{s.n}</span>
-              <span className="sp-card-cat">{s.cat}</span>
+              <span className="sp-card-cat">{t(`filterCat.${s.cat}`)}</span>
             </div>
-            <h2 className="sp-card-title">{s.title}</h2>
-            <p className="sp-card-desc">{s.desc}</p>
+            <h2 className="sp-card-title">{ts(`${s.slug}.title`)}</h2>
+            <p className="sp-card-desc">{ts(`${s.slug}.desc`)}</p>
             <ul className="sp-card-items">
-              {s.items.map((item) => (
+              {(ts.raw(`${s.slug}.items`) as string[]).map((item) => (
                 <li key={item}>
                   <span className="sp-card-bullet">—</span>
                   <span>{item}</span>
@@ -63,7 +73,7 @@ export default function ServicesPage() {
               ))}
             </ul>
             <div className="sp-card-footer">
-              <span className="sp-card-cta">Detaylar</span>
+              <span className="sp-card-cta">{t('details')}</span>
               <span className="sp-card-arrow">↗</span>
             </div>
           </Link>
@@ -73,11 +83,11 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="sp-cta glass strong">
         <div className="sp-cta-text">
-          <h3>Projeniz için doğru çözümü birlikte bulalım.</h3>
-          <p>İhtiyacınıza özel bir yaklaşım için bize yazın.</p>
+          <h3>{t('ctaTitle')}</h3>
+          <p>{t('ctaSub')}</p>
         </div>
         <Link href="/#contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
-          <span>İletişime Geç</span>
+          <span>{t('ctaBtn')}</span>
           <span>↗</span>
         </Link>
       </section>
