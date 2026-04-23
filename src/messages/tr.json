@@ -17,8 +17,10 @@
   },
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",
-    "title": "Pixel Ninja",
-    "titleLine2": "From Türkiye",
+    "title1": "Pixel",
+    "title2": "Ninja",
+    "title3": "Türkiye'den",
+    "title4": "Dünyaya",
     "subtitle": "Design, code & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız. Kalite odaklı, sonuç garantili.",
     "chips": [
       "ONLINE",
