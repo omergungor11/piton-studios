@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { STORIES } from '@/lib/data';
 
 export default function StoriesScene() {
+  const t = useTranslations('storiesSection');
+  const ts = useTranslations('stories');
   const [idx, setIdx] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
   const n = STORIES.length;
@@ -20,27 +23,20 @@ export default function StoriesScene() {
   }, [idx]);
 
   const onKey = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      go(1);
-    }
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      go(-1);
-    }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   };
 
   return (
     <div className="stories-glass glass" tabIndex={0} onKeyDown={onKey}>
       <div className="stories-head">
-        <div className="stories-tag">§ 02.5 · Stories / {String(n).padStart(2, '0')}</div>
+        <div className="stories-tag">{t('eyebrow')} / {String(n).padStart(2, '0')}</div>
         <h3>
-          Short <span className="em">stories</span>, cut long.
+          {(t.raw('title') as string).split('{accent}')[0]}
+          <span className="em">{t('titleAccent')}</span>
+          {(t.raw('title') as string).split('{accent}')[1]}
         </h3>
-        <p className="stories-lead">
-          A moving index of the work — title sequences, reels, and brand films, each filed under
-          the moment it was made.
-        </p>
+        <p className="stories-lead">{t('lead')}</p>
       </div>
 
       <div className="stories-viewport">
@@ -61,18 +57,18 @@ export default function StoriesScene() {
                 <div className="story-meta-bottom">
                   <span>{s.year}</span>
                   <span>·</span>
-                  <span>{s.role}</span>
+                  <span>{ts.has(`${s.slug}.role`) ? ts(`${s.slug}.role`) : s.role}</span>
                 </div>
               </div>
               <div className="story-body">
                 <div className="story-title-row">
-                  <h4>{s.title}</h4>
+                  <h4>{ts.has(`${s.slug}.title`) ? ts(`${s.slug}.title`) : s.title}</h4>
                   <span className="story-arrow">↗</span>
                 </div>
-                <p>{s.sub}</p>
+                <p>{ts.has(`${s.slug}.sub`) ? ts(`${s.slug}.sub`) : s.sub}</p>
                 <div className="story-tags">
-                  {s.tags.map((t) => (
-                    <span key={t}>{t}</span>
+                  {s.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -85,42 +81,18 @@ export default function StoriesScene() {
         <div className="stories-progress">
           <span className="stories-idx">{String(idx + 1).padStart(2, '0')}</span>
           <div className="stories-bar">
-            <div
-              className="stories-bar-fill"
-              style={{ width: `${((idx + 1) / n) * 100}%` }}
-            />
+            <div className="stories-bar-fill" style={{ width: `${((idx + 1) / n) * 100}%` }} />
           </div>
           <span className="stories-total">/ {String(n).padStart(2, '0')}</span>
         </div>
         <div className="stories-nav">
-          <button
-            className="stories-btn"
-            onClick={() => go(-1)}
-            disabled={idx === 0}
-            data-cursor="hover"
-            data-cursor-label="Prev"
-          >
-            ←
-          </button>
+          <button className="stories-btn" onClick={() => go(-1)} disabled={idx === 0} data-cursor="hover" data-cursor-label="Prev">←</button>
           <div className="stories-dots">
             {STORIES.map((_, i) => (
-              <button
-                key={i}
-                className={`stories-dot ${i === idx ? 'on' : ''}`}
-                onClick={() => jump(i)}
-                aria-label={`Story ${i + 1}`}
-              />
+              <button key={i} className={`stories-dot ${i === idx ? 'on' : ''}`} onClick={() => jump(i)} aria-label={`Story ${i + 1}`} />
             ))}
           </div>
-          <button
-            className="stories-btn"
-            onClick={() => go(1)}
-            disabled={idx === n - 1}
-            data-cursor="hover"
-            data-cursor-label="Next"
-          >
-            →
-          </button>
+          <button className="stories-btn" onClick={() => go(1)} disabled={idx === n - 1} data-cursor="hover" data-cursor-label="Next">→</button>
         </div>
       </div>
     </div>

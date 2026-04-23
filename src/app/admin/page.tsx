@@ -40,7 +40,7 @@ export default function AdminPage() {
           ))}
         </nav>
         <div className="admin-sidebar-footer">
-          <Link href="/" className="admin-back">← Site'ye Dön</Link>
+          <Link href="/" className="admin-back">← Site&apos;ye D&#246;n</Link>
         </div>
       </aside>
 

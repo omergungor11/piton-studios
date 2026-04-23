@@ -8,6 +8,13 @@ import { TopChrome, BottomChrome } from "@/components/chrome";
 import Tweaks from "@/components/tweaks";
 import { PreviewCard } from "@/components/scenes/works";
 
+import dynamic from "next/dynamic";
+import FloatingGlass from "@/components/floating-glass";
+import FloatingActions from "@/components/floating-actions";
+
+const ThreeScene = dynamic(() => import("@/components/three-scene"), {
+  ssr: false,
+});
 import HeroScene from "@/components/scenes/hero";
 import ManifestoScene from "@/components/scenes/manifesto";
 import WorksScene from "@/components/scenes/works";
@@ -66,6 +73,11 @@ export default function Home() {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
+
+  // Start at top (hero)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Edit mode listener
   useEffect(() => {
@@ -126,6 +138,8 @@ export default function Home() {
   return (
     <>
       <BgStage active={SCENES[activeIdx]?.id} />
+      <ThreeScene />
+      <FloatingGlass />
       <div className="grain" />
       <Cursor />
       <TopChrome clock={clock} activeIdx={activeIdx} onNav={onNav} />
@@ -160,6 +174,7 @@ export default function Home() {
       </main>
 
       <PreviewCard data={preview} />
+      <FloatingActions />
       <Tweaks open={tweaksOpen} theme={theme} setTheme={setTheme} />
     </>
   );

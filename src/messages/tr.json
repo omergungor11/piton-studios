@@ -1,0 +1,1329 @@
+{
+  "metadata": {
+    "title": "Pixel Ninja — Dijital Stüdyo",
+    "description": "Design, code & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
+  },
+  "nav": {
+    "services": "Hizmetler",
+    "stories": "Hikayeler",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "caseStudy": "Case Study",
+    "reel": "Reel",
+    "projects": "Projeler",
+    "gallery": "Galeri",
+    "home": "Ana Sayfa",
+    "contactCta": "İletişime Geç"
+  },
+  "hero": {
+    "kicker": "Design · Code · AI — Digital Studio",
+    "title": "Pixel Ninja",
+    "titleLine2": "From Türkiye",
+    "subtitle": "Design, code & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız. Kalite odaklı, sonuç garantili.",
+    "chips": [
+      "ONLINE",
+      "WEB APP",
+      "AI",
+      "SEO",
+      "CLOUD",
+      "AUTOMATION"
+    ]
+  },
+  "manifesto": {
+    "eyebrow": "§ 01 · Not",
+    "title": "Neden {accent}?",
+    "titleAccent": "Pixel Ninja",
+    "subtitle": "Tasarım, kod ve AI'ı tek çatı altında birleştiren bağımsız bir stüdyoyuz. Her projede kalite, hız ve şeffaflık — sonuç odaklı çalışırız.",
+    "highlights": [
+      {
+        "title": "Hızlı Teslimat",
+        "desc": "Net timeline, MVP'den launch'a hızlı yol."
+      },
+      {
+        "title": "Kalite Odaklı",
+        "desc": "Piksel hassasiyetinde tasarım, test edilmiş kod."
+      },
+      {
+        "title": "Uçtan Uca",
+        "desc": "Tasarım, geliştirme, deploy — tek elden."
+      },
+      {
+        "title": "AI Destekli",
+        "desc": "Claude, GPT, Gemini — ürüne entegre AI."
+      },
+      {
+        "title": "SEO & Performans",
+        "desc": "Google ve AI motorlarında üst sıralarda yer alın."
+      },
+      {
+        "title": "Ödeme & SaaS",
+        "desc": "Stripe, abonelik, faturalandırma altyapısı."
+      },
+      {
+        "title": "Otomasyon",
+        "desc": "Tekrarlayan işleri ortadan kaldıran pipeline."
+      },
+      {
+        "title": "Cloud & DevOps",
+        "desc": "Google Cloud, Vercel, CI/CD — production-ready."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "§ 05 · Hakkında",
+    "heading": "Dijital {accent} tasarlıyor, geliştiriyor ve büyütüyoruz. Türkiye merkezli, global müşterilerle çalışıyoruz.",
+    "headingAccent": "ürünler",
+    "desc": "Pixel Ninja, web tasarım, uygulama geliştirme, AI entegrasyonu ve dijital pazarlama alanlarında uçtan uca hizmet veren bağımsız bir dijital stüdyodur. Startup'lardan kurumsal markalara — her projede kalite, hız ve ölçülebilir sonuç odaklı çalışırız.",
+    "quote": "Teknolojiyi karmaşıklaştırmak değil, sadeleştirmek için kullanıyoruz. Her proje bir iş problemi çözmeli — güzel görünmek bonus.",
+    "quoteAuthor": "— Ömer Güngör, Founder",
+    "mediaTag": "[ STÜDYO · 2025 ]",
+    "location": "Türkiye",
+    "mediaCaption": "Studio · 2025",
+    "expertise": "Uzmanlık",
+    "expertiseList": "Web & Mobile Development · AI Integration · SEO & Growth · Cloud Infrastructure · Automation",
+    "clients": "Müşteriler",
+    "technologies": "Teknolojiler",
+    "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
+  },
+  "contact": {
+    "eyebrow": "§ 06 · İletişim",
+    "phone": "Telefon",
+    "general": "Genel",
+    "newWork": "Yeni iş",
+    "studio": "Stüdyo",
+    "studioLocation": "Türkiye",
+    "formTag": "Bize Yazın",
+    "formSub": "Projenizi konuşalım — genellikle 24 saat içinde dönüş yaparız.",
+    "name": "İsim",
+    "namePlaceholder": "Adınız Soyadınız",
+    "email": "E-posta",
+    "emailPlaceholder": "email@ornek.com",
+    "phonePlaceholder": "+90 5XX XXX XX XX",
+    "message": "Mesaj",
+    "messagePlaceholder": "Projeniz hakkında kısaca bilgi verin...",
+    "submit": "Gönder",
+    "sending": "Gönderiliyor...",
+    "sent": "✓ Gönderildi",
+    "error": "Hata — tekrar deneyin",
+    "whatsapp": "WhatsApp",
+    "call": "Ara"
+  },
+  "services": {
+    "eyebrow": "§ 04",
+    "title": "Hizmetler · Neler sunuyoruz",
+    "count": "{count} hizmet"
+  },
+  "servicesPage": {
+    "title": "Hizmetler",
+    "headline": "Neler <accent>sunuyoruz</accent>.",
+    "subtitle": "Tasarımdan geliştirmeye, AI entegrasyonundan büyümeye — uçtan uca dijital çözümler. Her alanda derin uzmanlık, yüzeysel değil.",
+    "filterAll": "Hepsi",
+    "filterCat": {
+      "Design": "Tasarım",
+      "Build": "Geliştirme",
+      "Ops": "Operasyon",
+      "AI": "AI",
+      "Growth": "Büyüme",
+      "Teach": "Eğitim",
+      "Data": "Veri",
+      "Infra": "Altyapı"
+    },
+    "details": "Detaylar",
+    "ctaTitle": "Projeniz için doğru çözümü birlikte bulalım.",
+    "ctaSub": "İhtiyacınıza özel bir yaklaşım için bize yazın.",
+    "ctaBtn": "İletişime Geç"
+  },
+  "serviceDetail": {
+    "features": "// Özellikler",
+    "whatsIncluded": "Neler dahil",
+    "process": "// Süreç",
+    "howWeWork": "Nasıl çalışıyoruz",
+    "tools": "// Teknoloji Yığını",
+    "faq": "// SSS",
+    "commonQuestions": "Sık sorulan sorular",
+    "whyUs": "Neden Pixel Ninja?",
+    "whyUsItems": [
+      "Her disiplinde derin uzmanlık — yüzeysel kalan genel ajans değil.",
+      "Şeffaf süreç — her aşamada ne olduğunu ve neden olduğunu bilirsiniz.",
+      "Teslime hazır: dokümantasyon, eğitim ve kara kutu yok."
+    ],
+    "theProcess": "Süreç",
+    "related": "// İlgili",
+    "youMightNeed": "Bunlara da ihtiyacınız olabilir",
+    "ctaEyebrow": "// Konuşalım",
+    "ctaTitle": "Bu servis hakkında konuşalım.",
+    "ctaSub": "Projenizi anlatın, net bir kapsam ve zaman çizelgesiyle dönelim.",
+    "ctaBtn": "İletişime Geç"
+  },
+  "reel": {
+    "eyebrow": "§ 04 · Showreel",
+    "title": "İşlerimizden {accent} — her çeyrekte güncellenir.",
+    "titleAccent": "kesitler",
+    "labelReel": "Reel",
+    "valueReel": "Q2 · 2025",
+    "labelContent": "İçerik",
+    "valueContent": "Web · App · AI",
+    "labelProjectCount": "Proje Sayısı",
+    "valueProjectCount": "50+",
+    "labelPreparedBy": "Hazırlayan",
+    "valuePreparedBy": "Pixel Ninja",
+    "body1": "Son üç ayda teslim ettiğimiz projelerden derlenen bir görsel özet — landing page'ler, dashboard'lar, mobil uygulamalar ve AI entegrasyonları. Her çeyrekte güncellenir, asla cilalanmaz.",
+    "body2": "Tasarımdan deploy'a kadar tüm süreci kapsayan bu reel, ne yaptığımızı değil nasıl yaptığımızı gösterir.",
+    "cta": "Tüm Projeleri Gör",
+    "mediaTag": "[ SHOWREEL · 2025 ]",
+    "scale": "REEL Q2 · LIVE"
+  },
+  "caseStudy": {
+    "eyebrow": "§ 03 · Öne Çıkan Proje",
+    "title": "Gel Gez Gör — KKTC'nin {accent} ilan platformu.",
+    "titleAccent": "kapsamlı",
+    "labelClient": "Müşteri",
+    "valueClient": "Gel Gez Gör",
+    "labelYear": "Yıl",
+    "valueYear": "2025",
+    "labelScope": "Kapsam",
+    "valueScope": "Web App, Platform, SEO",
+    "labelStack": "Teknoloji",
+    "valueStack": "Next.js · SEO · Platform",
+    "body1": "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü sıfırdan tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
+    "body2": "Gelişmiş filtreleme, kullanıcı dostu arayüz ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık.",
+    "cta": "Projeyi İncele",
+    "mediaTag": "[ PROJE · DEMO ]",
+    "scale": "PROJE · PLATFORM"
+  },
+  "projectsPage": {
+    "title": "Projeler",
+    "headline": "Seçilmiş <accent>çalışmalar</accent>.",
+    "subtitle": "Son dönemde teslim ettiğimiz projelerden bir seçki — web, mobil, AI ve otomasyon.",
+    "worksSection": "§ 01 · Seçilmiş Projeler",
+    "storiesSection": "§ 02 · Hikayeler / Motion",
+    "ctaTitle": "Bir sonraki projeniz için buradayız.",
+    "ctaSub": "Yaratıcı sürecinizi birlikte başlatalım.",
+    "ctaBtn": "İletişime Geç",
+    "filterAll": "Hepsi",
+    "colProject": "Proje",
+    "colClient": "Müşteri",
+    "colDiscipline": "Alan",
+    "colYear": "Yıl"
+  },
+  "projectDetail": {
+    "mediaTag": "[ VİDEO · PROJE ]",
+    "client": "Müşteri",
+    "year": "Yıl",
+    "scope": "Kapsam",
+    "role": "Rol",
+    "collab": "İş Birliği",
+    "caseStudy": "§ Proje Detayı",
+    "moreWork": "Diğer Projeler",
+    "viewAll": "Tüm projeleri gör ↗",
+    "prev": "← Önceki",
+    "next": "Sonraki →"
+  },
+  "storiesSection": {
+    "eyebrow": "§ 02.5 · Hikayeler",
+    "title": "Kısa {accent}, uzun kesilmiş.",
+    "titleAccent": "hikayeler",
+    "lead": "Çalışmalarımızdan bir seçki — landing page'ler, reel'ler ve marka filmleri, her biri yapıldığı anın izini taşır."
+  },
+  "chrome": {
+    "availability": "Yeni projelere açığız · Hemen başlayalım"
+  },
+  "common": {
+    "copyright": "© 2025 Pixel Ninja",
+    "home": "Ana Sayfa",
+    "pixelNinja": "Pixel Ninja",
+    "projects": "Projeler",
+    "services": "Hizmetler",
+    "gallery": "Galeri",
+    "contact": "İletişim"
+  },
+  "works": {
+    "velis-ltd": {
+      "title": "Velis LTD",
+      "summary": "İnşaat firması kurumsal sitesi ve ürün kataloğu.",
+      "body": [
+        "Velis LTD için 25 yılı aşkın sektör deneyimini yansıtan kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerine ürün kataloğu, çok dilli yapı ve SEO optimizasyonu dahil.",
+        "İnşaat ve imalat sektörüne yönelik profesyonel bir dijital kimlik oluşturduk. Responsive tasarım, hızlı yüklenme süreleri ve kolay içerik yönetimi ile müşterinin dijital varlığını güçlendirdik."
+      ]
+    },
+    "bt-elevator": {
+      "title": "BT Elevator",
+      "summary": "Çok dilli asansör firması kurumsal sitesi, SEO optimizasyonlu.",
+      "body": [
+        "BT Elevator için Eskişehir merkezli asansör firmasının kurumsal web sitesini tasarladık ve geliştirdik. Çok dilli yapı, SEO optimizasyonu ve modern tasarım anlayışıyla sektörde fark yaratan bir dijital varlık oluşturduk.",
+        "Teknik SEO çalışmaları, schema markup ve performans optimizasyonu ile arama motorlarında üst sıralarda yer almayı hedefledik. Kurumsal kimliğe uygun, güven veren bir kullanıcı deneyimi sunduk."
+      ]
+    },
+    "gel-gez-gor": {
+      "title": "Gel Gez Gör",
+      "summary": "KKTC ücretsiz ilan platformu — emlak, araç, iş ilanları.",
+      "body": [
+        "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
+        "Kullanıcı dostu arayüz, gelişmiş filtreleme sistemi ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık."
+      ]
+    },
+    "nexon-investment": {
+      "title": "Nexon Investment",
+      "summary": "KKTC gayrimenkul ve yatırım şirketi kurumsal sitesi.",
+      "body": [
+        "Gazimağusa merkezli Nexon Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
+        "Modern tasarım, hızlı yüklenme süreleri ve mobil uyumlu yapı ile potansiyel yatırımcıların kolayca bilgiye ulaşmasını sağladık. SEO çalışmaları ile organik görünürlüğü artırdık."
+      ]
+    },
+    "ambalaj-cini": {
+      "title": "Ambalaj Cini",
+      "summary": "Ambalaj malzemeleri e-ticaret sitesi, ödeme entegrasyonlu.",
+      "body": [
+        "Bilecik merkezli Ambalaj Cini için online ambalaj malzemeleri satış platformu geliştirdik. Ödeme entegrasyonu, ürün yönetimi ve stok takibi dahil kapsamlı bir e-ticaret altyapısı kurduk.",
+        "Kullanıcı deneyimi odaklı tasarım, kolay sipariş akışı ve güvenli ödeme altyapısı ile müşterinin online satışlarını önemli ölçüde artırdık. 2022'den bu yana aktif olarak hizmet veriyor."
+      ]
+    },
+    "avie-global": {
+      "title": "Avie Global",
+      "summary": "Otomotiv yedek parça ticareti kurumsal sitesi.",
+      "body": [
+        "Avie Global Trading için otomotiv yedek parça ticareti alanında kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerinde şirket profilini, ürün yelpazesini ve iş ortaklıklarını sergileyen profesyonel bir platform oluşturduk.",
+        "Global ticaret odaklı tasarım, çok dilli içerik yapısı ve SEO optimizasyonu ile uluslararası müşterilere ulaşmayı hedefledik."
+      ]
+    }
+  },
+  "servicesList": {
+    "web-design": {
+      "title": "Web Tasarım",
+      "desc": "Marka odaklı pazarlama siteleri — özenli tipografi, hareket tasarımı ve editoryal ritimle.",
+      "longDesc": "Niyetle hareket eden pazarlama siteleri tasarlıyoruz — her tipografik tercih, boşluk kararı ve hareket detayı marka hikayesine hizmet eder. Sonuç, montajlanmış değil yazılmış hissettiren bir site olur. Stratejiden son piksele kadar bilgi mimarisi, etkileşim tasarımı ve teslime hazır komponent sistemlerini kapsıyoruz.",
+      "items": [
+        "Landing · Pazarlama",
+        "Portfolyo · Editoryal",
+        "Tasarım sistemleri"
+      ],
+      "features": [
+        {
+          "title": "Marka Öncelikli Düzen",
+          "desc": "Her düzen şablondan değil, markanın görsel dilinden başlar. Grid, yazı tipi ölçeği ve boşluklar kimlikten türetilir."
+        },
+        {
+          "title": "Editoryal Tipografi",
+          "desc": "Yazı tipi birincil tasarım öğesi olarak ele alınır — ölçek, ritim ve hiyerarşi renk veya görsellerden önce belirlenir."
+        },
+        {
+          "title": "Hareket Tasarımı",
+          "desc": "Hikaye anlatımını güçlendiren, dikkat dağıtmayan amaçlı animasyon. Girişler, geçişler ve mikro-etkileşimler planlanır."
+        },
+        {
+          "title": "Tasarım Sistemleri",
+          "desc": "Belgelenmiş token'lar, varyantlar ve kullanım kılavuzlarıyla komponent kütüphaneleri — ekibiniz tasarımı bozmadan genişletebilir."
+        },
+        {
+          "title": "Responsive Öncelikli",
+          "desc": "Her breakpoint tasarlanır, sadece yeniden boyutlandırılmaz. Mobil birinci sınıf bir deneyimdir, sonradan eklenen değil."
+        },
+        {
+          "title": "CMS Entegrasyonu",
+          "desc": "Contentful, Sanity veya headless kurulumlar — teknik olmayan editörlerin koda dokunmadan hızla yayın yapmasını sağlar."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Keşif",
+          "desc": "Marka denetimi, rakip analizi, paydaş görüşmeleri. Sitenin ne söylemesi ve kime söylemesi gerektiğini belirliyoruz."
+        },
+        {
+          "step": "02",
+          "title": "Mimari",
+          "desc": "Site haritası, içerik modeli ve sayfa wireframe'leri. Önce yapı, sonra stil."
+        },
+        {
+          "step": "03",
+          "title": "Görsel Yön",
+          "desc": "İki görsel yön keşfedilir, biri geliştirilir. Yazı tipi, renk ve düzen dili tanımlanır."
+        },
+        {
+          "step": "04",
+          "title": "Tasarım Üretimi",
+          "desc": "Tüm breakpoint'lerde tam sadakatli Figma komponentleri, etkileşim özellikleri ve hareket notlarıyla."
+        },
+        {
+          "step": "05",
+          "title": "Teslim",
+          "desc": "Geliştirici-hazır dosyalar, dışa aktarılmış tasarım token'ları, komponent açıklamaları ve kayıtlı walkthrough."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3–6wk",
+          "label": "Tipik süre"
+        },
+        {
+          "value": "100+",
+          "label": "Teslim edilen site"
+        },
+        {
+          "value": "98",
+          "label": "Ort. Lighthouse puanı"
+        },
+        {
+          "value": "2×",
+          "label": "Ort. dönüşüm artışı"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Siteyi sadece tasarlıyor musunuz yoksa kodluyor musunuz?",
+          "a": "İkisini de yapıyoruz. Geliştiricisi olan ekipler için sadece tasarım, tam tasarımdan-koda teslim de sunuyoruz. Çoğu müşteri tam paketi tercih ediyor."
+        },
+        {
+          "q": "Zaten bir markamız varsa?",
+          "a": "Mevcut marka sistemleriyle çalışıyor ve dijitale uyarlıyoruz. Elinizdekini denetler, üzerine yazmak yerine uyarlarız."
+        },
+        {
+          "q": "Kaç revizyon turu dahil?",
+          "a": "Her büyük aşamada iki tur. Ek turlar saatlik ücretimiz üzerinden faturalanır. Pratikte erken hizalandığımız için bu sınıra nadiren ulaşırız."
+        },
+        {
+          "q": "Mevcut CMS'imizle çalışabilir misiniz?",
+          "a": "Evet — Webflow, Framer, WordPress, Contentful, Sanity ve özel Next.js kurulumlarıyla çalıştık. Ekibinizin iş akışına uygun olanı öneriyoruz."
+        }
+      ]
+    },
+    "web-app": {
+      "title": "Web Uygulama",
+      "desc": "Full-stack ürün arayüzleri — dashboard'lar, araçlar, ölçekte ayakta kalan dahili sistemler.",
+      "longDesc": "Gerçek yükü, gerçek kullanıcıları ve gerçek karmaşıklığı kaldıran ürün kalitesinde web uygulamaları geliştiriyoruz. Veri modelinden dashboard arayüzüne kadar her katman düşünülmüştür. Next.js full-stack yapılarında uzmanız — kimlik doğrulama, faturalandırma, rol bazlı erişim ve gerçek zamanlı özellikler dahil, ilk günden gözlemlenebilirlikle teslim ediyoruz.",
+      "items": [
+        "React / Next.js",
+        "Auth · Faturalandırma · Roller",
+        "Realtime · API tasarımı"
+      ],
+      "features": [
+        {
+          "title": "Full-Stack Mimari",
+          "desc": "Next.js App Router ile server component'ler, API route'ları ve edge function'lar. Baştan sona TypeScript, taviz yok."
+        },
+        {
+          "title": "Auth & Roller",
+          "desc": "Rol bazlı erişim kontrollü multi-tenant kimlik doğrulama. SSO, sosyal giriş, magic link — kullanıcı tabanınızın ihtiyacına göre."
+        },
+        {
+          "title": "Faturalandırma Entegrasyonu",
+          "desc": "Stripe abonelikleri, kullanım bazlı faturalandırma, ölçümlü özellikler ve müşteri portalı — baştan entegre, sonradan ekleme değil."
+        },
+        {
+          "title": "Gerçek Zamanlı Özellikler",
+          "desc": "İşbirlikçi veya canlı güncellenen arayüzler için WebSocket'ler, server-sent event'ler ve optimistik UI."
+        },
+        {
+          "title": "API Tasarımı",
+          "desc": "Tipli kontratlar, rate limiting ve versiyonlama stratejisi dahil RESTful veya tRPC API'lar."
+        },
+        {
+          "title": "Gözlemlenebilirlik",
+          "desc": "İlk günden hata takibi, performans izleme ve yapılandırılmış loglama. Kullanıcılardan önce neyin bozulduğunu bilirsiniz."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Kapsam Belirleme",
+          "desc": "Gereksinim çalıştayı, teknik spesifikasyon ve mimari karar kayıtları. Geliştirmeye belirsizlik bırakmadan giriyoruz."
+        },
+        {
+          "step": "02",
+          "title": "Veri Modeli",
+          "desc": "Bir satır uygulama kodu yazılmadan önce şema tasarımı, ilişkiler ve indeksleme stratejisi."
+        },
+        {
+          "step": "03",
+          "title": "Çekirdek Geliştirme",
+          "desc": "Önce auth, routing ve veri katmanı. Temel sağlam olduktan sonra UI komponentleri gelir."
+        },
+        {
+          "step": "04",
+          "title": "Özellik Sprint'leri",
+          "desc": "Her sprint sonrası deploy edilmiş önizlemelerle iki haftalık sprint'ler. İlerlemeden önce geri bildirim entegre edilir."
+        },
+        {
+          "step": "05",
+          "title": "Lansman",
+          "desc": "Production ortam kurulumu, monitoring yapılandırması, dokümantasyon yazımı ve ekip devir teslim oturumu."
+        }
+      ],
+      "stats": [
+        {
+          "value": "8–16wk",
+          "label": "Tipik süre"
+        },
+        {
+          "value": "50+",
+          "label": "Teslim edilen uygulama"
+        },
+        {
+          "value": "99.9%",
+          "label": "Uptime hedefi"
+        },
+        {
+          "value": "<200ms",
+          "label": "Ort. API yanıt süresi"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Mevcut bir codebase ile çalışıyor musunuz?",
+          "a": "Evet. Projelere ortasından dahil olduk, legacy codebase'leri refactor ettik ve mevcut ürünleri genişlettik. Her zaman bir denetimle başlıyoruz."
+        },
+        {
+          "q": "Hangi veritabanını kullanıyorsunuz?",
+          "a": "Çoğu projede Postgres, ORM olarak Prisma veya Drizzle. Mevcut bir stack'iniz varsa onu kullanırız."
+        },
+        {
+          "q": "DevOps işlerini de yapıyor musunuz?",
+          "a": "Altyapıyı geliştirme sürecinin parçası olarak kuruyoruz — CI/CD, önizleme ortamları ve Vercel veya Google Cloud üzerinde production. Uzun vadeli DevOps ayrı bir angajman."
+        },
+        {
+          "q": "Güvenliği nasıl ele alıyorsunuz?",
+          "a": "OWASP top-10 temel çizgimiz. Ayrıca input doğrulama, CSRF koruması, rate limiting ve bağımlılık denetimleri standart teslimatın parçası."
+        }
+      ]
+    },
+    "progressive-web-app": {
+      "title": "Progressive Web App",
+      "desc": "Tarayıcıda çalışan uygulama benzeri deneyimler — yüklenebilir, çevrimdışı çalışır, app store gerektirmez.",
+      "longDesc": "Web sitesi ile native uygulama arasındaki çizgiyi bulanıklaştıran Progressive Web App'ler geliştiriyoruz. Her cihaza yüklenebilir, çevrimdışı çalışır, push bildirim gönderir — app store sürtünmesi olmadan. PWA'lar anında yüklenir, her platformda çalışır ve native geliştirmenin maliyetinin bir kısmıyla aynı deneyimin %90'ını sunar.",
+      "items": [
+        "PWA · Service Worker'lar",
+        "Çevrimdışı · Push",
+        "Yüklenebilir · Hızlı"
+      ],
+      "features": [
+        {
+          "title": "Yüklenebilir",
+          "desc": "Native görünümlü uygulama ikonuyla Ana Ekrana Ekle. Kullanıcılarınız gerçek bir uygulama gibi başlatır — tarayıcı çerçevesi yok, tam ekran deneyimi."
+        },
+        {
+          "title": "Önce Çevrimdışı",
+          "desc": "Service Worker'lar kritik varlıkları ve verileri önbelleğe alır. Uygulamanız bağlantısız çalışır ve yeniden bağlandığında sorunsuz senkronize olur."
+        },
+        {
+          "title": "Push Bildirimler",
+          "desc": "Yeniden etkileşim için Web Push API — native push gibi segmentli, zamanlanmış ve deep-link'li."
+        },
+        {
+          "title": "Anında Yükleme",
+          "desc": "Streaming SSR ile önceden önbelleğe alınmış kabuk mimarisi. Yavaş bağlantılarda bile 1 saniyenin altında ilk boyama."
+        },
+        {
+          "title": "Çapraz Platform",
+          "desc": "Tek codebase her yerde çalışır — iOS Safari, Android Chrome, masaüstü — her birinde platforma uygun davranışla."
+        },
+        {
+          "title": "Otomatik Güncellemeler",
+          "desc": "App store inceleme döngüsü yok. Deploy edin, kullanıcılarınız bir sonraki ziyarette en son sürümü alır — sessizce, anında."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Denetim & Strateji",
+          "desc": "Gerçekten ihtiyacınız olan native özellikleri web platformunun zaten sunduklarıyla karşılaştırarak değerlendirin. Çoğu ekip şaşırır."
+        },
+        {
+          "step": "02",
+          "title": "Uygulama Kabuğu Tasarımı",
+          "desc": "Yüklenebilir kabuğu tasarlayın — splash screen, navigasyon, çevrimdışı UI durumları. İlk açılıştan itibaren native hissi verir."
+        },
+        {
+          "step": "03",
+          "title": "Çekirdek Geliştirme",
+          "desc": "Next.js + Service Worker kurulumu. Önbellek stratejileri, arka plan senkronizasyonu ve push bildirim altyapısı."
+        },
+        {
+          "step": "04",
+          "title": "Test",
+          "desc": "Lighthouse denetimi (100/100 PWA puanı hedefi), çapraz tarayıcı testi, gerçek cihazlarda çevrimdışı senaryo doğrulaması."
+        },
+        {
+          "step": "05",
+          "title": "Lansman",
+          "desc": "Web App Manifest yapılandırıldı, HTTPS zorunlu kılındı, analitik takibi kuruldu. PWA'nız anında her yerde yayında."
+        }
+      ],
+      "stats": [
+        {
+          "value": "4–10wk",
+          "label": "Tipik süre"
+        },
+        {
+          "value": "40+",
+          "label": "Teslim edilen PWA"
+        },
+        {
+          "value": "100",
+          "label": "Lighthouse PWA puanı"
+        },
+        {
+          "value": "60%",
+          "label": "Native'e kıyasla maliyet tasarrufu"
+        }
+      ],
+      "faq": [
+        {
+          "q": "PWA mı native uygulama mı — hangisini ne zaman seçmeli?",
+          "a": "PWA kullanım senaryolarının %90'ını karşılar — içerik uygulamaları, dashboard'lar, e-ticaret, araçlar. Yalnızca Bluetooth, NFC veya gelişmiş kamera kontrolü gibi donanım API'larına ihtiyacınız varsa native'e gidin."
+        },
+        {
+          "q": "PWA'lar iPhone'da çalışır mı?",
+          "a": "Evet. iOS Safari yüklenebilir PWA'ları, Service Worker'ları ve çevrimdışı önbelleği destekler. Push bildirimler iOS 16.4'te geldi. Android ile aradaki fark artık minimal."
+        },
+        {
+          "q": "Kullanıcılar tarayıcıdan yükleyebilir mi?",
+          "a": "Evet — hem Chrome hem Safari kullanıcıları 'Ana Ekrana Ekle' için yönlendirir. Uygulama kendi ikonu ile native uygulamaların yanında görünür."
+        },
+        {
+          "q": "SEO konusu ne olacak?",
+          "a": "PWA'lar sadece web siteleridir — Google tarafından tamamen indekslenebilir. Bir web sitesinin SEO avantajlarını artı bir uygulamanın etkileşimini elde edersiniz."
+        }
+      ]
+    },
+    "automation": {
+      "title": "Otomasyon",
+      "desc": "Kimsenin açmak istemediği spreadsheet'lerin yerini sessizce alan workflow pipeline'ları.",
+      "longDesc": "Manuel süreçlerinizi haritalıyor ve güvenilir, gözlemlenebilir otomasyon pipeline'larıyla değiştiriyoruz. Altyapınızda self-hosted n8n, düşük kodlu basitlik için Zapier veya özel webhook handler'lar — aracı işe göre eşliyoruz. Amaç, insan gerektirmemesi gereken işi ortadan kaldırmak.",
+      "items": [
+        "n8n · Zapier · Make",
+        "Dahili araçlar",
+        "Webhook'lar · zamanlayıcılar"
+      ],
+      "features": [
+        {
+          "title": "Süreç Haritalama",
+          "desc": "Herhangi bir araca dokunmadan önce mevcut manuel iş akışını belgeliyoruz. Süreci anlamak işin %80'i."
+        },
+        {
+          "title": "n8n Self-Hosted",
+          "desc": "Kendi altyapınızda n8n ile otomasyonlarınız üzerinde tam kontrol. Çalıştırma başına ücretlendirme yok, vendor bağımlılığı yok."
+        },
+        {
+          "title": "Zapier & Make",
+          "desc": "Altyapı yükü olmadan otomasyona ihtiyaç duyan ekipler için hızlı kurulum. Doğru iş için doğru araç."
+        },
+        {
+          "title": "Dahili Araçlar",
+          "desc": "Otomasyon katmanınızın üzerine inşa edilmiş özel yönetim panelleri, onay iş akışları ve veri yönetim arayüzleri."
+        },
+        {
+          "title": "Webhook Mimarisi",
+          "desc": "Yeniden deneme mantığı, dead letter queue'lar ve idempotency yönetimi ile olay güdümlü pipeline'lar."
+        },
+        {
+          "title": "Zamanlanmış İşler",
+          "desc": "İzleme ve uyarılarla cron tabanlı veri senkronizasyonu, rapor üretimi ve bakım görevleri."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Süreç Denetimi",
+          "desc": "Manuel işi yapan insanlarla görüşün. Her adımı, karar noktasını ve istisna durumunu haritalayın."
+        },
+        {
+          "step": "02",
+          "title": "Otomasyon Tasarımı",
+          "desc": "Hata yönetimi ve uç durumlar uygulamadan önce belgelenerek otomatik iş akışını tasarlayın."
+        },
+        {
+          "step": "03",
+          "title": "Geliştirme & Test",
+          "desc": "Staging ortamı testleriyle uygulayın. Her otomasyon production'dan önce gerçek verilerle test edilir."
+        },
+        {
+          "step": "04",
+          "title": "İzleme Kurulumu",
+          "desc": "Hata uyarıları, çalıştırma logları ve dashboard'lar — bir şey bozulduğunda bilirsiniz."
+        },
+        {
+          "step": "05",
+          "title": "Devir Teslim",
+          "desc": "Dokümantasyon, ekibiniz için eğitim ve lansman sonrası 30 günlük destek penceresi."
+        }
+      ],
+      "stats": [
+        {
+          "value": "200+",
+          "label": "Geliştirilen otomasyon"
+        },
+        {
+          "value": "15hrs",
+          "label": "Ort. haftalık tasarruf"
+        },
+        {
+          "value": "99.5%",
+          "label": "Çalıştırma başarı oranı"
+        },
+        {
+          "value": "2–4wk",
+          "label": "Tipik süre"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Zaten Zapier kullanıyoruz — mevcut yapıyı iyileştirebilir misiniz?",
+          "a": "Kesinlikle. Mevcut Zap'ları denetler, kırılgan adımları tespit eder ve yeniden kurar veya genişletiriz. Genellikle en karmaşık olanları n8n'e taşırız."
+        },
+        {
+          "q": "Siz kurduktan sonra süreç değişirse?",
+          "a": "Her şeyi belgeliyoruz, ekibiniz bakımını yapabilir. Devam eden değişiklikler için retainer desteği sunuyoruz."
+        },
+        {
+          "q": "Birden fazla araç arasında otomasyon yapabilir misiniz?",
+          "a": "Evet — çoklu sistem otomasyonları uzmanlık alanımız. CRM, ERP, Slack, e-posta, veritabanları ve özel API'lar hepsi bağlı."
+        },
+        {
+          "q": "n8n yönetmesi zor mu?",
+          "a": "Altyapı kurulumunu biz yapıyor ve yönetilebilir hale getiriyoruz. Çoğu müşteri ilk kurulumdan sonra beklenenden kolay buluyor."
+        }
+      ]
+    },
+    "ai-integration": {
+      "title": "AI Entegrasyonu",
+      "desc": "LLM'ler, RAG ve agent'lar gerçek ürünlere entegre — değerlendirilmiş, güvenlik katmanlı, gözlemlenebilir.",
+      "longDesc": "Büyük dil modellerini gerçek ürünlere sorumlu bir şekilde entegre ediyoruz — değerlendirme çerçeveleri, güvenlik katmanları, maliyet kontrolleri ve gözlemlenebilirlik dahil. Claude, OpenAI ve Gemini ile çalışıyoruz, model seçimini aşinalığa değil kullanım senaryonuza göre yapıyoruz. RAG pipeline'ları, agent mimarileri ve tool-use sistemleri uzmanlık alanımız.",
+      "items": [
+        "Claude · OpenAI · Gemini",
+        "RAG · Vektör · Bellek",
+        "Agent'lar · Tool-use"
+      ],
+      "features": [
+        {
+          "title": "Model Seçimi",
+          "desc": "Modelleri sizin kullanım senaryonuza göre değerlendiriyoruz — gecikme, maliyet, kalite ve yetenek hepsi hesaba katılır. Varsayılan yok."
+        },
+        {
+          "title": "RAG Pipeline'ları",
+          "desc": "Vektör veritabanları, chunking stratejileri ve yeniden sıralamayla retrieval-augmented generation. Veriniz, doğru şekilde yüzeye çıkarılır."
+        },
+        {
+          "title": "Agent Mimarisi",
+          "desc": "Tool-use, bellek ve planlama ile çok adımlı agent'lar. Sadece etkileyici değil, karmaşık görevleri güvenilir şekilde tamamlamak için inşa edildi."
+        },
+        {
+          "title": "Değerlendirme Çerçevesi",
+          "desc": "Kullanım senaryonuz için önemli olanı ölçen özel eval süitleri. His bazlı kalite değerlendirmesi yok."
+        },
+        {
+          "title": "Güvenlik Katmanları",
+          "desc": "Girdi/çıktı filtreleme, içerik politikaları ve risk toleransınıza ve düzenleyici ortamınıza uygun güvenlik katmanları."
+        },
+        {
+          "title": "Gözlemlenebilirlik",
+          "desc": "Her LLM çağrısını izleyin, maliyetleri takip edin, gecikmeyi izleyin ve kalite gerilemelerinde uyarı alın. Baştan LLMOps."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Kullanım Senaryosu Kapsamı",
+          "desc": "AI'ın çözmesi gereken problemi ve başarıyı tanımlayan metrikleri belirleyin. 'İyi'nin neye benzediğini bilmeden geliştirmeye başlamaktan kaçının."
+        },
+        {
+          "step": "02",
+          "title": "Prototip & Değerlendirme",
+          "desc": "Gerçek verilerle test edilen hızlı prototip. Değerlendirme süiti prototiple birlikte inşa edilir, sonrasında değil."
+        },
+        {
+          "step": "03",
+          "title": "Pipeline Geliştirme",
+          "desc": "Hata yönetimi, yedek planlar ve maliyet kontrolleriyle production kalitesinde uygulama."
+        },
+        {
+          "step": "04",
+          "title": "Güvenlik Katmanları & Test",
+          "desc": "Kullanıcıya açık herhangi bir dağıtımdan önce girdi doğrulama, çıktı filtreleme ve saldırı testi."
+        },
+        {
+          "step": "05",
+          "title": "İzleme & İterasyon",
+          "desc": "Düzenli kalite incelemeleri ve ortam geliştikçe model güncellemeleriyle lansman sonrası izleme."
+        }
+      ],
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Teslim edilen AI entegrasyonu"
+        },
+        {
+          "value": "3×",
+          "label": "Ort. doğruluk artışı"
+        },
+        {
+          "value": "60%",
+          "label": "Ort. maliyet düşüşü"
+        },
+        {
+          "value": "6–12wk",
+          "label": "Tipik süre"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hangi LLM'i kullanmalıyız?",
+          "a": "Kullanım senaryonuza bağlı. Gerçek verilerinizle yapılandırılmış bir değerlendirme yapacak ve sonuçlara göre öneri sunacağız, hype'a göre değil."
+        },
+        {
+          "q": "Halüsinasyonları nasıl yönetiyorsunuz?",
+          "a": "RAG yanıtları verinize dayandırır. Eval süitleri gerilemeleri yakalar. Güvenlik katmanları zararlı çıktıları yakalar. Tek çözüm yok — derinlemesine savunma."
+        },
+        {
+          "q": "Bir AI entegrasyonunun çalışma maliyeti nedir?",
+          "a": "Çıkarım maliyetlerini tasarımın parçası olarak modelliyoruz. Geliştirdiğimiz entegrasyonların çoğu ölçekte kullanıcı oturumu başına $0,01–$0,10 arası maliyetli."
+        },
+        {
+          "q": "Mevcut bir AI özelliğini iyileştirebilir misiniz?",
+          "a": "Evet. Mevcut uygulamayı denetler, hata modlarını tespit eder ve pipeline'ı sistematik olarak iyileştiririz."
+        }
+      ]
+    },
+    "google-ads": {
+      "title": "Google Ads",
+      "desc": "Gösteriş metrikleri değil, dönüşüm yolları etrafında kurulu Search, Performance Max ve Display kampanyaları.",
+      "longDesc": "Google Ads kampanyalarını gerçek dönüşüm yolunuz etrafında kuruyoruz — gösterim, tıklama veya bilinirlik değil. Her kampanya yapısı, teklif stratejisi ve kreatif kararı ölçülebilir bir iş sonucuna bağlıdır. Reklama bir kuruş harcamadan önce dönüşüm takibini doğru şekilde kuruyoruz.",
+      "items": [
+        "Search · PMax",
+        "Dönüşüm takibi",
+        "Kreatif iterasyonu"
+      ],
+      "features": [
+        {
+          "title": "Kampanya Mimarisi",
+          "desc": "Performans için tasarlanmış hesap yapısı — ilk günden doğru eşleme türleri, negatif anahtar kelimeler ve reklam grubu segmentasyonu."
+        },
+        {
+          "title": "Search Kampanyaları",
+          "desc": "Gezinenleri değil alıcıları hedefleyen niyet bazlı arama kampanyaları. Etkilemek için değil, arama bağlamına uygun yazılmış metinler."
+        },
+        {
+          "title": "Performance Max",
+          "desc": "Güçlü varlık grupları ve kitle sinyalleriyle kurulan PMax kampanyaları — Google'ın varsayılanlarına bırakılmaz."
+        },
+        {
+          "title": "Dönüşüm Takibi",
+          "desc": "GA4, Google Ads ve sunucu tarafı takibi doğru şekilde kurulur. Ölçemediğinizi optimize edemezsiniz."
+        },
+        {
+          "title": "Kreatif Test",
+          "desc": "İstatistiksel anlamlılık eşikleriyle sistematik reklam metni ve kreatif testi. Sezgisel kararlar yok."
+        },
+        {
+          "title": "Raporlama",
+          "desc": "İş metriklerine odaklı haftalık raporlar — lead'ler, gelir, ROAS — gösteriş metrikleri değil."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Denetim & Kurulum",
+          "desc": "Mevcut hesap denetimi (veya yeni hesap kurulumu), dönüşüm takibi doğrulaması ve başlangıç ölçümü."
+        },
+        {
+          "step": "02",
+          "title": "Kampanya Oluşturma",
+          "desc": "Kampanya yapısı, anahtar kelime araştırması, reklam metni ve açılış sayfası uyumu."
+        },
+        {
+          "step": "03",
+          "title": "Lansman & Öğrenme",
+          "desc": "Günlük izlemeyle iki haftalık öğrenme süreci. Algoritma yeterli veriye sahip olana kadar büyük değişiklik yapılmaz."
+        },
+        {
+          "step": "04",
+          "title": "Optimizasyon",
+          "desc": "Haftalık optimizasyon döngüleri: teklif ayarlamaları, negatif anahtar kelimeler, kreatif testi, kitle iyileştirmesi."
+        },
+        {
+          "step": "05",
+          "title": "Ölçeklendirme",
+          "desc": "Kanıtlanmış kampanyalar metodik olarak ölçeklenir. Bütçe artışları hırsa değil, verimlilik eşiklerine bağlıdır."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3.2×",
+          "label": "Ort. ROAS iyileştirmesi"
+        },
+        {
+          "value": "45%",
+          "label": "Ort. CPA düşüşü"
+        },
+        {
+          "value": "60+",
+          "label": "Yönetilen hesap"
+        },
+        {
+          "value": "Ongoing",
+          "label": "Çalışma modeli"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Başlamak için ne kadar bütçe gerekiyor?",
+          "a": "Minimum aylık $1.500 reklam harcaması. Bunun altında öğrenme süreci anlamlı veri üretmek için çok uzun sürer."
+        },
+        {
+          "q": "Ne zaman sonuç görürüz?",
+          "a": "İlk 4 hafta öğrenme süreci. Anlamlı optimizasyon 5-6. haftada başlar. 3. ay genellikle verimliliğin zirve yaptığı dönemdir."
+        },
+        {
+          "q": "Mevcut kampanyalarla çalışıyor musunuz?",
+          "a": "Evet. Önce denetleriz, en büyük kayıpları tespit eder ve yeni kampanyalar kurmadan önce bunları düzeltiriz."
+        },
+        {
+          "q": "Yönetim ücreti reklam harcamasından ayrı mı?",
+          "a": "Evet. Reklam harcamasını doğrudan Google'a ödersiniz. Yönetim ücretimiz ayrıdır ve strateji, kurulum ve optimizasyonu kapsar."
+        }
+      ]
+    },
+    "seo-geo": {
+      "title": "SEO & GEO",
+      "desc": "Teknik SEO artı generative engine optimizasyonu — hem Google hem AI modelleri tarafından bulunmak.",
+      "longDesc": "2025'te SEO, hem arama motorları hem de dil modelleri tarafından bulunmak demek. Teknik SEO'yu ele alıyoruz — Core Web Vitals, schema markup, taranabilirlik — ve generative engine optimizasyonunu: içeriğinizi Claude, ChatGPT ve Perplexity tarafından alıntılanacak şekilde yapılandırmak. Bunlar farklı çözümler gerektiren farklı problemler ve ikisini de ele alıyoruz.",
+      "items": [
+        "Teknik · İçerik",
+        "Schema · Core Web Vitals",
+        "LLM alıntı yüzeyleri"
+      ],
+      "features": [
+        {
+          "title": "Teknik SEO Denetimi",
+          "desc": "Tarama analizi, Core Web Vitals, indeksleme sorunları, yinelenen içerik ve yönlendirme zincirleri. Google'ın sitenizi nasıl gördüğünü etkileyen her şey."
+        },
+        {
+          "title": "Schema Markup",
+          "desc": "Arama motorlarına içeriğinizin tam olarak ne olduğunu söyleyen yapısal veri — Organization, Product, Article, FAQ ve özel şemalar."
+        },
+        {
+          "title": "Core Web Vitals",
+          "desc": "Kod seviyesinde LCP, INP ve CLS optimizasyonu. Geliştirme ekibinizle birlikte uyguluyoruz, sadece raporlamıyoruz."
+        },
+        {
+          "title": "İçerik Stratejisi",
+          "desc": "Sadece hacme değil, arama niyetine dayalı konu kümesi haritalama, içerik boşluk analizi ve editoryal takvim."
+        },
+        {
+          "title": "GEO (Generative Engine)",
+          "desc": "Dil modellerinin içeriğinizi doğru şekilde alıntılayıp özetleyebilmesi için yapılandırma. Geleneksel SEO'dan farklı bir disiplin."
+        },
+        {
+          "title": "LLM Alıntı Yüzeyleri",
+          "desc": "Modellerin sizi kaynak olarak seçmesini sağlayan otoriter içerik, yapısal veri ve bağlantı profili oluşturma."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Teknik Denetim",
+          "desc": "Tam tarama, Core Web Vitals ölçümü ve indeksleme analizi. Efor/etki tahminleriyle önceliklendirilmiş düzeltme listesi."
+        },
+        {
+          "step": "02",
+          "title": "Düzeltme Uygulaması",
+          "desc": "Geliştirme ekibinizle birlikte uygulanan teknik düzeltmeler. Spesifikasyonları biz yazıyoruz; gerekirse uygulama da yapabiliriz."
+        },
+        {
+          "step": "03",
+          "title": "İçerik Haritası",
+          "desc": "Arama niyeti ve iş hedeflerine bağlı konu kümeleri, içerik boşlukları ve 6 aylık editoryal takvim."
+        },
+        {
+          "step": "04",
+          "title": "GEO Katmanı",
+          "desc": "Özellikle LLM alıntısı için schema markup, yapılandırılmış içerik formatları ve otorite inşa eden içerik."
+        },
+        {
+          "step": "05",
+          "title": "İzleme & İterasyon",
+          "desc": "Sıralamalar, trafik ve alıntı bahisleri üzerine aylık raporlama. Ortam geliştikçe strateji ayarlanır."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3–6mo",
+          "label": "Tipik geri dönüş süresi"
+        },
+        {
+          "value": "180%",
+          "label": "Ort. organik trafik artışı"
+        },
+        {
+          "value": "Top 3",
+          "label": "Ort. sıralama pozisyonu"
+        },
+        {
+          "value": "40+",
+          "label": "Optimize edilen site"
+        }
+      ],
+      "faq": [
+        {
+          "q": "GEO nedir ve neden önemli?",
+          "a": "Generative Engine Optimization, içeriğinizi AI modelleri tarafından alıntılanabilir hale getirme pratiğidir. Daha fazla kullanıcı cevapları AI'dan aldıkça, Claude veya ChatGPT tarafından alıntılanmak Google'da sıralanmak kadar önemli hale geliyor."
+        },
+        {
+          "q": "SEO ne kadar sürer?",
+          "a": "Teknik düzeltmeler 2-4 haftada sonuç gösterir. İçerik etkisi 3-6 ay sürer. GEO sonuçlarını ölçmek daha zor ama genellikle 2-3 ayda görünür hale gelir."
+        },
+        {
+          "q": "İçerikleri siz mi yazıyorsunuz?",
+          "a": "Yazabilir, brief verebilir veya inceleyebiliriz. Çoğu müşterinin kendi yazarları var ve bizi strateji ve optimizasyon için kullanıyor."
+        },
+        {
+          "q": "Mevcut CMS'imizle çalışabilir misiniz?",
+          "a": "Evet. WordPress, Contentful, Sanity, Webflow ve özel kurulumlarda içerik optimize ettik. Schema ve meta uygulaması stack'inize uyum sağlar."
+        }
+      ]
+    },
+    "how-to-do": {
+      "title": "How To Do?",
+      "desc": "Uygulamalı eğitimler, workshoplar ve mentorluk — ekibinizi bağımsız hale getiriyoruz.",
+      "longDesc": "Yazılım, tasarım ve dijital pazarlama alanlarında uygulamalı eğitimler veriyoruz. Teorik değil, pratik odaklı: gerçek projeler üzerinde, gerçek araçlarla, ekibinizin ihtiyacına göre özelleşmiş müfredat. Amacımız bize bağımlılık yaratmak değil — ekibinizi bağımsız ve yetkin hale getirmek.",
+      "items": [
+        "Workshop · Eğitim",
+        "1:1 Mentorluk",
+        "Video Eğitim İçerikleri"
+      ],
+      "features": [
+        {
+          "title": "Uygulamalı Workshoplar",
+          "desc": "Yarım gün veya tam gün formatında ekip workshopları. Gerçek projeler üzerinde, canlı kodlama ve tasarım ile ilerliyor."
+        },
+        {
+          "title": "1:1 Mentorluk",
+          "desc": "Bireysel gelişim için kişiye özel mentorluk. Kendi projeniz üzerinde, kendi sorunlarınızla çalışıyoruz."
+        },
+        {
+          "title": "Video Eğitim Serisi",
+          "desc": "Adım adım video eğitimler — Next.js, React, Supabase, AI entegrasyonu, SEO ve daha fazlası."
+        },
+        {
+          "title": "AI ile Geliştirme",
+          "desc": "Claude Code, Cursor ve AI araçlarıyla nasıl 5 kat hızlı geliştirme yapılır — ilk repo'dan production'a."
+        },
+        {
+          "title": "Ekip Playbook'ları",
+          "desc": "Ekibinizin teknolojilerine özel yazılmış dahili dokümantasyon, workflow kuralları ve best practice rehberleri."
+        },
+        {
+          "title": "Sürekli Danışmanlık",
+          "desc": "Aylık check-in'ler ile ekibin gelişimini takip ediyor, tıkanma noktalarını çözüyor, yeni pattern'ler öğretiyoruz."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "İhtiyaç Analizi",
+          "desc": "Ekibin mevcut beceri seviyesi, kullandığı araçlar ve hedefler belirleniyor. Eğitim müfredatı buna göre tasarlanıyor."
+        },
+        {
+          "step": "02",
+          "title": "Müfredat Tasarımı",
+          "desc": "Gerçek projenize ve tech stack'inize uygun egzersizler ve workshop içerikleri hazırlanıyor."
+        },
+        {
+          "step": "03",
+          "title": "Eğitim Sunumu",
+          "desc": "Canlı, uygulamalı session. Herkes session sonunda gerçek bir şey teslim etmiş oluyor."
+        },
+        {
+          "step": "04",
+          "title": "Dokümantasyon",
+          "desc": "Eğitim sonrası ekibinize özel pattern'ler, convention'lar ve referans kartları yazılıyor."
+        },
+        {
+          "step": "05",
+          "title": "Takip & Mentorluk",
+          "desc": "Eğitim sonrası bireysel derinleşme isteyenler için opsiyonel 1:1 mentorluk session'ları."
+        }
+      ],
+      "stats": [
+        {
+          "value": "300+",
+          "label": "Eğitim alan kişi"
+        },
+        {
+          "value": "50+",
+          "label": "Workshop tamamlandı"
+        },
+        {
+          "value": "5×",
+          "label": "Ort. verimlilik artışı"
+        },
+        {
+          "value": "4.9★",
+          "label": "Katılımcı puanı"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hangi konularda eğitim veriyorsunuz?",
+          "a": "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (Supabase, PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz."
+        },
+        {
+          "q": "Online eğitim veriyor musunuz?",
+          "a": "Evet. Online workshoplar 12 kişiye kadar çok iyi çalışıyor. Daha büyük gruplar için yüz yüze eğitimi öneriyoruz."
+        },
+        {
+          "q": "Eğitim için minimum seviye gerekli mi?",
+          "a": "Konuya göre değişir. Teknik eğitimler için temel programlama bilgisi yeterli. Pazarlama eğitimleri herkes için açık."
+        },
+        {
+          "q": "ROI'yi nasıl ölçüyoruz?",
+          "a": "Eğitim öncesi ve sonrası sprint velocity, teslim kalitesi ve ekip memnuniyeti ölçüyoruz. Çoğu ekip 3-5× verimlilik artışı raporluyor."
+        }
+      ]
+    },
+    "data-engineering": {
+      "title": "Veri Mühendisliği",
+      "desc": "Warehouse'lar, ELT pipeline'ları ve ekibinizin gerçekten sorgulayabildiği analitik katmanları.",
+      "longDesc": "Ekibinizin gerçekten kullandığı veri altyapısı kuruyoruz — temiz şemalar, güvenilir pipeline'lar ve gerçek soruları yanıtlayan dashboard'lar. Ham olay akışlarından yönetici dashboard'larına kadar tam analitik stack'i üstleniyoruz. Amaç, ekibinizin karar almak için yeterince güvendiği bir data warehouse.",
+      "items": [
+        "Postgres · BigQuery",
+        "dbt · Airbyte · Airflow",
+        "Metrikler · dashboard'lar"
+      ],
+      "features": [
+        {
+          "title": "Warehouse Tasarımı",
+          "desc": "BigQuery, Snowflake veya Postgres'te boyutsal modelleme. Hem sorgu performansı hem de ekip kullanılabilirliği için tasarlanmış şemalar."
+        },
+        {
+          "title": "ELT Pipeline'ları",
+          "desc": "Çıkarma için Airbyte, dönüşüm için dbt. Her dönüşüm test edilmiş, belgelenmiş ve versiyon kontrollü."
+        },
+        {
+          "title": "dbt Modelleri",
+          "desc": "Staging, intermediate ve mart katmanlarıyla modüler dbt projesi. Her modelin testleri ve dokümantasyonu var."
+        },
+        {
+          "title": "Orkestrasyon",
+          "desc": "Pipeline zamanlama, izleme ve hata yönetimi için Airflow veya Prefect. Sessiz hatalar yok."
+        },
+        {
+          "title": "Metrik Katmanı",
+          "desc": "Tüm dashboard'larda tutarlı metrik tanımlarına sahip semantik katman. 'Gelir' ve 'aktif kullanıcılar' için tek doğru kaynak."
+        },
+        {
+          "title": "Dashboard'lar",
+          "desc": "Aracın kolay yaptığına değil, gerçek iş sorularına göre kurulan Looker, Metabase veya Superset dashboard'ları."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Veri Denetimi",
+          "desc": "Mevcut veri kaynaklarının envanteri, kalite değerlendirmesi ve işletmenin en çok yanıtlaması gereken 5 sorunun belirlenmesi."
+        },
+        {
+          "step": "02",
+          "title": "Mimari Tasarım",
+          "desc": "Herhangi bir kod yazmadan önce warehouse seçimi, şema tasarımı ve pipeline mimarisi belgelenir."
+        },
+        {
+          "step": "03",
+          "title": "Pipeline Geliştirme",
+          "desc": "Baştan veri kalite kontrolleri, uyarılar ve artımlı yükleme ile ELT pipeline'ları."
+        },
+        {
+          "step": "04",
+          "title": "Dönüşüm Katmanı",
+          "desc": "Testler ve dokümantasyonla tüm temel iş varlıklarını kapsayan dbt modelleri."
+        },
+        {
+          "step": "05",
+          "title": "Dashboard Teslimi",
+          "desc": "Paydaşlar için değil, paydaşlarla birlikte kurulan iş dashboard'ları. İterasyon dahil."
+        }
+      ],
+      "stats": [
+        {
+          "value": "8–16wk",
+          "label": "Tipik süre"
+        },
+        {
+          "value": "50+",
+          "label": "Kurulan warehouse"
+        },
+        {
+          "value": "99.9%",
+          "label": "Pipeline güvenilirliği"
+        },
+        {
+          "value": "10×",
+          "label": "Ort. sorgu hızı iyileştirmesi"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hangi warehouse'u kullanmalıyız?",
+          "a": "GCP kullananlar için BigQuery, kurumsal için Snowflake, erken aşama için Postgres. Ekip büyüklüğünüze, bütçenize ve mevcut stack'inize göre öneriyoruz."
+        },
+        {
+          "q": "Dağınık, tutarsız verilerimiz var — yine de yardımcı olabilir misiniz?",
+          "a": "Bu tipik başlangıç noktası. Veri temizleme ve normalleştirme dbt dönüşüm katmanının bir parçası."
+        },
+        {
+          "q": "Ekibimizi dbt konusunda eğitiyor musunuz?",
+          "a": "Evet. Bilgi transferi her angajmanın parçası. Kara kutu inşa etmiyoruz."
+        },
+        {
+          "q": "PII ve veri gizliliğini nasıl ele alıyorsunuz?",
+          "a": "Standart olarak sütun düzeyinde maskeleme, rol bazlı erişim ve veri sınıflandırması. GDPR/CCPA uyumluluk gereksinimlerinde de yardımcı olabiliriz."
+        }
+      ]
+    },
+    "cloud-ecosystem": {
+      "title": "Cloud Ekosistemi",
+      "desc": "Google Cloud ve Vercel üzerinde production kalitesinde cloud kurulumları — gözlemlenebilir, belgelenmiş, devir teslime hazır.",
+      "longDesc": "İlk günden production-ready cloud altyapısı tasarlıyor ve kuruyoruz — sadece çalışan değil, gözlemlenebilir, belgelenmiş ve güvenle devir teslim edilebilir bir yapı. Backend altyapısı için Google Cloud, frontend dağıtımı için Vercel, infrastructure-as-code için Terraform ve kullanıcılar fark etmeden önce neler olduğunu söyleyen bir izleme stack'i.",
+      "items": [
+        "Google Cloud · Vercel",
+        "IaC · Terraform",
+        "CI/CD · izleme"
+      ],
+      "features": [
+        {
+          "title": "Infrastructure as Code",
+          "desc": "Tüm altyapı için Terraform modülleri. Her şey tekrarlanabilir, versiyon kontrollü ve incelenebilir."
+        },
+        {
+          "title": "Google Cloud Mimarisi",
+          "desc": "Cloud Run, GKE, Cloud SQL, Cloud Storage, Cloud CDN — iş yükünüze uygun boyutlandırılmış Google yönetilen servisleri."
+        },
+        {
+          "title": "Vercel Dağıtımı",
+          "desc": "Preview deployment'lar, ISR ve serverless function'larla edge-optimize frontend hosting — commit'ten production'a en hızlı yol."
+        },
+        {
+          "title": "CI/CD Pipeline'ları",
+          "desc": "Otomatik test, preview deployment'lar ve kontrollü production sürümleriyle GitHub Actions iş akışları."
+        },
+        {
+          "title": "İzleme Stack'i",
+          "desc": "Önemli olan konularda uyarı vermek üzere yapılandırılmış Google Cloud Monitoring, Grafana veya Datadog. Nöbetçi ekibinizin gerçekten kullanacağı dashboard'lar."
+        },
+        {
+          "title": "Dokümantasyon",
+          "desc": "Mimari karar kayıtları, runbook'lar ve olay müdahale playbook'ları. Biz ayrıldıktan sonra ekibiniz işletebilir."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Mimari İnceleme",
+          "desc": "Mevcut durum değerlendirmesi, darboğaz tespiti ve tradeoff'ları belgelenmiş gelecek durum mimarisi tasarımı."
+        },
+        {
+          "step": "02",
+          "title": "IaC Geçişi",
+          "desc": "Mevcut altyapı Terraform'da kodlanır. Artık tıklama-operasyonları yok."
+        },
+        {
+          "step": "03",
+          "title": "CI/CD Kurulumu",
+          "desc": "Tüm ortamlar için otomatik pipeline'lar — dev, staging, production — deployment kapıları ve rollback prosedürleriyle."
+        },
+        {
+          "step": "04",
+          "title": "İzleme Kurulumu",
+          "desc": "Go-live öncesinde yapılandırılmış ve test edilmiş uyarılar, dashboard'lar ve nöbetçi runbook'ları."
+        },
+        {
+          "step": "05",
+          "title": "Devir Teslim",
+          "desc": "Dokümantasyon paketi, ekip eğitim oturumu ve 30 günlük destek penceresi."
+        }
+      ],
+      "stats": [
+        {
+          "value": "99.99%",
+          "label": "Ulaşılan uptime"
+        },
+        {
+          "value": "60%",
+          "label": "Ort. maliyet düşüşü"
+        },
+        {
+          "value": "70+",
+          "label": "Kurulan cloud altyapısı"
+        },
+        {
+          "value": "4–10wk",
+          "label": "Tipik süre"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Neden AWS yerine Google Cloud?",
+          "a": "Google Cloud üstün yönetilen servisler, daha iyi fiyatlandırma modelleri ve AI/ML araçlarıyla daha sıkı entegrasyon sunuyor. Üstlendiğimiz çoğu iş yükü için GCP + Vercel optimal kombinasyon."
+        },
+        {
+          "q": "Altyapıyı sürekli olarak yönetiyor musunuz?",
+          "a": "Kuruyoruz ve devir teslim ediyoruz. Sürekli yönetim retainer'ları mevcut ama çoğu müşteri iyi kurulmuş altyapılarına kendileri sahip olmayı tercih ediyor."
+        },
+        {
+          "q": "Felaket kurtarmayı nasıl ele alıyorsunuz?",
+          "a": "RTO ve RPO hedefleri mimari aşamasında tanımlanır, test edilmiş kurtarma prosedürleriyle birlikte. DR sonradan akla gelen bir şey değil."
+        },
+        {
+          "q": "Kubernetes ile çalışıyor musunuz?",
+          "a": "Evet. Google Cloud üzerinde GKE veya self-managed. Karmaşıklığın haklı çıkardığı durumlarda öneriyoruz — ki bu insanların düşündüğünden daha az sıklıkta oluyor."
+        }
+      ]
+    }
+  },
+  "stories": {
+    "dolmus": {
+      "title": "Dolmuş",
+      "sub": "Minibüs güzergah takip sistemi.",
+      "body": [
+        "Toplu taşıma için minibüs güzergah takip sistemi olan Dolmuş web uygulamasını geliştirdik. Kullanıcılar güzergahları kolayca görüntüleyebiliyor ve seyahat planlaması yapabiliyor.",
+        "Gerçek zamanlı güzergah bilgisi, kullanıcı dostu arayüz ve mobil uyumlu tasarım ile şehir içi ulaşımı kolaylaştırdık."
+      ],
+      "role": "Full-stack / Tasarım"
+    },
+    "orchid-tent": {
+      "title": "Orchid Tent",
+      "sub": "Londra merkezli çadır ve etkinlik kiralama.",
+      "body": [
+        "Londra merkezli Orchid Tent için çadır ve etkinlik kiralama hizmeti sunan kurumsal bir web sitesi tasarladık. Şık tasarım ve kolay navigasyon ile potansiyel müşterilerin hızlıca bilgi edinmesini sağladık.",
+        "Etkinlik galerisi, fiyat teklifi formu ve responsive tasarım ile Londra'daki etkinlik sektöründe güçlü bir dijital varlık oluşturduk."
+      ],
+      "role": "Tasarım / Geliştirme"
+    },
+    "gabfest-2025": {
+      "title": "Gabfest 2025",
+      "sub": "Konferans ve etkinlik web sitesi.",
+      "body": [
+        "Gabfest 2025 konferansı için WordPress altyapısında modern ve bilgilendirici bir etkinlik web sitesi tasarladık. Program, konuşmacılar ve kayıt bilgilerini düzenli bir şekilde sunduk.",
+        "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık."
+      ],
+      "role": "Tasarım / Geliştirme"
+    },
+    "kibris-night-club": {
+      "title": "Kıbrıs Night Club",
+      "sub": "KKTC gece hayatı rehberi.",
+      "body": [
+        "KKTC'deki gece kulüplerini ve eğlence mekanlarını listeleyen SEO odaklı bir rehber sitesi geliştirdik. WordPress altyapısı üzerinde mekan profilleri, etkinlik takvimleri ve kullanıcı yorumları dahil.",
+        "SEO optimizasyonu ile arama motorlarında gece hayatı aramaları için üst sıralarda yer almayı başardık. Kullanıcı deneyimi ve hızlı erişim önceliğimiz oldu."
+      ],
+      "role": "SEO / Geliştirme"
+    },
+    "aydin-transfer": {
+      "title": "Aydın Transfer",
+      "sub": "Havalimanı ve şehir içi transfer hizmeti.",
+      "body": [
+        "Aydın Transfer için havalimanı ve şehir içi transfer hizmeti sunan kurumsal bir web sitesi tasarladık. Kolay rezervasyon akışı, fiyat hesaplama ve iletişim formları ile müşteri deneyimini optimize ettik.",
+        "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık."
+      ],
+      "role": "Tasarım / Geliştirme"
+    }
+  }
+}

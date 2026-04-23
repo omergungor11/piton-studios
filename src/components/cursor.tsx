@@ -16,6 +16,7 @@ export default function Cursor() {
     const mq = window.matchMedia('(pointer: fine)');
     if (!mq.matches) return;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisible(true);
 
     const onMove = (e: MouseEvent) => {

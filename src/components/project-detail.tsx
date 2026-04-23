@@ -1,7 +1,8 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 
@@ -11,24 +12,35 @@ interface Props {
 
 export default function ProjectDetail({ project }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const td = useTranslations('projectDetail');
+  const tw = useTranslations('works');
+  const ts = useTranslations('stories');
+
   const { prev, next } = getAdjacentProjects(
     project.type === 'work' ? project.slug : project.slug
   );
 
   const slug = project.type === 'work' ? project.slug : project.slug;
-  const title = project.title;
   const year = project.year;
   const role = project.role;
   const tags = project.tags;
   const video = project.type === 'work' ? project.video : project.video;
-  const body = project.type === 'work' ? project.body : project.body;
 
   const client = project.type === 'work' ? project.client : project.client;
   const kind = project.type === 'work' ? project.kind : undefined;
-  const summary = project.type === 'work' ? project.summary : project.sub;
   const scope = project.type === 'work' ? project.scope : undefined;
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
   const number = project.type === 'work' ? project.n : project.no;
+
+  // Resolve translated content by slug, falling back to data.ts values
+  const translationNs = project.type === 'work' ? tw : ts;
+  const title = translationNs.has(`${slug}.title`) ? translationNs(`${slug}.title`) : project.title;
+  const summary = project.type === 'work'
+    ? (tw.has(`${slug}.summary`) ? tw(`${slug}.summary`) : project.summary)
+    : (ts.has(`${slug}.sub`) ? ts(`${slug}.sub`) : project.sub);
+  const body: string[] = translationNs.has(`${slug}.body`)
+    ? (translationNs.raw(`${slug}.body`) as string[])
+    : (project.type === 'work' ? project.body : project.body);
 
   // Ensure video plays
   useEffect(() => {
@@ -58,34 +70,34 @@ export default function ProjectDetail({ project }: Props) {
           <h1 className="pd-hero-title">{title}</h1>
           <span className="pd-hero-year">{year}</span>
         </div>
-        <div className="pd-hero-tag">[ VIDEO · CASE ]</div>
+        <div className="pd-hero-tag">{td('mediaTag')}</div>
       </section>
 
       {/* Metadata bar */}
       <section className="pd-meta glass">
         {client && (
           <div className="pd-meta-item">
-            <div className="pd-meta-k">Client</div>
+            <div className="pd-meta-k">{td('client')}</div>
             <div className="pd-meta-v">{client}</div>
           </div>
         )}
         <div className="pd-meta-item">
-          <div className="pd-meta-k">Year</div>
+          <div className="pd-meta-k">{td('year')}</div>
           <div className="pd-meta-v">{year}</div>
         </div>
         {(kind || scope) && (
           <div className="pd-meta-item">
-            <div className="pd-meta-k">Scope</div>
+            <div className="pd-meta-k">{td('scope')}</div>
             <div className="pd-meta-v">{scope || kind}</div>
           </div>
         )}
         <div className="pd-meta-item">
-          <div className="pd-meta-k">Role</div>
+          <div className="pd-meta-k">{td('role')}</div>
           <div className="pd-meta-v">{role}</div>
         </div>
         {collaborator && (
           <div className="pd-meta-item">
-            <div className="pd-meta-k">Collab</div>
+            <div className="pd-meta-k">{td('collab')}</div>
             <div className="pd-meta-v">{collaborator}</div>
           </div>
         )}
@@ -93,7 +105,7 @@ export default function ProjectDetail({ project }: Props) {
 
       {/* Body */}
       <section className="pd-body">
-        <div className="pd-body-eyebrow">§ Case Study</div>
+        <div className="pd-body-eyebrow">{td('caseStudy')}</div>
         <h2 className="pd-body-title">
           {title} — <span className="em">{summary}</span>
         </h2>
@@ -113,8 +125,8 @@ export default function ProjectDetail({ project }: Props) {
         </div>
         {tags.length > 0 && (
           <div className="pd-tags">
-            {tags.map((t) => (
-              <span key={t} className="pd-tag">{t}</span>
+            {tags.map((tag) => (
+              <span key={tag} className="pd-tag">{tag}</span>
             ))}
           </div>
         )}
@@ -123,14 +135,14 @@ export default function ProjectDetail({ project }: Props) {
       {/* Related / Navigation */}
       <section className="pd-nav">
         <div className="pd-nav-head">
-          <span className="pd-nav-tag">More Work</span>
+          <span className="pd-nav-tag">{td('moreWork')}</span>
           <Link
             href="/projects"
             className="pd-nav-all"
             data-cursor="hover"
             data-cursor-label="↗"
           >
-            View all projects ↗
+            {td('viewAll')}
           </Link>
         </div>
         <div className="pd-nav-grid">
@@ -151,7 +163,7 @@ export default function ProjectDetail({ project }: Props) {
                 />
               </div>
               <div className="pd-nav-card-info">
-                <span className="pd-nav-dir">← Previous</span>
+                <span className="pd-nav-dir">{td('prev')}</span>
                 <span className="pd-nav-card-title">{prev.title}</span>
                 <span className="pd-nav-card-kind">
                   {prev.type === 'work' ? prev.kind : prev.tags.join(' · ')}
@@ -167,7 +179,7 @@ export default function ProjectDetail({ project }: Props) {
               data-cursor-label="Next"
             >
               <div className="pd-nav-card-info" style={{ textAlign: 'right' }}>
-                <span className="pd-nav-dir">Next →</span>
+                <span className="pd-nav-dir">{td('next')}</span>
                 <span className="pd-nav-card-title">{next.title}</span>
                 <span className="pd-nav-card-kind">
                   {next.type === 'work' ? next.kind : next.tags.join(' · ')}

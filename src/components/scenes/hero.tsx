@@ -1,32 +1,46 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+
 interface HeroSceneProps {
   clock: string;
 }
 
 export default function HeroScene({ clock: _clock }: HeroSceneProps) {
+  const t = useTranslations('hero');
+
+  const chips = t.raw('chips') as string[];
+
   return (
     <div className="hero-stack">
       <div className="hero-main glass strong">
-        <div className="kicker">Reel · 016 · A studio of one</div>
-        <h1 style={{ fontWeight: '600', letterSpacing: '2px', lineHeight: '0.85' }}>
-          Pixel <span className="it">Ninja</span>
-          <br />
-          <span className="line2">
-            By Ömer <span className="it">Güngör</span>
-          </span>
-        </h1>
-        <div className="sub" style={{ textAlign: 'left' }}>
-          Independent brand, direction &amp; motion studio — working from Karaköy, İstanbul with
-          clients around the world.
-        </div>
-        <div className="row-foot">
-          <span className="chip accent">● ONLINE</span>
-          <span className="chip">AI</span>
-          <span className="chip">BRAND</span>
-          <span className="chip">Motion</span>
-          <span className="chip">WEBSITE</span>
-        </div>
+        <Reveal variant="fadeIn" duration={0.8}>
+          <div className="kicker">{t('kicker')}</div>
+        </Reveal>
+        <Reveal variant="fadeUp" delay={0.2} duration={0.8}>
+          <h1 style={{ fontWeight: '600', letterSpacing: '2px', lineHeight: '0.85' }}>
+            Pixel <span className="it">Ninja</span>
+            <br />
+            <span className="line2">
+              From <span className="it">Türkiye</span>
+            </span>
+          </h1>
+        </Reveal>
+        <Reveal variant="fadeUp" delay={0.4}>
+          <div className="sub" style={{ textAlign: 'left' }}>
+            {t('subtitle')}
+          </div>
+        </Reveal>
+        <Stagger staggerDelay={0.1} className="row-foot">
+          {chips.map((chip) => (
+            <StaggerItem key={chip}>
+              <span className={`chip ${chip === 'ONLINE' || chip === 'ОНЛАЙН' ? 'accent' : ''}`}>
+                {chip === 'ONLINE' || chip === 'ОНЛАЙН' ? `● ${chip}` : chip}
+              </span>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
       <div className="hero-side"></div>
     </div>
