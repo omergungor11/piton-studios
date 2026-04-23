@@ -20,10 +20,10 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
         </Reveal>
         <Reveal variant="fadeUp" delay={0.2} duration={0.8}>
           <h1 style={{ fontWeight: '600', letterSpacing: '2px', lineHeight: '0.85' }}>
-            Pixel <span className="it">Ninja</span>
+            {t('title1')} <span className="it">{t('title2')}</span>
             <br />
             <span className="line2">
-              From <span className="it">Türkiye</span>
+              {t('title3')} <span className="it">{t('title4')}</span>
             </span>
           </h1>
         </Reveal>
