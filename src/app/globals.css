@@ -839,6 +839,7 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
   position: relative;
   border-radius: 18px;
   align-self: stretch;
+  min-height: 420px;
   overflow: hidden;
   background: #0c0c0c;
   border: 1px solid var(--glass-border);
@@ -882,6 +883,7 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
   .manifesto-glass { padding: 24px 16px; }
   .manifesto-cards { grid-template-columns: 1fr; gap: 10px; }
   .manifesto-glass h2 { font-size: clamp(24px, 7vw, 36px); }
+  .note-media { min-height: 280px; }
 }
 
 /* Scene 03 — Works */

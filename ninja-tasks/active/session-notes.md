@@ -81,3 +81,25 @@
 - next-intl config Vercel'de ./src/i18n/request.ts bulamiyordu, ./i18n/request.ts olarak tasindi
 - Video dosyalari artik Supabase Storage CDN uzerinden servis ediliyor (media.ts)
 - Cursor fix zaten Session 1'de yapilmis (PageShell icinde Cursor mevcut)
+
+---
+
+## 2026-05-08 — Session 3
+
+### Goals
+- Session 2'den kalan pending isler
+- Admin auth, contact form, SEO, performance audit
+
+### Completed
+_(session devam ediyor)_
+
+### Pending
+- [ ] Admin panel Supabase Auth ile koruma
+- [ ] Contact form backend entegrasyonu (Supabase insert)
+- [ ] SEO meta tags (og:image, og:video, twitter cards)
+- [ ] Custom domain baglama
+- [ ] Performance audit (Lighthouse)
+- [ ] Vercel env vars + canli video dogrulama
+
+### Notes
+- Tum 21 task tamamlanmis durumda, bu session iyilestirme/polish uzerine

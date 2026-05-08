@@ -5,11 +5,12 @@
 | Phase | Name | Total | Done | In Progress | Pending | Blocked |
 |-------|------|-------|------|-------------|---------|---------|
 | 0 | Project Setup | 7 | 7 | 0 | 0 | 0 |
-| 1 | Core Infrastructure | 4 | 2 | 0 | 2 | 0 |
+| 1 | Core Infrastructure | 6 | 6 | 0 | 0 | 0 |
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **17** | **15** | **0** | **2** | **0** |
+| 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
+| **Total** | | **21** | **21** | **0** | **0** | **0** |
 
-**Progress**: 15/17 (88%)
+**Progress**: 21/21 (100%) ✓
 
 ---
 
@@ -29,10 +30,14 @@
 
 | ID | Task | Agent | Complexity | Status | Dependencies |
 |----|------|-------|-----------|--------|-------------|
-| TASK-008 | Supabase Storage bucket + video upload | backend | M | PENDING | TASK-007 |
+| TASK-008 | Supabase Storage bucket + video upload | backend | M | COMPLETED | TASK-007 |
 | TASK-009 | Supabase DB schema (projects, videos, categories) | database | M | COMPLETED | TASK-007 |
-| TASK-010 | Video optimization pipeline (compression, thumbnails) | backend | L | PENDING | TASK-008 |
+| TASK-010 | Video optimization pipeline (compression, thumbnails) | backend | L | COMPLETED | TASK-008 |
 | TASK-011 | API routes (projects CRUD, video serve) | backend | M | COMPLETED | TASK-009 |
+| TASK-018 | Supabase client setup (@supabase/ssr) | backend | S | COMPLETED | TASK-007 |
+| TASK-019 | Admin CRUD API routes (all tables) | backend | M | COMPLETED | TASK-018 |
+| TASK-020 | Framer Motion scroll animations | frontend | M | COMPLETED | TASK-016 |
+| TASK-021 | Three.js / 3D elements | frontend | L | COMPLETED | TASK-016 |
 
 ## Phase 2: Frontend / UI
 
