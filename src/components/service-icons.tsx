@@ -110,6 +110,55 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
       <line x1="18" y1="20" x2="16" y2="18" />
     </svg>
   ),
+  'agentic-ai': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="16" cy="16" r="4" />
+      <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none" />
+      <path d="M16 5a11 11 0 019.5 5.5" />
+      <path d="M25.5 10.5l-1.5 2.5" />
+      <path d="M25.5 10.5l2.5 1" />
+      <path d="M25.5 21.5A11 11 0 016.5 21.5" />
+      <path d="M6.5 21.5l1.5-2.5" />
+      <path d="M6.5 21.5l-2.5-1" />
+      <path d="M6.5 10.5A11 11 0 0116 5" />
+    </svg>
+  ),
+  'ai-training': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 14l12-7 12 7-12 7z" />
+      <path d="M28 14v7" />
+      <path d="M10 18v5c0 2 2.7 4 6 4s6-2 6-4v-5" />
+      <line x1="28" y1="21" x2="30" y2="24" />
+      <line x1="28" y1="21" x2="26" y2="24" />
+    </svg>
+  ),
+  'ai-consulting': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 4a8 8 0 014 15v3h-8v-3A8 8 0 0116 4z" />
+      <line x1="12" y1="25" x2="20" y2="25" />
+      <line x1="13" y1="28" x2="19" y2="28" />
+      <circle cx="24" cy="8" r="4" />
+      <path d="M22 8l1.5 1.5L26 6" />
+    </svg>
+  ),
+  'prompt-engineering': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="6" width="24" height="20" rx="2" />
+      <path d="M10 13l-3 3 3 3" />
+      <path d="M22 13l3 3-3 3" />
+      <line x1="18" y1="11" x2="14" y2="21" />
+      <circle cx="16" cy="19" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  'ai-chatbot': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 6h22a2 2 0 012 2v12a2 2 0 01-2 2H10l-6 4V8a2 2 0 012-2z" />
+      <circle cx="22" cy="6" r="3" fill="currentColor" stroke="none" />
+      <circle cx="22" cy="6" r="5" />
+      <line x1="10" y1="13" x2="16" y2="13" />
+      <line x1="10" y1="17" x2="14" y2="17" />
+    </svg>
+  ),
 };
 
 export default SERVICE_ICONS;
