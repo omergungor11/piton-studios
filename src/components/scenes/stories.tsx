@@ -11,7 +11,8 @@ export default function StoriesScene() {
   const ts = useTranslations('stories');
   const [idx, setIdx] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
-  const n = STORIES.length;
+  const stories = STORIES.slice(0, 6);
+  const n = stories.length;
 
   const go = (dir: number) => setIdx((i) => Math.max(0, Math.min(n - 1, i + dir)));
   const jump = (i: number) => setIdx(Math.max(0, Math.min(n - 1, i)));
@@ -42,7 +43,7 @@ export default function StoriesScene() {
 
       <div className="stories-viewport">
         <div className="stories-track" ref={trackRef}>
-          {STORIES.map((s, i) => (
+          {stories.map((s, i) => (
             <Link
               key={s.no}
               href={`/projects/${s.slug}`}
@@ -89,7 +90,7 @@ export default function StoriesScene() {
         <div className="stories-nav">
           <button className="stories-btn" onClick={() => go(-1)} disabled={idx === 0} data-cursor="hover" data-cursor-label="Prev">←</button>
           <div className="stories-dots">
-            {STORIES.map((_, i) => (
+            {stories.map((_, i) => (
               <button key={i} className={`stories-dot ${i === idx ? 'on' : ''}`} onClick={() => jump(i)} aria-label={`Story ${i + 1}`} />
             ))}
           </div>

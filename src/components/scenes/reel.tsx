@@ -24,8 +24,6 @@ export default function ReelScene() {
           <div><div className="k">{t('labelProjectCount')}</div><div className="v">{t('valueProjectCount')}</div></div>
           <div><div className="k">{t('labelPreparedBy')}</div><div className="v">{t('valuePreparedBy')}</div></div>
         </div>
-        <p>{t('body1')}</p>
-        <p>{t('body2')}</p>
         <Link href="/projects" className="arrow" data-cursor="hover" data-cursor-label="Watch">
           <span>{t('cta')}</span>
           <span>↗</span>

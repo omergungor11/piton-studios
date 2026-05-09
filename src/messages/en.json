@@ -15,8 +15,8 @@
     "kicker": "Design · Code · AI — Digital Studio",
     "title1": "Pixel",
     "title2": "Ninja",
-    "title3": "From",
-    "title4": "Turkey",
+    "title3": "We make Pixels into",
+    "title4": "Ninjas from Turkey",
     "subtitle": "Design, code & AI — under one roof. We design your brand, develop your product, and accelerate your growth. Quality-focused, results guaranteed.",
     "chips": [
       "ONLINE",
@@ -31,7 +31,7 @@
     "eyebrow": "§ 01 · Note",
     "title": "Why {accent}?",
     "titleAccent": "Pixel Ninja",
-    "subtitle": "We are an independent studio combining design, code, and AI under one roof. Quality, speed, and transparency in every project — results-driven work.",
+    "subtitle": "Independent studio — design, code, and AI under one roof.",
     "highlights": [
       {
         "title": "Fast Delivery",
@@ -91,7 +91,7 @@
     "studio": "Studio",
     "studioLocation": "Turkey",
     "formTag": "Write to Us",
-    "formSub": "Let's discuss your project — we usually respond within 24 hours.",
+    "formSub": "Let's talk about your project.",
     "name": "Name",
     "namePlaceholder": "Your Full Name",
     "email": "Email",
@@ -109,7 +109,7 @@
   },
   "services": {
     "eyebrow": "§ 04",
-    "title": "Services · What we ship",
+    "title": "Services",
     "count": "{count} practices"
   },
   "servicesPage": {
@@ -125,7 +125,8 @@
       "Growth": "Growth",
       "Teach": "Teach",
       "Data": "Data",
-      "Infra": "Infra"
+      "Infra": "Infra",
+      "Agentic": "Agentic"
     },
     "details": "Details",
     "ctaTitle": "Let's find the right solution for your project.",
@@ -186,7 +187,7 @@
     "eyebrow": "§ 02.5 · Stories",
     "title": "Short {accent}, cut long.",
     "titleAccent": "stories",
-    "lead": "A moving index of the work — title sequences, reels, and brand films, each filed under the moment it was made."
+    "lead": "A selection from our work — reels and brand films."
   },
   "reel": {
     "eyebrow": "§ 04 · Showreel",
@@ -200,8 +201,8 @@
     "valueProjectCount": "50+",
     "labelPreparedBy": "Prepared by",
     "valuePreparedBy": "Pixel Ninja",
-    "body1": "A visual summary compiled from projects delivered in the past three months — landing pages, dashboards, mobile apps, and AI integrations. Updated every quarter, never polished.",
-    "body2": "Covering the entire process from design to deploy, this reel shows not what we do, but how we do it.",
+    "body1": "A visual summary compiled from our latest projects — updated quarterly.",
+    "body2": "Shows the full process from design to deployment.",
     "cta": "View All Projects",
     "mediaTag": "[ SHOWREEL · 2025 ]",
     "scale": "REEL Q2 · LIVE"
@@ -218,8 +219,8 @@
     "valueScope": "Web App, Platform, SEO",
     "labelStack": "Stack",
     "valueStack": "Next.js · SEO · Platform",
-    "body1": "We designed and developed Gel Gez Gor from scratch — a comprehensive free classifieds platform for North Cyprus. The platform hosts thousands of listings across real estate, vehicles, jobs, and food categories.",
-    "body2": "With advanced filtering, user-friendly interface, and SEO optimization, we helped it become one of the most visited classifieds sites in North Cyprus.",
+    "body1": "We designed and built Northern Cyprus's comprehensive free classifieds platform from scratch.",
+    "body2": "See the full case study for details.",
     "cta": "View Project",
     "mediaTag": "[ PROJECT · DEMO ]",
     "scale": "CASE · PLATFORM"
@@ -1286,6 +1287,501 @@
         {
           "value": "4–10wk",
           "label": "Typical timeline"
+        }
+      ]
+    },
+    "agentic-ai": {
+      "title": "Agentic AI",
+      "desc": "Autonomous AI agents that handle multi-step business workflows end-to-end.",
+      "longDesc": "We build autonomous AI agents that plan, execute, and iterate on complex business tasks.",
+      "items": [
+        "Autonomous Agents",
+        "Tool-use & API Orchestration",
+        "Human-in-the-loop Design"
+      ],
+      "features": [
+        {
+          "title": "Agent Architecture",
+          "desc": "Multi-step agents with memory, tool-use, and planning."
+        },
+        {
+          "title": "Workflow Automation",
+          "desc": "Replace manual processes with autonomous pipelines."
+        },
+        {
+          "title": "Guardrails & Safety",
+          "desc": "Content filtering, rate limiting, and human approval gates."
+        },
+        {
+          "title": "Tool Integration",
+          "desc": "Connect agents to APIs, databases, and external services."
+        },
+        {
+          "title": "Observability",
+          "desc": "Full trace logging, cost tracking, and dashboards."
+        },
+        {
+          "title": "Evaluation & Testing",
+          "desc": "Automated evals to measure accuracy and catch regressions."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Discovery",
+          "desc": "Map workflows and identify automation candidates."
+        },
+        {
+          "step": "02",
+          "title": "Architecture",
+          "desc": "Design agent topology and safety layers."
+        },
+        {
+          "step": "03",
+          "title": "Build",
+          "desc": "Implement with iterative testing."
+        },
+        {
+          "step": "04",
+          "title": "Deploy",
+          "desc": "Production rollout with monitoring."
+        },
+        {
+          "step": "05",
+          "title": "Optimize",
+          "desc": "Continuous improvement from metrics."
+        }
+      ],
+      "stats": [
+        {
+          "value": "10x",
+          "label": "Faster"
+        },
+        {
+          "value": "85%",
+          "label": "Automation"
+        },
+        {
+          "value": "24/7",
+          "label": "Available"
+        },
+        {
+          "value": "99.5%",
+          "label": "Accuracy"
+        }
+      ],
+      "faq": [
+        {
+          "q": "What can agents automate?",
+          "a": "Support, data processing, content, research, and business workflows."
+        },
+        {
+          "q": "How do you ensure reliability?",
+          "a": "Guardrails, human gates, automated evals, and logging."
+        },
+        {
+          "q": "Which LLMs?",
+          "a": "Claude, GPT-4, Gemini — best model for each case."
+        },
+        {
+          "q": "How long to implement?",
+          "a": "MVP agents in 2-4 weeks."
+        }
+      ]
+    },
+    "ai-training": {
+      "title": "AI Training",
+      "desc": "Hands-on AI education — workshops, bootcamps, and team upskilling.",
+      "longDesc": "Practical AI training for teams who want to build with LLMs.",
+      "items": [
+        "Workshops & Bootcamps",
+        "Team Upskilling",
+        "LLM & Agent Courses"
+      ],
+      "features": [
+        {
+          "title": "Custom Curriculum",
+          "desc": "Programs tailored to your team's stack and level."
+        },
+        {
+          "title": "Hands-on Labs",
+          "desc": "Build real AI features, not toy examples."
+        },
+        {
+          "title": "Prompt Engineering",
+          "desc": "Master prompt design and structured outputs."
+        },
+        {
+          "title": "Agent Development",
+          "desc": "Build, test, and deploy autonomous agents."
+        },
+        {
+          "title": "RAG & Search",
+          "desc": "Implement RAG for your own data."
+        },
+        {
+          "title": "AI Safety",
+          "desc": "Guardrails and responsible AI practices."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Assessment",
+          "desc": "Evaluate team AI literacy."
+        },
+        {
+          "step": "02",
+          "title": "Curriculum",
+          "desc": "Build custom program."
+        },
+        {
+          "step": "03",
+          "title": "Delivery",
+          "desc": "Interactive workshops with live coding."
+        },
+        {
+          "step": "04",
+          "title": "Practice",
+          "desc": "Guided project work."
+        },
+        {
+          "step": "05",
+          "title": "Follow-up",
+          "desc": "Post-training support and Q&A."
+        }
+      ],
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Engineers Trained"
+        },
+        {
+          "value": "4.9",
+          "label": "Avg Rating"
+        },
+        {
+          "value": "3x",
+          "label": "Productivity"
+        },
+        {
+          "value": "2-5",
+          "label": "Day Programs"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who is this for?",
+          "a": "Engineers, PMs, and tech leads wanting to integrate AI."
+        },
+        {
+          "q": "Need AI experience?",
+          "a": "No — beginner to advanced tracks available."
+        },
+        {
+          "q": "Remote or on-site?",
+          "a": "Both — worldwide."
+        },
+        {
+          "q": "What tools?",
+          "a": "Claude, OpenAI, LangChain, Vercel AI SDK, RAG."
+        }
+      ]
+    },
+    "ai-consulting": {
+      "title": "AI Consulting",
+      "desc": "AI strategy advisory — find where AI creates real value.",
+      "longDesc": "We help businesses cut through AI hype and find impactful use cases.",
+      "items": [
+        "Strategy & Roadmap",
+        "Use Case Analysis",
+        "Build vs Buy Guidance"
+      ],
+      "features": [
+        {
+          "title": "AI Readiness Audit",
+          "desc": "Assess data, infrastructure, and team readiness."
+        },
+        {
+          "title": "Use Case Mapping",
+          "desc": "Identify high-impact AI opportunities."
+        },
+        {
+          "title": "Vendor Evaluation",
+          "desc": "Compare LLM providers and platforms."
+        },
+        {
+          "title": "ROI Modeling",
+          "desc": "Realistic cost and impact projections."
+        },
+        {
+          "title": "Implementation Roadmap",
+          "desc": "Phased plan from PoC to production."
+        },
+        {
+          "title": "Risk Assessment",
+          "desc": "Regulatory, ethical, and technical risks."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Intake",
+          "desc": "Understand business and tech landscape."
+        },
+        {
+          "step": "02",
+          "title": "Audit",
+          "desc": "Deep dive into data and capabilities."
+        },
+        {
+          "step": "03",
+          "title": "Strategy",
+          "desc": "Prioritized use cases with ROI."
+        },
+        {
+          "step": "04",
+          "title": "Roadmap",
+          "desc": "Phased plan with milestones."
+        },
+        {
+          "step": "05",
+          "title": "Handoff",
+          "desc": "Documentation and next steps."
+        }
+      ],
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Companies"
+        },
+        {
+          "value": "3x",
+          "label": "Avg ROI"
+        },
+        {
+          "value": "2-4",
+          "label": "Weeks"
+        },
+        {
+          "value": "90%",
+          "label": "Implementation"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you also build?",
+          "a": "Yes — strategy to deployment, end-to-end."
+        },
+        {
+          "q": "What industries?",
+          "a": "E-commerce, real estate, SaaS, fintech, education."
+        },
+        {
+          "q": "Different from integration?",
+          "a": "Consulting is strategy-first. Integration is building."
+        },
+        {
+          "q": "Minimum engagement?",
+          "a": "Focused 2-week sprint."
+        }
+      ]
+    },
+    "prompt-engineering": {
+      "title": "Prompt Engineering",
+      "desc": "Production-grade prompt design — reliable outputs and cost optimization.",
+      "longDesc": "We design, test, and optimize prompts that work reliably in production.",
+      "items": [
+        "Prompt Design & Optimization",
+        "Structured Outputs",
+        "Cost Reduction"
+      ],
+      "features": [
+        {
+          "title": "Prompt Architecture",
+          "desc": "Chains and templates for complex tasks."
+        },
+        {
+          "title": "Structured Outputs",
+          "desc": "Reliable JSON and typed responses."
+        },
+        {
+          "title": "Few-shot & CoT",
+          "desc": "Advanced techniques for quality."
+        },
+        {
+          "title": "Evaluation Pipelines",
+          "desc": "Catch regressions before production."
+        },
+        {
+          "title": "Cost Optimization",
+          "desc": "Reduce tokens without losing quality."
+        },
+        {
+          "title": "Prompt Libraries",
+          "desc": "Reusable, versioned templates."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Baseline",
+          "desc": "Understand current prompts and failures."
+        },
+        {
+          "step": "02",
+          "title": "Design",
+          "desc": "Craft optimized prompts."
+        },
+        {
+          "step": "03",
+          "title": "Test",
+          "desc": "Evaluate against diverse scenarios."
+        },
+        {
+          "step": "04",
+          "title": "Optimize",
+          "desc": "Reduce cost and latency."
+        },
+        {
+          "step": "05",
+          "title": "Document",
+          "desc": "Deliver versioned library."
+        }
+      ],
+      "stats": [
+        {
+          "value": "60%",
+          "label": "Cost Reduction"
+        },
+        {
+          "value": "95%",
+          "label": "Accuracy"
+        },
+        {
+          "value": "3x",
+          "label": "Faster Iteration"
+        },
+        {
+          "value": "100+",
+          "label": "Prompts Optimized"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Why hire a prompt engineer?",
+          "a": "10x cost difference, 5x quality difference."
+        },
+        {
+          "q": "Which models?",
+          "a": "Claude, GPT-4, Gemini, and open-source."
+        },
+        {
+          "q": "Help with existing prompts?",
+          "a": "Yes — audits and optimization."
+        },
+        {
+          "q": "Ongoing support?",
+          "a": "Yes — maintenance contracts."
+        }
+      ]
+    },
+    "ai-chatbot": {
+      "title": "AI Chatbot",
+      "desc": "Custom AI assistants — support, sales, and internal tools.",
+      "longDesc": "Purpose-built chatbots trained on your data, deployed across channels.",
+      "items": [
+        "Custom AI Assistants",
+        "Knowledge Base Integration",
+        "Multi-channel Deploy"
+      ],
+      "features": [
+        {
+          "title": "Custom Knowledge Base",
+          "desc": "Train on your docs and FAQs via RAG."
+        },
+        {
+          "title": "Conversational UI",
+          "desc": "Natural, context-aware conversations."
+        },
+        {
+          "title": "Multi-channel",
+          "desc": "Web, WhatsApp, Slack, and mobile."
+        },
+        {
+          "title": "Handoff to Human",
+          "desc": "Seamless escalation to live agents."
+        },
+        {
+          "title": "Analytics Dashboard",
+          "desc": "Track satisfaction and resolution rates."
+        },
+        {
+          "title": "Continuous Learning",
+          "desc": "Feedback loops improve responses."
+        }
+      ],
+      "process": [
+        {
+          "step": "01",
+          "title": "Scope",
+          "desc": "Define persona and integrations."
+        },
+        {
+          "step": "02",
+          "title": "Data",
+          "desc": "Ingest knowledge base."
+        },
+        {
+          "step": "03",
+          "title": "Build",
+          "desc": "Develop with RAG and guardrails."
+        },
+        {
+          "step": "04",
+          "title": "Test",
+          "desc": "User testing and safety checks."
+        },
+        {
+          "step": "05",
+          "title": "Launch",
+          "desc": "Deploy with analytics."
+        }
+      ],
+      "stats": [
+        {
+          "value": "70%",
+          "label": "Ticket Deflection"
+        },
+        {
+          "value": "< 2s",
+          "label": "Response Time"
+        },
+        {
+          "value": "24/7",
+          "label": "Availability"
+        },
+        {
+          "value": "92%",
+          "label": "Satisfaction"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Different from ChatGPT?",
+          "a": "Trained on your data, embedded in your product."
+        },
+        {
+          "q": "Multiple languages?",
+          "a": "Yes — 50+ languages out of the box."
+        },
+        {
+          "q": "Data privacy?",
+          "a": "Your data stays on your infrastructure."
+        },
+        {
+          "q": "Hallucinations?",
+          "a": "RAG grounding and confidence thresholds."
         }
       ]
     }

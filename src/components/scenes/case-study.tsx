@@ -29,8 +29,6 @@ export default function CaseScene() {
           <div><div className="k">{t('labelScope')}</div><div className="v">{t('valueScope')}</div></div>
           <div><div className="k">{t('labelStack')}</div><div className="v">{t('valueStack')}</div></div>
         </div>
-        <p>{t('body1')}</p>
-        <p>{t('body2')}</p>
         <Link href="/projects/gel-gez-gor" className="arrow" data-cursor="hover" data-cursor-label="Open">
           <span>{t('cta')}</span>
           <span>↗</span>
