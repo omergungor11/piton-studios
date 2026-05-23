@@ -1,15 +1,31 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+import { Reveal } from '@/components/motion';
 
 export default function ServicesScene() {
   const t = useTranslations('services');
   const ts = useTranslations('servicesList');
   const tp = useTranslations('servicesPage');
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const equalize = () => {
+      const grid = gridRef.current;
+      if (!grid) return;
+      const cards = Array.from(grid.querySelectorAll('.svc')) as HTMLElement[];
+      cards.forEach((c) => { c.style.height = 'auto'; });
+      const maxH = Math.max(...cards.map((c) => c.offsetHeight));
+      cards.forEach((c) => { c.style.height = `${maxH}px`; });
+    };
+    equalize();
+    window.addEventListener('resize', equalize);
+    return () => window.removeEventListener('resize', equalize);
+  }, []);
 
   return (
     <div className="svc-glass glass">
@@ -20,7 +36,7 @@ export default function ServicesScene() {
           <span>[{SERVICES.length} {t('count', { count: SERVICES.length }).replace(String(SERVICES.length), '').trim()}]</span>
         </div>
       </Reveal>
-      <Stagger className="svc-grid" staggerDelay={0.06}>
+      <div className="svc-grid" ref={gridRef}>
         {SERVICES.map((s) => {
           const hasTranslation = (() => { try { ts(`${s.slug}.title`); return true; } catch { return false; } })();
           const title = hasTranslation ? ts(`${s.slug}.title`) : s.title;
@@ -28,8 +44,7 @@ export default function ServicesScene() {
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <StaggerItem key={s.n}>
-            <Link href={`/services/${s.slug}`} className="svc" data-cursor="hover" data-cursor-label="+">
+            <Link key={s.n} href={`/services/${s.slug}`} className="svc" data-cursor="hover" data-cursor-label="+">
               <div className="svc-top">
                 <span className="n">{s.n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>
@@ -49,10 +64,9 @@ export default function ServicesScene() {
               </ul>
               <span className="svc-arrow">↗</span>
             </Link>
-            </StaggerItem>
           );
         })}
-      </Stagger>
+      </div>
     </div>
   );
 }

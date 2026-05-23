@@ -3,20 +3,19 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { WORKS, STORIES } from '@/lib/data';
+import { WORKS } from '@/lib/data';
 import { videoUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
 
-const YEARS = ['All', ...Array.from(new Set([...WORKS.map((w) => w.year), ...STORIES.map((s) => s.year)])).sort((a, b) => b.localeCompare(a))];
+const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
 
 export default function ProjectsPage() {
   const [activeYear, setActiveYear] = useState('All');
   const t = useTranslations('projectsPage');
+  const tr = useTranslations('reel');
   const tw = useTranslations('works');
-  const ts = useTranslations('stories');
 
   const filteredWorks = activeYear === 'All' ? WORKS : WORKS.filter((w) => w.year === activeYear);
-  const filteredStories = activeYear === 'All' ? STORIES : STORIES.filter((s) => s.year === activeYear);
 
   return (
     <PageShell>
@@ -31,6 +30,34 @@ export default function ProjectsPage() {
         <p className="sp-hero-sub">
           {t('subtitle')}
         </p>
+      </section>
+
+      {/* Showreel */}
+      <section className="pp-reel">
+        <video className="pp-reel-bg" src={videoUrl('hero.mp4')} autoPlay muted loop playsInline preload="auto" />
+        <div className="pp-reel-overlay" />
+        <div className="pp-reel-content glass">
+          <div className="pp-reel-info">
+            <div className="pp-reel-eyebrow">Stüdyo Tanıtım</div>
+            <h3 className="pp-reel-title">
+              Projelerimizden <span className="em">kesitler</span> — her çeyrekte güncellenir.
+            </h3>
+            <p className="pp-reel-desc">Tasarımdan geliştirmeye, tüm süreçleri kapsayan kısa bir bakış.</p>
+            <div className="pp-reel-meta">
+              <div className="pp-reel-meta-item">
+                <span className="pp-reel-meta-k">{tr('labelContent')}</span>
+                <span className="pp-reel-meta-v">{tr('valueContent')}</span>
+              </div>
+              <div className="pp-reel-meta-item">
+                <span className="pp-reel-meta-k">{tr('labelProjectCount')}</span>
+                <span className="pp-reel-meta-v">{tr('valueProjectCount')}</span>
+              </div>
+            </div>
+          </div>
+          <div className="pp-reel-video" data-cursor="play" data-cursor-label="Play ↗">
+            <video src={videoUrl('reel-b.mp4')} autoPlay muted loop playsInline preload="auto" />
+          </div>
+        </div>
       </section>
 
       {/* Year filter */}
@@ -78,44 +105,6 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
-
-      {/* Stories / Video work */}
-      {filteredStories.length > 0 && (
-        <section className="pp-section">
-          <div className="pp-section-head">
-            <span className="pp-section-tag">{t('storiesSection')}</span>
-            <span className="pp-section-count">[{String(filteredStories.length).padStart(2, '0')}]</span>
-          </div>
-          <div className="pp-stories-grid">
-            {filteredStories.map((s) => (
-              <Link key={s.no} href={`/projects/${s.slug}`} className="pp-story-card glass" data-cursor="play" data-cursor-label="Play">
-                <div className="pp-story-media">
-                  <video src={videoUrl(s.video)} muted loop playsInline preload="metadata" />
-                  <div className="pp-story-fade" />
-                  <span className="pp-story-no">{s.no}</span>
-                  <div className="pp-story-meta-bottom">
-                    <span>{s.year}</span>
-                    <span>·</span>
-                    <span>{s.role}</span>
-                  </div>
-                </div>
-                <div className="pp-story-body">
-                  <div className="pp-story-title-row">
-                    <h3>{ts.has(`${s.slug}.title`) ? ts(`${s.slug}.title`) : s.title}</h3>
-                    <span className="pp-story-arrow">↗</span>
-                  </div>
-                  <p>{ts.has(`${s.slug}.sub`) ? ts(`${s.slug}.sub`) : s.sub}</p>
-                  <div className="pp-story-tags">
-                    {s.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* CTA */}
       <section className="sp-cta glass strong">

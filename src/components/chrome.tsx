@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { SCENES } from '@/lib/data';
 import LanguageSwitcher from '@/components/language-switcher';
 
@@ -47,9 +48,27 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
           <span className="mark">Pixel Ninja</span>
         </div>
 
-        {/* Desktop nav */}
+        {/* Desktop nav — anchor links + page links */}
         <nav className="nav glass desktop-nav">
-          {(['services', 'stories', 'about', 'contact'] as const).map((id) => (
+          <Link href="/projects" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('projects')}</span>
+              <span className="dup">{t('projects')} ↗</span>
+            </span>
+          </Link>
+          <Link href="/services" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('services')}</span>
+              <span className="dup">{t('services')} ↗</span>
+            </span>
+          </Link>
+          <Link href="/gallery" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('gallery')}</span>
+              <span className="dup">{t('gallery')} ↗</span>
+            </span>
+          </Link>
+          {(['about'] as const).map((id) => (
             <a
               key={id}
               href={`#${id}`}
@@ -63,6 +82,17 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
               </span>
             </a>
           ))}
+          <a
+            href="#contact"
+            className={`item ${activeIdx === indexOf('contact') ? 'active' : ''}`}
+            data-cursor="hover"
+            onClick={(e) => { e.preventDefault(); scrollTo('contact'); }}
+          >
+            <span className="row">
+              <span>{t('contact')}</span>
+              <span className="dup">{t('contact')} ↗</span>
+            </span>
+          </a>
         </nav>
 
         <LanguageSwitcher />
@@ -82,7 +112,6 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
       {/* Mobile fullscreen menu */}
       <div className={`mobile-menu-overlay ${menuOpen ? 'is-open' : ''}`}>
         <div className="mobile-menu-panel glass strong">
-          {/* Header */}
           <div className="mobile-menu-header">
             <div className="mm-brand">
               <span className="mark-dot" style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block' }} />
@@ -91,29 +120,35 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>
 
-          {/* Flat navigation list */}
           <nav className="mm-nav">
+            <Link href="/projects" className="mm-nav-row" style={{ '--delay': '0ms' } as React.CSSProperties} onClick={() => setMenuOpen(false)}>
+              <span className="mm-nav-label">{t('projects')}</span>
+              <span className="mm-nav-arrow">→</span>
+            </Link>
+            <Link href="/services" className="mm-nav-row" style={{ '--delay': '40ms' } as React.CSSProperties} onClick={() => setMenuOpen(false)}>
+              <span className="mm-nav-label">{t('services')}</span>
+              <span className="mm-nav-arrow">→</span>
+            </Link>
+            <Link href="/gallery" className="mm-nav-row" style={{ '--delay': '80ms' } as React.CSSProperties} onClick={() => setMenuOpen(false)}>
+              <span className="mm-nav-label">{t('gallery')}</span>
+              <span className="mm-nav-arrow">→</span>
+            </Link>
             {[
-              { id: 'services', key: 'services' },
-              { id: 'stories',  key: 'stories' },
-              { id: 'case',     key: 'caseStudy' },
-              { id: 'reel',     key: 'reel' },
-              { id: 'about',    key: 'about' },
+              { id: 'about', key: 'about' as const },
             ].map((s, i) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
                 className={`mm-nav-row ${activeIdx === indexOf(s.id) ? 'is-active' : ''}`}
-                style={{ '--delay': `${i * 40}ms` } as React.CSSProperties}
+                style={{ '--delay': `${(i + 3) * 40}ms` } as React.CSSProperties}
                 onClick={(e) => { e.preventDefault(); scrollTo(s.id); setMenuOpen(false); }}
               >
-                <span className="mm-nav-label">{t(s.key as 'services' | 'stories' | 'about' | 'contact' | 'caseStudy' | 'reel')}</span>
+                <span className="mm-nav-label">{t(s.key)}</span>
                 <span className="mm-nav-arrow">→</span>
               </a>
             ))}
           </nav>
 
-          {/* Contact CTA */}
           <div className="mm-cta">
             <a
               href="#contact"
@@ -125,7 +160,6 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
             </a>
           </div>
 
-          {/* Footer */}
           <div className="mobile-menu-footer">
             <a href="mailto:hi@pixelninja.com" className="mm-footer-email">hi@pixelninja.com</a>
             <div className="mm-lang-switcher">

@@ -14,6 +14,7 @@ interface PageShellProps {
 
 export default function PageShell({ children }: PageShellProps) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('common');
 
@@ -22,6 +23,23 @@ export default function PageShell({ children }: PageShellProps) {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 1000) setMenuOpen(false);
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
 
@@ -32,27 +50,98 @@ export default function PageShell({ children }: PageShellProps) {
       <FloatingGlass />
       <Cursor />
 
-      <header className={`page-header glass ${scrolled ? 'scrolled' : ''}`}>
-        <Link href="/" className="page-back" data-cursor="hover" data-cursor-label="Home">
-          <span className="page-back-arrow">←</span>
-          <span className="page-back-label">{t('pixelNinja')}</span>
+      <header className="chrome">
+        <Link href="/" className="lockup glass" data-cursor="hover" data-cursor-label="Home">
+          <span className="mark-dot" />
+          <span className="mark">Pixel Ninja</span>
         </Link>
-        <nav className="page-header-nav">
-          <Link href="/projects" className={`page-header-link ${isActive('/projects') ? 'active' : ''}`} data-cursor="hover">
-            {t('projects')}
+
+        <nav className="nav glass desktop-nav">
+          <Link href="/projects" className={`item ${isActive('/projects') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('projects')}</span>
+              <span className="dup">{t('projects')} ↗</span>
+            </span>
           </Link>
-          <Link href="/services" className={`page-header-link ${isActive('/services') ? 'active' : ''}`} data-cursor="hover">
-            {t('services')}
+          <Link href="/services" className={`item ${isActive('/services') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('services')}</span>
+              <span className="dup">{t('services')} ↗</span>
+            </span>
           </Link>
-          <Link href="/gallery" className={`page-header-link ${isActive('/gallery') ? 'active' : ''}`} data-cursor="hover">
-            {t('gallery')}
+          <Link href="/gallery" className={`item ${isActive('/gallery') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('gallery')}</span>
+              <span className="dup">{t('gallery')} ↗</span>
+            </span>
           </Link>
-          <Link href="/#contact" className="page-header-link accent" data-cursor="hover">
-            {t('contact')}
+          <Link href="/#contact" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('contact')}</span>
+              <span className="dup">{t('contact')} ↗</span>
+            </span>
           </Link>
         </nav>
+
         <LanguageSwitcher />
+
+        {/* Mobile hamburger */}
+        <button
+          className={`mobile-menu-btn glass ${menuOpen ? 'is-open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menu"
+        >
+          <span className="burger-line" />
+          <span className="burger-line" />
+          <span className="burger-line" />
+        </button>
       </header>
+
+      {/* Mobile fullscreen menu */}
+      <div className={`mobile-menu-overlay ${menuOpen ? 'is-open' : ''}`}>
+        <div className="mobile-menu-panel glass strong">
+          <div className="mobile-menu-header">
+            <div className="mm-brand">
+              <span className="mark-dot" style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block' }} />
+              <span>Pixel Ninja</span>
+            </div>
+            <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
+          </div>
+
+          <nav className="mm-nav">
+            {[
+              { href: '/projects', label: t('projects') },
+              { href: '/services', label: t('services') },
+              { href: '/gallery', label: t('gallery') },
+            ].map((item, i) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`mm-nav-row ${isActive(item.href) ? 'is-active' : ''}`}
+                style={{ '--delay': `${i * 40}ms` } as React.CSSProperties}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span className="mm-nav-label">{item.label}</span>
+                <span className="mm-nav-arrow">→</span>
+              </Link>
+            ))}
+          </nav>
+
+          <div className="mm-cta">
+            <Link href="/#contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)}>
+              <span>{t('contact')}</span>
+              <span>↗</span>
+            </Link>
+          </div>
+
+          <div className="mobile-menu-footer">
+            <a href="mailto:hi@pixelninja.com" className="mm-footer-email">hi@pixelninja.com</a>
+            <div className="mm-lang-switcher">
+              <LanguageSwitcher />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <main className="page-main">
         {children}

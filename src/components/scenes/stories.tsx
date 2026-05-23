@@ -1,28 +1,32 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { videoUrl } from '@/lib/media';
-import { STORIES } from '@/lib/data';
+import { SERVICES } from '@/lib/data';
+import SERVICE_ICONS from '@/components/service-icons';
+import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
+
+const FEATURED = SERVICES.slice(0, 5);
 
 export default function StoriesScene() {
   const t = useTranslations('storiesSection');
-  const ts = useTranslations('stories');
+  const ts = useTranslations('servicesList');
   const [idx, setIdx] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const stories = STORIES.slice(0, 6);
-  const n = stories.length;
+  const n = FEATURED.length;
 
-  const go = (dir: number) => setIdx((i) => Math.max(0, Math.min(n - 1, i + dir)));
-  const jump = (i: number) => setIdx(Math.max(0, Math.min(n - 1, i)));
+  const go = useCallback((dir: number) => {
+    setIdx((i) => Math.max(0, Math.min(n - 1, i + dir)));
+  }, [n]);
 
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.children[idx] as HTMLElement | undefined;
-    if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  }, [idx]);
+  const jump = useCallback((i: number) => {
+    setIdx(Math.max(0, Math.min(n - 1, i)));
+  }, [n]);
+
+  const onDragEnd = (_: unknown, info: PanInfo) => {
+    if (info.offset.x < -60) go(1);
+    else if (info.offset.x > 60) go(-1);
+  };
 
   const onKey = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
@@ -32,50 +36,117 @@ export default function StoriesScene() {
   return (
     <div className="stories-glass glass" tabIndex={0} onKeyDown={onKey}>
       <div className="stories-head">
-        <div className="stories-tag">{t('eyebrow')} / {String(n).padStart(2, '0')}</div>
+        <div className="stories-tag">SERVICES / {String(n).padStart(2, '0')}</div>
         <h3>
-          {(t.raw('title') as string).split('{accent}')[0]}
-          <span className="em">{t('titleAccent')}</span>
-          {(t.raw('title') as string).split('{accent}')[1]}
+          What We <span className="em">Build</span>
         </h3>
-        <p className="stories-lead">{t('lead')}</p>
+        <p className="stories-lead">End-to-end digital solutions — from design to deployment.</p>
       </div>
 
-      <div className="stories-viewport">
-        <div className="stories-track" ref={trackRef}>
-          {stories.map((s, i) => (
-            <Link
-              key={s.no}
-              href={`/projects/${s.slug}`}
-              className={`story-card ${i === idx ? 'is-active' : ''}`}
-              data-cursor="play"
-              data-cursor-label="Play"
-              onClick={() => jump(i)}
-            >
-              <div className="story-media">
-                <span className="story-no">{s.no}</span>
-                <video src={videoUrl(s.video)} autoPlay muted loop playsInline preload="metadata" />
-                <div className="story-fade" />
-                <div className="story-meta-bottom">
-                  <span>{s.year}</span>
-                  <span>·</span>
-                  <span>{ts.has(`${s.slug}.role`) ? ts(`${s.slug}.role`) : s.role}</span>
+      {/* Desktop: horizontal scroll */}
+      <div className="svc-showcase-desktop">
+        <div className="svc-showcase-track">
+          {FEATURED.map((s, i) => {
+            const hasT = (() => { try { ts(`${s.slug}.title`); return true; } catch { return false; } })();
+            const title = hasT ? ts(`${s.slug}.title`) : s.title;
+            const desc = hasT ? ts(`${s.slug}.desc`) : s.desc;
+            const items = hasT ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
+
+            return (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className={`svc-showcase-card ${i === idx ? 'is-active' : ''}`}
+                data-cursor="hover"
+                data-cursor-label="View"
+                onClick={() => jump(i)}
+              >
+                <div className="svc-showcase-top">
+                  <span className="svc-showcase-num">{s.n}</span>
+                  <span className="svc-showcase-cat">{s.cat}</span>
                 </div>
-              </div>
-              <div className="story-body">
-                <div className="story-title-row">
-                  <h4>{ts.has(`${s.slug}.title`) ? ts(`${s.slug}.title`) : s.title}</h4>
-                  <span className="story-arrow">↗</span>
+                <div className="svc-showcase-icon">
+                  {SERVICE_ICONS[s.slug] || null}
                 </div>
-                <p>{ts.has(`${s.slug}.sub`) ? ts(`${s.slug}.sub`) : s.sub}</p>
-                <div className="story-tags">
-                  {s.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
+                <h4>{title}</h4>
+                <p>{desc}</p>
+                <ul className="svc-showcase-items">
+                  {items.map((item) => (
+                    <li key={item}>
+                      <span className="bullet">→</span>
+                      <span>{item}</span>
+                    </li>
                   ))}
-                </div>
-              </div>
-            </Link>
-          ))}
+                </ul>
+                <span className="svc-showcase-arrow">↗</span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Mobile: card stack with swipe */}
+      <div className="svc-showcase-mobile">
+        <div className="svc-stack-container">
+          <AnimatePresence mode="popLayout">
+            {FEATURED.map((s, i) => {
+              const offset = i - idx;
+              const isActive = i === idx;
+              const isBehind = offset > 0 && offset <= 2;
+              if (offset < 0 || offset > 2) return null;
+
+              const hasT = (() => { try { ts(`${s.slug}.title`); return true; } catch { return false; } })();
+              const title = hasT ? ts(`${s.slug}.title`) : s.title;
+              const desc = hasT ? ts(`${s.slug}.desc`) : s.desc;
+              const items = hasT ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
+
+              return (
+                <motion.div
+                  key={s.slug}
+                  className={`svc-stack-card ${isActive ? 'is-active' : ''}`}
+                  style={{
+                    zIndex: n - offset,
+                    position: offset === 0 ? 'relative' : 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                  }}
+                  initial={false}
+                  animate={{
+                    scale: 1 - offset * 0.06,
+                    y: offset * 18,
+                    rotate: offset * 1.5,
+                    opacity: isActive ? 1 : isBehind ? 0.5 : 0,
+                  }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                  drag={isActive ? 'x' : false}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.15}
+                  onDragEnd={isActive ? onDragEnd : undefined}
+                >
+                  <Link href={`/services/${s.slug}`} className="svc-stack-inner" data-cursor="hover">
+                    <div className="svc-showcase-top">
+                      <span className="svc-showcase-num">{s.n}</span>
+                      <span className="svc-showcase-cat">{s.cat}</span>
+                    </div>
+                    <div className="svc-showcase-icon">
+                      {SERVICE_ICONS[s.slug] || null}
+                    </div>
+                    <h4>{title}</h4>
+                    <p>{desc}</p>
+                    <ul className="svc-showcase-items">
+                      {items.map((item) => (
+                        <li key={item}>
+                          <span className="bullet">→</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
       </div>
 
@@ -90,8 +161,8 @@ export default function StoriesScene() {
         <div className="stories-nav">
           <button className="stories-btn" onClick={() => go(-1)} disabled={idx === 0} data-cursor="hover" data-cursor-label="Prev">←</button>
           <div className="stories-dots">
-            {stories.map((_, i) => (
-              <button key={i} className={`stories-dot ${i === idx ? 'on' : ''}`} onClick={() => jump(i)} aria-label={`Story ${i + 1}`} />
+            {FEATURED.map((_, i) => (
+              <button key={i} className={`stories-dot ${i === idx ? 'on' : ''}`} onClick={() => jump(i)} aria-label={`Service ${i + 1}`} />
             ))}
           </div>
           <button className="stories-btn" onClick={() => go(1)} disabled={idx === n - 1} data-cursor="hover" data-cursor-label="Next">→</button>
