@@ -32,7 +32,17 @@
 - `preload="none"` on videos below fold
 - `media.ts` helper ile videoUrl() — Supabase CDN URL olusturma
 
+## Current State (Session 4 — 2026-05-24)
+- 32 proje (WORKS), ilk 6'si anasayfa slider'da
+- Anasayfa: Hero → Note → Services → Projects → About → Contact
+- Unified nav (chrome) anasayfa ve ic sayfalar icin
+- Videolar local fallback'ten servis ediliyor (media.ts)
+- Stories section anasayfa ve projeler sayfasindan kaldirildi
+- Hizmet ve manifesto kutulari JS ile esit yukseklikte
+
 ## Known Issues / Pending Work
+- Proje tarihleri duzeltilecek (kullanicidan bilgi bekleniyor)
+- Proje detay sayfalarina mockup gorselleri eklenecek
 - Admin panel auth yok (Supabase Auth ile korunmali)
 - Contact form backend entegrasyonu (Supabase insert)
 - SEO meta tags eksik (og:image, og:video, twitter cards)

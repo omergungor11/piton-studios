@@ -103,3 +103,55 @@ _(session devam ediyor)_
 
 ### Notes
 - Tum 21 task tamamlanmis durumda, bu session iyilestirme/polish uzerine
+
+---
+
+## 2026-05-23 / 2026-05-24 — Session 4
+
+### Completed
+- [x] Hero başlığı sadece "Pixel Ninja" olarak sadeleştirildi
+- [x] Hero'dan video sidebar kaldırıldı, tek kolon layout'a dönüldü
+- [x] Unified nav: Anasayfa ve iç sayfalar aynı kompakt chrome nav'ı kullanıyor
+- [x] Nav'a Gallery linki eklendi (desktop + mobil)
+- [x] Stories section → Services showcase'e dönüştürüldü (sonra kaldırıldı)
+- [x] Works/Projects slider eklendi (mockup frame + meta kutular, framer-motion)
+- [x] Öne çıkan projeler 6'ya limitlendi, Türkçeleştirildi
+- [x] Ambalaj Cini yerine Alp Sigorta öne çıkan 6'ya alındı
+- [x] 21 yeni proje eklendi (toplam 32 proje)
+- [x] Avie Global ve Tüp Bebek kaldırıldı
+- [x] Case study ve Reel section'ları anasayfadan kaldırıldı
+- [x] Manifesto videosu red-knight.mp4 ile değiştirildi
+- [x] Projeler sayfasına showreel section eklendi (bg video + kompakt layout)
+- [x] Projeler sayfasından hikayeler/stories bölümü kaldırıldı
+- [x] Hizmetler sayfası anasayfadaki grid yapısına güncellendi
+- [x] Hizmet ve manifesto kutularının yüksekliği JS ile eşitlendi
+- [x] Türkçe çeviri düzeltmeleri (hero kicker, nav labels, metadata)
+- [x] Subtitle düzeltmesi: "Dijital çözümler, otomasyonlar ve yapay zekâ ile markanızı geliştiririz."
+- [x] Local video fallback aktifleştirildi (Supabase CDN dev'de devre dışı)
+- [x] Press Start 2P pixel font eklendi (sonra kaldırıldı, mono korundu)
+- [x] SCENES label'ları Türkçeleştirildi
+- [x] Gereksiz import ve render kodları temizlendi
+- [x] Dolmuş adı "Bozüyük Dolmuşçular Derneği" olarak değiştirildi
+
+### Pending / Yarım Kalan
+- [ ] Proje tarihlerinin düzeltilmesi (kullanıcı söyleyecek)
+- [ ] Proje detay sayfalarına desktop/tablet/mobil mockup eklenmesi
+- [ ] Daha fazla proje ekran kayıtları / videoları
+- [ ] Admin panel Supabase Auth ile koruma
+- [ ] Contact form backend entegrasyonu
+- [ ] SEO meta tags (og:image, og:video, twitter cards)
+- [ ] Custom domain bağlama
+- [ ] Vercel env vars + canlı video doğrulama
+
+### Next Session
+- [ ] Proje tarihlerini düzelt (kullanıcıdan bilgi bekleniyor)
+- [ ] Proje detay sayfalarına mockup görselleri ekle
+- [ ] Vercel deploy test — video'lar çalışıyor mu kontrol
+- [ ] SEO + analytics
+- [ ] Performance audit (Lighthouse)
+
+### Notes
+- Videolar şu an local fallback'ten servis ediliyor (media.ts'de Supabase URL devre dışı)
+- 32 proje WORKS array'inde, ilk 6'sı anasayfa slider'da gösteriliyor
+- STORIES array hala var ama anasayfada ve projeler sayfasında kullanılmıyor
+- Nav artık anasayfa ve iç sayfalarda tutarlı (chrome component)
