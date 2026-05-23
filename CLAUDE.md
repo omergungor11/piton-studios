@@ -21,7 +21,13 @@ Pixel Ninja firmasinin video portfolyo websitesi. Video tabanli sunumlari sergil
 
 ## Mevcut Durum
 
-**Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Vercel deploy aktif.
+**Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Polish/iyilestirme devam ediyor.
+
+- **32 proje** WORKS array'inde, ilk 6'si anasayfa slider'da
+- **Anasayfa**: Hero → Note → Services → Projects → About → Contact
+- **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
+- **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
+- **Bekleyen**: Proje tarihleri duzeltilecek, mockup gorselleri eklenecek
 
 > Her yeni session'da `ninja-tasks/task-index.md` oku veya `/cold-start` calistir.
 
