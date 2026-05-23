@@ -1,7 +1,8 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+import { Reveal } from '@/components/motion';
 import { videoUrl } from '@/lib/media';
 
 const ICONS = [
@@ -17,8 +18,23 @@ const ICONS = [
 
 export default function ManifestoScene() {
   const t = useTranslations('manifesto');
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   const highlights = t.raw('highlights') as { title: string; desc: string }[];
+
+  useEffect(() => {
+    const equalize = () => {
+      const container = cardsRef.current;
+      if (!container) return;
+      const cards = Array.from(container.querySelectorAll('.manifesto-card')) as HTMLElement[];
+      cards.forEach((c) => { c.style.height = 'auto'; });
+      const maxH = Math.max(...cards.map((c) => c.offsetHeight));
+      cards.forEach((c) => { c.style.height = `${maxH}px`; });
+    };
+    equalize();
+    window.addEventListener('resize', equalize);
+    return () => window.removeEventListener('resize', equalize);
+  }, []);
 
   return (
     <div className="manifesto-glass glass">
@@ -36,24 +52,22 @@ export default function ManifestoScene() {
         <Reveal variant="fadeUp" delay={0.2}>
           <p className="manifesto-sub">{t('subtitle')}</p>
         </Reveal>
-        <Stagger className="manifesto-cards" staggerDelay={0.08}>
+        <div className="manifesto-cards" ref={cardsRef}>
           {highlights.map((h, i) => (
-            <StaggerItem key={i}>
-              <div className="manifesto-card">
-                <div className="manifesto-card-icon">{ICONS[i]}</div>
-                <div>
-                  <h4 className="manifesto-card-title">{h.title}</h4>
-                  <p className="manifesto-card-desc">{h.desc}</p>
-                </div>
+            <div key={i} className="manifesto-card">
+              <div className="manifesto-card-icon">{ICONS[i]}</div>
+              <div>
+                <h4 className="manifesto-card-title">{h.title}</h4>
+                <p className="manifesto-card-desc">{h.desc}</p>
               </div>
-            </StaggerItem>
+            </div>
           ))}
-        </Stagger>
+        </div>
       </div>
       <Reveal variant="scaleIn" delay={0.2}>
       <div className="note-media" data-cursor="play" data-cursor-label="Play">
         <span className="note-media-tag">[ NOTE · FILM ]</span>
-        <video src={videoUrl('note.mp4')} autoPlay muted loop playsInline preload="auto" />
+        <video src={videoUrl('red-knight.mp4')} autoPlay muted loop playsInline preload="auto" />
         <div className="note-media-fade" />
         <div className="note-media-caption">
           <span>Loop</span><span>— PX · NJ</span>

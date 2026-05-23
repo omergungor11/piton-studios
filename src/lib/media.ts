@@ -1,4 +1,5 @@
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+// Supabase Storage henüz yüklenmedi — local assets kullan
+const SUPABASE_URL = false && process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 const VIDEO_BUCKET = 'videos';
 const THUMB_BUCKET = 'thumbnails';

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
+import SERVICE_ICONS from '@/components/service-icons';
 import PageShell from '@/components/page-shell';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
@@ -55,29 +56,36 @@ export default function ServicesPage() {
       </section>
 
       {/* Services grid */}
-      <section className="sp-grid">
-        {filtered.map((s) => (
-          <Link key={s.n} href={`/services/${s.slug}`} className="sp-card glass" data-cursor="hover" data-cursor-label="+">
-            <div className="sp-card-top">
-              <span className="sp-card-n">{s.n}</span>
-              <span className="sp-card-cat">{t(`filterCat.${s.cat}`)}</span>
-            </div>
-            <h2 className="sp-card-title">{ts(`${s.slug}.title`)}</h2>
-            <p className="sp-card-desc">{ts(`${s.slug}.desc`)}</p>
-            <ul className="sp-card-items">
-              {(ts.raw(`${s.slug}.items`) as string[]).map((item) => (
-                <li key={item}>
-                  <span className="sp-card-bullet">—</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="sp-card-footer">
-              <span className="sp-card-cta">{t('details')}</span>
-              <span className="sp-card-arrow">↗</span>
-            </div>
-          </Link>
-        ))}
+      <section className="svc-glass" style={{ padding: 0 }}>
+        <div className="svc-grid">
+          {filtered.map((s) => {
+            const title = ts(`${s.slug}.title`);
+            const desc = ts(`${s.slug}.desc`);
+            const items = ts.raw(`${s.slug}.items`) as string[];
+            return (
+              <Link key={s.n} href={`/services/${s.slug}`} className="svc" data-cursor="hover" data-cursor-label="+">
+                <div className="svc-top">
+                  <span className="n">{s.n}</span>
+                  <span className="cat">{t(`filterCat.${s.cat}`)}</span>
+                </div>
+                <div className="svc-icon">
+                  {SERVICE_ICONS[s.slug] || null}
+                </div>
+                <h4>{title}</h4>
+                <p className="svc-desc">{desc}</p>
+                <ul className="svc-items">
+                  {items.map((item) => (
+                    <li key={item}>
+                      <span className="bullet">—</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <span className="svc-arrow">↗</span>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* CTA */}

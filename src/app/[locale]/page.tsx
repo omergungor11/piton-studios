@@ -17,11 +17,8 @@ const ThreeScene = dynamic(() => import("@/components/three-scene"), {
 });
 import HeroScene from "@/components/scenes/hero";
 import ManifestoScene from "@/components/scenes/manifesto";
-import WorksScene from "@/components/scenes/works";
-import StoriesScene from "@/components/scenes/stories";
-import CaseScene from "@/components/scenes/case-study";
-import ReelScene from "@/components/scenes/reel";
 import ServicesScene from "@/components/scenes/services";
+import WorksScene from "@/components/scenes/works";
 import AboutScene from "@/components/scenes/about";
 import ContactScene from "@/components/scenes/contact";
 
@@ -151,12 +148,8 @@ export default function Home() {
           let inner = null;
           if (s.id === "hero") inner = <HeroScene clock={clock} />;
           else if (s.id === "note") inner = <ManifestoScene />;
-          else if (s.id === "work")
-            inner = <WorksScene onPreview={setPreview} />;
-          else if (s.id === "stories") inner = <StoriesScene />;
-          else if (s.id === "case") inner = <CaseScene />;
-          else if (s.id === "reel") inner = <ReelScene />;
           else if (s.id === "services") inner = <ServicesScene />;
+          else if (s.id === "work") inner = <WorksScene onPreview={setPreview} />;
           else if (s.id === "about") inner = <AboutScene />;
           else if (s.id === "contact") inner = <ContactScene />;
           return (

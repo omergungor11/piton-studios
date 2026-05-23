@@ -1,14 +1,13 @@
 {
   "metadata": {
     "title": "Pixel Ninja — Dijital Stüdyo",
-    "description": "Design, code & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
+    "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
   },
   "nav": {
     "services": "Hizmetler",
-    "stories": "Hikayeler",
     "about": "Hakkında",
     "contact": "İletişim",
-    "caseStudy": "Case Study",
+    "caseStudy": "Öne Çıkan",
     "reel": "Reel",
     "projects": "Projeler",
     "gallery": "Galeri",
@@ -16,12 +15,12 @@
     "contactCta": "İletişime Geç"
   },
   "hero": {
-    "kicker": "Design · Code · AI — Digital Studio",
+    "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",
     "title1": "Pixel",
     "title2": "Ninja",
     "title3": "Türkiye'de Pixel'den",
     "title4": "Ninja yapabiliriz",
-    "subtitle": "Dijital çözümler, otomasyonlar ve yapay zekâ desteğiyle. Markanızı tasarlar, geliştiririz.",
+    "subtitle": "Dijital çözümler, otomasyonlar ve yapay zekâ ile markanızı geliştiririz.",
     "chips": [
       "ONLINE",
       "WEB APP",

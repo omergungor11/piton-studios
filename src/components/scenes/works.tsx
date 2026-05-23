@@ -1,44 +1,132 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { WORKS, type Work, type PreviewData } from '@/lib/data';
+import { Link } from '@/i18n/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface WorksSceneProps {
   onPreview: (w: Work | null, x?: number, y?: number) => void;
 }
 
-export default function WorksScene({ onPreview }: WorksSceneProps) {
+const FEATURED = WORKS.slice(0, 6);
+
+export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
+  const [idx, setIdx] = useState(0);
+  const n = FEATURED.length;
+  const work = FEATURED[idx];
+  const autoRef = useRef<ReturnType<typeof setInterval>>(undefined);
+
+  const go = useCallback((dir: number) => {
+    setIdx((i) => (i + dir + n) % n);
+  }, [n]);
+
+  // Auto-advance every 6s
+  useEffect(() => {
+    autoRef.current = setInterval(() => go(1), 6000);
+    return () => clearInterval(autoRef.current);
+  }, [go]);
+
+  const resetAuto = () => {
+    clearInterval(autoRef.current);
+    autoRef.current = setInterval(() => go(1), 6000);
+  };
+
+  const prev = () => { go(-1); resetAuto(); };
+  const next = () => { go(1); resetAuto(); };
+  const jumpTo = (i: number) => { setIdx(i); resetAuto(); };
+
   return (
-    <div className="works-glass glass">
-      <div className="head">
-        <span className="n">§ 02</span>
-        <span className="t">Selected Works</span>
-        <span>
-          [{String(WORKS.length).padStart(2, '0')} / {String(WORKS.length).padStart(2, '0')}]
-        </span>
+    <div className="proj-glass glass">
+      <div className="proj-head">
+        <span className="proj-tag">PROJELER / {String(n).padStart(2, '0')}</span>
+        <h3>Öne Çıkan <span className="em">Projeler</span></h3>
       </div>
-      <div className="works-list" onMouseLeave={() => onPreview(null)}>
-        {WORKS.map((w) => (
-          <Link
-            key={w.n}
-            className="work-row"
-            href={`/projects/${w.slug}`}
-            data-cursor="play"
-            data-cursor-label="View ↗"
-            onMouseEnter={(e) => onPreview(w, e.clientX, e.clientY)}
-            onMouseMove={(e) => onPreview(w, e.clientX, e.clientY)}
+
+      <div className="proj-slider">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={work.slug}
+            className="proj-slide"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <span className="idx">[{w.n}]</span>
-            <span className="title">
-              <span className="row">{w.title}</span>
-              <span className="dup">{w.title}</span>
-            </span>
-            <span className="client">{w.client}</span>
-            <span className="kind">{w.kind}</span>
-            <span className="year">{w.year}</span>
-          </Link>
-        ))}
+            {/* Left: Mockup */}
+            <Link href={`/projects/${work.slug}`} className="proj-mockup" data-cursor="play" data-cursor-label="View ↗">
+              <div className="proj-browser-bar">
+                <span className="proj-dot" />
+                <span className="proj-dot" />
+                <span className="proj-dot" />
+                <span className="proj-browser-url">pixelninja.dev/{work.slug}</span>
+              </div>
+              <div className="proj-screen">
+                <span className="proj-screen-num">{work.n}</span>
+                <h2 className="proj-screen-title">{work.title}</h2>
+                <span className="proj-screen-kind">{work.kind}</span>
+              </div>
+            </Link>
+
+            {/* Right: Features */}
+            <div className="proj-features">
+              <div className="proj-meta-grid">
+                <div className="proj-meta-box">
+                  <span className="proj-meta-label">Müşteri</span>
+                  <span className="proj-meta-value">{work.client}</span>
+                </div>
+                <div className="proj-meta-box">
+                  <span className="proj-meta-label">Tür</span>
+                  <span className="proj-meta-value">{work.kind}</span>
+                </div>
+                <div className="proj-meta-box">
+                  <span className="proj-meta-label">Yıl</span>
+                  <span className="proj-meta-value">{work.year}</span>
+                </div>
+                <div className="proj-meta-box">
+                  <span className="proj-meta-label">Rol</span>
+                  <span className="proj-meta-value">{work.role}</span>
+                </div>
+              </div>
+
+              <p className="proj-summary">{work.summary}</p>
+
+              <div className="proj-tags">
+                {work.tags.map((tag) => (
+                  <span key={tag} className="proj-tag-chip">{tag}</span>
+                ))}
+              </div>
+
+              <Link href={`/projects/${work.slug}`} className="proj-cta" data-cursor="hover">
+                Projeyi İncele <span>↗</span>
+              </Link>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="proj-ctrl">
+        <div className="proj-progress">
+          <span className="proj-idx">{String(idx + 1).padStart(2, '0')}</span>
+          <div className="proj-bar">
+            <div className="proj-bar-fill" style={{ width: `${((idx + 1) / n) * 100}%` }} />
+          </div>
+          <span className="proj-total">/ {String(n).padStart(2, '0')}</span>
+        </div>
+        <div className="proj-nav">
+          <button className="proj-btn" onClick={prev} data-cursor="hover" data-cursor-label="Prev">←</button>
+          <div className="proj-dots">
+            {FEATURED.map((_, i) => (
+              <button
+                key={i}
+                className={`proj-dot-btn ${i === idx ? 'on' : ''}`}
+                onClick={() => jumpTo(i)}
+                aria-label={`Project ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button className="proj-btn" onClick={next} data-cursor="hover" data-cursor-label="Next">→</button>
+        </div>
       </div>
     </div>
   );

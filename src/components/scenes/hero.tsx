@@ -21,10 +21,6 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
         <Reveal variant="fadeUp" delay={0.2} duration={0.8}>
           <h1 style={{ fontWeight: '600', letterSpacing: '2px', lineHeight: '0.85' }}>
             {t('title1')} <span className="it">{t('title2')}</span>
-            <br />
-            <span className="line2">
-              {t('title3')} <span className="it">{t('title4')}</span>
-            </span>
           </h1>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.4}>
