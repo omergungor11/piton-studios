@@ -35,6 +35,7 @@
     "title": "Neden {accent}?",
     "titleAccent": "Pixel Ninja",
     "subtitle": "Bağımsız stüdyo — tasarım, kod ve AI tek çatı altında.",
+    "noteMediaTag": "[ NOT · FİLM ]",
     "highlights": [
       {
         "title": "Hızlı Teslimat",
@@ -69,6 +70,15 @@
         "desc": "Google Cloud, Vercel, CI/CD — production-ready."
       }
     ]
+  },
+  "workScene": {
+    "tag": "PROJELER / {count}",
+    "heading": "Öne Çıkan <em>Projeler</em>",
+    "client": "Müşteri",
+    "type": "Tür",
+    "year": "Yıl",
+    "role": "Rol",
+    "cta": "Projeyi İncele"
   },
   "about": {
     "eyebrow": "§ 05 · Hakkında",
@@ -107,12 +117,17 @@
     "sent": "✓ Gönderildi",
     "error": "Hata — tekrar deneyin",
     "whatsapp": "WhatsApp",
-    "call": "Ara"
+    "call": "Ara",
+    "cursorLabel": "Gönder ↗",
+    "generalLabel": "Genel Sorular",
+    "getInTouch": "İletişime Geç",
+    "contactCta": "İletişime Geç"
   },
   "services": {
     "eyebrow": "§ 04",
     "title": "Hizmetler",
-    "count": "{count} hizmet"
+    "count": "{count} hizmet",
+    "sectionLabel": "Hizmetler"
   },
   "servicesPage": {
     "title": "Hizmetler",
