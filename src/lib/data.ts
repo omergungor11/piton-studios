@@ -138,9 +138,9 @@ export const WORKS: Work[] = [
   },
   {
     n: "04",
-    slug: "nexon-investment",
-    title: "Nexon Investment",
-    client: "Nexon Investment",
+    slug: "nexos-investment",
+    title: "Nexos Investment",
+    client: "Nexos Investment",
     kind: "Web Design · Corporate",
     year: "2026",
     role: "Design / Development",
@@ -148,7 +148,7 @@ export const WORKS: Work[] = [
     video: "story-04.mp4",
     summary: "Real estate and investment company website in North Cyprus.",
     body: [
-      "Gazimağusa merkezli Nexon Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
+      "Gazimağusa merkezli Nexos Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
       "Modern tasarım, hızlı yüklenme süreleri ve mobil uyumlu yapı ile potansiyel yatırımcıların kolayca bilgiye ulaşmasını sağladık. SEO çalışmaları ile organik görünürlüğü artırdık.",
     ],
     scope: "Web design, corporate, SEO",
