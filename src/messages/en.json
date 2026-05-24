@@ -9,7 +9,11 @@
     "about": "About",
     "contact": "Contact",
     "caseStudy": "Case Study",
-    "reel": "Reel"
+    "reel": "Reel",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "home": "Home",
+    "contactCta": "Get in Touch"
   },
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",
@@ -32,6 +36,7 @@
     "title": "Why {accent}?",
     "titleAccent": "Pixel Ninja",
     "subtitle": "Independent studio — design, code, and AI under one roof.",
+    "noteMediaTag": "[ NOTE · FILM ]",
     "highlights": [
       {
         "title": "Fast Delivery",
@@ -66,6 +71,15 @@
         "desc": "Google Cloud, Vercel, CI/CD — production-ready."
       }
     ]
+  },
+  "workScene": {
+    "tag": "PROJECTS / {count}",
+    "heading": "Featured <em>Projects</em>",
+    "client": "Client",
+    "type": "Type",
+    "year": "Year",
+    "role": "Role",
+    "cta": "View Project"
   },
   "about": {
     "eyebrow": "§ 05 · About",
@@ -105,12 +119,16 @@
     "error": "Error — try again",
     "whatsapp": "WhatsApp",
     "call": "Call",
-    "getInTouch": "Get in Touch"
+    "getInTouch": "Get in Touch",
+    "cursorLabel": "Send ↗",
+    "generalLabel": "General Inquiries",
+    "contactCta": "Get in Touch"
   },
   "services": {
     "eyebrow": "§ 04",
     "title": "Services",
-    "count": "{count} practices"
+    "count": "{count} practices",
+    "sectionLabel": "Services"
   },
   "servicesPage": {
     "title": "Services",

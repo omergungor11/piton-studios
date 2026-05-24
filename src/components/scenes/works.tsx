@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { WORKS, type Work, type PreviewData } from '@/lib/data';
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface WorksSceneProps {
@@ -12,6 +13,7 @@ interface WorksSceneProps {
 const FEATURED = WORKS.slice(0, 6);
 
 export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
+  const t = useTranslations('workScene');
   const [idx, setIdx] = useState(0);
   const n = FEATURED.length;
   const work = FEATURED[idx];
@@ -39,8 +41,8 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
   return (
     <div className="proj-glass glass">
       <div className="proj-head">
-        <span className="proj-tag">PROJELER / {String(n).padStart(2, '0')}</span>
-        <h3>Öne Çıkan <span className="em">Projeler</span></h3>
+        <span className="proj-tag">{t('tag', { count: String(n).padStart(2, '0') })}</span>
+        <h3 dangerouslySetInnerHTML={{ __html: t('heading').replace('<em>', '<span class="em">').replace('</em>', '</span>') }} />
       </div>
 
       <div className="proj-slider">
@@ -72,19 +74,19 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
             <div className="proj-features">
               <div className="proj-meta-grid">
                 <div className="proj-meta-box">
-                  <span className="proj-meta-label">Müşteri</span>
+                  <span className="proj-meta-label">{t('client')}</span>
                   <span className="proj-meta-value">{work.client}</span>
                 </div>
                 <div className="proj-meta-box">
-                  <span className="proj-meta-label">Tür</span>
+                  <span className="proj-meta-label">{t('type')}</span>
                   <span className="proj-meta-value">{work.kind}</span>
                 </div>
                 <div className="proj-meta-box">
-                  <span className="proj-meta-label">Yıl</span>
+                  <span className="proj-meta-label">{t('year')}</span>
                   <span className="proj-meta-value">{work.year}</span>
                 </div>
                 <div className="proj-meta-box">
-                  <span className="proj-meta-label">Rol</span>
+                  <span className="proj-meta-label">{t('role')}</span>
                   <span className="proj-meta-value">{work.role}</span>
                 </div>
               </div>
@@ -98,7 +100,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
               </div>
 
               <Link href={`/projects/${work.slug}`} className="proj-cta" data-cursor="hover">
-                Projeyi İncele <span>↗</span>
+                {t('cta')} <span>↗</span>
               </Link>
             </div>
           </motion.div>
