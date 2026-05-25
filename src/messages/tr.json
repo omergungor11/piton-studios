@@ -188,7 +188,11 @@
     "body2": "Tasarımdan deploy'a kadar tüm süreci gösterir.",
     "cta": "Tüm Projeleri Gör",
     "mediaTag": "[ SHOWREEL · 2025 ]",
-    "scale": "REEL Q2 · LIVE"
+    "scale": "REEL Q2 · LIVE",
+    "ppEyebrow": "Stüdyo Tanıtım",
+    "ppTitle": "Projelerimizden {accent} — her çeyrekte güncellenir.",
+    "ppTitleAccent": "kesitler",
+    "ppDesc": "Tasarımdan geliştirmeye, tüm süreçleri kapsayan kısa bir bakış."
   },
   "caseStudy": {
     "eyebrow": "§ 03 · Öne Çıkan Proje",
@@ -301,6 +305,214 @@
       "body": [
         "Avie Global Trading için otomotiv yedek parça ticareti alanında kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerinde şirket profilini, ürün yelpazesini ve iş ortaklıklarını sergileyen profesyonel bir platform oluşturduk.",
         "Global ticaret odaklı tasarım, çok dilli içerik yapısı ve SEO optimizasyonu ile uluslararası müşterilere ulaşmayı hedefledik."
+      ]
+    },
+    "alp-sigorta": {
+      "title": "Alp Sigorta",
+      "summary": "Sigorta şirketi kurumsal sitesi ve hizmet kataloğu.",
+      "body": [
+        "Alp Sigorta için sigorta hizmetlerini sergileyen, güven veren ve profesyonel bir kurumsal web sitesi tasarladık. Hizmet kataloğu, teklif formu ve müşteri bilgilendirme sayfaları ile kapsamlı bir dijital platform oluşturduk.",
+        "Responsive tasarım, hızlı yüklenme süreleri ve SEO optimizasyonu ile potansiyel müşterilerin kolayca ulaşmasını sağladık."
+      ]
+    },
+    "pampas-investment": {
+      "title": "Pampas Investment",
+      "summary": "KKTC gayrimenkul yatırım şirketi kurumsal sitesi.",
+      "body": [
+        "Kuzey Kıbrıs Esentepe merkezli Pampas Investment için gayrimenkul yatırım ve satış odaklı kurumsal bir web sitesi geliştirdik. Proje portföyü, arazi detayları ve yatırımcı bilgilendirme sayfaları ile güçlü bir dijital varlık oluşturduk.",
+        "SEO optimizasyonu, çok dilli yapı ve responsive tasarım ile uluslararası yatırımcılara ulaşmayı hedefledik. Emlak ilan entegrasyonları ve sosyal medya bağlantıları ile müşteri edinimini artırdık."
+      ]
+    },
+    "ekh-yapi": {
+      "title": "EKH Yapı",
+      "summary": "İnşaat şirketi kurumsal sitesi ve proje portföyü.",
+      "body": [
+        "EKH Yapı için inşaat ve müteahhitlik hizmetlerini sergileyen kurumsal bir web sitesi tasarladık. Tamamlanan ve devam eden projelerin portföyü, hizmet detayları ve referanslar ile sektörde güçlü bir dijital kimlik oluşturduk.",
+        "Proje galerisi, iletişim formları ve mobil uyumlu tasarım ile müşteri edinimini kolaylaştırdık. WordPress altyapısı ile kolay içerik yönetimi sağladık."
+      ]
+    },
+    "night-club-katalog": {
+      "title": "Night Club Katalog",
+      "summary": "KKTC gece kulübü rehberi ve katalog platformu.",
+      "body": [
+        "KKTC'deki gece kulüplerini, eğlence mekanlarını ve katalog bilgilerini listeleyen kapsamlı bir rehber platformu geliştirdik. WordPress altyapısı üzerinde mekan profilleri, fiyat bilgileri ve kullanıcı yorumları dahil.",
+        "Yoğun SEO çalışmaları ile 'kıbrıs night club', 'gece hayatı katalog' gibi yüksek hacimli aramalarda üst sıralarda yer almayı başardık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı sağladık."
+      ]
+    },
+    "kibris-gece-hayati": {
+      "title": "Kıbrıs Gece Hayatı",
+      "summary": "KKTC gece hayatı ve eğlence rehberi platformu.",
+      "body": [
+        "KKTC'deki gece kulüpleri, barlar ve eğlence mekanlarını kapsayan modern bir dijital rehber platformu geliştirdik. Vercel üzerinde host edilen, Hostinger domain'li Next.js uygulaması ile hızlı ve SEO dostu bir yapı kurduk.",
+        "Mekan profilleri, etkinlik takvimleri, kullanıcı yorumları ve konum bazlı arama özellikleri dahil. Google Ads ve Search Console entegrasyonu ile organik ve ücretli trafik yönetimi sağladık."
+      ]
+    },
+    "gece-kibris": {
+      "title": "Gece Kıbrıs",
+      "summary": "KKTC gece hayatı için çift siteli eğlence platformu.",
+      "body": [
+        "KKTC gece hayatı sektörü için iki ayrı web sitesi içeren kapsamlı bir paket geliştirdik. gecekibris.com ve kktcnightsclub.com olmak üzere birbirini destekleyen iki platform ile geniş bir kitleye ulaşmayı hedefledik.",
+        "Vercel hosting, Hostinger domain yönetimi, Google Ads ve Tag Manager entegrasyonları ile profesyonel bir dijital altyapı kurduk. SEO odaklı içerik stratejisi ile arama motorlarında görünürlüğü artırdık."
+      ]
+    },
+    "radyo-juke": {
+      "title": "Radyo Juke",
+      "summary": "Canlı yayın özellikli online radyo platformu.",
+      "body": [
+        "Radyo Juke için canlı yayın akışı, program rehberi ve dinleyici etkileşimi sunan modern bir online radyo platformu geliştirdik. Kullanıcı dostu arayüz ve kesintisiz yayın deneyimi ile fark yarattık.",
+        "Responsive tasarım ile mobil ve masaüstü cihazlarda sorunsuz dinleme deneyimi sağladık. Sosyal medya entegrasyonu ve paylaşım özellikleri ile dinleyici kitlesini genişlettik."
+      ]
+    },
+    "ozge-ozler": {
+      "title": "Özge Özler",
+      "summary": "Kişisel marka ve portfolyo web sitesi.",
+      "body": [
+        "Özge Özler için kişisel markayı ön plana çıkaran, profesyonel ve şık bir portfolyo web sitesi tasarladık. Minimalist tasarım anlayışı ile içeriklerin öne çıkmasını sağladık.",
+        "SEO optimizasyonu, hızlı yüklenme süreleri ve mobil uyumlu yapı ile güçlü bir dijital varlık oluşturduk."
+      ]
+    },
+    "rnv-trading": {
+      "title": "RNV Trading",
+      "summary": "Ticaret ve ithalat-ihracat şirketi kurumsal sitesi.",
+      "body": [
+        "RNV Trading için uluslararası ticaret ve ithalat-ihracat faaliyetlerini sergileyen kurumsal bir web sitesi geliştirdik. Profesyonel imaj, ürün kataloğu ve iş ortaklığı bilgileri ile güçlü bir dijital kimlik oluşturduk.",
+        "Çok dilli yapı, SEO optimizasyonu ve modern tasarım ile global müşterilere ulaşmayı hedefledik."
+      ]
+    },
+    "pinnacle-yatirim": {
+      "title": "Pinnacle Yatırım",
+      "summary": "KKTC gayrimenkul yatırım şirketi kurumsal sitesi.",
+      "body": [
+        "Pinnacle Yatırım için Kuzey Kıbrıs gayrimenkul yatırım sektörüne yönelik profesyonel bir kurumsal web sitesi geliştirdik. Yatırım portföyü, proje detayları ve danışmanlık hizmetlerini sergileyen kapsamlı bir platform oluşturduk.",
+        "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile potansiyel yatırımcılara güçlü bir dijital deneyim sunduk."
+      ]
+    },
+    "jet-transfer-cyprus": {
+      "title": "Jet Transfer Cyprus",
+      "summary": "Havalimanı transfer ve VIP ulaşım hizmeti sitesi.",
+      "body": [
+        "Jet Transfer Cyprus için havalimanı transfer ve VIP ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon sistemi, rota bilgileri ve fiyat hesaplama araçları ile kullanıcı deneyimini ön plana çıkardık.",
+        "Mobil uyumlu tasarım, WhatsApp entegrasyonu ve çok dilli yapı ile yerli ve yabancı turistlere kolayca ulaşmayı sağladık."
+      ]
+    },
+    "prenses-night-club": {
+      "title": "Prenses Night Club",
+      "summary": "Etkinlik takvimi ve galerili gece kulübü sitesi.",
+      "body": [
+        "Prenses Night Club için etkinlik takvimi, fotoğraf galerisi ve mekan bilgilerini sergileyen etkileyici bir web sitesi tasarladık. Gece hayatı atmosferini yansıtan koyu temalı, görsel odaklı bir tasarım uyguladık.",
+        "SEO optimizasyonu ile gece kulübü aramalarında üst sıralarda yer almayı sağladık. Sosyal medya entegrasyonu ve online iletişim araçları ile müşteri etkileşimini artırdık."
+      ]
+    },
+    "miracle-night-club": {
+      "title": "Miracle Night Club",
+      "summary": "VIP rezervasyon ve etkinlik listeli gece kulübü sitesi.",
+      "body": [
+        "Miracle Night Club için VIP rezervasyon sistemi, etkinlik listesi ve mekan tanıtımı sunan modern bir web sitesi geliştirdik. Premium atmosferi dijitale taşıyan lüks bir tasarım anlayışı uyguladık.",
+        "Google Ads entegrasyonu, SEO çalışmaları ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Mobil uyumlu yapı ile tüm cihazlarda kusursuz deneyim sağladık."
+      ]
+    },
+    "boon-fresh": {
+      "title": "Boon Fresh",
+      "summary": "Taze gıda ve market ürünleri teslimat e-ticaret platformu.",
+      "body": [
+        "Boon Fresh için taze gıda ve market ürünleri teslimat platformu geliştirdik. Ürün kataloğu, sipariş yönetimi ve teslimat takibi ile kapsamlı bir e-ticaret altyapısı kurduk.",
+        "Kullanıcı dostu arayüz, hızlı sipariş akışı ve mobil uyumlu tasarım ile müşteri memnuniyetini ön plana çıkardık. SEO optimizasyonu ile organik trafik artışı sağladık."
+      ]
+    },
+    "halas-exchange": {
+      "title": "Halas Exchange",
+      "summary": "Canlı kurlu döviz bürosu kurumsal sitesi.",
+      "body": [
+        "Halas Exchange için döviz alım-satım hizmetlerini sunan, güvenilir ve profesyonel bir web sitesi geliştirdik. Canlı kur bilgileri, şube lokasyonları ve kurumsal bilgiler ile kapsamlı bir platform oluşturduk.",
+        "Hızlı yüklenme süreleri, responsive tasarım ve SEO optimizasyonu ile müşterilerin kolayca ulaşmasını sağladık."
+      ]
+    },
+    "arslan-estates": {
+      "title": "Arslan Estates",
+      "summary": "Emlak ilan yönetimli gayrimenkul ajansı sitesi.",
+      "body": [
+        "Arslan Estates için emlak ilan yönetimi, mülk detay sayfaları ve müşteri iletişimi sunan profesyonel bir gayrimenkul web sitesi geliştirdik. Modern tasarım ve gelişmiş filtreleme sistemi ile alıcı deneyimini iyileştirdik.",
+        "SEO optimizasyonu, harita entegrasyonu ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Çok dilli yapı ile uluslararası müşterilere ulaşmayı sağladık."
+      ]
+    },
+    "arslan-coin-center": {
+      "title": "Arslan Coin Center",
+      "summary": "Kripto para alım-satım ve takas merkezi sitesi.",
+      "body": [
+        "Arslan Coin Center için kripto para alım-satım ve takas hizmetlerini sunan modern bir web sitesi geliştirdik. Güvenilirlik ve şeffaflık vurgulayan profesyonel bir tasarım uyguladık.",
+        "Hizmet bilgileri, konum detayları ve iletişim araçları ile müşteri edinimini kolaylaştırdık. SEO ve sosyal medya entegrasyonu ile dijital varlığı güçlendirdik."
+      ]
+    },
+    "arslan-group": {
+      "title": "Arslan Group",
+      "summary": "Çok şirketli holding grubu kurumsal sitesi.",
+      "body": [
+        "Arslan Group için emlak, finans ve ticaret alanlarındaki şirketlerini tek çatı altında sunan kurumsal bir holding web sitesi geliştirdik. Grup yapısını, iş kollarını ve kurumsal vizyonu profesyonel şekilde sergileyen kapsamlı bir platform oluşturduk.",
+        "Modern tasarım, çok dilli yapı ve SEO optimizasyonu ile güçlü bir kurumsal dijital kimlik oluşturduk."
+      ]
+    },
+    "homes-in-mediterranean": {
+      "title": "Homes in Mediterranean",
+      "summary": "Uluslararası Akdeniz gayrimenkul platformu.",
+      "body": [
+        "Homes in Mediterranean için Akdeniz bölgesindeki gayrimenkul fırsatlarını uluslararası yatırımcılara sunan kapsamlı bir emlak platformu geliştirdik. Mülk detayları, bölge rehberleri ve yatırım bilgileri ile zengin bir içerik yapısı oluşturduk.",
+        "Çok dilli yapı, gelişmiş arama ve filtreleme özellikleri, SEO optimizasyonu ile global müşteri kitlesine ulaşmayı hedefledik."
+      ]
+    },
+    "sosyal-piton": {
+      "title": "Sosyal Piton",
+      "summary": "Sosyal medya yönetim ajansı portfolyo sitesi.",
+      "body": [
+        "Sosyal Piton için sosyal medya yönetimi ve dijital pazarlama hizmetlerini sergileyen yaratıcı bir ajans web sitesi geliştirdik. Portfolyo, hizmet detayları ve müşteri referansları ile güçlü bir marka imajı oluşturduk.",
+        "Dinamik tasarım, animasyonlar ve görsel odaklı içerik ile ajansın yaratıcı kimliğini dijitale taşıdık. SEO ve performans optimizasyonu ile organik erişimi artırdık."
+      ]
+    },
+    "kibris-lefkosa-taksi": {
+      "title": "Kıbrıs Lefkoşa Taksi",
+      "summary": "Lefkoşa'da online taksi çağırma ve ulaşım hizmeti sitesi.",
+      "body": [
+        "Kıbrıs Lefkoşa Taksi için online taksi çağırma, rota hesaplama ve fiyat bilgisi sunan profesyonel bir web sitesi geliştirdik. WhatsApp ve telefon entegrasyonu ile hızlı iletişim sağladık.",
+        "Yerel SEO optimizasyonu ile 'lefkoşa taksi', 'kıbrıs taksi' gibi aramalarda üst sıralarda yer almayı başardık. Mobil öncelikli tasarım ile hareket halindeki kullanıcılara kolay erişim sunduk."
+      ]
+    },
+    "aydin-transfer": {
+      "title": "Aydın Transfer",
+      "summary": "Havalimanı transfer ve VIP ulaşım hizmeti sitesi.",
+      "body": [
+        "Aydın Transfer için havalimanı transfer ve şehirlerarası ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon, rota bilgileri ve fiyat hesaplama ile kullanıcı deneyimini ön plana çıkardık.",
+        "Yerel SEO optimizasyonu, WhatsApp entegrasyonu ve mobil öncelikli tasarım ile müşteri edinimini artırdık."
+      ]
+    },
+    "kardesler-taxi": {
+      "title": "Kardeşler Taxi",
+      "summary": "Online rezervasyon ve rota bilgili taksi hizmeti sitesi.",
+      "body": [
+        "Kardeşler Taxi için online taksi çağırma, fiyat bilgisi ve rota hesaplama sunan modern bir web sitesi geliştirdik. Hızlı iletişim butonları ve WhatsApp entegrasyonu ile anında ulaşım sağladık.",
+        "Yerel SEO çalışmaları ile taksi aramalarında üst sıralarda yer almayı hedefledik. Mobil uyumlu tasarım ile hareket halindeki kullanıcılara kolay erişim sunduk."
+      ]
+    },
+    "sammys-hotel": {
+      "title": "Sammys Hotel",
+      "summary": "Oda rezervasyonu ve galerili butik otel sitesi.",
+      "body": [
+        "Sammys Hotel için oda rezervasyonu, fotoğraf galerisi ve otel bilgilerini sergileyen şık bir web sitesi tasarladık. Misafir deneyimini ön plana çıkaran sıcak ve davetkar bir tasarım anlayışı uyguladık.",
+        "Online rezervasyon entegrasyonu, çok dilli yapı ve SEO optimizasyonu ile uluslararası turistlere ulaşmayı sağladık."
+      ]
+    },
+    "all-pro-cyprus": {
+      "title": "All Pro Cyprus",
+      "summary": "KKTC çok hizmetli şirket kurumsal sitesi.",
+      "body": [
+        "All Pro Cyprus için çoklu hizmet alanlarını kapsayan profesyonel bir kurumsal web sitesi geliştirdik. Hizmet detayları, referanslar ve iletişim bilgileri ile güçlü bir dijital varlık oluşturduk.",
+        "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile müşteri edinimini kolaylaştırdık. Çok dilli yapı ile yerli ve yabancı müşterilere ulaşmayı sağladık."
+      ]
+    },
+    "kibris-nights-club": {
+      "title": "Kıbrıs Nights Club",
+      "summary": "Gece kulübü ve eğlence mekanı rehber sitesi.",
+      "body": [
+        "Kıbrıs Nights Club için KKTC'deki gece kulüpleri ve eğlence mekanlarını tanıtan kapsamlı bir rehber web sitesi geliştirdik. Mekan profilleri, etkinlik bilgileri ve kullanıcı yorumları ile zengin bir içerik yapısı oluşturduk.",
+        "SEO odaklı içerik stratejisi ile gece hayatı aramalarında güçlü bir görünürlük sağladık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı elde ettik."
       ]
     }
   },
