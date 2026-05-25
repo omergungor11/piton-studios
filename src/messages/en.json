@@ -223,7 +223,11 @@
     "body2": "Shows the full process from design to deployment.",
     "cta": "View All Projects",
     "mediaTag": "[ SHOWREEL · 2025 ]",
-    "scale": "REEL Q2 · LIVE"
+    "scale": "REEL Q2 · LIVE",
+    "ppEyebrow": "Studio Showreel",
+    "ppTitle": "Highlights from our projects {accent} — updated every quarter.",
+    "ppTitleAccent": "in motion",
+    "ppDesc": "A brief overview covering all processes from design to development."
   },
   "caseStudy": {
     "eyebrow": "§ 03 · Featured Case",
@@ -315,6 +319,266 @@
       ],
       "kind": "Web Design · Corporate",
       "role": "Design / Development"
+    },
+    "alp-sigorta": {
+      "title": "Alp Sigorta",
+      "summary": "Insurance company corporate website with service catalog.",
+      "body": [
+        "We designed a professional, trust-building corporate website for Alp Sigorta that showcases their insurance services. We created a comprehensive digital platform featuring a service catalog, quote request forms, and customer information pages.",
+        "Responsive design, fast load times, and SEO optimization ensured potential customers could easily find and reach the company."
+      ],
+      "kind": "Web Design · Insurance",
+      "role": "Design / Development"
+    },
+    "pampas-investment": {
+      "title": "Pampas Investment",
+      "summary": "Real estate investment company website in North Cyprus.",
+      "body": [
+        "We developed a corporate website focused on real estate investment and sales for Pampas Investment, based in Esentepe, North Cyprus. We built a strong digital presence with a project portfolio, land details, and investor information pages.",
+        "SEO optimization, multi-language support, and responsive design helped us reach international investors. Property listing integrations and social media connections boosted client acquisition."
+      ],
+      "kind": "Web Design · Real Estate",
+      "role": "Design / Development"
+    },
+    "ekh-yapi": {
+      "title": "EKH Yapı",
+      "summary": "Construction company website with project portfolio.",
+      "body": [
+        "We designed a corporate website for EKH Yapı showcasing their construction and contracting services. We established a strong digital identity in the sector through a portfolio of completed and ongoing projects, service details, and references.",
+        "A project gallery, contact forms, and mobile-friendly design streamlined client acquisition. The WordPress infrastructure enabled easy content management."
+      ],
+      "kind": "Web Design · Construction",
+      "role": "Design / Development"
+    },
+    "night-club-katalog": {
+      "title": "Night Club Katalog",
+      "summary": "Night club directory and catalog platform for North Cyprus.",
+      "body": [
+        "We developed a comprehensive directory platform listing nightclubs, entertainment venues, and catalog information across North Cyprus. Built on WordPress, the platform includes venue profiles, pricing details, and user reviews.",
+        "Intensive SEO efforts achieved top rankings for high-volume searches like 'cyprus night club' and 'nightlife catalog.' Google Ads integration and social media connections drove significant traffic growth."
+      ],
+      "kind": "Web Design · Directory",
+      "role": "Design / Development / SEO"
+    },
+    "kibris-gece-hayati": {
+      "title": "Kıbrıs Gece Hayatı",
+      "summary": "Comprehensive nightlife and entertainment guide for North Cyprus.",
+      "body": [
+        "We developed a modern digital guide platform covering nightclubs, bars, and entertainment venues across North Cyprus. Built as a Next.js application hosted on Vercel with a Hostinger domain, we established a fast and SEO-friendly architecture.",
+        "The platform features venue profiles, event calendars, user reviews, and location-based search. Google Ads and Search Console integration enabled both organic and paid traffic management."
+      ],
+      "kind": "Web App · Directory",
+      "role": "Design / Development / SEO"
+    },
+    "gece-kibris": {
+      "title": "Gece Kıbrıs",
+      "summary": "Dual-site entertainment platform for North Cyprus nightlife.",
+      "body": [
+        "We developed a comprehensive package of two websites for the North Cyprus nightlife sector. With gecekibris.com and kktcnightsclub.com as complementary platforms, we aimed to reach a broad audience.",
+        "We built a professional digital infrastructure with Vercel hosting, Hostinger domain management, Google Ads, and Tag Manager integrations. An SEO-focused content strategy increased search engine visibility."
+      ],
+      "kind": "Web Design · Entertainment",
+      "role": "Design / Development"
+    },
+    "radyo-juke": {
+      "title": "Radyo Juke",
+      "summary": "Online radio streaming platform with live broadcast.",
+      "body": [
+        "We developed a modern online radio platform for Radyo Juke featuring live streaming, a program guide, and listener interaction. A user-friendly interface and seamless broadcast experience set it apart.",
+        "Responsive design delivered a smooth listening experience across mobile and desktop devices. Social media integration and sharing features helped expand the listener base."
+      ],
+      "kind": "Web App · Entertainment",
+      "role": "Design / Development"
+    },
+    "ozge-ozler": {
+      "title": "Özge Özler",
+      "summary": "Personal brand and portfolio website.",
+      "body": [
+        "We designed a professional and elegant portfolio website for Özge Özler that puts her personal brand front and center. A minimalist design approach ensured the content takes the spotlight.",
+        "SEO optimization, fast load times, and a mobile-friendly structure established a strong digital presence."
+      ],
+      "kind": "Web Design · Personal",
+      "role": "Design / Development"
+    },
+    "rnv-trading": {
+      "title": "RNV Trading",
+      "summary": "Trading and import-export company corporate website.",
+      "body": [
+        "We developed a corporate website for RNV Trading showcasing their international trade and import-export operations. A professional image, product catalog, and partnership details established a strong digital identity.",
+        "Multi-language support, SEO optimization, and modern design helped the company reach a global customer base."
+      ],
+      "kind": "Web Design · Corporate",
+      "role": "Design / Development"
+    },
+    "pinnacle-yatirim": {
+      "title": "Pinnacle Yatırım",
+      "summary": "Real estate investment company website in North Cyprus.",
+      "body": [
+        "We developed a professional corporate website for Pinnacle Yatırım targeting the North Cyprus real estate investment sector. We created a comprehensive platform showcasing the investment portfolio, project details, and consultancy services.",
+        "Modern design, SEO optimization, and a mobile-friendly structure delivered a strong digital experience for potential investors."
+      ],
+      "kind": "Web Design · Real Estate",
+      "role": "Design / Development"
+    },
+    "jet-transfer-cyprus": {
+      "title": "Jet Transfer Cyprus",
+      "summary": "Airport transfer and VIP transportation service website.",
+      "body": [
+        "We developed a professional website for Jet Transfer Cyprus offering airport transfer and VIP transportation services. An online booking system, route information, and fare calculators put the user experience first.",
+        "Mobile-friendly design, WhatsApp integration, and multi-language support made it easy for both local and international tourists to book services."
+      ],
+      "kind": "Web Design · Transportation",
+      "role": "Design / Development"
+    },
+    "prenses-night-club": {
+      "title": "Prenses Night Club",
+      "summary": "Night club website with event calendar and gallery.",
+      "body": [
+        "We designed a striking website for Prenses Night Club featuring an event calendar, photo gallery, and venue information. A dark-themed, visually driven design captured the atmosphere of nightlife.",
+        "SEO optimization secured top rankings in nightclub searches. Social media integration and online communication tools boosted customer engagement."
+      ],
+      "kind": "Web Design · Entertainment",
+      "role": "Design / Development"
+    },
+    "miracle-night-club": {
+      "title": "Miracle Night Club",
+      "summary": "Night club website with VIP reservation and event listings.",
+      "body": [
+        "We developed a modern website for Miracle Night Club with a VIP reservation system, event listings, and venue showcases. A luxurious design approach brought the premium atmosphere into the digital space.",
+        "Google Ads integration, SEO efforts, and social media connections increased digital visibility. A mobile-friendly structure ensured a flawless experience across all devices."
+      ],
+      "kind": "Web Design · Entertainment",
+      "role": "Design / Development"
+    },
+    "boon-fresh": {
+      "title": "Boon Fresh",
+      "summary": "Fresh food and grocery delivery e-commerce platform.",
+      "body": [
+        "We developed a fresh food and grocery delivery platform for Boon Fresh. We built a comprehensive e-commerce infrastructure with a product catalog, order management, and delivery tracking.",
+        "A user-friendly interface, streamlined ordering flow, and mobile-responsive design prioritized customer satisfaction. SEO optimization drove organic traffic growth."
+      ],
+      "kind": "Web Design · E-commerce",
+      "role": "Design / Development"
+    },
+    "halas-exchange": {
+      "title": "Halas Exchange",
+      "summary": "Currency exchange company website with live rates.",
+      "body": [
+        "We developed a reliable and professional website for Halas Exchange offering currency exchange services. We created a comprehensive platform featuring live exchange rates, branch locations, and corporate information.",
+        "Fast load times, responsive design, and SEO optimization ensured customers could reach the company with ease."
+      ],
+      "kind": "Web Design · Finance",
+      "role": "Design / Development"
+    },
+    "arslan-estates": {
+      "title": "Arslan Estates",
+      "summary": "Real estate agency website with property listings.",
+      "body": [
+        "We developed a professional real estate website for Arslan Estates featuring property listing management, detailed property pages, and customer communication tools. Modern design and an advanced filtering system improved the buyer experience.",
+        "SEO optimization, map integration, and social media connections boosted digital visibility. Multi-language support enabled the company to reach international clients."
+      ],
+      "kind": "Web Design · Real Estate",
+      "role": "Design / Development"
+    },
+    "arslan-coin-center": {
+      "title": "Arslan Coin Center",
+      "summary": "Cryptocurrency exchange and trading center website.",
+      "body": [
+        "We developed a modern website for Arslan Coin Center offering cryptocurrency buying, selling, and exchange services. A professional design emphasized trust and transparency.",
+        "Service information, location details, and communication tools streamlined client acquisition. SEO and social media integration strengthened the digital presence."
+      ],
+      "kind": "Web Design · Finance",
+      "role": "Design / Development"
+    },
+    "arslan-group": {
+      "title": "Arslan Group",
+      "summary": "Multi-company holding group corporate website.",
+      "body": [
+        "We developed a corporate holding website for Arslan Group that presents their real estate, finance, and trading companies under one roof. We created a comprehensive platform professionally showcasing the group structure, business divisions, and corporate vision.",
+        "Modern design, multi-language support, and SEO optimization established a strong corporate digital identity."
+      ],
+      "kind": "Web Design · Corporate",
+      "role": "Design / Development"
+    },
+    "homes-in-mediterranean": {
+      "title": "Homes in Mediterranean",
+      "summary": "International Mediterranean real estate platform.",
+      "body": [
+        "We developed a comprehensive real estate platform for Homes in Mediterranean, presenting property opportunities across the Mediterranean region to international investors. We built a rich content structure with property details, area guides, and investment information.",
+        "Multi-language support, advanced search and filtering features, and SEO optimization helped us target a global customer base."
+      ],
+      "kind": "Web Design · Real Estate",
+      "role": "Design / Development"
+    },
+    "sosyal-piton": {
+      "title": "Sosyal Piton",
+      "summary": "Social media management agency portfolio website.",
+      "body": [
+        "We developed a creative agency website for Sosyal Piton showcasing their social media management and digital marketing services. A portfolio, service details, and client testimonials established a strong brand image.",
+        "Dynamic design, animations, and visually driven content brought the agency's creative identity into the digital space. SEO and performance optimization increased organic reach."
+      ],
+      "kind": "Web Design · Agency",
+      "role": "Design / Development"
+    },
+    "kibris-lefkosa-taksi": {
+      "title": "Kıbrıs Lefkoşa Taksi",
+      "summary": "Taxi booking and transportation service website in Nicosia.",
+      "body": [
+        "We developed a professional website for Kıbrıs Lefkoşa Taksi offering online taxi booking, route calculation, and fare information. WhatsApp and phone integration enabled quick communication.",
+        "Local SEO optimization achieved top rankings for searches like 'Nicosia taxi' and 'Cyprus taxi.' A mobile-first design provided easy access for users on the go."
+      ],
+      "kind": "Web Design · Transportation",
+      "role": "Design / Development / SEO"
+    },
+    "aydin-transfer": {
+      "title": "Aydın Transfer",
+      "summary": "Airport transfer and VIP transportation service website.",
+      "body": [
+        "We developed a professional website for Aydın Transfer offering airport transfer and intercity transportation services. Online booking, route information, and fare calculation put the user experience first.",
+        "Local SEO optimization, WhatsApp integration, and a mobile-first design boosted client acquisition."
+      ],
+      "kind": "Web Design · Transportation",
+      "role": "Design / Development / SEO"
+    },
+    "kardesler-taxi": {
+      "title": "Kardeşler Taxi",
+      "summary": "Taxi service website with online booking and route info.",
+      "body": [
+        "We developed a modern website for Kardeşler Taxi offering online taxi booking, fare information, and route calculation. Quick-contact buttons and WhatsApp integration enabled instant communication.",
+        "Local SEO efforts targeted top rankings in taxi-related searches. A mobile-friendly design provided easy access for users on the move."
+      ],
+      "kind": "Web Design · Transportation",
+      "role": "Design / Development / SEO"
+    },
+    "sammys-hotel": {
+      "title": "Sammys Hotel",
+      "summary": "Boutique hotel website with room booking and gallery.",
+      "body": [
+        "We designed an elegant website for Sammys Hotel featuring room reservations, a photo gallery, and hotel information. A warm and inviting design approach put the guest experience front and center.",
+        "Online booking integration, multi-language support, and SEO optimization helped reach international tourists."
+      ],
+      "kind": "Web Design · Hospitality",
+      "role": "Design / Development"
+    },
+    "all-pro-cyprus": {
+      "title": "All Pro Cyprus",
+      "summary": "Multi-service company website in North Cyprus.",
+      "body": [
+        "We developed a professional corporate website for All Pro Cyprus covering multiple service areas. Service details, references, and contact information established a strong digital presence.",
+        "Modern design, SEO optimization, and a mobile-friendly structure streamlined client acquisition. Multi-language support enabled the company to reach both local and international customers."
+      ],
+      "kind": "Web Design · Services",
+      "role": "Design / Development"
+    },
+    "kibris-nights-club": {
+      "title": "Kıbrıs Nights Club",
+      "summary": "Night club and entertainment venue directory website.",
+      "body": [
+        "We developed a comprehensive guide website for Kıbrıs Nights Club featuring nightclubs and entertainment venues across North Cyprus. We built a rich content structure with venue profiles, event information, and user reviews.",
+        "An SEO-focused content strategy secured strong visibility in nightlife-related searches. Google Ads integration and social media connections drove significant traffic growth."
+      ],
+      "kind": "Web Design · Entertainment",
+      "role": "Design / Development / SEO"
     }
   },
   "servicesList": {

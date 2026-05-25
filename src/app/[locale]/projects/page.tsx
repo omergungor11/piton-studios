@@ -38,11 +38,13 @@ export default function ProjectsPage() {
         <div className="pp-reel-overlay" />
         <div className="pp-reel-content glass">
           <div className="pp-reel-info">
-            <div className="pp-reel-eyebrow">Stüdyo Tanıtım</div>
+            <div className="pp-reel-eyebrow">{tr('ppEyebrow')}</div>
             <h3 className="pp-reel-title">
-              Projelerimizden <span className="em">kesitler</span> — her çeyrekte güncellenir.
+              {tr.rich('ppTitle', {
+                accent: (chunks) => <span className="em">{chunks}</span>,
+              })}
             </h3>
-            <p className="pp-reel-desc">Tasarımdan geliştirmeye, tüm süreçleri kapsayan kısa bir bakış.</p>
+            <p className="pp-reel-desc">{tr('ppDesc')}</p>
             <div className="pp-reel-meta">
               <div className="pp-reel-meta-item">
                 <span className="pp-reel-meta-k">{tr('labelContent')}</span>
