@@ -70,7 +70,7 @@ export default function ManifestoScene() {
         <video src={videoUrl('red-knight.mp4')} autoPlay muted loop playsInline preload="auto" />
         <div className="note-media-fade" />
         <div className="note-media-caption">
-          <span>Loop</span><span>— PX · NJ</span>
+          <span>Loop</span><span>— PT · ST</span>
         </div>
       </div>
       </Reveal>

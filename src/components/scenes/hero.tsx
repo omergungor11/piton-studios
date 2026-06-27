@@ -16,6 +16,9 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
     <div className="hero-stack">
       <div className="hero-main glass strong">
         <Reveal variant="fadeIn" duration={0.8}>
+          <img src="/logo.webp" alt="Piton Studios" className="hero-logo" />
+        </Reveal>
+        <Reveal variant="fadeIn" duration={0.8}>
           <div className="kicker">{t('kicker')}</div>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.2} duration={0.8}>
@@ -37,9 +40,6 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
             </StaggerItem>
           ))}
         </Stagger>
-      </div>
-      <div className="hero-side">
-        <img src="/logo.webp" alt="Piton Studios" className="hero-logo" />
       </div>
     </div>
   );

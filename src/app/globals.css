@@ -748,18 +748,19 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
 
 .hero-side { display: grid; gap: 22px; place-items: center; }
 .hero-logo {
-  width: 100%;
-  max-width: 420px;
+  display: block;
+  width: 132px;
   height: auto;
-  filter: drop-shadow(0 18px 60px rgba(43, 156, 224, 0.35));
+  margin: 0 auto 26px;
+  filter: drop-shadow(0 14px 44px rgba(43, 156, 224, 0.38));
   animation: heroLogoFloat 8s ease-in-out infinite;
 }
 @keyframes heroLogoFloat {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-14px) rotate(1.5deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
 }
 @media (max-width: 900px) {
-  .hero-logo { max-width: 260px; }
+  .hero-logo { width: 104px; margin-bottom: 20px; }
 }
 .hero-card {
   padding: 22px 24px;
