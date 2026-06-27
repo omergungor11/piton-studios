@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Preloader from '@/components/preloader';
 
 type Props = {
   children: React.ReactNode;
@@ -38,6 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <Preloader />
           {children}
         </NextIntlClientProvider>
       </body>

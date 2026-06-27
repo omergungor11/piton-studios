@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/arlec/Work-Restored/piton-studios/.codex/hooks/protect-files.sh'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -29,6 +29,7 @@ export default function Home() {
   const [theme, setThemeState] = useState("dark");
   const [activeIdx, setActiveIdx] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [revealed, setRevealed] = useState<Set<number>>(() => new Set([0]));
   const sceneRefs = useRef<(HTMLElement | null)[]>([]);
 
   const setPreview = useCallback(
@@ -117,15 +118,39 @@ export default function Home() {
     };
   }, []);
 
+  // Reveal each scene once it enters the viewport — and keep it revealed.
+  // Decoupled from activeIdx so content never fades back out while in view
+  // (the previous center-based logic hid most content on mobile).
+  useEffect(() => {
+    const els = sceneRefs.current;
+    if (typeof IntersectionObserver === "undefined") {
+      setRevealed(new Set(els.map((_, i) => i)));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const idx = els.indexOf(entry.target as HTMLElement);
+          if (idx < 0) return;
+          setRevealed((prev) => {
+            if (prev.has(idx)) return prev;
+            const next = new Set(prev);
+            next.add(idx);
+            return next;
+          });
+          io.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -12% 0px" }
+    );
+    els.forEach((el) => el && io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   const onNav = (idx: number) => {
     const el = sceneRefs.current[idx];
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  const sceneState = (i: number) => {
-    if (i === activeIdx) return "in";
-    if (i < activeIdx) return "out";
-    return "";
   };
 
   const setRef = (i: number) => (el: HTMLElement | null) => {
@@ -144,7 +169,7 @@ export default function Home() {
 
       <main className="scenes">
         {SCENES.map((s, i) => {
-          const state = sceneState(i);
+          const state = revealed.has(i) ? "reveal" : "";
           let inner = null;
           if (s.id === "hero") inner = <HeroScene clock={clock} />;
           else if (s.id === "note") inner = <ManifestoScene />;

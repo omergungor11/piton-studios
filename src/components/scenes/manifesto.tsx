@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
-import { videoUrl } from '@/lib/media';
 
 const ICONS = [
   /* 0: Hızlı Teslimat */ <svg key="0" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="16" cy="16" r="10" /><path d="M16 6v10l6 4" /></svg>,
@@ -14,6 +13,13 @@ const ICONS = [
   /* 5: Ödeme & SaaS */ <svg key="5" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="24" height="16" rx="2" /><line x1="4" y1="14" x2="28" y2="14" /><line x1="8" y1="20" x2="14" y2="20" /><circle cx="24" cy="20" r="2" /></svg>,
   /* 6: Otomasyon */ <svg key="6" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="8" cy="8" r="3" /><circle cx="24" cy="8" r="3" /><circle cx="16" cy="24" r="3" /><path d="M10.5 9.5L14 21.5" /><path d="M21.5 9.5L18 21.5" /><path d="M11 8h10" /><circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none" /></svg>,
   /* 7: Cloud & DevOps */ <svg key="7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 24a5 5 0 01-.5-9.96A7.5 7.5 0 0122 10a6 6 0 012 11.66" /><path d="M12 24h12" /><line x1="16" y1="18" x2="16" y2="28" /><line x1="14" y1="20" x2="16" y2="18" /><line x1="18" y1="20" x2="16" y2="18" /></svg>,
+];
+
+const CODE_COLUMNS = [
+  ['const studio = "Piton";', 'render.motion(reel);', 'await idea.launch();', 'brand.signal++', 'frame.sync(60);', 'ship.clean();'],
+  ['01001000', 'motion.map()', 'AI.compose()', 'scene.cut()', 'color.grade()', 'deploy.edge()'],
+  ['{ strategy: true }', '<visual-story />', 'while (bold) build();', 'pixel.align();', 'sound.mix();', 'client.ready'],
+  ['function spark()', 'const craft = code;', 'timeline.play()', 'grid.calibrate()', 'export.story()', 'studio.online'],
 ];
 
 export default function ManifestoScene() {
@@ -65,12 +71,28 @@ export default function ManifestoScene() {
         </div>
       </div>
       <Reveal variant="scaleIn" delay={0.2}>
-      <div className="note-media" data-cursor="play" data-cursor-label="Play">
-        <span className="note-media-tag">[ NOTE · FILM ]</span>
-        <video src={videoUrl('red-knight.mp4')} autoPlay muted loop playsInline preload="auto" />
+      <div className="note-media code-panel" aria-hidden="true">
+        <span className="note-media-tag">[ CODE · SYSTEM ]</span>
+        <div className="code-grid">
+          {CODE_COLUMNS.map((column, index) => (
+            <div
+              className="code-column"
+              style={{ '--stream-index': index } as React.CSSProperties}
+              key={index}
+            >
+              {[...column, ...column, ...column].map((line, lineIndex) => (
+                <span key={`${line}-${lineIndex}`}>{line}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="code-core">
+          <span>PTN://STUDIO</span>
+          <strong>creative_system.online</strong>
+        </div>
         <div className="note-media-fade" />
         <div className="note-media-caption">
-          <span>Loop</span><span>— PT · ST</span>
+          <span>Live</span><span>— Code · AI</span>
         </div>
       </div>
       </Reveal>
