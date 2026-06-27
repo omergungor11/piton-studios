@@ -27,7 +27,7 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
           </h1>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.4}>
-          <div className="sub" style={{ textAlign: 'left' }}>
+          <div className="sub">
             {t('subtitle')}
           </div>
         </Reveal>

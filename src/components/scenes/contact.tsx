@@ -24,12 +24,6 @@ export default function ContactScene() {
       <Reveal variant="fadeIn">
         <div className="eyebrow">{t('eyebrow')}</div>
       </Reveal>
-      <Reveal variant="fadeUp" delay={0.1}>
-      <a className="mail" href="mailto:hi@pitonstudios.com" data-cursor="mail" data-cursor-label="Send ↗">
-        <span className="row">hi@pitonstudios.com ↗</span>
-        <span className="dup">hi@pitonstudios.com ↗</span>
-      </a>
-      </Reveal>
 
       <Reveal variant="fadeUp" delay={0.2}>
       <div className="contact-actions">
