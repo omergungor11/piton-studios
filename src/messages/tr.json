@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Pixel Ninja — Dijital Stüdyo",
+    "title": "Piton Studios — Dijital Stüdyo",
     "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
   },
   "nav": {
@@ -16,10 +16,10 @@
   },
   "hero": {
     "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",
-    "title1": "Pixel",
-    "title2": "Ninja",
-    "title3": "Türkiye'de Pixel'den",
-    "title4": "Ninja yapabiliriz",
+    "title1": "Piton",
+    "title2": "Studios",
+    "title3": "Türkiye'den dijital",
+    "title4": "stüdyo gücü",
     "subtitle": "Dijital çözümler, otomasyonlar ve yapay zekâ ile markanızı geliştiririz.",
     "chips": [
       "ONLINE",
@@ -33,7 +33,7 @@
   "manifesto": {
     "eyebrow": "§ 01 · Not",
     "title": "Neden {accent}?",
-    "titleAccent": "Pixel Ninja",
+    "titleAccent": "Piton Studios",
     "subtitle": "Bağımsız stüdyo — tasarım, kod ve AI tek çatı altında.",
     "noteMediaTag": "[ NOT · FİLM ]",
     "highlights": [
@@ -84,7 +84,7 @@
     "eyebrow": "§ 05 · Hakkında",
     "heading": "Dijital {accent} tasarlıyor, geliştiriyor ve büyütüyoruz.",
     "headingAccent": "ürünler",
-    "desc": "Pixel Ninja, web tasarım, uygulama geliştirme, AI entegrasyonu ve dijital pazarlama alanlarında uçtan uca hizmet veren bağımsız bir dijital stüdyodur. Startup'lardan kurumsal markalara — her projede kalite, hız ve ölçülebilir sonuç odaklı çalışırız.",
+    "desc": "Piton Studios, web tasarım, uygulama geliştirme, AI entegrasyonu ve dijital pazarlama alanlarında uçtan uca hizmet veren bağımsız bir dijital stüdyodur. Startup'lardan kurumsal markalara — her projede kalite, hız ve ölçülebilir sonuç odaklı çalışırız.",
     "quote": "Teknolojiyi karmaşıklaştırmak değil, sadeleştirmek için kullanıyoruz. Her proje bir iş problemi çözmeli — güzel görünmek bonus.",
     "quoteAuthor": "— Ömer Güngör, Founder",
     "mediaTag": "[ STÜDYO · 2025 ]",
@@ -158,7 +158,7 @@
     "tools": "// Teknoloji Yığını",
     "faq": "// SSS",
     "commonQuestions": "Sık sorulan sorular",
-    "whyUs": "Neden Pixel Ninja?",
+    "whyUs": "Neden Piton Studios?",
     "whyUsItems": [
       "Her disiplinde derin uzmanlık — yüzeysel kalan genel ajans değil.",
       "Şeffaf süreç — her aşamada ne olduğunu ve neden olduğunu bilirsiniz.",
@@ -183,7 +183,7 @@
     "labelProjectCount": "Proje Sayısı",
     "valueProjectCount": "50+",
     "labelPreparedBy": "Hazırlayan",
-    "valuePreparedBy": "Pixel Ninja",
+    "valuePreparedBy": "Piton Studios",
     "body1": "Son projelerimizden derlenen görsel özet — her çeyrekte güncellenir.",
     "body2": "Tasarımdan deploy'a kadar tüm süreci gösterir.",
     "cta": "Tüm Projeleri Gör",
@@ -250,9 +250,9 @@
     "availability": "Yeni projelere açığız · Hemen başlayalım"
   },
   "common": {
-    "copyright": "© 2025 Pixel Ninja",
+    "copyright": "© 2025 Piton Studios",
     "home": "Ana Sayfa",
-    "pixelNinja": "Pixel Ninja",
+    "pitonStudios": "Piton Studios",
     "projects": "Projeler",
     "services": "Hizmetler",
     "gallery": "Galeri",

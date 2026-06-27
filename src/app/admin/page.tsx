@@ -25,7 +25,7 @@ export default function AdminPage() {
       <aside className="admin-sidebar glass">
         <div className="admin-logo">
           <span className="mark-dot" style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block' }} />
-          <span>Pixel Ninja</span>
+          <span>Piton Studios</span>
         </div>
         <nav className="admin-nav">
           {tabs.map((tab) => (
@@ -196,7 +196,7 @@ function SettingsPanel() {
     <div className="admin-settings glass">
       <div className="admin-setting-group">
         <label>Site Name</label>
-        <input type="text" defaultValue="Pixel Ninja" />
+        <input type="text" defaultValue="Piton Studios" />
       </div>
       <div className="admin-setting-group">
         <label>Tagline</label>
@@ -204,7 +204,7 @@ function SettingsPanel() {
       </div>
       <div className="admin-setting-group">
         <label>Email</label>
-        <input type="email" defaultValue="hi@pixelninja.studio" />
+        <input type="email" defaultValue="hi@pitonstudios.com" />
       </div>
       <div className="admin-setting-group">
         <label>WhatsApp Number</label>
@@ -216,7 +216,7 @@ function SettingsPanel() {
       </div>
       <div className="admin-setting-group">
         <label>Instagram URL</label>
-        <input type="url" defaultValue="https://instagram.com/pixelninja.studio" />
+        <input type="url" defaultValue="https://instagram.com/pitonstudios" />
       </div>
       <button className="admin-btn primary" style={{ marginTop: 20 }}>Kaydet</button>
     </div>

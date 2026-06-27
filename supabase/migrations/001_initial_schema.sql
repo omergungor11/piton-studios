@@ -1,5 +1,5 @@
 -- ============================================================
--- Pixel Ninja - Initial Database Schema
+-- Piton Studios - Initial Database Schema
 -- Run this in Supabase SQL Editor
 -- ============================================================
 
@@ -103,12 +103,12 @@ CREATE TABLE site_settings (
 
 -- Insert defaults
 INSERT INTO site_settings (key, value) VALUES
-  ('site_name', '"Pixel Ninja"'),
+  ('site_name', '"Piton Studios"'),
   ('tagline', '"Independent brand, direction & motion studio"'),
-  ('email', '"hi@pixelninja.studio"'),
+  ('email', '"hi@pitonstudios.com"'),
   ('location', '"Türkiye"'),
-  ('social_instagram', '"https://instagram.com/pixelninja.studio"'),
-  ('social_vimeo', '"https://vimeo.com/pixelninja"'),
+  ('social_instagram', '"https://instagram.com/pitonstudios"'),
+  ('social_vimeo', '"https://vimeo.com/pitonstudios"'),
   ('whatsapp_number', '""');
 
 -- ============================================================

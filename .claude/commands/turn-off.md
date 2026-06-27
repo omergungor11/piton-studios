@@ -1,8 +1,8 @@
 Session'i kapatmadan once:
 
-1. ninja-tasks/task-index.md oku — aktif task var mi? Yapilan isleri listele
+1. piton-tasks/task-index.md oku — aktif task var mi? Yapilan isleri listele
 2. Task durumlarini guncelle (COMPLETED / IN_PROGRESS)
-3. Session notu yaz → `ninja-tasks/active/session-notes.md`:
+3. Session notu yaz → `piton-tasks/active/session-notes.md`:
    - Tarih, yapilanlar, yarim kalanlar, siradaki, dikkat edilecekler
 4. CLAUDE.md mevcut durum bolumunu guncelle
 5. Git full calistir — stage, commit, push

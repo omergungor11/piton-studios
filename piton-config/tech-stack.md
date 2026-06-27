@@ -1,4 +1,4 @@
-# Tech Stack — Pixel Ninja
+# Tech Stack — Piton Studios
 
 ## Runtime
 - Node.js 20 LTS

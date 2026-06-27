@@ -1,9 +1,9 @@
 Yeni bir session basliyor. Projeyi tam olarak anlamak icin adimlari sirasiyla uygula:
 
 1. `CLAUDE.md` oku — proje ozeti, conventions, slash command referanslari
-2. `ninja-docs/MEMORY.md` oku — kalici hafiza, teknik kararlar
-3. `ninja-tasks/task-index.md` oku — dashboard + tum task durumlari
-4. `ninja-tasks/active/session-notes.md` oku — onceki session notlari
+2. `piton-docs/MEMORY.md` oku — kalici hafiza, teknik kararlar
+3. `piton-tasks/task-index.md` oku — dashboard + tum task durumlari
+4. `piton-tasks/active/session-notes.md` oku — onceki session notlari
 5. Aktif (IN_PROGRESS) task var mi kontrol et → varsa phase dosyasindan detayini oku
 6. Son birkac git commit'i incele (`git log --oneline -10`)
 7. Kisa bir durum raporu ver:

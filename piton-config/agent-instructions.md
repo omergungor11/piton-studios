@@ -1,4 +1,4 @@
-# Agent Instructions — Pixel Ninja
+# Agent Instructions — Piton Studios
 
 ## Sub-Agent Types
 
@@ -22,7 +22,7 @@
 - **Commit Prefix**: `chore(config)`, `chore(deploy)`
 
 ### Docs Agent
-- **Scope**: `ninja-*` directories, CLAUDE.md, markdown files
+- **Scope**: `piton-*` directories, CLAUDE.md, markdown files
 - **Commit Prefix**: `docs(*)`
 
 ## Agent Rules

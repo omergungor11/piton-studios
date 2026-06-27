@@ -52,8 +52,8 @@ export default function PageShell({ children }: PageShellProps) {
 
       <header className="chrome">
         <Link href="/" className="lockup glass" data-cursor="hover" data-cursor-label="Home">
-          <span className="mark-dot" />
-          <span className="mark">Pixel Ninja</span>
+          <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+          <span className="mark">Piton Studios</span>
         </Link>
 
         <nav className="nav glass desktop-nav">
@@ -102,8 +102,8 @@ export default function PageShell({ children }: PageShellProps) {
         <div className="mobile-menu-panel glass strong">
           <div className="mobile-menu-header">
             <div className="mm-brand">
-              <span className="mark-dot" style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block' }} />
-              <span>Pixel Ninja</span>
+              <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+              <span>Piton Studios</span>
             </div>
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>
@@ -135,7 +135,7 @@ export default function PageShell({ children }: PageShellProps) {
           </div>
 
           <div className="mobile-menu-footer">
-            <a href="mailto:hi@pixelninja.com" className="mm-footer-email">hi@pixelninja.com</a>
+            <a href="mailto:hi@pitonstudios.com" className="mm-footer-email">hi@pitonstudios.com</a>
             <div className="mm-lang-switcher">
               <LanguageSwitcher />
             </div>

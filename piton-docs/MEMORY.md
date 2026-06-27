@@ -1,7 +1,7 @@
-# Pixel Ninja - Project Memory
+# Piton Studios - Project Memory
 
 ## Project Info
-- Pixel Ninja firmasinin video portfolyo websitesi. Video-agirlikli, hizli yuklenen modern portfolyo.
+- Piton Studios firmasinin video portfolyo websitesi. Video-agirlikli, hizli yuklenen modern portfolyo.
 
 ## Tech Stack
 - Next.js 15 (App Router) + TypeScript + Tailwind CSS

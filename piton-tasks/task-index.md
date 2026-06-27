@@ -1,4 +1,4 @@
-# Pixel Ninja - Task Index
+# Piton Studios - Task Index
 
 ## Dashboard
 
@@ -19,7 +19,7 @@
 | ID | Task | Agent | Complexity | Status | Dependencies |
 |----|------|-------|-----------|--------|-------------|
 | TASK-001 | Next.js + pnpm init | devops | S | COMPLETED | - |
-| TASK-002 | Meta directories (ninja-tasks, ninja-docs, ninja-config, ninja-plans) | docs | S | COMPLETED | - |
+| TASK-002 | Meta directories (piton-tasks, piton-docs, piton-config, piton-plans) | docs | S | COMPLETED | - |
 | TASK-003 | .claude/ hooks, commands, settings | devops | M | COMPLETED | TASK-001 |
 | TASK-004 | CLAUDE.md master configuration | docs | M | COMPLETED | TASK-002 |
 | TASK-005 | Supabase setup + env config | devops | M | COMPLETED | TASK-001 |

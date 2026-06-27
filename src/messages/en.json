@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Pixel Ninja — Digital Studio",
+    "title": "Piton Studios — Digital Studio",
     "description": "Design, code & AI under one roof. We design your brand, develop your product, and accelerate your growth."
   },
   "nav": {
@@ -17,10 +17,10 @@
   },
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",
-    "title1": "Pixel",
-    "title2": "Ninja",
-    "title3": "We make Pixels into",
-    "title4": "Ninjas from Turkey",
+    "title1": "Piton",
+    "title2": "Studios",
+    "title3": "A digital studio",
+    "title4": "from Turkey",
     "subtitle": "Design, code & AI — under one roof. We design your brand, develop your product, and accelerate your growth. Quality-focused, results guaranteed.",
     "chips": [
       "ONLINE",
@@ -34,7 +34,7 @@
   "manifesto": {
     "eyebrow": "§ 01 · Note",
     "title": "Why {accent}?",
-    "titleAccent": "Pixel Ninja",
+    "titleAccent": "Piton Studios",
     "subtitle": "Independent studio — design, code, and AI under one roof.",
     "noteMediaTag": "[ NOTE · FILM ]",
     "highlights": [
@@ -85,7 +85,7 @@
     "eyebrow": "§ 05 · About",
     "heading": "We design, develop, and grow digital {accent}. Based in Turkey, working with global clients.",
     "headingAccent": "products",
-    "desc": "Pixel Ninja is an independent digital studio providing end-to-end services in web design, app development, AI integration, and digital marketing. From startups to enterprise brands — quality, speed, and measurable results in every project.",
+    "desc": "Piton Studios is an independent digital studio providing end-to-end services in web design, app development, AI integration, and digital marketing. From startups to enterprise brands — quality, speed, and measurable results in every project.",
     "quote": "We use technology to simplify, not complicate. Every project should solve a business problem — looking good is a bonus.",
     "quoteAuthor": "— Ömer Güngör, Founder",
     "mediaTag": "[ STUDIO · 2025 ]",
@@ -159,7 +159,7 @@
     "tools": "// Stack & Tools",
     "faq": "// FAQ",
     "commonQuestions": "Common questions",
-    "whyUs": "Why Pixel Ninja?",
+    "whyUs": "Why Piton Studios?",
     "whyUsItems": [
       "Deep expertise in each discipline, not a generalist agency spreading thin.",
       "Transparent process — you know what's happening and why at every stage.",
@@ -218,7 +218,7 @@
     "labelProjectCount": "Project Count",
     "valueProjectCount": "50+",
     "labelPreparedBy": "Prepared by",
-    "valuePreparedBy": "Pixel Ninja",
+    "valuePreparedBy": "Piton Studios",
     "body1": "A visual summary compiled from our latest projects — updated quarterly.",
     "body2": "Shows the full process from design to deployment.",
     "cta": "View All Projects",
@@ -251,9 +251,9 @@
     "availability": "Open for new projects · Let's start"
   },
   "common": {
-    "copyright": "© 2025 Pixel Ninja",
+    "copyright": "© 2025 Piton Studios",
     "home": "Home",
-    "pixelNinja": "Pixel Ninja",
+    "pitonStudios": "Piton Studios",
     "projects": "Projects",
     "services": "Services",
     "gallery": "Gallery",

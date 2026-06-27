@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     project.type === "work" ? project.summary : project.sub;
 
   return {
-    title: `${title} — Pixel Ninja`,
+    title: `${title} — Piton Studios`,
     description: desc,
   };
 }
