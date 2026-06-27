@@ -38,7 +38,9 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
           ))}
         </Stagger>
       </div>
-      <div className="hero-side"></div>
+      <div className="hero-side">
+        <img src="/logo.webp" alt="Piton Studios" className="hero-logo" />
+      </div>
     </div>
   );
 }

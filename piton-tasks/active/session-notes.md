@@ -4,7 +4,7 @@
 
 ### Completed
 - [x] Project scaffold (Next.js 15 + TypeScript + Tailwind + pnpm)
-- [x] Claude Code workflow (ninja-* dirs, slash commands, hooks)
+- [x] Claude Code workflow (piton-* dirs, slash commands, hooks)
 - [x] Full design implementation from Portgolio.html (9 sections, glass morphism, custom cursor, film grain)
 - [x] `/projects` listing page with year filter
 - [x] `/projects/[slug]` detail pages (11 projects, hero video, metadata, body, related nav)
@@ -57,7 +57,7 @@
 - [x] TASK-021: Three.js 3D scene (particle system, wireframe octahedron/icosahedron, mouse tracking)
 - [x] TASK-010: Video optimization pipeline (ffmpeg: 183MB → 13MB, %93 compression, 10 thumbnails)
 - [x] Supabase Storage'a 10 video + 10 thumbnail upload
-- [x] GitHub repo olusturma (omergungor11/pixel-ninja)
+- [x] GitHub repo olusturma (omergungor11/piton-studios)
 - [x] Vercel deploy fix (next-intl config path, packageManager, .nvmrc)
 - [x] Video URL'lerini Supabase CDN'e yonlendirme (media.ts helper)
 
@@ -109,7 +109,7 @@ _(session devam ediyor)_
 ## 2026-05-23 / 2026-05-24 — Session 4
 
 ### Completed
-- [x] Hero başlığı sadece "Pixel Ninja" olarak sadeleştirildi
+- [x] Hero başlığı sadece "Piton Studios" olarak sadeleştirildi
 - [x] Hero'dan video sidebar kaldırıldı, tek kolon layout'a dönüldü
 - [x] Unified nav: Anasayfa ve iç sayfalar aynı kompakt chrome nav'ı kullanıyor
 - [x] Nav'a Gallery linki eklendi (desktop + mobil)

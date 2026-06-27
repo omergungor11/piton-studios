@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${service.title} — Pixel Ninja`,
+    title: `${service.title} — Piton Studios`,
     description: service.desc,
     openGraph: {
-      title: `${service.title} — Pixel Ninja`,
+      title: `${service.title} — Piton Studios`,
       description: service.desc,
       type: "website",
     },

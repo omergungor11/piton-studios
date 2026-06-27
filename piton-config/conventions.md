@@ -1,4 +1,4 @@
-# Code Conventions — Pixel Ninja
+# Code Conventions — Piton Studios
 
 ## TypeScript
 - Strict mode always enabled

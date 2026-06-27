@@ -61,7 +61,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
                 <span className="proj-dot" />
                 <span className="proj-dot" />
                 <span className="proj-dot" />
-                <span className="proj-browser-url">pixelninja.dev/{work.slug}</span>
+                <span className="proj-browser-url">pitonstudios.dev/{work.slug}</span>
               </div>
               <div className="proj-screen">
                 <span className="proj-screen-num">{work.n}</span>

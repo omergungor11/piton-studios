@@ -30,10 +30,10 @@ Next.js 15 App Router projesi olustur, pnpm ile baslangiç kurulumunu yap.
 Proje yonetim dizinlerini olustur (tasks, docs, config, plans).
 
 ### Acceptance Criteria
-- [ ] `ninja-tasks/` with task-index.md, phases/, active/
-- [ ] `ninja-docs/` with MEMORY.md, CHANGELOG.md
-- [ ] `ninja-config/` with workflow.md, conventions.md, tech-stack.md, agent-instructions.md
-- [ ] `ninja-plans/` directory created
+- [ ] `piton-tasks/` with task-index.md, phases/, active/
+- [ ] `piton-docs/` with MEMORY.md, CHANGELOG.md
+- [ ] `piton-config/` with workflow.md, conventions.md, tech-stack.md, agent-instructions.md
+- [ ] `piton-plans/` directory created
 
 ---
 

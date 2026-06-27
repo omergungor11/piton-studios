@@ -2,7 +2,7 @@ Tum degisiklikleri stage, commit ve push et:
 
 1. `git status` — degisen dosyalari gor
 2. `git diff --stat` — degisiklik ozeti
-3. `ninja-tasks/task-index.md` oku — task durumu kontrol et
+3. `piton-tasks/task-index.md` oku — task durumu kontrol et
 4. Bitmis IN_PROGRESS task varsa → COMPLETED yap, dashboard guncelle, CHANGELOG'a ekle
 5. .env dosyalarinin stage'lenmediginden emin ol
 6. Dosyalari stage et (.env, credentials haric)

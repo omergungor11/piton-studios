@@ -1,5 +1,5 @@
 /**
- * Fix: "§ 01 · Not / Neden Pixel Ninja?" manifesto section videosu
+ * Fix: "§ 01 · Not / Neden Piton Studios?" manifesto section videosu
  * Supabase videos bucket'inda note.mp4 dosyasini kontrol eder,
  * yoksa veya yanlis isimdeyse local optimized versiyonu yukler.
  *

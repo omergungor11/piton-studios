@@ -1,8 +1,8 @@
-# Pixel Ninja
+# Piton Studios
 
 ## Proje
 
-Pixel Ninja firmasinin video portfolyo websitesi. Video tabanli sunumlari sergileyen, hizli yuklenme ve akici video deneyimi sunan modern bir portfolyo sitesi.
+Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari sergileyen, hizli yuklenme ve akici video deneyimi sunan modern bir portfolyo sitesi.
 
 - **GitHub**: [repo URL]
 - **Deploy**: Vercel
@@ -29,7 +29,7 @@ Pixel Ninja firmasinin video portfolyo websitesi. Video tabanli sunumlari sergil
 - **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
 - **Bekleyen**: Proje tarihleri duzeltilecek, mockup gorselleri eklenecek
 
-> Her yeni session'da `ninja-tasks/task-index.md` oku veya `/cold-start` calistir.
+> Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
 ---
 
@@ -73,7 +73,7 @@ pnpm typecheck              # TypeScript check
 - **Video**: Lazy loading, intersection observer, Supabase Storage CDN
 - **Commit**: `feat(TASK-XXX): aciklama` + `Co-Authored-By: Claude <noreply@anthropic.com>`
 
-Detaylar → `ninja-config/conventions.md`
+Detaylar → `piton-config/conventions.md`
 
 ## Parallel Agent Orchestration
 
@@ -83,7 +83,7 @@ Birden fazla sub-agent paralel calistirilirken:
 - Paylasilan dosyalarda retry pattern uygulanir
 - Bagimli task'lar sirali, bagimsiz olanlar paralel calistirilir
 
-Detaylar → `ninja-config/agent-instructions.md`
+Detaylar → `piton-config/agent-instructions.md`
 
 ---
 
@@ -91,17 +91,17 @@ Detaylar → `ninja-config/agent-instructions.md`
 
 | Dizin | Icerik |
 |-------|--------|
-| `ninja-tasks/` | Task takip — dashboard + tum task'lar |
-| `ninja-tasks/task-index.md` | Master task listesi |
-| `ninja-tasks/phases/` | Phase bazli detayli task aciklamalari |
-| `ninja-tasks/active/session-notes.md` | Session notlari |
-| `ninja-config/workflow.md` | Task workflow kurallari |
-| `ninja-config/conventions.md` | Kod standartlari |
-| `ninja-config/tech-stack.md` | Teknolojiler + versiyonlar |
-| `ninja-config/agent-instructions.md` | Sub-agent sorumluluklari |
-| `ninja-docs/MEMORY.md` | Kalici hafiza |
-| `ninja-docs/CHANGELOG.md` | Degisiklik kaydi |
-| `ninja-plans/` | Uygulama planlari |
+| `piton-tasks/` | Task takip — dashboard + tum task'lar |
+| `piton-tasks/task-index.md` | Master task listesi |
+| `piton-tasks/phases/` | Phase bazli detayli task aciklamalari |
+| `piton-tasks/active/session-notes.md` | Session notlari |
+| `piton-config/workflow.md` | Task workflow kurallari |
+| `piton-config/conventions.md` | Kod standartlari |
+| `piton-config/tech-stack.md` | Teknolojiler + versiyonlar |
+| `piton-config/agent-instructions.md` | Sub-agent sorumluluklari |
+| `piton-docs/MEMORY.md` | Kalici hafiza |
+| `piton-docs/CHANGELOG.md` | Degisiklik kaydi |
+| `piton-plans/` | Uygulama planlari |
 
 ---
 
@@ -115,6 +115,6 @@ Detaylar → `ninja-config/agent-instructions.md`
 
 ## Notlar
 
-- Hafiza dosyasi `ninja-docs/MEMORY.md`'de — her session'da oku, gerektiginde guncelle
+- Hafiza dosyasi `piton-docs/MEMORY.md`'de — her session'da oku, gerektiginde guncelle
 - Videolar `videos/` klasorunde (local dev), production'da Supabase Storage
 - Vercel deploy icin `next.config.ts` video optimizasyonlari kritik
