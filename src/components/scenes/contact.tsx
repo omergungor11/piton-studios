@@ -63,9 +63,9 @@ export default function ContactScene() {
           </svg>
         </a>
         <a href="mailto:hi@pitonstudios.com" className="contact-social-btn mail" data-cursor="hover" data-cursor-label="Mail" aria-label="Mail">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m22 7-10 6L2 7" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+            <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
           </svg>
         </a>
       </div>
