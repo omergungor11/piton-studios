@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
-import { imageUrl } from '@/lib/media';
+import MatrixRain from '@/components/matrix-rain';
 
 export default function AboutScene() {
   const t = useTranslations('about');
@@ -48,9 +48,13 @@ export default function AboutScene() {
             </blockquote>
           </Reveal>
         </div>
-        <div className="about-media" data-cursor="hover">
-          <span className="about-media-tag">{t('mediaTag')}</span>
-          <img src={imageUrl('about.jpg')} alt="Piton Studios" />
+        <div className="about-media code-panel" aria-hidden="true">
+          <span className="about-media-tag">[ CODE · SYSTEM ]</span>
+          <MatrixRain />
+          <div className="code-core">
+            <span>PTN://STUDIO</span>
+            <strong>creative_system.online</strong>
+          </div>
           <div className="about-media-fade" />
           <div className="about-media-caption">
             <span>{t('location')}</span>
