@@ -1948,7 +1948,7 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   display: flex; gap: 14px; align-items: center;
 }
 .contact-glass .eyebrow::before { content: ""; width: 60px; height: 1px; background: currentColor; }
-.contact-glass a.mail {
+.contact-glass a.mail:not(.contact-social-btn) {
   display: block; color: var(--ink);
   font-family: var(--mono); font-weight: 400;
   font-size: clamp(36px, 7vw, 100px);
@@ -3766,7 +3766,7 @@ html[data-theme="light"] .mobile-menu-item:active {
 
   /* Contact */
   .contact-glass { padding: 28px 16px; border-radius: 20px; overflow: hidden; }
-  .contact-glass a.mail { font-size: clamp(24px, 8vw, 44px); word-break: break-all; letter-spacing: -0.03em; }
+  .contact-glass a.mail:not(.contact-social-btn) { font-size: clamp(24px, 8vw, 44px); word-break: break-all; letter-spacing: -0.03em; }
   .contact-actions { gap: 10px; }
   .contact-action-btn { padding: 12px 18px; font-size: 11px; flex: 1 1 auto; justify-content: center; }
   .contact-social-btn { width: 42px; height: 42px; flex: 0 0 auto; }
