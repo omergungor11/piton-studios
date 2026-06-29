@@ -69,12 +69,6 @@ export default function PageShell({ children }: PageShellProps) {
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
-          <Link href="/gallery" className={`item ${isActive('/gallery') ? 'active' : ''}`} data-cursor="hover">
-            <span className="row">
-              <span>{t('gallery')}</span>
-              <span className="dup">{t('gallery')} ↗</span>
-            </span>
-          </Link>
           <Link href="/#contact" className="item" data-cursor="hover">
             <span className="row">
               <span>{t('contact')}</span>
@@ -112,7 +106,6 @@ export default function PageShell({ children }: PageShellProps) {
             {[
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
-              { href: '/gallery', label: t('gallery') },
             ].map((item, i) => (
               <Link
                 key={item.href}
@@ -153,7 +146,6 @@ export default function PageShell({ children }: PageShellProps) {
           <Link href="/" className="page-footer-link" data-cursor="hover">{t('home')}</Link>
           <Link href="/projects" className="page-footer-link" data-cursor="hover">{t('projects')}</Link>
           <Link href="/services" className="page-footer-link" data-cursor="hover">{t('services')}</Link>
-          <Link href="/gallery" className="page-footer-link" data-cursor="hover">{t('gallery')}</Link>
           <Link href="/#contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
         </nav>
       </footer>

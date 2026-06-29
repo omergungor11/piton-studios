@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { videoUrl } from '@/lib/media';
+import { imageUrl } from '@/lib/media';
 
 export default function CaseScene() {
   const t = useTranslations('caseStudy');
@@ -11,7 +11,7 @@ export default function CaseScene() {
     <div className="case-glass glass">
       <div className="case-media">
         <span className="tag-img">{t('mediaTag')}</span>
-        <video className="case-img" src={videoUrl('red-knight.mp4')} autoPlay muted loop playsInline preload="auto" />
+        <img className="case-img" src={imageUrl('red-knight.jpg')} alt="Red Knight Case Study" />
         <span className="scale">{t('scale')}</span>
       </div>
       <div className="case-text">

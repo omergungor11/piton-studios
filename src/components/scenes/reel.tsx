@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { videoUrl } from '@/lib/media';
+import { imageUrl } from '@/lib/media';
 
 export default function ReelScene() {
   const t = useTranslations('reel');
@@ -24,14 +24,14 @@ export default function ReelScene() {
           <div><div className="k">{t('labelProjectCount')}</div><div className="v">{t('valueProjectCount')}</div></div>
           <div><div className="k">{t('labelPreparedBy')}</div><div className="v">{t('valuePreparedBy')}</div></div>
         </div>
-        <Link href="/projects" className="arrow" data-cursor="hover" data-cursor-label="Watch">
+        <Link href="/projects" className="arrow" data-cursor="hover" data-cursor-label="View">
           <span>{t('cta')}</span>
           <span>↗</span>
         </Link>
       </div>
-      <div className="case-media reel-media" data-cursor="play" data-cursor-label="Play ↗">
+      <div className="case-media reel-media" data-cursor="hover" data-cursor-label="View ↗">
         <span className="tag-img">{t('mediaTag')}</span>
-        <video className="case-img" src={videoUrl('reel-b.mp4')} autoPlay muted loop playsInline preload="auto" />
+        <img className="case-img" src={imageUrl('reel-b.jpg')} alt="Piton Studios Showreel" />
         <span className="scale">{t('scale')}</span>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
-import { videoUrl } from '@/lib/media';
+import { imageUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
 
 const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
 
       {/* Showreel */}
       <section className="pp-reel">
-        <video className="pp-reel-bg" src={videoUrl('hero.mp4')} autoPlay muted loop playsInline preload="auto" />
+        <img className="pp-reel-bg" src={imageUrl('hero.jpg')} alt="" />
         <div className="pp-reel-overlay" />
         <div className="pp-reel-content glass">
           <div className="pp-reel-info">
@@ -56,8 +56,8 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
-          <div className="pp-reel-video" data-cursor="play" data-cursor-label="Play ↗">
-            <video src={videoUrl('reel-b.mp4')} autoPlay muted loop playsInline preload="auto" />
+          <div className="pp-reel-video" data-cursor="hover" data-cursor-label="View ↗">
+            <img src={imageUrl('reel-b.jpg')} alt="Showreel" />
           </div>
         </div>
       </section>
