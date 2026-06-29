@@ -7,7 +7,7 @@ export interface Work {
   year: string;
   role: string;
   tags: string[];
-  video: string;
+  image: string;
   summary: string;
   body: string[];
   scope: string;
@@ -38,7 +38,7 @@ export interface Story {
   year: string;
   role: string;
   tags: string[];
-  video: string;
+  image: string;
   body: string[];
   client?: string;
 }
@@ -94,7 +94,7 @@ export const WORKS: Work[] = [
     year: "2024",
     role: "Design / Development",
     tags: ["WordPress", "SEO", "Multi-language", "CMS"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Construction company corporate site with product catalog.",
     body: [
       "Velis LTD için 25 yılı aşkın sektör deneyimini yansıtan kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerine ürün kataloğu, çok dilli yapı ve SEO optimizasyonu dahil.",
@@ -111,7 +111,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Multi-language", "SEO", "Responsive"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Multi-language elevator company website with SEO optimization.",
     body: [
       "BT Elevator için Eskişehir merkezli asansör firmasının kurumsal web sitesini tasarladık ve geliştirdik. Çok dilli yapı, SEO optimizasyonu ve modern tasarım anlayışıyla sektörde fark yaratan bir dijital varlık oluşturduk.",
@@ -128,7 +128,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Full-stack / Design",
     tags: ["Next.js", "Platform", "Classifieds", "SEO"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Free classifieds platform for North Cyprus with multiple categories.",
     body: [
       "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
@@ -145,7 +145,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Real estate and investment company website in North Cyprus.",
     body: [
       "Gazimağusa merkezli Nexos Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
@@ -162,7 +162,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Corporate", "Insurance", "Responsive", "SEO"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Insurance company corporate website with service catalog.",
     body: [
       "Alp Sigorta için sigorta hizmetlerini sergileyen, güven veren ve profesyonel bir kurumsal web sitesi tasarladık. Hizmet kataloğu, teklif formu ve müşteri bilgilendirme sayfaları ile kapsamlı bir dijital platform oluşturduk.",
@@ -179,7 +179,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["WordPress", "Real Estate", "Corporate", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Real estate investment company website in North Cyprus.",
     body: [
       "Kuzey Kıbrıs Esentepe merkezli Pampas Investment için gayrimenkul yatırım ve satış odaklı kurumsal bir web sitesi geliştirdik. Proje portföyü, arazi detayları ve yatırımcı bilgilendirme sayfaları ile güçlü bir dijital varlık oluşturduk.",
@@ -196,7 +196,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Real estate and automotive investment company website.",
     body: [
       "Gazimağusa merkezli Nexos Investment için gayrimenkul yatırım, araç satış ve danışmanlık hizmetlerini kapsayan kurumsal bir web sitesi geliştirdik. Çoklu iş kollarını tek çatı altında sunan profesyonel bir platform oluşturduk.",
@@ -213,7 +213,7 @@ export const WORKS: Work[] = [
     year: "2022",
     role: "Design / Development",
     tags: ["E-commerce", "Payment Integration", "WordPress", "WooCommerce"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "E-commerce packaging supplies store with payment integration.",
     body: [
       "Bilecik merkezli Ambalaj Cini için online ambalaj malzemeleri satış platformu geliştirdik. Ödeme entegrasyonu, ürün yönetimi ve stok takibi dahil kapsamlı bir e-ticaret altyapısı kurduk.",
@@ -230,7 +230,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["WordPress", "Construction", "Corporate", "Portfolio"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Construction company website with project portfolio.",
     body: [
       "EKH Yapı için inşaat ve müteahhitlik hizmetlerini sergileyen kurumsal bir web sitesi tasarladık. Tamamlanan ve devam eden projelerin portföyü, hizmet detayları ve referanslar ile sektörde güçlü bir dijital kimlik oluşturduk.",
@@ -247,7 +247,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development / SEO",
     tags: ["WordPress", "SEO", "Directory", "Entertainment"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Night club directory and catalog platform for North Cyprus.",
     body: [
       "KKTC'deki gece kulüplerini, eğlence mekanlarını ve katalog bilgilerini listeleyen kapsamlı bir rehber platformu geliştirdik. WordPress altyapısı üzerinde mekan profilleri, fiyat bilgileri ve kullanıcı yorumları dahil.",
@@ -264,7 +264,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development / SEO",
     tags: ["Vercel", "Next.js", "SEO", "Entertainment", "KKTC"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "Comprehensive nightlife and entertainment guide for North Cyprus.",
     body: [
       "KKTC'deki gece kulüpleri, barlar ve eğlence mekanlarını kapsayan modern bir dijital rehber platformu geliştirdik. Vercel üzerinde host edilen, Hostinger domain'li Next.js uygulaması ile hızlı ve SEO dostu bir yapı kurduk.",
@@ -281,7 +281,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Vercel", "Directory", "Entertainment", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Dual-site entertainment platform for North Cyprus nightlife.",
     body: [
       "KKTC gece hayatı sektörü için iki ayrı web sitesi içeren kapsamlı bir paket geliştirdik. gecekibris.com ve kktcnightsclub.com olmak üzere birbirini destekleyen iki platform ile geniş bir kitleye ulaşmayı hedefledik.",
@@ -298,7 +298,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Web App", "Streaming", "Entertainment", "Responsive"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Online radio streaming platform with live broadcast.",
     body: [
       "Radyo Juke için canlı yayın akışı, program rehberi ve dinleyici etkileşimi sunan modern bir online radyo platformu geliştirdik. Kullanıcı dostu arayüz ve kesintisiz yayın deneyimi ile fark yarattık.",
@@ -315,7 +315,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Portfolio", "Personal Brand", "Responsive", "SEO"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Personal brand and portfolio website.",
     body: [
       "Özge Özler için kişisel markayı ön plana çıkaran, profesyonel ve şık bir portfolyo web sitesi tasarladık. Minimalist tasarım anlayışı ile içeriklerin öne çıkmasını sağladık.",
@@ -332,7 +332,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Trading", "Multi-language", "SEO"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Trading and import-export company corporate website.",
     body: [
       "RNV Trading için uluslararası ticaret ve ithalat-ihracat faaliyetlerini sergileyen kurumsal bir web sitesi geliştirdik. Profesyonel imaj, ürün kataloğu ve iş ortaklığı bilgileri ile güçlü bir dijital kimlik oluşturduk.",
@@ -349,7 +349,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "Real estate investment company website in North Cyprus.",
     body: [
       "Pinnacle Yatırım için Kuzey Kıbrıs gayrimenkul yatırım sektörüne yönelik profesyonel bir kurumsal web sitesi geliştirdik. Yatırım portföyü, proje detayları ve danışmanlık hizmetlerini sergileyen kapsamlı bir platform oluşturduk.",
@@ -366,7 +366,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Transportation", "Booking", "Responsive", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Airport transfer and VIP transportation service website.",
     body: [
       "Jet Transfer Cyprus için havalimanı transfer ve VIP ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon sistemi, rota bilgileri ve fiyat hesaplama araçları ile kullanıcı deneyimini ön plana çıkardık.",
@@ -383,7 +383,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Entertainment", "Nightlife", "SEO", "KKTC"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Night club website with event calendar and gallery.",
     body: [
       "Prenses Night Club için etkinlik takvimi, fotoğraf galerisi ve mekan bilgilerini sergileyen etkileyici bir web sitesi tasarladık. Gece hayatı atmosferini yansıtan koyu temalı, görsel odaklı bir tasarım uyguladık.",
@@ -400,7 +400,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Entertainment", "Nightlife", "SEO", "KKTC"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Night club website with VIP reservation and event listings.",
     body: [
       "Miracle Night Club için VIP rezervasyon sistemi, etkinlik listesi ve mekan tanıtımı sunan modern bir web sitesi geliştirdik. Premium atmosferi dijitale taşıyan lüks bir tasarım anlayışı uyguladık.",
@@ -417,7 +417,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["E-commerce", "Food", "Responsive", "SEO"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Fresh food and grocery delivery e-commerce platform.",
     body: [
       "Boon Fresh için taze gıda ve market ürünleri teslimat platformu geliştirdik. Ürün kataloğu, sipariş yönetimi ve teslimat takibi ile kapsamlı bir e-ticaret altyapısı kurduk.",
@@ -434,7 +434,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Finance", "Exchange", "Corporate", "KKTC"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "Currency exchange company website with live rates.",
     body: [
       "Halas Exchange için döviz alım-satım hizmetlerini sunan, güvenilir ve profesyonel bir web sitesi geliştirdik. Canlı kur bilgileri, şube lokasyonları ve kurumsal bilgiler ile kapsamlı bir platform oluşturduk.",
@@ -451,7 +451,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Real Estate", "Corporate", "SEO", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Real estate agency website with property listings.",
     body: [
       "Arslan Estates için emlak ilan yönetimi, mülk detay sayfaları ve müşteri iletişimi sunan profesyonel bir gayrimenkul web sitesi geliştirdik. Modern tasarım ve gelişmiş filtreleme sistemi ile alıcı deneyimini iyileştirdik.",
@@ -468,7 +468,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Finance", "Crypto", "Exchange", "KKTC"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Cryptocurrency exchange and trading center website.",
     body: [
       "Arslan Coin Center için kripto para alım-satım ve takas hizmetlerini sunan modern bir web sitesi geliştirdik. Güvenilirlik ve şeffaflık vurgulayan profesyonel bir tasarım uyguladık.",
@@ -485,7 +485,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Holding", "Multi-language", "KKTC"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Multi-company holding group corporate website.",
     body: [
       "Arslan Group için emlak, finans ve ticaret alanlarındaki şirketlerini tek çatı altında sunan kurumsal bir holding web sitesi geliştirdik. Grup yapısını, iş kollarını ve kurumsal vizyonu profesyonel şekilde sergileyen kapsamlı bir platform oluşturduk.",
@@ -502,7 +502,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Real Estate", "International", "Platform", "SEO"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "International Mediterranean real estate platform.",
     body: [
       "Homes in Mediterranean için Akdeniz bölgesindeki gayrimenkul fırsatlarını uluslararası yatırımcılara sunan kapsamlı bir emlak platformu geliştirdik. Mülk detayları, bölge rehberleri ve yatırım bilgileri ile zengin bir içerik yapısı oluşturduk.",
@@ -519,7 +519,7 @@ export const WORKS: Work[] = [
     year: "2024",
     role: "Design / Development",
     tags: ["Agency", "Social Media", "Portfolio", "Creative"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "Social media management agency portfolio website.",
     body: [
       "Sosyal Piton için sosyal medya yönetimi ve dijital pazarlama hizmetlerini sergileyen yaratıcı bir ajans web sitesi geliştirdik. Portfolyo, hizmet detayları ve müşteri referansları ile güçlü bir marka imajı oluşturduk.",
@@ -536,7 +536,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development / SEO",
     tags: ["Transportation", "Booking", "SEO", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Taxi booking and transportation service website in Nicosia.",
     body: [
       "Kıbrıs Lefkoşa Taksi için online taksi çağırma, rota hesaplama ve fiyat bilgisi sunan profesyonel bir web sitesi geliştirdik. WhatsApp ve telefon entegrasyonu ile hızlı iletişim sağladık.",
@@ -553,7 +553,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development / SEO",
     tags: ["Transportation", "Transfer", "Booking", "KKTC"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     summary: "Airport transfer and VIP transportation service website.",
     body: [
       "Aydın Transfer için havalimanı transfer ve şehirlerarası ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon, rota bilgileri ve fiyat hesaplama ile kullanıcı deneyimini ön plana çıkardık.",
@@ -570,7 +570,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development / SEO",
     tags: ["Transportation", "Taxi", "Booking", "KKTC"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     summary: "Taxi service website with online booking and route info.",
     body: [
       "Kardeşler Taxi için online taksi çağırma, fiyat bilgisi ve rota hesaplama sunan modern bir web sitesi geliştirdik. Hızlı iletişim butonları ve WhatsApp entegrasyonu ile anında ulaşım sağladık.",
@@ -587,7 +587,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Hotel", "Hospitality", "Booking", "KKTC"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     summary: "Boutique hotel website with room booking and gallery.",
     body: [
       "Sammys Hotel için oda rezervasyonu, fotoğraf galerisi ve otel bilgilerini sergileyen şık bir web sitesi tasarladık. Misafir deneyimini ön plana çıkaran sıcak ve davetkar bir tasarım anlayışı uyguladık.",
@@ -604,7 +604,7 @@ export const WORKS: Work[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Services", "Corporate", "Multi-language", "KKTC"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     summary: "Multi-service company website in North Cyprus.",
     body: [
       "All Pro Cyprus için çoklu hizmet alanlarını kapsayan profesyonel bir kurumsal web sitesi geliştirdik. Hizmet detayları, referanslar ve iletişim bilgileri ile güçlü bir dijital varlık oluşturduk.",
@@ -621,7 +621,7 @@ export const WORKS: Work[] = [
     year: "2026",
     role: "Design / Development / SEO",
     tags: ["Entertainment", "Nightlife", "Directory", "KKTC"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     summary: "Night club and entertainment venue directory website.",
     body: [
       "Kıbrıs Nights Club için KKTC'deki gece kulüpleri ve eğlence mekanlarını tanıtan kapsamlı bir rehber web sitesi geliştirdik. Mekan profilleri, etkinlik bilgileri ve kullanıcı yorumları ile zengin bir içerik yapısı oluşturduk.",
@@ -1243,7 +1243,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Full-stack / Design",
     tags: ["Web App", "Transportation", "Mapping"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     body: [
       "Toplu taşıma için minibüs güzergah takip sistemi olan Dolmuş web uygulamasını geliştirdik. Kullanıcılar güzergahları kolayca görüntüleyebiliyor ve seyahat planlaması yapabiliyor.",
       "Gerçek zamanlı güzergah bilgisi, kullanıcı dostu arayüz ve mobil uyumlu tasarım ile şehir içi ulaşımı kolaylaştırdık.",
@@ -1258,7 +1258,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Events", "London"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     body: [
       "Londra merkezli Orchid Tent için çadır ve etkinlik kiralama hizmeti sunan kurumsal bir web sitesi tasarladık. Şık tasarım ve kolay navigasyon ile potansiyel müşterilerin hızlıca bilgi edinmesini sağladık.",
       "Etkinlik galerisi, fiyat teklifi formu ve responsive tasarım ile Londra'daki etkinlik sektöründe güçlü bir dijital varlık oluşturduk.",
@@ -1273,7 +1273,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["WordPress", "Event", "Conference"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     body: [
       "Gabfest 2025 konferansı için WordPress altyapısında modern ve bilgilendirici bir etkinlik web sitesi tasarladık. Program, konuşmacılar ve kayıt bilgilerini düzenli bir şekilde sunduk.",
       "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık.",
@@ -1288,7 +1288,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "SEO / Development",
     tags: ["WordPress", "SEO", "Directory", "Entertainment"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     body: [
       "KKTC'deki gece kulüplerini ve eğlence mekanlarını listeleyen SEO odaklı bir rehber sitesi geliştirdik. WordPress altyapısı üzerinde mekan profilleri, etkinlik takvimleri ve kullanıcı yorumları dahil.",
       "SEO optimizasyonu ile arama motorlarında gece hayatı aramaları için üst sıralarda yer almayı başardık. Kullanıcı deneyimi ve hızlı erişim önceliğimiz oldu.",
@@ -1303,7 +1303,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Corporate", "Transfer", "Booking"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     body: [
       "Aydın Transfer için havalimanı ve şehir içi transfer hizmeti sunan kurumsal bir web sitesi tasarladık. Kolay rezervasyon akışı, fiyat hesaplama ve iletişim formları ile müşteri deneyimini optimize ettik.",
       "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık.",
@@ -1318,7 +1318,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Night Club", "Entertainment", "Web Design"],
-    video: "story-01.mp4",
+    image: "story-01.jpg",
     body: [
       "Simav, Kütahya merkezli Miracle Night Club için modern ve etkileyici bir dijital kimlik ve web sitesi oluşturduk. Mekan tanıtımı, etkinlik takvimi ve rezervasyon sistemi ile gece hayatı deneyimini dijitale taşıdık.",
       "Görsel ağırlıklı tasarım, sosyal medya entegrasyonu ve mobil uyumlu yapı ile genç kitleye ulaşmayı hedefledik.",
@@ -1333,7 +1333,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Night Club", "Entertainment", "Social Media"],
-    video: "story-02.mp4",
+    image: "story-02.jpg",
     body: [
       "Fareon Night Club için etkileyici bir web sitesi ve sosyal medya stratejisi geliştirdik. Mekan atmosferini dijitale yansıtan görsel tasarım, etkinlik duyuruları ve online rezervasyon sistemi dahil.",
       "Hedef kitleye uygun içerik stratejisi, video prodüksiyon ve dijital pazarlama ile mekanın bilinirliğini artırdık.",
@@ -1348,7 +1348,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Night Club", "Multi-site", "Branding"],
-    video: "story-03.mp4",
+    image: "story-03.jpg",
     body: [
       "İbo Şeytan markası için iki ayrı web sitesi içeren kapsamlı bir dijital paket geliştirdik. Her site farklı hedef kitleye hitap eden, marka bütünlüğünü koruyan tasarımlar ile öne çıktı.",
       "Ortak yönetim paneli, etkinlik takvimi senkronizasyonu ve çapraz tanıtım stratejisi ile iki sitenin sinerjisini maksimize ettik.",
@@ -1363,7 +1363,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Real Estate", "Platform", "KKTC"],
-    video: "story-04.mp4",
+    image: "story-04.jpg",
     body: [
       "Cyprokey için Kuzey Kıbrıs gayrimenkul piyasasına yönelik modern bir emlak platformu tasarladık. İlan yönetimi, gelişmiş filtreleme ve harita entegrasyonu ile alıcı ve satıcıları buluşturduk.",
       "SEO optimizasyonu ve kullanıcı dostu arayüz ile emlak aramaları için güçlü bir dijital varlık oluşturduk.",
@@ -1378,7 +1378,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "SEO / Development",
     tags: ["Directory", "Entertainment", "SEO", "KKTC"],
-    video: "story-05.mp4",
+    image: "story-05.jpg",
     body: [
       "KKTC'deki gece kulüpleri, barlar ve eğlence mekanlarını kapsayan bir dijital rehber platformu geliştirdik. Mekan profilleri, etkinlik takvimleri, kullanıcı yorumları ve konum bazlı arama özellikleri dahil.",
       "SEO odaklı içerik stratejisi ile Kıbrıs gece hayatı aramalarında üst sıralarda yer almayı başardık. Sosyal medya entegrasyonu ve reklam yönetimi ile mekan sahiplerine de değer sunduk.",
@@ -1393,7 +1393,7 @@ export const STORIES: Story[] = [
     year: "2026",
     role: "Design / Development",
     tags: ["Portfolio", "Personal", "Web Design"],
-    video: "reel-b.mp4",
+    image: "reel-b.jpg",
     body: [
       "Salih Defterali için kişisel portfolyo ve çalışma alanı web sitesi tasarladık. Projeleri, yetenekleri ve iş deneyimini sergileyen minimal ve etkileyici bir dijital varlık oluşturduk.",
       "Temiz tipografi, akıcı animasyonlar ve responsive tasarım ile profesyonel bir ilk izlenim oluşturmayı hedefledik.",

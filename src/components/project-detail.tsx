@@ -1,9 +1,8 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { videoUrl } from '@/lib/media';
+import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 
@@ -12,7 +11,6 @@ interface Props {
 }
 
 export default function ProjectDetail({ project }: Props) {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const td = useTranslations('projectDetail');
   const tw = useTranslations('works');
   const ts = useTranslations('stories');
@@ -25,7 +23,7 @@ export default function ProjectDetail({ project }: Props) {
   const year = project.year;
   const role = project.role;
   const tags = project.tags;
-  const video = videoUrl(project.type === 'work' ? project.video : project.video);
+  const image = imageUrl(project.image);
 
   const client = project.type === 'work' ? project.client : project.client;
   const kind = project.type === 'work' ? project.kind : undefined;
@@ -43,27 +41,12 @@ export default function ProjectDetail({ project }: Props) {
     ? (translationNs.raw(`${slug}.body`) as string[])
     : (project.type === 'work' ? project.body : project.body);
 
-  // Ensure video plays
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.play().catch(() => {});
-  }, [slug]);
-
   return (
     <PageShell>
-      {/* Hero video */}
-      <section className="pd-hero" data-cursor="play" data-cursor-label="Play">
+      {/* Hero image */}
+      <section className="pd-hero">
         <div className="pd-hero-video">
-          <video
-            ref={videoRef}
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-          />
+          <img src={image} alt={title} />
           <div className="pd-hero-fade" />
         </div>
         <div className="pd-hero-overlay">
@@ -111,11 +94,11 @@ export default function ProjectDetail({ project }: Props) {
           {title} — <span className="em">{summary}</span>
         </h2>
 
-        {/* Inline video showcase */}
-        <div className="pd-inline-video glass" data-cursor="play" data-cursor-label="Play">
-          <video src={video} autoPlay muted loop playsInline preload="auto" />
+        {/* Inline image showcase */}
+        <div className="pd-inline-video glass">
+          <img src={image} alt={title} />
           <div className="pd-inline-video-overlay">
-            <span className="pd-inline-video-tag">[ {kind || tags[0] || 'VIDEO'} · {year} ]</span>
+            <span className="pd-inline-video-tag">[ {kind || tags[0] || 'PROJECT'} · {year} ]</span>
           </div>
         </div>
 
@@ -155,13 +138,7 @@ export default function ProjectDetail({ project }: Props) {
               data-cursor-label="Prev"
             >
               <div className="pd-nav-card-media">
-                <video
-                  src={videoUrl(prev.type === 'work' ? prev.video : prev.video)}
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
+                <img src={imageUrl(prev.image)} alt={prev.title} />
               </div>
               <div className="pd-nav-card-info">
                 <span className="pd-nav-dir">{td('prev')}</span>
@@ -187,13 +164,7 @@ export default function ProjectDetail({ project }: Props) {
                 </span>
               </div>
               <div className="pd-nav-card-media">
-                <video
-                  src={videoUrl(next.type === 'work' ? next.video : next.video)}
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
+                <img src={imageUrl(next.image)} alt={next.title} />
               </div>
             </Link>
           )}

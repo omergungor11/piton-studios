@@ -62,12 +62,6 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
-          <Link href="/gallery" className="item" data-cursor="hover">
-            <span className="row">
-              <span>{t('gallery')}</span>
-              <span className="dup">{t('gallery')} ↗</span>
-            </span>
-          </Link>
           {(['about'] as const).map((id) => (
             <a
               key={id}
@@ -127,10 +121,6 @@ export function TopChrome({ clock: _clock, activeIdx, onNav }: TopChromeProps) {
             </Link>
             <Link href="/services" className="mm-nav-row" style={{ '--delay': '40ms' } as React.CSSProperties} onClick={() => setMenuOpen(false)}>
               <span className="mm-nav-label">{t('services')}</span>
-              <span className="mm-nav-arrow">→</span>
-            </Link>
-            <Link href="/gallery" className="mm-nav-row" style={{ '--delay': '80ms' } as React.CSSProperties} onClick={() => setMenuOpen(false)}>
-              <span className="mm-nav-label">{t('gallery')}</span>
               <span className="mm-nav-arrow">→</span>
             </Link>
             {[
