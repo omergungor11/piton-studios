@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
-import MatrixRain from '@/components/matrix-rain';
+import TerminalCode from '@/components/terminal-code';
 
 const ICONS = [
   /* 0: Hızlı Teslimat */ <svg key="0" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="16" cy="16" r="10" /><path d="M16 6v10l6 4" /></svg>,
@@ -67,13 +67,7 @@ export default function ManifestoScene() {
       </div>
       <Reveal variant="scaleIn" delay={0.2}>
       <div className="note-media code-panel" aria-hidden="true">
-        <span className="note-media-tag">[ CODE · SYSTEM ]</span>
-        <MatrixRain bgColor="#120800" glyphColor="#C86420" headColor="#FFD4A0" />
-        <div className="code-core">
-          <span>PTN://STUDIO</span>
-          <strong>creative_system.online</strong>
-        </div>
-        <div className="note-media-fade" />
+        <TerminalCode />
         <div className="note-media-caption">
           <span>Live</span><span>— Code · AI</span>
         </div>

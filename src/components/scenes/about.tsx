@@ -8,8 +8,8 @@ export default function AboutScene() {
   const t = useTranslations('about');
 
   const clients = [
-    'Velis LTD', 'BT Elevator', 'Gel Gez Gor', 'Nexos Investment',
-    'Ambalaj Cini', 'Avie Global', 'Orchid Tent', 'Gabfest 2025',
+    'Velis LTD', 'BT Elevator', 'Gel Gez Gör', 'Nexos Investment',
+    'Ambalaj Cini', 'ISUZU Bursa', 'Kardeşler Taxi', 'Aydin Transfer',
   ];
 
   return (
