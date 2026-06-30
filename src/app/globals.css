@@ -3814,6 +3814,106 @@ html[data-theme="light"] .mobile-menu-item:active {
   .mobile-menu-label { font-size: 16px; }
 }
 
+/* ========== TERMINAL CODE COMPONENT ========== */
+.term-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #080C14;
+  border-radius: inherit;
+  overflow: hidden;
+  font-family: var(--mono);
+  z-index: 1;
+}
+.term-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.term-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.term-dot-r { background: #FF5F57; }
+.term-dot-y { background: #FFBD2E; }
+.term-dot-g { background: #28C940; }
+.term-title {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.36);
+}
+.term-body {
+  flex: 1;
+  overflow: hidden;
+  padding: 14px 4px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  scrollbar-width: none;
+}
+.term-body::-webkit-scrollbar { display: none; }
+.term-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  min-height: 1.65em;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.term-ln {
+  width: 26px;
+  flex-shrink: 0;
+  font-size: 9.5px;
+  color: rgba(255,255,255,0.18);
+  text-align: right;
+  margin-right: 14px;
+  user-select: none;
+  padding-top: 0.05em;
+}
+.term-code { flex: 1; white-space: pre; }
+.term-status {
+  display: flex;
+  gap: 16px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.28);
+  flex-shrink: 0;
+}
+/* Cursor */
+.tc-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: rgba(255,255,255,0.75);
+  vertical-align: text-bottom;
+  animation: termBlink 1s step-start infinite;
+}
+@keyframes termBlink {
+  50% { opacity: 0; }
+}
+/* Syntax colors */
+.tc-kw  { color: oklch(0.68 0.16 38); }       /* orange — keywords    */
+.tc-fn  { color: #93C5FD; }                    /* blue   — functions   */
+.tc-st  { color: #86EFAC; }                    /* green  — strings     */
+.tc-cm  { color: rgba(255,255,255,0.30); }     /* gray   — comments    */
+.tc-ok  { color: #4ADE80; font-weight: 500; }  /* green  — success     */
+.tc-ty  { color: #C4B5FD; }                    /* purple — types       */
+.tc-pr  { color: #C084FC; }                    /* purple — properties  */
+.tc-nm  { color: #FCA5A5; }                    /* red    — numbers     */
+.tc-vr, .tc-pa { color: rgba(255,255,255,0.80); }
+.tc-pu  { color: rgba(255,255,255,0.50); }
+
 /* ========== ABOUT PAGE ========== */
 .ap-story {
   display: grid;

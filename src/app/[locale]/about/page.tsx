@@ -8,7 +8,7 @@ import { Reveal, Stagger, StaggerItem } from '@/components/motion';
 
 const CLIENTS = [
   'Velis LTD', 'BT Elevator', 'Gel Gez Gör', 'Nexos Investment',
-  'Ambalaj Cini', 'Avie Global', 'Orchid Tent', 'Gabfest 2025',
+  'Ambalaj Cini', 'ISUZU Bursa', 'Kardeşler Taxi', 'Aydin Transfer',
 ];
 
 const SKILLS = ['Next.js', 'TypeScript', 'React', 'Python', 'Supabase', 'Claude AI', 'Vercel', 'SEO'];
