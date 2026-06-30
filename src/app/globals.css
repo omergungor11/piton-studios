@@ -1767,9 +1767,8 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
   isolation: isolate;
   cursor: auto;
   background:
-    radial-gradient(circle at 50% 24%, rgba(54, 232, 143, 0.16), transparent 38%),
-    linear-gradient(180deg, #030b08 0%, #02100a 52%, #01060300 100%),
-    #020604;
+    linear-gradient(180deg, #060810 0%, #04060E 52%, #02040800 100%),
+    #020406;
 }
 .code-panel::before {
   content: "";
@@ -1781,15 +1780,6 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 100% 24px, 24px 100%;
   mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 86%, transparent 100%);
-}
-.code-panel::after {
-  content: "";
-  position: absolute;
-  inset: -40% 0;
-  z-index: 1;
-  background: linear-gradient(180deg, transparent 0%, rgba(60, 238, 190, 0.2) 48%, transparent 58%);
-  animation: codeScan 5.5s linear infinite;
-  pointer-events: none;
 }
 /* Matrix digital-rain canvas (fills the panel behind the core popup) */
 .matrix-rain {
@@ -1860,15 +1850,6 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
   font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
   color: rgba(255,255,255,0.85);
   z-index: 2;
-}
-@keyframes codeScan {
-  from { transform: translateY(-40%); }
-  to { transform: translateY(40%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .code-panel::after {
-    animation: none;
-  }
 }
 .about-glass h3 {
   font-family: var(--mono); font-weight: 400;

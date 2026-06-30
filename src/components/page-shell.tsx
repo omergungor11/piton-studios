@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import Cursor from '@/components/cursor';
 import FloatingGlass from '@/components/floating-glass';
@@ -12,10 +12,18 @@ interface PageShellProps {
   children: React.ReactNode;
 }
 
+const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
+  '/projects': { tr: '/projeler', en: '/projects', ru: '/projects' },
+  '/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
+  '/about':    { tr: '/hakkinda',  en: '/about',    ru: '/about'    },
+  '/contact':  { tr: '/iletisim',  en: '/contact',  ru: '/contact'  },
+};
+
 export default function PageShell({ children }: PageShellProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
   const t = useTranslations('common');
 
   useEffect(() => {
@@ -41,7 +49,10 @@ export default function PageShell({ children }: PageShellProps) {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
+  const isActive = (canonical: string) => {
+    const lp = LOCALIZED_PATHS[canonical]?.[locale] ?? canonical;
+    return pathname === lp || pathname.startsWith(lp + '/');
+  };
 
   return (
     <>
@@ -109,11 +120,11 @@ export default function PageShell({ children }: PageShellProps) {
           </div>
 
           <nav className="mm-nav">
-            {[
+            {([
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
               { href: '/about', label: t('about') },
-            ].map((item, i) => (
+            ] as const).map((item, i) => (
               <Link
                 key={item.href}
                 href={item.href}

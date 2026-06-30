@@ -44,7 +44,7 @@ export default function ServicesScene() {
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <Link key={s.n} href={`/services/${s.slug}`} className="svc" data-cursor="hover" data-cursor-label="+">
+            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
               <div className="svc-top">
                 <span className="n">{s.n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>

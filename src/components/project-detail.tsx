@@ -132,7 +132,7 @@ export default function ProjectDetail({ project }: Props) {
         <div className="pd-nav-grid">
           {prev && (
             <Link
-              href={`/projects/${prev.type === 'work' ? prev.slug : prev.slug}`}
+              href={{ pathname: '/projects/[slug]', params: { slug: prev.slug } }}
               className="pd-nav-card glass"
               data-cursor="hover"
               data-cursor-label="Prev"
@@ -151,7 +151,7 @@ export default function ProjectDetail({ project }: Props) {
           )}
           {next && (
             <Link
-              href={`/projects/${next.type === 'work' ? next.slug : next.slug}`}
+              href={{ pathname: '/projects/[slug]', params: { slug: next.slug } }}
               className="pd-nav-card glass next"
               data-cursor="hover"
               data-cursor-label="Next"

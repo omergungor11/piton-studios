@@ -219,7 +219,7 @@ export default function ServiceDetail({ service }: Props) {
             {relatedServices.map((rel) => (
               <Link
                 key={rel.slug}
-                href={`/services/${rel.slug}`}
+                href={{ pathname: '/services/[slug]', params: { slug: rel.slug } }}
                 className="sd-related-card glass"
                 data-cursor="hover"
                 data-cursor-label="↗"
@@ -249,7 +249,7 @@ export default function ServiceDetail({ service }: Props) {
           <h2 className="sd-cta-title">{t('ctaTitle')}</h2>
           <p className="sd-cta-sub">{t('ctaSub')}</p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="sd-cta-btn"
             data-cursor="hover"
             data-cursor-label="↗"
