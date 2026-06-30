@@ -1744,7 +1744,6 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
 /* About — studio video */
 .about-media {
   position: relative;
-  aspect-ratio: 9 / 16;
   border-radius: 18px;
   overflow: hidden;
   background: #0c0c0c;
