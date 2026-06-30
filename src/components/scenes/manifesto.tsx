@@ -68,7 +68,7 @@ export default function ManifestoScene() {
       <Reveal variant="scaleIn" delay={0.2}>
       <div className="note-media code-panel" aria-hidden="true">
         <span className="note-media-tag">[ CODE · SYSTEM ]</span>
-        <MatrixRain />
+        <MatrixRain bgColor="#120800" glyphColor="#C86420" headColor="#FFD4A0" />
         <div className="code-core">
           <span>PTN://STUDIO</span>
           <strong>creative_system.online</strong>

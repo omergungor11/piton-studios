@@ -69,7 +69,13 @@ export default function PageShell({ children }: PageShellProps) {
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
-          <Link href="/#contact" className="item" data-cursor="hover">
+          <Link href="/about" className={`item ${isActive('/about') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('about')}</span>
+              <span className="dup">{t('about')} ↗</span>
+            </span>
+          </Link>
+          <Link href="/contact" className={`item ${isActive('/contact') ? 'active' : ''}`} data-cursor="hover">
             <span className="row">
               <span>{t('contact')}</span>
               <span className="dup">{t('contact')} ↗</span>
@@ -106,6 +112,7 @@ export default function PageShell({ children }: PageShellProps) {
             {[
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
+              { href: '/about', label: t('about') },
             ].map((item, i) => (
               <Link
                 key={item.href}
@@ -121,7 +128,7 @@ export default function PageShell({ children }: PageShellProps) {
           </nav>
 
           <div className="mm-cta">
-            <Link href="/#contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)}>
               <span>{t('contact')}</span>
               <span>↗</span>
             </Link>
@@ -146,7 +153,8 @@ export default function PageShell({ children }: PageShellProps) {
           <Link href="/" className="page-footer-link" data-cursor="hover">{t('home')}</Link>
           <Link href="/projects" className="page-footer-link" data-cursor="hover">{t('projects')}</Link>
           <Link href="/services" className="page-footer-link" data-cursor="hover">{t('services')}</Link>
-          <Link href="/#contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
+          <Link href="/about" className="page-footer-link" data-cursor="hover">{t('about')}</Link>
+          <Link href="/contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
         </nav>
       </footer>
       <FloatingActions />

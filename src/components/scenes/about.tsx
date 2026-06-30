@@ -50,7 +50,7 @@ export default function AboutScene() {
         </div>
         <div className="about-media code-panel" aria-hidden="true">
           <span className="about-media-tag">[ CODE · SYSTEM ]</span>
-          <MatrixRain />
+          <MatrixRain bgColor="#04080F" glyphColor="#2080D0" headColor="#B0D8FF" />
           <div className="code-core">
             <span>PTN://STUDIO</span>
             <strong>creative_system.online</strong>
