@@ -2,8 +2,17 @@
 
 import { useEffect, useRef } from 'react';
 
-// Classic Matrix digital-rain rendered on a canvas that fills its parent.
-export default function MatrixRain() {
+interface MatrixRainProps {
+  bgColor?: string;
+  glyphColor?: string;
+  headColor?: string;
+}
+
+export default function MatrixRain({
+  bgColor = '#04080F',
+  glyphColor = '#2080D0',
+  headColor = '#B0D8FF',
+}: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -37,23 +46,22 @@ export default function MatrixRain() {
       drops = new Array(cols)
         .fill(0)
         .map(() => Math.floor((Math.random() * -height) / fontSize));
-      // paint the base once so the first frames aren't empty
-      ctx.fillStyle = '#03100a';
+      ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, width, height);
     };
     setup();
 
     let raf = 0;
     let last = 0;
-    const STEP = 60; // ms between rain steps — the steppy Matrix cadence
+    const STEP = 60;
 
     const frame = (ts: number) => {
       raf = requestAnimationFrame(frame);
       if (ts - last < STEP) return;
       last = ts;
 
-      // translucent fade leaves the green trails behind each glyph
-      ctx.fillStyle = 'rgba(3, 14, 9, 0.10)';
+      // 8-digit hex: bgColor + '1A' = 10% alpha trail
+      ctx.fillStyle = bgColor + '1A';
       ctx.fillRect(0, 0, width, height);
       ctx.font = `${fontSize}px ui-monospace, "JetBrains Mono", "IBM Plex Mono", monospace`;
       ctx.textBaseline = 'top';
@@ -63,9 +71,8 @@ export default function MatrixRain() {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // bright leading head, with the rest fading to green via the trail
         const head = Math.random() > 0.86;
-        ctx.fillStyle = head ? '#d8ffe9' : '#36e88f';
+        ctx.fillStyle = head ? headColor : glyphColor;
         ctx.fillText(g, x, y);
 
         if (y > height && Math.random() > 0.972) drops[i] = 0;
@@ -74,9 +81,8 @@ export default function MatrixRain() {
     };
 
     if (reduce) {
-      // static-ish: a couple of frames so it reads as code, no motion loop
       ctx.font = `${fontSize}px ui-monospace, monospace`;
-      ctx.fillStyle = 'rgba(54, 232, 143, 0.7)';
+      ctx.fillStyle = glyphColor + 'B3';
       for (let i = 0; i < cols; i++) {
         for (let j = 0; j < height / fontSize; j += 2) {
           ctx.fillText(GLYPHS[(Math.random() * GLYPHS.length) | 0], i * fontSize, j * fontSize);
@@ -93,7 +99,7 @@ export default function MatrixRain() {
       cancelAnimationFrame(raf);
       ro.disconnect();
     };
-  }, []);
+  }, [bgColor, glyphColor, headColor]);
 
   return <canvas ref={canvasRef} className="matrix-rain" aria-hidden="true" />;
 }

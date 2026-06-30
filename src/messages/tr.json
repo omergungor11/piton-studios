@@ -256,7 +256,8 @@
     "projects": "Projeler",
     "services": "Hizmetler",
     "gallery": "Galeri",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "about": "Hakkında"
   },
   "works": {
     "velis-ltd": {
@@ -1511,140 +1512,495 @@
       "title": "Agentic AI",
       "desc": "Otonom AI agentlar — iş süreçlerinizi uçtan uca otomatikleştiren çok adımlı çözümler.",
       "longDesc": "İş süreçlerinizi planlayan, yürüten ve iyileştiren otonom AI agentlar geliştiriyoruz.",
-      "items": ["Otonom Agentlar", "Tool-use & API Orkestrasyonu", "İnsan Onaylı Tasarım"],
+      "items": [
+        "Otonom Agentlar",
+        "Tool-use & API Orkestrasyonu",
+        "İnsan Onaylı Tasarım"
+      ],
       "features": [
-        {"title":"Agent Mimarisi","desc":"Hafıza, araç kullanımı ve planlama yetenekli çok adımlı agentlar."},
-        {"title":"İş Akışı Otomasyonu","desc":"Manuel süreçleri otonom agent pipeline'larıyla değiştirin."},
-        {"title":"Güvenlik Katmanları","desc":"İçerik filtreleme, hız sınırlama ve insan onay kapıları."},
-        {"title":"Araç Entegrasyonu","desc":"Agentları API'ler, veritabanları ve dış servislerle bağlayın."},
-        {"title":"Gözlemlenebilirlik","desc":"Tam iz kaydı, maliyet takibi ve performans panoları."},
-        {"title":"Değerlendirme & Test","desc":"Agent doğruluğunu ölçen otomatik testler."}
+        {
+          "title": "Agent Mimarisi",
+          "desc": "Hafıza, araç kullanımı ve planlama yetenekli çok adımlı agentlar."
+        },
+        {
+          "title": "İş Akışı Otomasyonu",
+          "desc": "Manuel süreçleri otonom agent pipeline'larıyla değiştirin."
+        },
+        {
+          "title": "Güvenlik Katmanları",
+          "desc": "İçerik filtreleme, hız sınırlama ve insan onay kapıları."
+        },
+        {
+          "title": "Araç Entegrasyonu",
+          "desc": "Agentları API'ler, veritabanları ve dış servislerle bağlayın."
+        },
+        {
+          "title": "Gözlemlenebilirlik",
+          "desc": "Tam iz kaydı, maliyet takibi ve performans panoları."
+        },
+        {
+          "title": "Değerlendirme & Test",
+          "desc": "Agent doğruluğunu ölçen otomatik testler."
+        }
       ],
       "process": [
-        {"step":"01","title":"Keşif","desc":"Mevcut iş akışlarını haritalayın."},
-        {"step":"02","title":"Mimari","desc":"Agent topolojisi ve güvenlik katmanlarını tasarlayın."},
-        {"step":"03","title":"Geliştirme","desc":"Gerçek senaryolara karşı iteratif test."},
-        {"step":"04","title":"Deploy","desc":"İzleme ve uyarı ile production'a çıkış."},
-        {"step":"05","title":"Optimizasyon","desc":"Production metrikleri ile sürekli iyileştirme."}
+        {
+          "step": "01",
+          "title": "Keşif",
+          "desc": "Mevcut iş akışlarını haritalayın."
+        },
+        {
+          "step": "02",
+          "title": "Mimari",
+          "desc": "Agent topolojisi ve güvenlik katmanlarını tasarlayın."
+        },
+        {
+          "step": "03",
+          "title": "Geliştirme",
+          "desc": "Gerçek senaryolara karşı iteratif test."
+        },
+        {
+          "step": "04",
+          "title": "Deploy",
+          "desc": "İzleme ve uyarı ile production'a çıkış."
+        },
+        {
+          "step": "05",
+          "title": "Optimizasyon",
+          "desc": "Production metrikleri ile sürekli iyileştirme."
+        }
       ],
-      "stats": [{"value":"10x","label":"Daha Hızlı"},{"value":"%85","label":"Otomasyon"},{"value":"7/24","label":"Aktif"},{"value":"%99.5","label":"Doğruluk"}],
+      "stats": [
+        {
+          "value": "10x",
+          "label": "Daha Hızlı"
+        },
+        {
+          "value": "%85",
+          "label": "Otomasyon"
+        },
+        {
+          "value": "7/24",
+          "label": "Aktif"
+        },
+        {
+          "value": "%99.5",
+          "label": "Doğruluk"
+        }
+      ],
       "faq": [
-        {"q":"AI agentlar hangi görevleri otomatikleştirebilir?","a":"Müşteri desteği, veri işleme, içerik üretimi ve çok adımlı iş süreçleri."},
-        {"q":"Agent güvenilirliğini nasıl sağlıyorsunuz?","a":"Güvenlik katmanları, insan onay kapıları ve kapsamlı loglama."},
-        {"q":"Hangi LLM'leri kullanıyorsunuz?","a":"Claude, GPT-4, Gemini — her kullanım durumuna en uygun modeli seçiyoruz."},
-        {"q":"Uygulama ne kadar sürer?","a":"MVP agentlar genellikle 2-4 haftada teslim edilir."}
+        {
+          "q": "AI agentlar hangi görevleri otomatikleştirebilir?",
+          "a": "Müşteri desteği, veri işleme, içerik üretimi ve çok adımlı iş süreçleri."
+        },
+        {
+          "q": "Agent güvenilirliğini nasıl sağlıyorsunuz?",
+          "a": "Güvenlik katmanları, insan onay kapıları ve kapsamlı loglama."
+        },
+        {
+          "q": "Hangi LLM'leri kullanıyorsunuz?",
+          "a": "Claude, GPT-4, Gemini — her kullanım durumuna en uygun modeli seçiyoruz."
+        },
+        {
+          "q": "Uygulama ne kadar sürer?",
+          "a": "MVP agentlar genellikle 2-4 haftada teslim edilir."
+        }
       ]
     },
     "ai-training": {
       "title": "AI Eğitimi",
       "desc": "Uygulamalı AI eğitimi — LLM, agent ve AI-native geliştirme workshopları.",
       "longDesc": "LLM'lerle gerçekten üretim yapan ekipler için pratik AI eğitimi.",
-      "items": ["Workshop & Bootcamp", "Ekip Geliştirme", "LLM & Agent Kursları"],
+      "items": [
+        "Workshop & Bootcamp",
+        "Ekip Geliştirme",
+        "LLM & Agent Kursları"
+      ],
       "features": [
-        {"title":"Özel Müfredat","desc":"Ekibinizin teknoloji yığını ve seviyesine göre özelleştirilmiş programlar."},
-        {"title":"Uygulamalı Laboratuvar","desc":"Workshop sırasında gerçek AI özellikleri geliştirin."},
-        {"title":"Prompt Engineering","desc":"Prompt tasarımı ve yapılandırılmış çıktılarda ustalaşın."},
-        {"title":"Agent Geliştirme","desc":"Otonom AI agentları geliştirmeyi, test etmeyi ve deploy etmeyi öğrenin."},
-        {"title":"RAG & Arama","desc":"Kendi verileriniz için retrieval-augmented generation uygulayın."},
-        {"title":"AI Güvenliği","desc":"Güvenlik katmanları ve sorumlu AI uygulamalarını anlayın."}
+        {
+          "title": "Özel Müfredat",
+          "desc": "Ekibinizin teknoloji yığını ve seviyesine göre özelleştirilmiş programlar."
+        },
+        {
+          "title": "Uygulamalı Laboratuvar",
+          "desc": "Workshop sırasında gerçek AI özellikleri geliştirin."
+        },
+        {
+          "title": "Prompt Engineering",
+          "desc": "Prompt tasarımı ve yapılandırılmış çıktılarda ustalaşın."
+        },
+        {
+          "title": "Agent Geliştirme",
+          "desc": "Otonom AI agentları geliştirmeyi, test etmeyi ve deploy etmeyi öğrenin."
+        },
+        {
+          "title": "RAG & Arama",
+          "desc": "Kendi verileriniz için retrieval-augmented generation uygulayın."
+        },
+        {
+          "title": "AI Güvenliği",
+          "desc": "Güvenlik katmanları ve sorumlu AI uygulamalarını anlayın."
+        }
       ],
       "process": [
-        {"step":"01","title":"Değerlendirme","desc":"Ekibin mevcut AI bilgisini değerlendirin."},
-        {"step":"02","title":"Müfredat Tasarımı","desc":"Araçlarınıza özel program oluşturun."},
-        {"step":"03","title":"Eğitim","desc":"Canlı kodlama ve gerçek dünya alıştırmalarıyla workshoplar."},
-        {"step":"04","title":"Uygulama","desc":"Öğrenilen becerilerin gerçek sorunlara uygulanması."},
-        {"step":"05","title":"Takip","desc":"Eğitim sonrası destek ve soru-cevap oturumları."}
+        {
+          "step": "01",
+          "title": "Değerlendirme",
+          "desc": "Ekibin mevcut AI bilgisini değerlendirin."
+        },
+        {
+          "step": "02",
+          "title": "Müfredat Tasarımı",
+          "desc": "Araçlarınıza özel program oluşturun."
+        },
+        {
+          "step": "03",
+          "title": "Eğitim",
+          "desc": "Canlı kodlama ve gerçek dünya alıştırmalarıyla workshoplar."
+        },
+        {
+          "step": "04",
+          "title": "Uygulama",
+          "desc": "Öğrenilen becerilerin gerçek sorunlara uygulanması."
+        },
+        {
+          "step": "05",
+          "title": "Takip",
+          "desc": "Eğitim sonrası destek ve soru-cevap oturumları."
+        }
       ],
-      "stats": [{"value":"500+","label":"Eğitilen Mühendis"},{"value":"4.9","label":"Ortalama Puan"},{"value":"3x","label":"Verimlilik Artışı"},{"value":"2-5","label":"Günlük Program"}],
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Eğitilen Mühendis"
+        },
+        {
+          "value": "4.9",
+          "label": "Ortalama Puan"
+        },
+        {
+          "value": "3x",
+          "label": "Verimlilik Artışı"
+        },
+        {
+          "value": "2-5",
+          "label": "Günlük Program"
+        }
+      ],
       "faq": [
-        {"q":"Eğitim kime yönelik?","a":"AI entegre etmek isteyen yazılım mühendisleri ve teknik liderler."},
-        {"q":"AI deneyimimiz olması gerekiyor mu?","a":"Hayır — başlangıçtan ileri seviyeye kadar programlarımız var."},
-        {"q":"Eğitim uzaktan mı yerinde mi?","a":"Her ikisi de — uzaktan workshoplar ve yerinde bootcamp'ler sunuyoruz."},
-        {"q":"Hangi araçları kapsıyorsunuz?","a":"Claude, OpenAI, LangChain, Vercel AI SDK ve daha fazlası."}
+        {
+          "q": "Eğitim kime yönelik?",
+          "a": "AI entegre etmek isteyen yazılım mühendisleri ve teknik liderler."
+        },
+        {
+          "q": "AI deneyimimiz olması gerekiyor mu?",
+          "a": "Hayır — başlangıçtan ileri seviyeye kadar programlarımız var."
+        },
+        {
+          "q": "Eğitim uzaktan mı yerinde mi?",
+          "a": "Her ikisi de — uzaktan workshoplar ve yerinde bootcamp'ler sunuyoruz."
+        },
+        {
+          "q": "Hangi araçları kapsıyorsunuz?",
+          "a": "Claude, OpenAI, LangChain, Vercel AI SDK ve daha fazlası."
+        }
       ]
     },
     "ai-consulting": {
       "title": "AI Danışmanlık",
       "desc": "AI strateji danışmanlığı — AI'ın işletmenizde gerçek değer yarattığı noktaları belirleyin.",
       "longDesc": "İşletmelerin AI abartısını aşmasına ve gerçekten fark yaratan kullanım durumlarını bulmasına yardımcı oluyoruz.",
-      "items": ["Strateji & Yol Haritası", "Kullanım Durumu Analizi", "Yap vs Satın Al Rehberliği"],
+      "items": [
+        "Strateji & Yol Haritası",
+        "Kullanım Durumu Analizi",
+        "Yap vs Satın Al Rehberliği"
+      ],
       "features": [
-        {"title":"AI Hazırlık Denetimi","desc":"Veri, altyapı ve ekip hazırlığınızı değerlendirin."},
-        {"title":"Kullanım Durumu Haritalama","desc":"Yüksek etkili AI fırsatlarını belirleyin."},
-        {"title":"Tedarikçi Değerlendirmesi","desc":"LLM sağlayıcıları ve platformları karşılaştırın."},
-        {"title":"ROI Modelleme","desc":"Gerçekçi maliyet ve etki projeksiyonları."},
-        {"title":"Uygulama Yol Haritası","desc":"Kavram ispatından production'a aşamalı plan."},
-        {"title":"Risk Değerlendirmesi","desc":"Düzenleyici, etik ve teknik riskleri belirleyin."}
+        {
+          "title": "AI Hazırlık Denetimi",
+          "desc": "Veri, altyapı ve ekip hazırlığınızı değerlendirin."
+        },
+        {
+          "title": "Kullanım Durumu Haritalama",
+          "desc": "Yüksek etkili AI fırsatlarını belirleyin."
+        },
+        {
+          "title": "Tedarikçi Değerlendirmesi",
+          "desc": "LLM sağlayıcıları ve platformları karşılaştırın."
+        },
+        {
+          "title": "ROI Modelleme",
+          "desc": "Gerçekçi maliyet ve etki projeksiyonları."
+        },
+        {
+          "title": "Uygulama Yol Haritası",
+          "desc": "Kavram ispatından production'a aşamalı plan."
+        },
+        {
+          "title": "Risk Değerlendirmesi",
+          "desc": "Düzenleyici, etik ve teknik riskleri belirleyin."
+        }
       ],
       "process": [
-        {"step":"01","title":"Tanışma","desc":"İşletmenizi ve teknoloji ortamınızı anlayın."},
-        {"step":"02","title":"Denetim","desc":"Veri varlıkları ve ekip yeteneklerine derinlemesine dalış."},
-        {"step":"03","title":"Strateji","desc":"ROI tahminleriyle önceliklendirilmiş AI kullanım durumları."},
-        {"step":"04","title":"Yol Haritası","desc":"Kilometre taşlarıyla aşamalı uygulama planı."},
-        {"step":"05","title":"Teslim","desc":"Detaylı dokümantasyon ve sonraki adımlar."}
+        {
+          "step": "01",
+          "title": "Tanışma",
+          "desc": "İşletmenizi ve teknoloji ortamınızı anlayın."
+        },
+        {
+          "step": "02",
+          "title": "Denetim",
+          "desc": "Veri varlıkları ve ekip yeteneklerine derinlemesine dalış."
+        },
+        {
+          "step": "03",
+          "title": "Strateji",
+          "desc": "ROI tahminleriyle önceliklendirilmiş AI kullanım durumları."
+        },
+        {
+          "step": "04",
+          "title": "Yol Haritası",
+          "desc": "Kilometre taşlarıyla aşamalı uygulama planı."
+        },
+        {
+          "step": "05",
+          "title": "Teslim",
+          "desc": "Detaylı dokümantasyon ve sonraki adımlar."
+        }
       ],
-      "stats": [{"value":"40+","label":"Danışılan Şirket"},{"value":"3x","label":"Ort. ROI"},{"value":"2-4","label":"Haftalık Angajman"},{"value":"%90","label":"Uygulama Oranı"}],
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Danışılan Şirket"
+        },
+        {
+          "value": "3x",
+          "label": "Ort. ROI"
+        },
+        {
+          "value": "2-4",
+          "label": "Haftalık Angajman"
+        },
+        {
+          "value": "%90",
+          "label": "Uygulama Oranı"
+        }
+      ],
       "faq": [
-        {"q":"AI çözümünü de siz mi geliştiriyorsunuz?","a":"Evet — stratejiden deployment'a uçtan uca hizmet sunuyoruz."},
-        {"q":"Hangi sektörlere hizmet veriyorsunuz?","a":"E-ticaret, gayrimenkul, SaaS, fintech, eğitim."},
-        {"q":"AI entegrasyonundan farkı ne?","a":"Danışmanlık strateji öncelikli — ne yapılacağına karar vermenize yardımcı oluruz."},
-        {"q":"Minimum angajman süresi nedir?","a":"Odaklanmış 2 haftalık sprint."}
+        {
+          "q": "AI çözümünü de siz mi geliştiriyorsunuz?",
+          "a": "Evet — stratejiden deployment'a uçtan uca hizmet sunuyoruz."
+        },
+        {
+          "q": "Hangi sektörlere hizmet veriyorsunuz?",
+          "a": "E-ticaret, gayrimenkul, SaaS, fintech, eğitim."
+        },
+        {
+          "q": "AI entegrasyonundan farkı ne?",
+          "a": "Danışmanlık strateji öncelikli — ne yapılacağına karar vermenize yardımcı oluruz."
+        },
+        {
+          "q": "Minimum angajman süresi nedir?",
+          "a": "Odaklanmış 2 haftalık sprint."
+        }
       ]
     },
     "prompt-engineering": {
       "title": "Prompt Engineering",
       "desc": "Production-grade prompt tasarımı — güvenilir çıktılar ve maliyet optimizasyonu.",
       "longDesc": "Production'da güvenilir çalışan promptlar tasarlıyor, test ediyor ve optimize ediyoruz.",
-      "items": ["Prompt Tasarımı & Optimizasyon", "Yapılandırılmış Çıktılar", "Maliyet Düşürme"],
+      "items": [
+        "Prompt Tasarımı & Optimizasyon",
+        "Yapılandırılmış Çıktılar",
+        "Maliyet Düşürme"
+      ],
       "features": [
-        {"title":"Prompt Mimarisi","desc":"Karmaşık görevler için prompt zincirleri ve şablonlar."},
-        {"title":"Yapılandırılmış Çıktılar","desc":"LLM'lerden güvenilir JSON ve tipli yanıtlar."},
-        {"title":"Few-shot & CoT","desc":"Few-shot öğrenme, düşünce zinciri ve öz-yansıma."},
-        {"title":"Değerlendirme Pipeline'ları","desc":"Prompt regresyonlarını yakalayan otomatik testler."},
-        {"title":"Maliyet Optimizasyonu","desc":"Kaliteden ödün vermeden token kullanımını azaltın."},
-        {"title":"Prompt Kütüphaneleri","desc":"Yeniden kullanılabilir, versiyonlu prompt şablonları."}
+        {
+          "title": "Prompt Mimarisi",
+          "desc": "Karmaşık görevler için prompt zincirleri ve şablonlar."
+        },
+        {
+          "title": "Yapılandırılmış Çıktılar",
+          "desc": "LLM'lerden güvenilir JSON ve tipli yanıtlar."
+        },
+        {
+          "title": "Few-shot & CoT",
+          "desc": "Few-shot öğrenme, düşünce zinciri ve öz-yansıma."
+        },
+        {
+          "title": "Değerlendirme Pipeline'ları",
+          "desc": "Prompt regresyonlarını yakalayan otomatik testler."
+        },
+        {
+          "title": "Maliyet Optimizasyonu",
+          "desc": "Kaliteden ödün vermeden token kullanımını azaltın."
+        },
+        {
+          "title": "Prompt Kütüphaneleri",
+          "desc": "Yeniden kullanılabilir, versiyonlu prompt şablonları."
+        }
       ],
       "process": [
-        {"step":"01","title":"Temel Değerlendirme","desc":"Mevcut promptları ve hata modlarını anlayın."},
-        {"step":"02","title":"Tasarım","desc":"Optimize edilmiş promptlar oluşturun."},
-        {"step":"03","title":"Test","desc":"Çeşitli senaryolara karşı değerlendirmeler."},
-        {"step":"04","title":"Optimizasyon","desc":"Kaliteyi koruyarak maliyet ve gecikmeyi azaltın."},
-        {"step":"05","title":"Dokümantasyon","desc":"Kullanım kılavuzlarıyla prompt kütüphanesi teslim edin."}
+        {
+          "step": "01",
+          "title": "Temel Değerlendirme",
+          "desc": "Mevcut promptları ve hata modlarını anlayın."
+        },
+        {
+          "step": "02",
+          "title": "Tasarım",
+          "desc": "Optimize edilmiş promptlar oluşturun."
+        },
+        {
+          "step": "03",
+          "title": "Test",
+          "desc": "Çeşitli senaryolara karşı değerlendirmeler."
+        },
+        {
+          "step": "04",
+          "title": "Optimizasyon",
+          "desc": "Kaliteyi koruyarak maliyet ve gecikmeyi azaltın."
+        },
+        {
+          "step": "05",
+          "title": "Dokümantasyon",
+          "desc": "Kullanım kılavuzlarıyla prompt kütüphanesi teslim edin."
+        }
       ],
-      "stats": [{"value":"%60","label":"Maliyet Düşüşü"},{"value":"%95","label":"Çıktı Doğruluğu"},{"value":"3x","label":"Daha Hızlı İterasyon"},{"value":"100+","label":"Optimize Edilen Prompt"}],
+      "stats": [
+        {
+          "value": "%60",
+          "label": "Maliyet Düşüşü"
+        },
+        {
+          "value": "%95",
+          "label": "Çıktı Doğruluğu"
+        },
+        {
+          "value": "3x",
+          "label": "Daha Hızlı İterasyon"
+        },
+        {
+          "value": "100+",
+          "label": "Optimize Edilen Prompt"
+        }
+      ],
       "faq": [
-        {"q":"Neden prompt engineer tutmalıyız?","a":"İyi ve harika prompt arasındaki fark maliyette 10x, kalitede 5x olabilir."},
-        {"q":"Hangi modeller için optimize ediyorsunuz?","a":"Claude, GPT-4, Gemini ve açık kaynak modeller."},
-        {"q":"Mevcut promptlarımıza yardım edebilir misiniz?","a":"Evet — prompt denetimi ve optimizasyon temel hizmetimizdir."},
-        {"q":"Sürekli destek sağlıyor musunuz?","a":"Evet — model güncellemelerinde prompt bakım sözleşmeleri sunuyoruz."}
+        {
+          "q": "Neden prompt engineer tutmalıyız?",
+          "a": "İyi ve harika prompt arasındaki fark maliyette 10x, kalitede 5x olabilir."
+        },
+        {
+          "q": "Hangi modeller için optimize ediyorsunuz?",
+          "a": "Claude, GPT-4, Gemini ve açık kaynak modeller."
+        },
+        {
+          "q": "Mevcut promptlarımıza yardım edebilir misiniz?",
+          "a": "Evet — prompt denetimi ve optimizasyon temel hizmetimizdir."
+        },
+        {
+          "q": "Sürekli destek sağlıyor musunuz?",
+          "a": "Evet — model güncellemelerinde prompt bakım sözleşmeleri sunuyoruz."
+        }
       ]
     },
     "ai-chatbot": {
       "title": "AI Chatbot",
       "desc": "Ürününüze özel AI asistanlar — müşteri desteği, satış ve dahili araçlar.",
       "longDesc": "Verilerinizle eğitilmiş, ürününüze entegre AI chatbotlar.",
-      "items": ["Özel AI Asistanlar", "Bilgi Bankası Entegrasyonu", "Çok Kanallı Deploy"],
+      "items": [
+        "Özel AI Asistanlar",
+        "Bilgi Bankası Entegrasyonu",
+        "Çok Kanallı Deploy"
+      ],
       "features": [
-        {"title":"Özel Bilgi Bankası","desc":"RAG pipeline'larıyla dokümanlarınız üzerine eğitim."},
-        {"title":"Konuşma Arayüzü","desc":"Doğal, bağlam farkındalıklı konuşmalar."},
-        {"title":"Çok Kanal","desc":"Web widget, WhatsApp, Slack ve mobil uygulamalara deploy."},
-        {"title":"İnsana Aktarım","desc":"Bot sınırlarında canlı agentlara sorunsuz geçiş."},
-        {"title":"Analitik Panosu","desc":"Konuşmaları ve memnuniyet puanlarını takip edin."},
-        {"title":"Sürekli Öğrenme","desc":"Yanıtları zamanla iyileştiren geri bildirim döngüleri."}
+        {
+          "title": "Özel Bilgi Bankası",
+          "desc": "RAG pipeline'larıyla dokümanlarınız üzerine eğitim."
+        },
+        {
+          "title": "Konuşma Arayüzü",
+          "desc": "Doğal, bağlam farkındalıklı konuşmalar."
+        },
+        {
+          "title": "Çok Kanal",
+          "desc": "Web widget, WhatsApp, Slack ve mobil uygulamalara deploy."
+        },
+        {
+          "title": "İnsana Aktarım",
+          "desc": "Bot sınırlarında canlı agentlara sorunsuz geçiş."
+        },
+        {
+          "title": "Analitik Panosu",
+          "desc": "Konuşmaları ve memnuniyet puanlarını takip edin."
+        },
+        {
+          "title": "Sürekli Öğrenme",
+          "desc": "Yanıtları zamanla iyileştiren geri bildirim döngüleri."
+        }
       ],
       "process": [
-        {"step":"01","title":"Kapsam","desc":"Chatbot kişiliğini ve entegrasyon noktalarını tanımlayın."},
-        {"step":"02","title":"Veri","desc":"Bilgi bankası ve konuşma geçmişini alın."},
-        {"step":"03","title":"Geliştirme","desc":"RAG ve güvenlik katmanlarıyla chatbot geliştirin."},
-        {"step":"04","title":"Test","desc":"Kullanıcı testi ve güvenlik kontrolleri."},
-        {"step":"05","title":"Lansman","desc":"Analitik ve izleme ile deploy edin."}
+        {
+          "step": "01",
+          "title": "Kapsam",
+          "desc": "Chatbot kişiliğini ve entegrasyon noktalarını tanımlayın."
+        },
+        {
+          "step": "02",
+          "title": "Veri",
+          "desc": "Bilgi bankası ve konuşma geçmişini alın."
+        },
+        {
+          "step": "03",
+          "title": "Geliştirme",
+          "desc": "RAG ve güvenlik katmanlarıyla chatbot geliştirin."
+        },
+        {
+          "step": "04",
+          "title": "Test",
+          "desc": "Kullanıcı testi ve güvenlik kontrolleri."
+        },
+        {
+          "step": "05",
+          "title": "Lansman",
+          "desc": "Analitik ve izleme ile deploy edin."
+        }
       ],
-      "stats": [{"value":"%70","label":"Ticket Azaltma"},{"value":"< 2sn","label":"Yanıt Süresi"},{"value":"7/24","label":"Erişilebilirlik"},{"value":"%92","label":"Kullanıcı Memnuniyeti"}],
+      "stats": [
+        {
+          "value": "%70",
+          "label": "Ticket Azaltma"
+        },
+        {
+          "value": "< 2sn",
+          "label": "Yanıt Süresi"
+        },
+        {
+          "value": "7/24",
+          "label": "Erişilebilirlik"
+        },
+        {
+          "value": "%92",
+          "label": "Kullanıcı Memnuniyeti"
+        }
+      ],
       "faq": [
-        {"q":"ChatGPT'den farkı ne?","a":"Chatbotlarımız kendi verilerinizle eğitilir ve kullanım durumunuz için tasarlanır."},
-        {"q":"Birden fazla dil destekliyor mu?","a":"Evet — LLM destekli chatbotlar 50'den fazla dili destekler."},
-        {"q":"Veri gizliliği ne olacak?","a":"Verileriniz kendi altyapınızda kalır."},
-        {"q":"Halüsinasyonları nasıl ele alıyorsunuz?","a":"RAG temellendirme, kaynak doğrulama ve insan yedekli güven eşikleri."}
+        {
+          "q": "ChatGPT'den farkı ne?",
+          "a": "Chatbotlarımız kendi verilerinizle eğitilir ve kullanım durumunuz için tasarlanır."
+        },
+        {
+          "q": "Birden fazla dil destekliyor mu?",
+          "a": "Evet — LLM destekli chatbotlar 50'den fazla dili destekler."
+        },
+        {
+          "q": "Veri gizliliği ne olacak?",
+          "a": "Verileriniz kendi altyapınızda kalır."
+        },
+        {
+          "q": "Halüsinasyonları nasıl ele alıyorsunuz?",
+          "a": "RAG temellendirme, kaynak doğrulama ve insan yedekli güven eşikleri."
+        }
       ]
     }
   },
