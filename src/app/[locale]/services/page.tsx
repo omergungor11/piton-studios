@@ -63,7 +63,7 @@ export default function ServicesPage() {
             const desc = ts(`${s.slug}.desc`);
             const items = ts.raw(`${s.slug}.items`) as string[];
             return (
-              <Link key={s.n} href={`/services/${s.slug}`} className="svc" data-cursor="hover" data-cursor-label="+">
+              <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
                 <div className="svc-top">
                   <span className="n">{s.n}</span>
                   <span className="cat">{t(`filterCat.${s.cat}`)}</span>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
           <h3>{t('ctaTitle')}</h3>
           <p>{t('ctaSub')}</p>
         </div>
-        <Link href="/#contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
+        <Link href="/contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
           <span>{t('ctaBtn')}</span>
           <span>↗</span>
         </Link>

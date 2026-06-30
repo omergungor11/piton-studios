@@ -55,7 +55,7 @@ export default function StoriesScene() {
             return (
               <Link
                 key={s.slug}
-                href={`/services/${s.slug}`}
+                href={{ pathname: '/services/[slug]', params: { slug: s.slug } }}
                 className={`svc-showcase-card ${i === idx ? 'is-active' : ''}`}
                 data-cursor="hover"
                 data-cursor-label="View"
@@ -124,7 +124,7 @@ export default function StoriesScene() {
                   dragElastic={0.15}
                   onDragEnd={isActive ? onDragEnd : undefined}
                 >
-                  <Link href={`/services/${s.slug}`} className="svc-stack-inner" data-cursor="hover">
+                  <Link href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc-stack-inner" data-cursor="hover">
                     <div className="svc-showcase-top">
                       <span className="svc-showcase-num">{s.n}</span>
                       <span className="svc-showcase-cat">{s.cat}</span>

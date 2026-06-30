@@ -93,7 +93,7 @@ export default function ProjectsPage() {
           {filteredWorks.map((w) => (
             <Link
               key={w.n}
-              href={`/projects/${w.slug}`}
+              href={{ pathname: '/projects/[slug]', params: { slug: w.slug } }}
               className="pp-table-row"
               data-cursor="play"
               data-cursor-label="View"
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
           <h3>{t('ctaTitle')}</h3>
           <p>{t('ctaSub')}</p>
         </div>
-        <Link href="/#contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
+        <Link href="/contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
           <span>{t('ctaBtn')}</span>
           <span>↗</span>
         </Link>

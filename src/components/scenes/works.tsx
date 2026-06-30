@@ -56,7 +56,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {/* Left: Mockup */}
-            <Link href={`/projects/${work.slug}`} className="proj-mockup" data-cursor="play" data-cursor-label="View ↗">
+            <Link href={{ pathname: '/projects/[slug]', params: { slug: work.slug } }} className="proj-mockup" data-cursor="play" data-cursor-label="View ↗">
               <div className="proj-browser-bar">
                 <span className="proj-dot" />
                 <span className="proj-dot" />
@@ -99,7 +99,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
                 ))}
               </div>
 
-              <Link href={`/projects/${work.slug}`} className="proj-cta" data-cursor="hover">
+              <Link href={{ pathname: '/projects/[slug]', params: { slug: work.slug } }} className="proj-cta" data-cursor="hover">
                 {t('cta')} <span>↗</span>
               </Link>
             </div>
