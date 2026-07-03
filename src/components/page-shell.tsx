@@ -7,6 +7,7 @@ import Cursor from '@/components/cursor';
 import FloatingGlass from '@/components/floating-glass';
 import FloatingActions from '@/components/floating-actions';
 import LanguageSwitcher from '@/components/language-switcher';
+import PartnerBadges from '@/components/partner-badges';
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -160,6 +161,7 @@ export default function PageShell({ children }: PageShellProps) {
 
       <footer className="page-footer glass">
         <span className="page-footer-brand">{t('copyright')}</span>
+        <PartnerBadges variant="footer" />
         <nav className="page-footer-nav">
           <Link href="/" className="page-footer-link" data-cursor="hover">{t('home')}</Link>
           <Link href="/projects" className="page-footer-link" data-cursor="hover">{t('projects')}</Link>

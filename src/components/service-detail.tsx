@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { type Service, SERVICES } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 import SERVICE_ICONS from '@/components/service-icons';
+import PartnerBadges from '@/components/partner-badges';
 
 interface Props {
   service: Service;
@@ -213,6 +214,16 @@ export default function ServiceDetail({ service }: Props) {
           </ol>
         </div>
       </section>
+
+      {/* ── F2. PARTNER BADGES (Google Ads & SEO/GEO) ──────── */}
+      {(service.slug === 'google-ads' || service.slug === 'seo-geo') && (
+        <section className="sd-partners sd-section-fade">
+          <PartnerBadges
+            variant="service"
+            filter={service.slug === 'google-ads' ? ['google', 'meta'] : ['google']}
+          />
+        </section>
+      )}
 
       {/* ── G. RELATED SERVICES ─────────────────────────────── */}
       {relatedServices.length > 0 && (
