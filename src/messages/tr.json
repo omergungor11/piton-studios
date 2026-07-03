@@ -175,7 +175,7 @@
     "ctaEmailBtn": "E-posta Gönder",
     "ctaWpText": "{title} hizmetiniz hakkında bilgi almak istiyorum.",
     "ctaEmailSubject": "{title} Hakkında Bilgi",
-    "ctaEmailBody": "Merhaba,\n\n{title} hizmetiniz hakkında bilgi almak istiyorum.\n\nAçıklama: {desc}\n\nTeşekkürler."
+    "ctaEmailBody": "Merhaba,\n\n{title} hizmetiniz hakkında bilgi almak istiyorum.\n\nTeşekkürler."
   },
   "reel": {
     "eyebrow": "§ 04 · Showreel",
@@ -243,7 +243,12 @@
     "moreWork": "Diğer Projeler",
     "viewAll": "Tüm projeleri gör ↗",
     "prev": "← Önceki",
-    "next": "Sonraki →"
+    "next": "Sonraki →",
+    "preview": "// Önizleme",
+    "previewTitle": "Nasıl görünüyor?",
+    "previewDesktop": "Masaüstü",
+    "previewTablet": "Tablet",
+    "previewMobile": "Mobil"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Hikayeler",

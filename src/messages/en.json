@@ -176,7 +176,7 @@
     "ctaEmailBtn": "Send Email",
     "ctaWpText": "I would like to learn more about your {title} service.",
     "ctaEmailSubject": "Inquiry about {title}",
-    "ctaEmailBody": "Hello,\n\nI would like to learn more about your {title} service.\n\nDescription: {desc}\n\nThank you."
+    "ctaEmailBody": "Hello,\n\nI would like to learn more about your {title} service.\n\nThank you."
   },
   "projectsPage": {
     "title": "Projects",
@@ -204,7 +204,12 @@
     "moreWork": "More Work",
     "viewAll": "View all projects ↗",
     "prev": "← Previous",
-    "next": "Next →"
+    "next": "Next →",
+    "preview": "// Preview",
+    "previewTitle": "How it looks",
+    "previewDesktop": "Desktop",
+    "previewTablet": "Tablet",
+    "previewMobile": "Mobile"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Stories",

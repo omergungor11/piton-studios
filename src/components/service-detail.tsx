@@ -22,7 +22,7 @@ export default function ServiceDetail({ service }: Props) {
   const WP_PHONE = '905439500750';
   const WP_EMAIL = 'hi@pitonstudios.com';
   const wpUrl = `https://wa.me/${WP_PHONE}?text=${encodeURIComponent(t('ctaWpText', { title }))}`;
-  const emailUrl = `mailto:${WP_EMAIL}?subject=${encodeURIComponent(t('ctaEmailSubject', { title }))}&body=${encodeURIComponent(t('ctaEmailBody', { title, desc: longDesc }))}`;
+  const emailUrl = `mailto:${WP_EMAIL}?subject=${encodeURIComponent(t('ctaEmailSubject', { title }))}&body=${encodeURIComponent(t('ctaEmailBody', { title }))}`;
 
   const features = ts.raw(`${service.slug}.features`) as { title: string; desc: string }[];
   const process = ts.raw(`${service.slug}.process`) as { step: string; title: string; desc: string }[];

@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
+import ProjectMockups from './project-mockups';
 
 interface Props {
   project: Project;
@@ -30,6 +31,11 @@ export default function ProjectDetail({ project }: Props) {
   const scope = project.type === 'work' ? project.scope : undefined;
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
   const number = project.type === 'work' ? project.n : project.no;
+  const previews = project.type === 'work' ? project.previews : undefined;
+  const isWebProject = project.type === 'work' && (
+    project.kind.toLowerCase().includes('web') ||
+    project.tags.some((t) => ['wordpress', 'next.js', 'vercel', 'woocommerce'].includes(t.toLowerCase()))
+  );
 
   // Resolve translated content by slug, falling back to data.ts values
   const translationNs = project.type === 'work' ? tw : ts;
@@ -115,6 +121,15 @@ export default function ProjectDetail({ project }: Props) {
           </div>
         )}
       </section>
+
+      {/* Mockup Preview */}
+      {(isWebProject || previews) && (
+        <ProjectMockups
+          image={image}
+          title={title}
+          previews={previews}
+        />
+      )}
 
       {/* Related / Navigation */}
       <section className="pd-nav">

@@ -12,6 +12,11 @@ export interface Work {
   body: string[];
   scope: string;
   collaborator?: string;
+  previews?: {
+    desktop?: string;
+    tablet?: string;
+    mobile?: string;
+  };
 }
 
 export interface Service {
