@@ -2227,6 +2227,94 @@ html[data-theme="light"] .page-header-link:hover { background: rgba(0,0,0,0.06);
 }
 html[data-theme="light"] .page-footer-link:hover { background: rgba(0,0,0,0.05); }
 
+/* ── PARTNER BADGES ─────────────────────────────────────────────── */
+
+/* Footer variant */
+.pf-partners {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.pf-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  white-space: nowrap;
+  transition: border-color 200ms, color 200ms;
+}
+.pf-badge:hover { border-color: var(--accent); color: var(--ink); }
+.pf-badge svg { flex-shrink: 0; opacity: 0.8; }
+.pf-badge-name { display: none; }
+
+/* Trust-bar variant (anasayfa about bölümü) */
+.pt-bar {
+  display: flex; flex-direction: column; gap: 14px;
+  padding-top: 24px; margin-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.pt-label {
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--muted);
+}
+.pt-groups {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.pt-group { display: flex; align-items: center; gap: 12px; }
+.pt-group-label {
+  font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.5; white-space: nowrap;
+}
+.pt-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.pt-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  color: var(--ink-soft);
+  font-size: 11px; letter-spacing: 0.06em;
+  white-space: nowrap;
+  transition: border-color 200ms, background 200ms, color 200ms;
+}
+.pt-badge:hover {
+  border-color: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: var(--ink);
+}
+.pt-badge-cert {
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+}
+html[data-theme="light"] .pt-badge { background: rgba(0,0,0,0.02); }
+html[data-theme="light"] .pt-badge:hover { background: rgba(0,0,0,0.05); }
+.pt-divider {
+  width: 1px; height: 32px;
+  background: var(--line); flex-shrink: 0;
+}
+
+/* Service inline variant */
+.sd-partners { margin-bottom: 0; }
+.ps-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+.ps-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 20px; border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  color: var(--ink-soft); font-size: 12px;
+  letter-spacing: 0.08em;
+  font-family: var(--mono); text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-footer { flex-wrap: wrap; gap: 16px; }
+  .pf-partners { order: 3; width: 100%; justify-content: center; }
+  .pf-badge-name { display: inline; }
+}
+@media (max-width: 640px) {
+  .pt-groups { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .pt-divider { display: none; }
+}
+
 /* Sub-page hero */
 .sp-hero {
   margin-bottom: 48px;

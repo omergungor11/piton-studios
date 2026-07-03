@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
 import MatrixRain from '@/components/matrix-rain';
+import PartnerBadges from '@/components/partner-badges';
 
 export default function AboutScene() {
   const t = useTranslations('about');
@@ -86,6 +87,7 @@ export default function AboutScene() {
           </div>
         </StaggerItem>
       </Stagger>
+      <PartnerBadges variant="trust-bar" />
     </div>
   );
 }
