@@ -176,7 +176,7 @@
     "ctaEmailBtn": "Отправить E-mail",
     "ctaWpText": "Хотел бы узнать подробнее о вашей услуге {title}.",
     "ctaEmailSubject": "Запрос о {title}",
-    "ctaEmailBody": "Здравствуйте,\n\nХотел бы узнать подробнее о вашей услуге {title}.\n\nОписание: {desc}\n\nСпасибо."
+    "ctaEmailBody": "Здравствуйте,\n\nХотел бы узнать подробнее о вашей услуге {title}.\n\nСпасибо."
   },
   "reel": {
     "eyebrow": "§ 04 · Шоурил",
@@ -244,7 +244,12 @@
     "moreWork": "Другие проекты",
     "viewAll": "Все проекты ↗",
     "prev": "← Предыдущий",
-    "next": "Следующий →"
+    "next": "Следующий →",
+    "preview": "// Превью",
+    "previewTitle": "Как это выглядит",
+    "previewDesktop": "Рабочий стол",
+    "previewTablet": "Планшет",
+    "previewMobile": "Мобильный"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Истории",
