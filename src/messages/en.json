@@ -171,7 +171,12 @@
     "ctaEyebrow": "// Let's talk",
     "ctaTitle": "Let's talk about this service.",
     "ctaSub": "Tell us about your project and we'll come back with a clear scope and timeline.",
-    "ctaBtn": "Get in Touch"
+    "ctaBtn": "Get in Touch",
+    "ctaWhatsappBtn": "Chat on WhatsApp",
+    "ctaEmailBtn": "Send Email",
+    "ctaWpText": "I would like to learn more about your {title} service.",
+    "ctaEmailSubject": "Inquiry about {title}",
+    "ctaEmailBody": "Hello,\n\nI would like to learn more about your {title} service.\n\nDescription: {desc}\n\nThank you."
   },
   "projectsPage": {
     "title": "Projects",
