@@ -248,7 +248,9 @@
     "previewTitle": "Nasıl görünüyor?",
     "previewDesktop": "Masaüstü",
     "previewTablet": "Tablet",
-    "previewMobile": "Mobil"
+    "previewMobile": "Mobil",
+    "typography": "Tipografi",
+    "colours": "Renkler"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Hikayeler",

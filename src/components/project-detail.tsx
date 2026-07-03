@@ -6,6 +6,7 @@ import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 import ProjectMockups from './project-mockups';
+import ProjectBrand from './project-brand';
 
 interface Props {
   project: Project;
@@ -32,6 +33,7 @@ export default function ProjectDetail({ project }: Props) {
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
   const number = project.type === 'work' ? project.n : project.no;
   const previews = project.type === 'work' ? project.previews : undefined;
+  const brand = project.type === 'work' ? project.brand : undefined;
   const isWebProject = project.type === 'work' && (
     project.kind.toLowerCase().includes('web') ||
     project.tags.some((t) => ['wordpress', 'next.js', 'vercel', 'woocommerce'].includes(t.toLowerCase()))
@@ -121,6 +123,16 @@ export default function ProjectDetail({ project }: Props) {
           </div>
         )}
       </section>
+
+      {/* Typography & Colors */}
+      {brand && (
+        <ProjectBrand
+          title={title}
+          desc={brand.desc}
+          typography={brand.typography}
+          colors={brand.colors}
+        />
+      )}
 
       {/* Mockup Preview */}
       {(isWebProject || previews) && (

@@ -249,7 +249,9 @@
     "previewTitle": "Как это выглядит",
     "previewDesktop": "Рабочий стол",
     "previewTablet": "Планшет",
-    "previewMobile": "Мобильный"
+    "previewMobile": "Мобильный",
+    "typography": "Типографика",
+    "colours": "Цвета"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Истории",

@@ -1,3 +1,9 @@
+export interface ColorSwatch {
+  hex: string;
+  name: string;
+  light?: boolean;
+}
+
 export interface Work {
   n: string;
   slug: string;
@@ -16,6 +22,14 @@ export interface Work {
     desktop?: string;
     tablet?: string;
     mobile?: string;
+  };
+  brand?: {
+    desc?: string;
+    typography?: {
+      family: string;
+      googleFont?: string;
+    };
+    colors?: ColorSwatch[];
   };
 }
 
@@ -106,6 +120,15 @@ export const WORKS: Work[] = [
       "İnşaat ve imalat sektörüne yönelik profesyonel bir dijital kimlik oluşturduk. Responsive tasarım, hızlı yüklenme süreleri ve kolay içerik yönetimi ile müşterinin dijital varlığını güçlendirdik.",
     ],
     scope: "Web design, CMS, SEO",
+    brand: {
+      desc: "Tasarımda sektörün sağlam yapısını yansıtan Inter fontu tercih edildi. Renk paleti, 25 yılı aşkın deneyimi ve güveni simgeleyen koyu lacivert ile enerjiyi temsil eden vurgu tonlarından oluştu.",
+      typography: { family: "Inter", googleFont: "Inter:wght@300;400;600;700" },
+      colors: [
+        { hex: "#1B2A3E", name: "Koyu Lacivert" },
+        { hex: "#E05C2A", name: "Tuğla Oranj" },
+        { hex: "#F4F4F6", name: "Açık Gri", light: true },
+      ],
+    },
   },
   {
     n: "02",
@@ -123,6 +146,15 @@ export const WORKS: Work[] = [
       "Teknik SEO çalışmaları, schema markup ve performans optimizasyonu ile arama motorlarında üst sıralarda yer almayı hedefledik. Kurumsal kimliğe uygun, güven veren bir kullanıcı deneyimi sunduk.",
     ],
     scope: "Web design, SEO, multi-language",
+    brand: {
+      desc: "Modern asansör teknolojisini yansıtan Montserrat fontu ile kurumsal kimlik güçlendirildi. Mavi tonların baskınlığı sektörün güven ve teknoloji çağrışımlarını taşıyor.",
+      typography: { family: "Montserrat", googleFont: "Montserrat:wght@300;400;600;700" },
+      colors: [
+        { hex: "#0A2D5A", name: "Derin Lacivert" },
+        { hex: "#1E7DC6", name: "Elektrik Mavisi" },
+        { hex: "#EFF5FB", name: "Buz Beyazı", light: true },
+      ],
+    },
   },
   {
     n: "03",
@@ -140,6 +172,15 @@ export const WORKS: Work[] = [
       "Kullanıcı dostu arayüz, gelişmiş filtreleme sistemi ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık.",
     ],
     scope: "Web app, platform, SEO",
+    brand: {
+      desc: "Binlerce ilanın rahatça gezildiği bir platformda Nunito'nun yuvarlak ve samimi yapısı kullanıcıyı içeri çekiyor. Turuncu vurgu tonu aksiyon noktalarında yönlendiricilik sağlıyor.",
+      typography: { family: "Nunito", googleFont: "Nunito:wght@400;600;700;800" },
+      colors: [
+        { hex: "#1E3A5F", name: "Gece Mavisi" },
+        { hex: "#F4831F", name: "Canlı Turuncu" },
+        { hex: "#FAFAFA", name: "Beyaz Zemin", light: true },
+      ],
+    },
   },
   {
     n: "04",
