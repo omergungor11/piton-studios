@@ -120,6 +120,11 @@ export const WORKS: Work[] = [
       "İnşaat ve imalat sektörüne yönelik profesyonel bir dijital kimlik oluşturduk. Responsive tasarım, hızlı yüklenme süreleri ve kolay içerik yönetimi ile müşterinin dijital varlığını güçlendirdik.",
     ],
     scope: "Web design, CMS, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/velis-ltd.webp',
+      tablet: '/assets/previews/tablet/velis-ltd.webp',
+      mobile: '/assets/previews/mobile/velis-ltd.webp',
+    },
     brand: {
       desc: "Tasarımda sektörün sağlam yapısını yansıtan Inter fontu tercih edildi. Renk paleti, 25 yılı aşkın deneyimi ve güveni simgeleyen koyu lacivert ile enerjiyi temsil eden vurgu tonlarından oluştu.",
       typography: { family: "Inter", googleFont: "Inter:wght@300;400;600;700" },
@@ -146,6 +151,11 @@ export const WORKS: Work[] = [
       "Teknik SEO çalışmaları, schema markup ve performans optimizasyonu ile arama motorlarında üst sıralarda yer almayı hedefledik. Kurumsal kimliğe uygun, güven veren bir kullanıcı deneyimi sunduk.",
     ],
     scope: "Web design, SEO, multi-language",
+    previews: {
+      desktop: '/assets/previews/desktop/bt-elevator.webp',
+      tablet: '/assets/previews/tablet/bt-elevator.webp',
+      mobile: '/assets/previews/mobile/bt-elevator.webp',
+    },
     brand: {
       desc: "Modern asansör teknolojisini yansıtan Montserrat fontu ile kurumsal kimlik güçlendirildi. Mavi tonların baskınlığı sektörün güven ve teknoloji çağrışımlarını taşıyor.",
       typography: { family: "Montserrat", googleFont: "Montserrat:wght@300;400;600;700" },
@@ -172,6 +182,11 @@ export const WORKS: Work[] = [
       "Kullanıcı dostu arayüz, gelişmiş filtreleme sistemi ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık.",
     ],
     scope: "Web app, platform, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/gel-gez-gor.webp',
+      tablet: '/assets/previews/tablet/gel-gez-gor.webp',
+      mobile: '/assets/previews/mobile/gel-gez-gor.webp',
+    },
     brand: {
       desc: "Binlerce ilanın rahatça gezildiği bir platformda Nunito'nun yuvarlak ve samimi yapısı kullanıcıyı içeri çekiyor. Turuncu vurgu tonu aksiyon noktalarında yönlendiricilik sağlıyor.",
       typography: { family: "Nunito", googleFont: "Nunito:wght@400;600;700;800" },
@@ -198,6 +213,11 @@ export const WORKS: Work[] = [
       "Modern tasarım, hızlı yüklenme süreleri ve mobil uyumlu yapı ile potansiyel yatırımcıların kolayca bilgiye ulaşmasını sağladık. SEO çalışmaları ile organik görünürlüğü artırdık.",
     ],
     scope: "Web design, corporate, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/nexos-investment.webp',
+      tablet: '/assets/previews/tablet/nexos-investment.webp',
+      mobile: '/assets/previews/mobile/nexos-investment.webp',
+    },
   },
   {
     n: "05",
@@ -215,6 +235,11 @@ export const WORKS: Work[] = [
       "Responsive tasarım, hızlı yüklenme süreleri ve SEO optimizasyonu ile potansiyel müşterilerin kolayca ulaşmasını sağladık.",
     ],
     scope: "Web design, corporate, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/alp-sigorta.webp',
+      tablet: '/assets/previews/tablet/alp-sigorta.webp',
+      mobile: '/assets/previews/mobile/alp-sigorta.webp',
+    },
   },
   {
     n: "06",
@@ -232,6 +257,11 @@ export const WORKS: Work[] = [
       "SEO optimizasyonu, çok dilli yapı ve responsive tasarım ile uluslararası yatırımcılara ulaşmayı hedefledik. Emlak ilan entegrasyonları ve sosyal medya bağlantıları ile müşteri edinimini artırdık.",
     ],
     scope: "Web design, real estate, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/pampas-investment.webp',
+      tablet: '/assets/previews/tablet/pampas-investment.webp',
+      mobile: '/assets/previews/mobile/pampas-investment.webp',
+    },
   },
   {
     n: "07",
@@ -283,6 +313,11 @@ export const WORKS: Work[] = [
       "Proje galerisi, iletişim formları ve mobil uyumlu tasarım ile müşteri edinimini kolaylaştırdık. WordPress altyapısı ile kolay içerik yönetimi sağladık.",
     ],
     scope: "Web design, construction, portfolio",
+    previews: {
+      desktop: '/assets/previews/desktop/ekh-yapi.webp',
+      tablet: '/assets/previews/tablet/ekh-yapi.webp',
+      mobile: '/assets/previews/mobile/ekh-yapi.webp',
+    },
   },
   {
     n: "10",
@@ -300,6 +335,11 @@ export const WORKS: Work[] = [
       "Yoğun SEO çalışmaları ile 'kıbrıs night club', 'gece hayatı katalog' gibi yüksek hacimli aramalarda üst sıralarda yer almayı başardık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı sağladık.",
     ],
     scope: "Web design, SEO, directory",
+    previews: {
+      desktop: '/assets/previews/desktop/night-club-katalog.webp',
+      tablet: '/assets/previews/tablet/night-club-katalog.webp',
+      mobile: '/assets/previews/mobile/night-club-katalog.webp',
+    },
   },
   {
     n: "11",
@@ -317,6 +357,10 @@ export const WORKS: Work[] = [
       "Mekan profilleri, etkinlik takvimleri, kullanıcı yorumları ve konum bazlı arama özellikleri dahil. Google Ads ve Search Console entegrasyonu ile organik ve ücretli trafik yönetimi sağladık.",
     ],
     scope: "Web app, directory, SEO",
+    previews: {
+      tablet: '/assets/previews/tablet/kibris-gece-hayati.webp',
+      mobile: '/assets/previews/mobile/kibris-gece-hayati.webp',
+    },
   },
   {
     n: "12",
@@ -334,6 +378,11 @@ export const WORKS: Work[] = [
       "Vercel hosting, Hostinger domain yönetimi, Google Ads ve Tag Manager entegrasyonları ile profesyonel bir dijital altyapı kurduk. SEO odaklı içerik stratejisi ile arama motorlarında görünürlüğü artırdık.",
     ],
     scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/gece-kibris.webp',
+      tablet: '/assets/previews/tablet/gece-kibris.webp',
+      mobile: '/assets/previews/mobile/gece-kibris.webp',
+    },
   },
   {
     n: "13",
@@ -351,6 +400,11 @@ export const WORKS: Work[] = [
       "Responsive tasarım ile mobil ve masaüstü cihazlarda sorunsuz dinleme deneyimi sağladık. Sosyal medya entegrasyonu ve paylaşım özellikleri ile dinleyici kitlesini genişlettik.",
     ],
     scope: "Web app, streaming, design",
+    previews: {
+      desktop: '/assets/previews/desktop/radyo-juke.webp',
+      tablet: '/assets/previews/tablet/radyo-juke.webp',
+      mobile: '/assets/previews/mobile/radyo-juke.webp',
+    },
   },
   {
     n: "14",
@@ -368,6 +422,11 @@ export const WORKS: Work[] = [
       "SEO optimizasyonu, hızlı yüklenme süreleri ve mobil uyumlu yapı ile güçlü bir dijital varlık oluşturduk.",
     ],
     scope: "Web design, portfolio, personal brand",
+    previews: {
+      desktop: '/assets/previews/desktop/ozge-ozler.webp',
+      tablet: '/assets/previews/tablet/ozge-ozler.webp',
+      mobile: '/assets/previews/mobile/ozge-ozler.webp',
+    },
   },
   {
     n: "15",
@@ -385,6 +444,11 @@ export const WORKS: Work[] = [
       "Çok dilli yapı, SEO optimizasyonu ve modern tasarım ile global müşterilere ulaşmayı hedefledik.",
     ],
     scope: "Web design, corporate, trading",
+    previews: {
+      desktop: '/assets/previews/desktop/rnv-trading.webp',
+      tablet: '/assets/previews/tablet/rnv-trading.webp',
+      mobile: '/assets/previews/mobile/rnv-trading.webp',
+    },
   },
   {
     n: "16",
@@ -402,6 +466,11 @@ export const WORKS: Work[] = [
       "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile potansiyel yatırımcılara güçlü bir dijital deneyim sunduk.",
     ],
     scope: "Web design, real estate, investment",
+    previews: {
+      desktop: '/assets/previews/desktop/pinnacle-yatirim.webp',
+      tablet: '/assets/previews/tablet/pinnacle-yatirim.webp',
+      mobile: '/assets/previews/mobile/pinnacle-yatirim.webp',
+    },
   },
   {
     n: "17",
@@ -436,6 +505,11 @@ export const WORKS: Work[] = [
       "SEO optimizasyonu ile gece kulübü aramalarında üst sıralarda yer almayı sağladık. Sosyal medya entegrasyonu ve online iletişim araçları ile müşteri etkileşimini artırdık.",
     ],
     scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/prenses-night-club.webp',
+      tablet: '/assets/previews/tablet/prenses-night-club.webp',
+      mobile: '/assets/previews/mobile/prenses-night-club.webp',
+    },
   },
   {
     n: "19",
@@ -453,6 +527,11 @@ export const WORKS: Work[] = [
       "Google Ads entegrasyonu, SEO çalışmaları ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Mobil uyumlu yapı ile tüm cihazlarda kusursuz deneyim sağladık.",
     ],
     scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/miracle-night-club.webp',
+      tablet: '/assets/previews/tablet/miracle-night-club.webp',
+      mobile: '/assets/previews/mobile/miracle-night-club.webp',
+    },
   },
   {
     n: "20",
@@ -555,6 +634,11 @@ export const WORKS: Work[] = [
       "Çok dilli yapı, gelişmiş arama ve filtreleme özellikleri, SEO optimizasyonu ile global müşteri kitlesine ulaşmayı hedefledik.",
     ],
     scope: "Web design, real estate, international",
+    previews: {
+      desktop: '/assets/previews/desktop/homes-in-mediterranean.webp',
+      tablet: '/assets/previews/tablet/homes-in-mediterranean.webp',
+      mobile: '/assets/previews/mobile/homes-in-mediterranean.webp',
+    },
   },
   {
     n: "26",
@@ -589,6 +673,11 @@ export const WORKS: Work[] = [
       "Yerel SEO optimizasyonu ile 'lefkoşa taksi', 'kıbrıs taksi' gibi aramalarda üst sıralarda yer almayı başardık. Mobil öncelikli tasarım ile hareket halindeki kullanıcılara kolay erişim sunduk.",
     ],
     scope: "Web design, transportation, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/kibris-lefkosa-taksi.webp',
+      tablet: '/assets/previews/tablet/kibris-lefkosa-taksi.webp',
+      mobile: '/assets/previews/mobile/kibris-lefkosa-taksi.webp',
+    },
   },
   {
     n: "28",
@@ -606,6 +695,11 @@ export const WORKS: Work[] = [
       "Yerel SEO optimizasyonu, WhatsApp entegrasyonu ve mobil öncelikli tasarım ile müşteri edinimini artırdık.",
     ],
     scope: "Web design, transportation, booking",
+    previews: {
+      desktop: '/assets/previews/desktop/aydin-transfer.webp',
+      tablet: '/assets/previews/tablet/aydin-transfer.webp',
+      mobile: '/assets/previews/mobile/aydin-transfer.webp',
+    },
   },
   {
     n: "29",
@@ -640,6 +734,11 @@ export const WORKS: Work[] = [
       "Online rezervasyon entegrasyonu, çok dilli yapı ve SEO optimizasyonu ile uluslararası turistlere ulaşmayı sağladık.",
     ],
     scope: "Web design, hospitality, booking",
+    previews: {
+      desktop: '/assets/previews/desktop/sammys-hotel.webp',
+      tablet: '/assets/previews/tablet/sammys-hotel.webp',
+      mobile: '/assets/previews/mobile/sammys-hotel.webp',
+    },
   },
   {
     n: "31",
@@ -657,6 +756,11 @@ export const WORKS: Work[] = [
       "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile müşteri edinimini kolaylaştırdık. Çok dilli yapı ile yerli ve yabancı müşterilere ulaşmayı sağladık.",
     ],
     scope: "Web design, services, corporate",
+    previews: {
+      desktop: '/assets/previews/desktop/all-pro-cyprus.webp',
+      tablet: '/assets/previews/tablet/all-pro-cyprus.webp',
+      mobile: '/assets/previews/mobile/all-pro-cyprus.webp',
+    },
   },
   {
     n: "32",
@@ -674,6 +778,186 @@ export const WORKS: Work[] = [
       "SEO odaklı içerik stratejisi ile gece hayatı aramalarında güçlü bir görünürlük sağladık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı elde ettik.",
     ],
     scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/kibris-nights-club.webp',
+      tablet: '/assets/previews/tablet/kibris-nights-club.webp',
+      mobile: '/assets/previews/mobile/kibris-nights-club.webp',
+    },
+  },
+  {
+    n: "33",
+    slug: "alert-muhendislik",
+    title: "Alert Mühendislik",
+    client: "Alert Mühendislik",
+    kind: "Web Design · Corporate",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["Corporate", "Engineering", "Responsive", "SEO"],
+    image: "story-01.jpg",
+    summary: "Engineering and construction company corporate website.",
+    body: [
+      "Alert Mühendislik için mühendislik ve inşaat hizmetlerini sergileyen kurumsal bir web sitesi tasarladık. Proje portföyü, hizmet detayları ve iletişim bilgileri ile güçlü bir dijital kimlik oluşturduk.",
+      "Responsive tasarım, hızlı yüklenme süreleri ve SEO optimizasyonu ile potansiyel müşterilerin kolayca ulaşmasını sağladık.",
+    ],
+    scope: "Web design, corporate, engineering",
+    previews: {
+      desktop: '/assets/previews/desktop/alert-muhendislik.webp',
+      tablet: '/assets/previews/tablet/alert-muhendislik.webp',
+      mobile: '/assets/previews/mobile/alert-muhendislik.webp',
+    },
+  },
+  {
+    n: "34",
+    slug: "beton-store",
+    title: "Beton Store",
+    client: "Beton Store",
+    kind: "Web Design · E-commerce",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["E-commerce", "Construction", "Responsive", "SEO"],
+    image: "story-02.jpg",
+    summary: "Construction materials online store.",
+    body: [
+      "Beton Store için yapı malzemeleri ve beton ürünlerinin satışını yapan bir e-ticaret platformu geliştirdik. Ürün kataloğu, sipariş yönetimi ve iletişim sistemi ile kapsamlı bir dijital mağaza oluşturduk.",
+      "Modern tasarım ve kullanıcı dostu arayüz ile müşteri deneyimini ön plana çıkardık. SEO optimizasyonu ile organik trafik artışı sağladık.",
+    ],
+    scope: "Web design, e-commerce, construction",
+    previews: {
+      desktop: '/assets/previews/desktop/beton-store.webp',
+      tablet: '/assets/previews/tablet/beton-store.webp',
+      mobile: '/assets/previews/mobile/beton-store.webp',
+    },
+  },
+  {
+    n: "35",
+    slug: "crazy-girl-night-club",
+    title: "Crazy Girl Night Club",
+    client: "Crazy Girl Night Club",
+    kind: "Web Design · Entertainment",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["Entertainment", "Nightlife", "SEO", "KKTC"],
+    image: "story-03.jpg",
+    summary: "Night club website with event listings and gallery.",
+    body: [
+      "Crazy Girl Night Club için etkinlik takvimi, galeri ve mekan bilgilerini sergileyen çarpıcı bir web sitesi tasarladık. Gece hayatının dinamizmini yansıtan koyu temalı, görsel odaklı bir tasarım uyguladık.",
+      "SEO optimizasyonu ve sosyal medya entegrasyonu ile mekanın dijital görünürlüğünü artırdık. Mobil uyumlu yapı ile hareket halindeki kullanıcılara kolay erişim sunduk.",
+    ],
+    scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/crazy-girl-night-club.webp',
+      tablet: '/assets/previews/tablet/crazy-girl-night-club.webp',
+      mobile: '/assets/previews/mobile/crazy-girl-night-club.webp',
+    },
+  },
+  {
+    n: "36",
+    slug: "kibris-katalog",
+    title: "Kıbrıs Katalog",
+    client: "Kıbrıs Katalog",
+    kind: "Web Design · Directory",
+    year: "2025",
+    role: "Design / Development / SEO",
+    tags: ["Directory", "Entertainment", "Catalog", "KKTC"],
+    image: "story-04.jpg",
+    summary: "North Cyprus nightlife and entertainment directory.",
+    body: [
+      "Kıbrıs Katalog için KKTC'deki gece mekanları, restoranlar ve eğlence noktalarını listeleyen kapsamlı bir rehber platformu geliştirdik. Mekan profilleri, konum bilgileri ve kullanıcı yorumları ile zengin bir içerik yapısı oluşturduk.",
+      "SEO optimizasyonu ile yerel aramalar için güçlü bir görünürlük sağladık. Mekan sahipleri için ilan ekleme ve yönetim araçları da dahil ettik.",
+    ],
+    scope: "Web design, directory, entertainment",
+    previews: {
+      desktop: '/assets/previews/desktop/kibris-katalog.webp',
+      tablet: '/assets/previews/tablet/kibris-katalog.webp',
+      mobile: '/assets/previews/mobile/kibris-katalog.webp',
+    },
+  },
+  {
+    n: "37",
+    slug: "misse-night-club",
+    title: "Misse Night Club",
+    client: "Misse Night Club",
+    kind: "Web Design · Entertainment",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["Entertainment", "Nightlife", "SEO", "KKTC"],
+    image: "story-05.jpg",
+    summary: "Night club website with VIP reservations and events.",
+    body: [
+      "Misse Night Club için VIP rezervasyon sistemi, etkinlik takvimi ve mekan tanıtımı sunan premium bir web sitesi geliştirdik. Atmosferi dijitale taşıyan lüks ve etkileyici bir tasarım uyguladık.",
+      "Google Ads entegrasyonu, SEO çalışmaları ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Mobil uyumlu yapı ile tüm cihazlarda kusursuz deneyim sağladık.",
+    ],
+    scope: "Web design, entertainment, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/misse-night-club.webp',
+      tablet: '/assets/previews/tablet/misse-night-club.webp',
+      mobile: '/assets/previews/mobile/misse-night-club.webp',
+    },
+  },
+  {
+    n: "38",
+    slug: "virginia-ice-cream",
+    title: "Virginia Ice Cream",
+    client: "Virginia Ice Cream",
+    kind: "Web Design · F&B",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["F&B", "Brand", "Responsive", "SEO"],
+    image: "story-01.jpg",
+    summary: "Premium ice cream brand website with menu and locations.",
+    body: [
+      "Virginia Ice Cream için premium dondurma markasının dijital kimliğini oluşturan şık ve renkli bir web sitesi tasarladık. Menü, lezzet kataloğu ve şube bilgileri ile müşteri deneyimini ön plana çıkardık.",
+      "Markanın enerjik ve eğlenceli kişiliğini yansıtan görsel tasarım, animasyonlar ve responsive yapı ile güçlü bir marka dijitale taşıdık.",
+    ],
+    scope: "Web design, F&B, brand",
+    previews: {
+      desktop: '/assets/previews/desktop/virginia-ice-cream.webp',
+      tablet: '/assets/previews/tablet/virginia-ice-cream.webp',
+      mobile: '/assets/previews/mobile/virginia-ice-cream.webp',
+    },
+  },
+  {
+    n: "39",
+    slug: "faraon-night-clubs",
+    title: "Faraon Night Clubs",
+    client: "Faraon Night Clubs",
+    kind: "Web Design · Entertainment",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["Entertainment", "Nightlife", "Multi-venue", "KKTC"],
+    image: "story-02.jpg",
+    summary: "Night club chain website with multiple venues in North Cyprus.",
+    body: [
+      "Faraon Night Clubs için birden fazla mekanı kapsayan gece kulübü zincirinin web sitesini geliştirdik. Her mekanın ayrı profili, ortak etkinlik takvimi ve rezervasyon sistemi ile kapsamlı bir dijital platform oluşturduk.",
+      "Güçlü marka kimliği, etkileyici görseller ve SEO optimizasyonu ile KKTC gece hayatında öne çıkmayı sağladık.",
+    ],
+    scope: "Web design, entertainment, multi-venue",
+    previews: {
+      desktop: '/assets/previews/desktop/faraon-night-clubs.webp',
+      tablet: '/assets/previews/tablet/faraon-night-clubs.webp',
+      mobile: '/assets/previews/mobile/faraon-night-clubs.webp',
+    },
+  },
+  {
+    n: "40",
+    slug: "welcome-pickups",
+    title: "Welcome Pickups",
+    client: "Welcome Pickups",
+    kind: "Web Design · Transportation",
+    year: "2025",
+    role: "Design / Development",
+    tags: ["Transportation", "Transfer", "Booking", "International"],
+    image: "story-03.jpg",
+    summary: "Airport transfer and welcome service website.",
+    body: [
+      "Welcome Pickups için havalimanı karşılama ve transfer hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon, rota bilgileri ve müşteri yorumları ile kapsamlı bir platform oluşturduk.",
+      "Uluslararası müşterilere yönelik çok dilli yapı, hızlı yüklenme ve mobil uyumlu tasarım ile güçlü bir dijital varlık oluşturduk.",
+    ],
+    scope: "Web design, transportation, booking",
+    previews: {
+      tablet: '/assets/previews/tablet/welcome-pickups.webp',
+      mobile: '/assets/previews/mobile/welcome-pickups.webp',
+    },
   },
 ];
 
