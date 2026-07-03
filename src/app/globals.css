@@ -3454,6 +3454,22 @@ html[data-theme="light"] .admin-nav-item:hover { background: rgba(0,0,0,0.04); }
 }
 .sd-cta-arrow { font-size: 14px; transition: transform 300ms ease; }
 .sd-cta-btn:hover .sd-cta-arrow { transform: translate(3px, -3px); }
+.sd-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.sd-cta-btn-wp {
+  background: #25d366; color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+}
+.sd-cta-btn-wp:hover {
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.4), 0 0 0 1px #25d366;
+}
+.sd-cta-btn-email {
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--border);
+}
+.sd-cta-btn-email:hover {
+  background: var(--surface-2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
 
 /* ---- Responsive ---- */
 @media (max-width: 1100px) {

@@ -4,7 +4,7 @@ export default function FloatingActions() {
   return (
     <div className="fab-container">
       <a
-        href="https://wa.me/905XXXXXXXXX"
+        href="https://wa.me/905439500750"
         target="_blank"
         rel="noopener noreferrer"
         className="fab-action fab-whatsapp"
@@ -17,7 +17,7 @@ export default function FloatingActions() {
         </svg>
       </a>
       <a
-        href="tel:+905XXXXXXXXX"
+        href="tel:+905439500750"
         className="fab-action fab-phone"
         aria-label="Telefon"
         data-cursor="hover"
