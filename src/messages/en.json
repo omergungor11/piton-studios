@@ -209,7 +209,9 @@
     "previewTitle": "How it looks",
     "previewDesktop": "Desktop",
     "previewTablet": "Tablet",
-    "previewMobile": "Mobile"
+    "previewMobile": "Mobile",
+    "typography": "Typography",
+    "colours": "Colours"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Stories",

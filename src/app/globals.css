@@ -2673,6 +2673,135 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
   border: 1px solid var(--line); color: var(--muted);
 }
 
+/* ── TYPOGRAPHY & COLOURS ───────────────────────── */
+.pb-section {
+  margin: 0 0 56px;
+  display: flex; flex-direction: column; gap: 40px;
+}
+.pb-header {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  align-items: start; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.pb-heading {
+  display: flex; flex-direction: column; gap: 0;
+  font-family: var(--sans); font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.05; color: var(--ink);
+}
+.pb-heading-sub { color: var(--muted); font-weight: 400; }
+.pb-desc {
+  font-size: 14px; line-height: 1.8; color: var(--muted);
+  padding-top: 6px;
+}
+.pb-block { display: flex; flex-direction: column; gap: 14px; }
+.pb-block-label {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+.pb-block-sub { color: var(--muted); opacity: 0.6; }
+
+/* Font panel */
+.pb-font-panel {
+  position: relative; overflow: hidden;
+  border-radius: 20px; padding: 36px 40px 28px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  min-height: 280px;
+}
+.pb-font-left {
+  display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 1;
+}
+.pb-font-name-light {
+  font-size: clamp(22px, 3vw, 32px); font-weight: 300; opacity: 0.9;
+  white-space: nowrap; overflow: hidden;
+}
+.pb-font-name-bold {
+  font-size: clamp(28px, 4vw, 48px); font-weight: 700; color: #fff;
+  white-space: nowrap; overflow: hidden; margin-top: -4px;
+}
+.pb-font-alpha {
+  font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em; white-space: nowrap;
+}
+.pb-font-alpha.lower { color: rgba(255,255,255,0.3); }
+.pb-font-nums {
+  font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em;
+}
+.pb-font-right {
+  display: flex; align-items: center; position: relative; z-index: 1;
+}
+.pb-font-sample {
+  font-size: 12px; line-height: 1.9; color: rgba(255,255,255,0.38);
+  font-weight: 400;
+}
+.pb-font-watermark {
+  position: absolute; bottom: -16px; left: -8px; right: 0;
+  font-size: clamp(56px, 10vw, 100px); font-weight: 700;
+  color: rgba(255,255,255,0.055);
+  white-space: nowrap; overflow: hidden; pointer-events: none;
+  z-index: 0; line-height: 1;
+}
+
+/* Color swatches */
+.pb-swatches {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.pb-swatch {
+  position: relative; border-radius: 20px;
+  aspect-ratio: 1.1/1; overflow: hidden;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 22px;
+}
+.pb-swatch-name {
+  font-size: 14px; font-weight: 500; position: relative; z-index: 1;
+}
+.pb-swatch-hex {
+  font-family: var(--mono); font-size: 13px;
+  position: relative; z-index: 1; letter-spacing: 0.06em;
+}
+/* Inner nested rectangle — depth/dimension effect */
+.pb-swatch-inner {
+  position: absolute;
+  right: 12%; top: 50%; transform: translateY(-50%);
+  width: 36%; height: 70%;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+.pb-swatch-inner::after {
+  content: '';
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 58%; height: 58%;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.28);
+}
+.pb-swatch-inner.is-light {
+  background: rgba(0,0,0,0.07);
+  border-color: rgba(0,0,0,0.1);
+}
+.pb-swatch-inner.is-light::after {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .pb-header { grid-template-columns: 1fr; gap: 20px; }
+  .pb-font-panel { grid-template-columns: 1fr; }
+  .pb-font-right { display: none; }
+  .pb-swatches { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .pb-swatches { grid-template-columns: 1fr; }
+  .pb-swatch { aspect-ratio: 2/1; }
+  .pb-swatch-inner { top: 50%; width: 22%; height: 80%; right: 8%; }
+  .pb-font-panel { padding: 24px 20px 20px; }
+}
+
 /* ── MOCKUP PREVIEW ─────────────────────────────── */
 .pd-mockups {
   margin: 16px 0 48px;
