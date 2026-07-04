@@ -122,31 +122,33 @@ export default function ProjectDetail({ project }: Props) {
         </h2>
 
         {/* Inline image / preview showcase */}
-        <div className={`pd-inline-video glass${hasPreviews && view === 'mobile' ? ' pd-inline-mobile' : ''}`}>
-          <img
-            src={previewSrc}
-            alt={title}
-            style={{ objectPosition: 'top center' }}
-          />
-          {/* Desktop/Mobile toggle — görselin sağ üstünde */}
-          {hasPreviews && hasMobile && (
-            <div className="pd-preview-toggle">
-              <button
-                className={`pd-ptoggle-btn ${view === 'desktop' ? 'is-active' : ''}`}
-                onClick={() => setView('desktop')}
-              >
-                <IconDesktop /> Desktop
-              </button>
-              <button
-                className={`pd-ptoggle-btn ${view === 'mobile' ? 'is-active' : ''}`}
-                onClick={() => setView('mobile')}
-              >
-                <IconMobile /> Mobile
-              </button>
-            </div>
-          )}
-          <div className="pd-inline-video-overlay">
+        <div className="pd-preview-wrap">
+          {/* Bar: tag solda, toggle sağda */}
+          <div className="pd-preview-bar">
             <span className="pd-inline-video-tag">[ {kind || tags[0] || 'PROJECT'} · {year} ]</span>
+            {hasPreviews && hasMobile && (
+              <div className="pd-preview-toggle">
+                <button
+                  className={`pd-ptoggle-btn ${view === 'desktop' ? 'is-active' : ''}`}
+                  onClick={() => setView('desktop')}
+                >
+                  <IconDesktop /> Desktop
+                </button>
+                <button
+                  className={`pd-ptoggle-btn ${view === 'mobile' ? 'is-active' : ''}`}
+                  onClick={() => setView('mobile')}
+                >
+                  <IconMobile /> Mobile
+                </button>
+              </div>
+            )}
+          </div>
+          <div className={`pd-inline-video glass${hasPreviews && view === 'mobile' ? ' pd-inline-mobile' : ''}`}>
+            <img
+              src={previewSrc}
+              alt={title}
+              style={{ objectPosition: 'top center' }}
+            />
           </div>
         </div>
 
