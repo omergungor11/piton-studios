@@ -8,9 +8,13 @@ import { imageUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
 
 const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
+const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
+
+type ShowcaseView = 'desktop' | 'mobile';
 
 export default function ProjectsPage() {
   const [activeYear, setActiveYear] = useState('All');
+  const [showcaseView, setShowcaseView] = useState<ShowcaseView>('desktop');
   const t = useTranslations('projectsPage');
   const tr = useTranslations('reel');
   const tw = useTranslations('works');
@@ -27,9 +31,63 @@ export default function ProjectsPage() {
             accent: (chunks) => <span className="em">{chunks}</span>,
           })}
         </h1>
-        <p className="sp-hero-sub">
-          {t('subtitle')}
-        </p>
+        <p className="sp-hero-sub">{t('subtitle')}</p>
+      </section>
+
+      {/* Screenshot showcase */}
+      <section className="pp-showcase">
+        <div className="pp-showcase-head">
+          <span className="pp-showcase-label">
+            {PREVIEW_WORKS.length} projects · full-page preview
+          </span>
+          <div className="pd-preview-toggle">
+            <button
+              className={`pd-ptoggle-btn ${showcaseView === 'desktop' ? 'is-active' : ''}`}
+              onClick={() => setShowcaseView('desktop')}
+            >
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+              Desktop
+            </button>
+            <button
+              className={`pd-ptoggle-btn ${showcaseView === 'mobile' ? 'is-active' : ''}`}
+              onClick={() => setShowcaseView('mobile')}
+            >
+              <svg width="9" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+              </svg>
+              Mobile
+            </button>
+          </div>
+        </div>
+
+        <div className="pp-showcase-scroll">
+          {PREVIEW_WORKS.map((w) => {
+            const src =
+              showcaseView === 'mobile' && w.previews?.mobile
+                ? w.previews.mobile
+                : w.previews!.desktop!;
+            const title = tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title;
+            return (
+              <Link
+                key={w.n}
+                href={{ pathname: '/projects/[slug]', params: { slug: w.slug } }}
+                className={`pp-showcase-item ${showcaseView === 'mobile' ? 'is-mobile' : 'is-desktop'}`}
+                data-cursor="hover"
+                data-cursor-label="View ↗"
+              >
+                <div className="pp-showcase-screen">
+                  <img src={src} alt={title} loading="lazy" />
+                </div>
+                <div className="pp-showcase-meta">
+                  <span className="pp-showcase-n">[{w.n}]</span>
+                  <span className="pp-showcase-title">{title}</span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* Showreel */}

@@ -168,56 +168,40 @@ export default function ProjectDetail({ project }: Props) {
 
       {/* Related / Navigation */}
       <section className="pd-nav">
-        <div className="pd-nav-head">
-          <span className="pd-nav-tag">{td('moreWork')}</span>
-          <Link
-            href="/projects"
-            className="pd-nav-all"
-            data-cursor="hover"
-            data-cursor-label="↗"
-          >
-            {td('viewAll')}
-          </Link>
-        </div>
-        <div className="pd-nav-grid">
-          {prev && (
+        <div className="pd-nav-bar">
+          {prev ? (
             <Link
               href={{ pathname: '/projects/[slug]', params: { slug: prev.slug } }}
-              className="pd-nav-card glass"
+              className="pd-nav-link pd-nav-prev"
               data-cursor="hover"
-              data-cursor-label="Prev"
             >
-              <div className="pd-nav-card-media">
-                <img src={prev.type === 'work' && prev.previews?.desktop ? prev.previews.desktop : imageUrl(prev.image)} alt={prev.title} />
-              </div>
-              <div className="pd-nav-card-info">
+              <span className="pd-nav-arrow">←</span>
+              <span className="pd-nav-info">
                 <span className="pd-nav-dir">{td('prev')}</span>
-                <span className="pd-nav-card-title">{prev.title}</span>
-                <span className="pd-nav-card-kind">
-                  {prev.type === 'work' ? prev.kind : prev.tags.join(' · ')}
-                </span>
-              </div>
+                <span className="pd-nav-link-title">{prev.title}</span>
+                <span className="pd-nav-link-kind">{prev.type === 'work' ? prev.kind : prev.tags[0]}</span>
+              </span>
             </Link>
-          )}
-          {next && (
+          ) : <span />}
+
+          <Link href="/projects" className="pd-nav-all" data-cursor="hover" data-cursor-label="↗">
+            {td('viewAll')}
+          </Link>
+
+          {next ? (
             <Link
               href={{ pathname: '/projects/[slug]', params: { slug: next.slug } }}
-              className="pd-nav-card glass next"
+              className="pd-nav-link pd-nav-next"
               data-cursor="hover"
-              data-cursor-label="Next"
             >
-              <div className="pd-nav-card-info" style={{ textAlign: 'right' }}>
+              <span className="pd-nav-info" style={{ textAlign: 'right' }}>
                 <span className="pd-nav-dir">{td('next')}</span>
-                <span className="pd-nav-card-title">{next.title}</span>
-                <span className="pd-nav-card-kind">
-                  {next.type === 'work' ? next.kind : next.tags.join(' · ')}
-                </span>
-              </div>
-              <div className="pd-nav-card-media">
-                <img src={next.type === 'work' && next.previews?.desktop ? next.previews.desktop : imageUrl(next.image)} alt={next.title} />
-              </div>
+                <span className="pd-nav-link-title">{next.title}</span>
+                <span className="pd-nav-link-kind">{next.type === 'work' ? next.kind : next.tags[0]}</span>
+              </span>
+              <span className="pd-nav-arrow">→</span>
             </Link>
-          )}
+          ) : <span />}
         </div>
       </section>
     </PageShell>
