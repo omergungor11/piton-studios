@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 type Phase = 'loading' | 'exit' | 'done';
 
-const LOAD_MS = 1900;
-const EXIT_MS = 1200;
+const LOAD_MS = 700;
+const EXIT_MS = 650;
 
 export default function Preloader() {
   const [count, setCount] = useState(0);
