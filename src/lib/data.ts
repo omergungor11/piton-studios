@@ -80,8 +80,9 @@ export function getAllProjects(): Project[] {
 }
 
 export function getAdjacentProjects(slug: string): { prev: Project | null; next: Project | null } {
-  const all = getAllProjects();
-  const idx = all.findIndex((p) => (p.type === "work" ? p.slug : p.slug) === slug);
+  const all = WORKS.map((w) => ({ ...w, type: "work" as const }));
+  const idx = all.findIndex((p) => p.slug === slug);
+  if (idx === -1) return { prev: null, next: null };
   return {
     prev: idx > 0 ? all[idx - 1] : all[all.length - 1],
     next: idx < all.length - 1 ? all[idx + 1] : all[0],
