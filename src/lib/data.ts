@@ -20,7 +20,6 @@ export interface Work {
   collaborator?: string;
   previews?: {
     desktop?: string;
-    tablet?: string;
     mobile?: string;
   };
   brand?: {
@@ -122,7 +121,6 @@ export const WORKS: Work[] = [
     scope: "Web design, CMS, SEO",
     previews: {
       desktop: '/assets/previews/desktop/velis-ltd.webp',
-      tablet: '/assets/previews/tablet/velis-ltd.webp',
       mobile: '/assets/previews/mobile/velis-ltd.webp',
     },
     brand: {
@@ -153,7 +151,6 @@ export const WORKS: Work[] = [
     scope: "Web design, SEO, multi-language",
     previews: {
       desktop: '/assets/previews/desktop/bt-elevator.webp',
-      tablet: '/assets/previews/tablet/bt-elevator.webp',
       mobile: '/assets/previews/mobile/bt-elevator.webp',
     },
     brand: {
@@ -184,7 +181,6 @@ export const WORKS: Work[] = [
     scope: "Web app, platform, SEO",
     previews: {
       desktop: '/assets/previews/desktop/gel-gez-gor.webp',
-      tablet: '/assets/previews/tablet/gel-gez-gor.webp',
       mobile: '/assets/previews/mobile/gel-gez-gor.webp',
     },
     brand: {
@@ -215,7 +211,6 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, SEO",
     previews: {
       desktop: '/assets/previews/desktop/nexos-investment.webp',
-      tablet: '/assets/previews/tablet/nexos-investment.webp',
       mobile: '/assets/previews/mobile/nexos-investment.webp',
     },
   },
@@ -237,7 +232,6 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, SEO",
     previews: {
       desktop: '/assets/previews/desktop/alp-sigorta.webp',
-      tablet: '/assets/previews/tablet/alp-sigorta.webp',
       mobile: '/assets/previews/mobile/alp-sigorta.webp',
     },
   },
@@ -259,7 +253,6 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, SEO",
     previews: {
       desktop: '/assets/previews/desktop/pampas-investment.webp',
-      tablet: '/assets/previews/tablet/pampas-investment.webp',
       mobile: '/assets/previews/mobile/pampas-investment.webp',
     },
   },
@@ -315,7 +308,6 @@ export const WORKS: Work[] = [
     scope: "Web design, construction, portfolio",
     previews: {
       desktop: '/assets/previews/desktop/ekh-yapi.webp',
-      tablet: '/assets/previews/tablet/ekh-yapi.webp',
       mobile: '/assets/previews/mobile/ekh-yapi.webp',
     },
   },
@@ -337,7 +329,6 @@ export const WORKS: Work[] = [
     scope: "Web design, SEO, directory",
     previews: {
       desktop: '/assets/previews/desktop/night-club-katalog.webp',
-      tablet: '/assets/previews/tablet/night-club-katalog.webp',
       mobile: '/assets/previews/mobile/night-club-katalog.webp',
     },
   },
@@ -358,7 +349,6 @@ export const WORKS: Work[] = [
     ],
     scope: "Web app, directory, SEO",
     previews: {
-      tablet: '/assets/previews/tablet/kibris-gece-hayati.webp',
       mobile: '/assets/previews/mobile/kibris-gece-hayati.webp',
     },
   },
@@ -380,7 +370,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/gece-kibris.webp',
-      tablet: '/assets/previews/tablet/gece-kibris.webp',
       mobile: '/assets/previews/mobile/gece-kibris.webp',
     },
   },
@@ -402,7 +391,6 @@ export const WORKS: Work[] = [
     scope: "Web app, streaming, design",
     previews: {
       desktop: '/assets/previews/desktop/radyo-juke.webp',
-      tablet: '/assets/previews/tablet/radyo-juke.webp',
       mobile: '/assets/previews/mobile/radyo-juke.webp',
     },
   },
@@ -424,7 +412,6 @@ export const WORKS: Work[] = [
     scope: "Web design, portfolio, personal brand",
     previews: {
       desktop: '/assets/previews/desktop/ozge-ozler.webp',
-      tablet: '/assets/previews/tablet/ozge-ozler.webp',
       mobile: '/assets/previews/mobile/ozge-ozler.webp',
     },
   },
@@ -446,7 +433,6 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, trading",
     previews: {
       desktop: '/assets/previews/desktop/rnv-trading.webp',
-      tablet: '/assets/previews/tablet/rnv-trading.webp',
       mobile: '/assets/previews/mobile/rnv-trading.webp',
     },
   },
@@ -468,7 +454,6 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, investment",
     previews: {
       desktop: '/assets/previews/desktop/pinnacle-yatirim.webp',
-      tablet: '/assets/previews/tablet/pinnacle-yatirim.webp',
       mobile: '/assets/previews/mobile/pinnacle-yatirim.webp',
     },
   },
@@ -507,7 +492,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/prenses-night-club.webp',
-      tablet: '/assets/previews/tablet/prenses-night-club.webp',
       mobile: '/assets/previews/mobile/prenses-night-club.webp',
     },
   },
@@ -529,7 +513,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/miracle-night-club.webp',
-      tablet: '/assets/previews/tablet/miracle-night-club.webp',
       mobile: '/assets/previews/mobile/miracle-night-club.webp',
     },
   },
@@ -636,7 +619,6 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, international",
     previews: {
       desktop: '/assets/previews/desktop/homes-in-mediterranean.webp',
-      tablet: '/assets/previews/tablet/homes-in-mediterranean.webp',
       mobile: '/assets/previews/mobile/homes-in-mediterranean.webp',
     },
   },
@@ -675,7 +657,6 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, SEO",
     previews: {
       desktop: '/assets/previews/desktop/kibris-lefkosa-taksi.webp',
-      tablet: '/assets/previews/tablet/kibris-lefkosa-taksi.webp',
       mobile: '/assets/previews/mobile/kibris-lefkosa-taksi.webp',
     },
   },
@@ -697,7 +678,6 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
     previews: {
       desktop: '/assets/previews/desktop/aydin-transfer.webp',
-      tablet: '/assets/previews/tablet/aydin-transfer.webp',
       mobile: '/assets/previews/mobile/aydin-transfer.webp',
     },
   },
@@ -736,7 +716,6 @@ export const WORKS: Work[] = [
     scope: "Web design, hospitality, booking",
     previews: {
       desktop: '/assets/previews/desktop/sammys-hotel.webp',
-      tablet: '/assets/previews/tablet/sammys-hotel.webp',
       mobile: '/assets/previews/mobile/sammys-hotel.webp',
     },
   },
@@ -758,7 +737,6 @@ export const WORKS: Work[] = [
     scope: "Web design, services, corporate",
     previews: {
       desktop: '/assets/previews/desktop/all-pro-cyprus.webp',
-      tablet: '/assets/previews/tablet/all-pro-cyprus.webp',
       mobile: '/assets/previews/mobile/all-pro-cyprus.webp',
     },
   },
@@ -780,7 +758,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/kibris-nights-club.webp',
-      tablet: '/assets/previews/tablet/kibris-nights-club.webp',
       mobile: '/assets/previews/mobile/kibris-nights-club.webp',
     },
   },
@@ -802,7 +779,6 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, engineering",
     previews: {
       desktop: '/assets/previews/desktop/alert-muhendislik.webp',
-      tablet: '/assets/previews/tablet/alert-muhendislik.webp',
       mobile: '/assets/previews/mobile/alert-muhendislik.webp',
     },
   },
@@ -824,7 +800,6 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, construction",
     previews: {
       desktop: '/assets/previews/desktop/beton-store.webp',
-      tablet: '/assets/previews/tablet/beton-store.webp',
       mobile: '/assets/previews/mobile/beton-store.webp',
     },
   },
@@ -846,7 +821,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/crazy-girl-night-club.webp',
-      tablet: '/assets/previews/tablet/crazy-girl-night-club.webp',
       mobile: '/assets/previews/mobile/crazy-girl-night-club.webp',
     },
   },
@@ -868,7 +842,6 @@ export const WORKS: Work[] = [
     scope: "Web design, directory, entertainment",
     previews: {
       desktop: '/assets/previews/desktop/kibris-katalog.webp',
-      tablet: '/assets/previews/tablet/kibris-katalog.webp',
       mobile: '/assets/previews/mobile/kibris-katalog.webp',
     },
   },
@@ -890,7 +863,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, SEO",
     previews: {
       desktop: '/assets/previews/desktop/misse-night-club.webp',
-      tablet: '/assets/previews/tablet/misse-night-club.webp',
       mobile: '/assets/previews/mobile/misse-night-club.webp',
     },
   },
@@ -912,7 +884,6 @@ export const WORKS: Work[] = [
     scope: "Web design, F&B, brand",
     previews: {
       desktop: '/assets/previews/desktop/virginia-ice-cream.webp',
-      tablet: '/assets/previews/tablet/virginia-ice-cream.webp',
       mobile: '/assets/previews/mobile/virginia-ice-cream.webp',
     },
   },
@@ -934,7 +905,6 @@ export const WORKS: Work[] = [
     scope: "Web design, entertainment, multi-venue",
     previews: {
       desktop: '/assets/previews/desktop/faraon-night-clubs.webp',
-      tablet: '/assets/previews/tablet/faraon-night-clubs.webp',
       mobile: '/assets/previews/mobile/faraon-night-clubs.webp',
     },
   },
@@ -955,7 +925,6 @@ export const WORKS: Work[] = [
     ],
     scope: "Web design, transportation, booking",
     previews: {
-      tablet: '/assets/previews/tablet/welcome-pickups.webp',
       mobile: '/assets/previews/mobile/welcome-pickups.webp',
     },
   },

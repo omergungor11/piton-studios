@@ -7,7 +7,6 @@ interface Props {
   title: string;
   previews?: {
     desktop?: string;
-    tablet?: string;
     mobile?: string;
   };
 }
@@ -15,7 +14,6 @@ interface Props {
 export default function ProjectMockups({ image, title, previews }: Props) {
   const t = useTranslations('projectDetail');
   const desktopImg = previews?.desktop || image;
-  const tabletImg = previews?.tablet || image;
   const mobileImg = previews?.mobile || image;
 
   return (
@@ -25,7 +23,7 @@ export default function ProjectMockups({ image, title, previews }: Props) {
         <h2 className="pd-section-title">{t('previewTitle')}</h2>
       </div>
 
-      {/* Desktop */}
+      {/* Desktop browser — masaüstünde görünür */}
       <div className="pd-mockup-desktop-wrap">
         <div className="pd-mockup-browser">
           <div className="pd-browser-bar">
@@ -46,31 +44,16 @@ export default function ProjectMockups({ image, title, previews }: Props) {
         <span className="pd-mockup-label">{t('previewDesktop')}</span>
       </div>
 
-      {/* Tablet + Mobile */}
-      <div className="pd-mockup-row">
-        {/* Tablet */}
-        <div className="pd-mockup-tablet-wrap">
-          <div className="pd-tablet-frame">
-            <div className="pd-tablet-camera" aria-hidden="true" />
-            <div className="pd-mockup-screen pd-screen-tablet">
-              <img src={tabletImg} alt={`${title} — ${t('previewTablet')}`} loading="lazy" />
-            </div>
-            <div className="pd-tablet-home" aria-hidden="true" />
+      {/* Mobile — sadece mobilde görünür */}
+      <div className="pd-mockup-mobile-outer">
+        <div className="pd-mobile-frame">
+          <div className="pd-mobile-island" aria-hidden="true" />
+          <div className="pd-mockup-screen pd-screen-mobile">
+            <img src={mobileImg} alt={`${title} — ${t('previewMobile')}`} loading="lazy" />
           </div>
-          <span className="pd-mockup-label">{t('previewTablet')}</span>
+          <div className="pd-mobile-home" aria-hidden="true" />
         </div>
-
-        {/* Mobile */}
-        <div className="pd-mockup-mobile-wrap">
-          <div className="pd-mobile-frame">
-            <div className="pd-mobile-island" aria-hidden="true" />
-            <div className="pd-mockup-screen pd-screen-mobile">
-              <img src={mobileImg} alt={`${title} — ${t('previewMobile')}`} loading="lazy" />
-            </div>
-            <div className="pd-mobile-home" aria-hidden="true" />
-          </div>
-          <span className="pd-mockup-label">{t('previewMobile')}</span>
-        </div>
+        <span className="pd-mockup-label">{t('previewMobile')}</span>
       </div>
     </section>
   );

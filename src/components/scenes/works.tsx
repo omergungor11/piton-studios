@@ -63,11 +63,22 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
                 <span className="proj-dot" />
                 <span className="proj-browser-url">pitonstudios.dev/{work.slug}</span>
               </div>
-              <div className="proj-screen">
-                <span className="proj-screen-num">{work.n}</span>
-                <h2 className="proj-screen-title">{work.title}</h2>
-                <span className="proj-screen-kind">{work.kind}</span>
-              </div>
+              {work.previews?.desktop ? (
+                <div className="proj-screen proj-screen-img">
+                  <img src={work.previews.desktop} alt={work.title} />
+                  <div className="proj-screen-overlay">
+                    <span className="proj-screen-num">{work.n}</span>
+                    <h2 className="proj-screen-title">{work.title}</h2>
+                    <span className="proj-screen-kind">{work.kind}</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="proj-screen">
+                  <span className="proj-screen-num">{work.n}</span>
+                  <h2 className="proj-screen-title">{work.title}</h2>
+                  <span className="proj-screen-kind">{work.kind}</span>
+                </div>
+              )}
             </Link>
 
             {/* Right: Features */}
