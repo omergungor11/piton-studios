@@ -1,14 +1,30 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
-import ProjectMockups from './project-mockups';
 
 interface Props {
   project: Project;
+}
+
+function IconDesktop() {
+  return (
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+    </svg>
+  );
+}
+
+function IconMobile() {
+  return (
+    <svg width="9" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+    </svg>
+  );
 }
 
 export default function ProjectDetail({ project }: Props) {
@@ -26,16 +42,21 @@ export default function ProjectDetail({ project }: Props) {
   const tags = project.tags;
   const image = imageUrl(project.image);
 
-  const client = project.type === 'work' ? project.client : project.client;
-  const kind = project.type === 'work' ? project.kind : undefined;
-  const scope = project.type === 'work' ? project.scope : undefined;
+  const client       = project.type === 'work' ? project.client : project.client;
+  const kind         = project.type === 'work' ? project.kind : undefined;
+  const scope        = project.type === 'work' ? project.scope : undefined;
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
-  const number = project.type === 'work' ? project.n : project.no;
-  const previews = project.type === 'work' ? project.previews : undefined;
-  const isWebProject = project.type === 'work' && (
-    project.kind.toLowerCase().includes('web') ||
-    project.tags.some((t) => ['wordpress', 'next.js', 'vercel', 'woocommerce'].includes(t.toLowerCase()))
-  );
+  const number       = project.type === 'work' ? project.n : project.no;
+  const previews     = project.type === 'work' ? project.previews : undefined;
+
+  const hasPreviews  = !!(previews?.desktop);
+  const hasMobile    = !!(previews?.mobile);
+
+  const [view, setView] = useState<'desktop' | 'mobile'>('desktop');
+
+  const previewSrc = hasPreviews
+    ? (view === 'mobile' && hasMobile ? previews!.mobile! : previews!.desktop!)
+    : image;
 
   // Resolve translated content by slug, falling back to data.ts values
   const translationNs = project.type === 'work' ? tw : ts;
@@ -100,9 +121,30 @@ export default function ProjectDetail({ project }: Props) {
           {title} — <span className="em">{summary}</span>
         </h2>
 
-        {/* Inline image showcase */}
+        {/* Inline image / preview showcase */}
         <div className="pd-inline-video glass">
-          <img src={image} alt={title} />
+          <img
+            src={previewSrc}
+            alt={title}
+            style={{ objectPosition: 'top center' }}
+          />
+          {/* Desktop/Mobile toggle — görselin sağ üstünde */}
+          {hasPreviews && hasMobile && (
+            <div className="pd-preview-toggle">
+              <button
+                className={`pd-ptoggle-btn ${view === 'desktop' ? 'is-active' : ''}`}
+                onClick={() => setView('desktop')}
+              >
+                <IconDesktop /> Desktop
+              </button>
+              <button
+                className={`pd-ptoggle-btn ${view === 'mobile' ? 'is-active' : ''}`}
+                onClick={() => setView('mobile')}
+              >
+                <IconMobile /> Mobile
+              </button>
+            </div>
+          )}
           <div className="pd-inline-video-overlay">
             <span className="pd-inline-video-tag">[ {kind || tags[0] || 'PROJECT'} · {year} ]</span>
           </div>
@@ -121,15 +163,6 @@ export default function ProjectDetail({ project }: Props) {
           </div>
         )}
       </section>
-
-      {/* Mockup Preview */}
-      {(isWebProject || previews) && (
-        <ProjectMockups
-          image={image}
-          title={title}
-          previews={previews}
-        />
-      )}
 
       {/* Related / Navigation */}
       <section className="pd-nav">
@@ -153,7 +186,7 @@ export default function ProjectDetail({ project }: Props) {
               data-cursor-label="Prev"
             >
               <div className="pd-nav-card-media">
-                <img src={imageUrl(prev.image)} alt={prev.title} />
+                <img src={prev.type === 'work' && prev.previews?.desktop ? prev.previews.desktop : imageUrl(prev.image)} alt={prev.title} />
               </div>
               <div className="pd-nav-card-info">
                 <span className="pd-nav-dir">{td('prev')}</span>
@@ -179,7 +212,7 @@ export default function ProjectDetail({ project }: Props) {
                 </span>
               </div>
               <div className="pd-nav-card-media">
-                <img src={imageUrl(next.image)} alt={next.title} />
+                <img src={next.type === 'work' && next.previews?.desktop ? next.previews.desktop : imageUrl(next.image)} alt={next.title} />
               </div>
             </Link>
           )}
