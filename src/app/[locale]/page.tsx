@@ -16,6 +16,7 @@ const ThreeScene = dynamic(() => import("@/components/three-scene"), {
   ssr: false,
 });
 import HeroScene from "@/components/scenes/hero";
+import SparkScene from "@/components/scenes/spark";
 import ManifestoScene from "@/components/scenes/manifesto";
 import ServicesScene from "@/components/scenes/services";
 import WorksScene from "@/components/scenes/works";
@@ -172,6 +173,7 @@ export default function Home() {
           const state = revealed.has(i) ? "reveal" : "";
           let inner = null;
           if (s.id === "hero") inner = <HeroScene clock={clock} />;
+          else if (s.id === "spark") inner = <SparkScene />;
           else if (s.id === "note") inner = <ManifestoScene />;
           else if (s.id === "services") inner = <ServicesScene />;
           else if (s.id === "work") inner = <WorksScene onPreview={setPreview} />;

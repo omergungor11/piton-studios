@@ -96,6 +96,14 @@
     "technologies": "Teknolojiler",
     "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
   },
+  "spark": {
+    "eyebrow": "Ücretsiz Danışma · Hızlı Yanıt",
+    "title": "Fikrinizi & Projenizi <accent>Konuşalım</accent>",
+    "sub": "Web tasarımdan dijital pazarlamaya — ne yapmak istediğinizi anlatın, size en uygun çözümü birlikte belirleyelim.",
+    "wpBtn": "WhatsApp'tan Yazın",
+    "emailBtn": "E-posta Gönderin",
+    "note": "Mesajınız genellikle birkaç saat içinde yanıtlanır."
+  },
   "contact": {
     "eyebrow": "§ 06 · İletişim",
     "phone": "Telefon",
