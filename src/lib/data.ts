@@ -1,9 +1,3 @@
-export interface ColorSwatch {
-  hex: string;
-  name: string;
-  light?: boolean;
-}
-
 export interface Work {
   n: string;
   slug: string;
@@ -21,14 +15,6 @@ export interface Work {
   previews?: {
     desktop?: string;
     mobile?: string;
-  };
-  brand?: {
-    desc?: string;
-    typography?: {
-      family: string;
-      googleFont?: string;
-    };
-    colors?: ColorSwatch[];
   };
 }
 
@@ -122,16 +108,7 @@ export const WORKS: Work[] = [
     previews: {
       desktop: '/assets/previews/desktop/velis-ltd.webp',
       mobile: '/assets/previews/mobile/velis-ltd.webp',
-    },
-    brand: {
-      desc: "Tasarımda sektörün sağlam yapısını yansıtan Inter fontu tercih edildi. Renk paleti, 25 yılı aşkın deneyimi ve güveni simgeleyen koyu lacivert ile enerjiyi temsil eden vurgu tonlarından oluştu.",
-      typography: { family: "Inter", googleFont: "Inter:wght@300;400;600;700" },
-      colors: [
-        { hex: "#1B2A3E", name: "Koyu Lacivert" },
-        { hex: "#E05C2A", name: "Tuğla Oranj" },
-        { hex: "#F4F4F6", name: "Açık Gri", light: true },
-      ],
-    },
+    }
   },
   {
     n: "02",
@@ -152,16 +129,7 @@ export const WORKS: Work[] = [
     previews: {
       desktop: '/assets/previews/desktop/bt-elevator.webp',
       mobile: '/assets/previews/mobile/bt-elevator.webp',
-    },
-    brand: {
-      desc: "Modern asansör teknolojisini yansıtan Montserrat fontu ile kurumsal kimlik güçlendirildi. Mavi tonların baskınlığı sektörün güven ve teknoloji çağrışımlarını taşıyor.",
-      typography: { family: "Montserrat", googleFont: "Montserrat:wght@300;400;600;700" },
-      colors: [
-        { hex: "#0A2D5A", name: "Derin Lacivert" },
-        { hex: "#1E7DC6", name: "Elektrik Mavisi" },
-        { hex: "#EFF5FB", name: "Buz Beyazı", light: true },
-      ],
-    },
+    }
   },
   {
     n: "03",
@@ -182,16 +150,7 @@ export const WORKS: Work[] = [
     previews: {
       desktop: '/assets/previews/desktop/gel-gez-gor.webp',
       mobile: '/assets/previews/mobile/gel-gez-gor.webp',
-    },
-    brand: {
-      desc: "Binlerce ilanın rahatça gezildiği bir platformda Nunito'nun yuvarlak ve samimi yapısı kullanıcıyı içeri çekiyor. Turuncu vurgu tonu aksiyon noktalarında yönlendiricilik sağlıyor.",
-      typography: { family: "Nunito", googleFont: "Nunito:wght@400;600;700;800" },
-      colors: [
-        { hex: "#1E3A5F", name: "Gece Mavisi" },
-        { hex: "#F4831F", name: "Canlı Turuncu" },
-        { hex: "#FAFAFA", name: "Beyaz Zemin", light: true },
-      ],
-    },
+    }
   },
   {
     n: "04",
