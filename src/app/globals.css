@@ -816,11 +816,9 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
   height: auto;
   filter: drop-shadow(0 22px 72px rgba(43, 156, 224, 0.5));
   animation: preSpin 5s linear infinite;
-  transition: transform 550ms cubic-bezier(.5, 0, .2, 1), filter 550ms ease;
 }
 .preloader.is-exit .preloader-logo {
   animation: none;
-  transform: translateY(-15vh) rotate(720deg) scale(0.42);
 }
 @keyframes preSpin {
   from { transform: rotate(0deg); }
