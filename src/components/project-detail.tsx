@@ -122,7 +122,7 @@ export default function ProjectDetail({ project }: Props) {
         </h2>
 
         {/* Inline image / preview showcase */}
-        <div className="pd-inline-video glass">
+        <div className={`pd-inline-video glass${hasPreviews && view === 'mobile' ? ' pd-inline-mobile' : ''}`}>
           <img
             src={previewSrc}
             alt={title}
