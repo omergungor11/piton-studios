@@ -1485,8 +1485,9 @@ export const MANIFESTO =
   "We make cinematic identities for studios that believe pace, restraint, and a little grain still matter.";
 
 export const SCENES: Scene[] = [
-  { id: "hero", label: "Ana Sayfa", hash: "hero" },
-  { id: "note", label: "Hakkımızda", hash: "note" },
+  { id: "hero",  label: "Ana Sayfa",    hash: "hero"  },
+  { id: "spark", label: "Hemen Başla",  hash: "spark" },
+  { id: "note",  label: "Hakkımızda",   hash: "note"  },
   { id: "services", label: "Hizmetler", hash: "services" },
   { id: "work", label: "Projeler", hash: "projects" },
   { id: "about", label: "Biz", hash: "about" },

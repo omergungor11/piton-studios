@@ -97,6 +97,14 @@
     "technologies": "Technologies",
     "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
   },
+  "spark": {
+    "eyebrow": "Free Consultation · Fast Response",
+    "title": "Let's Talk About Your <accent>Idea & Project</accent>",
+    "sub": "From web design to digital marketing — tell us what you want to build, and we'll find the right solution together.",
+    "wpBtn": "Message on WhatsApp",
+    "emailBtn": "Send an Email",
+    "note": "We typically reply within a few hours."
+  },
   "contact": {
     "eyebrow": "§ 06 · Contact",
     "general": "General",

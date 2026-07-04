@@ -97,6 +97,14 @@
     "technologies": "Технологии",
     "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
   },
+  "spark": {
+    "eyebrow": "Бесплатная консультация · Быстрый ответ",
+    "title": "Обсудим Вашу <accent>Идею и Проект</accent>",
+    "sub": "От веб-дизайна до digital-маркетинга — расскажите, что хотите создать, и мы вместе найдём лучшее решение.",
+    "wpBtn": "Написать в WhatsApp",
+    "emailBtn": "Отправить E-mail",
+    "note": "Обычно мы отвечаем в течение нескольких часов."
+  },
   "contact": {
     "eyebrow": "§ 06 · Контакт",
     "cursorLabel": "Отправить ↗",
