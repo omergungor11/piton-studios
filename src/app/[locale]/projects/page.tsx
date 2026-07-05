@@ -37,9 +37,6 @@ export default function ProjectsPage() {
       {/* Screenshot showcase */}
       <section className="pp-showcase">
         <div className="pp-showcase-head">
-          <span className="pp-showcase-label">
-            {PREVIEW_WORKS.length} projects · full-page preview
-          </span>
           <div className="pd-preview-toggle">
             <button
               className={`pd-ptoggle-btn ${showcaseView === 'desktop' ? 'is-active' : ''}`}

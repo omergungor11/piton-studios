@@ -2599,15 +2599,16 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
 .pp-showcase-item.is-mobile  { width: 148px; }
 .pp-showcase-screen {
   border-radius: 12px; overflow: hidden;
-  height: 460px; overflow-y: auto; overflow-x: hidden;
   border: 1px solid var(--line);
-  scrollbar-width: thin; scrollbar-color: var(--line) transparent;
   background: var(--surface-2);
 }
-.pp-showcase-screen::-webkit-scrollbar { width: 3px; }
-.pp-showcase-screen::-webkit-scrollbar-track { background: transparent; }
-.pp-showcase-screen::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
-.pp-showcase-screen img { width: 100%; height: auto; display: block; }
+.pp-showcase-item.is-desktop .pp-showcase-screen { height: 162px; }
+.pp-showcase-item.is-mobile  .pp-showcase-screen { height: 264px; }
+.pp-showcase-screen img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+}
 .pp-showcase-meta { display: flex; flex-direction: column; gap: 3px; }
 .pp-showcase-n {
   font-family: var(--mono); font-size: 9px; letter-spacing: 0.25em;
@@ -2618,9 +2619,10 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 @media (max-width: 640px) {
-  .pp-showcase-item.is-desktop { width: 220px; }
-  .pp-showcase-item.is-mobile  { width: 124px; }
-  .pp-showcase-screen { height: 380px; }
+  .pp-showcase-item.is-desktop { width: 200px; }
+  .pp-showcase-item.is-mobile  { width: 116px; }
+  .pp-showcase-item.is-desktop .pp-showcase-screen { height: 122px; }
+  .pp-showcase-item.is-mobile  .pp-showcase-screen { height: 200px; }
 }
 
 /* Projects page — Showreel */
@@ -2804,9 +2806,24 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  aspect-ratio: 21/9;
+  aspect-ratio: 16/9;
   margin-bottom: 24px;
   cursor: none;
+}
+/* Mobile preview — portrait frame */
+.pd-hero.pd-hero-mobile {
+  aspect-ratio: 9/16;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Desktop/Mobile toggle inside hero */
+.pd-hero-toggle {
+  position: absolute; top: 16px; right: 16px; z-index: 3;
+  display: flex; gap: 3px;
+  background: rgba(0,0,0,0.52); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px; padding: 3px;
 }
 @media (pointer: coarse) { .pd-hero { cursor: auto; } }
 .pd-hero-video {
@@ -2887,35 +2904,6 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 .pd-body-title .em { font-style: italic; color: var(--accent); text-transform: none; }
 
 /* Inline video in body */
-.pd-inline-video {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 32px;
-  aspect-ratio: 16/9;
-  cursor: none;
-  transition: aspect-ratio 0ms, max-width 300ms, margin 300ms;
-}
-.pd-inline-mobile {
-  aspect-ratio: 9/18;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (pointer: coarse) { .pd-inline-video { cursor: auto; } }
-.pd-inline-video video,
-.pd-inline-video img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: contrast(1.04) saturate(0.92);
-}
-/* Bar above the inline video */
-.pd-preview-wrap { margin-bottom: 32px; }
-.pd-preview-wrap .pd-inline-video { margin-bottom: 0; }
-.pd-preview-bar {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 10px; gap: 12px;
-}
 /* Desktop/Mobile toggle */
 .pd-preview-toggle {
   display: flex; gap: 3px;
@@ -2936,14 +2924,6 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 .pd-ptoggle-btn:not(.is-active):hover { color: #fff; background: rgba(255,255,255,0.1); }
 @media (max-width: 480px) {
   .pd-ptoggle-btn { padding: 4px 10px; font-size: 8px; }
-}
-.pd-inline-video-tag {
-  font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--muted);
-  padding: 6px 12px; border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface-2);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .pd-body-text p {
   font-size: 14px; line-height: 1.8;
