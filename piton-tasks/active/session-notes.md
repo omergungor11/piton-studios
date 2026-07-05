@@ -155,3 +155,46 @@ _(session devam ediyor)_
 - 32 proje WORKS array'inde, ilk 6'sı anasayfa slider'da gösteriliyor
 - STORIES array hala var ama anasayfada ve projeler sayfasında kullanılmıyor
 - Nav artık anasayfa ve iç sayfalarda tutarlı (chrome component)
+
+---
+
+## 2026-07-05 — Session 5
+
+### Completed
+- [x] Proje detay sayfalarına Desktop/Mobile toggle eklendi (CSS responsive yerine explicit buton)
+- [x] Typography & Colors (brand section) tamamen kaldırıldı — component, CSS, i18n, data
+- [x] `getAdjacentProjects` sadece WORKS üzerinde iterate ediyor (STORIES dahil edilmiyordu)
+- [x] Preview toggle + screenshot, body section'dan hero section'a taşındı
+- [x] Proje detay hero tamamen yeniden tasarlandı — screenshot IS the hero (16/9 aspect)
+- [x] Hero içinde Desktop/Mobile toggle sağ üstte (dark glass pill)
+- [x] Mobile preview modunda hero 9/16 portrait oranına geçiyor (`.pd-hero-mobile`)
+- [x] `pd-preview-wrap` inline section body'den kaldırıldı
+- [x] Projeler sayfasına `pp-showcase` yatay kaydırmalı screenshot şeridi eklendi
+- [x] Prev/next nav görsel kartlar yerine temiz 3 sütun metin bar'a dönüştürüldü
+- [x] Preloader 3.1s'dan ~1.35s'a kısaltıldı
+- [x] Spark CTA scene eklendi (hero ile manifesto arasında) — pulse animasyon, istatistik, WA + email butonları
+- [x] Spark subtitle AI/otomasyon vurgusu ile güncellendi
+- [x] Preloader logo fly-up animasyonu kaldırıldı (exit'te sadece fade)
+- [x] "28 projects · full-page preview" etiketi projeler sayfasından kaldırıldı
+- [x] Showcase kartları: `object-fit: cover` ile landscape screenshot'larda boş alan giderildi
+- [x] Preview tag, görselin üstünden çıkarılıp üst bar'a taşındı (`.pd-preview-bar`)
+
+### Pending / Yarım Kalan
+- [ ] Proje tarihleri düzeltilecek (kullanıcı söyleyecek)
+- [ ] Mockup görselleri eksik projeler için eklenecek
+- [ ] Admin panel Supabase Auth ile koruma
+- [ ] Contact form backend entegrasyonu
+- [ ] SEO meta tags (og:image, twitter cards)
+- [ ] Custom domain bağlama
+
+### Next Session
+- [ ] /tr/projeler ve proje detay sayfalarını tarayıcıda görsel kontrol
+- [ ] Eksik preview'ı olan projeler için screenshot ekle
+- [ ] SEO + analytics kurulumu
+- [ ] Performance audit (Lighthouse)
+
+### Notes
+- Hero'da preview yoksa (hasPreviews=false): eski thumbnail gösterilir, pd-hero-tag görünür
+- Hero'da preview varsa: screenshot gösterilir, toggle sağ üstte, tag gizlenir
+- Showcase card genişlikleri: desktop 260px / mobile 148px; yükseklikler: 162px / 264px
+- Anasayfa SCENES sırası: hero → spark → note → services → work → about → contact (7 scene)
