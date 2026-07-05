@@ -36,52 +36,78 @@ export default function ProjectDetail({ project }: Props) {
     project.type === 'work' ? project.slug : project.slug
   );
 
-  const slug = project.type === 'work' ? project.slug : project.slug;
-  const year = project.year;
-  const role = project.role;
-  const tags = project.tags;
-  const image = imageUrl(project.image);
-
+  const slug         = project.type === 'work' ? project.slug : project.slug;
+  const year         = project.year;
+  const role         = project.role;
+  const tags         = project.tags;
+  const image        = imageUrl(project.image);
   const client       = project.type === 'work' ? project.client : project.client;
   const kind         = project.type === 'work' ? project.kind : undefined;
   const scope        = project.type === 'work' ? project.scope : undefined;
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
   const number       = project.type === 'work' ? project.n : project.no;
   const previews     = project.type === 'work' ? project.previews : undefined;
-
   const hasPreviews  = !!(previews?.desktop);
   const hasMobile    = !!(previews?.mobile);
 
   const [view, setView] = useState<'desktop' | 'mobile'>('desktop');
 
-  const previewSrc = hasPreviews
+  const heroSrc = hasPreviews
     ? (view === 'mobile' && hasMobile ? previews!.mobile! : previews!.desktop!)
     : image;
 
-  // Resolve translated content by slug, falling back to data.ts values
   const translationNs = project.type === 'work' ? tw : ts;
-  const title = translationNs.has(`${slug}.title`) ? translationNs(`${slug}.title`) : project.title;
+  const title   = translationNs.has(`${slug}.title`)   ? translationNs(`${slug}.title`)   : project.title;
   const summary = project.type === 'work'
     ? (tw.has(`${slug}.summary`) ? tw(`${slug}.summary`) : project.summary)
-    : (ts.has(`${slug}.sub`) ? ts(`${slug}.sub`) : project.sub);
+    : (ts.has(`${slug}.sub`)     ? ts(`${slug}.sub`)     : project.sub);
   const body: string[] = translationNs.has(`${slug}.body`)
     ? (translationNs.raw(`${slug}.body`) as string[])
     : (project.type === 'work' ? project.body : project.body);
 
   return (
     <PageShell>
-      {/* Hero image */}
-      <section className="pd-hero">
+      {/* Hero — screenshot showcase */}
+      <section className={`pd-hero${hasPreviews && view === 'mobile' ? ' pd-hero-mobile' : ''}`}>
+        {/* Görsel */}
         <div className="pd-hero-video">
-          <img src={image} alt={title} />
+          <img
+            src={heroSrc}
+            alt={title}
+            style={{ objectPosition: hasPreviews ? 'top center' : 'center' }}
+          />
           <div className="pd-hero-fade" />
         </div>
+
+        {/* Desktop / Mobile toggle — sağ üst */}
+        {hasPreviews && hasMobile && (
+          <div className="pd-hero-toggle">
+            <button
+              className={`pd-ptoggle-btn ${view === 'desktop' ? 'is-active' : ''}`}
+              onClick={() => setView('desktop')}
+            >
+              <IconDesktop /> Desktop
+            </button>
+            <button
+              className={`pd-ptoggle-btn ${view === 'mobile' ? 'is-active' : ''}`}
+              onClick={() => setView('mobile')}
+            >
+              <IconMobile /> Mobile
+            </button>
+          </div>
+        )}
+
+        {/* Proje bilgisi — alt sol */}
         <div className="pd-hero-overlay">
           <span className="pd-hero-n">[{number}]</span>
           <h1 className="pd-hero-title">{title}</h1>
           <span className="pd-hero-year">{year}</span>
         </div>
-        <div className="pd-hero-tag">{td('mediaTag')}</div>
+
+        {/* Kategori etiketi — sol üst (sadece preview yoksa) */}
+        {!hasPreviews && (
+          <div className="pd-hero-tag">{td('mediaTag')}</div>
+        )}
       </section>
 
       {/* Metadata bar */}
@@ -121,42 +147,12 @@ export default function ProjectDetail({ project }: Props) {
           {title} — <span className="em">{summary}</span>
         </h2>
 
-        {/* Inline image / preview showcase */}
-        <div className="pd-preview-wrap">
-          {/* Bar: tag solda, toggle sağda */}
-          <div className="pd-preview-bar">
-            <span className="pd-inline-video-tag">[ {kind || tags[0] || 'PROJECT'} · {year} ]</span>
-            {hasPreviews && hasMobile && (
-              <div className="pd-preview-toggle">
-                <button
-                  className={`pd-ptoggle-btn ${view === 'desktop' ? 'is-active' : ''}`}
-                  onClick={() => setView('desktop')}
-                >
-                  <IconDesktop /> Desktop
-                </button>
-                <button
-                  className={`pd-ptoggle-btn ${view === 'mobile' ? 'is-active' : ''}`}
-                  onClick={() => setView('mobile')}
-                >
-                  <IconMobile /> Mobile
-                </button>
-              </div>
-            )}
-          </div>
-          <div className={`pd-inline-video glass${hasPreviews && view === 'mobile' ? ' pd-inline-mobile' : ''}`}>
-            <img
-              src={previewSrc}
-              alt={title}
-              style={{ objectPosition: 'top center' }}
-            />
-          </div>
-        </div>
-
         <div className="pd-body-text">
           {body.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
+
         {tags.length > 0 && (
           <div className="pd-tags">
             {tags.map((tag) => (
@@ -166,7 +162,7 @@ export default function ProjectDetail({ project }: Props) {
         )}
       </section>
 
-      {/* Related / Navigation */}
+      {/* Navigation */}
       <section className="pd-nav">
         <div className="pd-nav-bar">
           {prev ? (
