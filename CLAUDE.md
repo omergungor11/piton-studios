@@ -24,10 +24,12 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 **Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Polish/iyilestirme devam ediyor.
 
 - **32 proje** WORKS array'inde, ilk 6'si anasayfa slider'da
-- **Anasayfa**: Hero → Note → Services → Projects → About → Contact
+- **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
 - **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
 - **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
-- **Bekleyen**: Proje tarihleri duzeltilecek, mockup gorselleri eklenecek
+- **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
+- **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
+- **Bekleyen**: Proje tarihleri duzeltilecek, eksik preview gorselleri eklenecek
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
