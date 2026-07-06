@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-06
+
+### Added
+- 3 new portfolio projects: Mindloop (personal 3D interactive site), Dental Health (healthcare clinic), Securify (SaaS security landing page)
+- Desktop/mobile WebP previews for all 3 new projects (`public/assets/previews/`)
+
 ## 2026-06-27
 
 ### Changed
