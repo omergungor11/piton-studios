@@ -598,6 +598,94 @@
       ],
       "kind": "Web Design · Entertainment",
       "role": "Design / Development / SEO"
+    },
+    "alert-muhendislik": {
+      "title": "Alert Mühendislik",
+      "summary": "Engineering and construction company corporate website.",
+      "body": [
+        "We designed a corporate website for Alert Mühendislik showcasing engineering and construction services. We built a strong digital identity with a project portfolio, service details, and contact information.",
+        "Responsive design, fast load times, and SEO optimization made it easy for potential clients to reach out."
+      ]
+    },
+    "beton-store": {
+      "title": "Beton Store",
+      "summary": "Construction materials online store.",
+      "body": [
+        "We built an e-commerce platform for Beton Store selling construction materials and concrete products. We created a comprehensive digital store with a product catalog, order management, and contact system.",
+        "Modern design and a user-friendly interface put the customer experience first. SEO optimization drove organic traffic growth."
+      ]
+    },
+    "crazy-girl-night-club": {
+      "title": "Crazy Girl Night Club",
+      "summary": "Night club website with event listings and gallery.",
+      "body": [
+        "We designed a striking website for Crazy Girl Night Club showcasing an event calendar, gallery, and venue information. We applied a dark-themed, visual-first design reflecting the energy of nightlife.",
+        "SEO optimization and social media integration increased the venue's digital visibility. A mobile-friendly build made it easy for on-the-go users to access."
+      ]
+    },
+    "kibris-katalog": {
+      "title": "Kıbrıs Katalog",
+      "summary": "North Cyprus nightlife and entertainment directory.",
+      "body": [
+        "We built a comprehensive directory platform for Kıbrıs Katalog listing nightlife venues, restaurants, and entertainment spots across North Cyprus. We created a rich content structure with venue profiles, location details, and user reviews.",
+        "SEO optimization delivered strong visibility for local searches. We also included listing and management tools for venue owners."
+      ]
+    },
+    "misse-night-club": {
+      "title": "Misse Night Club",
+      "summary": "Night club website with VIP reservations and events.",
+      "body": [
+        "We built a premium website for Misse Night Club featuring a VIP reservation system, event calendar, and venue showcase. We applied a luxurious, striking design that translated the venue's atmosphere into the digital space.",
+        "Google Ads integration, SEO work, and social media links increased digital visibility. A mobile-friendly build delivered a flawless experience across all devices."
+      ]
+    },
+    "virginia-ice-cream": {
+      "title": "Virginia Ice Cream",
+      "summary": "Premium ice cream brand website with menu and locations.",
+      "body": [
+        "We designed a stylish, colorful website building the digital identity for Virginia Ice Cream's premium brand. We put the customer experience first with a menu, flavor catalog, and store locations.",
+        "Visual design, animations, and a responsive build reflecting the brand's energetic, playful personality brought a strong brand to the digital space."
+      ]
+    },
+    "faraon-night-clubs": {
+      "title": "Faraon Night Clubs",
+      "summary": "Night club chain website with multiple venues in North Cyprus.",
+      "body": [
+        "We built a website for the Faraon Night Clubs chain covering multiple venues. We created a comprehensive digital platform with a separate profile for each venue, a shared event calendar, and a reservation system.",
+        "A strong brand identity, striking visuals, and SEO optimization helped the brand stand out in North Cyprus nightlife."
+      ]
+    },
+    "welcome-pickups": {
+      "title": "Welcome Pickups",
+      "summary": "Airport transfer and welcome service website.",
+      "body": [
+        "We built a professional website for Welcome Pickups offering airport welcome and transfer services. We created a comprehensive platform with online booking, route information, and customer reviews.",
+        "A multi-language build for international customers, fast load times, and a mobile-friendly design delivered a strong digital presence."
+      ]
+    },
+    "mindloop": {
+      "title": "Mindloop",
+      "summary": "Personal 3D interactive website with immersive scroll-driven storytelling.",
+      "body": [
+        "Mindloop is a personal project where I showcase my personal brand through a 3D, interactive experience. I built a dark-themed, atmospheric 3D hero scene with a narrative that deepens as the user scrolls.",
+        "Newsletter subscription, social media integration, and Home / How It Works / Philosophy / Use Cases pages deliver a content flow centered on technology and depth."
+      ]
+    },
+    "dental-health": {
+      "title": "Dental Health",
+      "summary": "Dental clinic website with service highlights and appointment booking.",
+      "body": [
+        "We designed a clean, trust-building website for Dental Health showcasing the services of a West New York-based dental clinic. Highlights on advanced dentistry, quality equipment, and a friendly staff built a digital identity that earns patient trust.",
+        "A free consultation call-to-action, emergency contact information, and a responsive build made it easy to attract new patients."
+      ]
+    },
+    "securify": {
+      "title": "Securify",
+      "summary": "Data security SaaS landing page with bold typography and stats.",
+      "body": [
+        "We designed a landing page for Securify, a data security and privacy-focused SaaS platform. A dark theme, bold typography, and compelling stats (1.5B+ GB protected, 65K+ startup users) built a trust-driven brand narrative.",
+        "A modern navigation structure spanning platform, solutions, company, and support pages clearly positioned the SaaS product."
+      ]
     }
   },
   "servicesList": {
