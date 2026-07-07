@@ -198,3 +198,36 @@ _(session devam ediyor)_
 - Hero'da preview varsa: screenshot gösterilir, toggle sağ üstte, tag gizlenir
 - Showcase card genişlikleri: desktop 260px / mobile 148px; yükseklikler: 162px / 264px
 - Anasayfa SCENES sırası: hero → spark → note → services → work → about → contact (7 scene)
+
+---
+
+## 2026-07-06 / 2026-07-07 — Session 6
+
+### Completed
+- [x] 3 yeni portfolyo projesi eklendi: Mindloop (bireysel 3D site), Dental Health (diş kliniği), Securify (SaaS güvenlik landing page)
+- [x] Her 3 proje için desktop (1440x810) + mobile (430x928) WebP preview görselleri üretildi (PIL + cwebp pipeline)
+  - Mindloop desktop: cover-crop; Mindloop mobile + Dental Health + Securify (4 görsel): scale-to-width + pad-bottom (UI elemanları kenara yakındı, crop riski vardı)
+- [x] Tarayıcıda canlı doğrulama yapıldı (Desktop/Mobile toggle, hero render)
+- [x] CHANGELOG güncellendi, commit + push (`d62d4c9`)
+- [x] Türkçe/İngilizce çeviri eksikleri bulundu ve düzeltildi: 11 proje slug'ında (`alert-muhendislik`, `beton-store`, `crazy-girl-night-club`, `kibris-katalog`, `misse-night-club`, `virginia-ice-cream`, `faraon-night-clubs`, `welcome-pickups`, `mindloop`, `dental-health`, `securify`) `works.{slug}.{title,summary,body}` eksikti → fallback mekanizması yanlış dilde metin sızdırıyordu (TR sayfada EN summary, EN sayfada TR body)
+- [x] `tr.json` + `en.json`'a 11 eksik çeviri eklendi, `beton-store` üzerinden tarayıcıda doğrulandı, commit + push (`124a8e7`)
+
+### Pending / Yarım Kalan
+- [ ] `ru.json`'da aynı 11 slug hâlâ eksik (bilerek ertelendi — kullanıcı istemedi, çeviri kalitesi doğrulanamadı)
+- [ ] Proje tarihleri düzeltilecek (kullanıcı söyleyecek)
+- [ ] Admin panel Supabase Auth ile koruma
+- [ ] Contact form backend entegrasyonu
+- [ ] SEO meta tags (og:image, twitter cards)
+- [ ] Custom domain bağlama
+
+### Next Session
+- [ ] `ru.json` çeviri tamamlama konusunda kullanıcıya sor
+- [ ] Proje tarihlerini düzelt (kullanıcıdan bilgi bekleniyor)
+- [ ] SEO + analytics kurulumu
+- [ ] Performance audit (Lighthouse)
+
+### Notes
+- Toplam proje sayısı 32 → 35 (Mindloop, Dental Health, Securify eklendi)
+- Preview pipeline artık standart: 1440x810 desktop / 430x928 mobile WebP, `public/assets/previews/{desktop,mobile}/{slug}.webp`
+- Çeviri fallback mantığı `project-detail.tsx`'te: `tw.has()` kontrolü yoksa `data.ts`'teki ham `summary`(EN)/`body`(TR) alanına düşüyor — yeni proje eklerken tr/en.json'a girdi eklemeyi unutma
+- Repo remote hâlâ `pixel-ninja.git`'e işaret ediyor ama GitHub `piton-studios.git`'e redirect ediyor (repo rename edilmiş) — push çalışıyor ama redirect süresi dolarsa remote URL güncellenmeli
