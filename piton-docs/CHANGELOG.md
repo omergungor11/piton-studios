@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-07
+
+### Fixed
+- Added missing `works` translation entries (title/summary/body) for 11 project slugs in `tr.json` and `en.json` — previously these fell back to `data.ts` raw fields, leaking English summaries into Turkish pages and Turkish body text into English pages
+
 ## 2026-07-06
 
 ### Added
