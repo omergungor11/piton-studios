@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
@@ -71,10 +72,16 @@ export default function ProjectDetail({ project }: Props) {
       <section className={`pd-hero${hasPreviews && view === 'mobile' ? ' pd-hero-mobile' : ''}`}>
         {/* Görsel */}
         <div className="pd-hero-video">
-          <img
+          <Image
             src={heroSrc}
             alt={title}
-            style={{ objectPosition: hasPreviews ? 'top center' : 'center' }}
+            fill
+            priority
+            sizes="(max-width: 700px) 100vw, 1200px"
+            style={{
+              objectFit: 'cover',
+              objectPosition: hasPreviews ? 'top center' : 'center',
+            }}
           />
           <div className="pd-hero-fade" />
         </div>

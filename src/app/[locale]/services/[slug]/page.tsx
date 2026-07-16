@@ -1,10 +1,15 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { pickMessages } from "@/lib/pick-messages";
 import { getServiceBySlug, getAllServiceSlugs } from "@/lib/data";
 import ServiceDetail from "@/components/service-detail";
 
+const NAMESPACES = ["serviceDetail", "servicesList", "common"] as const;
+
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -32,12 +37,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const service = getServiceBySlug(slug);
 
   if (!service) {
     notFound();
   }
 
-  return <ServiceDetail service={service} />;
+  const messages = await getMessages();
+
+  return (
+    <NextIntlClientProvider messages={pickMessages(messages, NAMESPACES)}>
+      <ServiceDetail service={service} />
+    </NextIntlClientProvider>
+  );
 }

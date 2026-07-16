@@ -13,9 +13,9 @@
   --glass-bg-strong: rgba(20,20,20,0.68);
   --glass-border: rgba(255,255,255,0.16);
   --glass-hi: rgba(255,255,255,0.06);
-  --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
-  --display: "JetBrains Mono", ui-monospace, monospace;
-  --pixel: 'Press Start 2P', monospace;
+  --mono: var(--font-jetbrains-mono), var(--font-ibm-plex-mono), ui-monospace, Menlo, monospace;
+  --display: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --pixel: var(--font-press-start-2p), monospace;
   --blur: 18px;
 }
 
@@ -2598,6 +2598,7 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
 .pp-showcase-item.is-desktop { width: 260px; }
 .pp-showcase-item.is-mobile  { width: 148px; }
 .pp-showcase-screen {
+  position: relative;
   border-radius: 12px; overflow: hidden;
   border: 1px solid var(--line);
   background: var(--surface-2);
@@ -2680,6 +2681,7 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
   font-size: 13px; color: var(--ink); letter-spacing: -0.01em;
 }
 .pp-reel-video {
+  position: relative;
   border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 4 / 3;

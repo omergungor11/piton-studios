@@ -1,8 +1,8 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import Preloader from '@/components/preloader';
+import { jetbrainsMono, ibmPlexMono, pressStart2P } from '@/lib/fonts';
 
 type Props = {
   children: React.ReactNode;
@@ -20,28 +20,20 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  const messages = await getMessages();
+  setRequestLocale(locale);
 
   return (
-    <html lang={locale} data-theme="dark">
+    <html
+      lang={locale}
+      data-theme="dark"
+      className={`${jetbrainsMono.variable} ${ibmPlexMono.variable} ${pressStart2P.variable}`}
+    >
       <head>
         <meta charSet="utf-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Press+Start+2P&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <Preloader />
-          {children}
-        </NextIntlClientProvider>
+        <Preloader />
+        {children}
       </body>
     </html>
   );
