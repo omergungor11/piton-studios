@@ -231,3 +231,29 @@ _(session devam ediyor)_
 - Preview pipeline artık standart: 1440x810 desktop / 430x928 mobile WebP, `public/assets/previews/{desktop,mobile}/{slug}.webp`
 - Çeviri fallback mantığı `project-detail.tsx`'te: `tw.has()` kontrolü yoksa `data.ts`'teki ham `summary`(EN)/`body`(TR) alanına düşüyor — yeni proje eklerken tr/en.json'a girdi eklemeyi unutma
 - Repo remote hâlâ `pixel-ninja.git`'e işaret ediyor ama GitHub `piton-studios.git`'e redirect ediyor (repo rename edilmiş) — push çalışıyor ama redirect süresi dolarsa remote URL güncellenmeli
+
+---
+
+## 2026-07-16 — Session 7
+
+### Completed
+- [x] Performans commit'i push edildi (session başında hazırdı: static rendering, scoped i18n, deferred assets)
+- [x] Mobil anasayfa düzenlemeleri: servisler 5 ana hizmet + "Tüm Hizmetler" butonu, hero PITON/STUDIOS satır aralığı, proje slider'ına framer-motion drag swipe, about kod paneli kısaltıldı (280px), partner rozetleri yan yana, iletişim (WhatsApp / Ara+Mail / sosyal ikonlar düzeni)
+- [x] Mobil iç sayfa düzeltmeleri: footer partner rozetleri tek ikon satırı, proje detay prev/next yan yana + "Tümünü gör" kısaltması
+- [x] **Saiber ortaklığı** (eski adı Media King): 20 projede `collaborator: "Saiber"` — detayda "İş Birliği" metası. Kaynak: `Work-Restored/freelancer/02-projeler-case-study.md`
+- [x] **Portfolyo genişlemesi 35 → 66 proje**: freelancer paketinden 13 (Lider Emlak, Ödeme Takip Botu, 6 AI/ML Ar-Ge, 5 SaaS prototip) + 5 canlı self-dev site (FurCRM slider #2, Lithos, Vanguard, Jack 3D, Veldara — gerçek ekran görüntüleri + `url` alanı ile canlı linkler) + Work-Restored taramasından 5 (Manager, Emlak Sync, Sevgili Yoğurt, Dolmuş Kontrol, ÖSYB Hap) + avie-global geri eklendi
+- [x] Lefke Belediyesi kaldırıldı (hiç yapılmadı — tekrar EKLEME)
+- [x] Nexos mükerrer girdisi silindi; 4 case study güçlendirildi (Nexos flagship full-stack, Ambalaj Cini %30 büyüme, Sammys özel rezervasyon, Radyo Juke özel entegrasyon)
+- [x] **ru.json çeviri borcu kapandı** — 66 proje × 3 dil eksiksiz
+- [x] AWS Technical Essentials sertifikası arşivlendi + freelancer dokümanlarına işlendi (03 + 08 öne çıkan 6'lı)
+
+### Pending
+- [ ] Proje tarihleri düzeltilecek (eski P1 maddesi)
+- [ ] avie-global Saiber atıfı kullanıcı teyidi bekliyor
+- [ ] fur-crm.vercel.app backend'i veri döndürmüyor — düzelince ekran görüntüsü tazelenebilir
+- [ ] Domain: pitonstudios.tr satın alma (kullanıcı tarafında) → Vercel bağlama
+
+### Notes
+- Work-Restored klasör ↔ portfolyo eşlemesi piton-docs/MEMORY.md'de (baykan-night-club=Miracle, mehmet-missme=Misse, seytan-ibo=Gece Kıbrıs vb.)
+- Canlı link mekanizması: `Work.url` → detay metasında "Canlı Site → Siteyi ziyaret et ↗" (`projectDetail.live/visit`)
+- Mobil ekran görüntüsü almak için chrome-devtools `emulate` (430x928x2,mobile,touch) — resize_page 500px altına inmiyor
