@@ -2,6 +2,12 @@
 
 ## 2026-07-16
 
+### Fixed (mobile UX, follow-up)
+- About code panel overflowed narrow screens: `aspect-ratio + max-height` transferred width from height (400px); replaced with fixed 280px height so width follows the container
+- Featured projects swipe didn't work on real devices (browser claimed the gesture as page scroll): replaced manual touch handlers with framer-motion `drag="x"` + `touch-action: pan-y`, with post-drag click suppression on inner links
+- Page-footer partner badges stacked on phones: ≤640px falls back to a single centered icon-only row (names remain as tooltips)
+- Project detail prev/next nav stacked vertically ≤600px: explicit grid placement puts prev+next side by side with the view-all button centered below; `projectDetail.viewAll` shortened ("Tümünü gör ↗" / "View all ↗")
+
 ### Changed (mobile UX)
 - Services scene: mobile now lists 5 core services (web-app, automation, ai-integration, google-ads, cloud-ecosystem) with a "Tüm Hizmetler" button linking to `/services`; desktop unchanged
 - Hero: moved inline h1 styles to CSS; mobile line-height raised to 1.08 so "STUDIOS" no longer overlaps "PITON" when the title wraps
