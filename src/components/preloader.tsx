@@ -4,16 +4,24 @@ import { useEffect, useState } from 'react';
 
 type Phase = 'loading' | 'exit' | 'done';
 
-const LOAD_MS = 700;
-const EXIT_MS = 650;
+const LOAD_MS = 450;
+const EXIT_MS = 400;
+const SEEN_KEY = 'piton-preloader-seen';
 
 export default function Preloader() {
   const [count, setCount] = useState(0);
+  // Always start in 'loading' so the first client render matches the
+  // server-rendered HTML; the sessionStorage skip is applied after mount.
   const [phase, setPhase] = useState<Phase>('loading');
 
   // Count 0 → 100 over LOAD_MS, then trigger the exit animation.
   useEffect(() => {
     if (phase !== 'loading') return;
+    if (sessionStorage.getItem(SEEN_KEY)) {
+      setPhase('done');
+      return;
+    }
+    sessionStorage.setItem(SEEN_KEY, '1');
     let raf = 0;
     let startTs = 0;
     const tick = (ts: number) => {

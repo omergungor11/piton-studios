@@ -1,10 +1,15 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { pickMessages } from "@/lib/pick-messages";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data";
 import ProjectDetail from "@/components/project-detail";
 
+const NAMESPACES = ["projectDetail", "works", "stories", "common"] as const;
+
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -27,9 +32,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  return <ProjectDetail project={project} />;
+  const messages = await getMessages();
+
+  return (
+    <NextIntlClientProvider messages={pickMessages(messages, NAMESPACES)}>
+      <ProjectDetail project={project} />
+    </NextIntlClientProvider>
+  );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { WORKS, type Work, type PreviewData } from '@/lib/data';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -65,7 +66,13 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
               </div>
               {work.previews?.desktop ? (
                 <div className="proj-screen proj-screen-img">
-                  <img src={work.previews.desktop} alt={work.title} />
+                  <Image
+                    src={work.previews.desktop}
+                    alt={work.title}
+                    fill
+                    priority={idx === 0}
+                    sizes="(max-width: 900px) 100vw, 640px"
+                  />
                   <div className="proj-screen-overlay">
                     <span className="proj-screen-num">{work.n}</span>
                     <h2 className="proj-screen-title">{work.title}</h2>
