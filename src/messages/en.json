@@ -219,7 +219,9 @@
     "previewTitle": "How it looks",
     "previewDesktop": "Desktop",
     "previewTablet": "Tablet",
-    "previewMobile": "Mobile"
+    "previewMobile": "Mobile",
+    "live": "Live Site",
+    "visit": "Visit site"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Stories",
@@ -791,6 +793,86 @@
       "body": [
         "We built a tracking-tool prototype that monitors, summarizes and reports content and data streams using the Gemini API. LLM-based analysis turns raw data into meaningful digests.",
         "This R&D tool is a practical example of combining large-language-model integration with automation scenarios."
+      ]
+    },
+    "fur-crm": {
+      "title": "FurCRM",
+      "summary": "Advanced CRM for the furniture industry — accounts, invoicing, dealer management.",
+      "body": [
+        "FurCRM is a comprehensive CRM and accounts-management system we built for furniture manufacturers. Product & variant management, customer CRM, accounts & finance, the quote–order–invoice flow and dealer management come together in a single panel.",
+        "With production tracking, reporting, staff and commission & performance modules it covers a furniture business's entire operation. Built as our own product, it is our most complete example of industry-specific SaaS productization."
+      ]
+    },
+    "lithos": {
+      "title": "Lithos",
+      "summary": "Interactive geology education concept — explore the earth's layers with your cursor.",
+      "body": [
+        "Lithos is an education-platform concept that teaches geology through an interactive experience. Around the theme 'Layers hold tales of time', we designed a hero experience where cursor movement peels back the layers of the bedrock.",
+        "Structured with course, field-guide and live-tour sections, this self-development project demonstrates our interactive storytelling and experimental interface design skills."
+      ]
+    },
+    "vanguard": {
+      "title": "Vanguard",
+      "summary": "Bold creative-agency landing concept — 'Design. Disrupt. Conquer.'",
+      "body": [
+        "Vanguard is a bold landing-page concept designed around a creative-agency identity. Around the 'Design. Disrupt. Conquer.' slogan we used oversized typography, strong contrast and striking stat blocks (250+ brands, 95% client retention).",
+        "This self-development piece showcases brand-language building, typographic hierarchy and high-impact landing design."
+      ]
+    },
+    "jack-portfolio": {
+      "title": "Jack — 3D Creator",
+      "summary": "3D creator portfolio concept with scroll-driven text animations.",
+      "body": [
+        "Jack is a portfolio-site concept designed for a 3D content creator. Letter-by-letter scroll-driven text animations, a project gallery and a pricing section build the personal-brand narrative.",
+        "This self-development piece shows our approach to animation choreography and personal-brand portfolio design."
+      ]
+    },
+    "veldara": {
+      "title": "Veldara",
+      "summary": "Landing concept for a Svelte 5 + Three.js developer library.",
+      "body": [
+        "Veldara is a landing page designed for a developer-library concept merging Svelte 5 with Three.js. Documentation, showcase and modules sections build a developer-first product story.",
+        "Focused on 3D web experiences, this self-development project demonstrates technical product marketing and developer-tool interface design."
+      ]
+    },
+    "manager-oto-servis": {
+      "title": "Manager",
+      "summary": "Multi-tenant SaaS CRM and pre-accounting platform for auto service businesses.",
+      "body": [
+        "Manager is a multi-tenant SaaS platform we built for auto service and mechanic businesses. Vehicle flow, stock management, service sales, invoicing, account ledgers, staff management, reminders and reporting come together under one roof.",
+        "With a wildcard-subdomain architecture each business runs on its own domain. Targeting auto services in Northern Cyprus, this own product demonstrates horizontal SaaS architecture and multi-tenant system design."
+      ]
+    },
+    "emlak-sync": {
+      "title": "Emlak Sync",
+      "summary": "Multi-portal real estate listing sync panel — enter once, publish everywhere.",
+      "body": [
+        "Emlak Sync is a multi-platform listing synchronization panel we built for real estate agencies. Listings are entered once and automatically published and kept in sync across Northern Cyprus property portals (HangiEv, 101evler).",
+        "Eliminating duplicate data entry, this own product demonstrates portal integrations, data synchronization and real-estate-specific automation."
+      ]
+    },
+    "sevgili-yogurt": {
+      "title": "Sevgili Yoğurt",
+      "summary": "Mobile-first PWA for a dairy producer — stock, deliveries and account ledgers.",
+      "body": [
+        "Sevgili Yoğurt is a stock + customer + delivery + account-ledger app we built for a dairy producer. With its mobile-first PWA structure the user picks a customer on the phone and logs delivered goods; stock decreases automatically and the amount is booked to the customer's ledger.",
+        "Streamlined for one-handed field use, it is a practical example of digitizing a small producer's daily operation."
+      ]
+    },
+    "dolmus-kontrol": {
+      "title": "Minibus Route Control",
+      "summary": "Route-compliance automation: GPS Excel data becomes route control reports.",
+      "body": [
+        "We built an automation system that checks whether a city's minibus (dolmuş) lines run on schedule. Excel data from a GPS tracking program is processed into per-line route control reports.",
+        "This Flask-based web app turns hours of manual checking into minutes — a field-proven example of data processing and process automation."
+      ]
+    },
+    "osyb-hap": {
+      "title": "ÖSYB Hap",
+      "summary": "Exam-prep platform with bite-size flashcards, a question bank and notes.",
+      "body": [
+        "ÖSYB Hap is an exam-preparation platform we built for ÖSYB candidates. Bite-size flashcards, a question bank, note-taking and profile/progress tracking come together in a single app.",
+        "Built on Next.js as our own product, it demonstrates content organization and learning-experience design in the edtech space."
       ]
     }
   },

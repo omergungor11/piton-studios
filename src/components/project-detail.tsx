@@ -46,6 +46,7 @@ export default function ProjectDetail({ project }: Props) {
   const kind         = project.type === 'work' ? project.kind : undefined;
   const scope        = project.type === 'work' ? project.scope : undefined;
   const collaborator = project.type === 'work' ? project.collaborator : undefined;
+  const liveUrl      = project.type === 'work' ? project.url : undefined;
   const number       = project.type === 'work' ? project.n : project.no;
   const previews     = project.type === 'work' ? project.previews : undefined;
   const hasPreviews  = !!(previews?.desktop);
@@ -143,6 +144,16 @@ export default function ProjectDetail({ project }: Props) {
           <div className="pd-meta-item">
             <div className="pd-meta-k">{td('collab')}</div>
             <div className="pd-meta-v">{collaborator}</div>
+          </div>
+        )}
+        {liveUrl && (
+          <div className="pd-meta-item">
+            <div className="pd-meta-k">{td('live')}</div>
+            <div className="pd-meta-v">
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="pd-live-link" data-cursor="hover" data-cursor-label="↗">
+                {td('visit')} ↗
+              </a>
+            </div>
           </div>
         )}
       </section>

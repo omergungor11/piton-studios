@@ -12,6 +12,7 @@ export interface Work {
   body: string[];
   scope: string;
   collaborator?: string;
+  url?: string;
   previews?: {
     desktop?: string;
     mobile?: string;
@@ -114,6 +115,28 @@ export const WORKS: Work[] = [
   },
   {
     n: "02",
+    slug: "fur-crm",
+    title: "FurCRM",
+    client: "FurCRM",
+    kind: "Web App · SaaS",
+    year: "2026",
+    role: "Product / Development",
+    tags: ["Next.js", "CRM", "ERP", "SaaS"],
+    image: "story-01.jpg",
+    summary: "Advanced CRM for the furniture industry — accounts, invoicing, dealers, production tracking.",
+    body: [
+      "FurCRM, mobilya üreticileri için geliştirdiğimiz kapsamlı bir CRM ve cari yönetim sistemi. Ürün & varyant yönetimi, müşteri CRM'i, cari & finans takibi, teklif–sipariş–fatura akışı ve bayi yönetimi tek panelde birleşiyor.",
+      "Üretim takip paneli, raporlama ekranı, personel ve prim & performans modülleriyle bir mobilya işletmesinin tüm operasyonunu kapsıyor. Kendi ürünümüz olarak geliştirdiğimiz bu sistem, sektöre özel SaaS ürünleştirme yetkinliğimizin en kapsamlı örneği.",
+    ],
+    scope: "SaaS product, CRM, finance management",
+    url: "https://fur-crm.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/fur-crm.webp',
+      mobile: '/assets/previews/mobile/fur-crm.webp',
+    },
+  },
+  {
+    n: "03",
     slug: "bt-elevator",
     title: "BT Elevator",
     client: "BT Elevator",
@@ -134,7 +157,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "03",
+    n: "04",
     slug: "gel-gez-gor",
     title: "Gel Gez Gör",
     client: "Gel Gez Gör",
@@ -155,7 +178,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "04",
+    n: "05",
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
@@ -176,7 +199,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "05",
+    n: "06",
     slug: "alp-sigorta",
     title: "Alp Sigorta",
     client: "Alp Sigorta",
@@ -197,7 +220,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "06",
+    n: "07",
     slug: "pampas-investment",
     title: "Pampas Investment",
     client: "Pampas Investment",
@@ -219,7 +242,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "07",
+    n: "08",
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
@@ -236,7 +259,7 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, corporate",
   },
   {
-    n: "08",
+    n: "09",
     slug: "ambalaj-cini",
     title: "Ambalaj Cini",
     client: "Ambalaj Cini",
@@ -253,7 +276,7 @@ export const WORKS: Work[] = [
     scope: "E-commerce, web design, payment",
   },
   {
-    n: "09",
+    n: "10",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",
@@ -275,7 +298,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "10",
+    n: "11",
     slug: "night-club-katalog",
     title: "Night Club Katalog",
     client: "Night Club Katalog",
@@ -296,7 +319,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "11",
+    n: "12",
     slug: "kibris-gece-hayati",
     title: "Kıbrıs Gece Hayatı",
     client: "Kıbrıs Gece Hayatı",
@@ -316,7 +339,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "12",
+    n: "13",
     slug: "gece-kibris",
     title: "Gece Kıbrıs",
     client: "İbo Şeytan",
@@ -337,7 +360,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "14",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -359,7 +382,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "15",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -381,7 +404,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "15",
+    n: "16",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -403,7 +426,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "16",
+    n: "17",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -425,7 +448,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "17",
+    n: "18",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -443,7 +466,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "18",
+    n: "19",
     slug: "prenses-night-club",
     title: "Prenses Night Club",
     client: "Prenses Night Club",
@@ -464,7 +487,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "19",
+    n: "20",
     slug: "miracle-night-club",
     title: "Miracle Night Club",
     client: "Miracle Night Club",
@@ -485,7 +508,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "21",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -503,7 +526,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "21",
+    n: "22",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -521,7 +544,7 @@ export const WORKS: Work[] = [
     scope: "Web design, finance, corporate",
   },
   {
-    n: "22",
+    n: "23",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -539,7 +562,7 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, SEO",
   },
   {
-    n: "23",
+    n: "24",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -557,7 +580,7 @@ export const WORKS: Work[] = [
     scope: "Web design, finance, crypto",
   },
   {
-    n: "24",
+    n: "25",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -575,7 +598,7 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, holding",
   },
   {
-    n: "25",
+    n: "26",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -597,7 +620,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "26",
+    n: "27",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -614,7 +637,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "27",
+    n: "28",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -635,7 +658,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "28",
+    n: "29",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -656,7 +679,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "30",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -673,7 +696,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, SEO",
   },
   {
-    n: "30",
+    n: "31",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -695,7 +718,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "31",
+    n: "32",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -717,7 +740,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "32",
+    n: "33",
     slug: "kibris-nights-club",
     title: "Kıbrıs Nights Club",
     client: "Kıbrıs Nights Club",
@@ -738,7 +761,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "34",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -760,7 +783,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "34",
+    n: "35",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -781,7 +804,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "35",
+    n: "36",
     slug: "crazy-girl-night-club",
     title: "Crazy Girl Night Club",
     client: "Crazy Girl Night Club",
@@ -802,7 +825,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "36",
+    n: "37",
     slug: "kibris-katalog",
     title: "Kıbrıs Katalog",
     client: "Kıbrıs Katalog",
@@ -823,7 +846,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "37",
+    n: "38",
     slug: "misse-night-club",
     title: "Misse Night Club",
     client: "Misse Night Club",
@@ -844,7 +867,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "38",
+    n: "39",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -866,7 +889,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "39",
+    n: "40",
     slug: "faraon-night-clubs",
     title: "Faraon Night Clubs",
     client: "Faraon Night Clubs",
@@ -887,7 +910,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "40",
+    n: "41",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -907,7 +930,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "41",
+    n: "42",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -922,13 +945,14 @@ export const WORKS: Work[] = [
       "Newsletter aboneliği, sosyal medya entegrasyonu ve Home / How It Works / Philosophy / Use Cases sayfalarıyla teknoloji ve derinlik temalı bir içerik akışı sunuyor.",
     ],
     scope: "Web design, 3D, personal brand",
+    url: "https://mindloop-landing-page-phi.vercel.app/",
     previews: {
       desktop: '/assets/previews/desktop/mindloop.webp',
       mobile: '/assets/previews/mobile/mindloop.webp',
     },
   },
   {
-    n: "42",
+    n: "43",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -949,7 +973,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "43",
+    n: "44",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -970,7 +994,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "44",
+    n: "45",
     slug: "lider-emlak",
     title: "Lider Emlak",
     client: "Lider Emlak (Bozüyük)",
@@ -988,7 +1012,7 @@ export const WORKS: Work[] = [
     scope: "Web design, listings, SEO",
   },
   {
-    n: "45",
+    n: "46",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton Studios",
@@ -1005,7 +1029,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "46",
+    n: "47",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton Studios",
@@ -1022,7 +1046,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "47",
+    n: "48",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton Studios",
@@ -1039,7 +1063,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, object tracking, research",
   },
   {
-    n: "48",
+    n: "49",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton Studios",
@@ -1056,7 +1080,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "49",
+    n: "50",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton Studios",
@@ -1073,7 +1097,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "50",
+    n: "51",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton Studios",
@@ -1090,7 +1114,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "51",
+    n: "52",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton Studios",
@@ -1107,7 +1131,7 @@ export const WORKS: Work[] = [
     scope: "Simulation, algorithm visualization, research",
   },
   {
-    n: "52",
+    n: "53",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -1124,7 +1148,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "53",
+    n: "54",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -1141,7 +1165,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "54",
+    n: "55",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -1158,7 +1182,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "55",
+    n: "56",
     slug: "ai-dating-app",
     title: "AI Dating App",
     client: "AI Dating App",
@@ -1175,7 +1199,7 @@ export const WORKS: Work[] = [
     scope: "Product concept, AI matching, prototype",
   },
   {
-    n: "56",
+    n: "57",
     slug: "gemini-tracker",
     title: "Gemini Tracker",
     client: "Gemini Tracker",
@@ -1190,6 +1214,179 @@ export const WORKS: Work[] = [
       "Bu Ar-Ge aracı; büyük dil modeli entegrasyonu ve otomasyon senaryolarını birleştirme deneyimimizin pratik bir örneği.",
     ],
     scope: "AI tool, tracking, prototype",
+  },
+  {
+    n: "58",
+    slug: "lithos",
+    title: "Lithos",
+    client: "Lithos",
+    kind: "Web Design · Interactive",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Interactive", "Education", "Landing Page", "Geology"],
+    image: "story-02.jpg",
+    summary: "Interactive geology education concept — peel back the layers of the earth with cursor-driven exploration.",
+    body: [
+      "Lithos, jeolojiyi interaktif bir deneyimle anlatan bir eğitim platformu konsepti. 'Layers hold tales of time' teması etrafında; imleç hareketiyle yer kabuğunun katmanlarını keşfettiren etkileşimli bir hero deneyimi kurguladık.",
+      "Kurs, saha rehberleri ve canlı tur bölümleriyle kurgulanan bu kendini geliştirme projesi; interaktif storytelling ve deneysel arayüz tasarımı yetkinliğimizi gösteriyor.",
+    ],
+    scope: "Interactive landing, education concept",
+    url: "https://lithos-interactive-geology.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/lithos.webp',
+      mobile: '/assets/previews/mobile/lithos.webp',
+    },
+  },
+  {
+    n: "59",
+    slug: "vanguard",
+    title: "Vanguard",
+    client: "Vanguard",
+    kind: "Web Design · Landing Page",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Landing Page", "Agency", "Typography", "Animation"],
+    image: "story-03.jpg",
+    summary: "Bold creative-agency landing concept — 'Design. Disrupt. Conquer.'",
+    body: [
+      "Vanguard, kreatif ajans kimliği için tasarladığımız cesur bir landing page konsepti. 'Design. Disrupt. Conquer.' sloganı etrafında büyük tipografi, güçlü kontrast ve etkileyici istatistik blokları (250+ marka, %95 müşteri sadakati) kullandık.",
+      "Kendini geliştirme amaçlı bu çalışma; marka dili kurma, tipografik hiyerarşi ve yüksek etkili landing tasarımı becerilerimizi sergiliyor.",
+    ],
+    scope: "Landing page, brand concept",
+    url: "https://vanguard-landing-page-six.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/vanguard.webp',
+      mobile: '/assets/previews/mobile/vanguard.webp',
+    },
+  },
+  {
+    n: "60",
+    slug: "jack-portfolio",
+    title: "Jack — 3D Creator",
+    client: "Jack Portfolio",
+    kind: "Web Design · Portfolio",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["3D", "Portfolio", "Animation", "Personal Brand"],
+    image: "story-04.jpg",
+    summary: "3D creator portfolio concept with scroll-driven text animations and immersive visuals.",
+    body: [
+      "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlandırma bölümüyle kişisel marka anlatısı kurduk.",
+      "Kendini geliştirme amaçlı bu çalışma; animasyon koreografisi ve kişisel marka portfolyosu tasarımındaki yaklaşımımızı gösteriyor.",
+    ],
+    scope: "Portfolio concept, 3D, animation",
+    url: "https://3d-jack-portfolio.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/jack-portfolio.webp',
+      mobile: '/assets/previews/mobile/jack-portfolio.webp',
+    },
+  },
+  {
+    n: "61",
+    slug: "veldara",
+    title: "Veldara",
+    client: "Veldara",
+    kind: "Web Design · Developer Tool",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Three.js", "Svelte", "Landing Page", "Developer Tool"],
+    image: "story-05.jpg",
+    summary: "Landing concept for a Svelte 5 + Three.js library — documentation, showcase and modules.",
+    body: [
+      "Veldara, Svelte 5 ile Three.js'i birleştiren bir geliştirici kütüphanesi konsepti için tasarladığımız landing page. Dokümantasyon, showcase ve modüller bölümleriyle developer-first bir ürün anlatımı kurduk.",
+      "3D web deneyimlerine odaklanan bu kendini geliştirme projesi; teknik ürün pazarlaması ve developer-tool arayüz tasarımı yetkinliğimizi gösteriyor.",
+    ],
+    scope: "Developer-tool landing, 3D",
+    url: "https://veldara-landing-page-sigma.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/veldara.webp',
+      mobile: '/assets/previews/mobile/veldara.webp',
+    },
+  },
+  {
+    n: "62",
+    slug: "manager-oto-servis",
+    title: "Manager",
+    client: "Manager",
+    kind: "SaaS · CRM",
+    year: "2026",
+    role: "Product / Development",
+    tags: ["Next.js", "Multi-tenant", "CRM", "Accounting"],
+    image: "story-03.jpg",
+    summary: "Multi-tenant SaaS CRM and pre-accounting platform for auto service businesses.",
+    body: [
+      "Manager, oto servis ve makinist işletmelerine özel geliştirdiğimiz multi-tenant bir SaaS platformu. Araç akışı, stok yönetimi, hizmet satışı, faturalama, cari hesaplar, çalışan yönetimi, hatırlatmalar ve raporlama tek çatı altında toplanıyor.",
+      "Wildcard subdomain mimarisiyle her işletme kendi alan adında çalışıyor. KKTC oto servis işletmelerini hedefleyen bu kendi ürünümüz; yatay SaaS mimarisi ve çok kiracılı sistem tasarımı yetkinliğimizi gösteriyor.",
+    ],
+    scope: "Multi-tenant SaaS, CRM, pre-accounting",
+  },
+  {
+    n: "63",
+    slug: "emlak-sync",
+    title: "Emlak Sync",
+    client: "Emlak Sync",
+    kind: "Web App · Automation",
+    year: "2026",
+    role: "Product / Development",
+    tags: ["Automation", "Real Estate", "Integration", "SaaS"],
+    image: "story-04.jpg",
+    summary: "Multi-portal real estate listing sync panel — enter once, publish everywhere.",
+    body: [
+      "Emlak Sync, emlak ofisleri için geliştirdiğimiz çoklu-platform ilan senkronizasyon paneli. İlan tek yerden girilir; KKTC emlak portallarına (HangiEv, 101evler) otomatik yayınlanır ve senkron tutulur.",
+      "Mükerrer veri girişini ortadan kaldıran bu kendi ürünümüz; portal entegrasyonları, veri senkronizasyonu ve emlak sektörüne özel otomasyon yetkinliğimizi gösteriyor.",
+    ],
+    scope: "Listing sync, portal integrations, automation",
+  },
+  {
+    n: "64",
+    slug: "sevgili-yogurt",
+    title: "Sevgili Yoğurt",
+    client: "Sevgili Yoğurt",
+    kind: "Web App · PWA",
+    year: "2026",
+    role: "Product / Development",
+    tags: ["PWA", "Next.js", "Inventory", "Finance"],
+    image: "story-05.jpg",
+    summary: "Mobile-first PWA for a dairy producer — stock, customers, deliveries and account ledgers.",
+    body: [
+      "Sevgili Yoğurt; yoğurt, peynir ve süt ürünleri üreten bir firma için geliştirdiğimiz stok + müşteri + sevkiyat + cari hesap takip uygulaması. Mobil öncelikli PWA yapısıyla kullanıcı telefondan müşteri seçip bırakılan ürünleri giriyor; stok otomatik düşüyor, cari hesaba borç yazılıyor.",
+      "Sahada tek elden kullanım için sadeleştirilen bu uygulama; küçük üreticilerin günlük operasyonunu dijitalleştiren pratik bir iş uygulaması örneği.",
+    ],
+    scope: "PWA, inventory, delivery, account tracking",
+  },
+  {
+    n: "65",
+    slug: "dolmus-kontrol",
+    title: "Dolmuş Güzergah Kontrol",
+    client: "Piton Studios",
+    kind: "Automation · Data",
+    year: "2026",
+    role: "Development",
+    tags: ["Python", "Flask", "Automation", "Reporting"],
+    image: "story-01.jpg",
+    summary: "Route-compliance automation: GPS tracker Excel data becomes minibus route control reports.",
+    body: [
+      "Şehirdeki dolmuş hatlarının zamanında çalışıp çalışmadığını denetleyen bir otomasyon sistemi geliştirdik. GPS takip programından alınan Excel verisi işlenerek hat bazında güzergah kontrol raporları üretiliyor.",
+      "Flask tabanlı bu web uygulaması; elle yapılan saatlerce süren kontrolü dakikalara indiriyor — veri işleme ve süreç otomasyonu yetkinliğimizin sahadan bir örneği.",
+    ],
+    scope: "Automation, data processing, reporting",
+  },
+  {
+    n: "66",
+    slug: "osyb-hap",
+    title: "ÖSYB Hap",
+    client: "ÖSYB Hap",
+    kind: "Web App · Education",
+    year: "2026",
+    role: "Product / Development",
+    tags: ["Next.js", "Education", "Flashcards", "Platform"],
+    image: "story-02.jpg",
+    summary: "Exam-prep platform with bite-size flashcards, question bank and notes.",
+    body: [
+      "ÖSYB Hap, ÖSYB sınavlarına hazırlananlar için geliştirdiğimiz bir sınav hazırlık platformu. Hap bilgi kartları (flashcard), soru bankası, not alma ve profil/ilerleme takibi tek uygulamada birleşiyor.",
+      "Next.js üzerinde kurulan bu kendi ürünümüz; eğitim teknolojisi alanında içerik organizasyonu ve öğrenme deneyimi tasarımı yetkinliğimizi gösteriyor.",
+    ],
+    scope: "Education platform, flashcards, question bank",
   },
 ];
 

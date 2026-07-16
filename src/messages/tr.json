@@ -258,7 +258,9 @@
     "previewTitle": "Nasıl görünüyor?",
     "previewDesktop": "Masaüstü",
     "previewTablet": "Tablet",
-    "previewMobile": "Mobil"
+    "previewMobile": "Mobil",
+    "live": "Canlı Site",
+    "visit": "Siteyi ziyaret et"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Hikayeler",
@@ -726,6 +728,86 @@
       "body": [
         "Gemini API'ını kullanarak içerik ve veri akışlarını izleyen, özetleyen ve raporlayan bir takip aracı prototipi geliştirdik. LLM tabanlı analiz ile ham veriden anlamlı özetler üretiliyor.",
         "Bu Ar-Ge aracı; büyük dil modeli entegrasyonu ve otomasyon senaryolarını birleştirme deneyimimizin pratik bir örneği."
+      ]
+    },
+    "fur-crm": {
+      "title": "FurCRM",
+      "summary": "Mobilya sektörü için cari, fatura ve bayi yönetimli gelişmiş CRM sistemi.",
+      "body": [
+        "FurCRM, mobilya üreticileri için geliştirdiğimiz kapsamlı bir CRM ve cari yönetim sistemi. Ürün & varyant yönetimi, müşteri CRM'i, cari & finans takibi, teklif–sipariş–fatura akışı ve bayi yönetimi tek panelde birleşiyor.",
+        "Üretim takip paneli, raporlama ekranı, personel ve prim & performans modülleriyle bir mobilya işletmesinin tüm operasyonunu kapsıyor. Kendi ürünümüz olarak geliştirdiğimiz bu sistem, sektöre özel SaaS ürünleştirme yetkinliğimizin en kapsamlı örneği."
+      ]
+    },
+    "lithos": {
+      "title": "Lithos",
+      "summary": "İmleçle katmanları keşfettiren interaktif jeoloji eğitim konsepti.",
+      "body": [
+        "Lithos, jeolojiyi interaktif bir deneyimle anlatan bir eğitim platformu konsepti. 'Layers hold tales of time' teması etrafında; imleç hareketiyle yer kabuğunun katmanlarını keşfettiren etkileşimli bir hero deneyimi kurguladık.",
+        "Kurs, saha rehberleri ve canlı tur bölümleriyle kurgulanan bu kendini geliştirme projesi; interaktif storytelling ve deneysel arayüz tasarımı yetkinliğimizi gösteriyor."
+      ]
+    },
+    "vanguard": {
+      "title": "Vanguard",
+      "summary": "'Design. Disrupt. Conquer.' — cesur tipografili kreatif ajans landing konsepti.",
+      "body": [
+        "Vanguard, kreatif ajans kimliği için tasarladığımız cesur bir landing page konsepti. 'Design. Disrupt. Conquer.' sloganı etrafında büyük tipografi, güçlü kontrast ve etkileyici istatistik blokları (250+ marka, %95 müşteri sadakati) kullandık.",
+        "Kendini geliştirme amaçlı bu çalışma; marka dili kurma, tipografik hiyerarşi ve yüksek etkili landing tasarımı becerilerimizi sergiliyor."
+      ]
+    },
+    "jack-portfolio": {
+      "title": "Jack — 3D Creator",
+      "summary": "Scroll animasyonlu, sürükleyici bir 3D creator portfolyo konsepti.",
+      "body": [
+        "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlandırma bölümüyle kişisel marka anlatısı kurduk.",
+        "Kendini geliştirme amaçlı bu çalışma; animasyon koreografisi ve kişisel marka portfolyosu tasarımındaki yaklaşımımızı gösteriyor."
+      ]
+    },
+    "veldara": {
+      "title": "Veldara",
+      "summary": "Svelte 5 + Three.js kütüphanesi için landing page konsepti.",
+      "body": [
+        "Veldara, Svelte 5 ile Three.js'i birleştiren bir geliştirici kütüphanesi konsepti için tasarladığımız landing page. Dokümantasyon, showcase ve modüller bölümleriyle developer-first bir ürün anlatımı kurduk.",
+        "3D web deneyimlerine odaklanan bu kendini geliştirme projesi; teknik ürün pazarlaması ve developer-tool arayüz tasarımı yetkinliğimizi gösteriyor."
+      ]
+    },
+    "manager-oto-servis": {
+      "title": "Manager",
+      "summary": "Oto servisler için multi-tenant CRM + ön muhasebe SaaS platformu.",
+      "body": [
+        "Manager, oto servis ve makinist işletmelerine özel geliştirdiğimiz multi-tenant bir SaaS platformu. Araç akışı, stok yönetimi, hizmet satışı, faturalama, cari hesaplar, çalışan yönetimi, hatırlatmalar ve raporlama tek çatı altında toplanıyor.",
+        "Wildcard subdomain mimarisiyle her işletme kendi alan adında çalışıyor. KKTC oto servis işletmelerini hedefleyen bu kendi ürünümüz; yatay SaaS mimarisi ve çok kiracılı sistem tasarımı yetkinliğimizi gösteriyor."
+      ]
+    },
+    "emlak-sync": {
+      "title": "Emlak Sync",
+      "summary": "Çoklu portal emlak ilan senkronizasyon paneli — tek yerden gir, her yerde yayınla.",
+      "body": [
+        "Emlak Sync, emlak ofisleri için geliştirdiğimiz çoklu-platform ilan senkronizasyon paneli. İlan tek yerden girilir; KKTC emlak portallarına (HangiEv, 101evler) otomatik yayınlanır ve senkron tutulur.",
+        "Mükerrer veri girişini ortadan kaldıran bu kendi ürünümüz; portal entegrasyonları, veri senkronizasyonu ve emlak sektörüne özel otomasyon yetkinliğimizi gösteriyor."
+      ]
+    },
+    "sevgili-yogurt": {
+      "title": "Sevgili Yoğurt",
+      "summary": "Süt ürünleri üreticisi için stok, sevkiyat ve cari takipli mobil öncelikli PWA.",
+      "body": [
+        "Sevgili Yoğurt; yoğurt, peynir ve süt ürünleri üreten bir firma için geliştirdiğimiz stok + müşteri + sevkiyat + cari hesap takip uygulaması. Mobil öncelikli PWA yapısıyla kullanıcı telefondan müşteri seçip bırakılan ürünleri giriyor; stok otomatik düşüyor, cari hesaba borç yazılıyor.",
+        "Sahada tek elden kullanım için sadeleştirilen bu uygulama; küçük üreticilerin günlük operasyonunu dijitalleştiren pratik bir iş uygulaması örneği."
+      ]
+    },
+    "dolmus-kontrol": {
+      "title": "Dolmuş Güzergah Kontrol",
+      "summary": "GPS verisinden dolmuş hatlarının güzergah kontrol raporunu üreten otomasyon.",
+      "body": [
+        "Şehirdeki dolmuş hatlarının zamanında çalışıp çalışmadığını denetleyen bir otomasyon sistemi geliştirdik. GPS takip programından alınan Excel verisi işlenerek hat bazında güzergah kontrol raporları üretiliyor.",
+        "Flask tabanlı bu web uygulaması; elle yapılan saatlerce süren kontrolü dakikalara indiriyor — veri işleme ve süreç otomasyonu yetkinliğimizin sahadan bir örneği."
+      ]
+    },
+    "osyb-hap": {
+      "title": "ÖSYB Hap",
+      "summary": "Hap bilgi kartları, soru bankası ve notlarla sınav hazırlık platformu.",
+      "body": [
+        "ÖSYB Hap, ÖSYB sınavlarına hazırlananlar için geliştirdiğimiz bir sınav hazırlık platformu. Hap bilgi kartları (flashcard), soru bankası, not alma ve profil/ilerleme takibi tek uygulamada birleşiyor.",
+        "Next.js üzerinde kurulan bu kendi ürünümüz; eğitim teknolojisi alanında içerik organizasyonu ve öğrenme deneyimi tasarımı yetkinliğimizi gösteriyor."
       ]
     }
   },
