@@ -1,6 +1,15 @@
 # Changelog
 
-## 2026-07-07
+## 2026-07-16
+
+### Changed (mobile UX)
+- Services scene: mobile now lists 5 core services (web-app, automation, ai-integration, google-ads, cloud-ecosystem) with a "Tüm Hizmetler" button linking to `/services`; desktop unchanged
+- Hero: moved inline h1 styles to CSS; mobile line-height raised to 1.08 so "STUDIOS" no longer overlaps "PITON" when the title wraps
+- Featured projects slider: added touch swipe navigation (left/right) with vertical-scroll guard
+- About code panel: mobile aspect ratio 9/16 → 4/3 with 300px max height (was far too tall)
+- Partner badges: on mobile, Google+Meta and Vercel+Supabase+Anthropic now sit side by side (group label stacked above, smaller badges, nowrap)
+- Contact: Mail promoted to an action button next to Call (WhatsApp full-width on mobile); social icons moved to their own row below
+- New i18n keys in tr/en/ru: `services.viewAll`, `contact.mail`
 
 ### Fixed
 - Added missing `works` translation entries (title/summary/body) for 11 project slugs in `tr.json` and `en.json` — previously these fell back to `data.ts` raw fields, leaking English summaries into Turkish pages and Turkish body text into English pages

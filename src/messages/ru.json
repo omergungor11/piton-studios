@@ -130,13 +130,15 @@
     "sent": "✓ Отправлено",
     "error": "Ошибка — попробуйте снова",
     "contactCta": "Связаться",
-    "getInTouch": "Связаться"
+    "getInTouch": "Связаться",
+    "mail": "Почта"
   },
   "services": {
     "eyebrow": "§ 04",
     "title": "Услуги",
     "count": "{count} направлений",
-    "sectionLabel": "Услуги"
+    "sectionLabel": "Услуги",
+    "viewAll": "Все услуги"
   },
   "servicesPage": {
     "title": "Услуги",

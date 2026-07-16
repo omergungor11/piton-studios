@@ -39,6 +39,21 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
   const next = () => { go(1); resetAuto(); };
   const jumpTo = (i: number) => { setIdx(i); resetAuto(); };
 
+  // Touch swipe (mobile)
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart.current) return;
+    const dx = e.changedTouches[0].clientX - touchStart.current.x;
+    const dy = e.changedTouches[0].clientY - touchStart.current.y;
+    touchStart.current = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) next(); else prev();
+    }
+  };
+
   return (
     <div className="proj-glass glass">
       <div className="proj-head">
@@ -46,7 +61,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
         <h3 dangerouslySetInnerHTML={{ __html: t('heading').replace('<em>', '<span class="em">').replace('</em>', '</span>') }} />
       </div>
 
-      <div className="proj-slider">
+      <div className="proj-slider" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <AnimatePresence mode="wait">
           <motion.div
             key={work.slug}

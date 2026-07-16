@@ -7,6 +7,8 @@ import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
 import { Reveal } from '@/components/motion';
 
+const MOBILE_FEATURED = ['web-app', 'automation', 'ai-integration', 'google-ads', 'cloud-ecosystem'];
+
 export default function ServicesScene() {
   const t = useTranslations('services');
   const ts = useTranslations('servicesList');
@@ -44,7 +46,7 @@ export default function ServicesScene() {
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
+            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className={`svc ${MOBILE_FEATURED.includes(s.slug) ? '' : 'svc-desktop-only'}`} data-cursor="hover" data-cursor-label="+">
               <div className="svc-top">
                 <span className="n">{s.n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>
@@ -67,6 +69,10 @@ export default function ServicesScene() {
           );
         })}
       </div>
+      <Link href="/services" className="svc-all-btn" data-cursor="hover" data-cursor-label="+">
+        <span>{t('viewAll')}</span>
+        <span className="svc-all-arrow">↗</span>
+      </Link>
     </div>
   );
 }
