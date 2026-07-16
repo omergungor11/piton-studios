@@ -688,6 +688,110 @@
         "We designed a landing page for Securify, a data security and privacy-focused SaaS platform. A dark theme, bold typography, and compelling stats (1.5B+ GB protected, 65K+ startup users) built a trust-driven brand narrative.",
         "A modern navigation structure spanning platform, solutions, company, and support pages clearly positioned the SaaS product."
       ]
+    },
+    "lider-emlak": {
+      "title": "Lider Emlak",
+      "summary": "Listing and corporate website for a Bozüyük-based real estate agency.",
+      "body": [
+        "We built a real estate website for Lider Emlak to professionally showcase its Bozüyük portfolio, with categorized, browsable listings on a custom WordPress theme matching the brand.",
+        "Listing management, location details and contact flows are handled from a single panel. On-page technical SEO delivered visibility in local searches. Delivered in partnership with Saiber."
+      ]
+    },
+    "odeme-takip-botu": {
+      "title": "Payment Tracker Bot",
+      "summary": "Payment-tracking web app that sends automatic Telegram reminders as due dates approach.",
+      "body": [
+        "We built a web app that monitors company payments (installments, cheques, cash and more) and sends automatic Telegram reminders as due dates approach — on a lightweight, reliable Node.js, Express and SQLite stack.",
+        "Auto-generated installment schedules, dashboards for overdue and next-7-days payments, and financial-integrity safeguards for settled records make it a concrete example of automating business workflows."
+      ]
+    },
+    "deprem-erken-uyari": {
+      "title": "Earthquake Early Warning",
+      "summary": "Early-warning simulation detecting P-waves from seismic data with a 1D CNN — R&D project.",
+      "body": [
+        "We built a deep-learning project that simulates an earthquake early-warning scenario by detecting P-waves in seismic time-series data. The 1D CNN architecture in Python performs fast, accurate wave detection from raw signals.",
+        "As an R&D project it covers the full pipeline — data preparation, model training and evaluation — and stands as concrete proof of our time-series deep-learning capability."
+      ]
+    },
+    "arac-takip-yolo": {
+      "title": "Vehicle Tracking System",
+      "summary": "Multi-vehicle detection and tracking in video — YOLOv11 + ByteTrack, fine-tuned on our own data.",
+      "body": [
+        "We developed a computer-vision system that detects and tracks multiple vehicles in a video stream in real time. We fine-tuned Ultralytics YOLO11 on our own dataset and paired it with ByteTrack for identity-preserving tracking.",
+        "Adaptable to traffic analytics, security and smart-city scenarios, this R&D project showcases object detection, tracking and model-tuning capabilities together."
+      ]
+    },
+    "trafik-levha-okuma": {
+      "title": "Traffic Sign Recognition",
+      "summary": "Two-stage pipeline: YOLO detects traffic signs, a CNN classifies them — R&D project.",
+      "body": [
+        "We built a two-stage computer-vision pipeline that first detects traffic signs with YOLO, then classifies the cropped regions with a CNN.",
+        "A potential foundation for driver-assistance and map-updating scenarios, this R&D work demonstrates our experience combining detection and classification models in a single production line."
+      ]
+    },
+    "yuz-duygu-analizi": {
+      "title": "Facial Emotion Analysis",
+      "summary": "Real-time, explainable emotion estimation from 468 MediaPipe Face Mesh landmarks.",
+      "body": [
+        "We built a system that estimates emotions in real time from the 468 facial landmarks extracted by MediaPipe Face Mesh. Instead of a black box we chose a rule-based, explainable approach — every prediction's reasoning is traceable.",
+        "Running live on a webcam, this R&D project is a practical computer-vision example that can underpin UX research and interactive applications."
+      ]
+    },
+    "hava-goruntu-segmentasyonu": {
+      "title": "Aerial Image Segmentation",
+      "summary": "Six-class semantic segmentation of satellite imagery with U-Net — near-production R&D.",
+      "body": [
+        "We developed a semantic-segmentation model that separates satellite imagery into six classes such as buildings, roads and vegetation, achieving high pixel-level accuracy with a U-Net architecture.",
+        "Structured close to production quality, this R&D project demonstrates geospatial data capability applicable to urban planning, agriculture and disaster analysis."
+      ]
+    },
+    "fuze-gudum-simulasyonu": {
+      "title": "Missile Guidance Visualization",
+      "summary": "Simulation and visualization of guidance algorithms in Python — R&D project.",
+      "body": [
+        "We built a Python project that simulates guidance-algorithm behavior and visualizes it step by step; pursuit geometry and trajectory calculations can be followed through interactive plots.",
+        "Combining mathematical modeling with visualization, this R&D work exemplifies our ability to turn complex algorithms into understandable output."
+      ]
+    },
+    "contentflow-ai": {
+      "title": "ContentFlow AI",
+      "summary": "AI-assisted content generation and workflow SaaS prototype built with Next.js.",
+      "body": [
+        "ContentFlow AI is a SaaS product prototype that accelerates content production with AI. Built on Next.js, it gathers the journey from idea to draft to publishing flow in a single panel.",
+        "Developed as our own product idea, this prototype shows AI integration, SaaS architecture and productization experience in one place."
+      ]
+    },
+    "social-pro": {
+      "title": "Social Pro",
+      "summary": "Social media management SaaS prototype with scheduling and a unified dashboard.",
+      "body": [
+        "Social Pro is a SaaS prototype aimed at managing multiple social accounts from one panel. Content planning, calendar and performance views were built on Next.js.",
+        "As our own product idea, it reflects experience in dashboard design, multi-account architecture and SaaS productization."
+      ]
+    },
+    "holly-trader": {
+      "title": "Holly Trader",
+      "summary": "Trading and analysis tool prototype built on Node.js.",
+      "body": [
+        "Holly Trader is a Node.js-based tool prototype that monitors market data and produces trading analyses. Data collection, signal generation and reporting flow through a single service.",
+        "This fintech product experiment is a side project demonstrating real-time data processing and automation capability."
+      ]
+    },
+    "ai-dating-app": {
+      "title": "AI Dating App",
+      "summary": "AI-powered matching concept for a dating product, prototyped with Next.js.",
+      "body": [
+        "We developed a dating-app concept that analyzes user profiles with AI and suggests compatibility-based matches. The Next.js prototype covers the profile flow, matching logic and recommendation screens.",
+        "Still at the product-idea stage, this work demonstrates our experience with AI-driven recommendation systems and modern product prototyping."
+      ]
+    },
+    "gemini-tracker": {
+      "title": "Gemini Tracker",
+      "summary": "Gemini API-based tracking and monitoring tool prototype.",
+      "body": [
+        "We built a tracking-tool prototype that monitors, summarizes and reports content and data streams using the Gemini API. LLM-based analysis turns raw data into meaningful digests.",
+        "This R&D tool is a practical example of combining large-language-model integration with automation scenarios."
+      ]
     }
   },
   "servicesList": {
