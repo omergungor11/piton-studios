@@ -130,13 +130,15 @@
     "getInTouch": "Get in Touch",
     "cursorLabel": "Send ↗",
     "generalLabel": "General Inquiries",
-    "contactCta": "Get in Touch"
+    "contactCta": "Get in Touch",
+    "mail": "Email"
   },
   "services": {
     "eyebrow": "§ 04",
     "title": "Services",
     "count": "{count} practices",
-    "sectionLabel": "Services"
+    "sectionLabel": "Services",
+    "viewAll": "All Services"
   },
   "servicesPage": {
     "title": "Services",

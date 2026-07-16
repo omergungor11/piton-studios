@@ -129,13 +129,15 @@
     "cursorLabel": "Gönder ↗",
     "generalLabel": "Genel Sorular",
     "getInTouch": "İletişime Geç",
-    "contactCta": "İletişime Geç"
+    "contactCta": "İletişime Geç",
+    "mail": "Mail"
   },
   "services": {
     "eyebrow": "§ 04",
     "title": "Hizmetler",
     "count": "{count} hizmet",
-    "sectionLabel": "Hizmetler"
+    "sectionLabel": "Hizmetler",
+    "viewAll": "Tüm Hizmetler"
   },
   "servicesPage": {
     "title": "Hizmetler",

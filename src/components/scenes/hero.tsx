@@ -22,7 +22,7 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
           <div className="kicker">{t('kicker')}</div>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.2} duration={0.8}>
-          <h1 style={{ fontWeight: '600', letterSpacing: '2px', lineHeight: '0.85' }}>
+          <h1>
             {t('title1')} <span className="it">{t('title2')}</span>
           </h1>
         </Reveal>
