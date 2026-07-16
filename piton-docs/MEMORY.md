@@ -34,6 +34,12 @@
 - Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, tum kulup/nightlife siteleri (night-club-katalog dahil), taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
 - Detay sayfasinda "Is Birligi" meta alani olarak gosteriliyor (`projectDetail.collab`)
 
+## Canli Linkli Self-Development Projeleri (2026-07-16)
+- Work tipine `url?: string` alani eklendi — detay sayfasinda "Canli Site → Siteyi ziyaret et" metasi olarak render ediliyor (`projectDetail.live/visit`)
+- 5 canli proje eklendi (gercek ekran goruntuleriyle): fur-crm (one cikan slider #2 — mobilya CRM/cari/bayi sistemi), lithos, vanguard, jack-portfolio, veldara
+- mindloop'a da canli url eklendi: mindloop-landing-page-phi.vercel.app
+- fur-crm.vercel.app backend'i o gun veri vermiyordu — ekran goruntusu hata bandi gizlenerek alindi; backend duzelirse yeniden cekilebilir
+
 ## Important Patterns
 - Video lazy loading with Intersection Observer
 - Poster/thumbnail images for video previews (don't autoplay all)

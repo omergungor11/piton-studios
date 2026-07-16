@@ -23,14 +23,14 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 
 **Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Polish/iyilestirme devam ediyor.
 
-- **56 proje** WORKS array'inde (freelancer klasöründen 13 proje eklendi: Lider Emlak, Ödeme Takip Botu, 6 AI/ML Ar-Ge, 5 SaaS prototip), ilk 6'sı anasayfa slider'da
+- **66 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5 (Manager, Emlak Sync, Sevgili Yoğurt, Dolmuş Kontrol, ÖSYB Hap). İlk 6 proje slider'da
 - **Saiber ortaklığı**: 19 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
 - **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
 - **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
-- **Ceviriler**: tr.json + en.json'da tum 56 proje icin works.{slug} girdisi tam; yeni 13 proje ru.json'a da eklendi, eski 11 slug ru.json'da hala eksik (bekliyor)
+- **Ceviriler**: tr.json + en.json'da tum 66 proje icin works.{slug} girdisi tam; yeni 23 proje ru.json'a da eklendi, eski 11 slug ru.json'da hala eksik (bekliyor)
 - **Bekleyen**: Proje tarihleri duzeltilecek, ru.json ceviri tamamlanacak
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.

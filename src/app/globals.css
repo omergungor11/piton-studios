@@ -2919,6 +2919,12 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 .pd-meta-v {
   font-size: 13px; color: var(--ink); letter-spacing: 0.04em;
 }
+.pd-live-link {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  transition: opacity 200ms;
+}
+.pd-live-link:hover { opacity: 0.7; }
 
 /* Body */
 .pd-body {

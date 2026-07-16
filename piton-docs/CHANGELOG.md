@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-16 (3)
+
+### Added
+- **5 live self-development projects** with real desktop+mobile screenshots and live links: FurCRM (furniture CRM — featured, slider #2), Lithos, Vanguard, Jack — 3D Creator, Veldara. New `url` field on Work type renders a "Canlı Site" meta link on detail pages; Mindloop also got its live URL
+- **5 projects found in the Work-Restored scan** (WORKS 61 → 66): Manager (multi-tenant auto-service CRM SaaS), Emlak Sync (multi-portal listing sync), Sevgili Yoğurt (dairy PWA), Dolmuş Güzergah Kontrol (GPS route-compliance automation), ÖSYB Hap (exam-prep platform) — full tr/en/ru translations
+- Work-Restored folders verified as already covered or deliberately excluded: baykan-night-club (= Miracle), mehmet-missme (= Misse), seytan-ibo (= Gece Kıbrıs), kktc-gece-hayati (= Kıbrıs Gece Hayatı), baykan taxi (= Kıbrıs Lefkoşa Taksi); excluded: Hermes (empty), aeo-factory/ctools (internal tools), thunderbolt/uda-ozel/aii002/com333/irmak/aii003 (coursework & docs), zadi-test-website, cs2-market, traify/gstack, lefke-belediyesi (never built)
+
 ## 2026-07-16 (2)
 
 ### Added
