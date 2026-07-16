@@ -1030,6 +1030,7 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
   align-items: start;
+  touch-action: pan-y; /* keep vertical scroll native, let drag="x" own horizontal swipes */
 }
 
 /* Mockup browser frame */
@@ -2446,6 +2447,14 @@ html[data-theme="light"] .pt-badge:hover { background: rgba(0,0,0,0.05); }
   .pf-partners { order: 3; width: 100%; justify-content: center; }
   .pf-badge-name { display: inline; }
 }
+/* Narrow screens: named badges can't fit one line — fall back to a single
+   centered icon row instead of stacking. */
+@media (max-width: 640px) {
+  .pf-partners { flex-wrap: nowrap; gap: 8px; }
+  .pf-badge-name { display: none; }
+  .pf-badge { padding: 8px 12px; }
+  .pf-badge svg { width: 20px; height: 20px; }
+}
 @media (max-width: 640px) {
   .pt-groups { flex-direction: column; align-items: flex-start; gap: 14px; }
   .pt-divider { display: none; }
@@ -3026,7 +3035,11 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 }
 @media (max-width: 600px) {
   .pd-nav-bar { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 12px; }
-  .pd-nav-all { grid-column: 1 / -1; justify-self: center; }
+  /* Explicit placement: prev + next side by side on row 1, view-all centered
+     below — auto-placement pushed next under prev because of DOM order. */
+  .pd-nav-prev { grid-row: 1; grid-column: 1; }
+  .pd-nav-next { grid-row: 1; grid-column: 2; }
+  .pd-nav-all { grid-row: 2; grid-column: 1 / -1; justify-self: center; }
   .pd-nav-link-kind { display: none; }
 }
 @media (max-width: 480px) {
@@ -4051,10 +4064,11 @@ html[data-theme="light"] .mobile-menu-item:active {
   .about-top { grid-template-columns: 1fr; gap: 24px; }
   .about-glass h3 { font-size: clamp(22px, 6vw, 36px); }
   .about-media {
-    max-height: 300px;
+    height: 280px;
+    max-height: none;
+    aspect-ratio: auto;
     margin-left: -18px; margin-right: -18px;
     border-radius: 0;
-    aspect-ratio: 4/3;
   }
   .about-meta { grid-template-columns: 1fr; gap: 20px; }
 

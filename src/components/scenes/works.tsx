@@ -39,20 +39,8 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
   const next = () => { go(1); resetAuto(); };
   const jumpTo = (i: number) => { setIdx(i); resetAuto(); };
 
-  // Touch swipe (mobile)
-  const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (!touchStart.current) return;
-    const dx = e.changedTouches[0].clientX - touchStart.current.x;
-    const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    touchStart.current = null;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
-      if (dx < 0) next(); else prev();
-    }
-  };
+  // Suppress the click that fires on the inner Links right after a drag
+  const isDragging = useRef(false);
 
   return (
     <div className="proj-glass glass">
@@ -61,7 +49,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
         <h3 dangerouslySetInnerHTML={{ __html: t('heading').replace('<em>', '<span class="em">').replace('</em>', '</span>') }} />
       </div>
 
-      <div className="proj-slider" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <div className="proj-slider">
         <AnimatePresence mode="wait">
           <motion.div
             key={work.slug}
@@ -70,6 +58,18 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.25}
+            onDragStart={() => { isDragging.current = true; }}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -60 || info.velocity.x < -500) next();
+              else if (info.offset.x > 60 || info.velocity.x > 500) prev();
+              setTimeout(() => { isDragging.current = false; }, 150);
+            }}
+            onClickCapture={(e) => {
+              if (isDragging.current) { e.preventDefault(); e.stopPropagation(); }
+            }}
           >
             {/* Left: Mockup */}
             <Link href={{ pathname: '/projects/[slug]', params: { slug: work.slug } }} className="proj-mockup" data-cursor="play" data-cursor-label="View ↗">
