@@ -623,6 +623,110 @@
         "Securify için veri güvenliği ve gizlilik odaklı bir SaaS platformunun landing page'ini tasarladık. Koyu temalı, büyük tipografi ve etkileyici istatistiklerle (1.5B+ korunan veri, 65K+ girişim kullanıcısı) güven veren bir marka anlatımı kurguladık.",
         "Platform, çözümler, şirket ve destek sayfalarını kapsayan modern bir navigasyon yapısı ile SaaS ürününü net şekilde konumlandırdık."
       ]
+    },
+    "lider-emlak": {
+      "title": "Lider Emlak",
+      "summary": "Bozüyük merkezli emlak ofisi için ilan listeleme ve kurumsal tanıtım sitesi.",
+      "body": [
+        "Lider Emlak için Bozüyük'teki portföyünü profesyonelce sergileyebileceği, ilanların kategorize edilip listelendiği bir emlak web sitesi geliştirdik. WordPress üzerinde özel tema ile markaya uygun bir tasarım kurduk.",
+        "İlan yönetimi, konum bilgileri ve iletişim akışları tek panelden yönetilebilir hale geldi. Temel teknik SEO ile yerel aramalarda görünürlük sağlandı. Proje Saiber ortaklığıyla teslim edildi."
+      ]
+    },
+    "odeme-takip-botu": {
+      "title": "Ödeme Takip Botu",
+      "summary": "Vade tarihi yaklaşınca Telegram'dan otomatik hatırlatan ödeme takip uygulaması.",
+      "body": [
+        "Şirket ödemelerini (kredi kartı/taksitli, çek, elden ve diğer) takip eden; vade tarihi yaklaşınca Telegram üzerinden otomatik hatırlatma gönderen bir web uygulaması geliştirdik. Node.js, Express ve SQLite üzerine kurulu hafif ama güvenilir bir altyapı kullandık.",
+        "Taksitli ödemelerde otomatik vade üretimi, geciken ve önümüzdeki 7 gün için özet panel, ödenmiş kayıtlar için finansal bütünlük koruması gibi özelliklerle iş süreçlerini otomatikleştirmenin somut bir örneğini ortaya koyduk."
+      ]
+    },
+    "deprem-erken-uyari": {
+      "title": "Deprem Erken Uyarı",
+      "summary": "Sismik veriden P-dalgası tespitiyle erken uyarı simülasyonu (1D CNN) — Ar-Ge projesi.",
+      "body": [
+        "Sismik zaman serisi verisinden P-dalgalarını tespit ederek deprem erken uyarı senaryosunu simüle eden bir derin öğrenme projesi geliştirdik. Python ile kurulan 1D CNN mimarisi, ham sinyalden hızlı ve doğru dalga tespiti yapıyor.",
+        "Bir Ar-Ge projesi olarak; veri hazırlama, model eğitimi ve değerlendirme adımlarının tamamını kapsıyor. Zaman serisi derin öğrenme yetkinliğimizin somut bir kanıtı."
+      ]
+    },
+    "arac-takip-yolo": {
+      "title": "Araç Takip Sistemi",
+      "summary": "Videoda çoklu araç tespiti ve takibi — YOLOv11 + ByteTrack, kendi veriyle fine-tune.",
+      "body": [
+        "Video akışında birden fazla aracı gerçek zamanlı tespit edip takip eden bir bilgisayarlı görü sistemi geliştirdik. Ultralytics YOLO11 modelini kendi veri setimizle fine-tune ederek, ByteTrack ile kimlik korumalı takip sağladık.",
+        "Trafik analizi, güvenlik ve akıllı şehir senaryolarına uyarlanabilir bu Ar-Ge projesi; nesne tespiti, takip ve model iyileştirme yetkinliklerimizi bir arada sergiliyor."
+      ]
+    },
+    "trafik-levha-okuma": {
+      "title": "Trafik Levha Okuma",
+      "summary": "İki aşamalı pipeline: YOLO ile levha tespiti, CNN ile sınıflandırma — Ar-Ge projesi.",
+      "body": [
+        "Görüntüdeki trafik levhalarını önce YOLO ile tespit eden, ardından kırpılan bölgeleri CNN ile sınıflandıran iki aşamalı bir bilgisayarlı görü pipeline'ı geliştirdik.",
+        "Sürücü destek sistemleri ve harita güncelleme senaryolarına temel olabilecek bu Ar-Ge çalışması; tespit ve sınıflandırma modellerini tek üretim hattında birleştirme deneyimimizi gösteriyor."
+      ]
+    },
+    "yuz-duygu-analizi": {
+      "title": "Yüz Duygu Analizi",
+      "summary": "MediaPipe Face Mesh'in 468 landmark'ından gerçek zamanlı, açıklanabilir duygu tahmini.",
+      "body": [
+        "MediaPipe Face Mesh'in çıkardığı 468 yüz noktasını kullanarak gerçek zamanlı duygu tahmini yapan bir sistem geliştirdik. Kara kutu yerine kural tabanlı ve açıklanabilir bir yaklaşım tercih ettik — her tahminin gerekçesi izlenebilir.",
+        "Web kamerasıyla anlık çalışan bu Ar-Ge projesi; kullanıcı deneyimi araştırmaları ve etkileşimli uygulamalar için temel oluşturabilecek pratik bir bilgisayarlı görü örneği."
+      ]
+    },
+    "hava-goruntu-segmentasyonu": {
+      "title": "Hava Görüntüsü Segmentasyonu",
+      "summary": "Uydu görüntülerinde U-Net ile 6 sınıflı semantik segmentasyon — üretime yakın Ar-Ge.",
+      "body": [
+        "Uydu görüntülerini bina, yol, bitki örtüsü gibi 6 sınıfa ayıran bir semantik segmentasyon modeli geliştirdik. U-Net mimarisi ile piksel bazında yüksek doğruluklu ayrım sağladık.",
+        "Üretime yakın bir yapıda kurgulanan bu Ar-Ge projesi; şehir planlama, tarım ve afet analizi gibi alanlarda kullanılabilecek coğrafi veri işleme yetkinliğimizi gösteriyor."
+      ]
+    },
+    "fuze-gudum-simulasyonu": {
+      "title": "Füze Güdüm Görselleştirme",
+      "summary": "Güdüm algoritmalarının Python ile simülasyonu ve görselleştirmesi — Ar-Ge projesi.",
+      "body": [
+        "Güdüm algoritmalarının davranışını simüle eden ve adım adım görselleştiren bir Python projesi geliştirdik. Takip geometrisi ve yörünge hesaplamaları etkileşimli grafiklerle izlenebiliyor.",
+        "Matematiksel modelleme ile görselleştirmeyi birleştiren bu Ar-Ge çalışması; karmaşık algoritmaları anlaşılır çıktılara dönüştürme yetkinliğimizin bir örneği."
+      ]
+    },
+    "contentflow-ai": {
+      "title": "ContentFlow AI",
+      "summary": "AI destekli içerik üretimi ve akış yönetimi SaaS prototipi (Next.js).",
+      "body": [
+        "ContentFlow AI, içerik üretim sürecini yapay zekâ ile hızlandıran bir SaaS ürün prototipi. Next.js üzerinde kurulan yapı; içerik fikrinden taslağa ve yayın akışına uzanan adımları tek panelde topluyor.",
+        "Kendi ürün fikrimiz olarak geliştirdiğimiz bu prototip; AI entegrasyonu, SaaS mimarisi ve ürünleştirme deneyimimizi bir arada gösteriyor."
+      ]
+    },
+    "social-pro": {
+      "title": "Social Pro",
+      "summary": "Planlama ve tek panel yönetim sunan sosyal medya SaaS prototipi.",
+      "body": [
+        "Social Pro, birden fazla sosyal medya hesabını tek panelden yönetmeyi hedefleyen bir SaaS prototipi. İçerik planlama, takvim ve performans görünümleri Next.js üzerinde kurgulandı.",
+        "Kendi ürün fikrimiz olan bu çalışma; dashboard tasarımı, çoklu hesap mimarisi ve SaaS ürünleştirme adımlarındaki deneyimimizi yansıtıyor."
+      ]
+    },
+    "holly-trader": {
+      "title": "Holly Trader",
+      "summary": "Node.js tabanlı alım-satım ve analiz aracı prototipi.",
+      "body": [
+        "Holly Trader, piyasa verilerini izleyip alım-satım analizleri sunan Node.js tabanlı bir araç prototipi. Veri toplama, sinyal üretimi ve raporlama akışları tek serviste birleşiyor.",
+        "Fintech alanındaki bu ürün denememiz; gerçek zamanlı veri işleme ve otomasyon yetkinliğimizi gösteren bir yan proje."
+      ]
+    },
+    "ai-dating-app": {
+      "title": "AI Dating App",
+      "summary": "AI eşleştirme konseptli tanışma uygulaması prototipi (Next.js).",
+      "body": [
+        "Kullanıcı profillerini yapay zekâ ile analiz edip uyum bazlı eşleştirme öneren bir tanışma uygulaması konsepti geliştirdik. Next.js üzerinde kurulan prototip; profil akışı, eşleştirme mantığı ve öneri ekranlarını içeriyor.",
+        "Ürün fikri aşamasındaki bu çalışma; AI destekli öneri sistemleri ve modern ürün prototipleme deneyimimizi gösteriyor."
+      ]
+    },
+    "gemini-tracker": {
+      "title": "Gemini Tracker",
+      "summary": "Gemini API tabanlı takip ve izleme aracı prototipi.",
+      "body": [
+        "Gemini API'ını kullanarak içerik ve veri akışlarını izleyen, özetleyen ve raporlayan bir takip aracı prototipi geliştirdik. LLM tabanlı analiz ile ham veriden anlamlı özetler üretiliyor.",
+        "Bu Ar-Ge aracı; büyük dil modeli entegrasyonu ve otomasyon senaryolarını birleştirme deneyimimizin pratik bir örneği."
+      ]
     }
   },
   "servicesList": {

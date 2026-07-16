@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-16 (2)
+
+### Added
+- **13 new portfolio projects** from the freelancer content pack (WORKS 43 → 56): Lider Emlak, Ödeme Takip Botu (Telegram automation), 6 AI/ML R&D projects (Deprem Erken Uyarı, Araç Takip, Trafik Levha Okuma, Yüz Duygu Analizi, Hava Görüntüsü Segmentasyonu, Füze Güdüm Görselleştirme) and 5 SaaS prototypes (ContentFlow AI, Social Pro, Holly Trader, AI Dating App, Gemini Tracker) — AI/SaaS entries honestly framed as R&D/prototypes; full tr/en/ru translations included
+- **Saiber partnership attribution**: `collaborator: "Saiber"` on 19 projects (Velis, Pampas, EKH Yapı, Radyo Juke, Özge Özler, RNV, Pinnacle, Jet Transfer, Boon Fresh, Halas Exchange, Arslan ×3, Homes in Mediterranean, Sammys, All Pro, Alert Müh., Virginia, Lider Emlak) — shown as "İş Birliği" meta on project detail pages; Saiber is the agency formerly known as Media King
+
+### Removed
+- Lefke Belediyesi entry (added earlier today from the content pack, then removed — project was never actually built)
+
+### Not added (deliberate)
+- CS2-Market (gambling category), Traify/GStack (vague prototype), Baykan Next.js taxi build (possible duplicate of existing entry)
+
 ## 2026-07-16
 
 ### Fixed (mobile UX, follow-up)
