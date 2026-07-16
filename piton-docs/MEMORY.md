@@ -29,7 +29,7 @@
 ## Saiber Ortakligi (proje atiflari)
 - Saiber = Kibris merkezli ajans, eski adi Media King. WordPress tabanli islerin cogu Saiber ortakliginda teslim edildi.
 - Kaynak dogrulugu: `/Users/arlec/Work-Restored/freelancer/02-projeler-case-study.md` (ajans notu) — atif sorularinda oraya bak.
-- WORKS'te `collaborator: "Saiber"` olan 19 proje: velis-ltd, pampas-investment, ekh-yapi, radyo-juke, ozge-ozler, rnv-trading, pinnacle-yatirim, jet-transfer-cyprus, boon-fresh, halas-exchange, arslan-estates, arslan-coin-center, arslan-group, homes-in-mediterranean, sammys-hotel, all-pro-cyprus, alert-muhendislik, virginia-ice-cream, lider-emlak
+- WORKS'te `collaborator: "Saiber"` olan 20 proje: velis-ltd, pampas-investment, ekh-yapi, radyo-juke, ozge-ozler, rnv-trading, pinnacle-yatirim, jet-transfer-cyprus, boon-fresh, halas-exchange, arslan-estates, arslan-coin-center, arslan-group, homes-in-mediterranean, sammys-hotel, all-pro-cyprus, alert-muhendislik, virginia-ice-cream, lider-emlak, avie-global (avie-global: WP kurali geregi eklendi, kullanici teyidi bekliyor)
 - Lefke Belediyesi HIC YAPILMADI — freelancer dokumaninda listelense de siteye EKLENMEYECEK (kullanici 2026-07-16'da kaldirtti)
 - Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, tum kulup/nightlife siteleri (night-club-katalog dahil), taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
 - Detay sayfasinda "Is Birligi" meta alani olarak gosteriliyor (`projectDetail.collab`)

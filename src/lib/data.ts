@@ -182,17 +182,17 @@ export const WORKS: Work[] = [
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
-    kind: "Web Design · Corporate",
+    kind: "Web App · Full-Stack",
     year: "2026",
-    role: "Design / Development",
-    tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
+    role: "Design / Development / Deploy",
+    tags: ["Next.js", "Supabase", "Google Maps", "i18n"],
     image: "story-04.jpg",
-    summary: "Real estate and investment company website in North Cyprus.",
+    summary: "Custom real estate listing & management system — maps, multi-language, automated PDF/PPT proposals.",
     body: [
-      "Gazimağusa merkezli Nexos Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
-      "Modern tasarım, hızlı yüklenme süreleri ve mobil uyumlu yapı ile potansiyel yatırımcıların kolayca bilgiye ulaşmasını sağladık. SEO çalışmaları ile organik görünürlüğü artırdık.",
+      "Hazır temalar Nexos Investment'ın ihtiyaçlarını karşılamıyordu; Next.js, Supabase ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik. Google Maps + Leaflet ile cluster'lı interaktif harita, çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi tek sistemde birleşti.",
+      "TipTap editörlü yönetim paneli, PWA/offline desteği, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik — portfolyomuzun teknik zirvesi.",
     ],
-    scope: "Web design, corporate, SEO",
+    scope: "Full-stack app, admin panel, PWA, E2E tests",
     previews: {
       desktop: '/assets/previews/desktop/nexos-investment.webp',
       mobile: '/assets/previews/mobile/nexos-investment.webp',
@@ -243,23 +243,6 @@ export const WORKS: Work[] = [
   },
   {
     n: "08",
-    slug: "nexos-investment",
-    title: "Nexos Investment",
-    client: "Nexos Investment",
-    kind: "Web Design · Real Estate",
-    year: "2026",
-    role: "Design / Development",
-    tags: ["Real Estate", "Investment", "Corporate", "KKTC"],
-    image: "story-02.jpg",
-    summary: "Real estate and automotive investment company website.",
-    body: [
-      "Gazimağusa merkezli Nexos Investment için gayrimenkul yatırım, araç satış ve danışmanlık hizmetlerini kapsayan kurumsal bir web sitesi geliştirdik. Çoklu iş kollarını tek çatı altında sunan profesyonel bir platform oluşturduk.",
-      "İlan yönetimi, sosyal medya entegrasyonu ve SEO çalışmaları ile dijital görünürlüğü artırdık. Müşteri iletişimini kolaylaştıran form yapıları ve WhatsApp entegrasyonu dahil ettik.",
-    ],
-    scope: "Web design, real estate, corporate",
-  },
-  {
-    n: "09",
     slug: "ambalaj-cini",
     title: "Ambalaj Cini",
     client: "Ambalaj Cini",
@@ -276,7 +259,7 @@ export const WORKS: Work[] = [
     scope: "E-commerce, web design, payment",
   },
   {
-    n: "10",
+    n: "09",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",
@@ -298,7 +281,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "11",
+    n: "10",
     slug: "night-club-katalog",
     title: "Night Club Katalog",
     client: "Night Club Katalog",
@@ -319,7 +302,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "12",
+    n: "11",
     slug: "kibris-gece-hayati",
     title: "Kıbrıs Gece Hayatı",
     client: "Kıbrıs Gece Hayatı",
@@ -339,7 +322,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "12",
     slug: "gece-kibris",
     title: "Gece Kıbrıs",
     client: "İbo Şeytan",
@@ -360,7 +343,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "13",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -382,7 +365,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "15",
+    n: "14",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -404,7 +387,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "16",
+    n: "15",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -426,7 +409,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "17",
+    n: "16",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -448,7 +431,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "18",
+    n: "17",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -466,7 +449,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "19",
+    n: "18",
     slug: "prenses-night-club",
     title: "Prenses Night Club",
     client: "Prenses Night Club",
@@ -487,7 +470,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "19",
     slug: "miracle-night-club",
     title: "Miracle Night Club",
     client: "Miracle Night Club",
@@ -508,7 +491,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "21",
+    n: "20",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -526,7 +509,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "22",
+    n: "21",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -544,7 +527,7 @@ export const WORKS: Work[] = [
     scope: "Web design, finance, corporate",
   },
   {
-    n: "23",
+    n: "22",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -562,7 +545,7 @@ export const WORKS: Work[] = [
     scope: "Web design, real estate, SEO",
   },
   {
-    n: "24",
+    n: "23",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -580,7 +563,7 @@ export const WORKS: Work[] = [
     scope: "Web design, finance, crypto",
   },
   {
-    n: "25",
+    n: "24",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -598,7 +581,7 @@ export const WORKS: Work[] = [
     scope: "Web design, corporate, holding",
   },
   {
-    n: "26",
+    n: "25",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -620,7 +603,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "27",
+    n: "26",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -637,7 +620,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "28",
+    n: "27",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -658,7 +641,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "28",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -679,7 +662,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "30",
+    n: "29",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -696,7 +679,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, SEO",
   },
   {
-    n: "31",
+    n: "30",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -718,7 +701,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "32",
+    n: "31",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -740,7 +723,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "32",
     slug: "kibris-nights-club",
     title: "Kıbrıs Nights Club",
     client: "Kıbrıs Nights Club",
@@ -761,7 +744,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "34",
+    n: "33",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -783,7 +766,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "35",
+    n: "34",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -804,7 +787,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "36",
+    n: "35",
     slug: "crazy-girl-night-club",
     title: "Crazy Girl Night Club",
     client: "Crazy Girl Night Club",
@@ -825,7 +808,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "37",
+    n: "36",
     slug: "kibris-katalog",
     title: "Kıbrıs Katalog",
     client: "Kıbrıs Katalog",
@@ -846,7 +829,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "38",
+    n: "37",
     slug: "misse-night-club",
     title: "Misse Night Club",
     client: "Misse Night Club",
@@ -867,7 +850,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "39",
+    n: "38",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -889,7 +872,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "40",
+    n: "39",
     slug: "faraon-night-clubs",
     title: "Faraon Night Clubs",
     client: "Faraon Night Clubs",
@@ -910,7 +893,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "41",
+    n: "40",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -930,7 +913,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "42",
+    n: "41",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -952,7 +935,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "43",
+    n: "42",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -973,7 +956,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "44",
+    n: "43",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -994,7 +977,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "45",
+    n: "44",
     slug: "lider-emlak",
     title: "Lider Emlak",
     client: "Lider Emlak (Bozüyük)",
@@ -1012,7 +995,7 @@ export const WORKS: Work[] = [
     scope: "Web design, listings, SEO",
   },
   {
-    n: "46",
+    n: "45",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton Studios",
@@ -1029,7 +1012,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "47",
+    n: "46",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton Studios",
@@ -1046,7 +1029,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "48",
+    n: "47",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton Studios",
@@ -1063,7 +1046,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, object tracking, research",
   },
   {
-    n: "49",
+    n: "48",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton Studios",
@@ -1080,7 +1063,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "50",
+    n: "49",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton Studios",
@@ -1097,7 +1080,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "51",
+    n: "50",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton Studios",
@@ -1114,7 +1097,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "52",
+    n: "51",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton Studios",
@@ -1131,7 +1114,7 @@ export const WORKS: Work[] = [
     scope: "Simulation, algorithm visualization, research",
   },
   {
-    n: "53",
+    n: "52",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -1148,7 +1131,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "54",
+    n: "53",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -1165,7 +1148,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "55",
+    n: "54",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -1182,7 +1165,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "56",
+    n: "55",
     slug: "ai-dating-app",
     title: "AI Dating App",
     client: "AI Dating App",
@@ -1199,7 +1182,7 @@ export const WORKS: Work[] = [
     scope: "Product concept, AI matching, prototype",
   },
   {
-    n: "57",
+    n: "56",
     slug: "gemini-tracker",
     title: "Gemini Tracker",
     client: "Gemini Tracker",
@@ -1216,7 +1199,7 @@ export const WORKS: Work[] = [
     scope: "AI tool, tracking, prototype",
   },
   {
-    n: "58",
+    n: "57",
     slug: "lithos",
     title: "Lithos",
     client: "Lithos",
@@ -1238,7 +1221,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "59",
+    n: "58",
     slug: "vanguard",
     title: "Vanguard",
     client: "Vanguard",
@@ -1260,7 +1243,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "60",
+    n: "59",
     slug: "jack-portfolio",
     title: "Jack — 3D Creator",
     client: "Jack Portfolio",
@@ -1282,7 +1265,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "61",
+    n: "60",
     slug: "veldara",
     title: "Veldara",
     client: "Veldara",
@@ -1304,7 +1287,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "62",
+    n: "61",
     slug: "manager-oto-servis",
     title: "Manager",
     client: "Manager",
@@ -1321,7 +1304,7 @@ export const WORKS: Work[] = [
     scope: "Multi-tenant SaaS, CRM, pre-accounting",
   },
   {
-    n: "63",
+    n: "62",
     slug: "emlak-sync",
     title: "Emlak Sync",
     client: "Emlak Sync",
@@ -1338,7 +1321,7 @@ export const WORKS: Work[] = [
     scope: "Listing sync, portal integrations, automation",
   },
   {
-    n: "64",
+    n: "63",
     slug: "sevgili-yogurt",
     title: "Sevgili Yoğurt",
     client: "Sevgili Yoğurt",
@@ -1355,7 +1338,7 @@ export const WORKS: Work[] = [
     scope: "PWA, inventory, delivery, account tracking",
   },
   {
-    n: "65",
+    n: "64",
     slug: "dolmus-kontrol",
     title: "Dolmuş Güzergah Kontrol",
     client: "Piton Studios",
@@ -1372,7 +1355,7 @@ export const WORKS: Work[] = [
     scope: "Automation, data processing, reporting",
   },
   {
-    n: "66",
+    n: "65",
     slug: "osyb-hap",
     title: "ÖSYB Hap",
     client: "ÖSYB Hap",
@@ -1387,6 +1370,24 @@ export const WORKS: Work[] = [
       "Next.js üzerinde kurulan bu kendi ürünümüz; eğitim teknolojisi alanında içerik organizasyonu ve öğrenme deneyimi tasarımı yetkinliğimizi gösteriyor.",
     ],
     scope: "Education platform, flashcards, question bank",
+  },
+  {
+    n: "66",
+    slug: "avie-global",
+    title: "Avie Global",
+    client: "Avie Global Trading",
+    kind: "Web Design · Trading",
+    year: "2024",
+    role: "Design / Development",
+    collaborator: "Saiber",
+    tags: ["WordPress", "Automotive", "Trading", "Multi-language"],
+    image: "story-03.jpg",
+    summary: "Automotive spare parts trading company corporate website.",
+    body: [
+      "Avie Global Trading için otomotiv yedek parça ticareti alanında kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerinde şirket profili, ürün grupları ve iletişim akışlarını tek yapıda topladık.",
+      "Global ticaret odaklı tasarım, çok dilli içerik yapısı ve SEO optimizasyonu ile uluslararası müşterilere ulaşmayı hedefledik.",
+    ],
+    scope: "Web design, corporate, multi-language",
   },
 ];
 

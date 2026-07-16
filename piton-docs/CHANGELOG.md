@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-16 (4)
+
+### Fixed
+- **ru.json translation debt cleared**: added the 11 long-missing Russian works entries (alert-muhendislik, beton-store, crazy-girl, kibris-katalog, misse, virginia, faraon, welcome-pickups, mindloop, dental-health, securify) — all 66 projects now complete in tr/en/ru
+- Removed duplicate `nexos-investment` entry (two entries shared one slug; kept the one with previews)
+
+### Changed
+- **4 case studies strengthened** with the freelancer pack's stronger narratives: Nexos (flagship full-stack — maps, i18n, automated PDF/PPT proposals, E2E), Ambalaj Cini (30% growth via Google Ads + Meta), Sammys Hotel (custom-coded reservation system), Radyo Juke (custom streaming integration)
+- Re-added `avie-global` (orphan translation had survived an old data removal) with Saiber attribution per the WordPress rule — awaiting user confirmation
+
 ## 2026-07-16 (3)
 
 ### Added
