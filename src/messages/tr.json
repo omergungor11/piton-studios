@@ -308,18 +308,18 @@
     },
     "nexos-investment": {
       "title": "Nexos Investment",
-      "summary": "KKTC gayrimenkul ve yatırım şirketi kurumsal sitesi.",
+      "summary": "Sıfırdan özel emlak ilan & yönetim sistemi — harita, çok dil, otomatik PDF/PPT teklif.",
       "body": [
-        "Gazimağusa merkezli Nexos Investment için gayrimenkul ve yatırım odaklı kurumsal bir web sitesi geliştirdik. Yatırımcıları bilgilendiren, güven veren ve profesyonel bir dijital varlık oluşturduk.",
-        "Modern tasarım, hızlı yüklenme süreleri ve mobil uyumlu yapı ile potansiyel yatırımcıların kolayca bilgiye ulaşmasını sağladık. SEO çalışmaları ile organik görünürlüğü artırdık."
+        "Hazır temalar Nexos Investment'ın ihtiyaçlarını (gelişmiş ilan yönetimi, harita üzerinde gösterim, çoklu dil, otomatik teklif üretimi) karşılamıyordu. Next.js, Supabase ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik: Google Maps + Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi.",
+        "TipTap editörlü ve sürükle-bırak destekli yönetim paneli, PWA/offline desteği, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor — portfolyomuzun teknik zirvesi."
       ]
     },
     "ambalaj-cini": {
       "title": "Ambalaj Cini",
-      "summary": "Ambalaj malzemeleri e-ticaret sitesi, ödeme entegrasyonlu.",
+      "summary": "E-ticaret + reklam yönetimi — Google Ads ve Meta kampanyalarıyla %30 büyüme.",
       "body": [
-        "Bilecik merkezli Ambalaj Cini için online ambalaj malzemeleri satış platformu geliştirdik. Ödeme entegrasyonu, ürün yönetimi ve stok takibi dahil kapsamlı bir e-ticaret altyapısı kurduk.",
-        "Kullanıcı deneyimi odaklı tasarım, kolay sipariş akışı ve güvenli ödeme altyapısı ile müşterinin online satışlarını önemli ölçüde artırdık. 2022'den bu yana aktif olarak hizmet veriyor."
+        "Bilecik merkezli Ambalaj Cini için Next.js/React tabanlı online satış platformunun geliştirme sürecini yönettik: ödeme entegrasyonu, ürün yönetimi ve sipariş akışı tek sistemde.",
+        "Geliştirmenin yanında Google Ads ve Facebook (Meta) reklam kampanyalarını kurgulayıp yönettik — dijital büyüme çalışmalarının sonucunda firma %30 büyüme elde etti. Reklam yönetimi hizmetimizin sonuç odaklı, somut kanıtı."
       ]
     },
     "avie-global": {
@@ -380,10 +380,10 @@
     },
     "radyo-juke": {
       "title": "Radyo Juke",
-      "summary": "Canlı yayın özellikli online radyo platformu.",
+      "summary": "Özel canlı yayın entegrasyonu kodlanmış online radyo platformu.",
       "body": [
-        "Radyo Juke için canlı yayın akışı, program rehberi ve dinleyici etkileşimi sunan modern bir online radyo platformu geliştirdik. Kullanıcı dostu arayüz ve kesintisiz yayın deneyimi ile fark yarattık.",
-        "Responsive tasarım ile mobil ve masaüstü cihazlarda sorunsuz dinleme deneyimi sağladık. Sosyal medya entegrasyonu ve paylaşım özellikleri ile dinleyici kitlesini genişlettik."
+        "Radyo Juke için canlı yayın akışını hazır bir çözümle değil, özel entegrasyon kodlamasıyla kurduk — kesintisiz streaming, program rehberi ve dinleyici etkileşimi tek platformda.",
+        "Responsive yapı ile mobil ve masaüstünde sorunsuz dinleme deneyimi sağladık; sosyal medya entegrasyonu ve paylaşım akışlarıyla dinleyici kitlesini büyüttük. Özel geliştirme yetkinliğimizin somut bir örneği."
       ]
     },
     "ozge-ozler": {
@@ -516,10 +516,10 @@
     },
     "sammys-hotel": {
       "title": "Sammys Hotel",
-      "summary": "Oda rezervasyonu ve galerili butik otel sitesi.",
+      "summary": "Özel kodlanmış rezervasyon sistemli butik otel sitesi.",
       "body": [
-        "Sammys Hotel için oda rezervasyonu, fotoğraf galerisi ve otel bilgilerini sergileyen şık bir web sitesi tasarladık. Misafir deneyimini ön plana çıkaran sıcak ve davetkar bir tasarım anlayışı uyguladık.",
-        "Online rezervasyon entegrasyonu, çok dilli yapı ve SEO optimizasyonu ile uluslararası turistlere ulaşmayı sağladık."
+        "Sammys Hotel için hazır eklenti yerine otelin iş akışına göre özel kodlanmış bir rezervasyon sistemi geliştirdik — oda seçimi, tarih ve talep akışı markaya özel tasarımla bütünleşik.",
+        "Fotoğraf galerisi, çok dilli yapı ve SEO optimizasyonu ile uluslararası turistlere ulaşan şık bir dijital vitrin teslim ettik. Özel fonksiyon geliştirme yetkinliğimizin en güçlü kanıtlarından."
       ]
     },
     "all-pro-cyprus": {

@@ -315,20 +315,20 @@
     },
     "nexos-investment": {
       "title": "Nexos Investment",
-      "summary": "Real estate and investment company website in North Cyprus.",
+      "summary": "Custom real estate listing & management system built from scratch — maps, i18n, automated PDF/PPT proposals.",
       "body": [
-        "We developed a corporate website focused on real estate and investment for Nexos Investment, based in Famagusta, North Cyprus. We created a professional digital presence that informs and builds trust with investors.",
-        "Modern design, fast load times, and mobile-responsive structure made it easy for potential investors to access information. SEO efforts increased organic visibility."
+        "Off-the-shelf themes couldn't meet Nexos Investment's needs (advanced listing management, map-based display, multi-language, automated proposal generation). We built a scalable listing management system from scratch with Next.js, Supabase and Vercel: an interactive Google Maps + Leaflet clustered map, multi-language via next-intl, and automated PDF/PowerPoint proposal generation from listing data.",
+        "An admin panel with TipTap editing and drag-and-drop, PWA/offline support, Zod validation, Upstash rate-limiting and Playwright E2E tests delivered a production-grade platform. The firm now runs maps, proposals and content from one fully-controlled system — the technical peak of our portfolio."
       ],
       "kind": "Web Design · Corporate",
       "role": "Design / Development"
     },
     "ambalaj-cini": {
       "title": "Ambalaj Cini",
-      "summary": "E-commerce packaging supplies store with payment integration.",
+      "summary": "E-commerce + ad management — 30% company growth via Google Ads and Meta campaigns.",
       "body": [
-        "We developed an online packaging supplies sales platform for Ambalaj Cini, based in Bilecik, Turkey. We built a comprehensive e-commerce infrastructure including payment integration, product management, and inventory tracking.",
-        "User experience-focused design, easy ordering flow, and secure payment infrastructure significantly increased the client's online sales. Actively serving since 2022."
+        "For Bilecik-based Ambalaj Cini we led development of the Next.js/React online sales platform: payment integration, product management and the order flow in one system.",
+        "Alongside development we set up and managed Google Ads and Facebook (Meta) campaigns — these digital growth efforts drove 30% company growth. Concrete, results-driven proof of our ad management service."
       ],
       "kind": "E-commerce · Web",
       "role": "Design / Development"
@@ -405,10 +405,10 @@
     },
     "radyo-juke": {
       "title": "Radyo Juke",
-      "summary": "Online radio streaming platform with live broadcast.",
+      "summary": "Online radio platform with custom-coded live streaming integration.",
       "body": [
-        "We developed a modern online radio platform for Radyo Juke featuring live streaming, a program guide, and listener interaction. A user-friendly interface and seamless broadcast experience set it apart.",
-        "Responsive design delivered a smooth listening experience across mobile and desktop devices. Social media integration and sharing features helped expand the listener base."
+        "For Radyo Juke we built the live broadcast not with an off-the-shelf widget but with custom integration code — uninterrupted streaming, a program guide and listener interaction on one platform.",
+        "A responsive structure delivers seamless listening on mobile and desktop; social integrations and share flows grew the audience. A concrete example of our custom development capability."
       ],
       "kind": "Web App · Entertainment",
       "role": "Design / Development"
@@ -575,10 +575,10 @@
     },
     "sammys-hotel": {
       "title": "Sammys Hotel",
-      "summary": "Boutique hotel website with room booking and gallery.",
+      "summary": "Boutique hotel website with a custom-coded reservation system.",
       "body": [
-        "We designed an elegant website for Sammys Hotel featuring room reservations, a photo gallery, and hotel information. A warm and inviting design approach put the guest experience front and center.",
-        "Online booking integration, multi-language support, and SEO optimization helped reach international tourists."
+        "For Sammys Hotel we built a custom-coded reservation system tailored to the hotel's workflow instead of an off-the-shelf plugin — room selection, dates and request flow integrated into the brand-specific design.",
+        "A photo gallery, multi-language structure and SEO delivered an elegant digital storefront reaching international tourists. One of the strongest proofs of our custom-feature development."
       ],
       "kind": "Web Design · Hospitality",
       "role": "Design / Development"
