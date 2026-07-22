@@ -18,8 +18,8 @@ export default function Preloader() {
   useEffect(() => {
     if (phase !== 'loading') return;
     if (sessionStorage.getItem(SEEN_KEY)) {
-      setPhase('done');
-      return;
+      const skip = requestAnimationFrame(() => setPhase('done'));
+      return () => cancelAnimationFrame(skip);
     }
     sessionStorage.setItem(SEEN_KEY, '1');
     let raf = 0;

@@ -7,7 +7,7 @@ import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
 import { Reveal } from '@/components/motion';
 
-const MOBILE_FEATURED = ['web-app', 'automation', 'ai-integration', 'google-ads', 'cloud-ecosystem'];
+const FEATURED = ['web-design', 'web-app', 'automation', 'ai-integration', 'google-ads', 'cloud-ecosystem'];
 
 export default function ServicesScene() {
   const t = useTranslations('services');
@@ -39,14 +39,14 @@ export default function ServicesScene() {
         </div>
       </Reveal>
       <div className="svc-grid" ref={gridRef}>
-        {SERVICES.map((s) => {
+        {SERVICES.filter((s) => FEATURED.includes(s.slug)).map((s) => {
           const hasTranslation = (() => { try { ts(`${s.slug}.title`); return true; } catch { return false; } })();
           const title = hasTranslation ? ts(`${s.slug}.title`) : s.title;
           const desc = hasTranslation ? ts(`${s.slug}.desc`) : s.desc;
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className={`svc ${MOBILE_FEATURED.includes(s.slug) ? '' : 'svc-desktop-only'}`} data-cursor="hover" data-cursor-label="+">
+            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
               <div className="svc-top">
                 <span className="n">{s.n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>
