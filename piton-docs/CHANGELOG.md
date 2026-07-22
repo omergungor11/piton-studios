@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-22
+
+### Added
+- **3D hero logo infrastructure** (`hero-logo-3d.tsx`): loads `public/models/logo.glb` with react-three-fiber (auto-rotate, mouse parallax, Float, blue-tinted lighting); gracefully falls back to the webp logo while the GLB doesn't exist yet. Model is user-generated via Meshy/Tripo image-to-3D — drop the file in and it activates automatically. Dynamic import keeps three.js out of the initial bundle
+
+### Changed
+- **Homepage services now show only 6 everywhere** (was: 15 on desktop, 5 CSS-hidden on mobile): `FEATURED` list renders 6 cards (web-design added as the 6th) on all viewports, grid switched 5→3 columns (3×2), "Tümünü Gör" button now visible on desktop too; dead `svc-desktop-only` CSS removed
+
 ## 2026-07-16 (4)
 
 ### Fixed

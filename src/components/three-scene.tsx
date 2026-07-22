@@ -5,18 +5,30 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Deterministik PRNG — render sirasinda saf kalir (react-hooks/purity)
+function mulberry32(seed: number) {
+  return () => {
+    seed |= 0;
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 function Particles({ count = 80 }) {
   const mesh = useRef<THREE.Points>(null);
   const mouse = useRef({ x: 0, y: 0 });
 
   const [positions, sizes] = useMemo(() => {
+    const rand = mulberry32(1337);
     const pos = new Float32Array(count * 3);
     const siz = new Float32Array(count);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 12;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 12;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 8;
-      siz[i] = Math.random() * 2 + 0.5;
+      pos[i * 3] = (rand() - 0.5) * 12;
+      pos[i * 3 + 1] = (rand() - 0.5) * 12;
+      pos[i * 3 + 2] = (rand() - 0.5) * 8;
+      siz[i] = rand() * 2 + 0.5;
     }
     return [pos, siz];
   }, [count]);
