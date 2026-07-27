@@ -354,30 +354,6 @@
         "Proje galerisi, iletişim formları ve mobil uyumlu tasarım ile müşteri edinimini kolaylaştırdık. WordPress altyapısı ile kolay içerik yönetimi sağladık."
       ]
     },
-    "night-club-katalog": {
-      "title": "Night Club Katalog",
-      "summary": "KKTC gece kulübü rehberi ve katalog platformu.",
-      "body": [
-        "KKTC'deki gece kulüplerini, eğlence mekanlarını ve katalog bilgilerini listeleyen kapsamlı bir rehber platformu geliştirdik. WordPress altyapısı üzerinde mekan profilleri, fiyat bilgileri ve kullanıcı yorumları dahil.",
-        "Yoğun SEO çalışmaları ile 'kıbrıs night club', 'gece hayatı katalog' gibi yüksek hacimli aramalarda üst sıralarda yer almayı başardık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı sağladık."
-      ]
-    },
-    "kibris-gece-hayati": {
-      "title": "Kıbrıs Gece Hayatı",
-      "summary": "KKTC gece hayatı ve eğlence rehberi platformu.",
-      "body": [
-        "KKTC'deki gece kulüpleri, barlar ve eğlence mekanlarını kapsayan modern bir dijital rehber platformu geliştirdik. Vercel üzerinde host edilen, Hostinger domain'li Next.js uygulaması ile hızlı ve SEO dostu bir yapı kurduk.",
-        "Mekan profilleri, etkinlik takvimleri, kullanıcı yorumları ve konum bazlı arama özellikleri dahil. Google Ads ve Search Console entegrasyonu ile organik ve ücretli trafik yönetimi sağladık."
-      ]
-    },
-    "gece-kibris": {
-      "title": "Gece Kıbrıs",
-      "summary": "KKTC gece hayatı için çift siteli eğlence platformu.",
-      "body": [
-        "KKTC gece hayatı sektörü için iki ayrı web sitesi içeren kapsamlı bir paket geliştirdik. gecekibris.com ve kktcnightsclub.com olmak üzere birbirini destekleyen iki platform ile geniş bir kitleye ulaşmayı hedefledik.",
-        "Vercel hosting, Hostinger domain yönetimi, Google Ads ve Tag Manager entegrasyonları ile profesyonel bir dijital altyapı kurduk. SEO odaklı içerik stratejisi ile arama motorlarında görünürlüğü artırdık."
-      ]
-    },
     "radyo-juke": {
       "title": "Radyo Juke",
       "summary": "Özel canlı yayın entegrasyonu kodlanmış online radyo platformu.",
@@ -416,22 +392,6 @@
       "body": [
         "Jet Transfer Cyprus için havalimanı transfer ve VIP ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon sistemi, rota bilgileri ve fiyat hesaplama araçları ile kullanıcı deneyimini ön plana çıkardık.",
         "Mobil uyumlu tasarım, WhatsApp entegrasyonu ve çok dilli yapı ile yerli ve yabancı turistlere kolayca ulaşmayı sağladık."
-      ]
-    },
-    "prenses-night-club": {
-      "title": "Prenses Night Club",
-      "summary": "Etkinlik takvimi ve galerili gece kulübü sitesi.",
-      "body": [
-        "Prenses Night Club için etkinlik takvimi, fotoğraf galerisi ve mekan bilgilerini sergileyen etkileyici bir web sitesi tasarladık. Gece hayatı atmosferini yansıtan koyu temalı, görsel odaklı bir tasarım uyguladık.",
-        "SEO optimizasyonu ile gece kulübü aramalarında üst sıralarda yer almayı sağladık. Sosyal medya entegrasyonu ve online iletişim araçları ile müşteri etkileşimini artırdık."
-      ]
-    },
-    "miracle-night-club": {
-      "title": "Miracle Night Club",
-      "summary": "VIP rezervasyon ve etkinlik listeli gece kulübü sitesi.",
-      "body": [
-        "Miracle Night Club için VIP rezervasyon sistemi, etkinlik listesi ve mekan tanıtımı sunan modern bir web sitesi geliştirdik. Premium atmosferi dijitale taşıyan lüks bir tasarım anlayışı uyguladık.",
-        "Google Ads entegrasyonu, SEO çalışmaları ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Mobil uyumlu yapı ile tüm cihazlarda kusursuz deneyim sağladık."
       ]
     },
     "boon-fresh": {
@@ -530,14 +490,6 @@
         "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile müşteri edinimini kolaylaştırdık. Çok dilli yapı ile yerli ve yabancı müşterilere ulaşmayı sağladık."
       ]
     },
-    "kibris-nights-club": {
-      "title": "Kıbrıs Nights Club",
-      "summary": "Gece kulübü ve eğlence mekanı rehber sitesi.",
-      "body": [
-        "Kıbrıs Nights Club için KKTC'deki gece kulüpleri ve eğlence mekanlarını tanıtan kapsamlı bir rehber web sitesi geliştirdik. Mekan profilleri, etkinlik bilgileri ve kullanıcı yorumları ile zengin bir içerik yapısı oluşturduk.",
-        "SEO odaklı içerik stratejisi ile gece hayatı aramalarında güçlü bir görünürlük sağladık. Google Ads entegrasyonu ve sosyal medya bağlantıları ile trafik artışı elde ettik."
-      ]
-    },
     "alert-muhendislik": {
       "title": "Alert Mühendislik",
       "summary": "Mühendislik ve inşaat hizmetlerini sergileyen kurumsal web sitesi.",
@@ -554,44 +506,12 @@
         "Modern tasarım ve kullanıcı dostu arayüz ile müşteri deneyimini ön plana çıkardık. SEO optimizasyonu ile organik trafik artışı sağladık."
       ]
     },
-    "crazy-girl-night-club": {
-      "title": "Crazy Girl Night Club",
-      "summary": "Etkinlik listesi ve galeri içeren gece kulübü web sitesi.",
-      "body": [
-        "Crazy Girl Night Club için etkinlik takvimi, galeri ve mekan bilgilerini sergileyen çarpıcı bir web sitesi tasarladık. Gece hayatının dinamizmini yansıtan koyu temalı, görsel odaklı bir tasarım uyguladık.",
-        "SEO optimizasyonu ve sosyal medya entegrasyonu ile mekanın dijital görünürlüğünü artırdık. Mobil uyumlu yapı ile hareket halindeki kullanıcılara kolay erişim sunduk."
-      ]
-    },
-    "kibris-katalog": {
-      "title": "Kıbrıs Katalog",
-      "summary": "KKTC gece hayatı ve eğlence mekanları rehberi.",
-      "body": [
-        "Kıbrıs Katalog için KKTC'deki gece mekanları, restoranlar ve eğlence noktalarını listeleyen kapsamlı bir rehber platformu geliştirdik. Mekan profilleri, konum bilgileri ve kullanıcı yorumları ile zengin bir içerik yapısı oluşturduk.",
-        "SEO optimizasyonu ile yerel aramalar için güçlü bir görünürlük sağladık. Mekan sahipleri için ilan ekleme ve yönetim araçları da dahil ettik."
-      ]
-    },
-    "misse-night-club": {
-      "title": "Misse Night Club",
-      "summary": "VIP rezervasyon ve etkinliklerle gece kulübü web sitesi.",
-      "body": [
-        "Misse Night Club için VIP rezervasyon sistemi, etkinlik takvimi ve mekan tanıtımı sunan premium bir web sitesi geliştirdik. Atmosferi dijitale taşıyan lüks ve etkileyici bir tasarım uyguladık.",
-        "Google Ads entegrasyonu, SEO çalışmaları ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Mobil uyumlu yapı ile tüm cihazlarda kusursuz deneyim sağladık."
-      ]
-    },
     "virginia-ice-cream": {
       "title": "Virginia Ice Cream",
       "summary": "Menü ve şube bilgileriyle premium dondurma markası web sitesi.",
       "body": [
         "Virginia Ice Cream için premium dondurma markasının dijital kimliğini oluşturan şık ve renkli bir web sitesi tasarladık. Menü, lezzet kataloğu ve şube bilgileri ile müşteri deneyimini ön plana çıkardık.",
         "Markanın enerjik ve eğlenceli kişiliğini yansıtan görsel tasarım, animasyonlar ve responsive yapı ile güçlü bir marka dijitale taşıdık."
-      ]
-    },
-    "faraon-night-clubs": {
-      "title": "Faraon Night Clubs",
-      "summary": "KKTC'de birden fazla mekanı kapsayan gece kulübü zinciri web sitesi.",
-      "body": [
-        "Faraon Night Clubs için birden fazla mekanı kapsayan gece kulübü zincirinin web sitesini geliştirdik. Her mekanın ayrı profili, ortak etkinlik takvimi ve rezervasyon sistemi ile kapsamlı bir dijital platform oluşturduk.",
-        "Güçlü marka kimliği, etkileyici görseller ve SEO optimizasyonu ile KKTC gece hayatında öne çıkmayı sağladık."
       ]
     },
     "welcome-pickups": {
@@ -2325,15 +2245,6 @@
         "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık."
       ],
       "role": "Tasarım / Geliştirme"
-    },
-    "kibris-night-club": {
-      "title": "Kıbrıs Night Club",
-      "sub": "KKTC gece hayatı rehberi.",
-      "body": [
-        "KKTC'deki gece kulüplerini ve eğlence mekanlarını listeleyen SEO odaklı bir rehber sitesi geliştirdik. WordPress altyapısı üzerinde mekan profilleri, etkinlik takvimleri ve kullanıcı yorumları dahil.",
-        "SEO optimizasyonu ile arama motorlarında gece hayatı aramaları için üst sıralarda yer almayı başardık. Kullanıcı deneyimi ve hızlı erişim önceliğimiz oldu."
-      ],
-      "role": "SEO / Geliştirme"
     },
     "aydin-transfer": {
       "title": "Aydın Transfer",

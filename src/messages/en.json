@@ -373,36 +373,6 @@
       "kind": "Web Design · Construction",
       "role": "Design / Development"
     },
-    "night-club-katalog": {
-      "title": "Night Club Katalog",
-      "summary": "Night club directory and catalog platform for North Cyprus.",
-      "body": [
-        "We developed a comprehensive directory platform listing nightclubs, entertainment venues, and catalog information across North Cyprus. Built on WordPress, the platform includes venue profiles, pricing details, and user reviews.",
-        "Intensive SEO efforts achieved top rankings for high-volume searches like 'cyprus night club' and 'nightlife catalog.' Google Ads integration and social media connections drove significant traffic growth."
-      ],
-      "kind": "Web Design · Directory",
-      "role": "Design / Development / SEO"
-    },
-    "kibris-gece-hayati": {
-      "title": "Kıbrıs Gece Hayatı",
-      "summary": "Comprehensive nightlife and entertainment guide for North Cyprus.",
-      "body": [
-        "We developed a modern digital guide platform covering nightclubs, bars, and entertainment venues across North Cyprus. Built as a Next.js application hosted on Vercel with a Hostinger domain, we established a fast and SEO-friendly architecture.",
-        "The platform features venue profiles, event calendars, user reviews, and location-based search. Google Ads and Search Console integration enabled both organic and paid traffic management."
-      ],
-      "kind": "Web App · Directory",
-      "role": "Design / Development / SEO"
-    },
-    "gece-kibris": {
-      "title": "Gece Kıbrıs",
-      "summary": "Dual-site entertainment platform for North Cyprus nightlife.",
-      "body": [
-        "We developed a comprehensive package of two websites for the North Cyprus nightlife sector. With gecekibris.com and kktcnightsclub.com as complementary platforms, we aimed to reach a broad audience.",
-        "We built a professional digital infrastructure with Vercel hosting, Hostinger domain management, Google Ads, and Tag Manager integrations. An SEO-focused content strategy increased search engine visibility."
-      ],
-      "kind": "Web Design · Entertainment",
-      "role": "Design / Development"
-    },
     "radyo-juke": {
       "title": "Radyo Juke",
       "summary": "Online radio platform with custom-coded live streaming integration.",
@@ -451,26 +421,6 @@
         "Mobile-friendly design, WhatsApp integration, and multi-language support made it easy for both local and international tourists to book services."
       ],
       "kind": "Web Design · Transportation",
-      "role": "Design / Development"
-    },
-    "prenses-night-club": {
-      "title": "Prenses Night Club",
-      "summary": "Night club website with event calendar and gallery.",
-      "body": [
-        "We designed a striking website for Prenses Night Club featuring an event calendar, photo gallery, and venue information. A dark-themed, visually driven design captured the atmosphere of nightlife.",
-        "SEO optimization secured top rankings in nightclub searches. Social media integration and online communication tools boosted customer engagement."
-      ],
-      "kind": "Web Design · Entertainment",
-      "role": "Design / Development"
-    },
-    "miracle-night-club": {
-      "title": "Miracle Night Club",
-      "summary": "Night club website with VIP reservation and event listings.",
-      "body": [
-        "We developed a modern website for Miracle Night Club with a VIP reservation system, event listings, and venue showcases. A luxurious design approach brought the premium atmosphere into the digital space.",
-        "Google Ads integration, SEO efforts, and social media connections increased digital visibility. A mobile-friendly structure ensured a flawless experience across all devices."
-      ],
-      "kind": "Web Design · Entertainment",
       "role": "Design / Development"
     },
     "boon-fresh": {
@@ -593,16 +543,6 @@
       "kind": "Web Design · Services",
       "role": "Design / Development"
     },
-    "kibris-nights-club": {
-      "title": "Kıbrıs Nights Club",
-      "summary": "Night club and entertainment venue directory website.",
-      "body": [
-        "We developed a comprehensive guide website for Kıbrıs Nights Club featuring nightclubs and entertainment venues across North Cyprus. We built a rich content structure with venue profiles, event information, and user reviews.",
-        "An SEO-focused content strategy secured strong visibility in nightlife-related searches. Google Ads integration and social media connections drove significant traffic growth."
-      ],
-      "kind": "Web Design · Entertainment",
-      "role": "Design / Development / SEO"
-    },
     "alert-muhendislik": {
       "title": "Alert Mühendislik",
       "summary": "Engineering and construction company corporate website.",
@@ -619,44 +559,12 @@
         "Modern design and a user-friendly interface put the customer experience first. SEO optimization drove organic traffic growth."
       ]
     },
-    "crazy-girl-night-club": {
-      "title": "Crazy Girl Night Club",
-      "summary": "Night club website with event listings and gallery.",
-      "body": [
-        "We designed a striking website for Crazy Girl Night Club showcasing an event calendar, gallery, and venue information. We applied a dark-themed, visual-first design reflecting the energy of nightlife.",
-        "SEO optimization and social media integration increased the venue's digital visibility. A mobile-friendly build made it easy for on-the-go users to access."
-      ]
-    },
-    "kibris-katalog": {
-      "title": "Kıbrıs Katalog",
-      "summary": "North Cyprus nightlife and entertainment directory.",
-      "body": [
-        "We built a comprehensive directory platform for Kıbrıs Katalog listing nightlife venues, restaurants, and entertainment spots across North Cyprus. We created a rich content structure with venue profiles, location details, and user reviews.",
-        "SEO optimization delivered strong visibility for local searches. We also included listing and management tools for venue owners."
-      ]
-    },
-    "misse-night-club": {
-      "title": "Misse Night Club",
-      "summary": "Night club website with VIP reservations and events.",
-      "body": [
-        "We built a premium website for Misse Night Club featuring a VIP reservation system, event calendar, and venue showcase. We applied a luxurious, striking design that translated the venue's atmosphere into the digital space.",
-        "Google Ads integration, SEO work, and social media links increased digital visibility. A mobile-friendly build delivered a flawless experience across all devices."
-      ]
-    },
     "virginia-ice-cream": {
       "title": "Virginia Ice Cream",
       "summary": "Premium ice cream brand website with menu and locations.",
       "body": [
         "We designed a stylish, colorful website building the digital identity for Virginia Ice Cream's premium brand. We put the customer experience first with a menu, flavor catalog, and store locations.",
         "Visual design, animations, and a responsive build reflecting the brand's energetic, playful personality brought a strong brand to the digital space."
-      ]
-    },
-    "faraon-night-clubs": {
-      "title": "Faraon Night Clubs",
-      "summary": "Night club chain website with multiple venues in North Cyprus.",
-      "body": [
-        "We built a website for the Faraon Night Clubs chain covering multiple venues. We created a comprehensive digital platform with a separate profile for each venue, a shared event calendar, and a reservation system.",
-        "A strong brand identity, striking visuals, and SEO optimization helped the brand stand out in North Cyprus nightlife."
       ]
     },
     "welcome-pickups": {
@@ -2390,15 +2298,6 @@
         "We built a dynamic structure providing up-to-date information before, during, and after the event. Mobile-responsive design ensured easy access from any device."
       ],
       "role": "Design / Development"
-    },
-    "kibris-night-club": {
-      "title": "Kibris Night Club",
-      "sub": "North Cyprus nightlife directory.",
-      "body": [
-        "We developed an SEO-focused directory site listing nightclubs and entertainment venues in North Cyprus. Built on WordPress with venue profiles, event calendars, and user reviews.",
-        "SEO optimization achieved top search engine rankings for nightlife searches. User experience and fast access were our priorities."
-      ],
-      "role": "SEO / Development"
     },
     "aydin-transfer": {
       "title": "Aydin Transfer",
