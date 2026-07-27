@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-27
+
+### Removed
+- **All club/nightlife projects removed from the portfolio** (user request — they should no longer be listed). WORKS 66 → 56: night-club-katalog, kibris-gece-hayati, gece-kibris, prenses-night-club, miracle-night-club, misse-night-club, crazy-girl-night-club, kibris-nights-club, kibris-katalog, faraon-night-clubs. STORIES 11 → 6: kibris-night-club, miracle-night-club, fareon-night-club, ibo-seytan, kibris-gece-hayati. Project numbers renumbered sequentially (01–56), tr/en/ru translation entries and 19 preview webp assets deleted
+
 ## 2026-07-22
 
 ### Added

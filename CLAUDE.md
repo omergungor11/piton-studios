@@ -23,7 +23,7 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 
 **Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Polish/iyilestirme devam ediyor.
 
-- **66 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5 + avie-global geri eklendi; nexos-investment mükerrer girdisi silindi. İlk 6 proje slider'da
+- **56 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5 + avie-global geri eklendi; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 19 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
@@ -31,7 +31,7 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 - **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
-- **Ceviriler**: TAMAM — tum 66 proje icin tr/en/ru works.{slug} girdileri eksiksiz (eski 11 ru eksigi 2026-07-16'da kapatildi)
+- **Ceviriler**: TAMAM — tum 56 proje icin tr/en/ru works.{slug} girdileri eksiksiz (eski 11 ru eksigi 2026-07-16'da kapatildi)
 - **Bekleyen**: Proje tarihleri duzeltilecek; avie-global'in Saiber atifi kullanici teyidi bekliyor
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.

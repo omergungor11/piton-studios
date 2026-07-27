@@ -31,7 +31,8 @@
 - Kaynak dogrulugu: `/Users/arlec/Work-Restored/freelancer/02-projeler-case-study.md` (ajans notu) — atif sorularinda oraya bak.
 - WORKS'te `collaborator: "Saiber"` olan 20 proje: velis-ltd, pampas-investment, ekh-yapi, radyo-juke, ozge-ozler, rnv-trading, pinnacle-yatirim, jet-transfer-cyprus, boon-fresh, halas-exchange, arslan-estates, arslan-coin-center, arslan-group, homes-in-mediterranean, sammys-hotel, all-pro-cyprus, alert-muhendislik, virginia-ice-cream, lider-emlak, avie-global (avie-global: WP kurali geregi eklendi, kullanici teyidi bekliyor)
 - Lefke Belediyesi HIC YAPILMADI — freelancer dokumaninda listelense de siteye EKLENMEYECEK (kullanici 2026-07-16'da kaldirtti)
-- Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, tum kulup/nightlife siteleri (night-club-katalog dahil), taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
+- Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
+- Kulup/nightlife siteleri 2026-07-27'de KALDIRILDI (kullanici istegi — portfolyoda listelenmesinler): WORKS'ten 10 (night-club-katalog, kibris-gece-hayati, gece-kibris, prenses/miracle/misse/crazy-girl-night-club, kibris-nights-club, kibris-katalog, faraon-night-clubs), STORIES'ten 5 (kibris-night-club, miracle-night-club, fareon-night-club, ibo-seytan, kibris-gece-hayati). Ceviriler de silindi; preview webp'leri assets'te duruyor
 - Detay sayfasinda "Is Birligi" meta alani olarak gosteriliyor (`projectDetail.collab`)
 
 ## Canli Linkli Self-Development Projeleri (2026-07-16)
