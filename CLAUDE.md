@@ -2,11 +2,16 @@
 
 ## Proje
 
-Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari sergileyen, hizli yuklenme ve akici video deneyimi sunan modern bir portfolyo sitesi.
+Piton Studios firmasinin dijital ajans / portfolyo websitesi. Proje screenshot'lari ve case study'ler
+uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
-- **GitHub**: [repo URL]
+- **GitHub**: https://github.com/omergungor11/piton-studios
 - **Deploy**: Vercel
-- **Database**: Supabase
+- **Database**: Neon Postgres (planlandi — bkz. `piton-plans/2026-07-28-blog-admin-platform-plan.md`)
+- **Medya**: Cloudflare R2 (planlandi)
+
+> Not: Supabase kullanilmiyor. `@supabase/supabase-js` hic kurulmadi, `supabase/migrations/`
+> altindaki SQL'ler hic calistirilmadi. Ucretsiz limit doldugu icin Neon'a gecildi.
 
 ## Slash Commandlar
 
@@ -33,6 +38,26 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
 - **Ceviriler**: TAMAM — tum 56 proje icin tr/en/ru works.{slug} girdileri eksiksiz (eski 11 ru eksigi 2026-07-16'da kapatildi)
 - **Bekleyen**: Proje tarihleri duzeltilecek; avie-global'in Saiber atifi kullanici teyidi bekliyor
+
+### Sprint 1 tamamlandi (2026-07-28) — SEO + Blog + Analytics
+
+- **SEO altyapisi**: `src/app/sitemap.ts` (267 URL, 3 dil, hreflang'li), `src/app/robots.ts`,
+  tum sayfalarda canonical + hreflang + x-default (`src/lib/seo.ts`)
+- **JSON-LD**: Organization, WebSite, BreadcrumbList, CreativeWork (proje), Service + **FAQPage**
+  (hizmet sayfalarindaki mevcut FAQ verisi rich snippet'e donustu)
+- **Cok dilli metadata duzeltmesi**: proje/hizmet detay sayfalari `data.ts`'teki Turkce sabitler
+  yerine `src/messages/*.json` cevirilerinden okuyor (`src/lib/content-i18n.ts`) — en/ru sayfalari
+  artik Turkce baslikla indexlenmiyor
+- **Dinamik OG gorselleri**: `src/lib/og.tsx` + proje/hizmet/blog icin `opengraph-image.tsx`
+- **Blog**: MDX tabanli, `content/blog/{tr,en,ru}/*.mdx`. Liste, yazi, etiket sayfalari + RSS
+  (`/[locale]/rss.xml`). `translationKey` frontmatter alani diller arasi hreflang'i kuruyor.
+- **Analytics**: `@vercel/analytics` + `@vercel/speed-insights`
+- Build: 506 statik sayfa, 0 tip hatasi, 0 lint hatasi
+
+> **Vercel'de `NEXT_PUBLIC_SITE_URL` ayarlanmali** — yoksa sitemap/canonical/OG URL'leri
+> localhost veya deploy URL'i olarak uretilir.
+
+**Siradaki**: Sprint 2 — Neon Postgres + Drizzle semasi + icerik gocu.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
@@ -121,5 +146,6 @@ Detaylar → `piton-config/agent-instructions.md`
 ## Notlar
 
 - Hafiza dosyasi `piton-docs/MEMORY.md`'de — her session'da oku, gerektiginde guncelle
-- Videolar `videos/` klasorunde (local dev), production'da Supabase Storage
-- Vercel deploy icin `next.config.ts` video optimizasyonlari kritik
+- Gorseller `public/assets/` altinda; `optimized/` gitignore'da (buyuk dosyalar)
+- 2026-07-28: `videos/` klasoru (289MB, 17 dosya) silindi — kodda hicbir referansi yoktu,
+  site screenshot tabanli calisiyor
