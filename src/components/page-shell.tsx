@@ -16,6 +16,7 @@ interface PageShellProps {
 const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
   '/projects': { tr: '/projeler', en: '/projects', ru: '/projects' },
   '/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
+  '/blog':     { tr: '/blog',      en: '/blog',     ru: '/blog'     },
   '/about':    { tr: '/hakkinda',  en: '/about',    ru: '/about'    },
   '/contact':  { tr: '/iletisim',  en: '/contact',  ru: '/contact'  },
 };
@@ -81,6 +82,12 @@ export default function PageShell({ children }: PageShellProps) {
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
+          <Link href="/blog" className={`item ${isActive('/blog') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('blog')}</span>
+              <span className="dup">{t('blog')} ↗</span>
+            </span>
+          </Link>
           <Link href="/about" className={`item ${isActive('/about') ? 'active' : ''}`} data-cursor="hover">
             <span className="row">
               <span>{t('about')}</span>
@@ -124,6 +131,7 @@ export default function PageShell({ children }: PageShellProps) {
             {([
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
+              { href: '/blog', label: t('blog') },
               { href: '/about', label: t('about') },
             ] as const).map((item, i) => (
               <Link
@@ -166,6 +174,7 @@ export default function PageShell({ children }: PageShellProps) {
           <Link href="/" className="page-footer-link" data-cursor="hover">{t('home')}</Link>
           <Link href="/projects" className="page-footer-link" data-cursor="hover">{t('projects')}</Link>
           <Link href="/services" className="page-footer-link" data-cursor="hover">{t('services')}</Link>
+          <Link href="/blog" className="page-footer-link" data-cursor="hover">{t('blog')}</Link>
           <Link href="/about" className="page-footer-link" data-cursor="hover">{t('about')}</Link>
           <Link href="/contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
         </nav>

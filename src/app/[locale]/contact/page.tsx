@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Locale } from "@/lib/site";
 import ContactPageClient from "./page-client";
 
 const NAMESPACES = ["contact", "common"] as const;
@@ -8,6 +11,18 @@ const NAMESPACES = ["contact", "common"] as const;
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pageMeta" });
+
+  return buildPageMetadata({
+    locale: locale as Locale,
+    href: "/contact",
+    title: t("contact.title"),
+    description: t("contact.description"),
+  });
+}
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;

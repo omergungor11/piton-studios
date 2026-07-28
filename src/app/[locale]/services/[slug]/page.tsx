@@ -1,10 +1,21 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
 import { getServiceBySlug, getAllServiceSlugs } from "@/lib/data";
 import ServiceDetail from "@/components/service-detail";
+import JsonLd from "@/components/json-ld";
+import { getLocalizedService } from "@/lib/content-i18n";
+import {
+  buildPageMetadata,
+  absoluteUrl,
+  serviceJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+  organizationJsonLd,
+} from "@/lib/seo";
+import type { Locale } from "@/lib/site";
 
 const NAMESPACES = ["serviceDetail", "servicesList", "common"] as const;
 
@@ -18,22 +29,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const { locale, slug } = await params;
+  const localized = await getLocalizedService(locale as Locale, slug);
 
-  if (!service) {
+  if (!localized) {
     return { title: "Service Not Found" };
   }
 
-  return {
-    title: `${service.title} — Piton Studios`,
-    description: service.desc,
-    openGraph: {
-      title: `${service.title} — Piton Studios`,
-      description: service.desc,
-      type: "website",
-    },
-  };
+  return buildPageMetadata({
+    locale: locale as Locale,
+    href: { pathname: "/services/[slug]", params: { slug } },
+    title: localized.title,
+    description: localized.description,
+  });
 }
 
 export default async function ServicePage({ params }: Props) {
@@ -46,9 +54,34 @@ export default async function ServicePage({ params }: Props) {
   }
 
   const messages = await getMessages();
+  const localized = await getLocalizedService(locale as Locale, slug);
+  const t = await getTranslations({ locale, namespace: "common" });
+  const url = absoluteUrl(locale as Locale, {
+    pathname: "/services/[slug]",
+    params: { slug },
+  });
 
   return (
     <NextIntlClientProvider messages={pickMessages(messages, NAMESPACES)}>
+      {localized && (
+        <JsonLd
+          data={[
+            organizationJsonLd(),
+            serviceJsonLd({
+              name: localized.title,
+              description: localized.description,
+              url,
+              category: localized.category,
+            }),
+            faqJsonLd(localized.faq),
+            breadcrumbJsonLd([
+              { name: "Piton Studios", url: absoluteUrl(locale as Locale, "/") },
+              { name: t("services"), url: absoluteUrl(locale as Locale, "/services") },
+              { name: localized.title, url },
+            ]),
+          ]}
+        />
+      )}
       <ServiceDetail service={service} />
     </NextIntlClientProvider>
   );

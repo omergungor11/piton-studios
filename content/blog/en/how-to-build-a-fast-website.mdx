@@ -1,0 +1,70 @@
+---
+title: "How to build a fast website: a measurable approach"
+description: "Improving Core Web Vitals without sacrificing visual quality — measurement, budgets and the right rendering strategy."
+date: 2026-07-20
+tags: ["performance", "next.js", "seo"]
+author: "Piton Studios"
+draft: false
+translationKey: fast-website
+---
+
+Speed is not a feature, it is a budget. "Let's make the site faster" means nothing on its own;
+without deciding what is measured, on which device and over which connection, every improvement
+is a guess.
+
+## Measure first, optimise second
+
+A Lighthouse score is a starting point, not a target. Without real user data (RUM), lab
+measurements can mislead you. The three metrics we track:
+
+- **LCP** (Largest Contentful Paint) — when the largest content appeared
+- **INP** (Interaction to Next Paint) — how quickly the page responds to input
+- **CLS** (Cumulative Layout Shift) — how much the page jumped around
+
+Target values: under 2.5s, 200ms and 0.1 respectively.
+
+## Set a performance budget
+
+Decide up front how "heavy" a page is allowed to be. An example budget:
+
+| Resource | Budget |
+|---|---|
+| JavaScript (gzip) | 150 KB |
+| Images (above the fold) | 200 KB |
+| Web fonts | 2 families, 100 KB |
+| Total initial load | 500 KB |
+
+When the budget is exceeded, something has to come out before something new goes in. Without
+this rule every project gets slower over time.
+
+## Pick the right rendering strategy
+
+In Next.js different pages of the same site can use different strategies:
+
+```tsx
+// Marketing page — generated at build time, served from the CDN
+export const dynamic = 'force-static'
+
+// Blog post — generated at build, regenerated when content changes
+export const revalidate = false // + on-demand revalidatePath()
+
+// Admin panel — fresh on every request
+export const dynamic = 'force-dynamic'
+```
+
+The rule is simple: **any page that does not touch the database should be static.** This lowers
+both latency and infrastructure cost at the same time.
+
+## Images are the biggest win
+
+On most sites images account for 60% of total weight. Three steps are usually enough:
+
+1. Modern formats (WebP or AVIF)
+2. Correct dimensions — don't drop a 2000px image into a 400px slot
+3. `loading="lazy"` for everything below the fold
+
+## Conclusion
+
+Speed is not a one-off optimisation round but a budget you keep defending. Measure, set limits,
+and remove something when you cross them. Being fast without sacrificing visual quality is
+possible — but only if you know what you are measuring.

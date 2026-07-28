@@ -27,9 +27,7 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Videos & large assets (use Supabase Storage)
-videos/
-public/assets/*.mp4
+# Large assets (production: Cloudflare R2)
 public/assets/optimized/
 Portgolio/
 Portgolio.zip

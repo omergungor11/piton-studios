@@ -1,8 +1,11 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import Preloader from '@/components/preloader';
 import { jetbrainsMono, ibmPlexMono, pressStart2P } from '@/lib/fonts';
+import { SITE_URL } from '@/lib/site';
 
 type Props = {
   children: React.ReactNode;
@@ -30,10 +33,18 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <head>
         <meta charSet="utf-8" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Piton Studios — Blog"
+          href={`${SITE_URL}/${locale}/rss.xml`}
+        />
       </head>
       <body>
         <Preloader />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

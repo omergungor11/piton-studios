@@ -3,6 +3,28 @@
     "title": "Piton Studios — Dijital Stüdyo",
     "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
   },
+  "pageMeta": {
+    "home": {
+      "title": "Piton Studios — Dijital Stüdyo",
+      "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
+    },
+    "projects": {
+      "title": "Projeler",
+      "description": "Web, mobil, yapay zeka ve otomasyon alanında teslim ettiğimiz projelerden seçki — her biri ölçülebilir bir iş sonucuyla."
+    },
+    "services": {
+      "title": "Hizmetler",
+      "description": "Web tasarım, ürün geliştirme, yapay zeka entegrasyonu ve büyüme — uçtan uca dijital hizmetler."
+    },
+    "about": {
+      "title": "Hakkında",
+      "description": "Piton Studios; tasarım, yazılım ve yapay zekayı tek ekipte birleştiren bağımsız bir dijital stüdyo."
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Projenizi konuşalım. Piton Studios ile iletişime geçin — genelde 24 saat içinde dönüş yapıyoruz."
+    }
+  },
   "nav": {
     "services": "Hizmetler",
     "about": "Hakkında",
@@ -12,7 +34,29 @@
     "projects": "Projeler",
     "gallery": "Galeri",
     "home": "Ana Sayfa",
-    "contactCta": "İletişime Geç"
+    "contactCta": "İletişime Geç",
+    "blog": "Blog"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Web tasarim, gelistirme ve yapay zeka uzerine yazilar — Piton Studios ekibinden.",
+    "title": "Blog",
+    "subtitle": "Tasarim, kod ve yapay zeka uzerine notlar.",
+    "readingTime": "{minutes} dk okuma",
+    "publishedOn": "Yayin",
+    "updatedOn": "Guncelleme",
+    "author": "Yazar",
+    "tags": "Etiketler",
+    "allPosts": "Tum yazilar",
+    "tagPageTitle": "{tag}",
+    "tagPageSubtitle": "\"{tag}\" etiketli yazilar",
+    "postCount": "{count} yazi",
+    "empty": "Bu dilde henuz yazi yok.",
+    "emptyTag": "Bu etikette henuz yazi yok.",
+    "backToBlog": "Bloga don",
+    "relatedPosts": "Ilgili yazilar",
+    "readMore": "Devamini oku",
+    "shareTitle": "Paylas"
   },
   "hero": {
     "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",
@@ -279,7 +323,8 @@
     "services": "Hizmetler",
     "gallery": "Galeri",
     "contact": "İletişim",
-    "about": "Hakkında"
+    "about": "Hakkında",
+    "blog": "Blog"
   },
   "works": {
     "velis-ltd": {

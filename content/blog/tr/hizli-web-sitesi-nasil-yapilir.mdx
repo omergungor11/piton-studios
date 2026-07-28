@@ -1,0 +1,69 @@
+---
+title: "Hızlı web sitesi nasıl yapılır: ölçülebilir bir yaklaşım"
+description: "Core Web Vitals'ı iyileştirmenin görsel kaliteden ödün vermeyen yolu — ölçüm, bütçe ve doğru render stratejisi."
+date: 2026-07-20
+tags: ["performans", "next.js", "seo"]
+author: "Piton Studios"
+draft: false
+translationKey: fast-website
+---
+
+Hız bir özellik değil, bir bütçedir. "Siteyi hızlandıralım" cümlesi tek başına hiçbir şey ifade etmez;
+neyin, hangi cihazda, hangi bağlantıda ölçüldüğü belirlenmeden yapılan her iyileştirme tahmindir.
+
+## Önce ölç, sonra optimize et
+
+Lighthouse skoru bir başlangıç noktasıdır, hedef değil. Gerçek kullanıcı verisi (RUM) olmadan
+laboratuvar ölçümü yanıltıcı olabilir. Bizim takip ettiğimiz üç metrik:
+
+- **LCP** (Largest Contentful Paint) — en büyük içerik ne zaman göründü
+- **INP** (Interaction to Next Paint) — kullanıcı etkileşimine yanıt süresi
+- **CLS** (Cumulative Layout Shift) — sayfa ne kadar zıpladı
+
+Hedef değerler sırasıyla 2.5s, 200ms ve 0.1'in altı.
+
+## Performans bütçesi belirleyin
+
+Bir sayfanın ne kadar "ağır" olabileceğine baştan karar verin. Örnek bir bütçe:
+
+| Kaynak | Bütçe |
+|---|---|
+| JavaScript (gzip) | 150 KB |
+| Görseller (ilk ekran) | 200 KB |
+| Web fontları | 2 aile, 100 KB |
+| Toplam ilk yükleme | 500 KB |
+
+Bütçe aşıldığında yeni bir özellik eklemek yerine bir şeyi çıkarmak gerekir. Bu kural olmadan
+her proje zamanla yavaşlar.
+
+## Doğru render stratejisini seçin
+
+Next.js'te aynı sitede farklı sayfalar farklı stratejiler kullanabilir:
+
+```tsx
+// Pazarlama sayfası — build'de üretilir, CDN'den servis edilir
+export const dynamic = 'force-static'
+
+// Blog yazısı — build'de üretilir, içerik değişince yeniden üretilir
+export const revalidate = false // + on-demand revalidatePath()
+
+// Yönetim paneli — her istekte taze
+export const dynamic = 'force-dynamic'
+```
+
+Kural basit: **veritabanına dokunmayan her sayfa statik olmalı.** Bu hem hızı hem de altyapı
+maliyetini aynı anda düşürür.
+
+## Görsellerde en büyük kazanç
+
+Çoğu sitede toplam ağırlığın %60'ı görsellerdir. Üç adım genelde yeterli:
+
+1. Modern format (WebP veya AVIF)
+2. Doğru boyut — 2000px genişliğindeki bir görseli 400px'lik alana koymayın
+3. İlk ekran dışındaki her görsel için `loading="lazy"`
+
+## Sonuç
+
+Hız, tek seferlik bir optimizasyon turu değil sürekli korunan bir bütçedir. Ölçün, sınır koyun,
+sınırı aşınca bir şey çıkarın. Görsel kaliteden ödün vermeden hızlı olmak mümkün — ama ancak
+ölçtüğünüzü bilirseniz.

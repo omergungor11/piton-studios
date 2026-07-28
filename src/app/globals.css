@@ -4519,3 +4519,273 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
   color: var(--accent, oklch(0.58 0.19 24));
   background: var(--accent-soft, oklch(0.58 0.19 24 / 0.22));
 }
+
+/* ============================================================
+   BLOG — liste, etiket, yazi
+   ============================================================ */
+
+/* Etiket cubugu */
+.blog-tagbar {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 40px;
+}
+.blog-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  text-decoration: none;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+.blog-tag:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.blog-tag-count {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+/* Yazi listesi */
+.blog-list {
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+  margin-bottom: 80px;
+}
+.blog-empty {
+  padding: 48px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.blog-card {
+  border-bottom: 1px solid var(--line);
+}
+.blog-card-link {
+  display: block;
+  padding: 32px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left .25s ease;
+}
+.blog-card-link:hover { padding-left: 12px; }
+.blog-card-meta {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.blog-card-dot { opacity: .5; }
+.blog-card-title {
+  font-family: var(--mono); font-weight: 400;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.15; letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.blog-card-link:hover .blog-card-title { color: var(--accent); }
+.blog-card-desc {
+  font-size: 14px; line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin-bottom: 14px;
+}
+.blog-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.blog-card-tag {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+.blog-card-more {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Yazi sayfasi */
+.blog-post { max-width: 720px; margin: 0 auto 96px; }
+.blog-back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color .18s ease;
+}
+.blog-back:hover { color: var(--accent); }
+.blog-post-head { margin-bottom: 48px; }
+.blog-post-title {
+  font-family: var(--mono); font-weight: 400;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.08; letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.blog-post-desc {
+  font-size: 16px; line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+.blog-post-meta {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+}
+.blog-post-updated {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.blog-post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+
+/* MDX icerigi */
+.blog-prose { color: var(--ink-soft); font-size: 16px; line-height: 1.78; }
+.blog-prose > * + * { margin-top: 1.35em; }
+.blog-prose h2 {
+  font-family: var(--mono); font-weight: 400;
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.25; letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-top: 2.4em; margin-bottom: 0.2em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--line);
+}
+.blog-prose h3 {
+  font-family: var(--mono); font-weight: 400;
+  font-size: 18px; letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-top: 1.8em;
+}
+.blog-prose p { color: var(--ink-soft); }
+.blog-prose strong { color: var(--ink); font-weight: 600; }
+.blog-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.blog-prose ul, .blog-prose ol { padding-left: 1.35em; }
+.blog-prose ul { list-style: disc; }
+.blog-prose ol { list-style: decimal; }
+.blog-prose li { margin-top: 0.5em; }
+.blog-prose li::marker { color: var(--muted); }
+.blog-prose blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+  color: var(--ink);
+  font-style: italic;
+}
+.blog-prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.4em 0; }
+.blog-prose img { max-width: 100%; height: auto; border-radius: 10px; }
+
+/* Tablolar — dar ekranda kendi icinde kaydirilir */
+.blog-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  display: block;
+  overflow-x: auto;
+}
+.blog-prose th, .blog-prose td {
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  text-align: left;
+}
+.blog-prose th {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink);
+  background: var(--glass-hi);
+}
+
+/* Kod — rehype-pretty-code ciktisi */
+.blog-prose code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  color: var(--ink);
+  background: var(--glass-hi);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+.blog-prose pre {
+  background: rgba(0,0,0,0.38);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.blog-prose pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.blog-prose pre code > span[data-line] { display: block; }
+.blog-prose figure[data-rehype-pretty-code-figure] { margin-top: 1.35em; }
+.blog-prose [data-rehype-pretty-code-title] {
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 8px 16px;
+}
+.blog-prose [data-rehype-pretty-code-title] + pre { border-radius: 0 0 10px 10px; }
+
+/* Ilgili yazilar */
+.blog-related {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.blog-related-title {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.blog-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.blog-related-card {
+  display: flex; flex-direction: column; gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+.blog-related-card:hover { border-color: var(--accent); background: var(--glass-hi); }
+.blog-related-card-title {
+  font-family: var(--mono);
+  font-size: 14px; line-height: 1.35;
+  color: var(--ink);
+}
+.blog-related-card-meta {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .blog-card-link { padding: 24px 0; }
+  .blog-card-link:hover { padding-left: 0; }
+  .blog-post { margin-bottom: 64px; }
+  .blog-prose { font-size: 15px; }
+}
