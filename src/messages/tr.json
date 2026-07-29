@@ -174,7 +174,11 @@
     "generalLabel": "Genel Sorular",
     "getInTouch": "İletişime Geç",
     "contactCta": "İletişime Geç",
-    "mail": "Mail"
+    "mail": "Mail",
+    "sentDetail": "Mesajınız ulaştı. Genellikle 24 saat içinde dönüş yapıyoruz.",
+    "errorSend": "Gönderilemedi — doğrudan yazın",
+    "errorValidation": "Bilgileri kontrol edin",
+    "errorRateLimit": "Çok fazla deneme — biraz sonra tekrar deneyin"
   },
   "services": {
     "eyebrow": "§ 04",
