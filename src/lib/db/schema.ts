@@ -37,7 +37,6 @@ export const messageStatusEnum = pgEnum('message_status', [
   'replied',
   'archived',
 ]);
-export const adminRoleEnum = pgEnum('admin_role', ['owner', 'editor']);
 
 // ============================================================
 // Medya
@@ -209,41 +208,6 @@ export const contactMessages = pgTable(
 );
 
 // ============================================================
-// Yonetim (Sprint 3'te kullanilacak)
-// ============================================================
-
-export const adminUsers = pgTable(
-  'admin_users',
-  {
-    id: uuid('id').primaryKey().defaultRandom(),
-    email: text('email').notNull(),
-    passwordHash: text('password_hash').notNull(),
-    name: text('name'),
-    role: adminRoleEnum('role').notNull().default('editor'),
-    lastLoginAt: timestamp('last_login_at', { withTimezone: true }),
-    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-  },
-  (table) => [uniqueIndex('admin_users_email_idx').on(table.email)]
-);
-
-export const auditLog = pgTable(
-  'audit_log',
-  {
-    id: uuid('id').primaryKey().defaultRandom(),
-    actorId: uuid('actor_id').references(() => adminUsers.id, { onDelete: 'set null' }),
-    action: text('action').notNull(),
-    entity: text('entity').notNull(),
-    entityId: text('entity_id'),
-    diff: jsonb('diff'),
-    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-  },
-  (table) => [
-    index('audit_log_entity_idx').on(table.entity, table.entityId),
-    index('audit_log_created_idx').on(table.createdAt),
-  ]
-);
-
-// ============================================================
 // Iliskiler
 // ============================================================
 
@@ -270,12 +234,5 @@ export const serviceTranslationsRelations = relations(serviceTranslations, ({ on
   service: one(services, {
     fields: [serviceTranslations.serviceId],
     references: [services.id],
-  }),
-}));
-
-export const auditLogRelations = relations(auditLog, ({ one }) => ({
-  actor: one(adminUsers, {
-    fields: [auditLog.actorId],
-    references: [adminUsers.id],
   }),
 }));
