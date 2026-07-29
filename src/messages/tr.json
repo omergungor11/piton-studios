@@ -371,14 +371,6 @@
         "Geliştirmenin yanında Google Ads ve Facebook (Meta) reklam kampanyalarını kurgulayıp yönettik — dijital büyüme çalışmalarının sonucunda firma %30 büyüme elde etti. Reklam yönetimi hizmetimizin sonuç odaklı, somut kanıtı."
       ]
     },
-    "avie-global": {
-      "title": "Avie Global",
-      "summary": "Otomotiv yedek parça ticareti kurumsal sitesi.",
-      "body": [
-        "Avie Global Trading için otomotiv yedek parça ticareti alanında kurumsal bir web sitesi tasarladık. WordPress altyapısı üzerinde şirket profilini, ürün yelpazesini ve iş ortaklıklarını sergileyen profesyonel bir platform oluşturduk.",
-        "Global ticaret odaklı tasarım, çok dilli içerik yapısı ve SEO optimizasyonu ile uluslararası müşterilere ulaşmayı hedefledik."
-      ]
-    },
     "alp-sigorta": {
       "title": "Alp Sigorta",
       "summary": "Sigorta şirketi kurumsal sitesi ve hizmet kataloğu.",
@@ -595,14 +587,6 @@
         "Platform, çözümler, şirket ve destek sayfalarını kapsayan modern bir navigasyon yapısı ile SaaS ürününü net şekilde konumlandırdık."
       ]
     },
-    "lider-emlak": {
-      "title": "Lider Emlak",
-      "summary": "Bozüyük merkezli emlak ofisi için ilan listeleme ve kurumsal tanıtım sitesi.",
-      "body": [
-        "Lider Emlak için Bozüyük'teki portföyünü profesyonelce sergileyebileceği, ilanların kategorize edilip listelendiği bir emlak web sitesi geliştirdik. WordPress üzerinde özel tema ile markaya uygun bir tasarım kurduk.",
-        "İlan yönetimi, konum bilgileri ve iletişim akışları tek panelden yönetilebilir hale geldi. Temel teknik SEO ile yerel aramalarda görünürlük sağlandı. Proje Saiber ortaklığıyla teslim edildi."
-      ]
-    },
     "odeme-takip-botu": {
       "title": "Ödeme Takip Botu",
       "summary": "Vade tarihi yaklaşınca Telegram'dan otomatik hatırlatan ödeme takip uygulaması.",
@@ -683,22 +667,6 @@
         "Fintech alanındaki bu ürün denememiz; gerçek zamanlı veri işleme ve otomasyon yetkinliğimizi gösteren bir yan proje."
       ]
     },
-    "ai-dating-app": {
-      "title": "AI Dating App",
-      "summary": "AI eşleştirme konseptli tanışma uygulaması prototipi (Next.js).",
-      "body": [
-        "Kullanıcı profillerini yapay zekâ ile analiz edip uyum bazlı eşleştirme öneren bir tanışma uygulaması konsepti geliştirdik. Next.js üzerinde kurulan prototip; profil akışı, eşleştirme mantığı ve öneri ekranlarını içeriyor.",
-        "Ürün fikri aşamasındaki bu çalışma; AI destekli öneri sistemleri ve modern ürün prototipleme deneyimimizi gösteriyor."
-      ]
-    },
-    "gemini-tracker": {
-      "title": "Gemini Tracker",
-      "summary": "Gemini API tabanlı takip ve izleme aracı prototipi.",
-      "body": [
-        "Gemini API'ını kullanarak içerik ve veri akışlarını izleyen, özetleyen ve raporlayan bir takip aracı prototipi geliştirdik. LLM tabanlı analiz ile ham veriden anlamlı özetler üretiliyor.",
-        "Bu Ar-Ge aracı; büyük dil modeli entegrasyonu ve otomasyon senaryolarını birleştirme deneyimimizin pratik bir örneği."
-      ]
-    },
     "fur-crm": {
       "title": "FurCRM",
       "summary": "Mobilya sektörü için cari, fatura ve bayi yönetimli gelişmiş CRM sistemi.",
@@ -739,14 +707,6 @@
         "3D web deneyimlerine odaklanan bu kendini geliştirme projesi; teknik ürün pazarlaması ve developer-tool arayüz tasarımı yetkinliğimizi gösteriyor."
       ]
     },
-    "manager-oto-servis": {
-      "title": "Manager",
-      "summary": "Oto servisler için multi-tenant CRM + ön muhasebe SaaS platformu.",
-      "body": [
-        "Manager, oto servis ve makinist işletmelerine özel geliştirdiğimiz multi-tenant bir SaaS platformu. Araç akışı, stok yönetimi, hizmet satışı, faturalama, cari hesaplar, çalışan yönetimi, hatırlatmalar ve raporlama tek çatı altında toplanıyor.",
-        "Wildcard subdomain mimarisiyle her işletme kendi alan adında çalışıyor. KKTC oto servis işletmelerini hedefleyen bu kendi ürünümüz; yatay SaaS mimarisi ve çok kiracılı sistem tasarımı yetkinliğimizi gösteriyor."
-      ]
-    },
     "emlak-sync": {
       "title": "Emlak Sync",
       "summary": "Çoklu portal emlak ilan senkronizasyon paneli — tek yerden gir, her yerde yayınla.",
@@ -755,28 +715,12 @@
         "Mükerrer veri girişini ortadan kaldıran bu kendi ürünümüz; portal entegrasyonları, veri senkronizasyonu ve emlak sektörüne özel otomasyon yetkinliğimizi gösteriyor."
       ]
     },
-    "sevgili-yogurt": {
-      "title": "Sevgili Yoğurt",
-      "summary": "Süt ürünleri üreticisi için stok, sevkiyat ve cari takipli mobil öncelikli PWA.",
-      "body": [
-        "Sevgili Yoğurt; yoğurt, peynir ve süt ürünleri üreten bir firma için geliştirdiğimiz stok + müşteri + sevkiyat + cari hesap takip uygulaması. Mobil öncelikli PWA yapısıyla kullanıcı telefondan müşteri seçip bırakılan ürünleri giriyor; stok otomatik düşüyor, cari hesaba borç yazılıyor.",
-        "Sahada tek elden kullanım için sadeleştirilen bu uygulama; küçük üreticilerin günlük operasyonunu dijitalleştiren pratik bir iş uygulaması örneği."
-      ]
-    },
     "dolmus-kontrol": {
       "title": "Dolmuş Güzergah Kontrol",
       "summary": "GPS verisinden dolmuş hatlarının güzergah kontrol raporunu üreten otomasyon.",
       "body": [
         "Şehirdeki dolmuş hatlarının zamanında çalışıp çalışmadığını denetleyen bir otomasyon sistemi geliştirdik. GPS takip programından alınan Excel verisi işlenerek hat bazında güzergah kontrol raporları üretiliyor.",
         "Flask tabanlı bu web uygulaması; elle yapılan saatlerce süren kontrolü dakikalara indiriyor — veri işleme ve süreç otomasyonu yetkinliğimizin sahadan bir örneği."
-      ]
-    },
-    "osyb-hap": {
-      "title": "ÖSYB Hap",
-      "summary": "Hap bilgi kartları, soru bankası ve notlarla sınav hazırlık platformu.",
-      "body": [
-        "ÖSYB Hap, ÖSYB sınavlarına hazırlananlar için geliştirdiğimiz bir sınav hazırlık platformu. Hap bilgi kartları (flashcard), soru bankası, not alma ve profil/ilerleme takibi tek uygulamada birleşiyor.",
-        "Next.js üzerinde kurulan bu kendi ürünümüz; eğitim teknolojisi alanında içerik organizasyonu ve öğrenme deneyimi tasarımı yetkinliğimizi gösteriyor."
       ]
     }
   },
