@@ -25,18 +25,26 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 ## Mevcut Durum
 
-**Progress**: 21/21 task (%100) — Tum phase'ler tamamlandi. Polish/iyilestirme devam ediyor.
+**Progress**: 29/29 task (%100) — Phase 4 (SEO + Blog + Iletisim) 2026-07-29'da tamamlandi.
+
+> `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
+> (Supabase kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
+> `NEVER_DONE` olarak duzeltildi. Yeniden yapilmasi planlanmiyor.
 
 - **56 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5 + avie-global geri eklendi; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 19 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
 - **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
-- **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
+- **Videolar**: YOK — `videos/` (289 MB) 2026-07-28'de silindi, kodda tek referansi yoktu
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
-- **Ceviriler**: TAMAM — tum 56 proje icin tr/en/ru works.{slug} girdileri eksiksiz (eski 11 ru eksigi 2026-07-16'da kapatildi)
-- **Bekleyen**: Proje tarihleri duzeltilecek; avie-global'in Saiber atifi kullanici teyidi bekliyor
+- **Blog**: MDX tabanli, `content/blog/{tr,en,ru}/*.mdx` — liste, yazi, etiket sayfalari + RSS
+- **Ceviriler**: 231/231 eksiksiz (works 56, stories 6, servicesList 15 × 3 dil).
+  `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
+- **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.
+  Resend hesabi `pitonstudios@gmail.com` ile acilmali. Ayrica proje tarihleri duzeltilecek;
+  avie-global'in Saiber atifi teyit bekliyor.
 
 ### Sprint 1 tamamlandi (2026-07-28) — SEO + Blog + Analytics
 

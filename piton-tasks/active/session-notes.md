@@ -257,3 +257,70 @@ _(session devam ediyor)_
 - Work-Restored klasör ↔ portfolyo eşlemesi piton-docs/MEMORY.md'de (baykan-night-club=Miracle, mehmet-missme=Misse, seytan-ibo=Gece Kıbrıs vb.)
 - Canlı link mekanizması: `Work.url` → detay metasında "Canlı Site → Siteyi ziyaret et ↗" (`projectDetail.live/visit`)
 - Mobil ekran görüntüsü almak için chrome-devtools `emulate` (430x928x2,mobile,touch) — resize_page 500px altına inmiyor
+
+---
+
+## 2026-07-28 / 29 — Session 8
+
+Plan: `piton-plans/2026-07-28-blog-admin-platform-plan.md` (Sprint 1 uygulandi, 2-5 iptal)
+
+### Completed
+
+**SEO altyapisi** (`27274ff`)
+- [x] `src/app/sitemap.ts` — 3 dilde 267 URL, her girdide hreflang + x-default, lokalize yollar (`/tr/projeler` ↔ `/en/projects`)
+- [x] `src/app/robots.ts` — preview deploy'da noindex
+- [x] Tum sayfalarda canonical + hreflang (`src/lib/seo.ts`)
+- [x] JSON-LD: Organization, WebSite, BreadcrumbList, CreativeWork (proje), Service + **FAQPage** (hizmet sayfalarindaki mevcut FAQ verisi rich snippet'e donustu)
+- [x] Dinamik OG gorselleri: `src/lib/og.tsx` + proje/hizmet/blog `opengraph-image.tsx`
+
+**Bulunan ve duzeltilen hatalar**
+- [x] **Cok dilli metadata**: proje/hizmet detay sayfalari `data.ts`'teki Turkce sabitleri kullaniyordu — `/en/` ve `/ru/` sayfalari Turkce baslik+aciklama ile indexleniyordu. `src/lib/content-i18n.ts` ile ceviri dosyalarindan okunuyor.
+- [x] **Eksik ceviri**: `stories.cyprokey` ve `stories.salih-defterali` **hicbir dilde** cevrilmemisti (`CLAUDE.md` "ceviriler TAMAM" diyordu — bu iddia `works` icin dogru, `stories` icin degildi). 3 dilde eklendi.
+- [x] **35 proje sayfasinda kirik hero gorseli** (`a4fa8e9`): `public/assets/optimized/` gitignore'daydi, `src/lib/media.ts` oraya isaret ediyordu. 10 dosya (876 KB) repoya hic girmiyordu. 29 preview'siz work + 6 story + /projeler hero + reel + case-study etkileniyordu. Dosyalar repoya alindi.
+- [x] **Sahte iletisim formu** (`4756404`): `contact.tsx` 1.2 sn bekleyip "✓ Gonderildi" yaziyor, hicbir yere hicbir sey gondermiyordu.
+
+**Blog** (`27274ff`)
+- [x] MDX pipeline: `content/blog/{tr,en,ru}/*.mdx`, gray-matter + remark-gfm + rehype-pretty-code
+- [x] Liste / yazi / etiket sayfalari, tr'de `/blog/etiket/[tag]` lokalize yolu
+- [x] `translationKey` frontmatter alani diller arasi hreflang'i kuruyor
+- [x] RSS: `/[locale]/rss.xml`
+- [x] 3 dilde 2'ser ornek yazi (gercek icerik)
+
+**Iletisim formu** (`4756404`)
+- [x] `/api/contact` — zod, honeypot, IP basina 10 dk / 3 gonderim
+- [x] Bildirim `pitonstudios@gmail.com`, `replyTo` gonderenin adresi
+- [x] `RESEND_API_KEY` yoksa acik hata + kullaniciya dogrudan e-posta adresi
+
+**Temizlik**
+- [x] `videos/` (289 MB, 17 dosya) Cop Kutusu'na — kodda tek referansi yoktu
+- [x] `supabase/` kaldirildi — hic kullanilmamisti
+- [x] Vercel Analytics + Speed Insights
+
+**Geri alinanlar** (kullanici karari — panel gereksiz yuk)
+- Neon + Drizzle + icerik gocu: kod `61b0d2a`, geri alindi `a4fa8e9`
+- Auth.js + admin panel: kod `5cd315c`, geri alindi `0a35979`
+- Vercel Blob: hic baglanmadi, `b9af751`
+
+### Pending — kullanici tarafinda
+
+- [ ] **`NEXT_PUBLIC_SITE_URL`** Vercel'e eklenmeli. Yoksa sitemap/canonical/OG URL'leri deploy adresini kullaniyor. Domain'e su an dokunulamiyor.
+- [ ] **`RESEND_API_KEY`** — resend.com hesabi **`pitonstudios@gmail.com` ile acilmali** (dogrulanmis alan adi olmadan `onboarding@resend.dev` sadece hesap sahibine gonderebiliyor). Anahtar girilmeden form calismaz, acik hata verir.
+- [ ] Vercel dashboard'dan `piton-studios-db` Blob store'u silinebilir — kullanilmiyor.
+- [ ] Opsiyonel: `pitonstudios.com` Resend'te dogrulanirsa `CONTACT_FROM_EMAIL` eklenip ziyaretciye otomatik yanit acilir.
+- [ ] Eski madde: proje tarihleri duzeltilecek; avie-global Saiber atifi teyit bekliyor.
+
+### Next Session
+
+- [ ] Resend anahtari girildikten sonra formu **canli test et** (gercek bir gonderim yapilmadi — sadece dogrulama/rate-limit/honeypot davranislari test edildi)
+- [ ] Search Console'a sitemap gonder, indexlemeyi izle
+- [ ] Blog icerik uretimine devam (altyapi hazir, 3 dilde 2'ser yazi var)
+- [ ] Lighthouse audit (Sprint 1 sonrasi olculmedi)
+
+### Notes / Dikkat
+
+- **Site tamamen statik.** Veritabani yok, auth yok, panel yok, harici depolama yok. Icerik `src/lib/data.ts` + `src/messages/*.json` uzerinden elle duzenleniyor.
+- **`pnpm content:check`** her yeni proje/hizmet ekleyisinden sonra calistirilmali — eksik ceviri varsa exit 1 verir. Iki eksik story cevirisini bulan seydi.
+- **Blog yazisi eklerken** `translationKey` frontmatter alani zorunlu — diller arasi hreflang buna bagli.
+- `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar vardi (Supabase kurulumu, video pipeline, admin CRUD). `NEVER_DONE` olarak duzeltildi.
+- Middleware matcher'i genis: `/((?!api|_next|_vercel|.*\..*).*)`. Eski dar matcher `['/', '/(tr|en|ru)/:path*']` locale oneki olmayan yeni bir rotayi sessizce kapsam disinda birakiyordu.
+- Plan dosyasinin basinda **iptal basligi** var — ileride bir session onu okuyup panel kurmaya kalkmasin.
