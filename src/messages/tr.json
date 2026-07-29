@@ -2299,6 +2299,24 @@
         "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık."
       ],
       "role": "Tasarım / Geliştirme"
+    },
+    "cyprokey": {
+      "title": "Cyprokey",
+      "sub": "Kıbrıs gayrimenkul platformu.",
+      "body": [
+        "Cyprokey için Kuzey Kıbrıs gayrimenkul piyasasına yönelik modern bir emlak platformu tasarladık. İlan yönetimi, gelişmiş filtreleme ve harita entegrasyonu ile alıcı ve satıcıları buluşturduk.",
+        "SEO optimizasyonu ve kullanıcı dostu arayüz ile emlak aramaları için güçlü bir dijital varlık oluşturduk."
+      ],
+      "role": "Tasarım / Geliştirme"
+    },
+    "salih-defterali": {
+      "title": "Salih Defterali",
+      "sub": "Kişisel portfolyo ve workstation sitesi.",
+      "body": [
+        "Salih Defterali için kişisel portfolyo ve çalışma alanı web sitesi tasarladık. Projeleri, yetenekleri ve iş deneyimini sergileyen minimal ve etkileyici bir dijital varlık oluşturduk.",
+        "Temiz tipografi, akıcı animasyonlar ve responsive tasarım ile profesyonel bir ilk izlenim oluşturmayı hedefledik."
+      ],
+      "role": "Tasarım / Geliştirme"
     }
   }
 }
