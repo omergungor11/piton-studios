@@ -1,8 +1,34 @@
 # Piton Studios — Blog + Admin Panel + Platform Geliştirme Planı
 
 **Tarih:** 2026-07-28
-**Statü:** Onay bekliyor
-**Kapsam:** Blog (MDX), tam CMS admin paneli, veritabanı göçü (Supabase → Neon), medya altyapısı (Vercel Blob), iletişim formu + lead yönetimi, SEO, analytics, i18n refaktörü
+**Statü:** ⚠️ **KISMEN İPTAL — 2026-07-29**
+
+> ## Bu plan artık kısmen geçersiz. Önce burayı okuyun.
+>
+> Sprint 1 uygulandı ve yayında. Sprint 2–5 **iptal edildi**; aşağıdaki bölümler
+> tarihsel kayıt olarak duruyor (karar gerekçeleri ve ölçülmüş limitler hâlâ değerli),
+> ama **uygulama rehberi olarak kullanılmamalı.**
+>
+> | Sprint | Durum |
+> |---|---|
+> | 1 — SEO + Blog + Analytics | ✅ **Yayında** (`27274ff`) |
+> | 2 — Neon + şema + içerik göçü | ❌ İptal — kod `61b0d2a`'da, geri alındı `a4fa8e9` |
+> | 3 — Auth + admin iskeleti | ❌ İptal — kod `5cd315c`'de, geri alındı `0a35979` |
+> | 4 — CMS + medya + lead | ❌ İptal (iletişim formu hariç, aşağıya bakın) |
+> | 5 — i18n refaktörü | ❌ İptal — çeviri borcu `content:check` ile yönetiliyor |
+>
+> **İptal gerekçesi (kullanıcı kararı):** Tek kullanıcılı bir site için admin panel
+> gereksiz yük. İçerik düzenlemesi doğrudan kod üzerinden yapılıyor. Panel olmayınca
+> Neon'un tek kullanımı lead depolamaktı; o da Resend e-postasıyla çözülüyor.
+> Vercel Blob da hiç bağlanmadan bırakıldı — 876 KB görsel repoda tutuluyor.
+>
+> **Güncel mimari:** Tamamen statik. Veritabanı yok, auth yok, panel yok, harici
+> depolama yok. Bkz. `CLAUDE.md` → "Mimari — guncel".
+>
+> **Kalan tek iş:** İletişim formu → Resend e-posta (bölüm 5, madde 4.7–4.8).
+> Lead **yönetimi** kapsam dışı; sadece bildirim + otomatik yanıt.
+
+**Özgün kapsam:** Blog (MDX), tam CMS admin paneli, veritabanı göçü (Supabase → Neon), medya altyapısı (Vercel Blob), iletişim formu + lead yönetimi, SEO, analytics, i18n refaktörü
 
 ---
 

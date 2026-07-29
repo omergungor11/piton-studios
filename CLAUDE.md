@@ -7,11 +7,10 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 - **GitHub**: https://github.com/omergungor11/piton-studios
 - **Deploy**: Vercel
-- **Database**: Neon Postgres (planlandi — bkz. `piton-plans/2026-07-28-blog-admin-platform-plan.md`)
-- **Medya**: Vercel Blob (planlandi — Hobby planinda ucretsiz)
+- **Database**: Yok — site tamamen statik
 
-> Not: Supabase kullanilmiyor. `@supabase/supabase-js` hic kurulmadi, `supabase/migrations/`
-> altindaki SQL'ler hic calistirilmadi. Ucretsiz limit doldugu icin Neon'a gecildi.
+> Not: Hicbir veritabani veya harici depolama kullanilmiyor. Supabase hic baglanmadi,
+> Neon ve Vercel Blob degerlendirilip vazgecildi (gerekce: `piton-plans/`).
 
 ## Slash Commandlar
 
@@ -79,16 +78,19 @@ Eksik ceviri varsa 1 ile cikar — CI'a baglanabilir.
 hero gorseli olmadan yayindaydi (29 preview'siz work + 6 story), ayrica /projeler
 hero arka plani, reel ve case-study sahneleri.
 
-Cozum: dosyalar repoya alindi. Blob bu olcek icin (876 KB) gereksiz karmasiklik olurdu.
-Blob store kurulu duruyor — portfolyo buyudukce gercekten buyuk varliklar icin kullanilacak.
+Cozum: dosyalar repoya alindi. Blob bu olcek icin (876 KB) gereksiz karmasiklik olurdu;
+Blob store'undan da vazgecildi (2026-07-29) — kodda hic kullanilmamisti.
+Gorseller repoda tutuluyor.
 
 ## Mimari — guncel
 
 Site **tamamen statik**. Veritabani yok, auth yok, panel yok.
 - Icerik: `src/lib/data.ts` + `src/messages/{tr,en,ru}.json` (elle duzenlenir)
 - Blog: `content/blog/{tr,en,ru}/*.mdx`
-- Gorseller: `public/assets/`
+- Gorseller: `public/assets/` (repoda; harici depolama yok)
 - Tek dinamik parca (planlanan): iletisim formu → Resend e-posta
+
+Harici bagimliliklar: Vercel (deploy + analytics) ve ileride Resend. Baska yok.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
