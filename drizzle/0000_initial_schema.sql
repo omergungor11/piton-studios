@@ -42,7 +42,7 @@ CREATE TABLE "contact_messages" (
 --> statement-breakpoint
 CREATE TABLE "media_assets" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"r2_key" text NOT NULL,
+	"storage_key" text NOT NULL,
 	"public_url" text NOT NULL,
 	"kind" "media_kind" DEFAULT 'image' NOT NULL,
 	"width" integer,
@@ -127,7 +127,7 @@ CREATE INDEX "audit_log_entity_idx" ON "audit_log" USING btree ("entity","entity
 CREATE INDEX "audit_log_created_idx" ON "audit_log" USING btree ("created_at");--> statement-breakpoint
 CREATE INDEX "contact_messages_status_idx" ON "contact_messages" USING btree ("status");--> statement-breakpoint
 CREATE INDEX "contact_messages_created_idx" ON "contact_messages" USING btree ("created_at");--> statement-breakpoint
-CREATE UNIQUE INDEX "media_assets_r2_key_idx" ON "media_assets" USING btree ("r2_key");--> statement-breakpoint
+CREATE UNIQUE INDEX "media_assets_storage_key_idx" ON "media_assets" USING btree ("storage_key");--> statement-breakpoint
 CREATE INDEX "project_translations_status_idx" ON "project_translations" USING btree ("status");--> statement-breakpoint
 CREATE UNIQUE INDEX "projects_slug_idx" ON "projects" USING btree ("slug");--> statement-breakpoint
 CREATE INDEX "projects_type_idx" ON "projects" USING btree ("type");--> statement-breakpoint

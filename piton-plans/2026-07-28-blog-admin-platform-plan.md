@@ -2,7 +2,7 @@
 
 **Tarih:** 2026-07-28
 **Statü:** Onay bekliyor
-**Kapsam:** Blog (MDX), tam CMS admin paneli, veritabanı göçü (Supabase → Neon), medya altyapısı (R2), iletişim formu + lead yönetimi, SEO, analytics, i18n refaktörü
+**Kapsam:** Blog (MDX), tam CMS admin paneli, veritabanı göçü (Supabase → Neon), medya altyapısı (Vercel Blob), iletişim formu + lead yönetimi, SEO, analytics, i18n refaktörü
 
 ---
 
@@ -64,16 +64,26 @@ Tek istisna: iletişim formu POST'u (saniyeler süren tek INSERT) ve admin panel
 - **MongoDB Atlas** (512 MB): şema tipi tamamen değişir, ilişkisel içerik modeli için gereksiz sürtünme.
 - **PlanetScale**: ücretsiz katman kaldırıldı.
 
-### 2.2 Medya Depolama: **Cloudflare R2** ✅
+### 2.2 Medya Depolama: **Vercel Blob** ✅ _(2026-07-29 kararı)_
 
-| Limit | Ücretsiz katman |
+Hobby planında ücretsiz. Ek hesap gerektirmiyor, `@vercel/blob` SDK'sı ile `put()` çağrısı kadar basit, client-side upload hazır geliyor.
+
+| Hobby limiti | Değer |
 |---|---|
-| Depolama | 10 GB / ay |
-| Class A (yazma) | 1M istek / ay |
-| Class B (okuma) | 10M istek / ay |
-| **Egress** | **Ücretsiz (sınırsız)** |
+| Depolama | Hobby kotası dahilinde ücretsiz |
+| Basit işlem | 1.200/dk |
+| Gelişmiş işlem (`put`/`copy`/`list`) | 1.500/dk |
+| Depo sayısı | 100 |
+| Maksimum dosya | 5 TB (cache sınırı: 512 MB/dosya) |
+| Limit aşımı | Faturalandırma yok — **erişim 30 gün kapanır** |
 
-S3 uyumlu API → `@aws-sdk/client-s3` ile çalışır. Sıfır egress maliyeti, görsel/video ağırlıklı bir portfolyo sitesi için belirleyici. Neon'un 5 GB egress'ini medya ile harcamamak için medya **asla** DB'den geçmez.
+**Bilinçli kabul edilen risk:** Blob veri transferi, projenin genel 100 GB Fast Data Transfer kotasından düşer ve Hobby'de kota aşılırsa medya erişimi 30 gün kapanır (görseller kırılır). Mevcut görsel varlığı toplam ~3.7 MB olduğu için bu ölçekte gerçekçi bir risk değil.
+
+**Cloudflare R2 neden seçilmedi:** 10 GB depolama + **sınırsız ücretsiz egress** sunuyor ve trafik büyümesine karşı daha güvenli. Ancak ayrı bir Cloudflare hesabı ve S3 SDK kurulumu gerektiriyor. Hobby ölçeğinde bu karmaşıklık gereksiz görüldü.
+
+**Çıkış planı:** Blob S3 uyumlu nesne depolama olduğu için, trafik büyürse dosyalar R2'ye taşınabilir. Bu yüzden medya URL'leri koda gömülmez, `media_assets` tablosunda tutulur — taşıma tek bir `UPDATE` sorgusuna iner.
+
+Her iki durumda da medya **asla** DB'den geçmez; Neon'un 5 GB egress'i içerik metniyle sınırlı kalır.
 
 ### 2.3 Auth: **Auth.js v5 (NextAuth) + Credentials** ✅
 
@@ -130,8 +140,8 @@ Bu ayrımı kabul etmiyorsanız alternatif: blog da DB'ye alınır, MDX bırakı
          │ build-time + on-demand   │ upload       │ e-posta
          │ revalidate               │              │
     ┌────▼─────┐              ┌─────▼─────┐   ┌────▼────┐
-    │   NEON   │              │ CLOUDFLARE│   │ RESEND  │
-    │ Postgres │              │    R2     │   │         │
+    │   NEON   │              │  VERCEL   │   │ RESEND  │
+    │ Postgres │              │   BLOB    │   │         │
     │ +Drizzle │              │  (medya)  │   │         │
     └──────────┘              └───────────┘   └─────────┘
 
@@ -161,7 +171,7 @@ services / service_translations   → aynı desen
                                     (features, process, stats, faq → jsonb)
 
 media_assets                    contact_messages
-├─ id, r2_key, public_url       ├─ id, name, email, phone
+├─ id, storage_key, public_url  ├─ id, name, email, phone
 ├─ kind ('image'|'video')       ├─ service, message, locale
 ├─ width, height, size_bytes    ├─ status ('new'|'read'|'replied'|'archived')
 ├─ alt_text (jsonb: per-locale) ├─ source, referrer, ip_hash
@@ -285,9 +295,9 @@ _~7 gün_
 | 4.1 | Proje CRUD: liste (filtre/sırala/sürükle-bırak sıralama), oluştur/düzenle/sil, yayınla-taslak | 56 proje panelden yönetilir |
 | 4.2 | **Çeviri sekmeleri** (tr/en/ru) her proje formunda + "eksik" rozeti | Çeviri borcu görünür ve kapatılabilir |
 | 4.3 | Hizmet CRUD (features/process/stats/faq için yapılandırılmış editör) | Hizmet içerikleri panelden |
-| 4.4 | R2 kurulumu + presigned URL upload + `sharp` ile otomatik webp/boyutlandırma | Medya yükleme |
+| 4.4 | Vercel Blob kurulumu + client upload + `sharp` ile otomatik webp/boyutlandırma | Medya yükleme |
 | 4.5 | Medya kütüphanesi: ızgara görünüm, arama, alt-text (dil bazlı), yetim dosya tespiti | Screenshot/preview yönetimi |
-| 4.6 | `videos/` (289MB) → R2'ye taşıma veya arşivleme kararı | Repo/disk temizliği |
+| 4.6 | ~~`videos/` (289MB) taşıma/arşivleme kararı~~ — 2026-07-28'de silindi | ✅ tamam |
 | 4.7 | Gerçek iletişim formu: zod doğrulama + honeypot + rate limit → `contact_messages` | `mailto:` yerine ölçülebilir dönüşüm |
 | 4.8 | Resend ile bildirim e-postası + kullanıcıya otomatik yanıt (3 dilde) | Lead kaçmaz |
 | 4.9 | Lead gelen kutusu: durum akışı (yeni→okundu→yanıtlandı→arşiv), not, CSV dışa aktarım | Satış takibi |
@@ -323,7 +333,7 @@ _~4 gün_
 "next-auth@beta" (v5), "bcryptjs"
 
 // Sprint 4
-"@aws-sdk/client-s3", "@aws-sdk/s3-request-presigner", "sharp", "resend"
+"@vercel/blob", "sharp", "resend"
 ```
 
 Hepsi Next.js 16 / React 19 uyumlu. Ağır bir eklenti yok; bundle'a giren tek şey analytics (~2KB).
@@ -334,7 +344,7 @@ Hepsi Next.js 16 / React 19 uyumlu. Ağır bir eklenti yok; bundle'a giren tek �
 
 | Risk | Etki | Azaltma |
 |---|---|---|
-| Neon 0.5GB / 100 CU-saat aşımı | Compute askıya alınır | DB build-time kaynağı; public trafik DB'ye dokunmaz. Metin içeriği ~5MB, medya R2'de. Gerçekçi kullanım limitin %5'i. |
+| Neon 0.5GB / 100 CU-saat aşımı | Compute askıya alınır | DB build-time kaynağı; public trafik DB'ye dokunmaz. Metin içeriği ~5MB, medya Blob'da. Gerçekçi kullanım limitin %5'i. |
 | İçerik göçünde veri kaybı | Yüksek | Idempotent script + geri-dışa aktarım + `data.ts` iki sprint boyunca repoda + her adımda build doğrulaması |
 | Statik siteden DB'ye geçişte hız kaybı | Orta | ISR + on-demand revalidate; sayfa üretimi build'de. Lighthouse skoru Sprint 2 öncesi/sonrası karşılaştırılır. |
 | `/admin` middleware boşluğu | **Güvenlik** | Sprint 3.2'de matcher açıkça düzeltilir; korumasız route testi yazılır |
@@ -374,7 +384,7 @@ Sprint 1 bağımsız — istenirse tek başına yapılıp deploy edilebilir, son
 ## 10. Karar Bekleyen Noktalar
 
 1. **Blog editörü:** Saf MDX yeterli mi, yoksa 5.5 (panelden GitHub commit) baştan kapsama alınsın mı?
-2. **`videos/` (289MB):** Kodda hiç referans yok. R2'ye arşivlensin mi, yoksa tamamen silinsin mi?
+2. ~~**`videos/` (289MB)**~~ — 2026-07-28'de Çöp Kutusu'na taşındı. ✅
 3. **Blog URL'i:** Türkçede `/blog` mu, `/gunluk` / `/yazilar` mı?
 4. **Admin dili:** Sadece Türkçe (önerim) mi, çok dilli mi?
 5. **Sprint sırası:** Değer odaklı sıra (yukarıdaki) mı, yoksa önce admin panel mi?
