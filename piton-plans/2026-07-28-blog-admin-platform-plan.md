@@ -271,8 +271,13 @@ _Neon projesi açılıp `DATABASE_URL` girilmesi bekleniyor — `piton-docs/neon
 
 ---
 
-### Sprint 3 — Auth + Admin İskeleti
-_~3 gün_
+### Sprint 3 — Auth + Admin İskeleti ✅ TAMAMLANDI (2026-07-29)
+
+> 3.2'de öngörülen güvenlik açığı doğrulandı ve kapatıldı. Ek olarak bir Auth.js
+> davranışı çıktı: `authorized` callback'ine bırakılan yönlendirme, **var olmayan**
+> `/admin/*` alt yollarında redirect yerine prerender edilmiş 404 döndürüyordu.
+> Guard açıkça middleware içine alındı — böylece Sprint 4'te eklenecek sayfalar
+> daha yazılmadan korunmuş oluyor.
 
 | # | İş | Çıktı |
 |---|---|---|

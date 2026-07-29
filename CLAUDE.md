@@ -76,8 +76,25 @@ Kod tarafi hazir; **Neon projesi acilip `DATABASE_URL` girilmesi bekleniyor**
 - `supabase/` dizini kaldirildi (hic kullanilmamisti, git gecmisinde duruyor)
 - Build: 506 statik sayfa, 0 tip hatasi, 0 lint hatasi
 
-**Siradaki**: Sprint 3 — Auth.js + admin iskeleti. Dikkat: `src/middleware.ts` matcher'i
-`/admin`'i kapsamiyor, auth guard eklenirken duzeltilmeli.
+### Sprint 3 tamamlandi (2026-07-29) — Auth + admin iskeleti
+
+- **Auth.js v5 + Credentials**: `src/lib/auth/` — edge-guvenli config (middleware) ile
+  Node-runtime config (bcrypt + DB) ayrilmis. JWT session, 8 saat.
+- **Middleware guvenlik acigi kapatildi**: eski matcher `['/', '/(tr|en|ru)/:path*']`
+  `/admin`'i kapsamiyordu. Yeni matcher tum yollari kapsiyor; `/admin/*` auth guard'a,
+  digerleri next-intl'e gidiyor. Yonlendirme `authorized` callback'ine birakilmadi —
+  callback var olmayan alt yollarda 404 donduruyordu, guard acikca middleware icinde.
+- **Kaba kuvvet korumasi**: 15 dk / 5 deneme (`src/lib/auth/rate-limit.ts`, bellek ici)
+- **Timing sizintisi kapali**: kullanici yoksa da bcrypt karsilastirmasi yapiliyor
+- **Panel**: `/admin/login` + `/admin` (dashboard). Sidebar, ceviri sagligi tablosu,
+  okunmamis mesaj sayaci, son islemler. `/admin` tek dilli (Türkçe), `[locale]` disinda.
+- **Denetim kaydi**: `src/lib/audit.ts` — `recordAudit`, `computeDiff`, `recentAudit`
+- **`pnpm admin:create`**: admin kullanicisi olusturma/sifre guncelleme script'i
+- Dogrulandi: `/admin`, `/admin/projects`, `/admin/rastgele` dahil tum yollar
+  oturumsuz `/admin/login`'e 307 donuyor; public site etkilenmedi.
+
+**Siradaki**: Sprint 4 — proje/hizmet CRUD, ceviri sekmeleri, Vercel Blob medya
+yukleme, iletisim formu + lead kutusu.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 

@@ -62,7 +62,24 @@ pnpm build   # 506 sayfa yine üretilmeli
 
 Sorun çıkarsa `CONTENT_SOURCE=static` yaz, anında eski davranışa döner.
 
-## 7. Vercel
+## 7. Admin kullanıcısı oluştur
+
+```bash
+pnpm admin:create -- --email=omergungor99@gmail.com --role=owner
+```
+
+Şifre sorulur, terminalde görünmez. Kurallar: en az 12 karakter, büyük+küçük harf ve rakam.
+Aynı e-posta ile tekrar çalıştırırsan şifre güncellenir.
+
+Ardından `.env.local`'a bir `AUTH_SECRET` ekle:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+```
+
+Giriş: `http://localhost:3000/admin/login`
+
+## 8. Vercel
 
 Environment variables:
 
@@ -70,7 +87,9 @@ Environment variables:
 |---|---|
 | `DATABASE_URL` | Neon direct connection string |
 | `CONTENT_SOURCE` | `static` (doğrulanana kadar), sonra `db` |
+| `AUTH_SECRET` | Rastgele 32 byte base64 — panel oturum çerezini imzalar |
 | `NEXT_PUBLIC_SITE_URL` | Production domain — **hâlâ ayarlanmadı** |
+| `BLOB_READ_WRITE_TOKEN` | Blob store bağlandığında Vercel otomatik ekler |
 
 ## Faydalı komutlar
 
