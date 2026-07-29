@@ -15,7 +15,8 @@
     "db:studio": "drizzle-kit studio",
     "content:migrate": "tsx scripts/migrate-content.ts",
     "content:export": "tsx scripts/export-content.ts",
-    "content:check": "tsx scripts/check-content-parity.ts"
+    "content:check": "tsx scripts/check-content-parity.ts",
+    "admin:create": "tsx scripts/create-admin.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
@@ -23,10 +24,12 @@
     "@react-three/fiber": "^9.6.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "bcryptjs": "^3.0.3",
     "drizzle-orm": "^0.45.2",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
     "next": "16.2.4",
+    "next-auth": "5.0.0-beta.32",
     "next-intl": "^4.9.1",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",
