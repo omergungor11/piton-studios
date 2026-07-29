@@ -27,8 +27,10 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Large assets (production: Cloudflare R2)
-public/assets/optimized/
+# Buyuk medya (production: Vercel Blob)
+# NOT: public/assets/optimized/ eskiden burada gitignore'daydi ve 10 dosya (876 KB)
+# repoya hic girmiyordu — 35 proje sayfasinin hero gorseli production'da 404 veriyordu.
+# 2026-07-29'da repoya alindi. Yeni ve gercekten buyuk varliklar Blob'a yuklenmeli.
 Portgolio/
 Portgolio.zip
 
