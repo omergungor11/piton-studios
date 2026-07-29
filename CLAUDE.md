@@ -88,9 +88,26 @@ Site **tamamen statik**. Veritabani yok, auth yok, panel yok.
 - Icerik: `src/lib/data.ts` + `src/messages/{tr,en,ru}.json` (elle duzenlenir)
 - Blog: `content/blog/{tr,en,ru}/*.mdx`
 - Gorseller: `public/assets/` (repoda; harici depolama yok)
-- Tek dinamik parca (planlanan): iletisim formu → Resend e-posta
+- Tek dinamik parca: iletisim formu → `/api/contact` → Resend e-posta
 
-Harici bagimliliklar: Vercel (deploy + analytics) ve ileride Resend. Baska yok.
+Harici bagimliliklar: Vercel (deploy + analytics) ve Resend. Baska yok.
+
+### Iletisim formu (2026-07-29)
+
+**Onceki hali sahteydi**: `contact.tsx` 1.2 sn bekleyip "✓ Gonderildi" yaziyordu,
+hicbir yere hicbir sey gondermiyordu. Ziyaretci ulastigini saniyordu.
+
+Simdi `/api/contact` (nodejs runtime):
+- zod dogrulama, bal kupu (honeypot), IP basina 10 dk / 3 gonderim
+- Hiz siniri dogrulamadan SONRA sayilir — e-postasini yanlis yazan kullanici kilitlenmesin
+- Bal kupu dolu ise 200 ok:true doner ama e-posta gonderilmez (bota sinyal verilmez)
+- Bildirim `pitonstudios@gmail.com` adresine, `replyTo` gonderenin adresi
+- `RESEND_API_KEY` yoksa **acik hata** doner ve kullaniciya dogrudan e-posta adresi
+  gosterilir — sessizce yutulmaz
+
+**Ziyaretciye otomatik yanit** yalnizca `CONTACT_FROM_EMAIL` ayarliysa gonderilir.
+Resend'te dogrulanmis alan adi olmadan `onboarding@resend.dev` SADECE Resend hesabinin
+sahibine gonderebilir; bu yuzden Resend hesabi `pitonstudios@gmail.com` ile acilmali.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 

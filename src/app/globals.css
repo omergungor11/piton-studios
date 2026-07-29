@@ -4789,3 +4789,14 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
   .blog-post { margin-bottom: 64px; }
   .blog-prose { font-size: 15px; }
 }
+
+/* Iletisim formu durum mesaji */
+.contact-form-status {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  min-height: 18px;
+}
+.contact-form-status .is-ok { color: #22c55e; }
+.contact-form-status .is-error { color: var(--accent); }
+.contact-form-status a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

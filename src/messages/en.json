@@ -175,7 +175,11 @@
     "cursorLabel": "Send ↗",
     "generalLabel": "General Inquiries",
     "contactCta": "Get in Touch",
-    "mail": "Email"
+    "mail": "Email",
+    "sentDetail": "Your message reached us. We usually reply within 24 hours.",
+    "errorSend": "Couldn't send — email us directly",
+    "errorValidation": "Please check the fields",
+    "errorRateLimit": "Too many attempts — please try again later"
   },
   "services": {
     "eyebrow": "§ 04",

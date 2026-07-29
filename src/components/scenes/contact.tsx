@@ -1,22 +1,56 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Reveal } from '@/components/motion';
+import type { ContactResponse } from '@/lib/contact';
+
+type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 export default function ContactScene() {
   const t = useTranslations('contact');
+  const locale = useLocale();
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  // Bal kupu: gercek kullanici bu alani goremez, bot doldurur.
+  const [company, setCompany] = useState('');
+  const [status, setStatus] = useState<Status>('idle');
+  const [errorKey, setErrorKey] = useState<string>('error');
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (status === 'sending') return;
+
     setStatus('sending');
-    setTimeout(() => {
-      setStatus('sent');
-      setForm({ name: '', email: '', phone: '', message: '' });
-      setTimeout(() => setStatus('idle'), 4000);
-    }, 1200);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, company, locale }),
+      });
+
+      const data = (await response.json()) as ContactResponse;
+
+      if (data.ok) {
+        setStatus('sent');
+        setForm({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setStatus('idle'), 6000);
+        return;
+      }
+
+      // Durum "sent" olarak GOSTERILMEZ — gonderilmediyse kullanici bilmeli.
+      setErrorKey(
+        data.error === 'rateLimit'
+          ? 'errorRateLimit'
+          : data.error === 'validation'
+            ? 'errorValidation'
+            : 'errorSend'
+      );
+      setStatus('error');
+    } catch {
+      setErrorKey('errorSend');
+      setStatus('error');
+    }
   };
 
   return (
@@ -97,15 +131,32 @@ export default function ContactScene() {
           </div>
           <div className="contact-field full">
             <label htmlFor="message">{t('message')}</label>
-            <textarea id="message" placeholder={t('messagePlaceholder')} rows={4} required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <textarea id="message" placeholder={t('messagePlaceholder')} rows={4} required minLength={10} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </div>
         </div>
+
+        {/* Bal kupu — ekran okuyucudan ve gozden gizli, yalnizca botlar doldurur */}
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+          <label htmlFor="company">Company</label>
+          <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" value={company} onChange={(e) => setCompany(e.target.value)} />
+        </div>
+
         <button type="submit" className="contact-submit" disabled={status === 'sending' || status === 'sent'} data-cursor="hover" data-cursor-label="Send">
           {status === 'idle' && <><span>{t('submit')}</span><span className="arrow-icon">↗</span></>}
           {status === 'sending' && <span>{t('sending')}</span>}
           {status === 'sent' && <span>{t('sent')}</span>}
-          {status === 'error' && <span>{t('error')}</span>}
+          {status === 'error' && <span>{t(errorKey)}</span>}
         </button>
+
+        <div className="contact-form-status" role="status" aria-live="polite">
+          {status === 'sent' && <span className="is-ok">{t('sentDetail')}</span>}
+          {status === 'error' && (
+            <span className="is-error">
+              {t(errorKey)} —{' '}
+              <a href="mailto:pitonstudios@gmail.com">pitonstudios@gmail.com</a>
+            </span>
+          )}
+        </div>
       </form>
       </Reveal>
     </div>
