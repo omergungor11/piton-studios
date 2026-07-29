@@ -47,8 +47,11 @@ export const mediaAssets = pgTable(
   'media_assets',
   {
     id: uuid('id').primaryKey().defaultRandom(),
-    /** R2 nesne anahtari — bucket icindeki yol. */
-    r2Key: text('r2_key').notNull(),
+    /**
+     * Depolama saglayicisindaki nesne yolu (Vercel Blob'da `pathname`).
+     * Vendor-notr tutuluyor — ileride R2'ye tasinirsa alan adi degismez.
+     */
+    storageKey: text('storage_key').notNull(),
     publicUrl: text('public_url').notNull(),
     kind: mediaKindEnum('kind').notNull().default('image'),
     width: integer('width'),
@@ -59,7 +62,7 @@ export const mediaAssets = pgTable(
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
   },
-  (table) => [uniqueIndex('media_assets_r2_key_idx').on(table.r2Key)]
+  (table) => [uniqueIndex('media_assets_storage_key_idx').on(table.storageKey)]
 );
 
 // ============================================================

@@ -1,5 +1,5 @@
 {
-  "id": "2fc83f83-574d-452d-a208-e95533ced407",
+  "id": "ea13a8e7-5fdb-4e66-b917-4dffba00655f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -326,8 +326,8 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "r2_key": {
-          "name": "r2_key",
+        "storage_key": {
+          "name": "storage_key",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -387,11 +387,11 @@
         }
       },
       "indexes": {
-        "media_assets_r2_key_idx": {
-          "name": "media_assets_r2_key_idx",
+        "media_assets_storage_key_idx": {
+          "name": "media_assets_storage_key_idx",
           "columns": [
             {
-              "expression": "r2_key",
+              "expression": "storage_key",
               "isExpression": false,
               "asc": true,
               "nulls": "last"

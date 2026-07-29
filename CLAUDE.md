@@ -8,7 +8,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **GitHub**: https://github.com/omergungor11/piton-studios
 - **Deploy**: Vercel
 - **Database**: Neon Postgres (planlandi — bkz. `piton-plans/2026-07-28-blog-admin-platform-plan.md`)
-- **Medya**: Cloudflare R2 (planlandi)
+- **Medya**: Vercel Blob (planlandi — Hobby planinda ucretsiz)
 
 > Not: Supabase kullanilmiyor. `@supabase/supabase-js` hic kurulmadi, `supabase/migrations/`
 > altindaki SQL'ler hic calistirilmadi. Ucretsiz limit doldugu icin Neon'a gecildi.
