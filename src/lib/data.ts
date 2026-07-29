@@ -421,6 +421,9 @@ export const WORKS: Work[] = [
       "Hızlı yüklenme süreleri, responsive tasarım ve SEO optimizasyonu ile müşterilerin kolayca ulaşmasını sağladık.",
     ],
     scope: "Web design, finance, corporate",
+    previews: {
+      desktop: '/assets/previews/desktop/halas-exchange.webp',
+    },
   },
   {
     n: "17",
@@ -439,6 +442,9 @@ export const WORKS: Work[] = [
       "SEO optimizasyonu, harita entegrasyonu ve sosyal medya bağlantıları ile dijital görünürlüğü artırdık. Çok dilli yapı ile uluslararası müşterilere ulaşmayı sağladık.",
     ],
     scope: "Web design, real estate, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/arslan-estates.webp',
+    },
   },
   {
     n: "18",
@@ -457,6 +463,9 @@ export const WORKS: Work[] = [
       "Hizmet bilgileri, konum detayları ve iletişim araçları ile müşteri edinimini kolaylaştırdık. SEO ve sosyal medya entegrasyonu ile dijital varlığı güçlendirdik.",
     ],
     scope: "Web design, finance, crypto",
+    previews: {
+      desktop: '/assets/previews/desktop/arslan-coin-center.webp',
+    },
   },
   {
     n: "19",
@@ -475,6 +484,9 @@ export const WORKS: Work[] = [
       "Modern tasarım, çok dilli yapı ve SEO optimizasyonu ile güçlü bir kurumsal dijital kimlik oluşturduk.",
     ],
     scope: "Web design, corporate, holding",
+    previews: {
+      desktop: '/assets/previews/desktop/arslan-group.webp',
+    },
   },
   {
     n: "20",
@@ -573,6 +585,9 @@ export const WORKS: Work[] = [
       "Yerel SEO çalışmaları ile taksi aramalarında üst sıralarda yer almayı hedefledik. Mobil uyumlu tasarım ile hareket halindeki kullanıcılara kolay erişim sunduk.",
     ],
     scope: "Web design, transportation, SEO",
+    previews: {
+      desktop: '/assets/previews/desktop/kardesler-taxi.webp',
+    },
   },
   {
     n: "25",
@@ -1855,7 +1870,7 @@ export const STORIES: Story[] = [
     year: "2025",
     role: "Design / Development",
     tags: ["Real Estate", "Platform", "KKTC"],
-    image: "story-04.jpg",
+    image: "cyprokey.jpg",
     body: [
       "Cyprokey için Kuzey Kıbrıs gayrimenkul piyasasına yönelik modern bir emlak platformu tasarladık. İlan yönetimi, gelişmiş filtreleme ve harita entegrasyonu ile alıcı ve satıcıları buluşturduk.",
       "SEO optimizasyonu ve kullanıcı dostu arayüz ile emlak aramaları için güçlü bir dijital varlık oluşturduk.",
