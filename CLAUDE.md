@@ -31,9 +31,9 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 > (Supabase kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
 > `NEVER_DONE` olarak duzeltildi. Yeniden yapilmasi planlanmiyor.
 
-- **56 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5 + avie-global geri eklendi; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). İlk 6 proje slider'da
+- **49 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
-- **Saiber ortaklığı**: 19 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
+- **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
 - **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
 - **Videolar**: YOK — `videos/` (289 MB) 2026-07-28'de silindi, kodda tek referansi yoktu
@@ -43,8 +43,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **Ceviriler**: 231/231 eksiksiz (works 56, stories 6, servicesList 15 × 3 dil).
   `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
 - **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.
-  Resend hesabi `pitonstudios@gmail.com` ile acilmali. Ayrica proje tarihleri duzeltilecek;
-  avie-global'in Saiber atifi teyit bekliyor.
+  Resend hesabi `pitonstudios@gmail.com` ile acilmali. Ayrica proje tarihleri duzeltilecek.
 
 ### Sprint 1 tamamlandi (2026-07-28) — SEO + Blog + Analytics
 

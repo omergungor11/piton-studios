@@ -382,16 +382,6 @@
       "kind": "E-commerce · Web",
       "role": "Design / Development"
     },
-    "avie-global": {
-      "title": "Avie Global",
-      "summary": "Automotive spare parts trading company corporate website.",
-      "body": [
-        "We designed a corporate website for Avie Global Trading in the automotive spare parts trading sector. Built on WordPress, we created a professional platform showcasing the company profile, product range, and business partnerships.",
-        "Global trade-focused design, multi-language content structure, and SEO optimization targeted reaching international customers."
-      ],
-      "kind": "Web Design · Corporate",
-      "role": "Design / Development"
-    },
     "alp-sigorta": {
       "title": "Alp Sigorta",
       "summary": "Insurance company corporate website with service catalog.",
@@ -648,14 +638,6 @@
         "A modern navigation structure spanning platform, solutions, company, and support pages clearly positioned the SaaS product."
       ]
     },
-    "lider-emlak": {
-      "title": "Lider Emlak",
-      "summary": "Listing and corporate website for a Bozüyük-based real estate agency.",
-      "body": [
-        "We built a real estate website for Lider Emlak to professionally showcase its Bozüyük portfolio, with categorized, browsable listings on a custom WordPress theme matching the brand.",
-        "Listing management, location details and contact flows are handled from a single panel. On-page technical SEO delivered visibility in local searches. Delivered in partnership with Saiber."
-      ]
-    },
     "odeme-takip-botu": {
       "title": "Payment Tracker Bot",
       "summary": "Payment-tracking web app that sends automatic Telegram reminders as due dates approach.",
@@ -736,22 +718,6 @@
         "This fintech product experiment is a side project demonstrating real-time data processing and automation capability."
       ]
     },
-    "ai-dating-app": {
-      "title": "AI Dating App",
-      "summary": "AI-powered matching concept for a dating product, prototyped with Next.js.",
-      "body": [
-        "We developed a dating-app concept that analyzes user profiles with AI and suggests compatibility-based matches. The Next.js prototype covers the profile flow, matching logic and recommendation screens.",
-        "Still at the product-idea stage, this work demonstrates our experience with AI-driven recommendation systems and modern product prototyping."
-      ]
-    },
-    "gemini-tracker": {
-      "title": "Gemini Tracker",
-      "summary": "Gemini API-based tracking and monitoring tool prototype.",
-      "body": [
-        "We built a tracking-tool prototype that monitors, summarizes and reports content and data streams using the Gemini API. LLM-based analysis turns raw data into meaningful digests.",
-        "This R&D tool is a practical example of combining large-language-model integration with automation scenarios."
-      ]
-    },
     "fur-crm": {
       "title": "FurCRM",
       "summary": "Advanced CRM for the furniture industry — accounts, invoicing, dealer management.",
@@ -792,14 +758,6 @@
         "Focused on 3D web experiences, this self-development project demonstrates technical product marketing and developer-tool interface design."
       ]
     },
-    "manager-oto-servis": {
-      "title": "Manager",
-      "summary": "Multi-tenant SaaS CRM and pre-accounting platform for auto service businesses.",
-      "body": [
-        "Manager is a multi-tenant SaaS platform we built for auto service and mechanic businesses. Vehicle flow, stock management, service sales, invoicing, account ledgers, staff management, reminders and reporting come together under one roof.",
-        "With a wildcard-subdomain architecture each business runs on its own domain. Targeting auto services in Northern Cyprus, this own product demonstrates horizontal SaaS architecture and multi-tenant system design."
-      ]
-    },
     "emlak-sync": {
       "title": "Emlak Sync",
       "summary": "Multi-portal real estate listing sync panel — enter once, publish everywhere.",
@@ -808,28 +766,12 @@
         "Eliminating duplicate data entry, this own product demonstrates portal integrations, data synchronization and real-estate-specific automation."
       ]
     },
-    "sevgili-yogurt": {
-      "title": "Sevgili Yoğurt",
-      "summary": "Mobile-first PWA for a dairy producer — stock, deliveries and account ledgers.",
-      "body": [
-        "Sevgili Yoğurt is a stock + customer + delivery + account-ledger app we built for a dairy producer. With its mobile-first PWA structure the user picks a customer on the phone and logs delivered goods; stock decreases automatically and the amount is booked to the customer's ledger.",
-        "Streamlined for one-handed field use, it is a practical example of digitizing a small producer's daily operation."
-      ]
-    },
     "dolmus-kontrol": {
       "title": "Minibus Route Control",
       "summary": "Route-compliance automation: GPS Excel data becomes route control reports.",
       "body": [
         "We built an automation system that checks whether a city's minibus (dolmuş) lines run on schedule. Excel data from a GPS tracking program is processed into per-line route control reports.",
         "This Flask-based web app turns hours of manual checking into minutes — a field-proven example of data processing and process automation."
-      ]
-    },
-    "osyb-hap": {
-      "title": "ÖSYB Hap",
-      "summary": "Exam-prep platform with bite-size flashcards, a question bank and notes.",
-      "body": [
-        "ÖSYB Hap is an exam-preparation platform we built for ÖSYB candidates. Bite-size flashcards, a question bank, note-taking and profile/progress tracking come together in a single app.",
-        "Built on Next.js as our own product, it demonstrates content organization and learning-experience design in the edtech space."
       ]
     }
   },
