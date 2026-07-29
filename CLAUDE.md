@@ -57,38 +57,38 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 > **Vercel'de `NEXT_PUBLIC_SITE_URL` ayarlanmali** — yoksa sitemap/canonical/OG URL'leri
 > localhost veya deploy URL'i olarak uretilir.
 
-### Sprint 2 tamamlandi (2026-07-29) — Neon + Drizzle + icerik gocu
+### Sprint 2 GERI ALINDI (2026-07-29) — Neon kullanilmayacak
 
-Kod tarafi hazir; **Neon projesi acilip `DATABASE_URL` girilmesi bekleniyor**
-(adimlar: `piton-docs/neon-setup.md`).
+Panel kurulmayinca Neon'un tek mesru kullanimi iletisim formu lead'leri kaliyordu;
+onlar da Resend ile dogrudan e-postaya gidecek. Ikinci bir depo bakim yuku olusturmuyor.
 
-- **Sema**: `src/lib/db/schema.ts` — 8 tablo. Icerik ve ceviri ayristirilmis
-  (`projects` / `project_translations`, `services` / `service_translations`);
-  ceviri satirlarinda `status` alani var (`missing` | `draft` | `done`)
-- **Migration**: `drizzle/0000_initial_schema.sql` uretildi
-- **Icerik erisim katmani**: `src/lib/content/` — `CONTENT_SOURCE=static|db` bayragi ile
-  iki kaynak arasinda aninda gecis. Sayfalar henuz rewire edilmedi (Sprint 4).
-- **Script'ler**: `content:migrate` (idempotent goc, `--dry` destekli),
-  `content:export` (DB → data.ts, acil durum valfi), `content:check` (statik ↔ DB denklik)
-- **Ceviri borcu kapatildi**: goc script'i `stories.cyprokey` ve `stories.salih-defterali`
-  cevirilerinin **hicbir dilde** olmadigini ortaya cikardi (bu sayfalar en/ru'da Turkce
-  gorunuyordu). 3 dilde de eklendi — artik 0 eksik ceviri.
-- `supabase/` dizini kaldirildi (hic kullanilmamisti, git gecmisinde duruyor)
-- Build: 506 statik sayfa, 0 tip hatasi, 0 lint hatasi
+Kaldirilanlar: `src/lib/db/`, `src/lib/content/`, `drizzle/`, `drizzle.config.ts`,
+`scripts/migrate-content.ts`, `scripts/export-content.ts`,
+drizzle-orm / drizzle-kit / @neondatabase/serverless bagimliliklari.
+Kod git gecmisinde `61b0d2a` commit'inde duruyor.
 
-### Sprint 3 GERI ALINDI (2026-07-29) — admin panel kurulmayacak
+**Korunan**: `pnpm content:check` → `scripts/check-translations.ts`.
+Artik tamamen statik calisiyor (data.ts + messages/*.json). Iki eksik story
+cevirisini bulan seydi; yeni icerik ekledikten sonra calistirin.
+Eksik ceviri varsa 1 ile cikar — CI'a baglanabilir.
 
-Karar: tek kullanicili bir site icin auth + oturum + CRUD tasimak gereksiz yuk.
-Icerik duzenlemesi dogrudan kod uzerinden yapiliyor.
+### Gorsel hatasi duzeltildi (2026-07-29)
 
-Kaldirilanlar: `src/app/admin/`, `src/lib/auth/`, `src/lib/audit.ts`,
-`scripts/create-admin.ts`, next-auth ve bcryptjs bagimliliklari,
-semadan `admin_users` + `audit_log` tablolari.
-Kod git gecmisinde `5cd315c` commit'inde duruyor — fikir degisirse geri alinabilir.
+`public/assets/optimized/` gitignore'daydi ve `src/lib/media.ts` oraya isaret ediyordu.
+10 dosya (876 KB) repoya hic girmiyordu; **62 proje sayfasinin 35'i** production'da
+hero gorseli olmadan yayindaydi (29 preview'siz work + 6 story), ayrica /projeler
+hero arka plani, reel ve case-study sahneleri.
 
-Middleware matcher'i **genis haliyle korundu** (`/((?!api|_next|_vercel|.*\\..*).*)`)
-— eski dar matcher, locale oneki olmayan yeni bir rota eklendiginde onu sessizce
-kapsam disinda birakiyordu.
+Cozum: dosyalar repoya alindi. Blob bu olcek icin (876 KB) gereksiz karmasiklik olurdu.
+Blob store kurulu duruyor — portfolyo buyudukce gercekten buyuk varliklar icin kullanilacak.
+
+## Mimari — guncel
+
+Site **tamamen statik**. Veritabani yok, auth yok, panel yok.
+- Icerik: `src/lib/data.ts` + `src/messages/{tr,en,ru}.json` (elle duzenlenir)
+- Blog: `content/blog/{tr,en,ru}/*.mdx`
+- Gorseller: `public/assets/`
+- Tek dinamik parca (planlanan): iletisim formu → Resend e-posta
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
