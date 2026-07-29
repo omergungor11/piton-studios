@@ -239,8 +239,13 @@ _DB bağımlılığı yok, tek başına deploy edilebilir._
 
 ---
 
-### Sprint 2 — Veri Temeli: Neon + Şema + Göç
-_~4 gün_
+### Sprint 2 — Veri Temeli: Neon + Şema + Göç ✅ KOD TAMAMLANDI (2026-07-29)
+_Neon projesi açılıp `DATABASE_URL` girilmesi bekleniyor — `piton-docs/neon-setup.md`_
+
+> Göç script'i bir çeviri boşluğu ortaya çıkardı: `stories.cyprokey` ve
+> `stories.salih-defterali` **hiçbir dilde** çevrilmemişti; `/en/` ve `/ru/` sayfaları
+> Türkçe içerik gösteriyordu. `CLAUDE.md` "çeviriler tamam" diyordu — bu iddia `works`
+> için doğru, `stories` için değildi. 3 dilde de eklendi, eksik çeviri sayısı 0.
 
 | # | İş | Çıktı |
 |---|---|---|

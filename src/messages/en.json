@@ -2352,6 +2352,24 @@
         "Mobile-responsive design and fast load times ensured passengers could easily book transfers anytime."
       ],
       "role": "Design / Development"
+    },
+    "cyprokey": {
+      "title": "Cyprokey",
+      "sub": "Cyprus real estate platform.",
+      "body": [
+        "For Cyprokey we designed a modern property platform for the Northern Cyprus real estate market, bringing buyers and sellers together through listing management, advanced filtering and map integration.",
+        "SEO optimisation and a user-friendly interface turned it into a strong digital presence for property search."
+      ],
+      "role": "Design / Development"
+    },
+    "salih-defterali": {
+      "title": "Salih Defterali",
+      "sub": "Personal portfolio and workstation site.",
+      "body": [
+        "We designed a personal portfolio and workspace site for Salih Defterali — a minimal, striking digital presence showcasing projects, skills and professional experience.",
+        "Clean typography, fluid animation and responsive layout were used to create a confident first impression."
+      ],
+      "role": "Design / Development"
     }
   }
 }

@@ -57,7 +57,27 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 > **Vercel'de `NEXT_PUBLIC_SITE_URL` ayarlanmali** — yoksa sitemap/canonical/OG URL'leri
 > localhost veya deploy URL'i olarak uretilir.
 
-**Siradaki**: Sprint 2 — Neon Postgres + Drizzle semasi + icerik gocu.
+### Sprint 2 tamamlandi (2026-07-29) — Neon + Drizzle + icerik gocu
+
+Kod tarafi hazir; **Neon projesi acilip `DATABASE_URL` girilmesi bekleniyor**
+(adimlar: `piton-docs/neon-setup.md`).
+
+- **Sema**: `src/lib/db/schema.ts` — 8 tablo. Icerik ve ceviri ayristirilmis
+  (`projects` / `project_translations`, `services` / `service_translations`);
+  ceviri satirlarinda `status` alani var (`missing` | `draft` | `done`)
+- **Migration**: `drizzle/0000_initial_schema.sql` uretildi
+- **Icerik erisim katmani**: `src/lib/content/` — `CONTENT_SOURCE=static|db` bayragi ile
+  iki kaynak arasinda aninda gecis. Sayfalar henuz rewire edilmedi (Sprint 4).
+- **Script'ler**: `content:migrate` (idempotent goc, `--dry` destekli),
+  `content:export` (DB → data.ts, acil durum valfi), `content:check` (statik ↔ DB denklik)
+- **Ceviri borcu kapatildi**: goc script'i `stories.cyprokey` ve `stories.salih-defterali`
+  cevirilerinin **hicbir dilde** olmadigini ortaya cikardi (bu sayfalar en/ru'da Turkce
+  gorunuyordu). 3 dilde de eklendi — artik 0 eksik ceviri.
+- `supabase/` dizini kaldirildi (hic kullanilmamisti, git gecmisinde duruyor)
+- Build: 506 statik sayfa, 0 tip hatasi, 0 lint hatasi
+
+**Siradaki**: Sprint 3 — Auth.js + admin iskeleti. Dikkat: `src/middleware.ts` matcher'i
+`/admin`'i kapsamiyor, auth guard eklenirken duzeltilmeli.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
