@@ -5,14 +5,19 @@ import { useEffect, useRef } from 'react';
 /**
  * Arka planda sayfa boyunca surunen yilanlar.
  *
- * Uc yilan farkli yukseklik, olcek ve yonde duruyor. Kare animasyonu CSS
- * sprite ile (6 kare, steps(6)); yatay konum kaydirma ilerlemesine bagli —
- * asagi indikce yilanlar yana suzuluyor. Her yilanin parallaks katsayisi
- * farkli, boylece derinlik hissi olusuyor.
+ * Hareketin tamami kaydirmaya bagli — hicbiri kendi kendine oynamiyor:
+ *  - yatay konum kaydirma ilerlemesiyle suzuluyor (parallaks)
+ *  - govde karesi de kaydirma miktarindan hesaplaniyor, durunca yilan da donuyor
+ *
+ * Kare ve konum React state'i yerine dogrudan DOM'a CSS degiskeni olarak
+ * yaziliyor; boylece scroll basina yeniden render olmuyor.
  *
  * Dekoratif: `aria-hidden`, tiklama gecirmez, 1000px altinda ve hareket
  * azaltma tercihinde tamamen kapali (CSS tarafinda).
  */
+
+/** Sprite'taki kare sayisi */
+const FRAMES = 6;
 
 type Snake = {
   /** Sayfa yuksekligine gore dikey konum (%) */
@@ -25,23 +30,25 @@ type Snake = {
   drift: number;
   /** true ise sola bakar (gorsel yatay cevrilir) */
   flip: boolean;
-  /** Kare dongusu suresi (sn) — hepsi ayni ritimde olmasin */
-  cycle: number;
+  /** Bir kare ilerlemek icin gereken kaydirma (px) — buyuk deger daha tembel govde */
+  pxPerFrame: number;
   opacity: number;
   /** Alan derinligi bulanikligi (px) — yakin plandaki yilan hafif odak disi */
   blur?: number;
 };
 
 const SNAKES: Snake[] = [
-  // Uzak plan — kucuk, yavas kayar
-  { top: 15, width: 30, x0: -34, drift: 70, flip: false, cycle: 1.15, opacity: 0.18 },
-  { top: 44, width: 24, x0: 104, drift: -66, flip: true, cycle: 1.35, opacity: 0.14 },
+  // Orta plan — biraz one alindi
+  { top: 15, width: 48, x0: -52, drift: 100, flip: false, pxPerFrame: 78, opacity: 0.21, blur: 1 },
+  // Uzak plan — kucuk, en yavas kayan
+  { top: 44, width: 24, x0: 104, drift: -66, flip: true, pxPerFrame: 62, opacity: 0.14 },
   // Yakin plan — neredeyse ekran genisliginde, en hizli kayan, hafif odak disi
-  { top: 70, width: 96, x0: -108, drift: 168, flip: false, cycle: 1.05, opacity: 0.24, blur: 3 },
+  { top: 70, width: 96, x0: -108, drift: 168, flip: false, pxPerFrame: 112, opacity: 0.24, blur: 3 },
 ];
 
 export default function SnakeTrail() {
   const ref = useRef<HTMLDivElement | null>(null);
+  const snakeRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
     const el = ref.current;
@@ -51,10 +58,20 @@ export default function SnakeTrail() {
     let raf = 0;
     const update = () => {
       raf = 0;
+      const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       // 0-1 arasi kaydirma ilerlemesi; CSS bunu her yilanin drift'iyle carpiyor
-      const p = max > 0 ? window.scrollY / max : 0;
-      el.style.setProperty('--p', p.toFixed(4));
+      el.style.setProperty('--p', (max > 0 ? y / max : 0).toFixed(4));
+
+      // Govde karesi: asagi kaydirinca ilerler, yukari kaydirinca geri sarar
+      for (let i = 0; i < SNAKES.length; i++) {
+        const node = snakeRefs.current[i];
+        if (!node) continue;
+        node.style.setProperty(
+          '--frame',
+          String(Math.floor(y / SNAKES[i].pxPerFrame) % FRAMES)
+        );
+      }
     };
     const onScroll = () => {
       // rAF ile bogulur — scroll basina tek yazma
@@ -77,6 +94,9 @@ export default function SnakeTrail() {
         <span
           key={i}
           className="snake"
+          ref={(node) => {
+            snakeRefs.current[i] = node;
+          }}
           style={
             {
               '--top': `${s.top}%`,
@@ -84,7 +104,6 @@ export default function SnakeTrail() {
               '--x0': `${s.x0}vw`,
               '--drift': `${s.drift}vw`,
               '--sx': s.flip ? -1 : 1,
-              '--cycle': `${s.cycle}s`,
               '--o': s.opacity,
               '--blur': `${s.blur ?? 0}px`,
             } as React.CSSProperties

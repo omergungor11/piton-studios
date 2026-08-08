@@ -4856,12 +4856,13 @@ body.is-snake-dragging {
   left: 0;
   width: var(--w);
   aspect-ratio: 1200 / 225;
-  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat 0 0;
+  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat;
   background-size: 100% 600%;
   opacity: var(--o);
   /* Yatay konum kaydirma ilerlemesine bagli; --sx yon cevirme (-1 sola bakar) */
   transform: translateX(calc(var(--x0) + var(--p) * var(--drift))) scaleX(var(--sx));
-  animation: snake-crawl var(--cycle) steps(6) infinite;
+  /* Kare zamana degil kaydirmaya bagli: --frame (0-5), her kare 20% asagi */
+  background-position: 0 calc(var(--frame, 0) * 20%);
   /* Yakin plandaki yilan hafif odak disi — derinlik hissini bu tasiyor */
   filter: blur(var(--blur, 0px));
   will-change: transform;
