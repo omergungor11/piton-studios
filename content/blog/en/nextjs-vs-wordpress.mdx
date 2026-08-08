@@ -1,0 +1,189 @@
+---
+title: "Next.js or WordPress: a decision matrix for corporate sites"
+description: "The real difference between the two is not speed, it is the ownership model. A decision matrix, a three-year cost comparison, the maintenance burden, and which project suits which."
+date: 2026-08-08
+tags: ["next.js", "wordpress", "web design", "performance"]
+author: "Piton Studios"
+draft: false
+translationKey: nextjs-vs-wordpress
+faq:
+  - q: "Is Next.js always better than WordPress?"
+    a: "No. For sites whose content is updated daily by a non-technical team, on a limited budget and with a standard structure, WordPress is still the right choice. Next.js pulls ahead on projects with custom business logic, a real performance target, multiple languages, or a path toward becoming a product. The question is not which is better, but which side your project falls on."
+  - q: "My WordPress site is slow — will moving to Next.js fix it?"
+    a: "Usually yes, but the reason is architecture, not technology. WordPress runs PHP and hits the database on every request; a statically generated Next.js page is served from a CDN as finished HTML. You can capture part of the same gain on WordPress with full-page caching and plugin cleanup — a migration decided on speed alone is an expensive fix."
+  - q: "Who updates content on Next.js if there is no admin panel?"
+    a: "Three options: content lives in the repository and a developer updates it (cheapest, least maintenance), a headless CMS is connected (Sanity, Contentful, Payload), or WordPress stays behind the scenes purely as a content API. All three work; the choice depends on update frequency."
+  - q: "How long does migration take, and will it hurt SEO?"
+    a: "Typically 4-8 weeks for a mid-sized corporate site. SEO loss is avoidable if the URL structure is preserved, 301 redirects are in place and metadata is carried over one-to-one. What causes damage is not the change of technology but unplanned URL changes."
+  - q: "How big is the security difference?"
+    a: "On a statically generated site there is no running server side and no database, so the classic attack surface is close to nil. On WordPress, security is ongoing maintenance tied to keeping core and plugins current. That shows up as a visible line item in a three-year total."
+---
+
+The "Next.js or WordPress" debate is usually argued on speed. The real difference between the two is
+not performance but the **ownership model**: WordPress hands you a finished system and the
+responsibility of keeping it current; Next.js hands you a blank page and full control. The right
+choice depends on which of those two responsibilities your team can carry.
+
+This article turns that decision into something measurable rather than emotional.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "The difference comes from architecture, not speed: WordPress runs on every request, a static Next.js page is already built.",
+    "WordPress is still right for projects with frequent content updates, a standard structure and a limited budget.",
+    "Next.js pulls ahead with custom business logic, multiple languages, performance targets and a product roadmap.",
+    "In a three-year total the deciding line item is not development but security and plugin maintenance.",
+    "What breaks SEO in a migration is not the technology change but unplanned URL changes.",
+  ]}
+/>
+
+## What the two systems actually do
+
+### WordPress: built on request
+
+When a visitor opens a page, PHP runs, a handful of database queries fire, and the theme and plugins
+assemble the HTML then and there. That brings flexibility — anything you change in the panel is live
+instantly — but every request has a cost and every plugin is a risk.
+
+### Next.js: built at build time
+
+The page is generated once when the code is deployed and placed on a CDN. When the visitor arrives,
+nothing runs; a finished file is served. Pages that need a database are the exception and chosen
+deliberately. We covered the performance side of this approach in
+[how to build a fast website](/en/blog/how-to-build-a-fast-website).
+
+<Callout type="info" title="This is not a takedown piece">
+  Our portfolio contains both. [EKH Yapı](/en/projects/ekh-yapi) and
+  [Ambalaj Cini](/en/projects/ambalaj-cini) are WordPress-based;
+  [Nexos Investment](/en/projects/nexos-investment) was built from scratch in Next.js. The project's
+  needs decided, not our preference.
+</Callout>
+
+## The decision matrix
+
+Read each row against your own project. Whichever column holds the majority is your answer.
+
+| Criterion | Favours WordPress | Favours Next.js |
+|---|---|---|
+| Content update frequency | Daily, non-technical team | Monthly or rarely |
+| Page structure | Standard corporate / blog | Custom flows, calculations, business logic |
+| Number of languages | Single | 2+, hreflang required |
+| Performance target | "Fast enough" | Measured budget, Core Web Vitals target |
+| Integrations | A plugin already exists | Custom API, CRM, ERP |
+| Budget | Low up front | Medium / high up front |
+| Maintenance capacity | Agency or retainer in place | Minimum maintenance wanted |
+| 3+ year outlook | Site stays as it is | Productisation, panel, new modules |
+
+## Where the performance difference comes from
+
+The chart below is not a measured benchmark but a **schematic comparison of typical scenarios**. Real
+numbers vary widely with the theme, plugin count, hosting and caching setup.
+
+<BarChart
+  title="Typical first-load scenarios (schematic)"
+  caption="Server response plus first meaningful content, milliseconds. Not a measurement; it shows how these setups typically behave."
+  unit=" ms"
+  max={3000}
+  data={[
+    { label: "Static Next.js (CDN)", value: 450, note: "Finished HTML", highlight: true },
+    { label: "WordPress + full-page cache", value: 900, note: "On cache hit" },
+    { label: "WordPress + lightweight theme", value: 1600, note: "Uncached" },
+    { label: "WordPress + page builder", value: 2800, note: "Plugin-heavy install" },
+  ]}
+/>
+
+Note the second row. **A well-configured WordPress site beats a badly built Next.js site.** No
+technology guarantees performance on its own; what guarantees it is sticking to a performance budget.
+
+## Three-year total cost
+
+The first invoice usually favours WordPress. The three-year total often does not.
+
+<TrendChart
+  title="Three-year cumulative cost of ownership (scenario)"
+  caption="Cumulative totals in thousands of euros, assuming €6,000 for WordPress and €12,000 for Next.js up front. Real figures vary with scope."
+  unit="k"
+  max={24}
+  labels={["Launch", "Year 1", "Year 2", "Year 3"]}
+  series={[
+    { name: "Next.js (static)", points: [12, 13.4, 14.8, 16.2] },
+    { name: "WordPress (plugin-based)", points: [6, 10.2, 14.4, 18.6], muted: true },
+  ]}
+/>
+
+What opens the gap is not development but **maintenance**: plugin and core updates, fixes after
+incompatibilities, security incidents and hosting. A full breakdown of those lines is in
+[corporate website cost](/en/blog/corporate-website-cost).
+
+<StatGrid
+  items={[
+    { value: "0", label: "Running server side on a static site", note: "Attack surface" },
+    { value: "Monthly", label: "Plugin and core update cadence", note: "WordPress upkeep" },
+    { value: "3-8 wks", label: "Typical migration time", note: "Mid-sized site" },
+  ]}
+/>
+
+## Who manages content on Next.js
+
+This is the most common question when leaving WordPress, and it has three valid answers.
+
+| Approach | Suits | Cost | Limit |
+|---|---|---|---|
+| Content in the repository (MDX / TS) | A few updates a month, developer close by | Lowest | No panel, needs a developer |
+| Headless CMS (Sanity, Payload etc.) | A marketing team publishing regularly | Medium + subscription | Another service dependency |
+| Headless WordPress | Existing WordPress habits worth keeping | Medium | Two systems to maintain |
+
+This site uses the first approach: content in files, no database. Everything including this article
+lives in the repository and every publication is a commit. For a corporate site making a few updates
+a month, that is the cheapest model — it removes panel maintenance entirely.
+
+## When to stay on WordPress
+
+1. **The marketing team updates content daily** and there is no budget for a headless CMS.
+2. **The site has a standard structure** — corporate brochure, blog, simple catalogue.
+3. **The current site works and the complaint is not performance.** Replacing a working system for a
+   technology trend is the most expensive kind of decision.
+4. **The budget is one-off and limited.** Launching lean and growing later is a legitimate strategy.
+
+## When to move to Next.js
+
+1. **There is custom business logic** — calculations, role-based access, automated document
+   generation. Meeting that need with plugins makes the system fragile.
+2. **You need a multilingual structure.** In WordPress, languages are a plugin layer; in Next.js they
+   are part of the routing system. Details:
+   [building a multilingual website](/en/blog/multilingual-website-hreflang-i18n).
+3. **Performance is a measured target.** If Core Web Vitals go into the contract, static generation
+   is the most predictable route.
+4. **The site will become a product.** If a panel, user accounts and APIs are on the roadmap, laying
+   the right foundation now is cheaper. We cover that in our
+   [web application service](/en/services/web-app).
+
+## Migrating without breaking SEO
+
+<Callout type="warn" title="Get the order wrong and the traffic loss can be permanent">
+  Almost all traffic lost in a migration comes from three mistakes: the URL structure changing,
+  301 redirects being incomplete, and metadata not being carried over. All three are plannable.
+</Callout>
+
+| Step | Action | Check |
+|---|---|---|
+| 1 | Inventory every existing URL | Sitemap + Search Console export |
+| 2 | New URL mapping table | A 301 for every changed URL |
+| 3 | Carry over title, description, canonical | Page-by-page comparison |
+| 4 | Rebuild structured data | Schema validation |
+| 5 | Monitor for 30 days after launch | Rankings and crawl errors |
+
+Step four is often skipped: on WordPress the schema usually came from an SEO plugin and disappears
+with the migration. We laid out how to rebuild it as a table in
+[the SEO to GEO article](/en/blog/search-visibility-in-the-ai-era-seo-to-geo).
+
+## Conclusion
+
+The right question is not "which is better" but **"what will this site be in three years"**. If it
+stays the same and content changes often, WordPress is a reasonable call. If it will grow, gain
+custom functionality, go multilingual or have its performance measured, Next.js is cheaper from the
+start.
+
+If you are not sure which side your project falls on, let us review your current site together —
+write via the [contact page](/en/contact). Work we have done with both technologies is on the
+[projects page](/en/projects).

@@ -1,0 +1,210 @@
+---
+title: "E-commerce conversion rate optimisation: measuring and fixing the funnel"
+description: "How to grow revenue without growing traffic. Measuring funnel steps, finding drop-off points, prioritising tests, and the 12 improvements that actually work."
+date: 2026-08-06
+tags: ["e-commerce", "conversion", "performance"]
+author: "Piton Studios"
+draft: false
+translationKey: ecommerce-cro
+faq:
+  - q: "What is a good conversion rate?"
+    a: "It varies so much by sector, traffic source and basket size that a single target number is misleading. The comparison that matters is not an external benchmark but your own history: what happened versus last quarter on the same traffic source. Instead of fixating on the absolute number, look at which funnel step you are losing people on."
+  - q: "Should I increase traffic first or fix conversion?"
+    a: "Almost always conversion first. Lifting conversion from 1% to 1.5% produces the same revenue as increasing traffic by 50%, at far lower cost. And pouring ad budget into a leaking funnel only makes the loss bigger."
+  - q: "How much traffic do I need for an A/B test?"
+    a: "Roughly, with a low baseline conversion rate you need a few thousand conversions per test, which takes weeks for most small and mid-sized stores. Without that volume, qualitative methods (session recordings, user testing, exit surveys) and fixing obvious defects produce results faster than A/B testing."
+  - q: "How do I reduce cart abandonment?"
+    a: "The three most common causes are surprise shipping costs appearing at checkout, forced account creation, and long forms. All three are design decisions: show shipping cost on the product page, allow guest checkout, and cut form fields down to what is genuinely required."
+  - q: "Does site speed really affect conversion?"
+    a: "Yes, and most of all on mobile. A slow page does not only lose the impatient visitor; a delay at the payment step turns a completed order into an abandoned one. Speed is a prerequisite for conversion work — tests run before it is fixed produce noisy results."
+---
+
+Most e-commerce teams think about growth with one lever: more traffic. Yet growing revenue on the
+same number of visitors is usually shorter and cheaper. **Lifting conversion from 1% to 1.5% produces
+the same result as increasing traffic by 50%** — and requires no ad budget.
+
+This article covers how to measure the funnel, find the drop-off points, and prioritise the fixes.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Conversion rate is not one number; it is the step-to-step rates through the funnel.",
+    "Pouring ad budget into a leaking funnel magnifies the loss — funnel first, traffic second.",
+    "The three most common causes of cart abandonment are surprise shipping, forced signup and long forms.",
+    "Without enough traffic, qualitative methods and obvious-defect fixes beat A/B testing.",
+    "Speed is not a CRO tactic but a precondition; tests run before it is fixed are noisy.",
+  ]}
+/>
+
+## Conversion rate is not a single number
+
+"Our conversion rate is 1.2%" tells you nothing on its own. What matters is the transition rate at
+each funnel step — because only then can you see where the loss is.
+
+| Funnel step | What it measures | Typical cause of loss |
+|---|---|---|
+| Visit → product view | Category and search quality | Weak navigation, poor search |
+| Product → add to cart | Persuasiveness of the product page | Missing images, unclear stock, low trust |
+| Cart → checkout start | Cart transparency | Surprise shipping, hunting for coupons |
+| Checkout → order placed | Form and payment flow | Forced signup, long forms, error messages |
+| Order → repeat order | Delivery and aftercare | No communication, difficult returns |
+
+The chart below shows an example funnel. The numbers are **a scenario model, not a measurement**; you
+need to derive your own from your analytics.
+
+<BarChart
+  title="Example funnel: from 10,000 visits to orders (scenario)"
+  caption="Users remaining at each step. Not a measurement; a constructed distribution to illustrate where loss occurs."
+  max={10000}
+  data={[
+    { label: "Site entry", value: 10000 },
+    { label: "Product view", value: 4200, note: "58% lost" },
+    { label: "Add to cart", value: 980, note: "77% lost", highlight: true },
+    { label: "Checkout started", value: 520, note: "47% lost" },
+    { label: "Order completed", value: 310, note: "40% lost" },
+  ]}
+/>
+
+Most people looking at this table focus on the last step. Yet the largest absolute loss is at the
+second: of 4,200 people, only 980 add to cart. **Look at the number of people lost, not the
+percentage** — that is where the effort belongs.
+
+## Where to start: three sources
+
+### 1. Quantitative: analytics
+
+Set up the funnel report and view it **split by device**. If mobile converts at a third of desktop,
+the problem is not your product but the mobile experience. A traffic-source split is equally
+essential: paid and organic visitors do not travel the same funnel.
+
+### 2. Qualitative: session recordings and user testing
+
+Watching five people go through checkout usually tells you more than a month of A/B testing. What you
+are looking for is not the average but the **moment of friction**: the user who goes back, fills the
+same field twice, or stalls on the page.
+
+### 3. Direct: exit survey
+
+One question asked of the abandoning visitor — "what stopped you completing your order today?" —
+turns your list of guesses into a list of facts.
+
+<Callout type="tip" title="Measure first, guess second">
+  Most CRO efforts start with the team's favourite idea and end with data. Reverse the order: measure
+  for two weeks, then argue. Any improvement made without measurement is a change, not an improvement.
+</Callout>
+
+## Prioritising the fixes
+
+To decide what to do with limited time, a simple score is enough: **impact × confidence ÷ effort**.
+The chart below ranks common levers on that logic.
+
+<BarChart
+  title="Common CRO levers: impact-to-effort ratio"
+  caption="Subjective score out of 10 — based on the returns we have observed on our own e-commerce projects."
+  max={10}
+  data={[
+    { label: "Show shipping cost early", value: 9, note: "Low effort, high impact", highlight: true },
+    { label: "Enable guest checkout", value: 9, note: "Remove forced signup" },
+    { label: "Shorten the mobile checkout form", value: 8, note: "Halve the field count" },
+    { label: "Product imagery and video", value: 7, note: "Medium effort" },
+    { label: "Page speed optimisation", value: 7, note: "Effectively a precondition" },
+    { label: "Trust signals (returns, SSL, reviews)", value: 6, note: "Low effort" },
+    { label: "Colour and button tests", value: 2, note: "Most discussed, least effective" },
+  ]}
+/>
+
+The last row is deliberate: button-colour tests are the most popular and lowest-yield work in CRO.
+Testing button colours before removing a surprise shipping charge is painting the oars on a leaking
+boat.
+
+## Twelve improvements that actually work
+
+#### Product page
+
+1. **Show shipping cost and delivery time next to the price.** A charge that appears at checkout is
+   the leading cause of abandonment.
+2. **State stock status accurately.** Not "only 3 left" — the truth. False urgency destroys trust.
+3. **At least five images, ideally one showing scale.** Real-world size is the most asked question.
+4. **Put the returns policy on the product page.** One sentence, not a link to another page.
+
+#### Cart
+
+5. **Show subtotal, shipping and total separately.** No surprises.
+6. **Shrink the coupon field.** A large coupon box sends the couponless visitor off to hunt for one,
+   and they do not come back.
+7. **Keep "continue shopping" available after adding to cart.** Do not force the checkout path.
+
+#### Checkout
+
+8. **Allow guest checkout.** Account creation can be offered after the order.
+9. **Cut form fields to what is genuinely needed.** Every field is an abandonment risk.
+10. **Put error messages next to the field, in plain language.** Not "invalid input" but "Card number
+    must be 16 digits".
+11. **Use autocomplete on address fields.** The biggest time sink on mobile.
+
+#### General
+
+12. **Measure mobile speed and tie it to a budget.** We covered the method in
+    [how to build a fast website](/en/blog/how-to-build-a-fast-website).
+
+## The compounding effect of small gains
+
+A 10% improvement at one step looks trivial; the same gain across four steps changes revenue
+noticeably.
+
+<TrendChart
+  title="Cumulative effect of a 10% gain per step (scenario)"
+  caption="Monthly orders. Modelled from the example funnel above; not a measurement."
+  max={480}
+  labels={["Baseline", "1 step", "2 steps", "3 steps", "4 steps"]}
+  series={[
+    { name: "Monthly orders", points: [310, 341, 375, 413, 454] },
+    { name: "Baseline level", points: [310, 310, 310, 310, 310], muted: true },
+  ]}
+/>
+
+A 10% gain at four steps lifts orders by **46%** — with no single heroic change. That is the logic of
+CRO: not a big idea, but accumulated small corrections.
+
+<StatGrid
+  items={[
+    { value: "46%", label: "Total effect of 10% at four steps", note: "Compounding" },
+    { value: "€0", label: "Additional ad budget", note: "Same traffic" },
+    { value: "2 weeks", label: "Minimum measurement before deciding", note: "Baseline data" },
+  ]}
+/>
+
+## Thinking about traffic and conversion together
+
+CRO is not an alternative to ad management but a precondition for it. Once the funnel converts, the
+same ad budget produces more orders. On [Ambalaj Cini](/en/projects/ambalaj-cini) we ran the
+e-commerce build alongside [Google Ads and Meta campaigns](/en/services/google-ads); the 30% growth
+the company achieved came from both working at once.
+
+We often see the reverse too: ad spend rising, revenue flat. In that picture the problem is almost
+never the ads — it is the page the ads point to.
+
+## Measurement discipline
+
+| Rule | Why |
+|---|---|
+| At least 2 weeks of baseline before changing anything | Without a reference point, any claim of improvement is empty |
+| One major change at a time | With two changes you cannot tell which one worked |
+| Report mobile and desktop separately | The average hides the mobile problem |
+| Account for seasonality | Compare a campaign period against the same period last year |
+| Track profit per order, not revenue | Free shipping can raise conversion and lower profit |
+
+That last row matters most: not every change that raises conversion is profitable. Judge on
+contribution per order, not on revenue.
+
+## Conclusion
+
+Conversion optimisation is not about finding a magic button colour; it is about measuring where the
+funnel leaks and closing that hole. The order is fixed: **measure, find the largest absolute loss,
+make the low-effort fixes, measure again.** Once that loop is running, growth stops depending on ad
+budget.
+
+If you would like us to build your store's funnel report together, write via the
+[contact page](/en/contact). For the technical side see our
+[web application](/en/services/web-app) and [web design](/en/services/web-design) services, and for
+the technology choice read [Next.js or WordPress](/en/blog/nextjs-vs-wordpress).

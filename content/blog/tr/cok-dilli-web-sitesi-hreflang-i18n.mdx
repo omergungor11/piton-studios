@@ -1,0 +1,218 @@
+---
+title: "Çok dilli web sitesi kurmak: hreflang, i18n mimarisi ve içerik yönetimi"
+description: "İkinci dili eklemek çeviri işi değil mimari karardır. URL stratejisi, hreflang kurulumu, çeviri borcunu önleme ve çok dilli sitede SEO'yu bozan yedi hata."
+date: 2026-08-07
+tags: ["çok dilli", "seo", "i18n"]
+author: "Piton Studios"
+draft: false
+translationKey: multilingual-site
+faq:
+  - q: "Alt dizin mi, alt alan adı mı, ayrı alan adı mı?"
+    a: "Çoğu kurumsal site için alt dizin (site.com/tr/, site.com/en/) doğru seçimdir: tek alan adında otorite biriktirir, kurulumu en basittir ve hreflang'i en az hataya açık şekilde çalıştırır. Ayrı alan adları yalnızca her ülkede ayrı tüzel kişilik, ayrı fiyatlandırma ve ayrı ekip varsa mantıklıdır."
+  - q: "Otomatik çeviri kullanabilir miyim?"
+    a: "Ham makine çevirisini doğrudan yayınlamak, o dildeki görünürlüğünüze zarar verir; hem arama motorları hem dil modelleri düşük kaliteli çeviriyi ayırt eder. İşe yarayan model, makine çevirisini taslak olarak kullanıp anadil konuşuru bir editörden geçirmektir — maliyeti sıfırdan çeviriye göre belirgin düşüktür."
+  - q: "Her sayfayı her dile çevirmek zorunda mıyım?"
+    a: "Hayır ve çoğu zaman gerekmez. Hizmet, referans ve iletişim sayfaları her dilde olmalıdır; blog içeriği ise dile göre farklılaşabilir. Önemli olan, karşılığı olmayan sayfa için hreflang'de o dili listelememektir — var olmayan bir çeviriye işaret eden etiket hatadır."
+  - q: "hreflang'i yanlış kurduğumu nasıl anlarım?"
+    a: "Üç klasik belirti: Search Console'da dil hedefleme hataları, yanlış dildeki sayfanın aranan dilde listelenmesi ve iki dilin birbirini kanibalize etmesi. Teknik kontrol basittir — her sayfa kendisi dahil tüm dilleri listelemeli, etiketler karşılıklı olmalı ve bir x-default bulunmalıdır."
+  - q: "Çok dilli site bakımı ne kadar yük getirir?"
+    a: "Asıl yük çeviri değil, senkronizasyondur: bir dilde yapılan değişikliğin diğerlerine yansımaması zamanla çeviri borcu yaratır. Bunu önlemenin en ucuz yolu, eksik çevirileri build sırasında hata olarak raporlayan bir kontrol betiğidir."
+---
+
+İkinci dili eklemek çoğu ekipte "metinleri çevirtelim" işi olarak başlar ve altı ay sonra
+senkronize olmayan iki site hâline gelir. Oysa çok dillilik bir **mimari karardır**: URL yapısı,
+yönlendirme, içerik modeli ve yayın süreci baştan buna göre kurulmazsa, çeviri borcu birikir.
+
+Bu yazıda üç dilli bir siteyi ayakta tutan kararları — bu sitenin kendi kurulumu dahil — adım adım
+anlatıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Çok dillilik çeviri işi değil, URL ve içerik mimarisi kararıdır.",
+    "Kurumsal sitelerin çoğunda doğru URL stratejisi alt dizindir (site.com/tr/).",
+    "hreflang üç kuralla çalışır: karşılıklılık, kendini içerme, x-default.",
+    "Karşılığı olmayan bir sayfa için o dili hreflang'de listelemek hatadır.",
+    "Çeviri borcunu önleyen tek şey, eksikleri build'de hata veren otomatik kontroldür.",
+  ]}
+/>
+
+## Önce karar: hangi diller ve neden
+
+Dil eklemek bedava değildir. Her yeni dil; çeviri, editör kontrolü, güncelleme senkronizasyonu ve
+ölçüm yükü getirir. Bu yüzden liste "olsa iyi olur" ile değil, veriyle kurulmalıdır.
+
+| Sinyal | Nereden bakılır | Ne anlatır |
+|---|---|---|
+| Mevcut trafiğin dil dağılımı | Analitik — tarayıcı dili, ülke | Zaten gelen ama anlamayan kitle |
+| Arama hacmi | Hedef dildeki anahtar terimler | Pazar var mı |
+| Satış kaynağı | CRM / gelen talepler | Para hangi dilden geliyor |
+| Rakip durumu | Rakiplerin dil sayısı | Boşluk veya zorunluluk |
+| Operasyonel kapasite | O dilde cevap verecek kişi var mı | Talebi karşılayabilir misiniz |
+
+Son satır en çok atlanan ve en pahalıya patlayan. Rusça sayfa açıp gelen talebe Rusça cevap
+veremiyorsanız, kazandığınız şey hayal kırıklığıdır.
+
+<Callout type="info" title="Bizim kurulumumuz">
+  Bu site tr, en ve ru olmak üzere üç dilde yayında. Seçim rastgele değil: Türkiye ve KKTC pazarı
+  Türkçe, uluslararası müşteri İngilizce, Kuzey Kıbrıs'taki emlak ve turizm sektörü ise Rusça
+  konuşuyor. Üçünde de talebi karşılayabildiğimiz için üç dil var.
+</Callout>
+
+## URL stratejisi: üç seçenek, tek doğru cevap
+
+| Strateji | Örnek | Artı | Eksi |
+|---|---|---|---|
+| Alt dizin | `site.com/tr/hizmetler` | Tek alan adında otorite, en basit kurulum | Coğrafi hedefleme daha zayıf |
+| Alt alan adı | `tr.site.com/hizmetler` | Ayrı barındırma mümkün | Otorite bölünür, kurulum karmaşık |
+| Ayrı alan adı | `site.com.tr` | Güçlü yerel sinyal | Her alan adı sıfırdan otorite kurar |
+| Parametre | `site.com?lang=tr` | — | Taranabilirlik sorunlu, kullanmayın |
+
+Kurumsal sitelerin büyük çoğunluğu için cevap **alt dizindir**. Ayrı alan adı, yalnızca her ülkede
+ayrı tüzel kişilik, ayrı fiyat listesi ve ayrı ekip varsa gerekçelendirilebilir.
+
+### Slug'ları da çevirmek
+
+Alt dizin seçtiyseniz bir karar daha var: yol adları da çevrilsin mi? Bu sitede çevriliyor —
+`/tr/hizmetler`, `/en/services`, `/ru/services` — çünkü Türkçe arayan bir kullanıcı için Türkçe URL
+hem daha okunur hem hafif bir alaka sinyalidir.
+
+```ts
+// next-intl ile yol adı eşlemesi — dil değiştirici doğru karşılığa gider
+'/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
+'/projects': { tr: '/projeler',  en: '/projects', ru: '/projects' },
+```
+
+Dikkat: proje veya hizmet **slug'ını** çevirmek genelde gereksiz karmaşıklıktır. Segment adı
+(`/hizmetler`) çevrilir, kayıt kimliği (`/seo-geo`) sabit kalır.
+
+## hreflang: üç kural
+
+hreflang, arama motoruna "bu sayfanın şu dillerde karşılığı var" der. Yanlış kurulduğunda ya hiç
+çalışmaz ya da yanlış dili öne çıkarır. Üç kural yeterli:
+
+1. **Karşılıklılık.** A sayfası B'yi gösteriyorsa B de A'yı göstermelidir. Tek yönlü etiket yok
+   sayılır.
+2. **Kendini içerme.** Her sayfa kendi dilini de listelemelidir.
+3. **x-default.** Eşleşme bulunamadığında gidilecek sürüm belirtilmelidir.
+
+```html
+<link rel="alternate" hrefLang="tr" href="https://site.com/tr/hizmetler" />
+<link rel="alternate" hrefLang="en" href="https://site.com/en/services" />
+<link rel="alternate" hrefLang="ru" href="https://site.com/ru/services" />
+<link rel="alternate" hrefLang="x-default" href="https://site.com/tr/hizmetler" />
+```
+
+<Callout type="warn" title="En sık yapılan hata">
+  Bir blog yazısının yalnızca iki dilde karşılığı varken hreflang'de üç dilin de listelenmesi.
+  Var olmayan sayfaya işaret eden etiket, tüm grubun yok sayılmasına yol açabilir. Doğru davranış:
+  etiketleri gerçekten var olan çevirilerden üretmek.
+</Callout>
+
+Bu sitede blog yazıları `translationKey` alanıyla eşleşiyor ve hreflang **yalnızca gerçekten var
+olan diller** için üretiliyor. Aynı mantığın SEO tarafındaki karşılığını
+[SEO'dan GEO'ya yazısında](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo) anlattık.
+
+## Çeviri borcu: asıl maliyet burada
+
+Çok dilli sitelerin gerçek sorunu ilk çeviri değil, ikinci yıldır. Türkçe sayfa güncellenir, İngilizce
+kalır; yeni hizmet eklenir, Rusçası unutulur. Altı ay sonra üç farklı site olursunuz.
+
+<TrendChart
+  title="Çeviri borcunun birikimi: kontrollü ve kontrolsüz senaryo"
+  caption="Eksik veya güncelliğini yitirmiş çeviri sayısı. Senaryo modeli — ölçüm değil, kontrol betiği olan ve olmayan projelerde gözlemlediğimiz eğilim."
+  max={40}
+  labels={["Lansman", "3. ay", "6. ay", "12. ay", "18. ay"]}
+  series={[
+    { name: "Otomatik kontrol yok", points: [0, 6, 14, 27, 38], muted: true },
+    { name: "Build'de eksik çeviri hata veriyor", points: [0, 1, 2, 2, 3] },
+  ]}
+/>
+
+Çözüm karmaşık değil: **eksik çeviriyi yayına çıkmadan yakalayan bir kontrol.** Bu sitede
+`pnpm content:check` tam olarak bunu yapıyor — 210 içerik alanını üç dilde karşılaştırıyor ve eksik
+varsa çıkış kodu 1 veriyor. İlk çalıştırıldığında iki eksik çeviriyi bulan şey bu betikti.
+
+```bash
+$ pnpm content:check
+tr: works 49/49, stories 6/6, servicesList 15/15  ✓
+en: works 49/49, stories 6/6, servicesList 15/15  ✓
+ru: works 49/49, stories 6/6, servicesList 15/15  ✓
+Toplam kontrol edilen: 210 — Sorunlu: 0
+```
+
+## İçerik modeli: neyi çevirmeli
+
+Her şeyi çevirmek gerekmez ve genelde doğru da değildir.
+
+<BarChart
+  title="İçerik tiplerine göre çeviri önceliği"
+  caption="10 üzerinden öncelik — kurumsal sitelerde dönüşüme katkısına göre kendi değerlendirmemiz."
+  max={10}
+  data={[
+    { label: "Hizmet sayfaları", value: 10, note: "Her dilde zorunlu", highlight: true },
+    { label: "İletişim ve formlar", value: 10, note: "Hata mesajları dahil" },
+    { label: "Referans / proje sayfaları", value: 8, note: "Özet çeviri yeterli olabilir" },
+    { label: "Blog içeriği", value: 6, note: "Dile göre farklılaşabilir" },
+    { label: "Hukuki metinler", value: 5, note: "Yerel mevzuata göre" },
+  ]}
+/>
+
+Blog tarafında dikkat edilecek nokta şu: bir yazının her dilde karşılığı olmak zorunda değil, ama
+olan karşılıkların **birbirinin çevirisi** olması gerekir. Farklı içerikleri aynı `translationKey`
+altında eşleştirmek, hreflang'i yanlış bilgilendirir.
+
+## Sık yapılan yedi hata
+
+1. **Otomatik dil yönlendirmesi.** Tarayıcı diline göre zorla yönlendirme, tarayıcıların ve
+   kullanıcıların işini bozar. Dil seçimini önerin, dayatmayın.
+2. **Bayrak ikonuyla dil göstermek.** Bayrak ülkeyi temsil eder, dili değil. Almanca konuşan bir
+   Avusturyalı Alman bayrağına tıklamak zorunda kalmamalı.
+3. **Yalnızca ana sayfayı çevirmek.** İç sayfaları çevrilmemiş bir site, o dilde aramada
+   görünmez.
+4. **`lang` özniteliğini güncellememek.** `<html lang="tr">` her dilde değişmelidir — erişilebilirlik
+   ve ekran okuyucular buna bakar.
+5. **Meta veriyi çevirmeyi unutmak.** Başlık ve açıklama Türkçe kalmışsa, sayfa İngilizce olsa bile
+   arama sonucunda Türkçe görünür.
+6. **Tarih, para birimi ve sayı biçimini sabitlemek.** `1.500,00 ₺` ile `€1,500.00` aynı sayı
+   değildir; biçimlendirme dile göre yapılmalıdır.
+7. **Dil değiştiricinin ana sayfaya atması.** Bir hizmet sayfasındayken dil değiştiren kullanıcı,
+   aynı hizmetin diğer dildeki sayfasına gitmelidir.
+
+Yedincisi teknik olarak yol adı eşlemesi gerektirir — bu sitede
+[hizmet sayfaları](/tr/hizmetler) arasında dil değiştirdiğinizde aynı sayfada kalırsınız.
+
+## Ölçüm: dil bazında ayrı bakın
+
+Toplam trafik, çok dilli bir sitede yanıltıcı bir metriktir. Her dil ayrı bir pazardır ve ayrı
+raporlanmalıdır.
+
+<StatGrid
+  items={[
+    { value: "3", label: "Ayrı raporlanması gereken segment", note: "Her dil bir pazar" },
+    { value: "1", label: "Ortak dönüşüm tanımı", note: "Karşılaştırılabilirlik" },
+    { value: "x-default", label: "Eşleşmeyen ziyaretçinin gideceği yer", note: "Bilinçli seçilmeli" },
+  ]}
+/>
+
+Search Console'da her dil için ayrı filtre kurun, analitikte dil boyutunu birincil segment yapın.
+Bir dilin dönüşüm oranı diğerinin yarısıysa sorun çeviri kalitesinde ya da o dildeki teklif
+uyumundadır — toplamda bakarken bu görünmez.
+
+## Bir örnek
+
+[Nexos Investment](/tr/projeler/nexos-investment) projesinde çok dillilik sonradan eklenen bir
+katman değil, mimarinin parçasıydı: `next-intl` ile yönlendirme, ilan verisinden çok dilli otomatik
+teklif üretimi ve dile göre içerik yönetimi aynı sistemde kurgulandı.
+[Homes in Mediterranean](/tr/projeler/homes-in-mediterranean) ve
+[Arslan Estates](/tr/projeler/arslan-estates) gibi uluslararası kitleye hitap eden emlak
+projelerinde de aynı ihtiyaç öne çıkıyor.
+
+## Sonuç
+
+Çok dilli site kurmanın zor kısmı çeviri değil, **çevirinin zamanla senkron kalması**. Doğru URL
+stratejisi, kurallara uygun hreflang ve eksik çeviriyi build'de yakalayan bir kontrol — bu üçü
+kurulduğunda ikinci ve üçüncü dil bakım yükü değil, ek pazar olur.
+
+Kaç dille başlamanız gerektiğini konuşmak isterseniz [bize yazın](/tr/iletisim); teknik tarafı
+[SEO ve GEO hizmetimiz](/tr/hizmetler/seo-geo) kapsamında ele alıyoruz.

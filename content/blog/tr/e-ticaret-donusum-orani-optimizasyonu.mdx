@@ -1,0 +1,210 @@
+---
+title: "E-ticarette dönüşüm oranı optimizasyonu: huniyi ölçmek ve düzeltmek"
+description: "Trafiği artırmadan ciroyu büyütmenin yolu. Huni adımlarını ölçmek, terk noktalarını bulmak, testleri önceliklendirmek ve gerçekten işe yarayan 12 iyileştirme."
+date: 2026-08-06
+tags: ["e-ticaret", "dönüşüm", "performans"]
+author: "Piton Studios"
+draft: false
+translationKey: ecommerce-cro
+faq:
+  - q: "İyi bir dönüşüm oranı kaçtır?"
+    a: "Sektöre, trafik kaynağına ve sepet tutarına göre çok değişir; tek bir hedef sayı yanıltıcıdır. Anlamlı olan karşılaştırma dış kıyaslama değil, kendi geçmişinizdir: aynı trafik kaynağında geçen çeyreğe göre ne oldu. Mutlak sayıya takılmak yerine huninin hangi adımında kaybettiğinize bakın."
+  - q: "Önce trafik mi artırmalıyım, dönüşümü mü düzeltmeliyim?"
+    a: "Neredeyse her zaman önce dönüşüm. Dönüşüm oranını %1'den %1,5'e çıkarmak, trafiği %50 artırmakla aynı ciroyu verir ama maliyeti çok daha düşüktür. Ayrıca sızdıran bir huniye reklam bütçesi akıtmak, kaybı büyütür."
+  - q: "A/B testi için ne kadar trafik gerekir?"
+    a: "Kabaca, mevcut dönüşüm oranı düşük olduğunda test başına birkaç bin dönüşüm gerekir; çoğu KOBİ mağazasında bu haftalar sürer. Yeterli hacim yoksa A/B testi yerine nitel yöntemler (oturum kaydı, kullanıcı testi, terk anketi) ve bariz hataların düzeltilmesi daha hızlı sonuç verir."
+  - q: "Sepet terk oranını nasıl düşürürüm?"
+    a: "Terkin en yaygın üç sebebi, ödeme adımında beliren sürpriz kargo ücreti, zorunlu üyelik ve uzun formdur. Üçü de tasarım kararıdır: kargo bedelini ürün sayfasında gösterin, misafir alışverişine izin verin ve form alanlarını gerçekten gerekli olanlara indirin."
+  - q: "Site hızının dönüşüme etkisi gerçekten var mı?"
+    a: "Evet ve en çok mobilde. Yavaş yüklenen bir sayfa yalnızca sabırsız kullanıcıyı kaybetmez; ödeme adımında yaşanan gecikme, tamamlanmış bir siparişin iptaline dönüşür. Hız, dönüşüm çalışmasının ön koşuludur — düzeltilmeden yapılan testler gürültülü sonuç verir."
+---
+
+Çoğu e-ticaret ekibi büyümeyi tek bir kaldıraçla düşünür: daha fazla trafik. Oysa aynı ziyaretçi
+sayısıyla ciroyu büyütmenin yolu genelde daha kısa ve daha ucuzdur. **Dönüşüm oranını %1'den %1,5'e
+çıkarmak, trafiği %50 artırmakla aynı sonucu verir** — ve reklam bütçesi gerektirmez.
+
+Bu yazıda huniyi nasıl ölçeceğinizi, terk noktalarını nasıl bulacağınızı ve iyileştirmeleri nasıl
+önceliklendireceğinizi anlatıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Dönüşüm oranı tek bir sayı değil, huninin her adımındaki geçiş oranlarıdır.",
+    "Sızdıran huniye reklam bütçesi akıtmak kaybı büyütür — önce huni, sonra trafik.",
+    "Sepet terkinin en yaygın üç sebebi sürpriz kargo, zorunlu üyelik ve uzun formdur.",
+    "Yeterli trafik yoksa A/B testi değil, nitel yöntem ve bariz hata düzeltmesi işe yarar.",
+    "Hız bir CRO çalışması değil, ön koşuludur; düzeltilmeden yapılan testler gürültülüdür.",
+  ]}
+/>
+
+## Dönüşüm oranı tek bir sayı değildir
+
+"Dönüşüm oranımız %1,2" cümlesi tek başına hiçbir şey söylemez. Anlamlı olan, huninin her adımındaki
+geçiş oranıdır — çünkü kaybın nerede olduğunu ancak o zaman görürsünüz.
+
+| Huni adımı | Ölçülen | Tipik kayıp sebebi |
+|---|---|---|
+| Ziyaret → ürün görüntüleme | Kategori ve arama kalitesi | Zayıf navigasyon, kötü arama |
+| Ürün → sepete ekleme | Ürün sayfası ikna gücü | Eksik görsel, belirsiz stok, güven eksiği |
+| Sepet → ödeme başlangıcı | Sepet şeffaflığı | Sürpriz kargo, kupon arayışı |
+| Ödeme → sipariş tamamlama | Form ve ödeme akışı | Zorunlu üyelik, uzun form, hata mesajları |
+| Sipariş → tekrar sipariş | Teslimat ve satış sonrası | İletişimsizlik, iade zorluğu |
+
+Aşağıdaki grafik örnek bir huniyi gösteriyor. Rakamlar **ölçüm değil, tipik bir dağılımı temsil eden
+senaryo modelidir**; kendi sayılarınızı analitik aracınızdan çıkarmanız gerekir.
+
+<BarChart
+  title="Örnek huni: 10.000 ziyaretten siparişe (senaryo)"
+  caption="Adım adım kalan kullanıcı sayısı. Ölçüm değil; kayıp noktalarını göstermek için kurgulanmış tipik bir dağılım."
+  max={10000}
+  data={[
+    { label: "Siteye giriş", value: 10000 },
+    { label: "Ürün görüntüleme", value: 4200, note: "%58 kayıp" },
+    { label: "Sepete ekleme", value: 980, note: "%77 kayıp", highlight: true },
+    { label: "Ödemeye başlama", value: 520, note: "%47 kayıp" },
+    { label: "Sipariş tamamlama", value: 310, note: "%40 kayıp" },
+  ]}
+/>
+
+Bu tabloya bakan çoğu kişi son adıma odaklanır. Oysa en büyük mutlak kayıp ikinci adımda: 4.200
+kişiden 980'i sepete ekliyor. **Yüzdeye değil, kaybedilen kişi sayısına bakın** — çabanız oraya
+gitmeli.
+
+## Nereden başlanır: üç kaynak
+
+### 1. Nicel: analitik
+
+Huni raporunu kurun ve **cihaz kırılımıyla** bakın. Mobil dönüşüm oranı masaüstünün üçte biriyse
+sorun ürününüzde değil, mobil deneyimdedir. Trafik kaynağı kırılımı da şarttır: reklamdan gelen ile
+organik gelen aynı huniden geçmez.
+
+### 2. Nitel: oturum kayıtları ve kullanıcı testi
+
+Beş kişinin ödeme akışını izlemek, çoğu zaman bir aylık A/B testinden fazlasını söyler. Aradığınız
+şey ortalama değil, **takılma anı**: geri dönen, aynı alanı iki kez dolduran, sayfada duraklayan
+kullanıcı.
+
+### 3. Doğrudan: terk anketi
+
+Sepeti terk eden kullanıcıya sorulan tek soru — "bugün siparişi tamamlamanızı ne engelledi?" —
+tahmin listenizi gerçek listeye çevirir.
+
+<Callout type="tip" title="Ölçüm önce, tahmin sonra">
+  CRO çalışmalarının çoğu, ekibin en sevdiği fikirle başlayıp veriyle sonuçlanır. Sırayı ters
+  çevirin: iki hafta ölçün, sonra tartışın. Ölçüm olmadan yapılan her iyileştirme, iyileşme değil
+  değişikliktir.
+</Callout>
+
+## İyileştirmeleri önceliklendirmek
+
+Sınırlı zamanda hangisini yapacağınıza karar vermek için basit bir puanlama yeterli: **etki × güven ÷
+efor**. Aşağıdaki tablo tipik kaldıraçları bu mantıkla sıralıyor.
+
+<BarChart
+  title="Yaygın CRO kaldıraçları: etki / efor oranı"
+  caption="10 üzerinden öznel skor — kendi e-ticaret projelerimizde gözlemlediğimiz getiriye göre."
+  max={10}
+  data={[
+    { label: "Kargo bedelini erken göstermek", value: 9, note: "Düşük efor, yüksek etki", highlight: true },
+    { label: "Misafir alışverişi açmak", value: 9, note: "Zorunlu üyeliği kaldırın" },
+    { label: "Mobil ödeme formunu kısaltmak", value: 8, note: "Alan sayısını yarıya indirin" },
+    { label: "Ürün görseli ve video", value: 7, note: "Orta efor" },
+    { label: "Sayfa hızı optimizasyonu", value: 7, note: "Ön koşul niteliğinde" },
+    { label: "Güven unsurları (iade, SSL, yorum)", value: 6, note: "Düşük efor" },
+    { label: "Renk ve buton testleri", value: 2, note: "En çok konuşulan, en az etkili" },
+  ]}
+/>
+
+Son satır kasıtlı: buton rengi testleri CRO'nun en popüler ama en düşük getirili işidir. Sürpriz
+kargo ücretini kaldırmadan buton rengi test etmek, delik teknede kürek boyamaya benzer.
+
+## Gerçekten işe yarayan 12 iyileştirme
+
+#### Ürün sayfası
+
+1. **Kargo bedelini ve teslimat süresini fiyatın yanında gösterin.** Ödeme adımında beliren ücret,
+   terk sebeplerinin başında gelir.
+2. **Stok durumunu net yazın.** "Son 3 ürün" değil, doğru bilgi — yanlış aciliyet güveni bozar.
+3. **En az beş görsel, mümkünse ölçek gösteren bir kare.** Ürünün gerçek boyutu en sık sorulan şey.
+4. **İade koşulunu ürün sayfasına koyun.** Ayrı sayfaya link değil, bir cümle.
+
+#### Sepet
+
+5. **Sepette ara toplam, kargo ve toplam ayrı ayrı görünsün.** Sürpriz kalmasın.
+6. **Kupon alanını küçültün.** Büyük bir kupon kutusu, kuponu olmayan kullanıcıyı kupon aramaya
+   gönderir ve geri dönmez.
+7. **Sepete eklemeden sonra alışverişe devam yolunu açık bırakın.** Zorla ödemeye yönlendirmeyin.
+
+#### Ödeme
+
+8. **Misafir alışverişine izin verin.** Üyelik, siparişten sonra teklif edilebilir.
+9. **Form alanlarını gerçekten gerekli olanlara indirin.** Her alan bir terk riskidir.
+10. **Hata mesajlarını alanın yanında ve anlaşılır yazın.** "Geçersiz giriş" değil, "Kart numarası 16
+    haneli olmalı".
+11. **Adres alanlarında otomatik tamamlama kullanın.** Mobilde en çok zaman kaybettiren adım.
+
+#### Genel
+
+12. **Mobilde hızı ölçün ve bir bütçeye bağlayın.** Yöntemi
+    [hızlı web sitesi nasıl yapılır](/tr/blog/hizli-web-sitesi-nasil-yapilir) yazısında anlattık.
+
+## Küçük iyileşmelerin bileşik etkisi
+
+Tek bir adımda %10'luk iyileşme küçük görünür; huninin dört adımında aynı iyileşme ciroyu belirgin
+biçimde değiştirir.
+
+<TrendChart
+  title="Adım başına %10 iyileşmenin kümülatif etkisi (senaryo)"
+  caption="Aylık sipariş sayısı. Yukarıdaki örnek huniden türetilmiş model; ölçüm değildir."
+  max={480}
+  labels={["Başlangıç", "1 adım", "2 adım", "3 adım", "4 adım"]}
+  series={[
+    { name: "Aylık sipariş", points: [310, 341, 375, 413, 454] },
+    { name: "Başlangıç seviyesi", points: [310, 310, 310, 310, 310], muted: true },
+  ]}
+/>
+
+Dört adımda %10'ar iyileşme, sipariş sayısını **%46 artırıyor** — tek bir kahramanca değişiklik
+olmadan. CRO'nun mantığı budur: büyük fikir değil, biriken küçük düzeltmeler.
+
+<StatGrid
+  items={[
+    { value: "%46", label: "4 adımda %10'ar iyileşmenin toplam etkisi", note: "Bileşik" },
+    { value: "0 €", label: "Ek reklam bütçesi", note: "Aynı trafik" },
+    { value: "2 hafta", label: "Karar öncesi minimum ölçüm süresi", note: "Taban veri" },
+  ]}
+/>
+
+## Trafik ve dönüşümü birlikte düşünmek
+
+CRO, reklam yönetiminin alternatifi değil ön koşuludur. Dönüşen bir huniniz olduğunda aynı reklam
+bütçesi daha fazla sipariş getirir. [Ambalaj Cini](/tr/projeler/ambalaj-cini) projesinde e-ticaret
+altyapısı ile [Google Ads ve Meta kampanyalarını](/tr/hizmetler/google-ads) birlikte yürüttük;
+firmanın elde ettiği %30 büyüme, iki tarafın aynı anda çalışmasının sonucuydu.
+
+Tersini de sık görüyoruz: reklam harcaması artıyor, ciro artmıyor. Böyle bir tabloda sorun neredeyse
+her zaman reklamda değil, reklamın gönderdiği sayfadadır.
+
+## Ölçüm disiplini
+
+| Kural | Neden |
+|---|---|
+| Değişiklikten önce en az 2 hafta taban ölçüm | Karşılaştırma noktası olmadan iyileşme iddiası boştur |
+| Aynı anda tek büyük değişiklik | İki değişiklikten hangisinin işe yaradığı ayrıştırılamaz |
+| Mobil ve masaüstü ayrı raporlama | Ortalama, mobildeki sorunu gizler |
+| Sezonluk etkiyi hesaba katın | Kampanya dönemi, geçen yılın aynı dönemiyle karşılaştırılır |
+| Ciro değil, sipariş başına kâr | Kargo bedavası dönüşümü artırıp kârı düşürebilir |
+
+Son satır özellikle önemli: dönüşüm oranını artıran her değişiklik kârlı değildir. Kararı ciro
+üzerinden değil, sipariş başına katkı üzerinden verin.
+
+## Sonuç
+
+Dönüşüm optimizasyonu, sihirli bir buton rengi bulmak değil; huninin nerede sızdırdığını ölçüp o
+deliği kapatmaktır. Sıra bellidir: **ölç, en büyük mutlak kaybı bul, düşük eforlu düzeltmeleri yap,
+tekrar ölç.** Bu döngü kurulduğunda büyüme reklam bütçesine bağımlı olmaktan çıkar.
+
+Mağazanızın huni raporunu birlikte çıkarmak isterseniz [iletişim sayfasından](/tr/iletisim) yazın.
+Teknik altyapı tarafı için [web uygulaması](/tr/hizmetler/web-app) ve
+[web tasarım](/tr/hizmetler/web-design) hizmetlerimize, teknoloji seçimi için
+[Next.js mi WordPress mi](/tr/blog/nextjs-mi-wordpress-mi) yazısına bakabilirsiniz.

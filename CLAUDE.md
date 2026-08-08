@@ -25,7 +25,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 ## Mevcut Durum
 
-**Progress**: 31/31 task (%100) — Phase 5 (Icerik Uretimi) 2026-08-08'de tamamlandi.
+**Progress**: 33/33 task (%100) — Phase 5 (Icerik Uretimi) 2026-08-08'de tamamlandi.
 
 > `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
 > (Supabase kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
@@ -35,12 +35,15 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Projects → About → Contact (7 scene)
-- **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
+- **Nav**: Anasayfa `chrome.tsx`, ic sayfalar `page-shell.tsx` — **iki ayri component**, nav
+  icerikleri elle esitleniyor. Menuye link eklerken ikisini birden guncelleyin (masaustu nav +
+  mobil menu dizisi). 2026-08-08: Blog linki yalnizca `page-shell.tsx`'te vardi, `chrome.tsx`'e
+  eklendi
 - **Videolar**: YOK — `videos/` (289 MB) 2026-07-28'de silindi, kodda tek referansi yoktu
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
 - **Blog**: MDX tabanli, `content/blog/{tr,en,ru}/*.mdx` — liste, yazi, etiket sayfalari + RSS.
-  5 yazi × 3 dil. Yazi sayfasinda otomatik icindekiler tablosu (`blog-toc.tsx`), frontmatter
+  8 yazi × 3 dil. Yazi sayfasinda otomatik icindekiler tablosu (`blog-toc.tsx`), frontmatter
   `faq` alani (SSS bolumu + FAQPage JSON-LD) ve MDX component'leri var:
   `BarChart`, `TrendChart`, `StatGrid`, `Callout`, `KeyTakeaways`
   (`src/components/mdx/mdx-components.tsx`).

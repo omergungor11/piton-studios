@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-08-08 (2)
+
+### Added
+- **3 uzun form blog yazisi daha, 3 dilde** (9 MDX): Next.js mi WordPress mi karar matrisi
+  (`nextjs-vs-wordpress`), cok dilli site / hreflang / i18n mimarisi (`multilingual-site`),
+  e-ticaret donusum orani optimizasyonu (`ecommerce-cro`). Blog toplam 8 yazi × 3 dil.
+  Yazilar arasi capraz linklerle birlikte icerik ici toplam 81 dogrulanmis ic link
+
+### Fixed
+- **Anasayfa nav'inda Blog linki yoktu**: site iki ayri nav component'i kullaniyor
+  (`chrome.tsx` anasayfa, `page-shell.tsx` ic sayfalar) ve Blog yalnizca ikincisinde vardi.
+  `chrome.tsx`'in hem masaustu nav'ina hem mobil menu dizisine eklendi (tr/en/ru)
+
+### Changed
+- Statik sayfa sayisi 495 → 525
+
 ## 2026-08-08
 
 ### Added
