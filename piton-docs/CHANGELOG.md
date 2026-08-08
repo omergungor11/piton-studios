@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-08-08 (9)
+
+### Added
+- **Yilan scrollbar** (`components/snake-scroll.tsx`) — tarayici cubugunun yerine gecen
+  sag kenar rayi. Gosterge degil gercek scrollbar: yilan surukleniyor, raya tiklaninca
+  oraya atliyor. Kok layout'a bagli, her sayfada tek ornek.
+  Sprite yatay cizilmis (bas sagda); 90 derece cevrilince bas asagi bakiyor — asagi
+  kaydirirken gittigi yone bakmis oluyor. Merkez etrafinda donunce gorunur ust kenar
+  ~61px yukari tasiyordu, `--center-fix` ile geri eklendi; ilerleme 0→1 arasinda
+  yilan rayin tam ustunden tam altina iniyor
+- Sayfa kaydirilamayacak kadar kisaysa katman hic render edilmiyor.
+  Mobilde ve `prefers-reduced-motion`'da kapali, oralarda native davranis korunuyor
+
+> Tarayici cubugunu kosulsuz gizlemek JS calismadiginda kullaniciyi gostergesiz
+> birakirdi. Gizleme, bilesenin kok elemana biraktigi `has-snake-scroll` isaretine
+> bagli — yilan devrede degilse varsayilan cubuk geri geliyor.
+>
+> Ayar dugmeleri: `snake-scroll.tsx` icindeki `THUMB` sabiti (yilan boyu) ve
+> `globals.css`'teki `.snake-scroll` genisligi (ray alani).
+
+### Fixed
+- Preloader yilani geri alindi — bir onceki commit'te yanlislikla kaldirilmisti
+  (kesilen mesajin ilk yarisina gore davranildi, kullanici o kismi cikarmisti)
+
 ## 2026-08-08 (8)
 
 ### Added

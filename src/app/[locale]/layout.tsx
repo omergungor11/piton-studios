@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import Preloader from '@/components/preloader';
+import SnakeScroll from '@/components/snake-scroll';
 import { jetbrainsMono, ibmPlexMono, pressStart2P } from '@/lib/fonts';
 import { SITE_URL } from '@/lib/site';
 
@@ -42,6 +43,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body>
         <Preloader />
+        <SnakeScroll />
         {children}
         <Analytics />
         <SpeedInsights />
