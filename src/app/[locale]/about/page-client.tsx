@@ -6,6 +6,7 @@ import PageShell from '@/components/page-shell';
 import MatrixRain from '@/components/matrix-rain';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
 import StudioNumbers from '@/components/about/studio-numbers';
+import SnakeBorder from '@/components/snake-border';
 import StudioTimeline from '@/components/about/studio-timeline';
 import CapabilityMap from '@/components/about/capability-map';
 
@@ -75,7 +76,9 @@ export default function AboutPageClient() {
       </Reveal>
 
       <Reveal variant="fadeUp" delay={0.1}>
-        <StudioNumbers />
+        <SnakeBorder radius={28}>
+          <StudioNumbers />
+        </SnakeBorder>
       </Reveal>
 
       <Reveal variant="fadeUp" delay={0.1}>

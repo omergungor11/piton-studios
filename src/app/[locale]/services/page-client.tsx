@@ -7,6 +7,7 @@ import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
+import SnakeBorder from '@/components/snake-border';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
@@ -33,7 +34,9 @@ export default function ServicesPageClient() {
       </section>
 
       {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
-      <ImpactPanel />
+      <SnakeBorder radius={24}>
+        <ImpactPanel />
+      </SnakeBorder>
 
       {/* Filter */}
       <section className="sp-filter">
