@@ -4,7 +4,10 @@ import { useCallback, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 /**
- * Etki Paneli — projeler sayfasindaki interaktif sonuc grafigi.
+ * Etki Paneli — hizmetler sayfasindaki interaktif sonuc grafigi.
+ *
+ * Alti boyut tum hizmet yelpazesini kapsar: otomasyon, AI, sistem performansi,
+ * SEO/GEO, donusum ve bakim yuku — yalnizca web degil.
  *
  * Iki katmanli etkilesim:
  *  1. Boyut listesinde hover (masaustu) / tap (mobil) -> grafik o boyuta gecer
@@ -42,7 +45,39 @@ const stroke = {
 
 const DIMENSIONS: Dimension[] = [
   {
-    id: 'speed',
+    // Otomasyon / Agentic AI — elle yapilan tekrarli is
+    id: 'automation',
+    lowerIsBetter: true,
+    decimals: 0,
+    us: [40, 18, 10, 6],
+    typical: [40, 38, 36, 34],
+    icon: (
+      <svg viewBox="0 0 24 24" {...stroke} aria-hidden="true">
+        <circle cx="6" cy="6.5" r="2.4" />
+        <circle cx="18" cy="6.5" r="2.4" />
+        <circle cx="12" cy="18" r="2.4" />
+        <path d="M8.4 6.5h7.2M7.3 8.6l3.5 7.1M16.7 8.6l-3.5 7.1" />
+      </svg>
+    ),
+  },
+  {
+    // AI Entegrasyonu / Chatbot — insan dokunmadan sonuclanan talep
+    id: 'ai',
+    lowerIsBetter: false,
+    decimals: 0,
+    us: [0, 35, 55, 68],
+    typical: [0, 2, 4, 6],
+    icon: (
+      <svg viewBox="0 0 24 24" {...stroke} aria-hidden="true">
+        <rect x="6.5" y="6.5" width="11" height="11" rx="2.5" />
+        <circle cx="12" cy="12" r="1.7" />
+        <path d="M10 3v3.5M14 3v3.5M10 17.5V21M14 17.5V21M3 10h3.5M3 14h3.5M17.5 10H21M17.5 14H21" />
+      </svg>
+    ),
+  },
+  {
+    // Web / Web App / Cloud — yanit suresi
+    id: 'performance',
     lowerIsBetter: true,
     decimals: 1,
     us: [1.4, 1.3, 1.2, 1.2],
@@ -54,6 +89,7 @@ const DIMENSIONS: Dimension[] = [
     ),
   },
   {
+    // SEO & GEO
     id: 'visibility',
     lowerIsBetter: false,
     decimals: 0,
@@ -67,6 +103,7 @@ const DIMENSIONS: Dimension[] = [
     ),
   },
   {
+    // Web + Google Ads
     id: 'conversion',
     lowerIsBetter: false,
     decimals: 1,
@@ -81,28 +118,16 @@ const DIMENSIONS: Dimension[] = [
     ),
   },
   {
+    // Tum hizmetler — sistemi ayakta tutma yuku
     id: 'maintenance',
     lowerIsBetter: true,
     decimals: 0,
-    us: [2, 2, 1, 1],
-    typical: [4, 6, 8, 11],
+    us: [3, 2, 1, 1],
+    typical: [5, 7, 9, 12],
     icon: (
       <svg viewBox="0 0 24 24" {...stroke} aria-hidden="true">
         <path d="M12 3l7 3v5.5c0 4.2-2.9 8-7 9.5-4.1-1.5-7-5.3-7-9.5V6l7-3z" />
         <path d="M9.5 12.2l1.8 1.8 3.4-3.6" />
-      </svg>
-    ),
-  },
-  {
-    id: 'reach',
-    lowerIsBetter: false,
-    decimals: 0,
-    us: [12, 26, 38, 47],
-    typical: [12, 14, 16, 18],
-    icon: (
-      <svg viewBox="0 0 24 24" {...stroke} aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3z" />
       </svg>
     ),
   },

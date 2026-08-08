@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 7 | 7 | 0 | 0 | 0 |
-| **Total** | | **36** | **36** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 9 | 9 | 0 | 0 | 0 |
+| **Total** | | **38** | **38** | **0** | **0** | **0** |
 
-**Progress**: 36/36 (100%) ✓
+**Progress**: 38/38 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -82,6 +82,9 @@
 | TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `1fbce47` |
 | TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `cae515a` |
 | TASK-036 | Projeler sayfasindaki "Studyo Tanitim" showreel bolumu kaldirildi (JSX + CSS + 3 dil ceviri) | S | COMPLETED | `fce9ebb` |
+| TASK-037 | Yeni marka logosu (python + devre karti dunya): arka plan alfaya cevrildi, logo.webp + icon/apple-icon/favicon yeniden uretildi | S | COMPLETED | `PENDING` |
+| TASK-038 | Etki Paneli hizmetler sayfasina tasindi; icerik 5 web boyutundan 6 boyuta genisletildi (otomasyon, AI, performans, SEO/GEO, donusum, bakim) | M | COMPLETED | `PENDING` |
+| TASK-039 | Projeler sayfasina Teslim Akisi: 6 adimli interaktif surec seridi, her adimda cikti/gereksinim + farkli disiplinlerden ornek proje | M | COMPLETED | `PENDING` |
 
 ---
 

@@ -258,31 +258,43 @@
   "impact": {
     "eyebrow": "§ · Neden fark eder",
     "title": "Aynı bütçe, <accent>farklı</accent> eğri.",
-    "desc": "Bir site lansman günü değil, on ikinci ayında değerlenir. Aşağıdaki beş kalem, doğru kurulmuş bir sitenin zaman içinde nereye gittiğini gösteriyor. Kalemlerin üzerinde gezinin, grafikte imleci sürükleyin.",
+    "desc": "Web sitesi, özel yazılım, otomasyon ya da AI — hangisini yaptırırsanız yaptırın, iş teslim gününde değil on ikinci ayında değerlenir. Aşağıdaki altı kalem, doğru kurulmuş bir sistemin zaman içinde nereye gittiğini gösteriyor. Kalemlerin üzerinde gezinin, grafikte imleci sürükleyin.",
     "dimsLabel": "Sonuç boyutları",
     "seriesUs": "Piton Studios ile",
-    "seriesTypical": "Tipik kurulum",
+    "seriesTypical": "Mevcut düzende",
     "deltaHigher": "daha yüksek",
     "deltaLower": "daha düşük",
     "checkpoints": [
-      "Lansman",
+      "Başlangıç",
       "3. ay",
       "6. ay",
       "12. ay"
     ],
-    "note": "Gösterge model — teknoloji ve kurulum tercihlerinin zaman içindeki tipik etkisini anlatır; ölçülmüş müşteri verisi ya da taahhüt değildir. Gerçek sonuç sektöre, kapsama ve içerik temposuna göre değişir.",
+    "note": "Gösterge model — teknoloji ve kurulum tercihlerinin zaman içindeki tipik etkisini anlatır; ölçülmüş müşteri verisi ya da taahhüt değildir. Gerçek sonuç sektöre, kapsama ve süreç yapınıza göre değişir.",
     "dims": {
-      "speed": {
-        "label": "Açılış hızı",
+      "automation": {
+        "label": "Süreç otomasyonu",
+        "unit": " sa",
+        "head": "Elle yapılan iş azalır",
+        "detail": "Teklif hazırlama, veri girişi, rapor toplama gibi tekrar eden işler akışlara taşınır. Rakam, tek bir sürecin ekipten aylık olarak aldığı saattir. Otomasyon bir kez kurulduktan sonra bu saatler geri gelmez — sistem siz uğraşmadan çalışmaya devam eder."
+      },
+      "ai": {
+        "label": "AI ile kapasite",
+        "unit": "%",
+        "head": "Talebin çoğu otomatik karşılanır",
+        "detail": "AI asistanlar ve agent'lar gelen talebin rutin kısmını uçtan uca karşılar; ekip yalnızca istisnalarla ilgilenir. Rakam, insan dokunmadan sonuçlanan talep oranıdır. Yeni personel almadan hacim büyütmenin yolu budur."
+      },
+      "performance": {
+        "label": "Sistem performansı",
         "unit": " sn",
-        "head": "Zamanla yavaşlamayan site",
-        "detail": "Statik üretim ve performans bütçesiyle yayına çıkıyoruz. Eklenti biriktiren bir kurulum her yeni özellikle biraz daha ağırlaşır; statik bir sitede içerik büyürken açılış süresi sabit kalır. Fark ilk gün küçük, on ikinci ayda üç kat."
+        "head": "Zamanla yavaşlamayan sistem",
+        "detail": "İster tanıtım sitesi ister özel yazılım olsun, performans bütçesiyle kuruyoruz. Eklenti ve katman biriktiren bir sistem her yeni özellikle biraz daha ağırlaşır; ölçülerek kurulan bir sistemde yanıt süresi kapsam büyürken sabit kalır."
       },
       "visibility": {
-        "label": "Arama görünürlüğü",
+        "label": "Arama & AI görünürlüğü",
         "unit": "",
         "head": "SEO sonradan değil, baştan",
-        "detail": "Teknik SEO, yapılandırılmış veri ve çok dilli hreflang lansmandan önce yerine oturur. Sonradan eklenen SEO hem iki katına mal olur hem de kaybedilen ayları geri getirmez. Endeks 100 = lansman günü görünürlüğü."
+        "detail": "Teknik SEO, yapılandırılmış veri ve çok dilli hreflang yayına çıkmadan önce yerine oturur; içerik ayrıca AI modellerinin okuyup kaynak gösterebileceği biçimde kurulur. Endeks 100 = yayın günü görünürlüğü."
       },
       "conversion": {
         "label": "Talep dönüşümü",
@@ -294,13 +306,91 @@
         "label": "Bakım yükü",
         "unit": " sa",
         "head": "Bakım istemeyen altyapı",
-        "detail": "Çalışan bir sunucu tarafı yoksa saldırı yüzeyi de yok. Eklenti güncellemesi, uyumsuzluk tamiri ve güvenlik yaması diye bir gider kalemi oluşmuyor. Aylık rakam, sitenin sizden istediği ortalama süredir."
+        "detail": "Sistemi ayakta tutmak için harcanan aylık süre. Eklenti ekosistemine ve elle müdahaleye dayanan kurulumlarda bu kalem her ay biraz büyür; sürüm kontrolü, otomatik test ve yönetilen altyapıyla kurulanlarda küçülür."
+      }
+    }
+  },
+  "delivery": {
+    "eyebrow": "§ · Nasıl çalışıyoruz",
+    "title": "Fikirden <accent>çalışan sisteme</accent>, altı adımda.",
+    "desc": "Web sitesi de olsa, özel yazılım da olsa, otomasyon da olsa aynı akışı izliyoruz. Her adımın ne ürettiği ve sizden ne istediği belli; sürpriz çıkmasın diye. Adımların üzerinde gezinin.",
+    "trackLabel": "Teslim adımları",
+    "labelWhat": "Ne yapılır",
+    "labelOutput": "Çıktı",
+    "labelYou": "Sizden gereken",
+    "labelExample": "Bu adımı gösteren proje",
+    "steps": {
+      "discovery": {
+        "name": "Keşif",
+        "duration": "2–5 gün",
+        "detail": "İşin gerçekte ne olduğunu birlikte çıkarıyoruz. Çoğu proje burada kazanılır ya da kaybedilir: yanlış varsayımla başlanan bir iş, geliştirmenin ortasında yön değiştirdiğinde kaybedilen süre bu adımın maliyetinin çok üzerindedir.",
+        "items": [
+          "Mevcut sürecin haritası çıkarılır",
+          "Kapsam ve öncelik sırası netleşir",
+          "Başarının hangi sayıyla ölçüleceği kararlaşır"
+        ],
+        "output": "Kapsam dökümanı ve sabit fiyat teklifi. Kapsam yazılı olmadan fiyat vermiyoruz.",
+        "you": "Bir saatlik görüşme ve varsa mevcut sayılarınız — aylık talep, dönüşüm, işlem hacmi."
       },
-      "reach": {
-        "label": "Çok dilli erişim",
-        "unit": "%",
-        "head": "Tek içerik, üç pazar",
-        "detail": "Türkçe, İngilizce ve Rusça tek kaynaktan yönetilir; hreflang doğru kurulduğunda her dil kendi aramasında görünür. Yeni bir dil eklemek yeni bir site kurmak anlamına gelmez. Rakam, yabancı dilden gelen trafiğin payıdır."
+      "design": {
+        "name": "Tasarım",
+        "duration": "1–3 hafta",
+        "detail": "Arayüz ve veri modeli birlikte kurgulanır. Ekranları kod yazılmadan görür, değişiklikleri en ucuz olduğu anda istersiniz; bu aşamada bir ekranı taşımak dakikalar, geliştirmeden sonra günler sürer.",
+        "items": [
+          "Tıklanabilir prototip hazırlanır",
+          "Veri modeli ve yetki kurgusu çıkarılır",
+          "Bileşen sistemi ve marka dili oturur"
+        ],
+        "output": "Tıklanabilir prototip, veri şeması ve bileşen kütüphanesi.",
+        "you": "Tek karar verici ve iki tur geri bildirim. Onay turu sayısı doğrudan maliyet kalemidir."
+      },
+      "build": {
+        "name": "Geliştirme",
+        "duration": "2–8 hafta",
+        "detail": "Parça parça, çalışır halde teslim ediyoruz. “Sonunda görürsünüz” diye bir aşama yok — her hafta çalışan bir sürüm oluyor ve ilerlemeyi kendi gözünüzle takip ediyorsunuz.",
+        "items": [
+          "Her hafta çalışan bir sürüm yayınlanır",
+          "Kod sürüm kontrolünde, geçmiş kayıtlı",
+          "Entegrasyonlar tek tek bağlanır ve doğrulanır"
+        ],
+        "output": "Önizleme adresinde her hafta güncellenen, çalışan bir sürüm.",
+        "you": "Haftada bir kısa bakış ve entegrasyonlar için erişim bilgileri."
+      },
+      "test": {
+        "name": "Test",
+        "duration": "3–7 gün",
+        "detail": "Hatanın maliyeti bulunduğu ana bağlıdır; lansmandan sonra bulunan bir hata, önce bulunanın katına mal olur. Bu yüzden test kesilen değil, planlanan bir adımdır.",
+        "items": [
+          "Fonksiyon, performans ve erişilebilirlik denetimi",
+          "Gerçek cihazlarda ve tüm dillerde kontrol",
+          "Yük ve uç durum senaryoları"
+        ],
+        "output": "Test raporu ve kapatılmış bulgu listesi.",
+        "you": "Kendi akışınızda bir tur gezinti — en iyi hataları işi bilen bulur."
+      },
+      "launch": {
+        "name": "Devreye alma",
+        "duration": "1–2 gün",
+        "detail": "Yayına alma bir düğmeye basmak değil, devir teslimdir. Çıktığımızda alan adı, kod deposu ve tüm hesaplar sizin adınıza olur — ajans değiştirme özgürlüğünüzün tek garantisi budur.",
+        "items": [
+          "Yayın, izleme ve yedekleme kurulur",
+          "Alan adı, depo ve hesaplar size devredilir",
+          "Ekibinize kısa bir kullanım aktarımı yapılır"
+        ],
+        "output": "Canlı sistem, izleme paneli ve size ait tüm erişimler.",
+        "you": "Alan adı ve kurumsal hesaplar için yetki onayı."
+      },
+      "grow": {
+        "name": "Büyütme",
+        "duration": "Sürekli",
+        "detail": "Lansman bitiş değil başlangıçtır. Keşifte belirlediğimiz sayılar artık gerçek veriyle doluyor; her turda neyin işe yaradığını görüp bir sonraki işi ona göre seçiyoruz.",
+        "items": [
+          "Keşifteki metrikler gerçek veriyle izlenir",
+          "İçerik, SEO ve dönüşüm turları yapılır",
+          "Yeni ihtiyaçlar yol haritasına alınır"
+        ],
+        "output": "Aylık ölçüm özeti ve bir sonraki tur için öncelik listesi.",
+        "you": "Ayda bir kısa değerlendirme görüşmesi."
       }
     }
   },

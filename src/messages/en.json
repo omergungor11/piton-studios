@@ -300,31 +300,43 @@
   "impact": {
     "eyebrow": "§ · Why it compounds",
     "title": "Same budget, <accent>different</accent> curve.",
-    "desc": "A website proves its worth in month twelve, not on launch day. These five lines show where a well-built site ends up over time. Hover the items, drag across the chart.",
+    "desc": "Website, custom software, automation or AI — whichever you commission, the work proves its worth in month twelve, not on handover day. These six lines show where a well-built system ends up over time. Hover the items, drag across the chart.",
     "dimsLabel": "Outcome dimensions",
     "seriesUs": "With Piton Studios",
-    "seriesTypical": "Typical build",
+    "seriesTypical": "Business as usual",
     "deltaHigher": "higher",
     "deltaLower": "lower",
     "checkpoints": [
-      "Launch",
+      "Start",
       "Month 3",
       "Month 6",
       "Month 12"
     ],
-    "note": "Indicative model — it illustrates the typical effect of technology and setup choices over time. It is not measured client data and not a guarantee. Real outcomes vary with sector, scope and publishing cadence.",
+    "note": "Indicative model — it illustrates the typical effect of technology and setup choices over time. It is not measured client data and not a guarantee. Real outcomes vary with sector, scope and how your processes are structured.",
     "dims": {
-      "speed": {
-        "label": "Load time",
+      "automation": {
+        "label": "Process automation",
+        "unit": "h",
+        "head": "Less work done by hand",
+        "detail": "Repeating work — preparing quotes, entering data, assembling reports — moves into workflows. The figure is the hours a single process takes from your team each month. Once automation is in place those hours do not come back; the system keeps running without you."
+      },
+      "ai": {
+        "label": "Capacity through AI",
+        "unit": "%",
+        "head": "Most requests handled automatically",
+        "detail": "AI assistants and agents handle the routine share of incoming requests end to end; the team only deals with exceptions. The figure is the proportion of requests resolved without a human touching them. This is how volume grows without new headcount."
+      },
+      "performance": {
+        "label": "System performance",
         "unit": "s",
-        "head": "A site that doesn't slow down",
-        "detail": "We launch on static generation with a performance budget. A build that accumulates plugins gets heavier with every feature; on a static site load time holds steady as content grows. The gap is small on day one and threefold by month twelve."
+        "head": "A system that doesn't slow down",
+        "detail": "Whether it is a brochure site or custom software, we build to a performance budget. A system that accumulates plugins and layers gets heavier with every feature; one built with measurement holds its response time steady as scope grows."
       },
       "visibility": {
-        "label": "Search visibility",
+        "label": "Search & AI visibility",
         "unit": "",
         "head": "SEO built in, not bolted on",
-        "detail": "Technical SEO, structured data and multilingual hreflang are in place before launch. Retrofitted SEO costs twice as much and never returns the months already lost. Index 100 = visibility on launch day."
+        "detail": "Technical SEO, structured data and multilingual hreflang are in place before launch, and content is structured so AI models can read and cite it. Index 100 = visibility on launch day."
       },
       "conversion": {
         "label": "Enquiry conversion",
@@ -336,13 +348,91 @@
         "label": "Maintenance load",
         "unit": "h",
         "head": "Infrastructure that needs no tending",
-        "detail": "With no running server side there is no attack surface. Plugin updates, incompatibility fixes and security patches never become a cost line. The monthly figure is the average time the site asks of you."
+        "detail": "The monthly time spent keeping the system alive. On setups that rely on a plugin ecosystem and manual intervention this line grows every month; with version control, automated tests and managed infrastructure it shrinks."
+      }
+    }
+  },
+  "delivery": {
+    "eyebrow": "§ · How we work",
+    "title": "From idea to a <accent>working system</accent>, in six steps.",
+    "desc": "Website, custom software or automation — we follow the same flow. What each step produces and what it needs from you is stated up front, so nothing arrives as a surprise. Hover the steps.",
+    "trackLabel": "Delivery steps",
+    "labelWhat": "What happens",
+    "labelOutput": "Output",
+    "labelYou": "What we need from you",
+    "labelExample": "A project that shows this step",
+    "steps": {
+      "discovery": {
+        "name": "Discovery",
+        "duration": "2–5 days",
+        "detail": "We work out together what the job actually is. Most projects are won or lost here: when work started on a wrong assumption changes direction mid-development, the time lost far exceeds what this step costs.",
+        "items": [
+          "The existing process is mapped",
+          "Scope and priority order are settled",
+          "We agree which number defines success"
+        ],
+        "output": "A scope document and a fixed-price quote. We do not quote before scope is written down.",
+        "you": "An hour-long conversation and any numbers you already have — monthly enquiries, conversion, transaction volume."
       },
-      "reach": {
-        "label": "Multilingual reach",
-        "unit": "%",
-        "head": "One source, three markets",
-        "detail": "Turkish, English and Russian run from a single content source; with hreflang set up correctly each language surfaces in its own search results. Adding a language does not mean building another site. The figure is the share of traffic arriving in a non-primary language."
+      "design": {
+        "name": "Design",
+        "duration": "1–3 weeks",
+        "detail": "Interface and data model are designed together. You see the screens before any code is written and ask for changes at the moment they are cheapest; moving a screen now takes minutes, after development it takes days.",
+        "items": [
+          "A clickable prototype is built",
+          "Data model and permissions are mapped",
+          "The component system and brand language settle"
+        ],
+        "output": "A clickable prototype, a data schema and a component library.",
+        "you": "One decision maker and two rounds of feedback. The number of approval rounds is a direct cost line."
+      },
+      "build": {
+        "name": "Development",
+        "duration": "2–8 weeks",
+        "detail": "We deliver in working pieces. There is no “you'll see it at the end” phase — there is a running version every week and you follow progress with your own eyes.",
+        "items": [
+          "A working version ships every week",
+          "Code lives in version control with full history",
+          "Integrations are connected and verified one by one"
+        ],
+        "output": "A working version on a preview URL, updated every week.",
+        "you": "A short weekly look and access credentials for the integrations."
+      },
+      "test": {
+        "name": "Testing",
+        "duration": "3–7 days",
+        "detail": "The cost of a bug depends on when it is found; one found after launch costs a multiple of one found before. That is why testing is a planned step, not the one that gets cut.",
+        "items": [
+          "Functional, performance and accessibility checks",
+          "Verification on real devices and in every language",
+          "Load and edge-case scenarios"
+        ],
+        "output": "A test report and a closed list of findings.",
+        "you": "One walkthrough of your own workflow — the best bugs are found by people who know the job."
+      },
+      "launch": {
+        "name": "Go live",
+        "duration": "1–2 days",
+        "detail": "Going live is a handover, not a button press. When we leave, the domain, the code repository and every account are in your name — that is the only guarantee of your freedom to change agencies.",
+        "items": [
+          "Deployment, monitoring and backups are set up",
+          "Domain, repository and accounts are transferred to you",
+          "Your team gets a short handover session"
+        ],
+        "output": "A live system, a monitoring dashboard and every credential in your name.",
+        "you": "Authorisation for the domain and company accounts."
+      },
+      "grow": {
+        "name": "Growth",
+        "duration": "Ongoing",
+        "detail": "Launch is the start, not the finish. The numbers we set in discovery now fill with real data; each round we see what worked and choose the next piece of work accordingly.",
+        "items": [
+          "Discovery metrics are tracked against real data",
+          "Rounds of content, SEO and conversion work",
+          "New needs go onto the roadmap"
+        ],
+        "output": "A monthly measurement summary and a priority list for the next round.",
+        "you": "A short review call once a month."
       }
     }
   },
