@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-08-08 (3)
+
+### Changed
+- **Blog fiyatlandirmasi gercek fiyat seviyesine cekildi** (5 yazi × 3 dil = 15 MDX).
+  TR yazilari artik **TL**, en/ru yazilari **euro** gosteriyor; donusum 1 € = 45 ₺.
+  Bantlar: sablon/WordPress tanitim 10.000-30.000 ₺, ozel tasarim kurumsal
+  35.000-120.000 ₺, e-ticaret 40.000-200.000 ₺, ozel web uygulamasi 150.000 ₺+.
+  Yillik isletme tablosu, 3 yillik TCO grafikleri ve Next.js/WordPress karsilastirmasi
+  ayni olcekte yeniden yazildi
+- **AI otomasyon ROI senaryosu** 250 ₺/saat is gucu maliyeti + 70.000 ₺ kurulum uzerinden
+  yeniden hesaplandi — geri odeme 6,7 ay, 12 aylik ROI %80 (metindeki "yedinci ay
+  civarinda" anlatimi korundu)
+
+### Fixed
+- **TrendChart eksen etiketleri**: eksen degerleri `Math.round(ceiling * r)` ile uretiliyor,
+  ondalikli `max` verilince tekrar eden etiketler ("1, 1, 2, 3") cikiyordu. en/ru grafikleri
+  mutlak euro, TR grafikleri bin-TL olcegine alindi
+- **OG gorseli font hatasi**: Satori'nin dinamik fontunda `₺` glifi yok; maliyet yazisinin
+  frontmatter `description` alanindaki `₺` build sirasinda "Failed to load dynamic font"
+  veriyordu. Description'da "TL" kullaniliyor (govde metninde `₺` sorunsuz)
+
 ## 2026-08-08 (2)
 
 ### Added
