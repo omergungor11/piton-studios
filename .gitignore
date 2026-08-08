@@ -49,3 +49,19 @@ coverage/
 
 # Raw screenshot source files (large, not for repo)
 website-flows/
+
+# Gecici calisma dosyalari (gorsel uretimi, ara kareler)
+tmp/
+
+# Marka varlik kaynaklari — sitede kullanilan turevler repoda, kaynaklar disarida.
+# piton-crawl/: 6 ham kare (png+webp), sprite PNG, animasyonlu webp, mp4 ve zip
+# yaklasik 8 MB. Kodun kullandigi tek dosya sprite.webp (164 KB) — o repoda.
+/public/assets/brand/piton-crawl/*
+!/public/assets/brand/piton-crawl/sprite.webp
+/public/assets/brand/piton-crawl-assets-v1.zip
+/public/assets/brand/piton-section-snake-v1.*
+/public/assets/brand/piton-globe-python-squeeze-v1.mp4
+# Logonun elenen denemeleri; kullanilan surum v4 ve o repoda tutuluyor
+/public/assets/brand/piton-globe-python-red-v1.png
+/public/assets/brand/piton-globe-python-circuit-v2.png
+/public/assets/brand/piton-globe-python-brand-red-v3.png

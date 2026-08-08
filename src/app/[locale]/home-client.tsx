@@ -10,6 +10,7 @@ import { PreviewCard } from "@/components/scenes/works";
 
 import dynamic from "next/dynamic";
 import FloatingGlass from "@/components/floating-glass";
+import SnakeTrail from "@/components/snake-trail";
 import FloatingActions from "@/components/floating-actions";
 
 const ThreeScene = dynamic(() => import("@/components/three-scene"), {
@@ -172,6 +173,7 @@ export default function HomeClient() {
     <>
       <BgStage active={SCENES[activeIdx]?.id} />
       {showThree && <ThreeScene />}
+      <SnakeTrail />
       <FloatingGlass />
       <div className="grain" />
       <Cursor />

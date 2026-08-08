@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-08-08 (8)
+
+### Added
+- **Surunen yilan animasyonu** — 6 kareli CSS sprite, iki yerde kullaniliyor:
+  - **Preloader**: yilan ilerleme cubugunun uzerinde surunuyor, yatay konumu gercek
+    yukleme yuzdesine bagli (bas ilerleme ucunda kalir). Cubuktaki `overflow: hidden`
+    kaldirildi, dolgu ayri elemana alindi (`.preloader-bar-fill`)
+  - **Arka plan** (`components/snake-trail.tsx`): anasayfa ve ic sayfalarda uc yilan
+    farkli yukseklik/olcek/yonde; kaydirma ilerlemesine bagli olarak yana suzuluyorlar
+    (paralaks katsayilari ve kare dongusu sureleri farkli, senkron gorunmesin diye).
+    z-index 2 — arka plan ve grain ustunde, cam sekiller ve icerik altinda.
+    Scroll dinleyicisi rAF ile bogulur, tek CSS degiskeni yazar.
+    1000px alti ve `prefers-reduced-motion`'da katman tamamen kapali
+
+> Ayar dugmeleri tek yerde: `snake-trail.tsx` icindeki `SNAKES` dizisi (yukseklik,
+> genislik, baslangic konumu, kayma katsayisi, yon, dongu suresi, opaklik).
+> Yilan sayisi da diziye eleman ekleyerek degisir.
+
+### Changed
+- Kaynak sprite 1920x2160 / 484 KB idi — preloader'in kritik yolu icin agir.
+  1200x1350 q72 webp'e indirildi: **164 KB**, tek dosya iki yerde paylasiliyor.
+  Kare hizalamasi dogrulandi: `steps(6)` + `0 -> 120%` arasi tam kare sinirlarina oturuyor
+- `.gitignore`: `tmp/` ve kullanilmayan marka varlik kaynaklari (ham kareler, sprite PNG,
+  animasyonlu webp, mp4, zip, elenen logo denemeleri — toplam ~8 MB) disarida birakildi.
+  Kodun kullandigi tek turev `piton-crawl/sprite.webp` repoda
+
 ## 2026-08-08 (7)
 
 ### Added — Hakkinda sayfasi
