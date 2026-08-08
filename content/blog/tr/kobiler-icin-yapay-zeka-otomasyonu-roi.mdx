@@ -8,7 +8,7 @@ draft: false
 translationKey: ai-automation-roi
 faq:
   - q: "Yapay zeka otomasyonu küçük işletmeler için pahalı değil mi?"
-    a: "Tek bir sürece odaklanan bir otomasyon tipik olarak 1.500-6.000 € kurulum bandındadır ve aylık işletme maliyeti çoğu zaman 50 € altındadır. Ayda 20 saat manuel iş kurtaran bir otomasyon, orta düzey bir saatlik maliyette 6-10 ay içinde kendini öder. Pahalı olan, tüm süreçleri aynı anda otomatikleştirmeye çalışmaktır."
+    a: "Tek bir sürece odaklanan bir otomasyon tipik olarak 25.000-90.000 ₺ kurulum bandındadır ve aylık işletme maliyeti çoğu zaman 2.000 ₺ altındadır. Ayda 20 saat manuel iş kurtaran bir otomasyon, orta düzey bir saatlik maliyette 6-10 ay içinde kendini öder. Pahalı olan, tüm süreçleri aynı anda otomatikleştirmeye çalışmaktır."
   - q: "Hangi süreçler otomasyona uygun değildir?"
     a: "Ayda birkaç kez çalışan, her seferinde farklı yürüyen, çıktısı öznel yargı gerektiren ve hatasının maliyeti yüksek olan süreçler. Bu dördü bir aradaysa otomasyon kurmak, süreci elle yapmaktan pahalıya gelir."
   - q: "Otomasyon ile yapay zeka agenti arasındaki fark nedir?"
@@ -124,25 +124,25 @@ Bir emlak ofisi, her talep için ilan verisini elle kopyalayıp PDF teklif hazı
 |---|---|---|---|
 | Teklif başına süre | 18 dk | 3 dk | −15 dk |
 | Aylık toplam süre | 42 saat | 7 saat | −35 saat |
-| Saatlik maliyet | 14 € | 14 € | — |
-| Aylık iş gücü maliyeti | 588 € | 98 € | −490 € |
-| Hatalı teklif düzeltme | 8 adet × 25 € | 1 adet × 25 € | −175 € |
-| Aylık işletme maliyeti | — | 45 € | +45 € |
-| **Aylık net tasarruf** | — | — | **620 €** |
+| Saatlik maliyet | 250 ₺ | 250 ₺ | — |
+| Aylık iş gücü maliyeti | 10.500 ₺ | 1.750 ₺ | −8.750 ₺ |
+| Hatalı teklif düzeltme | 8 adet × 450 ₺ | 1 adet × 450 ₺ | −3.150 ₺ |
+| Aylık işletme maliyeti | — | 1.400 ₺ | +1.400 ₺ |
+| **Aylık net tasarruf** | — | — | **10.500 ₺** |
 
-Kurulum maliyeti 4.200 € varsayıldığında geri ödeme **4.200 ÷ 620 ≈ 6,8 ay**; on iki aylık ROI ise
-**%77**. Bu hesabın gücü kesinliğinden değil, tartışmayı doğru zemine taşımasından gelir: artık
-konuşulan şey "yapay zeka kullanalım mı" değil, "bu süreçte ayda 620 € var mı".
+Kurulum maliyeti 70.000 ₺ varsayıldığında geri ödeme **70.000 ÷ 10.500 ≈ 6,7 ay**; on iki aylık ROI ise
+**%80**. Bu hesabın gücü kesinliğinden değil, tartışmayı doğru zemine taşımasından gelir: artık
+konuşulan şey "yapay zeka kullanalım mı" değil, "bu süreçte ayda 10.500 ₺ var mı".
 
 <TrendChart
   title="Kümülatif nakit etkisi (örnek hesap)"
-  caption="Euro cinsinden kümülatif. Yatay çizgi kurulum maliyeti; iki çizginin kesiştiği yer başa baş noktasıdır."
-  unit=" €"
-  max={8000}
+  caption="Bin TL cinsinden kümülatif. Yatay çizgi kurulum maliyeti; iki çizginin kesiştiği yer başa baş noktasıdır."
+  unit="k ₺"
+  max={140}
   labels={["0. ay", "3. ay", "6. ay", "9. ay", "12. ay"]}
   series={[
-    { name: "Kümülatif net etki", points: [0, 1860, 3720, 5580, 7440] },
-    { name: "Kurulum maliyeti", points: [4200, 4200, 4200, 4200, 4200], muted: true },
+    { name: "Kümülatif net etki", points: [0, 31.5, 63, 94.5, 126] },
+    { name: "Kurulum maliyeti", points: [70, 70, 70, 70, 70], muted: true },
   ]}
 />
 
@@ -153,11 +153,11 @@ ay net kazançtır.
 
 | Kalem | Gösterge aralık | Not |
 |---|---|---|
-| Süreç analizi ve haritalama | 400-1.200 € | Atlanmamalı — yanlış süreç en pahalı hatadır |
-| Akış geliştirme | 1.000-4.000 € | Entegrasyon sayısıyla artar |
-| Model kullanım bedeli | 5-80 € / ay | Hacme ve model seçimine bağlı |
-| Barındırma / çalıştırma | 0-40 € / ay | Kendi sunucunuzda barındırmak mümkün |
-| Bakım ve izleme | 0-200 € / ay | Kaynak sistemler değiştikçe gerekir |
+| Süreç analizi ve haritalama | 8.000-25.000 ₺ | Atlanmamalı — yanlış süreç en pahalı hatadır |
+| Akış geliştirme | 20.000-90.000 ₺ | Entegrasyon sayısıyla artar |
+| Model kullanım bedeli | 200-3.500 ₺ / ay | Hacme ve model seçimine bağlı |
+| Barındırma / çalıştırma | 0-1.800 ₺ / ay | Kendi sunucunuzda barındırmak mümkün |
+| Bakım ve izleme | 0-9.000 ₺ / ay | Kaynak sistemler değiştikçe gerekir |
 
 Model kullanım bedeli genellikle korkulduğu kadar büyük bir kalem değildir. Asıl gider, sürecin
 doğru haritalanması ve entegrasyonların kurulmasıdır — yani klasik yazılım işi.

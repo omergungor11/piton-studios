@@ -8,7 +8,7 @@ draft: false
 translationKey: ai-automation-roi
 faq:
   - q: "Isn't AI automation expensive for a small business?"
-    a: "An automation focused on a single process typically sits in a €1,500-6,000 setup band, with running costs often under €50 a month. An automation that saves 20 hours of manual work a month pays for itself in 6-10 months at a mid-range hourly cost. What is expensive is trying to automate every process at once."
+    a: "An automation focused on a single process typically sits in a €550-2,000 setup band, with running costs often under €45 a month. An automation that saves 20 hours of manual work a month pays for itself in 6-10 months at a mid-range hourly cost. What is expensive is trying to automate every process at once."
   - q: "Which processes should not be automated?"
     a: "Ones that run only a few times a month, run differently every time, produce output requiring subjective judgement, or carry a high cost of error. When those four coincide, building the automation costs more than doing the work by hand."
   - q: "What is the difference between automation and an AI agent?"
@@ -125,25 +125,25 @@ measurements:
 |---|---|---|---|
 | Time per quote | 18 min | 3 min | −15 min |
 | Total monthly time | 42 hours | 7 hours | −35 hours |
-| Hourly cost | €14 | €14 | — |
-| Monthly labour cost | €588 | €98 | −€490 |
-| Fixing faulty quotes | 8 × €25 | 1 × €25 | −€175 |
-| Monthly running cost | — | €45 | +€45 |
-| **Monthly net saving** | — | — | **€620** |
+| Hourly cost | €5.5 | €5.5 | — |
+| Monthly labour cost | €233 | €39 | −€194 |
+| Fixing faulty quotes | 8 × €10 | 1 × €10 | −€70 |
+| Monthly running cost | — | €31 | +€31 |
+| **Monthly net saving** | — | — | **€233** |
 
-With a setup cost of €4,200, payback is **4,200 ÷ 620 ≈ 6.8 months** and the twelve-month ROI is
-**77%**. The strength of this calculation is not its precision but the ground it moves the discussion
-onto: the question is no longer "should we use AI" but "is there €620 a month in this process".
+With a setup cost of €1,550, payback is **1,550 ÷ 233 ≈ 6.7 months** and the twelve-month ROI is
+**80%**. The strength of this calculation is not its precision but the ground it moves the discussion
+onto: the question is no longer "should we use AI" but "is there €233 a month in this process".
 
 <TrendChart
   title="Cumulative cash effect (worked example)"
   caption="Cumulative euros. The flat line is the setup cost; where the two lines cross is break-even."
   unit=" €"
-  max={8000}
+  max={3000}
   labels={["Month 0", "Month 3", "Month 6", "Month 9", "Month 12"]}
   series={[
-    { name: "Cumulative net effect", points: [0, 1860, 3720, 5580, 7440] },
-    { name: "Setup cost", points: [4200, 4200, 4200, 4200, 4200], muted: true },
+    { name: "Cumulative net effect", points: [0, 700, 1400, 2100, 2800] },
+    { name: "Setup cost", points: [1550, 1550, 1550, 1550, 1550], muted: true },
   ]}
 />
 
@@ -154,8 +154,8 @@ gain.
 
 | Item | Indicative range | Note |
 |---|---|---|
-| Process analysis and mapping | €400-1,200 | Do not skip — the wrong process is the costliest mistake |
-| Flow development | €1,000-4,000 | Scales with integration count |
+| Process analysis and mapping | €180-550 | Do not skip — the wrong process is the costliest mistake |
+| Flow development | €450-2,000 | Scales with integration count |
 | Model usage | €5-80 / month | Depends on volume and model choice |
 | Hosting / execution | €0-40 / month | Self-hosting is an option |
 | Maintenance and monitoring | €0-200 / month | Needed as source systems change |

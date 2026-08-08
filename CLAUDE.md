@@ -111,8 +111,17 @@ Icerik ici 81 ic link sitemap'e karsi dogrulandi. Statik sayfa 476 → 525.
 > **Yeni yazi eklerken**: `translationKey` zorunlu, TOC otomatik (elle yazmayin),
 > `faq` opsiyonel ama SSS bolumu + JSON-LD uretir. Grafiklerde `max` degeri veriden
 > kucuk olamaz (component kelepceliyor ama veriyi dogru vermek yine de gerekir).
-> Yazilardaki sayilar **senaryo modeli / gosterge banti** olarak isaretli — gercek
-> fiyatlandirma farkliysa maliyet yazisindaki bantlar guncellenmeli.
+> Yazilardaki sayilar **senaryo modeli / gosterge banti** olarak isaretli.
+>
+> **Fiyatlandirma (2026-08-08 guncellendi)**: TR yazilari **TL**, en/ru yazilari **euro**
+> gosterir; donusum **1 € = 45 ₺**. Bantlar: sablon/WordPress tanitim 10.000-30.000 ₺,
+> ozel tasarim kurumsal 35.000-120.000 ₺, e-ticaret 40.000-200.000 ₺, ozel web uygulamasi
+> 150.000 ₺+. AI otomasyon ROI senaryosu 250 ₺/saat is gucu maliyeti + 70.000 ₺ kurulum
+> uzerine kurulu. Fiyat degisirse **5 yazi × 3 dil** birlikte guncellenmeli:
+> maliyet, ai-otomasyon-roi, nextjs-vs-wordpress, cok-dilli-site, e-ticaret-cro.
+>
+> ⚠️ OG gorselleri Satori ile uretiliyor ve **`₺` glifi dinamik fontta yok** — frontmatter
+> `description` alaninda `₺` kullanmayin, "TL" yazin (gövde metninde `₺` sorunsuz).
 
 ## Mimari — guncel
 
