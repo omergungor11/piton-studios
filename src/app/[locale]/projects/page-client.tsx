@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 import DeliveryFlow from '@/components/delivery-flow';
+import SnakeBorder from '@/components/snake-border';
 
 const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
 const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
@@ -88,7 +89,9 @@ export default function ProjectsPageClient() {
       </section>
 
       {/* Teslim akisi — surecin interaktif seridi */}
-      <DeliveryFlow />
+      <SnakeBorder radius={24}>
+        <DeliveryFlow />
+      </SnakeBorder>
 
       {/* Year filter */}
       <section className="sp-filter">

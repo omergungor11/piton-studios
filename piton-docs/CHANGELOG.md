@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-08-08 (12)
+
+### Added
+- **Bolum kenarini sarmalayan yilan** (`components/snake-border.tsx`) — deneme olarak
+  uc bolumde: Teslim Akisi (projeler), Etki Paneli (hizmetler), Rakamlarla studyo
+  (hakkinda).
+
+  Sarmalama hissi tek katmanla olmuyor — yilan hep onde kalirsa bu "cerceve" olur.
+  Bir bolumunun kutunun ARKASINA gecmesi gerek, bu yuzden iki ozdes kopya var:
+  biri bolumden once (`z-index: 0`), biri sonra (`z-index: 2`). Ikisi de ayni yolda,
+  ayni noktada, ayni acida; yalnizca hangisinin gorundugu degisiyor — konum birebir
+  ayni oldugu icin gecis aninda ziplama olmuyor, sadece derinlik degisiyor.
+  Yol saat yonunde (ust → sag → alt → sol); yilan ust kenarda arkada, alt kenarda
+  onde, gecisler yan kenarlarin ortasinda `smoothstep` ile eriyor. Arkadaki kopya
+  cam panelin `backdrop-filter`'i tarafindan zaten bulaniklastigi icin efekt bedava
+
+- Kenar cizgisi JS'te olculup yuvarlatilmis dikdortgen SVG path'ine cevriliyor;
+  yilan CSS Motion Path (`offset-path` + `offset-distance`) ile onun uzerinde.
+  `offset-rotate: auto` sayesinde koseleri donerken kivriliyor — asil inandirici
+  detay bu. `ResizeObserver` bolumu izliyor (Teslim Akisi karti adim degistikce
+  boy degistiriyor, yol da onunla yeniden hesaplaniyor)
+
+> Ayarlar: `<SnakeBorder radius={24} size={118} laps={1}>`. `radius` kapsayicinin
+> `border-radius`'uyla ayni olmali; `laps` tur sayisi.
+
 ## 2026-08-08 (11)
 
 ### Changed

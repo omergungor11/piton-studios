@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 13 | 13 | 0 | 0 | 0 |
-| **Total** | | **42** | **42** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 14 | 14 | 0 | 0 | 0 |
+| **Total** | | **43** | **43** | **0** | **0** | **0** |
 
-**Progress**: 42/42 (100%) ✓
+**Progress**: 43/43 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -89,6 +89,7 @@
 | TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `ba5c5f7` |
 | TASK-042 | Surunen yilan animasyonu: preloader'da ilerlemeye bagli yilan + sayfa arka planinda kaydirmayla suzulen 3 yilan (CSS sprite, 164 KB) | M | COMPLETED | `bac924b` |
 | TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `5ad8d79` |
+| TASK-044 | Bolum kenarini sarmalayan yilan: CSS Motion Path + onde/arkada iki katman, 3 bolumde deneme | M | COMPLETED | `PENDING` |
 
 ---
 

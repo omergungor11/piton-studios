@@ -4766,6 +4766,49 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
   .ap-clients-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Kutuyu sarmalayan yilan — iki katman: biri bolumun arkasinda, biri onunde.
+   Ikisi de ayni yolda ayni noktada; yalnizca --vis ile hangisinin gorundugu
+   degisiyor, boylece yilan kutunun arkasina gecmis gibi oluyor. */
+.snake-wrap { position: relative; }
+.snake-wrap-inner { position: relative; z-index: 1; }
+
+.snake-border {
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--size);
+  aspect-ratio: 1200 / 225;
+  /* Yol JS'te olculuyor; --sp tur icindeki konum (0-1), --vis katman gorunurlugu */
+  offset-path: var(--path, none);
+  offset-distance: calc(var(--sp, 0) * 100%);
+  /* Yilan yolun yonune doner — koseleri donerken kivrilmis gorunur */
+  offset-rotate: auto;
+  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat;
+  background-size: 100% 600%;
+  background-position: 0 calc(var(--frame, 0) * 20%);
+  pointer-events: none;
+}
+/* Yol henuz olculmediyse (ilk kare, JS kapali) hicbir sey cizilmesin */
+.snake-border:not([style*="--path"]) { display: none; }
+
+.snake-border.is-behind {
+  z-index: 0;
+  opacity: calc(var(--vis, 1) * 0.5);
+  /* Camin ardindan gectigi icin biraz daha silik ve yumusak */
+  filter: blur(1px);
+}
+.snake-border.is-front {
+  z-index: 2;
+  opacity: calc(var(--vis, 0) * 0.62);
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.45));
+}
+
+@media (max-width: 1000px) {
+  .snake-border { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snake-border { display: none; }
+}
+
 /* Yilan scrollbar — tarayici cubugunun yerine gecen sag kenar rayi.
    Yerlesim JS'te degil burada: --p (0-1) ilerlemeyi, --thumb yilan boyunu tasir. */
 .snake-scroll {
