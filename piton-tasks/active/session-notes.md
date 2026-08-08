@@ -324,3 +324,83 @@ Plan: `piton-plans/2026-07-28-blog-admin-platform-plan.md` (Sprint 1 uygulandi, 
 - `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar vardi (Supabase kurulumu, video pipeline, admin CRUD). `NEVER_DONE` olarak duzeltildi.
 - Middleware matcher'i genis: `/((?!api|_next|_vercel|.*\..*).*)`. Eski dar matcher `['/', '/(tr|en|ru)/:path*']` locale oneki olmayan yeni bir rotayi sessizce kapsam disinda birakiyordu.
 - Plan dosyasinin basinda **iptal basligi** var — ileride bir session onu okuyup panel kurmaya kalkmasin.
+
+---
+
+## 2026-08-08 — Session 10
+
+Icerik uretimi sessioni. Blog altyapisi grafik/TOC/SSS destegiyle genisletildi,
+6 uzun form yazi 3 dilde yazildi (18 MDX), anasayfa nav'indaki Blog eksigi duzeltildi.
+
+### Completed
+
+**Blog altyapisi** (`7e9ed89` — TASK-030)
+- [x] `src/components/mdx/mdx-components.tsx` — `BarChart` (CSS yatay cubuk),
+      `TrendChart` (inline SVG cok serili cizgi), `StatGrid`, `Callout`, `KeyTakeaways`
+      + site ici baglantilari `next/link`'e ceviren `a` override'i. Hepsi tema
+      degiskenleriyle calisir, hicbiri client component degil
+- [x] `src/components/blog-toc.tsx` — icindekiler tablosu yazidan otomatik cikarilir
+      (`extractHeadings()`, `src/lib/blog.ts`); id'ler `rehype-slug` ile ayni
+      github-slugger algoritmasini kullanir. 3'ten az baslikta gizlenir
+- [x] Frontmatter `faq` alani → yazi sonunda SSS bolumu + `FAQPage` JSON-LD
+- [x] `rehype-slug` + `github-slugger` bagimliliklari, h4-h6 baslik hiyerarsisi,
+      `.blog-toc` / `.mdx-*` / `.blog-faq` stilleri (globals.css +230 satir)
+- [x] `blog.tableOfContents` ve `blog.faqTitle` cevirileri tr/en/ru
+
+**Icerik — 6 yazi × 3 dil = 18 MDX** (`7e9ed89` TASK-031, `d50eeb8` TASK-032)
+- [x] `seo-to-geo` — yapay zeka caginda arama gorunurlugu, SEO'dan GEO'ya
+- [x] `website-cost` — kurumsal web sitesi maliyeti 2026, butce kalemleri
+- [x] `ai-automation-roi` — KOBI'ler icin AI otomasyonu ve ROI hesabi
+- [x] `nextjs-vs-wordpress` — kurumsal siteler icin karar matrisi, 3 yillik TCO
+- [x] `multilingual-site` — hreflang, i18n mimarisi, ceviri borcu, 7 hata
+- [x] `ecommerce-cro` — huni olcumu, terk noktalari, 12 iyilestirme
+- [x] Her yazida TOC, h2-h6 hiyerarsisi, tablolar, grafikler, ozet kutusu, SSS
+- [x] Icerik ici **81 ic link**, tamami sitemap'e karsi dogrulandi — kirik yok
+- [x] Blog toplam **8 yazi × 3 dil**, statik sayfa 476 → 525
+
+**Nav duzeltmesi** (`d50eeb8` — TASK-033)
+- [x] Anasayfa nav'inda Blog linki yoktu. Site iki ayri nav component'i kullaniyor:
+      `chrome.tsx` (anasayfa) ve `page-shell.tsx` (ic sayfalar); Blog yalnizca
+      ikincisindeydi. `chrome.tsx`'in masaustu nav'ina + mobil menu dizisine eklendi
+
+### Yol boyunca cikan iki gercek hata
+
+1. **`next-mdx-remote` MDX icindeki tum JS ifadelerini siliyordu.** `blockJS` varsayilani
+   `true`; `items={[...]}` gibi prop ifadeleri sessizce kaldiriliyor, component'ler
+   `undefined` prop ile cagriliyor ve prerender `items.map` uzerinde patliyordu.
+   `blockJS: false` eklendi, `blockDangerousJS` acik birakildi. **Bu ayar kaldirilirsa
+   tum grafikler ve ozet kutulari kirilir.**
+2. **Grafik tavani veriden kucuk verilebiliyordu.** ROI yazisinda `max={4000}` iken seri
+   7.440'a cikiyor, cizgi cerceveden tasip ustteki paragrafin uzerine biniyordu.
+   `BarChart`/`TrendChart` artik `max(verilen, veri)` kullaniyor — bir daha olamaz.
+
+### Pending — kullanici tarafinda (onceki session'dan devam)
+
+- [ ] **`NEXT_PUBLIC_SITE_URL`** Vercel'e eklenmeli. Yoksa yeni yazilarin da
+      canonical / hreflang / OG URL'leri deploy adresinden uretiliyor
+- [ ] **`RESEND_API_KEY`** — Resend hesabi `pitonstudios@gmail.com` ile acilmali
+- [ ] Vercel'deki kullanilmayan `piton-studios-db` Blob store'u silinebilir
+- [ ] Proje tarihleri duzeltilecek; avie-global Saiber atifi teyit bekliyor
+
+### Next Session
+
+- [ ] Deploy sonrasi anasayfada nav'da Blog'un gorundugunu canli dogrula
+- [ ] Search Console'a sitemap gonder (525 sayfa), yeni yazilarin indexlenmesini izle
+- [ ] Lighthouse audit — Sprint 1'den beri olculmedi, blog sayfalari yeni
+- [ ] Resend anahtari girildikten sonra iletisim formunu canli test et
+- [ ] Isteniyorsa icerik uretimine devam — altyapi hazir, yazi eklemek artik
+      yalnizca MDX yazmak demek
+
+### Notes / Dikkat
+
+- **Nav iki yerde.** `chrome.tsx` (anasayfa) ve `page-shell.tsx` (ic sayfalar) ayri
+  component'ler ve nav icerikleri **elle** esitleniyor. Menuye link eklerken ikisini de
+  guncelleyin — hem masaustu nav hem mobil menu dizisi
+- **`blockJS: false`** `src/app/[locale]/blog/[slug]/page.tsx`'te kalmali (yukariya bakin)
+- **Yeni blog yazisi eklerken**: `translationKey` zorunlu (hreflang buna bagli),
+  `faq` alani opsiyonel ama SSS + FAQPage JSON-LD uretir, TOC otomatik — elle yazmayin
+- **Grafik verileri ve fiyat bantlari olcum degil.** Yazilarda senaryo modeli /
+  gosterge piyasa araligi olarak acikca isaretlendi. Gercek Piton fiyatlandirmasi
+  farkliysa maliyet yazisindaki bantlar guncellenmeli
+- Ic link dogrulamasi icin pratik yontem: MDX'lerden `/xx/...` linklerini cikarip
+  `.next/server/app/sitemap.xml.body` ile `comm -23` karsilastirmasi
