@@ -297,9 +297,57 @@
     "mediaTag": "[ SHOWREEL · 2025 ]",
     "scale": "REEL Q2 · LIVE",
     "ppEyebrow": "Studio Showreel",
-    "ppTitle": "Highlights from our projects {accent} — updated every quarter.",
-    "ppTitleAccent": "in motion",
+    "ppTitle": "Highlights from our projects <accent>in motion</accent> — updated every quarter.",
     "ppDesc": "A brief overview covering all processes from design to development."
+  },
+  "impact": {
+    "eyebrow": "§ · Why it compounds",
+    "title": "Same budget, <accent>different</accent> curve.",
+    "desc": "A website proves its worth in month twelve, not on launch day. These five lines show where a well-built site ends up over time. Hover the items, drag across the chart.",
+    "dimsLabel": "Outcome dimensions",
+    "seriesUs": "With Piton Studios",
+    "seriesTypical": "Typical build",
+    "deltaHigher": "higher",
+    "deltaLower": "lower",
+    "checkpoints": [
+      "Launch",
+      "Month 3",
+      "Month 6",
+      "Month 12"
+    ],
+    "note": "Indicative model — it illustrates the typical effect of technology and setup choices over time. It is not measured client data and not a guarantee. Real outcomes vary with sector, scope and publishing cadence.",
+    "dims": {
+      "speed": {
+        "label": "Load time",
+        "unit": "s",
+        "head": "A site that doesn't slow down",
+        "detail": "We launch on static generation with a performance budget. A build that accumulates plugins gets heavier with every feature; on a static site load time holds steady as content grows. The gap is small on day one and threefold by month twelve."
+      },
+      "visibility": {
+        "label": "Search visibility",
+        "unit": "",
+        "head": "SEO built in, not bolted on",
+        "detail": "Technical SEO, structured data and multilingual hreflang are in place before launch. Retrofitted SEO costs twice as much and never returns the months already lost. Index 100 = visibility on launch day."
+      },
+      "conversion": {
+        "label": "Enquiry conversion",
+        "unit": "%",
+        "head": "Same traffic, more enquiries",
+        "detail": "Forms, calls and flows are measured, and what is measured gets improved. The difference comes not from more visitors but from a larger share of the same visitors turning into real enquiries — without touching the ad budget."
+      },
+      "maintenance": {
+        "label": "Maintenance load",
+        "unit": "h",
+        "head": "Infrastructure that needs no tending",
+        "detail": "With no running server side there is no attack surface. Plugin updates, incompatibility fixes and security patches never become a cost line. The monthly figure is the average time the site asks of you."
+      },
+      "reach": {
+        "label": "Multilingual reach",
+        "unit": "%",
+        "head": "One source, three markets",
+        "detail": "Turkish, English and Russian run from a single content source; with hreflang set up correctly each language surfaces in its own search results. Adding a language does not mean building another site. The figure is the share of traffic arriving in a non-primary language."
+      }
+    }
   },
   "caseStudy": {
     "eyebrow": "§ 03 · Featured Case",

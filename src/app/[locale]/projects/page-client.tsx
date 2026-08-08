@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
 import { imageUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
+import ImpactPanel from '@/components/impact-panel';
 
 const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
 const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
@@ -117,6 +118,9 @@ export default function ProjectsPageClient() {
           </div>
         </div>
       </section>
+
+      {/* Etki paneli — musteri sonuclari, interaktif */}
+      <ImpactPanel />
 
       {/* Year filter */}
       <section className="sp-filter">

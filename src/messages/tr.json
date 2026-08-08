@@ -255,9 +255,57 @@
     "mediaTag": "[ SHOWREEL · 2025 ]",
     "scale": "REEL Q2 · LIVE",
     "ppEyebrow": "Stüdyo Tanıtım",
-    "ppTitle": "Projelerimizden {accent} — her çeyrekte güncellenir.",
-    "ppTitleAccent": "kesitler",
+    "ppTitle": "Projelerimizden <accent>kesitler</accent> — her çeyrekte güncellenir.",
     "ppDesc": "Tasarımdan geliştirmeye, tüm süreçleri kapsayan kısa bir bakış."
+  },
+  "impact": {
+    "eyebrow": "§ · Neden fark eder",
+    "title": "Aynı bütçe, <accent>farklı</accent> eğri.",
+    "desc": "Bir site lansman günü değil, on ikinci ayında değerlenir. Aşağıdaki beş kalem, doğru kurulmuş bir sitenin zaman içinde nereye gittiğini gösteriyor. Kalemlerin üzerinde gezinin, grafikte imleci sürükleyin.",
+    "dimsLabel": "Sonuç boyutları",
+    "seriesUs": "Piton Studios ile",
+    "seriesTypical": "Tipik kurulum",
+    "deltaHigher": "daha yüksek",
+    "deltaLower": "daha düşük",
+    "checkpoints": [
+      "Lansman",
+      "3. ay",
+      "6. ay",
+      "12. ay"
+    ],
+    "note": "Gösterge model — teknoloji ve kurulum tercihlerinin zaman içindeki tipik etkisini anlatır; ölçülmüş müşteri verisi ya da taahhüt değildir. Gerçek sonuç sektöre, kapsama ve içerik temposuna göre değişir.",
+    "dims": {
+      "speed": {
+        "label": "Açılış hızı",
+        "unit": " sn",
+        "head": "Zamanla yavaşlamayan site",
+        "detail": "Statik üretim ve performans bütçesiyle yayına çıkıyoruz. Eklenti biriktiren bir kurulum her yeni özellikle biraz daha ağırlaşır; statik bir sitede içerik büyürken açılış süresi sabit kalır. Fark ilk gün küçük, on ikinci ayda üç kat."
+      },
+      "visibility": {
+        "label": "Arama görünürlüğü",
+        "unit": "",
+        "head": "SEO sonradan değil, baştan",
+        "detail": "Teknik SEO, yapılandırılmış veri ve çok dilli hreflang lansmandan önce yerine oturur. Sonradan eklenen SEO hem iki katına mal olur hem de kaybedilen ayları geri getirmez. Endeks 100 = lansman günü görünürlüğü."
+      },
+      "conversion": {
+        "label": "Talep dönüşümü",
+        "unit": "%",
+        "head": "Aynı trafik, daha çok talep",
+        "detail": "Formlar, çağrılar ve akışlar ölçülür; ölçülen şey iyileştirilir. Aradaki farkı yaratan daha fazla ziyaretçi değil, gelen ziyaretçinin daha büyük bölümünün gerçek talebe dönüşmesidir — reklam bütçesine dokunmadan."
+      },
+      "maintenance": {
+        "label": "Bakım yükü",
+        "unit": " sa",
+        "head": "Bakım istemeyen altyapı",
+        "detail": "Çalışan bir sunucu tarafı yoksa saldırı yüzeyi de yok. Eklenti güncellemesi, uyumsuzluk tamiri ve güvenlik yaması diye bir gider kalemi oluşmuyor. Aylık rakam, sitenin sizden istediği ortalama süredir."
+      },
+      "reach": {
+        "label": "Çok dilli erişim",
+        "unit": "%",
+        "head": "Tek içerik, üç pazar",
+        "detail": "Türkçe, İngilizce ve Rusça tek kaynaktan yönetilir; hreflang doğru kurulduğunda her dil kendi aramasında görünür. Yeni bir dil eklemek yeni bir site kurmak anlamına gelmez. Rakam, yabancı dilden gelen trafiğin payıdır."
+      }
+    }
   },
   "caseStudy": {
     "eyebrow": "§ 03 · Öne Çıkan Proje",
