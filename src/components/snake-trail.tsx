@@ -31,9 +31,9 @@ type Snake = {
 };
 
 const SNAKES: Snake[] = [
-  { top: 16, width: 34, x0: -38, drift: 78, flip: false, cycle: 0.78, opacity: 0.1 },
-  { top: 47, width: 26, x0: 104, drift: -74, flip: true, cycle: 0.92, opacity: 0.075 },
-  { top: 76, width: 42, x0: -46, drift: 92, flip: false, cycle: 0.7, opacity: 0.085 },
+  { top: 16, width: 34, x0: -38, drift: 78, flip: false, cycle: 0.78, opacity: 0.2 },
+  { top: 47, width: 26, x0: 104, drift: -74, flip: true, cycle: 0.92, opacity: 0.15 },
+  { top: 76, width: 42, x0: -46, drift: 92, flip: false, cycle: 0.7, opacity: 0.17 },
 ];
 
 export default function SnakeTrail() {

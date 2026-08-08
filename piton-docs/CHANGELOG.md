@@ -3,16 +3,17 @@
 ## 2026-08-08 (8)
 
 ### Added
-- **Surunen yilan animasyonu** — 6 kareli CSS sprite, iki yerde kullaniliyor:
-  - **Preloader**: yilan ilerleme cubugunun uzerinde surunuyor, yatay konumu gercek
-    yukleme yuzdesine bagli (bas ilerleme ucunda kalir). Cubuktaki `overflow: hidden`
-    kaldirildi, dolgu ayri elemana alindi (`.preloader-bar-fill`)
-  - **Arka plan** (`components/snake-trail.tsx`): anasayfa ve ic sayfalarda uc yilan
-    farkli yukseklik/olcek/yonde; kaydirma ilerlemesine bagli olarak yana suzuluyorlar
-    (paralaks katsayilari ve kare dongusu sureleri farkli, senkron gorunmesin diye).
-    z-index 2 — arka plan ve grain ustunde, cam sekiller ve icerik altinda.
-    Scroll dinleyicisi rAF ile bogulur, tek CSS degiskeni yazar.
-    1000px alti ve `prefers-reduced-motion`'da katman tamamen kapali
+- **Surunen yilan animasyonu** (`components/snake-trail.tsx`) — 6 kareli CSS sprite.
+  Anasayfa ve ic sayfalarin arka planinda uc yilan farkli yukseklik/olcek/yonde;
+  kaydirma ilerlemesine bagli olarak yana suzuluyorlar (paralaks katsayilari ve kare
+  dongusu sureleri farkli, senkron gorunmesin diye). Opakliklar 0,20 / 0,15 / 0,17.
+  z-index 2 — arka plan ve grain ustunde, cam sekiller ve icerik altinda.
+  Scroll dinleyicisi rAF ile bogulur, tek CSS degiskeni yazar.
+  1000px alti ve `prefers-reduced-motion`'da katman tamamen kapali
+
+> Preloader'a da ilerlemeye bagli surunen bir yilan eklenmisti; ayni gun kullanici
+> karariyla kaldirildi. Loading ekrani logo + sayac + cubuk olarak kaldi.
+> `.preloader-bar span` seçicisi `.preloader-bar-fill` sinifina donusturuldu (kalici).
 
 > Ayar dugmeleri tek yerde: `snake-trail.tsx` icindeki `SNAKES` dizisi (yukseklik,
 > genislik, baslangic konumu, kayma katsayisi, yon, dongu suresi, opaklik).
