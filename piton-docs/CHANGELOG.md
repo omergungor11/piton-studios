@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-08-08 (10)
+
+### Changed
+- **Yilan scrollbar artik kare kare, kaydirdikca ilerliyor** — zaman tabanli
+  `steps(6)` dongusu kaldirildi. Kare dogrudan kaydirma konumundan hesaplaniyor
+  (`floor(scrollY / 80) % 6`): 80 px = 1 kare, 480 px = tam sürünme dongusu.
+  Asagi kaydirinca ilerler, yukari kaydirinca geri sarar, durunca yilan da donar.
+  Hizalama `--frame * 20%` ile `background-position-y` uzerinden; `snake-crawl`
+  keyframe'iyle ayni kare sinirlarina oturuyor.
+  Ayar: `snake-scroll.tsx` icindeki `PX_PER_FRAME` (buyuk deger = daha tembel)
+- **Arka plan yilanlarindan biri yakin plana alindi.** Sadece buyutmek "yakin"
+  hissi vermiyordu; dort sinyal birden degisti: genislik 42 → 96vw, kaydirma
+  tepkisi 92 → 168vw (yakin nesne paralakstan daha cok kayar), opaklik 0,17 → 0,24
+  ve 3px bulaniklik (alan derinligi). `Snake` tipine opsiyonel `blur` alani eklendi.
+  Uzaktakiler bir tik geriye itildi (34→30vw, 26→24vw) ki mesafe acilsin
+- **Arka plan yilanlarinin kare dongusu ~%45 yavasladi**: 0,78→1,15s / 0,92→1,35s /
+  0,70→1,05s. Ucu hala farkli ritimde, senkron gorunmuyorlar
+
+> Preloader yilani (0,74s) zamana bagli kaldi — kendi baglaminda, kaydirma yok.
+
 ## 2026-08-08 (9)
 
 ### Added

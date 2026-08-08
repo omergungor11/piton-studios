@@ -28,12 +28,16 @@ type Snake = {
   /** Kare dongusu suresi (sn) — hepsi ayni ritimde olmasin */
   cycle: number;
   opacity: number;
+  /** Alan derinligi bulanikligi (px) — yakin plandaki yilan hafif odak disi */
+  blur?: number;
 };
 
 const SNAKES: Snake[] = [
-  { top: 16, width: 34, x0: -38, drift: 78, flip: false, cycle: 0.78, opacity: 0.2 },
-  { top: 47, width: 26, x0: 104, drift: -74, flip: true, cycle: 0.92, opacity: 0.15 },
-  { top: 76, width: 42, x0: -46, drift: 92, flip: false, cycle: 0.7, opacity: 0.17 },
+  // Uzak plan — kucuk, yavas kayar
+  { top: 15, width: 30, x0: -34, drift: 70, flip: false, cycle: 1.15, opacity: 0.18 },
+  { top: 44, width: 24, x0: 104, drift: -66, flip: true, cycle: 1.35, opacity: 0.14 },
+  // Yakin plan — neredeyse ekran genisliginde, en hizli kayan, hafif odak disi
+  { top: 70, width: 96, x0: -108, drift: 168, flip: false, cycle: 1.05, opacity: 0.24, blur: 3 },
 ];
 
 export default function SnakeTrail() {
@@ -82,6 +86,7 @@ export default function SnakeTrail() {
               '--sx': s.flip ? -1 : 1,
               '--cycle': `${s.cycle}s`,
               '--o': s.opacity,
+              '--blur': `${s.blur ?? 0}px`,
             } as React.CSSProperties
           }
         />

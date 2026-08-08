@@ -17,16 +17,30 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 /** Yilanin ray uzerindeki uzunlugu (px) — dondurulmus haliyle yukseklik */
 const THUMB = 150;
 
+/** Sprite'taki kare sayisi */
+const FRAMES = 6;
+
+/**
+ * Bir kare ilerlemek icin gereken kaydirma miktari (px).
+ * Yilan kendi kendine oynamiyor: kare zamana degil kaydirmaya bagli, yani
+ * hareket kullanicinin kaydirmasindan doguyor. Durunca yilan da duruyor.
+ */
+const PX_PER_FRAME = 80;
+
 export default function SnakeScroll() {
   const railRef = useRef<HTMLDivElement | null>(null);
   const dragRef = useRef(false);
   const [progress, setProgress] = useState(0);
+  const [frame, setFrame] = useState(0);
   const [scrollable, setScrollable] = useState(false);
 
   const read = useCallback(() => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
+    const y = window.scrollY;
     setScrollable(max > 40);
-    setProgress(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+    setProgress(max > 0 ? Math.min(1, Math.max(0, y / max)) : 0);
+    // Asagi kaydirinca kareler ilerler, yukari kaydirinca geri sarar
+    setFrame(Math.floor(y / PX_PER_FRAME) % FRAMES);
   }, []);
 
   useEffect(() => {
@@ -122,6 +136,7 @@ export default function SnakeScroll() {
         style={
           {
             '--p': progress,
+            '--frame': frame,
             '--thumb': `${THUMB}px`,
           } as React.CSSProperties
         }

@@ -4802,9 +4802,11 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
   transform:
     translate(-50%, calc(var(--center-fix) + var(--p) * (100vh - var(--thumb))))
     rotate(90deg);
-  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat 0 0;
+  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat;
   background-size: 100% 600%;
-  animation: snake-crawl 0.8s steps(6) infinite;
+  /* Kare zamana degil kaydirmaya bagli: --frame (0-5), her kare 20% asagi.
+     6 kare x %20 = %120, snake-crawl keyframe'iyle ayni hizalama. */
+  background-position: 0 calc(var(--frame, 0) * 20%);
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.45));
   pointer-events: none;
   opacity: 0.85;
@@ -4860,6 +4862,8 @@ body.is-snake-dragging {
   /* Yatay konum kaydirma ilerlemesine bagli; --sx yon cevirme (-1 sola bakar) */
   transform: translateX(calc(var(--x0) + var(--p) * var(--drift))) scaleX(var(--sx));
   animation: snake-crawl var(--cycle) steps(6) infinite;
+  /* Yakin plandaki yilan hafif odak disi — derinlik hissini bu tasiyor */
+  filter: blur(var(--blur, 0px));
   will-change: transform;
 }
 
