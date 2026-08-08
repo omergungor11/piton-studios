@@ -142,6 +142,92 @@
     "technologies": "Teknolojiler",
     "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
   },
+  "aboutSections": {
+    "story": {
+      "p1": "Piton Studios, 2021'de kurulmuş bağımsız bir dijital stüdyodur. Fikir aşamasından lansmana kadar uçtan uca çalışıyoruz: web tasarımı ve uygulama geliştirme, süreç otomasyonu, AI entegrasyonu ve dijital büyüme.",
+      "p2": "Startup'lardan kurumsal markalara, yerel işletmelerden uluslararası müşterilere — her projede kalite, hız ve ölçülebilir sonuç odaklı çalışırız. Teknoloji karmaşıklaştırmak için değil, sadeleştirmek için vardır."
+    },
+    "numbers": {
+      "eyebrow": "§ · Rakamlarla stüdyo",
+      "title": "Bu sayfadaki her sayı <accent>portfolyodan</accent> hesaplanıyor.",
+      "desc": "Aşağıdaki rakamlar elle yazılmadı; proje listesinden üretiliyor, dolayısıyla hiçbir zaman eskimiyor. Dağılım çubuklarının üzerine gelin.",
+      "projects": {
+        "label": "Proje",
+        "sub": "Teslim edilmiş"
+      },
+      "disciplines": {
+        "label": "Disiplin",
+        "sub": "Web'den AI'a"
+      },
+      "years": {
+        "label": "Yıl",
+        "sub": "2021'den beri"
+      },
+      "clients": {
+        "label": "Müşteri",
+        "sub": "Tekil marka"
+      },
+      "mixLabel": "İş karması",
+      "hint": "Dağılımı görmek için bir çubuğun üzerine gelin.",
+      "more": "+{count} proje daha"
+    },
+    "timeline": {
+      "eyebrow": "§ · Zaman çizelgesi",
+      "title": "Web ile başladık, <accent>yazılıma ve AI'a</accent> açıldık.",
+      "desc": "Her yıl, o yıl teslim edilen işlerden okunuyor. Yıl noktalarının üzerine gelin.",
+      "trackLabel": "Yıllar",
+      "projectCount": "{count, plural, =0 {portfolyoda kayıt yok} other {# proje}}",
+      "noProjects": "Bu yıla ait portfolyo kaydı yok — işler kayıt altına alınmaya sonraki yıllarda başlandı.",
+      "notes": {
+        "2021": "Stüdyonun kuruluş yılı.",
+        "2022": "Portfolyodaki en eski kayıt: uçtan uca bir e-ticaret altyapısı.",
+        "2024": "Web işlerinin yanına simülasyon ve görselleştirme girdi.",
+        "2025": "Hacmin sıçradığı yıl. AI/ML ve SaaS işleri ilk kez portfolyoya girdi.",
+        "2026": "Web App ve otomasyon payı büyüdü — karma özel yazılıma kaydı."
+      }
+    },
+    "capabilities": {
+      "eyebrow": "§ · Yetenek haritası",
+      "title": "Neyi <accent>kaç kez</accent> yaptığımız.",
+      "desc": "Etiketler proje kayıtlarından geliyor; çip büyüklüğü kaç projede kullanıldığını gösteriyor. En az iki projede geçenler listede. Bir çipin üzerine gelin.",
+      "projectCount": "{count, plural, other {# proje}}",
+      "hint": "Hangi projelerde kullanıldığını görmek için bir çipin üzerine gelin."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "items": [
+        {
+          "title": "Hız",
+          "desc": "Net zaman çizelgesi, MVP'den lansmana hızlı geçiş. Zamanında teslimat standart, istisna değil."
+        },
+        {
+          "title": "Kalite",
+          "desc": "Piksel hassasiyetinde tasarım, test edilmiş kod. Her satır düşünülmüş, her ekran denenmiş."
+        },
+        {
+          "title": "Şeffaflık",
+          "desc": "Her adımda net iletişim. Gizli maliyet, sürpriz gecikme yok — ne söylediysek onu yapıyoruz."
+        },
+        {
+          "title": "Sonuç",
+          "desc": "Güzel görünmek bonus. Asıl hedef iş probleminizi çözmek ve büyümenizi hızlandırmak."
+        }
+      ]
+    },
+    "team": {
+      "title": "Takım",
+      "role": "Kurucu & Geliştirici",
+      "desc": "Full-stack geliştirici ve dijital ürün tasarımcısı. Next.js, TypeScript, Python ve AI entegrasyonu üzerine çalışıyor. Kuruluştan bu yana yerel ve uluslararası pazarlarda portfolyodaki işlerin tamamını yürüttü."
+    },
+    "clients": {
+      "title": "Güvenilir Markalar"
+    },
+    "cta": {
+      "title": "Birlikte çalışalım.",
+      "desc": "Projenizi dinlemek için buradayız — fikir aşamasından lansmana kadar.",
+      "btn": "İletişime Geç"
+    }
+  },
   "spark": {
     "eyebrow": "Ücretsiz Danışma · Hızlı Yanıt",
     "title": "Fikrinizi & Projenizi <accent>Konuşalım</accent>",

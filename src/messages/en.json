@@ -143,6 +143,92 @@
     "technologies": "Technologies",
     "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
   },
+  "aboutSections": {
+    "story": {
+      "p1": "Piton Studios is an independent digital studio founded in 2021. We work end to end, from idea to launch: web design and application development, process automation, AI integration and digital growth.",
+      "p2": "From startups to established brands, from local businesses to international clients — every project is run for quality, speed and measurable outcomes. Technology exists to simplify, not to complicate."
+    },
+    "numbers": {
+      "eyebrow": "§ · The studio in numbers",
+      "title": "Every number on this page is <accent>computed from the portfolio</accent>.",
+      "desc": "None of the figures below are typed by hand; they are derived from the project list, so they never go stale. Hover the distribution bars.",
+      "projects": {
+        "label": "Projects",
+        "sub": "Delivered"
+      },
+      "disciplines": {
+        "label": "Disciplines",
+        "sub": "Web to AI"
+      },
+      "years": {
+        "label": "Years",
+        "sub": "Since 2021"
+      },
+      "clients": {
+        "label": "Clients",
+        "sub": "Distinct brands"
+      },
+      "mixLabel": "Work mix",
+      "hint": "Hover a bar to see the breakdown.",
+      "more": "+{count} more"
+    },
+    "timeline": {
+      "eyebrow": "§ · Timeline",
+      "title": "We started in web and opened up to <accent>software and AI</accent>.",
+      "desc": "Each year is read from the work delivered in it. Hover the year markers.",
+      "trackLabel": "Years",
+      "projectCount": "{count, plural, =0 {nothing on record} one {# project} other {# projects}}",
+      "noProjects": "No portfolio record for this year — we only began cataloguing work in later years.",
+      "notes": {
+        "2021": "The year the studio was founded.",
+        "2022": "The oldest record in the portfolio: an end-to-end e-commerce build.",
+        "2024": "Simulation and visualisation work joined the web projects.",
+        "2025": "The year volume jumped. AI/ML and SaaS work entered the portfolio for the first time.",
+        "2026": "Web app and automation grew as a share — the mix shifted toward custom software."
+      }
+    },
+    "capabilities": {
+      "eyebrow": "§ · Capability map",
+      "title": "What we have built, and <accent>how many times</accent>.",
+      "desc": "Tags come from the project records; chip size shows how many projects used each one. Anything used on at least two projects is listed. Hover a chip.",
+      "projectCount": "{count, plural, one {# project} other {# projects}}",
+      "hint": "Hover a chip to see which projects used it."
+    },
+    "values": {
+      "title": "Our values",
+      "items": [
+        {
+          "title": "Speed",
+          "desc": "A clear schedule and a fast path from MVP to launch. Delivering on time is the standard, not the exception."
+        },
+        {
+          "title": "Quality",
+          "desc": "Pixel-accurate design and tested code. Every line considered, every screen tried."
+        },
+        {
+          "title": "Transparency",
+          "desc": "Clear communication at every step. No hidden costs, no surprise delays — we do what we said we would."
+        },
+        {
+          "title": "Outcomes",
+          "desc": "Looking good is a bonus. The point is to solve your business problem and speed up your growth."
+        }
+      ]
+    },
+    "team": {
+      "title": "Team",
+      "role": "Founder & Developer",
+      "desc": "Full-stack developer and digital product designer working across Next.js, TypeScript, Python and AI integration. Has run every project in this portfolio since the studio was founded, for local and international clients."
+    },
+    "clients": {
+      "title": "Trusted by"
+    },
+    "cta": {
+      "title": "Let's work together.",
+      "desc": "We are here to hear about your project — from first idea to launch.",
+      "btn": "Get in touch"
+    }
+  },
   "spark": {
     "eyebrow": "Free Consultation · Fast Response",
     "title": "Let's Talk About Your <accent>Idea & Project</accent>",

@@ -24,7 +24,7 @@ export default function ProjectsPageClient() {
   return (
     <PageShell>
       {/* Hero */}
-      <section className="sp-hero">
+      <section className="sp-hero is-wide">
         <div className="sp-hero-eyebrow">{t('title')}</div>
         <h1 className="sp-hero-title">
           {t.rich('headline', {
