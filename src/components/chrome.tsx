@@ -54,6 +54,12 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
+          <Link href="/blog" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('blog')}</span>
+              <span className="dup">{t('blog')} ↗</span>
+            </span>
+          </Link>
           <Link href="/about" className="item" data-cursor="hover">
             <span className="row">
               <span>{t('about')}</span>
@@ -95,6 +101,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
             {([
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
+              { href: '/blog',     label: t('blog')     },
               { href: '/about',    label: t('about')    },
             ] as const).map((item, i) => (
               <Link

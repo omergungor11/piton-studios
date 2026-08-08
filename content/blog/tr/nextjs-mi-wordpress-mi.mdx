@@ -1,0 +1,191 @@
+---
+title: "Next.js mi WordPress mi: kurumsal siteler için karar matrisi"
+description: "İki teknoloji arasındaki gerçek fark hız değil, sahiplik modeli. Karar matrisi, üç yıllık maliyet karşılaştırması, güvenlik yükü ve hangi projede hangisinin doğru olduğu."
+date: 2026-08-08
+tags: ["next.js", "wordpress", "web tasarım", "performans"]
+author: "Piton Studios"
+draft: false
+translationKey: nextjs-vs-wordpress
+faq:
+  - q: "Next.js her zaman WordPress'ten daha mı iyi?"
+    a: "Hayır. İçeriği teknik olmayan bir ekip tarafından günlük olarak güncellenen, bütçesi sınırlı ve standart bir yapıya sahip siteler için WordPress hâlâ doğru seçimdir. Next.js, özel iş mantığı, yüksek performans hedefi, çok dillilik veya ürünleşme yönü olan projelerde öne geçer. Soru hangisinin iyi olduğu değil, projenin hangi tarafa düştüğü."
+  - q: "WordPress sitem yavaş, Next.js'e geçersem hızlanır mı?"
+    a: "Genellikle evet, ama sebep teknoloji değil mimari. WordPress her istekte PHP çalıştırıp veritabanına gider; Next.js ile statik üretilen bir sayfa CDN'den hazır HTML olarak servis edilir. Aynı kazancı WordPress tarafında da tam sayfa önbellek ve eklenti temizliğiyle kısmen elde edebilirsiniz — geçiş kararı yalnızca hız için verilirse pahalı bir çözüm olur."
+  - q: "Next.js'te içeriği kim günceller, panel olmadan nasıl olacak?"
+    a: "Üç seçenek var: içerik dosyalarda tutulur ve geliştirici günceller (en ucuz, en az bakım), headless CMS bağlanır (Sanity, Contentful, Payload gibi), ya da WordPress arkada headless olarak kalıp yalnızca içerik API'si olarak kullanılır. Üçü de mümkün; seçim güncelleme sıklığına bağlı."
+  - q: "Migrasyon ne kadar sürer ve SEO'ya zarar verir mi?"
+    a: "Orta ölçekli bir kurumsal site için tipik olarak 4-8 hafta. SEO kaybı, URL yapısı korunur, 301 yönlendirmeler kurulur ve meta veri birebir taşınırsa önlenebilir. Zarar veren şey teknoloji değişimi değil, planlanmamış URL değişimidir."
+  - q: "Güvenlik açısından aradaki fark ne kadar büyük?"
+    a: "Statik üretilen bir sitede çalışan bir sunucu tarafı ve veritabanı olmadığı için klasik saldırı yüzeyi neredeyse yoktur. WordPress'te ise güvenlik, çekirdek ve eklentilerin güncel tutulmasına bağlı sürekli bir bakım işidir. Bu, üç yıllık toplam maliyette görünür bir kalemdir."
+---
+
+"Next.js mi WordPress mi" sorusu genelde hız üzerinden tartışılıyor. Oysa iki teknoloji arasındaki
+asıl fark performans değil, **sahiplik modeli**: WordPress size hazır bir sistem ve onu güncel tutma
+sorumluluğu verir; Next.js size boş bir sayfa ve tam kontrol verir. Doğru seçim, ekibinizin bu iki
+sorumluluktan hangisini taşıyabileceğine bağlı.
+
+Bu yazıda kararı duygusal değil ölçülebilir hâle getiren bir matris kuruyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Fark hızdan değil mimariden gelir: WordPress her istekte çalışır, statik Next.js sayfası zaten hazırdır.",
+    "WordPress sık içerik güncelleyen, standart yapılı, sınırlı bütçeli projelerde hâlâ doğru seçimdir.",
+    "Next.js özel iş mantığı, çok dillilik, performans hedefi ve ürünleşme yönü olan projelerde öne geçer.",
+    "Üç yıllık maliyette belirleyici kalem geliştirme değil, güvenlik ve eklenti bakımıdır.",
+    "Migrasyonda SEO'yu bozan şey teknoloji değişimi değil, planlanmamış URL değişimidir.",
+  ]}
+/>
+
+## İki sistem aslında ne yapıyor
+
+### WordPress: istek anında üretim
+
+Bir ziyaretçi sayfayı açtığında PHP çalışır, veritabanına birkaç sorgu gider, tema ve eklentiler
+HTML'i o anda oluşturur. Bu esneklik sağlar — panelden değiştirdiğiniz her şey anında yayına girer —
+ama her istek bir maliyet ve her eklenti bir risk demektir.
+
+### Next.js: build anında üretim
+
+Sayfa, kod yayına alınırken bir kez üretilir ve CDN'e konur. Ziyaretçi geldiğinde çalışan bir şey
+yoktur; hazır dosya servis edilir. Veritabanı gerektiren sayfalar istisnadır ve bilinçli olarak
+seçilir. Bu yaklaşımın performans tarafını
+[hızlı web sitesi nasıl yapılır](/tr/blog/hizli-web-sitesi-nasil-yapilir) yazısında ayrıntılı
+anlattık.
+
+<Callout type="info" title="Bu bir taraf tutma yazısı değil">
+  Portfolyomuzda her ikisi de var. [EKH Yapı](/tr/projeler/ekh-yapi) ve
+  [Ambalaj Cini](/tr/projeler/ambalaj-cini) WordPress tabanlı;
+  [Nexos Investment](/tr/projeler/nexos-investment) sıfırdan Next.js. Seçimi projenin ihtiyacı
+  belirledi, tercihimiz değil.
+</Callout>
+
+## Karar matrisi
+
+Aşağıdaki tabloda satırları kendi projeniz için okuyun. Çoğunluk hangi sütundaysa cevabınız odur.
+
+| Kriter | WordPress lehine | Next.js lehine |
+|---|---|---|
+| İçerik güncelleme sıklığı | Günlük, teknik olmayan ekip | Aylık veya nadiren |
+| Sayfa yapısı | Standart kurumsal / blog | Özel akış, hesaplama, iş mantığı |
+| Dil sayısı | Tek dil | 2+ dil, hreflang gereksinimi |
+| Performans hedefi | "Yeterince hızlı" | Ölçülen bütçe, Core Web Vitals hedefi |
+| Entegrasyon | Hazır eklenti var | Özel API, CRM, ERP |
+| Bütçe | Düşük başlangıç | Orta / yüksek başlangıç |
+| Bakım kapasitesi | Ajans veya bakım paketi var | Minimum bakım isteniyor |
+| 3+ yıllık ölçek | Site aynı kalacak | Ürünleşme, panel, yeni modüller |
+
+## Performans farkı nereden geliyor
+
+Aşağıdaki grafik ölçülmüş bir kıyaslama değil, **tipik senaryoların şematik karşılaştırmasıdır**.
+Gerçek rakamlar temaya, eklenti sayısına, hosting'e ve önbellek kurulumuna göre büyük ölçüde değişir.
+
+<BarChart
+  title="Tipik ilk yükleme senaryoları (şematik)"
+  caption="Sunucu yanıt süresi + ilk anlamlı içerik, milisaniye. Ölçüm değil; kurulumların tipik davranışını gösterir."
+  unit=" ms"
+  max={3000}
+  data={[
+    { label: "Statik Next.js (CDN)", value: 450, note: "Hazır HTML", highlight: true },
+    { label: "WordPress + tam sayfa önbellek", value: 900, note: "Önbellek isabetinde" },
+    { label: "WordPress + hafif tema", value: 1600, note: "Önbelleksiz" },
+    { label: "WordPress + sayfa kurucu", value: 2800, note: "Eklenti yüklü kurulum" },
+  ]}
+/>
+
+Dikkat edilmesi gereken nokta: ikinci satır. **Doğru yapılandırılmış bir WordPress, kötü yapılmış bir
+Next.js sitesinden hızlıdır.** Teknoloji tek başına performans garantisi vermez; garantiyi veren şey
+bir performans bütçesine bağlı kalmaktır.
+
+## Üç yıllık toplam maliyet
+
+Başlangıç faturası genelde WordPress lehine, üç yıllık toplam çoğu zaman değil.
+
+<TrendChart
+  title="Üç yıllık kümülatif sahip olma maliyeti (senaryo)"
+  caption="Bin euro cinsinden kümülatif. WordPress 6.000 €, Next.js 12.000 € başlangıç varsayımıyla; gerçek rakamlar kapsama göre değişir."
+  unit="k"
+  max={24}
+  labels={["Lansman", "1. yıl", "2. yıl", "3. yıl"]}
+  series={[
+    { name: "Next.js (statik)", points: [12, 13.4, 14.8, 16.2] },
+    { name: "WordPress (eklenti tabanlı)", points: [6, 10.2, 14.4, 18.6], muted: true },
+  ]}
+/>
+
+Makası açan kalem geliştirme değil, **bakım**: eklenti ve çekirdek güncellemeleri, uyumsuzluk
+sonrası düzeltmeler, güvenlik olayları ve hosting. Bu kalemlerin detaylı dökümü
+[kurumsal web sitesi maliyeti](/tr/blog/kurumsal-web-sitesi-maliyeti) yazısında.
+
+<StatGrid
+  items={[
+    { value: "0", label: "Statik sitede çalışan sunucu tarafı", note: "Saldırı yüzeyi" },
+    { value: "Aylık", label: "Eklenti ve çekirdek güncelleme ritmi", note: "WordPress bakımı" },
+    { value: "3-8 hf", label: "Tipik migrasyon süresi", note: "Orta ölçekli site" },
+  ]}
+/>
+
+## Next.js'te içeriği kim yönetir
+
+Bu, WordPress'ten geçişte en çok sorulan soru ve üç geçerli cevabı var.
+
+| Yaklaşım | Kime uygun | Maliyet | Sınırı |
+|---|---|---|---|
+| İçerik kod deposunda (MDX / TS) | Ayda birkaç güncelleme, teknik ekip yakın | En düşük | Panel yok, geliştirici gerekir |
+| Headless CMS (Sanity, Payload vb.) | Düzenli içerik üreten pazarlama ekibi | Orta + abonelik | Ek servis bağımlılığı |
+| Headless WordPress | Mevcut WordPress alışkanlığı korunacaksa | Orta | İki sistemi birden bakmak |
+
+Bu sitenin kendisi birinci yaklaşımı kullanıyor: içerik dosyalarda, veritabanı yok. Bu blog yazısı
+dahil her şey kod deposunda duruyor ve her yayın bir commit. Aylık birkaç güncelleme yapan bir
+kurumsal site için bu, panel bakımından tamamen kurtaran en ucuz modeldir.
+
+## Ne zaman WordPress'te kalın
+
+1. **İçeriği pazarlama ekibi günlük güncelliyorsa** ve headless CMS bütçesi yoksa.
+2. **Site standart bir yapıdaysa** — kurumsal tanıtım, blog, basit katalog.
+3. **Mevcut site çalışıyorsa ve şikâyet performans değilse.** Çalışan bir sistemi teknoloji modası
+   için değiştirmek, en pahalı karar tipidir.
+4. **Bütçe tek seferlik ve sınırlıysa.** Düşük başlangıçla yayına çıkıp sonra büyümek meşru bir
+   stratejidir.
+
+## Ne zaman Next.js'e geçin
+
+1. **Özel iş mantığı varsa** — hesaplama, rol bazlı erişim, otomatik belge üretimi. Bu ihtiyaç
+   eklentiyle karşılanmaya çalışıldığında sistem kırılganlaşır.
+2. **Çok dilli yapı gerekiyorsa.** WordPress'te çok dil bir eklenti katmanıdır; Next.js'te
+   yönlendirme sisteminin parçasıdır. Detay:
+   [çok dilli web sitesi kurmak](/tr/blog/cok-dilli-web-sitesi-hreflang-i18n).
+3. **Performans ölçülen bir hedefse.** Core Web Vitals'ı sözleşmeye yazacaksanız statik üretim en
+   öngörülebilir yoldur.
+4. **Site zamanla ürüne dönüşecekse.** Panel, kullanıcı hesapları ve API'ler yol haritasındaysa
+   başlangıçtan doğru temeli kurmak ucuza gelir. Bu yönü
+   [web uygulaması hizmetimizde](/tr/hizmetler/web-app) anlattık.
+
+## Migrasyonu SEO'yu bozmadan yapmak
+
+<Callout type="warn" title="Sıra bozulursa trafik kaybı kalıcı olabilir">
+  Migrasyonda kaybedilen trafiğin neredeyse tamamı üç hatadan gelir: URL yapısının değişmesi,
+  301 yönlendirmelerin eksik kurulması ve meta verinin taşınmaması. Üçü de planlanabilir.
+</Callout>
+
+| Adım | Yapılacak | Kontrol |
+|---|---|---|
+| 1 | Mevcut tüm URL'lerin envanteri | Sitemap + Search Console dışa aktarımı |
+| 2 | Yeni URL eşleşme tablosu | Değişen her URL için 301 |
+| 3 | Meta başlık, açıklama, canonical taşıma | Sayfa sayfa karşılaştırma |
+| 4 | Yapılandırılmış veri yeniden kurulumu | Schema doğrulama |
+| 5 | Lansman sonrası 30 gün izleme | Konum ve tarama hatası takibi |
+
+Dördüncü adım sık atlanıyor: WordPress'te schema çoğu zaman bir SEO eklentisinden geliyordu ve
+migrasyonla birlikte kayboluyor. Yeniden kurulumun nasıl yapıldığını
+[SEO ve GEO yazısında](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo) tablo hâlinde verdik.
+
+## Sonuç
+
+Doğru soru "hangisi daha iyi" değil, **"önümüzdeki üç yılda bu site ne olacak"**. Aynı kalacaksa ve
+içerik sık değişecekse WordPress makul bir karardır. Büyüyecek, özel işlev kazanacak, çok dilli
+olacak veya performansı ölçülecekse Next.js baştan daha ucuza gelir.
+
+Projenizin hangi tarafa düştüğünden emin değilseniz mevcut sitenizi birlikte gözden geçirelim —
+[iletişim sayfasından](/tr/iletisim) yazın. Her iki teknolojiyle yaptığımız işler
+[projeler sayfasında](/tr/projeler).

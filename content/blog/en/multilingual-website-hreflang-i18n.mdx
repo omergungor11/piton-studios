@@ -1,0 +1,222 @@
+---
+title: "Building a multilingual website: hreflang, i18n architecture and content upkeep"
+description: "Adding a second language is an architectural decision, not a translation job. URL strategy, hreflang setup, preventing translation debt, and the seven mistakes that break multilingual SEO."
+date: 2026-08-07
+tags: ["multilingual", "seo", "i18n"]
+author: "Piton Studios"
+draft: false
+translationKey: multilingual-site
+faq:
+  - q: "Subdirectory, subdomain or separate domain?"
+    a: "For most corporate sites the subdirectory (site.com/en/, site.com/tr/) is right: it accumulates authority on one domain, is the simplest to set up, and makes hreflang least error-prone. Separate domains only make sense when each country has its own legal entity, its own pricing and its own team."
+  - q: "Can I use machine translation?"
+    a: "Publishing raw machine translation harms your visibility in that language; both search engines and language models can tell low-quality translation apart. The model that works is machine translation as a draft, reviewed by a native-speaking editor — noticeably cheaper than translating from scratch."
+  - q: "Do I have to translate every page into every language?"
+    a: "No, and usually you should not. Service, reference and contact pages should exist in every language; blog content can legitimately differ by language. What matters is not listing a language in hreflang when no counterpart exists — a tag pointing at a missing translation is an error."
+  - q: "How do I know my hreflang is wrong?"
+    a: "Three classic symptoms: language targeting errors in Search Console, the wrong language ranking for a query, and two languages cannibalising each other. The technical check is simple — every page must list all languages including itself, tags must be reciprocal, and an x-default must exist."
+  - q: "How much upkeep does a multilingual site add?"
+    a: "The real burden is not translation but synchronisation: a change made in one language that never reaches the others builds translation debt over time. The cheapest way to prevent it is a check script that reports missing translations as a build error."
+---
+
+Adding a second language usually starts as "let's get the copy translated" and, six months later,
+becomes two sites that no longer match. Multilingual support is an **architectural decision**: unless
+the URL structure, routing, content model and publishing process are built for it from the start,
+translation debt accumulates.
+
+This article walks through the decisions that keep a three-language site standing — including this
+site's own setup.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Multilingual support is a URL and content architecture decision, not a translation job.",
+    "For most corporate sites the right URL strategy is the subdirectory (site.com/en/).",
+    "hreflang works on three rules: reciprocity, self-inclusion, x-default.",
+    "Listing a language in hreflang when the page has no counterpart is an error.",
+    "The only thing that prevents translation debt is an automated check that fails the build.",
+  ]}
+/>
+
+## First decide: which languages, and why
+
+Languages are not free. Each one adds translation, editorial review, update synchronisation and
+measurement overhead. So the list should be built from data, not from "it would be nice to have".
+
+| Signal | Where to look | What it tells you |
+|---|---|---|
+| Language split of current traffic | Analytics — browser language, country | An audience already arriving and not understanding |
+| Search volume | Key terms in the target language | Whether a market exists |
+| Source of sales | CRM / inbound enquiries | Which language the money comes from |
+| Competitive picture | How many languages rivals run | A gap or an obligation |
+| Operational capacity | Is there someone to reply in that language | Can you serve the demand |
+
+That last row is the most-skipped and most expensive. If you open a Russian page and cannot answer an
+enquiry in Russian, what you have gained is disappointment.
+
+<Callout type="info" title="Our own setup">
+  This site runs in three languages: Turkish, English and Russian. The choice is not arbitrary — the
+  Turkish and Northern Cyprus market speaks Turkish, international clients speak English, and the
+  real estate and tourism sector in Northern Cyprus speaks Russian. All three exist because we can
+  serve enquiries in all three.
+</Callout>
+
+## URL strategy: three options, one usual answer
+
+| Strategy | Example | Pro | Con |
+|---|---|---|---|
+| Subdirectory | `site.com/en/services` | Authority on one domain, simplest setup | Weaker geo-targeting |
+| Subdomain | `en.site.com/services` | Separate hosting possible | Authority splits, setup more complex |
+| Separate domain | `site.co.uk` | Strong local signal | Every domain builds authority from zero |
+| Parameter | `site.com?lang=en` | — | Crawlability problems; do not use |
+
+For the vast majority of corporate sites the answer is the **subdirectory**. A separate domain is only
+justifiable with a distinct legal entity, price list and team per country.
+
+### Translating the path segments too
+
+If you chose subdirectories, one more decision follows: should path names be translated? On this site
+they are — `/tr/hizmetler`, `/en/services`, `/ru/services` — because for a Turkish-speaking user a
+Turkish URL is both more readable and a mild relevance signal.
+
+```ts
+// Pathname mapping with next-intl — the language switcher lands on the right counterpart
+'/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
+'/projects': { tr: '/projeler',  en: '/projects', ru: '/projects' },
+```
+
+A caveat: translating individual project or service **slugs** is usually needless complexity. Translate
+the segment (`/services`), keep the record identifier (`/seo-geo`) stable.
+
+## hreflang: three rules
+
+hreflang tells a search engine "this page has counterparts in these languages". Set up wrong, it
+either does nothing or promotes the wrong language. Three rules are enough:
+
+1. **Reciprocity.** If page A points at B, B must point back at A. One-way tags are ignored.
+2. **Self-inclusion.** Every page must list its own language as well.
+3. **x-default.** Specify which version to use when no match applies.
+
+```html
+<link rel="alternate" hrefLang="tr" href="https://site.com/tr/hizmetler" />
+<link rel="alternate" hrefLang="en" href="https://site.com/en/services" />
+<link rel="alternate" hrefLang="ru" href="https://site.com/ru/services" />
+<link rel="alternate" hrefLang="x-default" href="https://site.com/tr/hizmetler" />
+```
+
+<Callout type="warn" title="The most common mistake">
+  Listing all three languages in hreflang when a blog post only exists in two. A tag pointing at a
+  missing page can cause the whole cluster to be ignored. The correct behaviour is to generate tags
+  from the translations that actually exist.
+</Callout>
+
+On this site blog posts are matched through a `translationKey` field and hreflang is emitted **only
+for languages that genuinely exist**. We covered the SEO counterpart of the same logic in
+[the SEO to GEO article](/en/blog/search-visibility-in-the-ai-era-seo-to-geo).
+
+## Translation debt: this is where the cost lives
+
+The real problem with multilingual sites is not the first translation but the second year. The Turkish
+page gets updated, the English one does not; a new service is added, its Russian version is forgotten.
+Six months later you have three different sites.
+
+<TrendChart
+  title="How translation debt accumulates: controlled versus uncontrolled"
+  caption="Count of missing or stale translations. A scenario model — not a measurement, but the trend we observe in projects with and without a check script."
+  max={40}
+  labels={["Launch", "Month 3", "Month 6", "Month 12", "Month 18"]}
+  series={[
+    { name: "No automated check", points: [0, 6, 14, 27, 38], muted: true },
+    { name: "Missing translations fail the build", points: [0, 1, 2, 2, 3] },
+  ]}
+/>
+
+The fix is not complicated: **a check that catches missing translations before they ship.** On this
+site `pnpm content:check` does exactly that — it compares 210 content fields across three languages
+and exits with code 1 if anything is missing. That script is what found two missing translations the
+first time it ran.
+
+```bash
+$ pnpm content:check
+tr: works 49/49, stories 6/6, servicesList 15/15  ✓
+en: works 49/49, stories 6/6, servicesList 15/15  ✓
+ru: works 49/49, stories 6/6, servicesList 15/15  ✓
+Total checked: 210 — Problems: 0
+```
+
+## Content model: what to translate
+
+Translating everything is unnecessary and usually wrong.
+
+<BarChart
+  title="Translation priority by content type"
+  caption="Priority out of 10 — our own assessment based on contribution to conversion on corporate sites."
+  max={10}
+  data={[
+    { label: "Service pages", value: 10, note: "Mandatory in every language", highlight: true },
+    { label: "Contact and forms", value: 10, note: "Including error messages" },
+    { label: "Reference / project pages", value: 8, note: "A summary translation may suffice" },
+    { label: "Blog content", value: 6, note: "Can legitimately differ by language" },
+    { label: "Legal texts", value: 5, note: "Per local regulation" },
+  ]}
+/>
+
+The thing to watch on the blog side: a post does not need a counterpart in every language, but the
+counterparts that do exist must be **translations of one another**. Matching different articles under
+the same `translationKey` misinforms hreflang.
+
+## Seven common mistakes
+
+1. **Automatic language redirection.** Force-redirecting by browser language breaks both crawlers and
+   users. Suggest a language; do not impose one.
+2. **Using flags for languages.** A flag represents a country, not a language. A German-speaking
+   Austrian should not have to click a German flag.
+3. **Translating only the home page.** A site with untranslated inner pages is invisible in that
+   language's search results.
+4. **Not updating the `lang` attribute.** `<html lang="en">` must change per language — accessibility
+   tools and screen readers rely on it.
+5. **Forgetting to translate metadata.** If title and description stay in Turkish, the page shows up
+   in Turkish in search results even when the content is English.
+6. **Hard-coding date, currency and number formats.** `1.500,00 ₺` and `€1,500.00` are not the same
+   number; formatting must follow the locale.
+7. **A language switcher that dumps you on the home page.** A user switching language on a service
+   page should land on that same service in the new language.
+
+The seventh needs pathname mapping in technical terms — on this site, switching language across
+[the service pages](/en/services) keeps you on the same page.
+
+## Measurement: look per language
+
+Total traffic is a misleading metric on a multilingual site. Each language is a separate market and
+should be reported separately.
+
+<StatGrid
+  items={[
+    { value: "3", label: "Segments to report separately", note: "Each language a market" },
+    { value: "1", label: "Shared conversion definition", note: "Comparability" },
+    { value: "x-default", label: "Where an unmatched visitor lands", note: "Choose deliberately" },
+  ]}
+/>
+
+Set a separate filter per language in Search Console and make language the primary segment in
+analytics. If one language converts at half the rate of another, the problem is either translation
+quality or offer fit in that market — looking at the total hides it.
+
+## An example
+
+On [Nexos Investment](/en/projects/nexos-investment), multilingual support was not a layer added later
+but part of the architecture: routing with `next-intl`, automated multilingual proposal generation
+from listing data, and per-language content management in one system. The same need surfaces on real
+estate projects aimed at international audiences, such as
+[Homes in Mediterranean](/en/projects/homes-in-mediterranean) and
+[Arslan Estates](/en/projects/arslan-estates).
+
+## Conclusion
+
+The hard part of a multilingual site is not translating it but **keeping the translations in sync over
+time**. A correct URL strategy, rule-compliant hreflang and a check that catches gaps at build
+time — with those three in place, a second and third language become extra markets rather than extra
+maintenance.
+
+If you want to talk through how many languages to start with, [write to us](/en/contact); we handle
+the technical side as part of our [SEO & GEO service](/en/services/seo-geo).
