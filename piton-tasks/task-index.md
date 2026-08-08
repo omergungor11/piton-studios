@@ -80,7 +80,7 @@
 | TASK-032 | 3 blog yazisi daha × 3 dil (9 MDX): Next.js vs WordPress, cok dilli site/hreflang, e-ticaret CRO | L | COMPLETED | `d50eeb8` |
 | TASK-033 | Anasayfa nav'ina Blog linki (chrome.tsx masaustu + mobil) — yalnizca ic sayfalarda vardi | S | COMPLETED | `d50eeb8` |
 | TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `1fbce47` |
-| TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `PENDING` |
+| TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `cae515a` |
 
 ---
 
