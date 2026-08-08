@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 5 | 5 | 0 | 0 | 0 |
-| **Total** | | **34** | **34** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 6 | 6 | 0 | 0 | 0 |
+| **Total** | | **35** | **35** | **0** | **0** | **0** |
 
-**Progress**: 34/34 (100%) ✓
+**Progress**: 35/35 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -80,6 +80,7 @@
 | TASK-032 | 3 blog yazisi daha × 3 dil (9 MDX): Next.js vs WordPress, cok dilli site/hreflang, e-ticaret CRO | L | COMPLETED | `d50eeb8` |
 | TASK-033 | Anasayfa nav'ina Blog linki (chrome.tsx masaustu + mobil) — yalnizca ic sayfalarda vardi | S | COMPLETED | `d50eeb8` |
 | TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `1fbce47` |
+| TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `PENDING` |
 
 ---
 

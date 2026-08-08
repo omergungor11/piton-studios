@@ -2753,6 +2753,237 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
   .pp-reel-video { aspect-ratio: 16 / 9; }
 }
 
+/* Projects page — etki paneli (interaktif sonuc grafigi) */
+.ip-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 48px;
+  --mx: 50%;
+  --my: 0%;
+}
+.ip-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    340px circle at var(--mx) var(--my),
+    var(--accent-soft),
+    transparent 70%
+  );
+  opacity: 0.55;
+  transition: opacity 400ms ease;
+}
+.ip-panel:hover .ip-glow { opacity: 0.9; }
+
+.ip-head { position: relative; z-index: 1; margin-bottom: 26px; max-width: 60ch; }
+.ip-eyebrow {
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
+}
+.ip-title {
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 10px;
+}
+.ip-title .em { font-style: italic; color: var(--accent); }
+.ip-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+.ip-body {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Boyut secici */
+.ip-dims { display: flex; flex-direction: column; gap: 4px; }
+.ip-dim {
+  display: grid;
+  grid-template-columns: 30px 1fr 14px;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 220ms ease, border-color 220ms ease, transform 320ms cubic-bezier(.2,.8,.2,1);
+}
+.ip-dim:hover { background: rgba(255,255,255,0.05); }
+html[data-theme="light"] .ip-dim:hover { background: rgba(0,0,0,0.035); }
+.ip-dim.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+.ip-dim-icon {
+  display: grid; place-items: center;
+  width: 30px; height: 30px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  transition: color 220ms ease, border-color 220ms ease;
+}
+.ip-dim-icon svg { width: 15px; height: 15px; }
+.ip-dim.is-active .ip-dim-icon { color: var(--accent); border-color: var(--accent); }
+.ip-dim-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.ip-dim-label {
+  font-size: 9px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--muted);
+}
+.ip-dim.is-active .ip-dim-label { color: var(--ink-soft); }
+.ip-dim-head {
+  font-size: 13px; line-height: 1.3; color: var(--ink); letter-spacing: -0.01em;
+}
+.ip-dim-arrow { font-size: 12px; color: var(--muted); }
+.ip-dim.is-active .ip-dim-arrow { color: var(--accent); }
+
+/* Grafik */
+.ip-chart { min-width: 0; }
+.ip-svg {
+  display: block;
+  width: 100%; height: auto;
+  touch-action: pan-y;
+  overflow: visible;
+}
+.ip-grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 5; }
+.ip-tick {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  fill: var(--muted);
+  transition: fill 200ms ease;
+}
+.ip-tick.is-active { fill: var(--accent); }
+
+.ip-gap {
+  fill: var(--accent);
+  opacity: 0.13;
+  animation: ip-fade 520ms ease both;
+}
+.ip-line { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ip-line.is-us {
+  stroke: var(--accent);
+  stroke-width: 2.4;
+  stroke-dasharray: 1;
+  animation: ip-draw 720ms cubic-bezier(.2,.8,.2,1) both;
+}
+.ip-line.is-typical {
+  stroke: var(--muted);
+  stroke-width: 1.4;
+  stroke-dasharray: 0.012 0.012;
+  animation: ip-fade 520ms ease both;
+}
+.ip-dot { transition: r 180ms ease; }
+.ip-dot.is-us { fill: var(--accent); }
+.ip-dot.is-typical { fill: var(--muted); }
+.ip-dot.is-active.is-us { filter: drop-shadow(0 0 6px var(--accent)); }
+.ip-scrub {
+  stroke: var(--accent);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+  opacity: 0.5;
+  transition: transform 260ms cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes ip-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ip-fade {
+  from { opacity: 0; }
+}
+
+/* Okuma paneli */
+.ip-readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.ip-readout-when {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--accent);
+}
+.ip-readout-rows { display: flex; flex-direction: column; gap: 6px; flex: 1 1 190px; }
+.ip-readout-row { display: flex; align-items: center; gap: 8px; }
+.ip-swatch { width: 14px; height: 2px; border-radius: 2px; flex: none; }
+.ip-readout-row.is-us .ip-swatch { background: var(--accent); }
+.ip-readout-row.is-typical .ip-swatch {
+  background: repeating-linear-gradient(90deg, var(--muted) 0 3px, transparent 3px 6px);
+}
+.ip-readout-k { font-size: 11px; color: var(--muted); flex: 1; }
+.ip-readout-v {
+  font-family: var(--mono);
+  font-size: 13px; color: var(--ink); letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.ip-readout-delta { display: flex; flex-direction: column; gap: 2px; text-align: right; margin-left: auto; }
+.ip-readout-delta strong {
+  font-family: var(--mono);
+  font-size: 22px; line-height: 1; color: var(--accent); letter-spacing: -0.02em;
+}
+.ip-readout-delta span {
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}
+
+.ip-detail {
+  font-size: 12.5px; line-height: 1.65; color: var(--ink-soft);
+  margin: 14px 0 0;
+  animation: ip-fade 420ms ease both;
+}
+
+.ip-foot { position: relative; z-index: 1; margin-top: 22px; }
+.ip-note {
+  font-size: 10px; line-height: 1.6; color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .ip-panel { padding: 24px 20px; }
+  .ip-body { grid-template-columns: 1fr; gap: 20px; }
+  /* Boyut listesi yatay seride donusur */
+  .ip-dims {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -20px;
+    padding: 2px 20px 6px;
+  }
+  .ip-dims::-webkit-scrollbar { display: none; }
+  .ip-dim {
+    flex: none;
+    grid-template-columns: 26px 1fr;
+    gap: 9px;
+    padding: 9px 12px;
+    min-width: 172px;
+  }
+  .ip-dim.is-active { transform: none; }
+  .ip-dim-icon { width: 26px; height: 26px; }
+  .ip-dim-arrow { display: none; }
+  .ip-dim-head { font-size: 12px; }
+  /* SVG kullanici birimi — grafik kuculdugu icin etiketler buyutulur */
+  .ip-tick { font-size: 15px; letter-spacing: 0.1em; }
+  .ip-readout { gap: 10px 16px; padding: 12px 14px; }
+  .ip-readout-delta strong { font-size: 19px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ip-gap, .ip-line.is-us, .ip-line.is-typical, .ip-detail { animation: none; }
+  .ip-line.is-us { stroke-dasharray: none; }
+  .ip-scrub, .ip-dim { transition: none; }
+  .ip-glow { transition: none; }
+}
+
 /* Projects page — table */
 .pp-section { margin-bottom: 48px; }
 .pp-section-head {

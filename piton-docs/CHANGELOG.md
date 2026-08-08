@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-08-08 (4)
+
+### Added
+- **Etki Paneli** (`src/components/impact-panel.tsx`) — projeler sayfasinda showreel'in
+  altinda, musteri sonuclarini anlatan interaktif SVG grafik. Bes boyut (acilis hizi,
+  arama gorunurlugu, talep donusumu, bakim yuku, cok dilli erisim); her boyutta
+  "Piton ile" ve "tipik kurulum" egrileri, aralarindaki dolgulu alan kazanc bandi.
+  Uc etkilesim katmani: boyut listesinde hover ile grafik degisimi (cizgi yeniden
+  cizilir), grafik uzerinde imlecle tarama cizgisi + okuma paneli, panel genelinde
+  imleci takip eden isik lekesi (CSS degiskeni, re-render yok).
+  Mobilde boyut listesi yatay kaydirilabilir cipe donusur, eksen etiketleri buyutulur;
+  dokunmatikte parmak kalkinca okunan deger ekranda kalir. 3 dilde metin, acik/koyu tema,
+  `prefers-reduced-motion` destegi
+- `impact` i18n namespace'i (tr/en/ru) + projeler sayfasinin `NAMESPACES` listesine eklendi
+
+### Fixed
+- **Showreel basliginda eksik kelime**: `reel.ppTitle` mesaji `{accent}` yer tutucusu
+  kullaniyordu ama `t.rich()` bunu tag olarak tanimiyor — vurgu kelimesi ("kesitler" /
+  "in motion" / "в движении") 3 dilde de hic render edilmiyordu ve her yuklemede
+  "Functions are not valid as a React child" konsol hatasi veriyordu.
+  `<accent>...</accent>` tag formuna cevrildi, artik kullanilmayan `ppTitleAccent`
+  anahtari silindi
+
+> Grafikteki rakamlar gosterge modeldir, olculmus musteri verisi degil — panelin altinda
+> bu acikca yaziyor. Gercek olcum girildiginde `DIMENSIONS` dizisindeki `us`/`typical`
+> dizileri guncellenmeli.
+
 ## 2026-08-08 (3)
 
 ### Changed
