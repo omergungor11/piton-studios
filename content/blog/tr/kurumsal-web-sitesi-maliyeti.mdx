@@ -1,0 +1,222 @@
+---
+title: "Kurumsal web sitesi maliyeti 2026: bütçe kalemleri ve gerçekçi aralıklar"
+description: "Bir kurumsal web sitesi neden 2.000 € ile 60.000 € arasında herhangi bir yerde olabilir? Maliyeti belirleyen değişkenler, bütçe dağılımı, gizli kalemler ve teklif karşılaştırma rehberi."
+date: 2026-08-05
+tags: ["süreç", "bütçe", "web tasarım"]
+author: "Piton Studios"
+draft: false
+translationKey: website-cost
+faq:
+  - q: "Kurumsal bir web sitesi ortalama ne kadar tutar?"
+    a: "Tek bir ortalama yanıltıcıdır. Şablon tabanlı kurumsal bir tanıtım sitesi tipik olarak 1.500-4.000 € bandındadır; özel tasarımlı, çok dilli ve içerik yönetimli bir kurumsal site 6.000-20.000 €; e-ticaret 8.000-35.000 €; özel iş uygulaması 25.000 € ve üzeridir. Belirleyici olan sayfa sayısı değil, özel geliştirme gerektiren işlev sayısıdır."
+  - q: "Neden bazı ajanslar aynı işe üç kat fiyat veriyor?"
+    a: "Genellikle kapsam farkı vardır, fiyat farkı değil. Ucuz teklif çoğu zaman hazır tema kurulumunu, pahalı teklif ise özgün tasarım, çok dilli altyapı, performans bütçesi, SEO kurulumu ve test sürecini kapsar. Teklifleri karşılaştırmadan önce her ikisinin de kapsam listesini yan yana koyun."
+  - q: "İlk yılın toplam maliyeti geliştirme bedelinden ne kadar fazla olur?"
+    a: "Alan adı, hosting veya bulut, e-posta servisi, SSL, yedekleme, güncelleme ve içerik bakımı toplandığında ilk yıl tipik olarak geliştirme bedelinin %15-25'i kadar ek maliyet oluşur. Statik üretilen ve yönetilen bir altyapı kullanan sitelerde bu oran belirgin biçimde düşer."
+  - q: "Sabit fiyat mı, saatlik çalışma mı daha avantajlı?"
+    a: "Kapsam net ve değişmeyecekse sabit fiyat alıcı için daha güvenlidir. Kapsam keşif sırasında şekillenecekse veya ürün aşamalı büyüyecekse zaman-malzeme modeli toplamda daha ucuza gelir; sabit fiyat bu durumda riski fiyata gömer."
+  - q: "Web sitesi yatırımı kendini nasıl ölçerim?"
+    a: "Lansmandan önce üç sayıyı kaydedin: aylık nitelikli talep sayısı, tekliften satışa dönüşüm oranı ve ortalama sipariş değeri. Site yatırımı, bu üç sayıdaki değişimle ölçülür — ziyaretçi sayısıyla değil."
+---
+
+"Bir web sitesi ne kadar tutar?" sorusunun dürüst cevabı "neye ihtiyacınız olduğuna bağlı"dır — ama
+bu cevap kimseye yardımcı olmaz. Bu yazıda soruyu tersinden ele alıyoruz: **fiyatı belirleyen
+değişkenleri** tek tek açıyoruz, dört tipik senaryo için gerçekçi bütçe bantları veriyoruz ve
+bütçenin içeride nasıl dağıldığını gösteriyoruz.
+
+<Callout type="warn" title="Rakamlar hakkında">
+  Aşağıdaki tüm tutarlar euro cinsinden, KDV hariç ve <strong>gösterge niteliğinde piyasa
+  bantlarıdır</strong>. Bir teklif değildir; projenizin gerçek bedeli kapsam görüşmesinden sonra
+  belirlenir. Amaç, bütçe planlamanız için doğru büyüklük mertebesini vermektir.
+</Callout>
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Fiyatı sayfa sayısı değil, özel geliştirme gerektiren işlev sayısı belirler.",
+    "Bütçenin tipik olarak yalnızca yarısı kod yazmaya gider; geri kalanı keşif, tasarım, içerik ve test.",
+    "İlk yıl toplam maliyeti, geliştirme bedelinin üzerine %15-25 ekler.",
+    "En pahalı kalem, projenin ortasında değişen kapsamdır — keşif aşamasına yatırım bunu önler.",
+    "Teklifleri fiyata göre değil, kapsam listesine göre karşılaştırın.",
+  ]}
+/>
+
+## Neden tek bir fiyat listesi yok
+
+Web sitesi, matbaa işi gibi birim fiyatlandırılabilen bir ürün değil. İki site aynı sayıda sayfaya
+sahip olabilir ama biri hazır bir temanın içerik doldurulmuş hâliyken diğeri çok dilli, harita
+entegrasyonlu, otomatik teklif üreten bir sistem olabilir. Sayfa sayısı ikisinde de on; maliyet
+farkı on kat.
+
+Bu yüzden fiyatı **işlev** üzerinden düşünmek gerekir.
+
+## Maliyeti belirleyen altı değişken
+
+| Değişken | Düşük uçta | Yüksek uçta | Bütçeye etkisi |
+|---|---|---|---|
+| Tasarım kaynağı | Hazır tema | Sıfırdan özgün tasarım | 2-4 kat |
+| Dil sayısı | Tek dil | 3+ dil, hreflang, çeviri yönetimi | +%25-40 |
+| İçerik yönetimi | Sabit içerik | Yetkilendirmeli panel | +%30-60 |
+| Entegrasyonlar | Yok | Ödeme, CRM, ERP, harita, e-posta | Adet başına belirgin |
+| Performans ve SEO | Varsayılan | Bütçeli optimizasyon, schema, GEO | +%10-20 |
+| İçerik üretimi | Müşteri sağlar | Metin, fotoğraf, video ajans üretir | +%15-35 |
+
+En sık gözden kaçan kalem sonuncusudur. Tasarım ve kod hazır olduğu hâlde içerik gelmediği için
+lansmanı haftalarca gecikmiş çok proje gördük; içeriği kimin üreteceği sözleşmede net olmalıdır.
+
+## Dört tipik senaryo ve bütçe bantları
+
+<BarChart
+  title="Proje tipine göre gösterge bütçe bantları"
+  caption="Euro, KDV hariç. Çubuklar bandın üst sınırını gösterir; alt sınır tabloda."
+  unit=" €"
+  max={60000}
+  data={[
+    { label: "Şablon tabanlı tanıtım sitesi", value: 4000, note: "Alt sınır 1.500 €" },
+    { label: "Özel tasarım kurumsal site", value: 20000, note: "Alt sınır 6.000 €", highlight: true },
+    { label: "E-ticaret", value: 35000, note: "Alt sınır 8.000 €" },
+    { label: "Özel web uygulaması", value: 60000, note: "Alt sınır 25.000 €" },
+  ]}
+/>
+
+### Şablon tabanlı tanıtım sitesi — 1.500-4.000 €
+
+Hazır bir temanın markaya uyarlanması, 5-10 sayfa, tek dil, iletişim formu. Yeni kurulan bir işletme
+için hızlı ve makul bir başlangıç. Sınırı şudur: tema büyüdükçe yavaşlar ve özelleştirme talebi
+arttıkça sıfırdan yazmaktan pahalı hâle gelir.
+
+### Özel tasarım kurumsal site — 6.000-20.000 €
+
+Özgün tasarım, çok dilli yapı, hizmet ve referans sayfaları, blog, [teknik SEO ve GEO
+kurulumu](/tr/hizmetler/seo-geo), performans bütçesi. Kurumsal kimliğin dijital karşılığını
+kuran ve orta vadede içerikle büyüyen tip. Çalışmalarımızın çoğu bu bantta; örnekleri
+[projeler sayfasında](/tr/projeler) görebilirsiniz.
+
+### E-ticaret — 8.000-35.000 €
+
+Ürün ve varyant yönetimi, ödeme entegrasyonu, kargo, stok, sipariş akışı, iade süreçleri. Bandın
+genişliği ürün sayısından değil, entegrasyon sayısından gelir: muhasebe ve ERP bağlantısı olan bir
+mağaza, olmayanın iki katıdır. [Ambalaj Cini](/tr/projeler/ambalaj-cini) projesinde e-ticaret
+altyapısı ile reklam yönetimini birlikte yürüttük.
+
+### Özel web uygulaması — 25.000 € ve üzeri
+
+İş süreçlerine özel, kullanıcı rolleri olan, veri modeli tasarlanan sistemler.
+[Nexos Investment](/tr/projeler/nexos-investment) bunun bir örneği: ilan yönetimi, harita, çok dil
+ve ilan verisinden otomatik teklif üretimi tek platformda. Bu bantta fiyatı belirleyen şey artık
+tasarım değil, iş mantığının karmaşıklığıdır. Detay için
+[web uygulaması hizmetimize](/tr/hizmetler/web-app) bakabilirsiniz.
+
+## Bütçe içeride nasıl dağılır
+
+Müşterilerin en çok şaşırdığı nokta, ödedikleri bedelin yarısından azının kod yazmaya gitmesidir.
+
+<BarChart
+  title="Tipik bir kurumsal site projesinde bütçe dağılımı"
+  caption="Yüzde. Kendi proje ortalamalarımıza dayanır; kapsam değiştikçe oranlar kayar."
+  unit="%"
+  max={100}
+  data={[
+    { label: "Keşif ve strateji", value: 10 },
+    { label: "UI/UX tasarım", value: 25 },
+    { label: "Geliştirme", value: 40, highlight: true },
+    { label: "İçerik ve çeviri", value: 12 },
+    { label: "Test, SEO, lansman", value: 13 },
+  ]}
+/>
+
+Keşif aşamasındaki %10, projenin en yüksek getirili kalemidir. Yanlış varsayımla başlanan bir proje,
+geliştirme ortasında yön değiştirdiğinde kaybedilen süre bu oranın çok üzerindedir. Süreci nasıl
+kurguladığımızı [kurumsal web projesi nasıl ilerler](/tr/blog/kurumsal-web-projesi-sureci)
+yazısında adım adım anlattık.
+
+## Görünmeyen maliyetler: ilk yıl ve sonrası
+
+Geliştirme bedeli tek seferlik; site ise yaşayan bir sistem.
+
+| Kalem | Yıllık gösterge maliyet | Not |
+|---|---|---|
+| Alan adı | 15-40 € | Uzantıya göre değişir |
+| Hosting / bulut | 0-600 € | Statik sitelerde ücretsiz kademe çoğu zaman yeterli |
+| Kurumsal e-posta | 60-200 € | Kullanıcı başına |
+| SSL sertifikası | 0 € | Modern platformlarda dahil |
+| Yedekleme ve izleme | 0-240 € | Statik sitede git deposu yedeğin kendisidir |
+| Güvenlik güncellemeleri | 0-1.200 € | WordPress'te yüksek, statik sitede sıfıra yakın |
+| İçerik ve bakım | 600-4.800 € | Yayın sıklığına bağlı |
+
+Bu tablodaki en büyük ayrım **teknoloji seçiminden** doğar. Eklenti ekosistemine dayanan bir
+kurulumda güvenlik güncellemesi sürekli bir gider kalemidir; statik üretilen bir sitede saldırı
+yüzeyi neredeyse yoktur çünkü çalışan bir sunucu tarafı yoktur.
+
+<TrendChart
+  title="Üç yıllık toplam sahip olma maliyeti (senaryo karşılaştırması)"
+  caption="Bin euro cinsinden kümülatif toplam. 12.000 € başlangıç bedeli olan bir kurumsal site varsayımıyla; gerçek rakamlar kapsama göre değişir."
+  unit="k"
+  max={22}
+  labels={["Lansman", "1. yıl", "2. yıl", "3. yıl"]}
+  series={[
+    { name: "Statik / yönetilen altyapı", points: [12, 13.4, 14.8, 16.2] },
+    { name: "Eklenti tabanlı CMS", points: [12, 14.8, 17.6, 20.4], muted: true },
+  ]}
+/>
+
+Üç yılın sonundaki fark, başlangıçtaki fiyat farkından büyük olabilir. Bu yüzden teklif
+karşılaştırırken yalnızca ilk faturaya değil, üç yıllık toplama bakmak gerekir.
+
+## Sabit fiyat mı, zaman-malzeme mi
+
+| Kriter | Sabit fiyat | Zaman-malzeme |
+|---|---|---|
+| Kapsam netliği | Yüksek olmalı | Belirsizliğe uygun |
+| Bütçe öngörülebilirliği | Tam | Aralıklı tahmin |
+| Değişiklik esnekliği | Düşük — her değişiklik ek teklif | Yüksek |
+| Risk kimde | Ajansta (fiyata gömülür) | Müşteride |
+| Uygun olduğu durum | Tanıtım sitesi, yeniden tasarım | Ürün geliştirme, aşamalı büyüme |
+
+Pratikte en sağlıklı model ikisinin karışımıdır: **keşif aşaması sabit fiyat**, sonrasında kapsam
+netleştikten sonra sabit fiyatlı geliştirme. Keşfi atlayan sabit fiyat teklifleri ya riski fiyata
+yükler ya da proje ortasında ek teklife dönüşür.
+
+## Bütçeyi düşürmenin doğru ve yanlış yolları
+
+#### Doğru yollar
+
+1. **Kapsamı aşamalara bölün.** Birinci aşamada gerçekten gereken sayfalarla yayına çıkın; blog,
+   çok dil ve panel ikinci aşamada gelsin.
+2. **İçeriği kendiniz sağlayın.** Metin ve görselleri hazırlayabiliyorsanız bütçenin %15'ini
+   doğrudan geri kazanırsınız.
+3. **Hazır bileşen sistemlerini kabul edin.** Her düğmenin özgün tasarlanması gerekmez; ayırt edici
+   olması gereken yerler bellidir.
+4. **Tek karar verici belirleyin.** Onay turlarının sayısı, doğrudan maliyet kalemidir.
+
+#### Yanlış yollar
+
+1. **Test aşamasını kesmek.** Lansmandan sonra bulunan hatanın maliyeti, önce bulunanın katıdır.
+2. **SEO ve performansı sonraya bırakmak.** Sonradan eklenen teknik SEO, baştan kurulanın iki
+   katına mal olur.
+3. **En ucuz teklifi kapsam okumadan seçmek.** Fiyat farkı neredeyse her zaman kapsam farkıdır.
+4. **Erişilebilirliği atlamak.** Hem yasal risk hem de gerçek kullanıcı kaybı yaratır.
+
+## Teklif alırken sorulacak sekiz soru
+
+1. Tasarım sıfırdan mı, hazır tema uyarlaması mı?
+2. Kaç dil dahil; çeviri kim tarafından yapılacak?
+3. İçeriği kim yazacak, görselleri kim üretecek?
+4. Hangi entegrasyonlar kapsamda; her biri ayrı kalem mi?
+5. Performans hedefi var mı; hangi metriklerle ölçülecek?
+6. Teknik SEO ve yapılandırılmış veri kapsama dahil mi?
+7. Lansman sonrası kaç ay destek var, sonrası hangi ücretle?
+8. Kaynak kodu ve tüm hesaplar kime ait olacak?
+
+Sekizincisi çoğu zaman sorulmuyor ve en pahalıya patlayan madde bu oluyor. Alan adı, hosting ve
+kod deposunun size ait olması, ajans değiştirme özgürlüğünüzün tek garantisidir.
+
+## Sonuç
+
+Web sitesi bütçesi, ne alacağınızı ne kadar net tanımladığınızla doğru orantılı olarak öngörülebilir
+hâle gelir. Kapsamı netleştirmeden alınan her teklif tahmindir; kapsamı netleştirdikten sonra alınan
+teklifler ise karşılaştırılabilir olur.
+
+Projenizin hangi banda düştüğünü konuşmak isterseniz [iletişim sayfasından](/tr/iletisim) ulaşın —
+kapsam görüşmesi ücretsizdir. Nasıl çalıştığımızı merak ediyorsanız
+[hakkımızda sayfasına](/tr/hakkinda) göz atabilirsiniz.

@@ -56,7 +56,9 @@
     "backToBlog": "Bloga don",
     "relatedPosts": "Ilgili yazilar",
     "readMore": "Devamini oku",
-    "shareTitle": "Paylas"
+    "shareTitle": "Paylas",
+    "tableOfContents": "Icindekiler",
+    "faqTitle": "Sikca sorulan sorular"
   },
   "hero": {
     "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",

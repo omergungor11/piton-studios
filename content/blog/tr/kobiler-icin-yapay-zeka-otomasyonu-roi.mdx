@@ -1,0 +1,207 @@
+---
+title: "KOBİ'ler için yapay zeka otomasyonu: nereden başlanır ve ROI nasıl hesaplanır"
+description: "Hangi süreç otomasyona uygun, hangisi değil? Geri ödeme süresini hesaplayan bir formül, gerçek bir örnek hesap ve 90 günlük başlangıç planı."
+date: 2026-08-03
+tags: ["yapay zeka", "otomasyon", "süreç"]
+author: "Piton Studios"
+draft: false
+translationKey: ai-automation-roi
+faq:
+  - q: "Yapay zeka otomasyonu küçük işletmeler için pahalı değil mi?"
+    a: "Tek bir sürece odaklanan bir otomasyon tipik olarak 1.500-6.000 € kurulum bandındadır ve aylık işletme maliyeti çoğu zaman 50 € altındadır. Ayda 20 saat manuel iş kurtaran bir otomasyon, orta düzey bir saatlik maliyette 6-10 ay içinde kendini öder. Pahalı olan, tüm süreçleri aynı anda otomatikleştirmeye çalışmaktır."
+  - q: "Hangi süreçler otomasyona uygun değildir?"
+    a: "Ayda birkaç kez çalışan, her seferinde farklı yürüyen, çıktısı öznel yargı gerektiren ve hatasının maliyeti yüksek olan süreçler. Bu dördü bir aradaysa otomasyon kurmak, süreci elle yapmaktan pahalıya gelir."
+  - q: "Otomasyon ile yapay zeka agenti arasındaki fark nedir?"
+    a: "Klasik otomasyon önceden tanımlanmış kuralları izler: bu olursa şunu yap. Yapay zeka agenti ise hedef verildiğinde adımları kendi planlar, araçları kullanır ve sonuca göre yolunu değiştirir. Kuralları net olan işlerde klasik otomasyon daha ucuz ve daha öngörülebilirdir; değişken girdiyle çalışan işlerde agent yaklaşımı gerekir."
+  - q: "Otomasyon hata yaparsa ne olur?"
+    a: "Doğru kurulmuş her otomasyonda üç koruma bulunur: hatalı çalışmayı durduran doğrulama adımları, her işlemin izlenebildiği kayıt defteri ve kritik adımlarda insan onayı. Riski sıfırlamak mümkün değildir; yönetilebilir kılmak mümkündür."
+  - q: "ROI'yi ne zaman ölçmeye başlamalıyım?"
+    a: "Kurulumdan önce. Sürecin mevcut hâlinde harcanan süreyi ve hata oranını iki hafta boyunca kaydedin. Bu taban ölçüm olmadan otomasyonun getirisi tahminden ibaret kalır."
+---
+
+Yapay zeka otomasyonu konuşmaları çoğu zaman yanlış yerden başlıyor: hangi model, hangi araç, hangi
+platform. Doğru başlangıç noktası bunların hiçbiri değil. Doğru soru şu: **şirkette hangi iş,
+ayda kaç saat, kaç kişi tarafından, ne kadar hatayla yapılıyor?**
+
+Bu yazıda otomasyona uygun süreci nasıl seçeceğinizi, geri ödeme süresini nasıl hesaplayacağınızı ve
+ilk 90 günde ne yapılması gerektiğini anlatıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Otomasyona araçla değil süreçle başlanır; ölçülmemiş bir sürecin getirisi hesaplanamaz.",
+    "Uygunluk dört kriterle belirlenir: sıklık, kural netliği, girdi standartlığı, hata maliyeti.",
+    "Geri ödeme formülü basittir: kurulum maliyeti bölü aylık net tasarruf.",
+    "İlk projede tek bir süreç seçin; genişletme ikinci aşamadır.",
+    "Kritik adımlarda insan onayı bırakmak, otomasyonun getirisini düşürmez; sürdürülebilir kılar.",
+  ]}
+/>
+
+## Otomasyon, yapay zeka, agent: üçü aynı şey değil
+
+Terimler birbirinin yerine kullanılıyor ama maliyetleri ve uygun oldukları işler farklı.
+
+| Yaklaşım | Nasıl çalışır | Uygun olduğu iş | Göreli maliyet |
+|---|---|---|---|
+| Kural tabanlı otomasyon | Önceden tanımlı if-then akışı | Sabit kurallı, tekrarlı işler | Düşük |
+| Yapay zeka destekli adım | Akışın bir adımında model çalışır | Metin sınıflama, özetleme, çıkarım | Orta |
+| Yapay zeka agenti | Hedef verilir, adımları kendi planlar | Değişken girdi, çok adımlı karar | Yüksek |
+
+Çoğu KOBİ'nin ilk ihtiyacı en üstteki satırdır. "Yapay zeka" etiketi olmayan sıradan bir
+[otomasyon akışı](/tr/hizmetler/automation), gerçek zaman tasarrufunun büyük kısmını sağlar. Model
+gerektiren adım genellikle akışın yalnızca bir yerindedir: gelen serbest metni anlamlandırmak.
+Bunun nasıl kurulduğunu [yapay zeka entegrasyonu](/tr/hizmetler/ai-integration) sayfamızda
+ayrıntılandırdık; çok adımlı karar gerektiren senaryolar içinse
+[agentic AI](/tr/hizmetler/agentic-ai) yaklaşımına bakabilirsiniz.
+
+## Hangi süreç otomasyona uygun
+
+Dört kriterle puanlayın. Her biri 1-10 arası; toplam 28 üzeriyse süreç güçlü adaydır.
+
+<BarChart
+  title="Otomasyon uygunluk kriterleri ve ağırlıkları"
+  caption="10 üzerinden ağırlık — sıralama, kendi projelerimizde geri ödeme süresini en çok etkileyen faktörlere göre."
+  max={10}
+  data={[
+    { label: "Tekrar sıklığı", value: 10, note: "Haftada kaç kez çalışıyor", highlight: true },
+    { label: "Kural netliği", value: 9, note: "Adımlar yazıya dökülebiliyor mu" },
+    { label: "Girdi standartlığı", value: 8, note: "Veri hep aynı biçimde mi geliyor" },
+    { label: "Hata maliyeti", value: 6, note: "Yanlış çıktının bedeli düşük mü" },
+  ]}
+/>
+
+### İyi adaylar
+
+- Aynı veriyi iki farklı sisteme elle girmek
+- Gelen e-postaları veya formları kategorilere ayırıp yönlendirmek
+- Excel dosyalarından düzenli rapor üretmek
+- Fatura, dekont veya sipariş belgelerinden veri çıkarmak
+- Aynı içeriği birden fazla platforma yayınlamak
+
+### Kötü adaylar
+
+- Ayda bir-iki kez çalışan işler
+- Her seferinde farklı yürüyen, istisna dolu süreçler
+- Çıktısı öznel yargı gerektiren kararlar
+- Hatanın geri döndürülemez olduğu finansal veya hukuki işlemler
+
+<Callout type="tip" title="En hızlı kazanç nerede">
+  Deneyimimizde en yüksek getirili ilk proje neredeyse her zaman <strong>çift veri girişi</strong>
+  ortadan kaldırmaktır. Aynı bilgiyi iki yere yazan her ekip, farkında olmadan ayda onlarca saat
+  harcıyor.
+</Callout>
+
+## ROI nasıl hesaplanır
+
+Formül karmaşık değil; zor olan girdileri dürüstçe doldurmaktır.
+
+```txt
+Aylık brüt tasarruf = (kurtarılan saat × saatlik maliyet) + (önlenen hata × hata başı maliyet)
+Aylık net tasarruf  = aylık brüt tasarruf − aylık işletme maliyeti
+Geri ödeme (ay)     = kurulum maliyeti ÷ aylık net tasarruf
+12 aylık ROI (%)    = ((aylık net tasarruf × 12) − kurulum maliyeti) ÷ kurulum maliyeti × 100
+```
+
+İki nokta önemli. Birincisi, **kurtarılan saati fazla tahmin etmeyin**: otomasyon süreci sıfırlamaz,
+denetim ve istisna yönetimi için genellikle eski sürenin %10-20'si kalır. İkincisi, **hata
+maliyetini unutmayın**: yanlış girilen bir siparişin düzeltilmesi çoğu zaman doğru girilmesinden
+pahalıdır.
+
+### Örnek hesap: teklif hazırlama süreci
+
+Bir emlak ofisi, her talep için ilan verisini elle kopyalayıp PDF teklif hazırlıyor. Ölçüm sonuçları:
+
+<StatGrid
+  items={[
+    { value: "18 dk", label: "Teklif başına süre", note: "Ölçülen ortalama" },
+    { value: "140", label: "Aylık teklif adedi", note: "Son 3 ay" },
+    { value: "42 sa", label: "Aylık toplam süre", note: "Otomasyon öncesi" },
+    { value: "%6", label: "Hatalı teklif oranı", note: "Yeniden gönderim gerektiren" },
+  ]}
+/>
+
+| Kalem | Otomasyon öncesi | Otomasyon sonrası | Fark |
+|---|---|---|---|
+| Teklif başına süre | 18 dk | 3 dk | −15 dk |
+| Aylık toplam süre | 42 saat | 7 saat | −35 saat |
+| Saatlik maliyet | 14 € | 14 € | — |
+| Aylık iş gücü maliyeti | 588 € | 98 € | −490 € |
+| Hatalı teklif düzeltme | 8 adet × 25 € | 1 adet × 25 € | −175 € |
+| Aylık işletme maliyeti | — | 45 € | +45 € |
+| **Aylık net tasarruf** | — | — | **620 €** |
+
+Kurulum maliyeti 4.200 € varsayıldığında geri ödeme **4.200 ÷ 620 ≈ 6,8 ay**; on iki aylık ROI ise
+**%77**. Bu hesabın gücü kesinliğinden değil, tartışmayı doğru zemine taşımasından gelir: artık
+konuşulan şey "yapay zeka kullanalım mı" değil, "bu süreçte ayda 620 € var mı".
+
+<TrendChart
+  title="Kümülatif nakit etkisi (örnek hesap)"
+  caption="Euro cinsinden kümülatif. Yatay çizgi kurulum maliyeti; iki çizginin kesiştiği yer başa baş noktasıdır."
+  unit=" €"
+  max={8000}
+  labels={["0. ay", "3. ay", "6. ay", "9. ay", "12. ay"]}
+  series={[
+    { name: "Kümülatif net etki", points: [0, 1860, 3720, 5580, 7440] },
+    { name: "Kurulum maliyeti", points: [4200, 4200, 4200, 4200, 4200], muted: true },
+  ]}
+/>
+
+İki çizginin kesiştiği nokta başa baş noktasıdır. Yedinci ay civarında kesişiyor; sonrasındaki her
+ay net kazançtır.
+
+## Maliyet tarafı: kurulum ve işletme
+
+| Kalem | Gösterge aralık | Not |
+|---|---|---|
+| Süreç analizi ve haritalama | 400-1.200 € | Atlanmamalı — yanlış süreç en pahalı hatadır |
+| Akış geliştirme | 1.000-4.000 € | Entegrasyon sayısıyla artar |
+| Model kullanım bedeli | 5-80 € / ay | Hacme ve model seçimine bağlı |
+| Barındırma / çalıştırma | 0-40 € / ay | Kendi sunucunuzda barındırmak mümkün |
+| Bakım ve izleme | 0-200 € / ay | Kaynak sistemler değiştikçe gerekir |
+
+Model kullanım bedeli genellikle korkulduğu kadar büyük bir kalem değildir. Asıl gider, sürecin
+doğru haritalanması ve entegrasyonların kurulmasıdır — yani klasik yazılım işi.
+
+## İlk 90 gün
+
+| Dönem | Odak | Somut çıktı |
+|---|---|---|
+| 1-30. gün | Ölçüm | 3 aday sürecin süre ve hata kaydı, uygunluk puanlaması |
+| 31-60. gün | Pilot | Tek süreç için çalışan akış, insan onaylı mod |
+| 61-90. gün | Doğrulama | Gerçek veriyle karşılaştırma, onay adımlarının azaltılması |
+
+Üç ayın sonunda elinizde iki şey olur: çalışan bir otomasyon ve — daha değerlisi — ölçülmüş bir
+getiri tablosu. İkinci süreç kararı artık tahminle değil, veriyle verilir.
+
+Bu yaklaşımı kendi ürünlerimizde de uyguladık. [Emlak Sync](/tr/projeler/emlak-sync), emlak
+ofislerinin aynı ilanı birden fazla portala elle girmesini ortadan kaldırıyor;
+[Dolmuş Güzergah Kontrol](/tr/projeler/dolmus-kontrol) ise saatler süren elle denetimi GPS verisinden
+otomatik rapora indiriyor. İçerik tarafında
+[ContentFlow AI](/tr/projeler/contentflow-ai) ve [Social Pro](/tr/projeler/social-pro) aynı mantığı
+pazarlama süreçlerine uyguluyor.
+
+## Riskler ve nasıl yönetilir
+
+<Callout type="warn" title="Otomasyonun üç gerçek riski">
+  <strong>Sessiz hata:</strong> akış çalışıyor görünür ama yanlış çıktı üretir. Çözüm, her adımda
+  doğrulama ve düzenli örnekleme.<br />
+  <strong>Kaynak sistem değişimi:</strong> entegre olunan sistem arayüzünü değiştirdiğinde akış
+  kırılır. Çözüm, izleme ve uyarı kurgusu.<br />
+  <strong>Bilgi kaybı:</strong> süreci bilen kişi ayrıldığında otomasyonun neden öyle kurulduğu
+  unutulur. Çözüm, süreç dokümantasyonunu teslimatın parçası saymak.
+</Callout>
+
+Bir de gerçek olmayan bir risk var: "otomasyon işleri elimizden alacak". Pratikte gördüğümüz şey,
+ekiplerin aynı kişi sayısıyla daha fazla iş çıkarması. Kurtarılan 35 saat işten çıkarmaya değil,
+daha fazla teklife dönüşüyor.
+
+## Sonuç
+
+Yapay zeka otomasyonuna doğru giriş, en gelişmiş aracı seçmek değil; en sıkıcı, en tekrarlı ve en
+iyi ölçülmüş süreci seçmek. Formül basit: sıklığı yüksek, kuralları net, hata maliyeti düşük bir iş
+bulun; iki hafta ölçün; geri ödemeyi hesaplayın; tek süreçle başlayın.
+
+Nereden başlayacağınızdan emin değilseniz [yapay zeka danışmanlığı](/tr/hizmetler/ai-consulting)
+kapsamında süreç haritanızı birlikte çıkarabiliriz. Konuşmak için
+[iletişim sayfasından](/tr/iletisim) ulaşın; benzer çalışmalarımız
+[projeler sayfasında](/tr/projeler) duruyor.

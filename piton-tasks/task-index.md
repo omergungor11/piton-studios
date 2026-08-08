@@ -9,9 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| **Total** | | **29** | **29** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 2 | 2 | 0 | 0 | 0 |
+| **Total** | | **31** | **31** | **0** | **0** | **0** |
 
-**Progress**: 29/29 (100%) ✓
+**Progress**: 31/31 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -69,6 +70,15 @@
 | TASK-027 | Vercel Analytics + Speed Insights | S | COMPLETED | `27274ff` |
 | TASK-028 | Eksik hero gorselleri — 35 proje sayfasi production'da kirikti | M | COMPLETED | `a4fa8e9` |
 | TASK-029 | Calisan iletisim formu (Resend, honeypot, rate limit) | L | COMPLETED | `4756404` |
+
+## Phase 5: Icerik Uretimi (2026-08-08)
+
+| ID | Task | Complexity | Status | Commit |
+|----|------|-----------|--------|--------|
+| TASK-030 | Blog MDX component seti (BarChart, TrendChart, StatGrid, Callout, KeyTakeaways), otomatik icindekiler tablosu, frontmatter `faq` → FAQPage JSON-LD, rehype-slug | L | COMPLETED | (bu commit) |
+| TASK-031 | 3 uzun form SEO/GEO uyumlu blog yazisi × 3 dil (9 MDX) — tablo, grafik, SSS ve 54 dogrulanmis ic link | L | COMPLETED | (bu commit) |
+
+---
 
 ### Iptal edilenler (2026-07-29 kullanici karari)
 

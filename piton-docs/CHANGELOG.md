@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-08-08
+
+### Added
+- **3 new long-form blog posts in all 3 languages** (9 MDX files, ~2.000 kelime/yazi):
+  SEO'dan GEO'ya (`seo-to-geo`), kurumsal web sitesi maliyeti (`website-cost`),
+  KOBI'ler icin AI otomasyonu ve ROI (`ai-automation-roi`). Her yazida icindekiler tablosu,
+  tablolar, grafikler, SSS bolumu ve hizmet/proje/blog sayfalarina 54 dogrulanmis ic link
+- **MDX component seti** (`src/components/mdx/mdx-components.tsx`): `BarChart` (yatay cubuk),
+  `TrendChart` (inline SVG cizgi grafik), `StatGrid`, `Callout`, `KeyTakeaways` + site ici
+  baglantilari next/link'e ceviren `a` override'i. Hepsi tema degiskenleriyle calisir
+- **Otomatik icindekiler tablosu** (`src/components/blog-toc.tsx`): basliklar
+  `extractHeadings()` ile yazidan cikarilir, id'ler rehype-slug ile ayni github-slugger
+  algoritmasini kullanir — 3'ten az baslikta gizlenir
+- **Frontmatter `faq` alani**: yazi sonunda SSS bolumu render eder + `FAQPage` JSON-LD uretir
+
+### Fixed
+- **next-mdx-remote MDX icindeki tum JS ifadelerini siliyordu** (`blockJS` varsayilan `true`):
+  prop olarak veri alan component'ler bos geliyor, `items.map` ile prerender patlıyordu.
+  `blockJS: false` eklendi; `blockDangerousJS` acik birakildi
+- `BarChart`/`TrendChart` tavani artik `max(verilen max, veri)` — kucuk verilen `max`
+  grafigi cercevenin disina tasiyordu
+
+### Changed
+- `rehype-slug` eklendi (h2-h4 anchor id'leri), `blog.tableOfContents` ve `blog.faqTitle`
+  cevirileri tr/en/ru'ya eklendi, `.blog-toc` / `.mdx-*` / `.blog-faq` stilleri + h4-h6
+  baslik hiyerarsisi `globals.css`'e girdi
+- Statik sayfa sayisi 476 → 495
+
 ## 2026-07-27
 
 ### Removed
