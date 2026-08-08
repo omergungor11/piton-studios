@@ -100,7 +100,8 @@ export default function StudioTimeline() {
             </div>
           </>
         ) : (
-          <p className="st-card-empty">{t('timeline.noProjects')}</p>
+          // Yilin kendi notu varsa genel "kayit yok" cumlesini tekrarlamiyoruz
+          !note && <p className="st-card-empty">{t('timeline.noProjects')}</p>
         )}
       </div>
     </section>

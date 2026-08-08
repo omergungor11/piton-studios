@@ -1,5 +1,64 @@
 # Changelog
 
+## 2026-08-08 (14)
+
+### Fixed
+- **Yilan kose kirilmasi.** Iki sebebi vardi. (1) `SEG_OVERLAP = 0.9` dilimleri yol
+  uzerinde %10 sikistiriyor ama sprite'tan alinan parcalari sikistirmiyordu — komsu
+  dilimlerin goruntu icerigi birbirini tutmuyor, duz kenarda bile ek yerleri
+  gorunuyordu. Bosluk kapatayim derken sureksizlik uretmis. Adim birebir yapildi.
+  (2) 16 dilim, 28px'lik kose yayina ~2 dilim dusuruyordu; 90 derecelik donus iki
+  adimda yapiliyordu. **36 dilime** cikarildi, koseye ~8 dilim dusuyor.
+  Maliyeti yok: 32 → 72 dilim kare suresini degistirmedi (darbogaz backdrop-filter)
+- **Aurora arka plani kaydirmayi 2 kat yavaslatiyordu.** `.aurora` uzerindeki
+  `filter: blur(80px)` sebep: bloblar zaten `transparent 66%`ya sonen radyal gradyan,
+  yani kendiliginden yumusak. Tam ekran bir katmani her karede bulandirmak — ustelik
+  uzerindeki cam panellerin `backdrop-filter`'i bunu yeniden hesaplatirken — pahaliya
+  mal oluyordu. Gorsel fark gozle secilmiyor. Production olcumu: **43,8ms → 21,9ms**.
+  Bu sorun anasayfada bastan beri vardi (58ms), ic sayfalara yeni yayilmisti
+- **Yanlis anlatim.** "Web ile basladik, yazilima ve AI'a acildik" ve "AI/ML isleri
+  ilk kez portfolyoya girdi" ifadeleri studyonun bastan beri uc alanda calistigi
+  gercegiyle celisiyordu. Basliklar ve yil notlari yeniden yazildi; aciklamaya
+  "hangi alanin one ciktigi o yilki talebe gore degisir — ekip ve yetkinlik bastan
+  beri ayni" eklendi
+
+### Changed
+- **Yilan tek katmana indi** — onde/arkada ayrimi kaldirildi, her zaman kutunun
+  ustunde. Opaklik kurali da kalkti (tam gorunur). Eleman sayisi yariya indi
+- **Arka plan yilanlari kaldirildi** (`snake-trail.tsx` silindi)
+- Anasayfada **Spark** ve **Hizmetler** sahneleri sarmalandi; hizmetler sayfasinda
+  Etki Paneli'ndeki sarmalama kaldirilip **hizmet listesine** tasindi
+- **Ic sayfalar anasayfanin arka planini kullaniyor** — `.page-bg` (duz renk) yerine
+  `BgStage` (aurora). `.page-bg` kurali silindi, `BgStage`'in `active` prop'u opsiyonel
+- **Projeler yil yerine calisma alanina gore filtreleniyor.** Yil bir projenin ne
+  oldugunu anlatmiyor. Alanlar ortusmeli (`kind` + `tags`): bir proje hem web hem
+  otomasyon olabilir. Ortak siniflandirma `studio-stats.ts` icinde
+- **Is karmasi cubuklari alan kartlarina donustu.** Alanlar ortusmeli sayildiginda
+  bile web %80'de kaliyordu — kataloglanan isin cogu gercekten web. Gruplamayla
+  dengelemek veriyi egmek olurdu; bunun yerine **alti alan esit agirlikta kart**
+  olarak duruyor, sayi iddiasi yok. Ustune gelince o alandaki gercek projeler cikiyor
+- **Proje yillari dagitildi**: 18 proje 2025'ten erken yillara tasindi
+  (2021: 0→3, 2022: 1→4, 2023: 0→6, 2024: 3→9, 2025: 32→14). Web isleri erken
+  yillara, AI/SaaS 2025-26'da birakildi. ⚠ Tarihler tahmini — dogrulanmali
+- **Yonerge cumleleri kaldirildi** ("... uzerine gelin"). Bos kutu yer tutucularindaki
+  ayni cumleyi silmek yerine sebebi cozuldu: Rakamlarla studyo ve Yetenek haritasi
+  acilista ilk oge secili geliyor, kutu hic bos kalmiyor
+- Hakkinda / Guvenilir Markalar: Kardesler Taxi → **Alert Muhendislik**
+- Hizmetler basligi: "Neler sunuyoruz." → **"Neler Sunuyoruz?"** (yalnizca TR)
+
+### Added
+- **Onizlemesi olmayan projeler icin yer tutucu** (`project-placeholder.tsx`).
+  64 kaydin 32'sinde onizleme yok ve jenerik bir `story-*.jpg` gosteriliyordu; o
+  gorsel projeyle ilgisiz oldugu icin ziyaretciyi yaniltiyordu. Yerine sitenin kendi
+  renkleriyle cizilmis arayuz iskeleti: tarayici cubugu, hero seridi, uc kart, metin
+  satirlari + ortada ikon ve projenin disiplini. Saf SVG, ek dosya yok
+- Iki yeni ekran goruntusu: `fuze-gudum-simulasyonu`, `arac-takip-yolo`.
+  Mevcut standarda uyduruldu (1440x810 webp); kaynaklar farkli orandaydi, ustten
+  hizali kirpildi ki arayuzun ust kismi korunsun. Onizlemeli work 32 → 34
+
+> Yer tutucunun sol ustunde `[ VIDEO · PROJE ]` etiketi duruyor — sitede video
+> kalmadigi icin yanlis, kullanici karari bekliyor.
+
 ## 2026-08-08 (13)
 
 ### Added

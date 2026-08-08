@@ -10,7 +10,7 @@ import { PreviewCard } from "@/components/scenes/works";
 
 import dynamic from "next/dynamic";
 import FloatingGlass from "@/components/floating-glass";
-import SnakeTrail from "@/components/snake-trail";
+import SnakeBorder from "@/components/snake-border";
 import FloatingActions from "@/components/floating-actions";
 
 const ThreeScene = dynamic(() => import("@/components/three-scene"), {
@@ -173,7 +173,6 @@ export default function HomeClient() {
     <>
       <BgStage active={SCENES[activeIdx]?.id} />
       {showThree && <ThreeScene />}
-      <SnakeTrail />
       <FloatingGlass />
       <div className="grain" />
       <Cursor />
@@ -185,9 +184,19 @@ export default function HomeClient() {
           const state = revealed.has(i) ? "reveal" : "";
           let inner = null;
           if (s.id === "hero") inner = <HeroScene clock={clock} />;
-          else if (s.id === "spark") inner = <SparkScene />;
+          else if (s.id === "spark")
+            inner = (
+              <SnakeBorder radius={18}>
+                <SparkScene />
+              </SnakeBorder>
+            );
           else if (s.id === "note") inner = <ManifestoScene />;
-          else if (s.id === "services") inner = <ServicesScene />;
+          else if (s.id === "services")
+            inner = (
+              <SnakeBorder radius={28}>
+                <ServicesScene />
+              </SnakeBorder>
+            );
           else if (s.id === "work") inner = <WorksScene onPreview={setPreview} />;
           else if (s.id === "about") inner = <AboutScene />;
           else if (s.id === "contact") inner = <ContactScene />;

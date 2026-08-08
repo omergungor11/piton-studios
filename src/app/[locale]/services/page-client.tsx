@@ -34,9 +34,7 @@ export default function ServicesPageClient() {
       </section>
 
       {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
-      <SnakeBorder radius={24}>
-        <ImpactPanel />
-      </SnakeBorder>
+      <ImpactPanel />
 
       {/* Filter */}
       <section className="sp-filter">

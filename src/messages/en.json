@@ -151,7 +151,7 @@
     "numbers": {
       "eyebrow": "§ · The studio in numbers",
       "title": "Every number on this page is <accent>computed from the portfolio</accent>.",
-      "desc": "None of the figures below are typed by hand; they are derived from the project list, so they never go stale. Hover the distribution bars.",
+      "desc": "None of the figures below are typed by hand; they are derived from the project list, so they never go stale.",
       "projects": {
         "label": "Projects",
         "sub": "Delivered"
@@ -168,31 +168,30 @@
         "label": "Clients",
         "sub": "Distinct brands"
       },
-      "mixLabel": "Work mix",
-      "hint": "Hover a bar to see the breakdown.",
+      "mixLabel": "Areas of work",
       "more": "+{count} more"
     },
     "timeline": {
       "eyebrow": "§ · Timeline",
-      "title": "We started in web and opened up to <accent>software and AI</accent>.",
-      "desc": "Each year is read from the work delivered in it. Hover the year markers.",
+      "title": "The same <accent>three areas</accent> from day one.",
+      "desc": "The distribution below reflects the work that entered the portfolio. Which area stands out in a given year follows demand — the team and the skill set have been the same throughout.",
       "trackLabel": "Years",
       "projectCount": "{count, plural, =0 {nothing on record} one {# project} other {# projects}}",
       "noProjects": "No portfolio record for this year — we only began cataloguing work in later years.",
       "notes": {
-        "2021": "The year the studio was founded.",
-        "2022": "The oldest record in the portfolio: an end-to-end e-commerce build.",
-        "2024": "Simulation and visualisation work joined the web projects.",
-        "2025": "The year volume jumped. AI/ML and SaaS work entered the portfolio for the first time.",
-        "2026": "Web app and automation grew as a share — the mix shifted toward custom software."
+        "2021": "The year the studio was founded. The first corporate sites and brand work shipped in this period, and our way of working settled here.",
+        "2022": "Work from construction, engineering and services. The portfolio's first end-to-end e-commerce build also lands in this year.",
+        "2023": "A busy year for web. Corporate, real estate and hospitality sites kept the pace high.",
+        "2024": "A year weighted toward finance and transport; simulation and visualisation projects shipped alongside.",
+        "2025": "The year volume jumped. AI/ML and SaaS work entered the portfolio in this period as well.",
+        "2026": "Web app and automation grew as a share; demand shifted toward custom software."
       }
     },
     "capabilities": {
       "eyebrow": "§ · Capability map",
-      "title": "What we have built, and <accent>how many times</accent>.",
-      "desc": "Tags come from the project records; chip size shows how many projects used each one. Anything used on at least two projects is listed. Hover a chip.",
-      "projectCount": "{count, plural, one {# project} other {# projects}}",
-      "hint": "Hover a chip to see which projects used it."
+      "title": "What we <accent>can build</accent>.",
+      "desc": "Tags come from the project records; chip size shows how many projects used each one. Anything used on at least two projects is listed.",
+      "projectCount": "{count, plural, one {# project} other {# projects}}"
     },
     "values": {
       "title": "Our values",
@@ -386,7 +385,7 @@
   "impact": {
     "eyebrow": "§ · Why it compounds",
     "title": "Same budget, <accent>different</accent> curve.",
-    "desc": "Website, custom software, automation or AI — whichever you commission, the work proves its worth in month twelve, not on handover day. These six lines show where a well-built system ends up over time. Hover the items, drag across the chart.",
+    "desc": "Website, custom software, automation or AI — whichever you commission, the work proves its worth in month twelve, not on handover day. These six lines show where a well-built system ends up over time.",
     "dimsLabel": "Outcome dimensions",
     "seriesUs": "With Piton Studios",
     "seriesTypical": "Business as usual",
@@ -441,7 +440,7 @@
   "delivery": {
     "eyebrow": "§ · How we work",
     "title": "From idea to a <accent>working system</accent>, in six steps.",
-    "desc": "Website, custom software or automation — we follow the same flow. What each step produces and what it needs from you is stated up front, so nothing arrives as a surprise. Hover the steps.",
+    "desc": "Website, custom software or automation — we follow the same flow. What each step produces and what it needs from you is stated up front, so nothing arrives as a surprise.",
     "trackLabel": "Delivery steps",
     "labelWhat": "What happens",
     "labelOutput": "Output",
@@ -996,6 +995,32 @@
         "We built an automation system that checks whether a city's minibus (dolmuş) lines run on schedule. Excel data from a GPS tracking program is processed into per-line route control reports.",
         "This Flask-based web app turns hours of manual checking into minutes — a field-proven example of data processing and process automation."
       ]
+    }
+  },
+  "areas": {
+    "web": {
+      "label": "Web & Interface",
+      "desc": "Brand sites, corporate sites and product interfaces — design through launch."
+    },
+    "product": {
+      "label": "Custom Software",
+      "desc": "Platforms, dashboards and internal tools built around your processes."
+    },
+    "ai": {
+      "label": "Artificial Intelligence",
+      "desc": "Computer vision, model training and AI features embedded in products."
+    },
+    "automation": {
+      "label": "Automation",
+      "desc": "Workflows, bots and data pipelines that take over repeating work."
+    },
+    "commerce": {
+      "label": "E-commerce",
+      "desc": "Product, payment, shipping and stock flows built end to end."
+    },
+    "growth": {
+      "label": "Visibility",
+      "desc": "Technical SEO, multilingual structure and search visibility."
     }
   },
   "servicesList": {

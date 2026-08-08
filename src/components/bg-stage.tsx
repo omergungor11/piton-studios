@@ -1,7 +1,11 @@
 'use client';
 
 interface BgStageProps {
-  active: string;
+  /**
+   * Aktif sahne kimligi — yalnizca anasayfada anlamli, ic sayfalarda verilmez.
+   * `data-scene` su an CSS'te kullanilmiyor; sahneye ozel arka plan icin kanca.
+   */
+  active?: string;
 }
 
 export default function BgStage({ active }: BgStageProps) {
