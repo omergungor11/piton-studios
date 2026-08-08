@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-08-08 (11)
+
+### Changed
+- **Arka plan yilanlari da kaydirmaya baglandi** — `animation` kalkti, govde karesi
+  scroll konumundan hesaplaniyor. Her yilanin kendi adim araligi var ki senkron
+  yurumesinler: uzak 62 px/kare, orta 78, yakin 112 (buyuk govde daha tembel dalga).
+  Durunca hepsi donuyor, yukari kaydirinca geri sariyorlar
+- **Ustteki yilan one alindi**: genislik 30 → 48vw, kaydirma 70 → 100vw,
+  opaklik 0,18 → 0,21, 1px bulaniklik. Uc kademeli derinlik dizisi olustu —
+  24vw (uzak, net) → 48vw (orta, 1px) → 96vw (yakin, 3px)
+- Kare ve konum artik React state'i uzerinden gecmiyor; `useRef` ile tutulan DOM
+  dugumlerine dogrudan CSS degiskeni olarak yaziliyor. Aksi halde her scroll
+  olayinda uc yilan da yeniden render olurdu
+
+### Fixed
+- `background: ... no-repeat 0 0` kisayolundaki `0 0`, ayri yazilan
+  `background-position` kuralini eziyordu — yilanlar hep ilk karede donup kalirdi.
+  Kisayoldan cikarildi
+
+> `snake-crawl` keyframe'i duruyor: preloader yilani hala zamana bagli (orada
+> kaydirma yok). Silmeye kalkisildi, dogrulama yakaladi.
+
 ## 2026-08-08 (10)
 
 ### Changed
