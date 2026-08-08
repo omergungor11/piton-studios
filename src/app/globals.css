@@ -4775,7 +4775,7 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
 .snake-border {
   position: absolute;
   top: 0; left: 0;
-  width: var(--size);
+  width: var(--size, 220px);
   aspect-ratio: 1200 / 225;
   /* Yol JS'te olculuyor; --sp tur icindeki konum (0-1), --vis katman gorunurlugu */
   offset-path: var(--path, none);

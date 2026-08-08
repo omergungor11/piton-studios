@@ -37,11 +37,19 @@ function frontness(t: number) {
   return smoothstep(0.2, 0.4, t) * (1 - smoothstep(0.7, 0.9, t));
 }
 
+/**
+ * Yilan boyu kutunun cevresine gore olcekleniyor — sabit px kucuk kutuda
+ * devasa, buyuk kutuda kayip gorunuyordu. Alt/ust sinirlar asiriya kacmasin diye.
+ */
+const SIZE_RATIO = 0.075;
+const SIZE_MIN = 190;
+const SIZE_MAX = 340;
+
 type Props = {
   children: React.ReactNode;
   /** Kose yaricapi (px) — kapsayicinin border-radius'uyla ayni olmali */
   radius?: number;
-  /** Yilanin yol uzerindeki uzunlugu (px) */
+  /** Yilan boyunu elle sabitler (px); verilmezse cevreye gore hesaplanir */
   size?: number;
   /** Kac tur atsin — 1 = bolum ekrandan gecerken tam tur */
   laps?: number;
@@ -50,7 +58,7 @@ type Props = {
 export default function SnakeBorder({
   children,
   radius = 28,
-  size = 118,
+  size,
   laps = 1,
 }: Props) {
   const innerRef = useRef<HTMLDivElement | null>(null);
@@ -79,7 +87,16 @@ export default function SnakeBorder({
         `path("M ${r},0 H ${w - r} A ${r},${r} 0 0 1 ${w},${r} V ${h - r} ` +
         `A ${r},${r} 0 0 1 ${w - r},${h} H ${r} A ${r},${r} 0 0 1 0,${h - r} ` +
         `V ${r} A ${r},${r} 0 0 1 ${r},0 Z")`;
-      for (const el of layers) el.style.setProperty('--path', d);
+
+      // Yuvarlatilmis dikdortgen cevresi: duz kenarlar + kose yaylari
+      const perimeter = 2 * (w + h) - 8 * r + 2 * Math.PI * r;
+      const px =
+        size ?? Math.min(SIZE_MAX, Math.max(SIZE_MIN, perimeter * SIZE_RATIO));
+
+      for (const el of layers) {
+        el.style.setProperty('--path', d);
+        el.style.setProperty('--size', `${Math.round(px)}px`);
+      }
     };
 
     let raf = 0;
@@ -124,19 +141,17 @@ export default function SnakeBorder({
       window.removeEventListener('resize', onScroll);
       if (raf) cancelAnimationFrame(raf);
     };
-  }, [radius, laps]);
-
-  const style = { '--size': `${size}px` } as React.CSSProperties;
+  }, [radius, laps, size]);
 
   return (
     <div className="snake-wrap">
       {/* Bolumden once: kutunun arkasinda kalan yari */}
-      <span className="snake-border is-behind" ref={behindRef} aria-hidden="true" style={style} />
+      <span className="snake-border is-behind" ref={behindRef} aria-hidden="true" />
       <div className="snake-wrap-inner" ref={innerRef}>
         {children}
       </div>
       {/* Bolumden sonra: kutunun onunden gecen yari */}
-      <span className="snake-border is-front" ref={frontRef} aria-hidden="true" style={style} />
+      <span className="snake-border is-front" ref={frontRef} aria-hidden="true" />
     </div>
   );
 }

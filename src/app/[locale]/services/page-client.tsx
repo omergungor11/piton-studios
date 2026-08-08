@@ -63,37 +63,39 @@ export default function ServicesPageClient() {
       </section>
 
       {/* Services grid */}
-      <section className="svc-glass" style={{ padding: 0 }}>
-        <div className="svc-grid">
-          {filtered.map((s) => {
-            const title = ts(`${s.slug}.title`);
-            const desc = ts(`${s.slug}.desc`);
-            const items = ts.raw(`${s.slug}.items`) as string[];
-            return (
-              <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
-                <div className="svc-top">
-                  <span className="n">{s.n}</span>
-                  <span className="cat">{t(`filterCat.${s.cat}`)}</span>
-                </div>
-                <div className="svc-icon">
-                  {SERVICE_ICONS[s.slug] || null}
-                </div>
-                <h4>{title}</h4>
-                <p className="svc-desc">{desc}</p>
-                <ul className="svc-items">
-                  {items.map((item) => (
-                    <li key={item}>
-                      <span className="bullet">—</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <span className="svc-arrow">↗</span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
+      <SnakeBorder radius={28}>
+        <section className="svc-glass" style={{ padding: 0 }}>
+          <div className="svc-grid">
+            {filtered.map((s) => {
+              const title = ts(`${s.slug}.title`);
+              const desc = ts(`${s.slug}.desc`);
+              const items = ts.raw(`${s.slug}.items`) as string[];
+              return (
+                <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
+                  <div className="svc-top">
+                    <span className="n">{s.n}</span>
+                    <span className="cat">{t(`filterCat.${s.cat}`)}</span>
+                  </div>
+                  <div className="svc-icon">
+                    {SERVICE_ICONS[s.slug] || null}
+                  </div>
+                  <h4>{title}</h4>
+                  <p className="svc-desc">{desc}</p>
+                  <ul className="svc-items">
+                    {items.map((item) => (
+                      <li key={item}>
+                        <span className="bullet">—</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="svc-arrow">↗</span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      </SnakeBorder>
 
       {/* CTA */}
       <section className="sp-cta glass strong">
