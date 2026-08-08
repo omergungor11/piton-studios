@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
-import { imageUrl } from '@/lib/media';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
 
@@ -18,7 +17,6 @@ export default function ProjectsPageClient() {
   const [activeYear, setActiveYear] = useState('All');
   const [showcaseView, setShowcaseView] = useState<ShowcaseView>('desktop');
   const t = useTranslations('projectsPage');
-  const tr = useTranslations('reel');
   const tw = useTranslations('works');
 
   const filteredWorks = activeYear === 'All' ? WORKS : WORKS.filter((w) => w.year === activeYear);
@@ -86,36 +84,6 @@ export default function ProjectsPageClient() {
               </Link>
             );
           })}
-        </div>
-      </section>
-
-      {/* Showreel */}
-      <section className="pp-reel">
-        <Image className="pp-reel-bg" src={imageUrl('hero.jpg')} alt="" fill sizes="100vw" />
-        <div className="pp-reel-overlay" />
-        <div className="pp-reel-content glass">
-          <div className="pp-reel-info">
-            <div className="pp-reel-eyebrow">{tr('ppEyebrow')}</div>
-            <h3 className="pp-reel-title">
-              {tr.rich('ppTitle', {
-                accent: (chunks) => <span className="em">{chunks}</span>,
-              })}
-            </h3>
-            <p className="pp-reel-desc">{tr('ppDesc')}</p>
-            <div className="pp-reel-meta">
-              <div className="pp-reel-meta-item">
-                <span className="pp-reel-meta-k">{tr('labelContent')}</span>
-                <span className="pp-reel-meta-v">{tr('valueContent')}</span>
-              </div>
-              <div className="pp-reel-meta-item">
-                <span className="pp-reel-meta-k">{tr('labelProjectCount')}</span>
-                <span className="pp-reel-meta-v">{tr('valueProjectCount')}</span>
-              </div>
-            </div>
-          </div>
-          <div className="pp-reel-video" data-cursor="hover" data-cursor-label="View ↗">
-            <Image src={imageUrl('reel-b.jpg')} alt="Showreel" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
-          </div>
         </div>
       </section>
 
