@@ -32,6 +32,9 @@ export default function ServicesPageClient() {
         </p>
       </section>
 
+      {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
+      <ImpactPanel />
+
       {/* Filter */}
       <section className="sp-filter">
         <button
@@ -88,9 +91,6 @@ export default function ServicesPageClient() {
           })}
         </div>
       </section>
-
-      {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
-      <ImpactPanel />
 
       {/* CTA */}
       <section className="sp-cta glass strong">
