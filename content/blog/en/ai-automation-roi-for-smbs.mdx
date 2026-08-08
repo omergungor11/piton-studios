@@ -1,0 +1,209 @@
+---
+title: "AI automation for small businesses: where to start and how to calculate ROI"
+description: "Which processes are worth automating and which are not? A payback formula, a worked example with real numbers, and a 90-day starting plan."
+date: 2026-08-03
+tags: ["ai", "automation", "process"]
+author: "Piton Studios"
+draft: false
+translationKey: ai-automation-roi
+faq:
+  - q: "Isn't AI automation expensive for a small business?"
+    a: "An automation focused on a single process typically sits in a €1,500-6,000 setup band, with running costs often under €50 a month. An automation that saves 20 hours of manual work a month pays for itself in 6-10 months at a mid-range hourly cost. What is expensive is trying to automate every process at once."
+  - q: "Which processes should not be automated?"
+    a: "Ones that run only a few times a month, run differently every time, produce output requiring subjective judgement, or carry a high cost of error. When those four coincide, building the automation costs more than doing the work by hand."
+  - q: "What is the difference between automation and an AI agent?"
+    a: "Classic automation follows predefined rules: when this happens, do that. An AI agent is given a goal, plans its own steps, uses tools and adjusts course based on results. For work with clear rules, classic automation is cheaper and more predictable; for work with variable input, the agent approach is what is needed."
+  - q: "What happens when an automation makes a mistake?"
+    a: "Every properly built automation has three safeguards: validation steps that halt bad runs, a log that makes every action traceable, and human approval on critical steps. You cannot eliminate risk; you can make it manageable."
+  - q: "When should I start measuring ROI?"
+    a: "Before the build. Record the time spent and the error rate of the process in its current form for two weeks. Without that baseline, the return on the automation stays a guess."
+---
+
+Conversations about AI automation usually start in the wrong place: which model, which tool, which
+platform. None of those is the right starting point. The right question is: **which task in the
+company takes how many hours a month, done by how many people, with how many errors?**
+
+This article covers how to pick a process worth automating, how to calculate payback, and what to do
+in the first 90 days.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Automation starts with a process, not a tool; the return on an unmeasured process cannot be calculated.",
+    "Suitability comes down to four criteria: frequency, rule clarity, input consistency, cost of error.",
+    "The payback formula is simple: setup cost divided by monthly net saving.",
+    "Pick one process for the first project; expansion is phase two.",
+    "Keeping human approval on critical steps does not reduce the return; it makes it sustainable.",
+  ]}
+/>
+
+## Automation, AI and agents are not the same thing
+
+The terms get used interchangeably, but they differ in cost and in the work they suit.
+
+| Approach | How it works | Suited to | Relative cost |
+|---|---|---|---|
+| Rule-based automation | Predefined if-then flow | Repetitive work with fixed rules | Low |
+| AI-assisted step | A model runs at one step of the flow | Text classification, summarising, extraction | Medium |
+| AI agent | Given a goal, plans its own steps | Variable input, multi-step decisions | High |
+
+What most small businesses need first is the top row. An ordinary
+[automation flow](/en/services/automation) with no "AI" label on it delivers the bulk of the real
+time saving. The step that needs a model is usually just one point in the flow: making sense of
+incoming free text. We detail how that is built on the
+[AI integration](/en/services/ai-integration) page; for scenarios that genuinely need multi-step
+decisions, see [agentic AI](/en/services/agentic-ai).
+
+## Which processes are worth automating
+
+Score against four criteria, each from 1 to 10. A total above 28 makes it a strong candidate.
+
+<BarChart
+  title="Automation suitability criteria and their weights"
+  caption="Weight out of 10 — ordered by what most affected payback time across our own projects."
+  max={10}
+  data={[
+    { label: "Frequency", value: 10, note: "How often it runs per week", highlight: true },
+    { label: "Rule clarity", value: 9, note: "Can the steps be written down" },
+    { label: "Input consistency", value: 8, note: "Does data arrive in the same shape" },
+    { label: "Cost of error", value: 6, note: "Is a wrong output cheap to fix" },
+  ]}
+/>
+
+### Good candidates
+
+- Entering the same data into two different systems by hand
+- Sorting and routing incoming emails or form submissions
+- Producing recurring reports from spreadsheets
+- Extracting data from invoices, receipts or order documents
+- Publishing the same content across multiple platforms
+
+### Poor candidates
+
+- Tasks that run once or twice a month
+- Processes full of exceptions that run differently every time
+- Decisions whose output requires subjective judgement
+- Financial or legal actions where an error cannot be reversed
+
+<Callout type="tip" title="Where the fastest win is">
+  In our experience the highest-return first project is almost always eliminating <strong>double
+  data entry</strong>. Every team that writes the same information into two places is losing dozens
+  of hours a month without noticing.
+</Callout>
+
+## How to calculate ROI
+
+The formula is not complicated; filling in the inputs honestly is the hard part.
+
+```txt
+Monthly gross saving = (hours saved × hourly cost) + (errors avoided × cost per error)
+Monthly net saving   = monthly gross saving − monthly running cost
+Payback (months)     = setup cost ÷ monthly net saving
+12-month ROI (%)     = ((monthly net saving × 12) − setup cost) ÷ setup cost × 100
+```
+
+Two things matter. First, **do not overestimate hours saved**: automation does not zero out a
+process — typically 10-20% of the original time remains for supervision and exception handling.
+Second, **do not forget the cost of error**: fixing a wrongly entered order usually costs more than
+entering it correctly.
+
+### Worked example: preparing quotes
+
+A real estate office copies listing data by hand and prepares a PDF quote for every enquiry. The
+measurements:
+
+<StatGrid
+  items={[
+    { value: "18 min", label: "Time per quote", note: "Measured average" },
+    { value: "140", label: "Quotes per month", note: "Last 3 months" },
+    { value: "42 h", label: "Total monthly time", note: "Before automation" },
+    { value: "6%", label: "Error rate", note: "Quotes needing resend" },
+  ]}
+/>
+
+| Item | Before | After | Difference |
+|---|---|---|---|
+| Time per quote | 18 min | 3 min | −15 min |
+| Total monthly time | 42 hours | 7 hours | −35 hours |
+| Hourly cost | €14 | €14 | — |
+| Monthly labour cost | €588 | €98 | −€490 |
+| Fixing faulty quotes | 8 × €25 | 1 × €25 | −€175 |
+| Monthly running cost | — | €45 | +€45 |
+| **Monthly net saving** | — | — | **€620** |
+
+With a setup cost of €4,200, payback is **4,200 ÷ 620 ≈ 6.8 months** and the twelve-month ROI is
+**77%**. The strength of this calculation is not its precision but the ground it moves the discussion
+onto: the question is no longer "should we use AI" but "is there €620 a month in this process".
+
+<TrendChart
+  title="Cumulative cash effect (worked example)"
+  caption="Cumulative euros. The flat line is the setup cost; where the two lines cross is break-even."
+  unit=" €"
+  max={8000}
+  labels={["Month 0", "Month 3", "Month 6", "Month 9", "Month 12"]}
+  series={[
+    { name: "Cumulative net effect", points: [0, 1860, 3720, 5580, 7440] },
+    { name: "Setup cost", points: [4200, 4200, 4200, 4200, 4200], muted: true },
+  ]}
+/>
+
+Where the two lines cross is break-even — around month seven here. Every month after that is net
+gain.
+
+## The cost side: setup and running
+
+| Item | Indicative range | Note |
+|---|---|---|
+| Process analysis and mapping | €400-1,200 | Do not skip — the wrong process is the costliest mistake |
+| Flow development | €1,000-4,000 | Scales with integration count |
+| Model usage | €5-80 / month | Depends on volume and model choice |
+| Hosting / execution | €0-40 / month | Self-hosting is an option |
+| Maintenance and monitoring | €0-200 / month | Needed as source systems change |
+
+Model usage is rarely the large line item people expect. The real spend is mapping the process
+correctly and building the integrations — in other words, ordinary software work.
+
+## The first 90 days
+
+| Period | Focus | Concrete output |
+|---|---|---|
+| Days 1-30 | Measurement | Time and error logs for 3 candidate processes, suitability scoring |
+| Days 31-60 | Pilot | A working flow for one process, in human-approval mode |
+| Days 61-90 | Validation | Comparison against real data, reducing approval steps |
+
+At the end of the quarter you have two things: a working automation and — more valuable — a measured
+return table. The decision on the second process is then made from data rather than a guess.
+
+We apply the same approach to our own products. [Emlak Sync](/en/projects/emlak-sync) removes the
+need for estate agents to enter the same listing into multiple portals by hand;
+[Dolmuş Route Control](/en/projects/dolmus-kontrol) turns hours of manual checking into an automatic
+report generated from GPS data. On the content side,
+[ContentFlow AI](/en/projects/contentflow-ai) and [Social Pro](/en/projects/social-pro) apply the
+same logic to marketing processes.
+
+## Risks and how to manage them
+
+<Callout type="warn" title="Three real risks of automation">
+  <strong>Silent failure:</strong> the flow appears to run but produces wrong output. The fix is
+  validation at every step plus regular sampling.<br />
+  <strong>Source system change:</strong> when an integrated system changes its interface, the flow
+  breaks. The fix is monitoring and alerting.<br />
+  <strong>Knowledge loss:</strong> when the person who knew the process leaves, nobody remembers why
+  the automation was built that way. The fix is treating process documentation as part of the
+  deliverable.
+</Callout>
+
+There is also one risk that is not real: "automation will take our jobs." What we actually see is
+teams producing more work with the same headcount. Those 35 recovered hours turn into more quotes,
+not fewer people.
+
+## Conclusion
+
+The right entry into AI automation is not choosing the most advanced tool; it is choosing the most
+boring, most repetitive and best-measured process you have. The formula is simple: find work with
+high frequency, clear rules and a low cost of error; measure it for two weeks; calculate payback;
+start with one process.
+
+If you are not sure where to begin, we can map your processes together as part of
+[AI consulting](/en/services/ai-consulting). Reach us through the [contact page](/en/contact); our
+related work is on the [projects page](/en/projects).

@@ -1,0 +1,251 @@
+---
+title: "Search visibility in the AI era: from SEO to GEO"
+description: "When ChatGPT, Perplexity and Google AI Overviews answer the question directly, how does your site get found? What GEO is, how to structure content for it, and a 90-day plan."
+date: 2026-08-08
+tags: ["seo", "geo", "ai", "content"]
+author: "Piton Studios"
+draft: false
+translationKey: seo-to-geo
+faq:
+  - q: "Is GEO replacing SEO?"
+    a: "No. GEO (Generative Engine Optimization) is a layer on top of SEO. A site without a solid technical SEO foundation cannot be read properly by language models either: crawlability, speed, schema markup and clear information architecture are prerequisites for both. GEO adds one thing on top — structuring content so it can be quoted."
+  - q: "Do I get traffic when an AI model cites my site?"
+    a: "Click-through rates are lower than in classic search, but intent is far clearer. The model has already answered; someone who clicks through is usually verifying, going deeper, or ready to get in touch. That is why GEO traffic should be measured by conversion and brand recall, not by session count."
+  - q: "How do I make sure language models can read my content?"
+    a: "Three conditions: the page must ship server-rendered HTML (content that only appears after JavaScript runs is not reliably read), robots.txt must not block AI crawlers, and the content must be structured with a clear heading hierarchy, tables and schema.org markup."
+  - q: "How long before GEO work shows results?"
+    a: "Classic SEO takes 3-6 months. On the generative side the first signals usually appear earlier, within 4-8 weeks, because models can also pull fresh content through live search tools. Lasting visibility, however, requires consistent publishing and freshness."
+  - q: "Does GEO make sense for a small business?"
+    a: "In niche topics, yes — it is often an advantage. Language models cite large brands for broad competitive questions, but for narrow, specific queries (city, sector and product-type combinations) a small site written clearly enough has a strong chance of being quoted."
+---
+
+The answer to a search query is increasingly a paragraph rather than a list of links. Google AI
+Overviews, ChatGPT's search mode, Perplexity and Claude all do the same thing: read sources,
+synthesise them, and hand the user one answer. This does not invalidate the decade-old reflex of
+"rank first for the keyword" — it just makes it insufficient on its own.
+
+This article explains **GEO** — Generative Engine Optimization — where it diverges from classic SEO,
+and what a corporate site should actually do about it.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "GEO does not replace SEO; it is a quotability layer built on top of a technical SEO foundation.",
+    "Language models quote passages, not pages. Every section must stand on its own.",
+    "Content that is not server-rendered effectively does not exist for AI crawlers.",
+    "Measurement changes: you track citation rate and high-intent traffic, not rankings.",
+    "A 90-day plan has three stages: technical base, content restructuring, measurement loop.",
+  ]}
+/>
+
+## What exactly separates SEO from GEO
+
+Both systems aim at the same thing: getting the right content to the right person. But the surface
+where the answer appears is different, so the optimisation target shifts.
+
+### Classic search: ten blue links
+
+In classic search the competition is about **ranking**. Reach position one and you get the click.
+The unit of optimisation is the page: title tag, description, internal linking and authority signals
+all operate at page level.
+
+### Generative search: one answer, a handful of sources
+
+In generative search the competition is about **being cited**. While composing an answer, a model
+pulls passages from three to eight sources. The unit of optimisation is no longer the page but the
+**passage**: a block of text the model can lift and place into its answer without it losing meaning.
+
+The practical consequence: a long, flowing article where every paragraph depends on the previous one
+reads beautifully to a human and is close to useless to a model.
+
+| Dimension | Classic SEO | GEO |
+|---|---|---|
+| Unit of competition | Page | Passage |
+| Success metric | Ranking, clicks | Citations, brand recall |
+| Keywords | Term-driven | Question and intent driven |
+| Content shape | Flowing narrative | Structured, self-contained blocks |
+| Technical requirement | Crawlability, speed, schema | Same + server rendering + clear source signals |
+| Feedback loop | Search Console | Manual query testing + referrer analysis |
+| Typical first result | 3-6 months | 4-8 weeks |
+
+## How click behaviour is shifting
+
+The chart below is not a measured dataset — it is a **directional scenario model**: a simplified
+picture of the shift we typically observe on informational queries. You need to derive your own
+site's real distribution from Search Console and referrer data.
+
+<TrendChart
+  title="Traffic source split on informational queries (scenario model)"
+  caption="Percentages. Not a measurement — a schematic of the trend we see across corporate sites."
+  unit="%"
+  max={100}
+  labels={["2023", "2024", "2025", "2026"]}
+  series={[
+    { name: "Classic organic clicks", points: [72, 64, 54, 45] },
+    { name: "Answered in place (zero click)", points: [24, 30, 36, 41], muted: true },
+  ]}
+/>
+
+The point is not the percentages but the widening gap. A site that holds exactly the same rankings
+can lose traffic while doing nothing wrong. What compensates for that loss is the visibility gained
+in exchange: being named inside the answer.
+
+## How to structure content for GEO
+
+Five rules, in the order you should apply them.
+
+### 1. Answer in the first paragraph
+
+The first two sentences under each heading must answer the question that heading poses, on their
+own. No lead-in, no context-setting, no warm-up. The model reads the first passage and takes it if
+it is sufficient.
+
+<Callout type="tip" title="A practical test">
+  Copy the first paragraph under a heading and paste it somewhere with no context. Is it still
+  meaningful and accurate on its own? If not, a model cannot use it either.
+</Callout>
+
+### 2. Write headings as questions
+
+People ask language models in full sentences. The closer your headings are to those sentences, the
+stronger the match. Use "How much does a corporate website cost" instead of "Pricing", "How long
+does delivery take" instead of "Process".
+
+### 3. Add quotable data blocks
+
+Tables, numbered lists and concrete numbers are the easiest units for a model to carry. Turning a
+claim into a three-row table instead of defending it in prose measurably raises the odds of being
+cited.
+
+### 4. Implement schema.org fully
+
+Structured data works both for classic rich results and for entity extraction by models. The minimum
+set on a corporate site:
+
+| Schema type | Where | What it provides |
+|---|---|---|
+| `Organization` | All pages | Brand entity, logo, social profiles |
+| `WebSite` | Home page | Site name, search action |
+| `BreadcrumbList` | All inner pages | Hierarchy and context |
+| `Service` | Service pages | Machine-readable definition of the offering |
+| `FAQPage` | Pages with an FAQ section | Direct extraction of question-answer pairs |
+| `BlogPosting` | Blog articles | Author, date, freshness signal |
+| `CreativeWork` | Project / case pages | Reference work recognised as an entity |
+
+Every schema above is live on this site; we detail the approach on our
+[SEO & GEO service page](/en/services/seo-geo).
+
+### 5. Signal freshness and sources
+
+When models see conflicting information, they look at dates. Publish and update dates should be
+visible, numbers should state the period they refer to, and external sources should be named.
+Undated content is the first thing dropped on questions where recency matters.
+
+## The technical base: making the page readable
+
+However good the content is, it means nothing if the page cannot be read. Three checks:
+
+<StatGrid
+  items={[
+    { value: "SSR", label: "Server-side rendering", note: "Mandatory" },
+    { value: "robots.txt", label: "Allow AI crawlers", note: "Verify" },
+    { value: "< 2.5s", label: "LCP target", note: "Crawl budget" },
+  ]}
+/>
+
+**Server rendering.** Content that only materialises after JavaScript runs in the browser is a blank
+page to many AI crawlers. In a Next.js site the rule is simple: every page that does not touch a
+database should be statically generated. We covered the performance side of that in
+[how to build a fast website](/en/blog/how-to-build-a-fast-website).
+
+**robots.txt.** Many sites block `GPTBot`, `ClaudeBot` or `PerplexityBot` without realising it.
+Blocking them can be a legitimate choice — but it should be a deliberate one. If you want
+visibility, these agents need access.
+
+**Speed.** Crawl budget is not a Google-only concept. Slow pages get crawled less, and pages crawled
+less get cited less.
+
+```txt
+# robots.txt — for a corporate site that wants visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+```
+
+## How to measure GEO
+
+Unlike classic SEO there is no central dashboard. Measurement runs on three tracks.
+
+<BarChart
+  title="GEO measurement methods: effort versus value"
+  caption="Scored out of 10 — a subjective rating based on our own project experience."
+  max={10}
+  data={[
+    { label: "Manual query testing", value: 9, note: "Low cost, high insight", highlight: true },
+    { label: "Referrer analysis", value: 8, note: "chat.openai.com, perplexity.ai" },
+    { label: "Brand recall survey", value: 5, note: "Slow but the truest signal" },
+    { label: "Third-party GEO tools", value: 4, note: "Not yet mature" },
+  ]}
+/>
+
+**Manual query testing** is the most practical method: ask your target questions to four or five
+different models at regular intervals and record which sources appear. Even twenty queries a month
+produce a meaningful trend within a quarter.
+
+**Referrer analysis** means defining AI-sourced referrals as a separate segment in your analytics.
+That traffic usually shows above-average session duration and conversion rates, because the visitor
+arrives already informed.
+
+## A 90-day implementation plan
+
+| Week | Stage | Work | Output |
+|---|---|---|---|
+| 1-2 | Technical base | Rendering audit, robots.txt, sitemap, hreflang | A crawlable site |
+| 3-4 | Structured data | Organization, Service, FAQPage, BlogPosting schemas | Valid schema |
+| 5-6 | Content inventory | Audit existing pages for question-answer fit | Priority list |
+| 7-9 | Rewrite | Revise headings and opening paragraphs on the top 10 pages | Quotable passages |
+| 10-11 | New content | 3-4 in-depth articles filling coverage gaps | Topical authority |
+| 12 | Measurement loop | Query test set, referrer segment, monthly report template | A repeatable process |
+
+The sequence mirrors [how a corporate web project actually runs](/en/blog/corporate-web-project-process):
+foundation first, then content, measurement last. Breaking that order — producing content before the
+technical base is ready — is the most common waste of time we see.
+
+## Five common mistakes
+
+1. **Chasing keyword density.** Models look at semantic coherence, not term counts. Repeating a word
+   ten times helps nobody.
+2. **Publishing generic AI-written content as-is.** Models do not cite the average text they
+   themselves produce; what stands out is original data, examples and experience.
+3. **Piling everything into one long page.** Passage-level citation rewards clearly segmented
+   structure.
+4. **Hiding concrete information like price, timeline and scope.** That is exactly what models look
+   for; "contact us for details" never gets quoted.
+5. **Staying monolingual.** On a multilingual site each language is a separate visibility surface;
+   with hreflang set up properly the cost is low and the return is high.
+
+## Seeing it in practice
+
+On [Ambalaj Cini](/en/projects/ambalaj-cini) we ran development and
+[ad management](/en/services/google-ads) together, and the company grew 30%. For what is possible on
+the technical side, [Nexos Investment](/en/projects/nexos-investment) is the better example:
+multilingual structure, schema, server rendering and a performance budget in one project. The rest
+of our work is on the [projects page](/en/projects).
+
+## Conclusion
+
+GEO is not a fad that invalidates SEO; it is a technical response to search results changing shape.
+Most of the work is what good SEO already demanded: fast, server-rendered pages, a clear heading
+hierarchy, correct schema, honest and concrete content. The only thing that changed is that we now
+do it for a second audience too — one that reads passage by passage rather than sentence by
+sentence.
+
+If you are not sure which of those two readers your site is ready for, [write to us](/en/contact)
+and we will review the current state together.

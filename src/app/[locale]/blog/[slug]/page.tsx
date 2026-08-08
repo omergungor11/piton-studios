@@ -5,10 +5,13 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
 import { pickMessages } from '@/lib/pick-messages';
 import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
+import BlogToc from '@/components/blog-toc';
+import { mdxComponents } from '@/components/mdx/mdx-components';
 import {
   getPost,
   getAllPostParams,
@@ -23,6 +26,7 @@ import {
   blogPostingJsonLd,
   breadcrumbJsonLd,
   organizationJsonLd,
+  faqJsonLd,
 } from '@/lib/seo';
 import { SITE_URL, locales, defaultLocale, type Locale } from '@/lib/site';
 
@@ -76,9 +80,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const mdxOptions: MDXRemoteProps['options'] = {
+  // next-mdx-remote varsayilan olarak MDX icindeki tum JS ifadelerini siler — bu, prop
+  // olarak veri alan component'leri (grafikler, ozet kutulari) bosaltiyordu. Icerik kendi
+  // repomuzda, kullanici girdisi degil; blockDangerousJS acik kaliyor.
+  blockJS: false,
   mdxOptions: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
+      rehypeSlug,
       [rehypePrettyCode, { theme: 'github-dark-dimmed', keepBackground: false }],
     ],
   },
@@ -125,6 +134,7 @@ export default async function BlogPostPage({ params }: Props) {
             { name: t('title'), url: absoluteUrl(locale as Locale, '/blog') },
             { name: post.title, url },
           ]),
+          ...(post.faq ? [faqJsonLd(post.faq)].filter((x) => x !== null) : []),
         ]}
       />
 
@@ -168,9 +178,27 @@ export default async function BlogPostPage({ params }: Props) {
             )}
           </header>
 
+          <BlogToc title={t('tableOfContents')} headings={post.headings} />
+
           <div className="blog-prose">
-            <MDXRemote source={post.content} options={mdxOptions} />
+            <MDXRemote source={post.content} options={mdxOptions} components={mdxComponents} />
           </div>
+
+          {post.faq && post.faq.length > 0 && (
+            <section className="blog-faq" aria-labelledby="sss">
+              <h2 className="blog-faq-title" id="sss">
+                {t('faqTitle')}
+              </h2>
+              <dl className="blog-faq-list">
+                {post.faq.map((item) => (
+                  <div className="blog-faq-item" key={item.q}>
+                    <dt>{item.q}</dt>
+                    <dd>{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
 
           {related.length > 0 && (
             <aside className="blog-related">

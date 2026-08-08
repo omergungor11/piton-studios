@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import GithubSlugger from 'github-slugger';
 import { locales, type Locale } from '@/i18n/config';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'blog');
@@ -19,6 +20,14 @@ export interface PostFrontmatter {
   draft: boolean;
   /** Ayni yazinin diller arasi baglantisi — hreflang ve dil degistirici icin. */
   translationKey: string;
+  /** Yazi sonunda render edilir + FAQPage JSON-LD uretir. */
+  faq?: { q: string; a: string }[];
+}
+
+export interface Heading {
+  depth: 2 | 3;
+  id: string;
+  text: string;
 }
 
 export interface Post extends PostFrontmatter {
@@ -26,6 +35,7 @@ export interface Post extends PostFrontmatter {
   locale: Locale;
   content: string;
   readingMinutes: number;
+  headings: Heading[];
 }
 
 export type PostMeta = Omit<Post, 'content'>;
@@ -57,9 +67,53 @@ function readPostFile(locale: Locale, fileName: string): Post | null {
     author: data.author ? String(data.author) : 'Piton Studios',
     draft: data.draft === true,
     translationKey: data.translationKey ? String(data.translationKey) : slug,
+    faq: parseFaq(data.faq),
     content,
     readingMinutes: Math.max(1, Math.round(readingTime(content).minutes)),
+    headings: extractHeadings(content),
   };
+}
+
+function parseFaq(value: unknown): { q: string; a: string }[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const items = value
+    .filter((v): v is Record<string, unknown> => typeof v === 'object' && v !== null)
+    .filter((v) => v.q && v.a)
+    .map((v) => ({ q: String(v.q), a: String(v.a) }));
+  return items.length ? items : undefined;
+}
+
+/** Baslik metnindeki markdown isaretlerini temizler — id, render edilen metne gore uretilir. */
+function plainText(md: string): string {
+  return md
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/[*_`]/g, '')
+    .trim();
+}
+
+/**
+ * Icindekiler tablosu icin h2/h3 basliklarini cikarir.
+ * id'ler rehype-slug ile ayni algoritmayi (github-slugger) kullanir — yoksa
+ * bagalantilar bos hedefe gider.
+ */
+export function extractHeadings(content: string): Heading[] {
+  const slugger = new GithubSlugger();
+  // Kod bloklarinin icindeki '#' satirlari baslik degildir.
+  const withoutCode = content.replace(/^```[\s\S]*?^```/gm, '');
+
+  const headings: Heading[] = [];
+  for (const line of withoutCode.split('\n')) {
+    const match = /^(#{2,3})\s+(.+?)\s*#*\s*$/.exec(line);
+    if (!match) continue;
+    const text = plainText(match[2]);
+    if (!text) continue;
+    headings.push({
+      depth: match[1].length as 2 | 3,
+      id: slugger.slug(text),
+      text,
+    });
+  }
+  return headings;
 }
 
 function toIsoDate(value: unknown): string {

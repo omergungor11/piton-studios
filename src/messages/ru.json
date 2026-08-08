@@ -57,7 +57,9 @@
     "backToBlog": "Назад в блог",
     "relatedPosts": "Похожие статьи",
     "readMore": "Читать далее",
-    "shareTitle": "Поделиться"
+    "shareTitle": "Поделиться",
+    "tableOfContents": "Содержание",
+    "faqTitle": "Часто задаваемые вопросы"
   },
   "hero": {
     "kicker": "Дизайн · Код · ИИ — Цифровая Студия",

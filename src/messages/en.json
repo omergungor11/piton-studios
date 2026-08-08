@@ -57,7 +57,9 @@
     "backToBlog": "Back to blog",
     "relatedPosts": "Related posts",
     "readMore": "Read more",
-    "shareTitle": "Share"
+    "shareTitle": "Share",
+    "tableOfContents": "Table of contents",
+    "faqTitle": "Frequently asked questions"
   },
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",

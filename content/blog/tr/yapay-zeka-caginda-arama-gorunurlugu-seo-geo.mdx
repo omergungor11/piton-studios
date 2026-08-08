@@ -1,0 +1,253 @@
+---
+title: "Yapay zeka çağında arama görünürlüğü: SEO'dan GEO'ya"
+description: "ChatGPT, Perplexity ve Google AI Overviews cevabı doğrudan veriyorken siteniz nasıl bulunur? GEO'nun ne olduğu, içeriğin nasıl yapılandırılacağı ve 90 günlük uygulanabilir bir plan."
+date: 2026-08-08
+tags: ["seo", "geo", "yapay zeka", "içerik"]
+author: "Piton Studios"
+draft: false
+translationKey: seo-to-geo
+faq:
+  - q: "GEO, SEO'nun yerini mi alıyor?"
+    a: "Hayır. GEO (Generative Engine Optimization), SEO'nun üzerine eklenen bir katmandır. Teknik SEO temeli olmayan bir site dil modelleri tarafından da düzgün okunamaz: taranabilirlik, hız, schema markup ve net bilgi mimarisi her iki taraf için de ön koşuldur. GEO, bu temelin üzerine içeriğin alıntılanabilir biçimde yapılandırılmasını ekler."
+  - q: "Yapay zeka modelleri sitemi alıntıladığında trafik alır mıyım?"
+    a: "Doğrudan tıklama oranı klasik aramaya göre düşüktür, ancak gelen ziyaretçinin niyeti çok daha nettir. Model cevabı zaten vermiştir; siteye tıklayan kişi genellikle doğrulamak, detaya inmek veya iletişime geçmek için gelir. Bu yüzden GEO trafiğini oturum sayısıyla değil, dönüşüm ve marka anımsama üzerinden ölçmek gerekir."
+  - q: "İçeriğimi dil modellerine nasıl okuturum?"
+    a: "Üç şart var: sayfanın sunucu tarafında render edilmiş HTML içermesi (yalnızca JavaScript ile dolan içerik güvenilir biçimde okunmaz), robots.txt'in AI tarayıcılarını engellememesi ve içeriğin başlık hiyerarşisi, tablolar ve schema.org işaretlemesiyle yapılandırılmış olması."
+  - q: "GEO çalışmasının sonucu ne zaman görünür?"
+    a: "Klasik SEO'da 3-6 ay beklenir. Üretken arama tarafında ilk sinyaller genellikle daha erken, 4-8 hafta içinde görünür; çünkü modeller güncel içeriği arama araçlarıyla anlık olarak da çekebiliyor. Kalıcı görünürlük için ise düzenli yayın ve güncellik gerekir."
+  - q: "Küçük bir işletmenin GEO'ya yatırım yapması mantıklı mı?"
+    a: "Niş konularda evet, hatta avantajlıdır. Dil modelleri geniş rekabetli sorularda büyük markaları alıntılar; ancak dar ve spesifik sorularda (şehir, sektör, ürün tipi kombinasyonları) yeterince net yazılmış küçük bir sitenin alıntılanma şansı yüksektir."
+---
+
+Arama kutusuna yazılan sorunun cevabı artık çoğu zaman bir bağlantı listesi değil, doğrudan bir
+paragraf. Google AI Overviews, ChatGPT'nin arama modu, Perplexity ve Claude aynı şeyi yapıyor:
+kaynakları okuyor, sentezliyor ve kullanıcıya tek bir cevap veriyor. Bu, on yıldır kurduğumuz
+"anahtar kelimede birinci sıraya çık" refleksini geçersiz kılmıyor ama tek başına yetersiz
+bırakıyor.
+
+Bu yazıda **GEO** — Generative Engine Optimization — kavramını, klasik SEO'dan nerede ayrıldığını
+ve bir kurumsal sitede pratikte ne yapılması gerektiğini adım adım anlatıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "GEO, SEO'nun yerine geçmez; teknik SEO temelinin üzerine eklenen bir alıntılanabilirlik katmanıdır.",
+    "Dil modelleri sayfaları değil, pasajları alıntılar. Bu yüzden her başlık altı kendi başına anlamlı olmalıdır.",
+    "Sunucu tarafında render edilmemiş içerik, AI tarayıcıları için pratikte yoktur.",
+    "Ölçüm değişir: sıralama değil, alıntılanma oranı ve niyeti net trafik takip edilir.",
+    "90 günlük bir plan üç aşamadan oluşur: teknik taban, içerik yeniden yapılandırma, ölçüm döngüsü.",
+  ]}
+/>
+
+## SEO ile GEO arasındaki fark tam olarak nedir
+
+İki sistemin amacı aynı: doğru içeriği doğru kişiye ulaştırmak. Ancak sonuç yüzeyi farklı olduğu
+için optimizasyon hedefi de farklılaşıyor.
+
+### Klasik arama: on mavi bağlantı
+
+Klasik aramada rekabet **sıralama** üzerinedir. Sayfanız birinci sıraya çıkarsa tıklama alır.
+Optimizasyonun birimi sayfadır: başlık etiketi, açıklama, iç bağlantı yapısı ve otorite sinyalleri
+sayfa düzeyinde çalışır.
+
+### Üretken arama: tek cevap, birkaç kaynak
+
+Üretken aramada rekabet **alıntılanma** üzerinedir. Model bir cevap üretirken üç ila sekiz kaynaktan
+pasajlar çeker. Optimizasyonun birimi artık sayfa değil, **pasaj**tır: modelin kopyalayıp cevabına
+yerleştirebileceği, bağlamdan koparıldığında bile anlamını koruyan bir metin bloğu.
+
+Bu ayrımın pratik sonucu şudur: uzun ve akıcı ama her paragrafı bir öncekine bağımlı bir metin,
+insan okuyucu için güzel, model için kullanışsızdır.
+
+| Boyut | Klasik SEO | GEO |
+|---|---|---|
+| Rekabet birimi | Sayfa | Pasaj |
+| Başarı ölçütü | Sıralama, tıklama | Alıntılanma, marka anımsama |
+| Anahtar kelime | Terim odaklı | Soru ve niyet odaklı |
+| İçerik biçimi | Akıcı anlatı | Yapılandırılmış, kendi kendine yeten bloklar |
+| Teknik gereksinim | Taranabilirlik, hız, schema | Aynısı + sunucu tarafı render + net kaynak sinyalleri |
+| Geri bildirim döngüsü | Search Console | Manuel sorgu testi + referrer analizi |
+| Tipik ilk sonuç | 3-6 ay | 4-8 hafta |
+
+## Tıklama davranışı nasıl değişiyor
+
+Aşağıdaki grafik ölçülmüş bir veri seti değil, **yön gösteren bir senaryo modelidir**: bilgi amaçlı
+("nedir", "nasıl yapılır") sorgularda tipik olarak gözlemlediğimiz kaymanın basitleştirilmiş hâli.
+Kendi sitenizin gerçek dağılımını Search Console ve referrer verinizden çıkarmanız gerekir.
+
+<TrendChart
+  title="Bilgi amaçlı sorgularda trafik kaynağı dağılımı (senaryo modeli)"
+  caption="Yüzde olarak. Ölçüm değil, kurumsal sitelerde gözlemlediğimiz eğilimin şematik gösterimi."
+  unit="%"
+  max={100}
+  labels={["2023", "2024", "2025", "2026"]}
+  series={[
+    { name: "Klasik organik tıklama", points: [72, 64, 54, 45] },
+    { name: "Cevaplanıp bitmiş arama (sıfır tıklama)", points: [24, 30, 36, 41], muted: true },
+  ]}
+/>
+
+Buradaki asıl mesaj yüzdeler değil, makasın açılıyor olması. Aynı sıralamayı koruyan bir site,
+hiçbir şey yapmadan trafik kaybedebilir. Kaybı telafi eden şey, kaybolan tıklamanın karşılığında
+kazanılan görünürlüktür: cevabın içinde marka adıyla anılmak.
+
+## GEO için içerik nasıl yapılandırılır
+
+Beş kural, uygulama sırasına göre.
+
+### 1. Cevabı ilk paragrafta verin
+
+Her başlık altındaki ilk iki cümle, o başlığın sorduğu soruyu tek başına cevaplamalıdır. Giriş
+cümlesi, bağlam kurma, ısınma paragrafı yok. Model ilk pasajı okur ve yeterli bulursa alır.
+
+<Callout type="tip" title="Pratik test">
+  Bir başlık altındaki ilk paragrafı kopyalayıp bağlamsız bir yere yapıştırın. Tek başına
+  okunduğunda hâlâ anlamlı ve doğru mu? Değilse, model de kullanamaz.
+</Callout>
+
+### 2. Başlıkları soru biçiminde kurun
+
+Kullanıcılar dil modellerine tam cümlelerle soru soruyor. Başlıklarınız bu cümlelere ne kadar
+yakınsa eşleşme o kadar güçlü olur. "Fiyatlandırma" yerine "Kurumsal web sitesi ne kadar tutar",
+"Süreç" yerine "Proje kaç haftada teslim edilir".
+
+### 3. Alıntılanabilir veri blokları koyun
+
+Tablolar, numaralı listeler ve net sayılar modeller için en kolay taşınabilir birimlerdir. Bir
+iddiayı düz metinde savunmak yerine üç satırlık bir tabloya dönüştürmek, alıntılanma olasılığını
+belirgin biçimde artırır.
+
+### 4. Schema.org işaretlemesini eksiksiz kurun
+
+Yapılandırılmış veri hem klasik zengin sonuçlar hem de modellerin varlık çıkarımı için çalışır. Bir
+kurumsal sitede minimum set şudur:
+
+| Şema tipi | Nereye | Ne sağlar |
+|---|---|---|
+| `Organization` | Tüm sayfalar | Marka varlığı, logo, sosyal profiller |
+| `WebSite` | Ana sayfa | Site adı, arama eylemi |
+| `BreadcrumbList` | Tüm iç sayfalar | Hiyerarşi ve bağlam |
+| `Service` | Hizmet sayfaları | Sunulan hizmetin makine okunur tanımı |
+| `FAQPage` | SSS bölümü olan sayfalar | Soru-cevap çiftlerinin doğrudan çıkarımı |
+| `BlogPosting` | Blog yazıları | Yazar, tarih, güncellik sinyali |
+| `CreativeWork` | Proje / vaka sayfaları | Referans çalışmaların varlık olarak tanınması |
+
+Bu sitede yukarıdaki şemaların tamamı yayında; nasıl kurulduğunu merak ediyorsanız
+[SEO & GEO hizmet sayfamızda](/tr/hizmetler/seo-geo) yaklaşımı ayrıntılandırdık.
+
+### 5. Güncellik ve kaynak sinyali verin
+
+Modeller çelişkili bilgi gördüğünde tarihe bakar. Yayın ve güncelleme tarihini görünür biçimde
+yazın, sayıların hangi döneme ait olduğunu belirtin, dış kaynak veriyorsanız adını anın. Tarihsiz
+içerik, güncelliğin belirleyici olduğu sorularda ilk elenen olur.
+
+## Teknik taban: modelin sayfanızı okuyabilmesi
+
+İçerik ne kadar iyi olursa olsun, sayfa okunamıyorsa hiçbir şey ifade etmez. Üç kontrol:
+
+<StatGrid
+  items={[
+    { value: "SSR", label: "Sunucu tarafı render", note: "Zorunlu" },
+    { value: "robots.txt", label: "AI tarayıcılarına izin", note: "Kontrol edin" },
+    { value: "< 2.5s", label: "LCP hedefi", note: "Tarama bütçesi" },
+  ]}
+/>
+
+**Sunucu tarafı render.** Yalnızca tarayıcıda JavaScript çalıştıktan sonra dolan içerik, birçok AI
+tarayıcısı için boş sayfadır. Next.js kullanan bir sitede kural basit: veritabanına dokunmayan her
+sayfa statik üretilmelidir. Bunun performans tarafını
+[hızlı web sitesi nasıl yapılır yazısında](/tr/blog/hizli-web-sitesi-nasil-yapilir) ayrıntılı
+anlattık.
+
+**robots.txt.** Birçok site, farkında olmadan `GPTBot`, `ClaudeBot`, `PerplexityBot` gibi
+kullanıcı-aracılarını engelliyor. Engellemek meşru bir tercih olabilir — ama bilinçli bir tercih
+olmalı. Görünürlük istiyorsanız bu ajanların erişimi açık olmalıdır.
+
+**Hız.** Tarama bütçesi yalnızca Google için geçerli değil. Yavaş yanıt veren sayfalar daha az
+taranır, daha az taranan sayfalar daha az alıntılanır.
+
+```txt
+# robots.txt — görünürlük isteyen bir kurumsal site için
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+```
+
+## GEO nasıl ölçülür
+
+Klasik SEO'nun aksine merkezi bir panel yok. Ölçüm üç koldan yürür.
+
+<BarChart
+  title="GEO ölçüm yöntemlerinin uygulama zorluğu ve değeri"
+  caption="10 üzerinden değerlendirme — kendi proje deneyimimize dayalı öznel skor."
+  max={10}
+  data={[
+    { label: "Manuel sorgu testi", value: 9, note: "Düşük maliyet, yüksek içgörü", highlight: true },
+    { label: "Referrer analizi", value: 8, note: "chat.openai.com, perplexity.ai" },
+    { label: "Marka anımsama anketi", value: 5, note: "Yavaş ama en gerçek sinyal" },
+    { label: "Üçüncü parti GEO araçları", value: 4, note: "Henüz olgunlaşmadı" },
+  ]}
+/>
+
+**Manuel sorgu testi** en pratik yöntemdir: hedef sorularınızı düzenli aralıklarla dört-beş farklı
+modele sorun, cevapta hangi kaynakların geçtiğini kaydedin. Ayda bir yapılan yirmi sorgu bile üç ay
+sonra anlamlı bir eğilim tablosu verir.
+
+**Referrer analizi** için analitik aracınızda yapay zeka kaynaklı yönlendirmeleri ayrı bir segment
+olarak tanımlayın. Bu trafiğin oturum süresi ve dönüşüm oranı, genelde organik ortalamanın
+üzerindedir — çünkü ziyaretçi zaten bilgilenmiş olarak gelir.
+
+## 90 günlük uygulama planı
+
+| Hafta | Aşama | Yapılacak iş | Çıktı |
+|---|---|---|---|
+| 1-2 | Teknik taban | Render stratejisi denetimi, robots.txt, sitemap, hreflang | Taranabilir site |
+| 3-4 | Yapılandırılmış veri | Organization, Service, FAQPage, BlogPosting şemaları | Geçerli schema |
+| 5-6 | İçerik envanteri | Mevcut sayfaların soru-cevap uyumu için taranması | Öncelik listesi |
+| 7-9 | Yeniden yazım | İlk 10 sayfada başlık ve ilk paragraf revizyonu | Alıntılanabilir pasajlar |
+| 10-11 | Yeni içerik | Kapsam boşluklarını dolduran 3-4 derin yazı | Konu otoritesi |
+| 12 | Ölçüm döngüsü | Sorgu testi seti, referrer segmenti, aylık rapor şablonu | Tekrarlanabilir süreç |
+
+Bu takvim, [kurumsal web projesi sürecimizle](/tr/blog/kurumsal-web-projesi-sureci) aynı mantıkla
+kurulur: önce temel, sonra içerik, en sonda ölçüm. Sırayı bozmak — örneğin teknik taban hazır
+olmadan içerik üretmek — en sık gördüğümüz zaman kaybıdır.
+
+## Sık yapılan beş hata
+
+1. **Anahtar kelime yoğunluğu peşinde koşmak.** Dil modelleri terim sayısına değil anlamsal
+   tutarlılığa bakar. Aynı kelimeyi on kez tekrarlamak fayda sağlamaz.
+2. **Yapay zekayla üretilmiş jenerik içeriği olduğu gibi yayınlamak.** Modeller kendi ürettikleri
+   ortalama metni alıntılamaz; ayırt edici olan özgün veri, örnek ve deneyimdir.
+3. **Tüm içeriği tek uzun sayfaya yığmak.** Pasaj bazlı alıntılamada net başlıklara bölünmüş yapı
+   kazanır.
+4. **Fiyat, süre, kapsam gibi somut bilgileri gizlemek.** Bunlar tam olarak modellerin aradığı
+   bilgilerdir; "bizimle iletişime geçin" cevabı alıntılanmaz.
+5. **Tek dilde kalmak.** Çok dilli bir sitede her dil ayrı bir görünürlük yüzeyidir; hreflang doğru
+   kurulduğunda maliyeti düşük, getirisi yüksektir.
+
+## Bunu bir örnekte görmek
+
+[Ambalaj Cini](/tr/projeler/ambalaj-cini) projesinde geliştirme ile
+[reklam yönetimini](/tr/hizmetler/google-ads) birlikte yürüttük ve firma %30 büyüme elde etti.
+Teknik tarafta neyin mümkün olduğunu görmek içinse
+[Nexos Investment](/tr/projeler/nexos-investment) iyi bir örnek: çok dilli yapı, schema, sunucu
+tarafı render ve performans bütçesi aynı projede birleşiyor. Diğer çalışmalarımıza
+[projeler sayfasından](/tr/projeler) göz atabilirsiniz.
+
+## Sonuç
+
+GEO, SEO'yu geçersiz kılan bir moda değil; arama sonucunun biçim değiştirmesine verilen teknik bir
+cevap. Yapılacak işlerin çoğu zaten iyi SEO'nun gerektirdiği şeyler: hızlı ve sunucu tarafında
+render edilen sayfalar, net başlık hiyerarşisi, doğru schema, dürüst ve somut içerik. Değişen tek
+şey, bunları artık ikinci bir okuyucu kitlesi için de yapıyor olmamız — ve o kitle metni cümle
+cümle değil, pasaj pasaj okuyor.
+
+Sitenizin bu iki okuyucudan hangisine hazır olduğunu bilmiyorsanız,
+[bize yazın](/tr/iletisim) — mevcut durumu birlikte gözden geçirelim.
