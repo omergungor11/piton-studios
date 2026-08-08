@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-08-08 (13)
+
+### Added
+- Hizmetler sayfasinda **hizmet listesi de** (`svc-glass`, 15 kart) yilanla sarmalandi.
+  Sayfada artik iki sarmalanmis bolum var: Etki Paneli ve hizmet listesi
+
+### Changed
+- **Yilan boyu sabit degil, kutunun cevresine gore olcekleniyor.** 118px sabit deger
+  kucuk kutuda yeterliydi ama hizmet listesi gibi buyuk bir kutunun etrafinda
+  kayboluyordu. Formul: cevrenin %7,5'i, 190–340px arasina kelepceli.
+
+  | Bolum | Cevre | Yeni | Eski |
+  |---|---|---|---|
+  | Hizmet listesi | 4724 px | 340 px | 118 px |
+  | Teslim Akisi | 3631 px | 272 px | 118 px |
+  | Rakamlarla studyo | 3504 px | 263 px | 118 px |
+  | Etki Paneli | 3471 px | 260 px | 118 px |
+
+  Alt sinir kucuk kutuda karikaturlesmesin, ust sinir uzun bolumlerde ekrani boydan
+  boya kaplamasin diye. Filtreyle kart sayisi degisince `ResizeObserver` yolu ve boyu
+  birlikte yeniden hesapliyor.
+  Ayar: `snake-border.tsx` basindaki `SIZE_RATIO` / `SIZE_MIN` / `SIZE_MAX`.
+  `size` prop'u artik opsiyonel — verilirse orani ezip sabitler
+
 ## 2026-08-08 (12)
 
 ### Added
