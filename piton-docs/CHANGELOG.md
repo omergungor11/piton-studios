@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-08-08 (7)
+
+### Added — Hakkinda sayfasi
+- **`src/lib/studio-stats.ts`** — hakkinda sayfasindaki tum rakamlar artik `WORKS`'ten
+  turetiliyor (disiplin/yetenek dagilimi, yil serisi, sayaclar). Sayfada elle yazilmis
+  rakam kalmadi; proje eklendiginde kendiliginden guncellenir
+- **Rakamlarla studyo** (`components/about/studio-numbers.tsx`) — goruse girince 0'dan
+  sayan sayaclar (IntersectionObserver + rAF, ek bagimlilik yok) + 7 disiplin cubugu;
+  cubuga gelince o disiplindeki projeler linkli listelenir. Sayaclar SSR'da gercek
+  rakamla basiliyor, JS'siz istemci ve arama motorlari "0" gormuyor
+- **Zaman cizelgesi** (`studio-timeline.tsx`) — 2021→2026 serit. Proje kaydi olmayan
+  yillar (2021, 2023) kesikli halkayla seride kaliyor, atlanmiyor. Yila gelince o yilin
+  proje sayisi, disiplin dagilimi ve 3 one cikan projesi
+- **Yetenek haritasi** (`capability-map.tsx`) — 93 tekil etiketten en az iki projede
+  gecenler (24 cip). Cip buyuklugu kullanim sayisiyla olcekleniyor; cipe gelince digerleri
+  soluyor ve o teknolojinin gectigi projeler cikiyor
+- Deger kartlarina ust kenar vurgu cizgisi + numara harf araligi animasyonu,
+  takim kartina yukselme + avatar halkasi
+- `aboutSections` i18n namespace'i (tr/en/ru)
+
+### Fixed
+- **`/en/about` ve `/ru/about` Turkce metin gosteriyordu.** Sayfa govdesinin cogu koda
+  gomuluydu: iki hikaye paragrafi, "Degerlerimiz" + 4 deger karti, "Takim" + biyografi,
+  "Guvenilir Markalar", CTA ve "Yil"/"Musteri" etiketleri. Tamami i18n'e tasindi
+- **Eskimis rakamlar**: sayfa 32+ proje / 4+ yil / 8+ musteri diyordu; gercek degerler
+  49 / 6 / 41. Biyografideki "30+ proje" ifadesi kaldirildi (ustteki bolumle celisiyordu)
+- **Musteri sayimi hatasi**: 49 projenin 8'inde `client` alani "Piton Studios" — bunlar
+  kendi urunlerimiz. Ham tekil sayim 42 veriyordu; `SELF_CLIENT` ile ayiklandi, gercek 41
+- Kullanilmayan `Supabase` yetenek listesinden dustu (hic baglanmamisti)
+- **Baslik sarma**: projeler hero'su (`.sp-hero` uzerindeki 700px kapak) ve Teslim Akisi
+  basligi (`.df-head` uzerindeki 62ch kapak) iki satira dusuyordu. Kapaklar basliktan
+  alinip alt metinlere tasindi; hero icin `.sp-hero.is-wide` varyanti eklendi — global
+  degistirilmedi cunku hakkinda sayfasinin uzun basliginin sarmasi gerekiyor
+
+### Removed
+- Kullanilmayan `.ap-stats` / `.ap-stat*` / `.ap-team-skill*` stilleri (markup kalkti)
+
 ## 2026-08-08 (6)
 
 ### Added

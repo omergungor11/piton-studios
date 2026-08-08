@@ -5,21 +5,31 @@ import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import MatrixRain from '@/components/matrix-rain';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
+import StudioNumbers from '@/components/about/studio-numbers';
+import StudioTimeline from '@/components/about/studio-timeline';
+import CapabilityMap from '@/components/about/capability-map';
 
+/**
+ * Musteri adlari ozel isim — cevrilmiyor, kodda duruyor.
+ * Yetenek/teknoloji listesi artik burada degil: CapabilityMap onu WORKS'teki
+ * `tags` alanindan turetiyor, boylece elle guncelleme gerekmiyor.
+ */
 const CLIENTS = [
   'Velis LTD', 'BT Elevator', 'Gel Gez Gör', 'Nexos Investment',
   'Ambalaj Cini', 'ISUZU Bursa', 'Kardeşler Taxi', 'Aydin Transfer',
 ];
 
-const SKILLS = ['Next.js', 'TypeScript', 'React', 'Python', 'Supabase', 'Claude AI', 'Vercel', 'SEO'];
+const VALUE_KEYS = [0, 1, 2, 3] as const;
 
 export default function AboutPageClient() {
   const t = useTranslations('about');
-  const tc = useTranslations('common');
+  const ts = useTranslations('aboutSections');
+
+  const values = ts.raw('values.items') as { title: string; desc: string }[];
 
   return (
     <PageShell>
-      <section className="sp-hero">
+      <section className="sp-hero is-wide">
         <Reveal variant="fadeIn">
           <div className="sp-hero-eyebrow">{t('eyebrow')}</div>
         </Reveal>
@@ -35,34 +45,13 @@ export default function AboutPageClient() {
         </Reveal>
       </section>
 
-      {/* Story + Code Panel */}
+      {/* Hikaye + kod paneli. Eski "32+/4+/8+" sayaclari buradan kaldirildi —
+          rakamlar artik StudioNumbers icinde, portfolyodan hesaplaniyor. */}
       <Reveal variant="fadeUp" delay={0.1}>
         <section className="ap-story glass">
           <div className="ap-story-content">
-            <div className="ap-stats">
-              <div className="ap-stat">
-                <span className="ap-stat-n">32<span className="em">+</span></span>
-                <span className="ap-stat-label">{tc('projects')}</span>
-              </div>
-              <div className="ap-stat">
-                <span className="ap-stat-n">4<span className="em">+</span></span>
-                <span className="ap-stat-label">Yıl</span>
-              </div>
-              <div className="ap-stat">
-                <span className="ap-stat-n">8<span className="em">+</span></span>
-                <span className="ap-stat-label">Müşteri</span>
-              </div>
-            </div>
-            <p className="ap-story-text">
-              Piton Studios, 2021 yılında Türkiye&apos;de kurulmuş bağımsız bir dijital stüdyodur.
-              Fikir aşamasından lansmana kadar uçtan uca hizmet sunuyoruz: web tasarımı, uygulama geliştirme,
-              AI entegrasyonu ve dijital büyüme stratejileri.
-            </p>
-            <p className="ap-story-text">
-              Startup&apos;lardan kurumsal markalara, yerel işletmelerden küresel müşterilere — her projede
-              kalite, hız ve ölçülebilir sonuç odaklı çalışırız. Teknoloji karmaşıklaştırmak için değil,
-              sadeleştirmek için vardır.
-            </p>
+            <p className="ap-story-text">{ts('story.p1')}</p>
+            <p className="ap-story-text">{ts('story.p2')}</p>
             <blockquote className="ap-story-quote">
               <p>{t('quote')}</p>
               <cite>{t('quoteAuthor')}</cite>
@@ -85,22 +74,29 @@ export default function AboutPageClient() {
         </section>
       </Reveal>
 
-      {/* Values */}
+      <Reveal variant="fadeUp" delay={0.1}>
+        <StudioNumbers />
+      </Reveal>
+
+      <Reveal variant="fadeUp" delay={0.1}>
+        <StudioTimeline />
+      </Reveal>
+
+      <Reveal variant="fadeUp" delay={0.1}>
+        <CapabilityMap />
+      </Reveal>
+
+      {/* Degerler */}
       <Reveal variant="fadeUp" delay={0.1}>
         <section className="ap-values glass">
-          <div className="ap-values-title">Değerlerimiz</div>
+          <div className="ap-values-title">{ts('values.title')}</div>
           <Stagger className="ap-values-grid" staggerDelay={0.08}>
-            {[
-              { n: '01', title: 'Hız', desc: 'Net zaman çizelgesi, MVP\'den lansmana hızlı geçiş. Zamanında teslimat standart, istisna değil.' },
-              { n: '02', title: 'Kalite', desc: 'Piksel mükemmelliğinde tasarım, test edilmiş kod. Her satır düşünülmüş, her ekran test edilmiş.' },
-              { n: '03', title: 'Şeffaflık', desc: 'Her adımda net iletişim. Gizli maliyet, sürpriz gecikme yok — ne söylediysek onu yapıyoruz.' },
-              { n: '04', title: 'Sonuç', desc: 'Güzel görünmek bonus. Asıl hedef: iş probleminizi çözmek ve büyümenizi hızlandırmak.' },
-            ].map((v) => (
-              <StaggerItem key={v.n}>
-                <div className="ap-value-card">
-                  <div className="ap-value-n">{v.n}</div>
-                  <h3 className="ap-value-title">{v.title}</h3>
-                  <p className="ap-value-desc">{v.desc}</p>
+            {VALUE_KEYS.map((i) => (
+              <StaggerItem key={i}>
+                <div className="ap-value-card" data-cursor="hover">
+                  <div className="ap-value-n">{String(i + 1).padStart(2, '0')}</div>
+                  <h3 className="ap-value-title">{values[i].title}</h3>
+                  <p className="ap-value-desc">{values[i].desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -108,34 +104,25 @@ export default function AboutPageClient() {
         </section>
       </Reveal>
 
-      {/* Team */}
+      {/* Takim */}
       <Reveal variant="fadeUp" delay={0.1}>
         <section className="ap-team glass">
-          <div className="ap-team-title">Takım</div>
-          <div className="ap-team-card">
+          <div className="ap-team-title">{ts('team.title')}</div>
+          <div className="ap-team-card" data-cursor="hover">
             <div className="ap-team-avatar">ÖG</div>
             <div className="ap-team-info">
               <h3 className="ap-team-name">Ömer Güngör</h3>
-              <div className="ap-team-role">Kurucu & Geliştirici</div>
-              <p className="ap-team-desc">
-                Full-stack geliştirici ve dijital ürün tasarımcısı. Next.js, TypeScript, Python ve
-                AI entegrasyonu konularında uzman. 4+ yıl boyunca Türkiye ve uluslararası
-                pazarlarda 30+ projeyi başarıyla hayata geçirdi.
-              </p>
-              <div className="ap-team-skills">
-                {SKILLS.map((s) => (
-                  <span key={s} className="ap-team-skill">{s}</span>
-                ))}
-              </div>
+              <div className="ap-team-role">{ts('team.role')}</div>
+              <p className="ap-team-desc">{ts('team.desc')}</p>
             </div>
           </div>
         </section>
       </Reveal>
 
-      {/* Clients */}
+      {/* Musteriler */}
       <Reveal variant="fadeUp" delay={0.1}>
         <section className="ap-clients glass">
-          <div className="ap-clients-title">Güvenilir Markalar</div>
+          <div className="ap-clients-title">{ts('clients.title')}</div>
           <Stagger className="ap-clients-grid" staggerDelay={0.05}>
             {CLIENTS.map((c) => (
               <StaggerItem key={c}>
@@ -146,14 +133,13 @@ export default function AboutPageClient() {
         </section>
       </Reveal>
 
-      {/* CTA */}
       <section className="sp-cta glass strong">
         <div className="sp-cta-text">
-          <h3>Birlikte çalışalım.</h3>
-          <p>Projenizi dinlemek için buradayız — fikir aşamasından lansmanına kadar.</p>
+          <h3>{ts('cta.title')}</h3>
+          <p>{ts('cta.desc')}</p>
         </div>
         <Link href="/contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
-          <span>İletişime Geç</span>
+          <span>{ts('cta.btn')}</span>
           <span>↗</span>
         </Link>
       </section>

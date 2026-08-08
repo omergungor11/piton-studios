@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 9 | 9 | 0 | 0 | 0 |
-| **Total** | | **38** | **38** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 11 | 11 | 0 | 0 | 0 |
+| **Total** | | **40** | **40** | **0** | **0** | **0** |
 
-**Progress**: 38/38 (100%) ✓
+**Progress**: 40/40 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -85,6 +85,8 @@
 | TASK-037 | Yeni marka logosu (python + devre karti dunya): arka plan alfaya cevrildi, logo.webp + icon/apple-icon/favicon yeniden uretildi | S | COMPLETED | `af405aa` |
 | TASK-038 | Etki Paneli hizmetler sayfasina tasindi; icerik 5 web boyutundan 6 boyuta genisletildi (otomasyon, AI, performans, SEO/GEO, donusum, bakim) | M | COMPLETED | `1e8c743` |
 | TASK-039 | Projeler sayfasina Teslim Akisi: 6 adimli interaktif surec seridi, her adimda cikti/gereksinim + farkli disiplinlerden ornek proje | M | COMPLETED | `1e8c743` |
+| TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `PENDING` |
+| TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `PENDING` |
 
 ---
 
