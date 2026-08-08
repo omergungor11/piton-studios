@@ -85,8 +85,8 @@
 | TASK-037 | Yeni marka logosu (python + devre karti dunya): arka plan alfaya cevrildi, logo.webp + icon/apple-icon/favicon yeniden uretildi | S | COMPLETED | `af405aa` |
 | TASK-038 | Etki Paneli hizmetler sayfasina tasindi; icerik 5 web boyutundan 6 boyuta genisletildi (otomasyon, AI, performans, SEO/GEO, donusum, bakim) | M | COMPLETED | `1e8c743` |
 | TASK-039 | Projeler sayfasina Teslim Akisi: 6 adimli interaktif surec seridi, her adimda cikti/gereksinim + farkli disiplinlerden ornek proje | M | COMPLETED | `1e8c743` |
-| TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `PENDING` |
-| TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `PENDING` |
+| TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `ba5c5f7` |
+| TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `ba5c5f7` |
 
 ---
 
