@@ -1,4 +1,4 @@
-import { WORKS } from '@/lib/data';
+import { WORKS, type Work } from '@/lib/data';
 
 /**
  * Hakkinda sayfasindaki rakamlar burada, WORKS'ten turetiliyor.
@@ -14,6 +14,76 @@ export const FOUNDED_YEAR = 2021;
 /** `kind` alani "Disiplin · Sektor" bicimindedir; ilk parca disiplindir. */
 export function disciplineOf(kind: string): string {
   return kind.split('·')[0].trim();
+}
+
+/**
+ * Calisma alanlari.
+ *
+ * `kind` alanindaki disiplin tek basina yaniltici: kayitlarin 32'si "Web Design"
+ * oldugu icin studyo yalnizca site yapiyormus gibi gorunuyor. Oysa ayni isin
+ * icinde otomasyon, entegrasyon, cok dillilik de var. Bu yuzden alanlar
+ * ORTUSMELI: bir proje birden fazla alana girebilir.
+ *
+ * Alan siralamasi sabit ve elle verilmis — proje sayisina gore siralamak
+ * yine web'i one atardi, oysa bunlar esit agirlikta uzmanlik alanlari.
+ */
+export type AreaKey =
+  | 'web'
+  | 'product'
+  | 'ai'
+  | 'automation'
+  | 'commerce'
+  | 'growth';
+
+type AreaRule = {
+  /** `kind` alanindaki disiplinler (ilk parca) */
+  disciplines: string[];
+  /** `tags` icinde bunlardan biri gecerse alan sayilir */
+  tags: string[];
+};
+
+const AREA_RULES: Record<AreaKey, AreaRule> = {
+  web: {
+    disciplines: ['Web Design', 'Web App'],
+    tags: ['Responsive', 'Landing Page', 'Portfolio', 'Corporate', 'CMS',
+           'WordPress', 'Personal Brand', 'Interactive', '3D', 'Animation'],
+  },
+  product: {
+    disciplines: ['Web App', 'SaaS', 'Simulation'],
+    tags: ['SaaS', 'Platform', 'Full-Stack', 'Next.js', 'Node.js', 'Booking',
+           'Trading', 'Fintech', 'Developer Tool'],
+  },
+  ai: {
+    disciplines: ['AI / ML'],
+    tags: ['Python', 'AI', 'Computer Vision', 'Deep Learning'],
+  },
+  automation: {
+    disciplines: ['Automation'],
+    tags: ['Automation', 'Backend', 'Data'],
+  },
+  commerce: {
+    disciplines: ['E-commerce'],
+    tags: ['E-commerce'],
+  },
+  growth: {
+    disciplines: [],
+    tags: ['SEO', 'Multi-language'],
+  },
+};
+
+export const AREA_KEYS = Object.keys(AREA_RULES) as AreaKey[];
+
+/** Bir proje verilen alana giriyor mu? */
+export function isInArea(work: Work, area: AreaKey): boolean {
+  const rule = AREA_RULES[area];
+  const discipline = disciplineOf(work.kind);
+  if (rule.disciplines.includes(discipline)) return true;
+  return (work.tags ?? []).some((tag) => rule.tags.includes(tag));
+}
+
+/** Alandaki projeler — filtre ve ornek listeleri icin */
+export function worksInArea(area: AreaKey) {
+  return WORKS.filter((w) => isInArea(w, area));
 }
 
 export type Bucket = {

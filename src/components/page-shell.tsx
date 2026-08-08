@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import Cursor from '@/components/cursor';
+import BgStage from '@/components/bg-stage';
 import FloatingGlass from '@/components/floating-glass';
-import SnakeTrail from '@/components/snake-trail';
 import FloatingActions from '@/components/floating-actions';
 import LanguageSwitcher from '@/components/language-switcher';
 import PartnerBadges from '@/components/partner-badges';
@@ -60,8 +60,8 @@ export default function PageShell({ children }: PageShellProps) {
   return (
     <>
       <div className="grain" />
-      <div className="page-bg" />
-      <SnakeTrail />
+      {/* Ic sayfalar da anasayfanin arka planini kullaniyor — duz renk yerine aurora */}
+      <BgStage />
       <FloatingGlass />
       <Cursor />
 

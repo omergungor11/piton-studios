@@ -3,44 +3,42 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * Kutuyu sarmalayan yilan.
+ * Kutunun kenarinda gezen yilan.
  *
- * Sarmalama hissi tek katmanla olmuyor: yilanin bir bolumunun kutunun ARKASINA
- * gecmesi gerek. Bu yuzden iki ozdes kopya var — biri bolumden once (arkada),
- * biri sonra (onde). Ikisi de ayni yolda, ayni noktada, ayni acida duruyor;
- * yalnizca hangisinin gorundugu degisiyor. Konum ayni oldugu icin gecis
- * siramada bir zipla yol acmiyor, sadece derinlik degisiyor.
+ * NEDEN PARCALI: tek parca bir gorsel `offset-rotate: auto` ile yalnizca kendi
+ * capa noktasinin tegetine gore doner — govdenin tamami o tek aciya girer, yani
+ * kosede 300px'lik dumduz bir cubuk kutunun disina firlar. Bu yuzden yilan
+ * dilimlere bolundu: her dilim sprite'in bir yatay parcasini gosterir ve yolun
+ * kendi noktasindaki aciyi alir. Govde boylece kosede gercekten bukuluyor.
  *
- * Yol, kapsayicinin yuvarlatilmis dikdortgen kenari; yilan CSS Motion Path ile
- * onun uzerinde. `offset-rotate: auto` sayesinde koseleri donerken kivriliyor.
+ * Yilan her zaman kutunun ustunde; onde/arkada ayrimi yok.
  *
- * Ilerleme bolumun ekrandan gecis oranina bagli: alttan girerken 0, ustten
- * cikarken 1 — kaydirdikca yilan kutunun etrafinda tur atiyor. Govde karesi de
- * kaydirmadan geliyor, durunca yilan da duruyor.
+ * Ilerleme bolumun ekrandan gecis oranina bagli; govde karesi kaydirmadan.
  */
 
 const FRAMES = 6;
 const PX_PER_FRAME = 70;
 
-/** Yumusak gecis — sert siramanin goze carpmamasi icin */
-function smoothstep(a: number, b: number, x: number) {
-  const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
-  return t * t * (3 - 2 * t);
-}
+/**
+ * Kac dilime bolunsun. Kose yayina kac dilim dustugu belirleyici: 16'da
+ * 90 derecelik donus iki adimda yapiliyordu ve govde gorunur sekilde kiriliyordu.
+ */
+const SEGMENTS = 36;
 
 /**
- * Yolun neresinde onde olmali?
- * Yol sol ustten baslar, saat yonunde gider: ust kenar → sag → alt → sol.
- * Ust kenarda arkada, alt kenarda onde; gecisler sag ve sol kenarlarda eriyor.
+ * Dilim araligi ile sprite dilim genisligi BIREBIR ayni olmali.
+ *
+ * Onceden 0.9 idi: dilimler yol uzerinde %10 sikistiriliyor ama sprite'tan
+ * alinan parcalar sikistirilmiyordu, dolayisiyla komsu dilimlerin goruntu
+ * icerigi birbirini tutmuyor ve duz kenarda bile ek yerleri gorunuyordu.
+ * Kosedeki bosluklari bindirmeyle degil dilim sayisiyla kapatiyoruz.
  */
-function frontness(t: number) {
-  return smoothstep(0.2, 0.4, t) * (1 - smoothstep(0.7, 0.9, t));
-}
+const SEG_STEP = 1;
 
-/**
- * Yilan boyu kutunun cevresine gore olcekleniyor — sabit px kucuk kutuda
- * devasa, buyuk kutuda kayip gorunuyordu. Alt/ust sinirlar asiriya kacmasin diye.
- */
+/** Sprite oranlari: 1200x1350, alti kare, her kare 1200x225 */
+const SPRITE_RATIO = 1350 / 1200;
+const FRAME_RATIO = 225 / 1200;
+
 const SIZE_RATIO = 0.075;
 const SIZE_MIN = 190;
 const SIZE_MAX = 340;
@@ -55,6 +53,8 @@ type Props = {
   laps?: number;
 };
 
+const SEG_INDICES = Array.from({ length: SEGMENTS }, (_, i) => i);
+
 export default function SnakeBorder({
   children,
   radius = 28,
@@ -62,23 +62,18 @@ export default function SnakeBorder({
   laps = 1,
 }: Props) {
   const innerRef = useRef<HTMLDivElement | null>(null);
-  const behindRef = useRef<HTMLSpanElement | null>(null);
-  const frontRef = useRef<HTMLSpanElement | null>(null);
+  const layerRef = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
     const inner = innerRef.current;
-    const behind = behindRef.current;
-    const front = frontRef.current;
+    const layer = layerRef.current;
     // Olculen sey sarmalayici degil, icindeki gercek bolum — disardaki
     // margin yola karismasin
     const box = inner?.firstElementChild as HTMLElement | null;
-    if (!inner || !behind || !front || !box) return;
+    if (!inner || !layer || !box) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const layers = [behind, front];
-
-    /** Kutunun kenarini saat yonunde dolasan yuvarlatilmis dikdortgen yolu */
-    const writePath = () => {
+    const writeGeometry = () => {
       const w = box.offsetWidth;
       const h = box.offsetHeight;
       // Yaricap kenardan buyuk olamaz, yoksa yol kendi uzerine katlanir
@@ -90,53 +85,76 @@ export default function SnakeBorder({
 
       // Yuvarlatilmis dikdortgen cevresi: duz kenarlar + kose yaylari
       const perimeter = 2 * (w + h) - 8 * r + 2 * Math.PI * r;
-      const px =
+      const len =
         size ?? Math.min(SIZE_MAX, Math.max(SIZE_MIN, perimeter * SIZE_RATIO));
+      const segW = len / SEGMENTS;
 
-      for (const el of layers) {
-        el.style.setProperty('--path', d);
-        el.style.setProperty('--size', `${Math.round(px)}px`);
-      }
+      layer.style.setProperty('--path', d);
+      layer.style.setProperty('--len', `${len}px`);
+      layer.style.setProperty('--segw', `${segW}px`);
+      layer.style.setProperty('--segh', `${len * FRAME_RATIO}px`);
+      layer.style.setProperty('--spriteh', `${len * SPRITE_RATIO}px`);
+      layer.style.setProperty(
+        '--step',
+        String(perimeter > 0 ? (segW * SEG_STEP) / perimeter : 0)
+      );
     };
 
     let raf = 0;
+    let visible = true;
+    // Ayni degeri tekrar yazmak bedava degil — son yazilanlari tutup atliyoruz
+    let lastSp = '';
+    let lastFrame = '';
+
     const update = () => {
       raf = 0;
+      if (!visible) return;
       const rect = box.getBoundingClientRect();
       const vh = window.innerHeight;
       // Bolum alttan girerken 0, ustten cikarken 1
       const span = vh + rect.height;
       const p = span > 0 ? Math.min(1, Math.max(0, (vh - rect.top) / span)) : 0;
 
-      const dist = p * laps;
-      // Turun neresindeyiz — onde/arkada karari tur icindeki konuma bakar
-      const f = frontness(dist % 1);
+      const sp = (p * laps).toFixed(5);
       const frame = String(Math.floor(window.scrollY / PX_PER_FRAME) % FRAMES);
-
-      for (const el of layers) {
-        el.style.setProperty('--sp', dist.toFixed(4));
-        el.style.setProperty('--frame', frame);
+      if (sp !== lastSp) {
+        layer.style.setProperty('--sp', sp);
+        lastSp = sp;
       }
-      front.style.setProperty('--vis', f.toFixed(3));
-      behind.style.setProperty('--vis', (1 - f).toFixed(3));
+      if (frame !== lastFrame) {
+        layer.style.setProperty('--frame', frame);
+        lastFrame = frame;
+      }
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
     };
 
-    writePath();
+    writeGeometry();
     update();
 
     const ro = new ResizeObserver(() => {
-      writePath();
+      writeGeometry();
       onScroll();
     });
     ro.observe(box);
+
+    // Bolum ekranda degilken hesap da yazma da yok
+    const io = new IntersectionObserver(
+      ([e]) => {
+        visible = e.isIntersecting;
+        if (visible) onScroll();
+      },
+      { rootMargin: '200px' }
+    );
+    io.observe(box);
+
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
 
     return () => {
       ro.disconnect();
+      io.disconnect();
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
       if (raf) cancelAnimationFrame(raf);
@@ -145,13 +163,19 @@ export default function SnakeBorder({
 
   return (
     <div className="snake-wrap">
-      {/* Bolumden once: kutunun arkasinda kalan yari */}
-      <span className="snake-border is-behind" ref={behindRef} aria-hidden="true" />
       <div className="snake-wrap-inner" ref={innerRef}>
         {children}
       </div>
-      {/* Bolumden sonra: kutunun onunden gecen yari */}
-      <span className="snake-border is-front" ref={frontRef} aria-hidden="true" />
+      {/* Bolumden sonra geliyor — her zaman kutunun ustunde */}
+      <span className="snake-border" ref={layerRef} aria-hidden="true">
+        {SEG_INDICES.map((i) => (
+          <span
+            key={i}
+            className="snake-seg"
+            style={{ '--i': i } as React.CSSProperties}
+          />
+        ))}
+      </span>
     </div>
   );
 }

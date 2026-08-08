@@ -3,10 +3,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { DISCIPLINES, STUDIO, TITLE_BY_SLUG } from '@/lib/studio-stats';
+import { AREA_KEYS, STUDIO, TITLE_BY_SLUG, worksInArea, type AreaKey } from '@/lib/studio-stats';
 
 /**
- * Rakamlarla studyo — sayaclar ve disiplin dagilimi.
+ * Rakamlarla studyo — sayaclar ve calisma alanlari.
+ *
+ * Alanlar CUBUKLA DEGIL esit agirlikta gosteriliyor: kayitlarin 32'si
+ * "Web Design" oldugu icin proje sayisina gore cizilen bir cubuk grafigi
+ * studyoyu yalnizca site yapan bir yer gibi gosteriyordu. Alanlar esit
+ * uzmanlik alanlari; hangisinde kac is oldugu bu bolumun anlatmak istedigi
+ * sey degil. Ustune gelince o alandaki gercek projeler listeleniyor.
  *
  * Tum sayilar `studio-stats` uzerinden WORKS'ten turetilir; burada elle
  * yazilmis rakam yok. Sayaclar ekrana girince 0'dan hedefe sayar
@@ -86,9 +92,11 @@ function Counter({ target, label, sub }: { target: number; label: string; sub: s
 export default function StudioNumbers() {
   const t = useTranslations('aboutSections');
   const tw = useTranslations('works');
-  const [activeBar, setActiveBar] = useState<string | null>(null);
+  const ta = useTranslations('areas');
+  // Acilista ilk alan secili — kutu hic bos kalmasin diye
+  const [activeArea, setActiveArea] = useState<AreaKey>(AREA_KEYS[0]);
 
-  const active = DISCIPLINES.find((d) => d.key === activeBar) ?? null;
+  const activeWorks = worksInArea(activeArea);
   const titleOf = (slug: string) =>
     tw.has(`${slug}.title`) ? tw(`${slug}.title`) : TITLE_BY_SLUG[slug];
 
@@ -114,54 +122,45 @@ export default function StudioNumbers() {
       </div>
 
       <div className="sn-split">
-        <div className="sn-bars">
+        <div className="sn-areas">
           <span className="sn-bars-k">{t('numbers.mixLabel')}</span>
-          {DISCIPLINES.map((d) => (
-            <button
-              key={d.key}
-              type="button"
-              className={`sn-bar ${activeBar === d.key ? 'is-active' : ''}`}
-              onPointerEnter={() => setActiveBar(d.key)}
-              onFocus={() => setActiveBar(d.key)}
-              onClick={() => setActiveBar(d.key)}
-              data-cursor="hover"
-            >
-              <span className="sn-bar-name">{d.key}</span>
-              <span className="sn-bar-track">
-                <span className="sn-bar-fill" style={{ width: `${d.ratio * 100}%` }} />
-              </span>
-              <span className="sn-bar-n">{d.count}</span>
-            </button>
-          ))}
+          <div className="sn-area-grid">
+            {AREA_KEYS.map((key) => (
+              <button
+                key={key}
+                type="button"
+                className={`sn-area ${activeArea === key ? 'is-active' : ''}`}
+                onPointerEnter={() => setActiveArea(key)}
+                onFocus={() => setActiveArea(key)}
+                onClick={() => setActiveArea(key)}
+                data-cursor="hover"
+              >
+                <span className="sn-area-label">{ta(`${key}.label`)}</span>
+                <span className="sn-area-desc">{ta(`${key}.desc`)}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="sn-detail">
-          {active ? (
-            <>
-              <span className="sn-detail-k">
-                {active.key} · {active.count}
-              </span>
-              <ul className="sn-detail-list">
-                {active.slugs.slice(0, 8).map((slug) => (
-                  <li key={slug}>
-                    <Link
-                      href={{ pathname: '/projects/[slug]', params: { slug } }}
-                      data-cursor="hover"
-                      data-cursor-label="↗"
-                    >
-                      {titleOf(slug)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              {active.slugs.length > 8 && (
-                <span className="sn-detail-more">
-                  {t('numbers.more', { count: active.slugs.length - 8 })}
-                </span>
-              )}
-            </>
-          ) : (
-            <span className="sn-detail-hint">{t('numbers.hint')}</span>
+          <span className="sn-detail-k">{ta(`${activeArea}.label`)}</span>
+          <ul className="sn-detail-list">
+            {activeWorks.slice(0, 8).map((w) => (
+              <li key={w.slug}>
+                <Link
+                  href={{ pathname: '/projects/[slug]', params: { slug: w.slug } }}
+                  data-cursor="hover"
+                  data-cursor-label="↗"
+                >
+                  {titleOf(w.slug)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {activeWorks.length > 8 && (
+            <span className="sn-detail-more">
+              {t('numbers.more', { count: activeWorks.length - 8 })}
+            </span>
           )}
         </div>
       </div>

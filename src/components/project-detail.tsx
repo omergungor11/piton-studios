@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
+import ProjectPlaceholder from '@/components/project-placeholder';
 
 interface Props {
   project: Project;
@@ -71,19 +72,20 @@ export default function ProjectDetail({ project }: Props) {
     <PageShell>
       {/* Hero — screenshot showcase */}
       <section className={`pd-hero${hasPreviews && view === 'mobile' ? ' pd-hero-mobile' : ''}`}>
-        {/* Görsel */}
+        {/* Görsel — önizleme yoksa jenerik stok görsel yerine arayüz iskeleti */}
         <div className="pd-hero-video">
-          <Image
-            src={heroSrc}
-            alt={title}
-            fill
-            priority
-            sizes="(max-width: 700px) 100vw, 1200px"
-            style={{
-              objectFit: 'cover',
-              objectPosition: hasPreviews ? 'top center' : 'center',
-            }}
-          />
+          {hasPreviews ? (
+            <Image
+              src={heroSrc}
+              alt={title}
+              fill
+              priority
+              sizes="(max-width: 700px) 100vw, 1200px"
+              style={{ objectFit: 'cover', objectPosition: 'top center' }}
+            />
+          ) : (
+            <ProjectPlaceholder label={kind} />
+          )}
           <div className="pd-hero-fade" />
         </div>
 

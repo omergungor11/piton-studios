@@ -5,22 +5,29 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
+import { AREA_KEYS, isInArea, type AreaKey } from '@/lib/studio-stats';
 import PageShell from '@/components/page-shell';
 import DeliveryFlow from '@/components/delivery-flow';
 import SnakeBorder from '@/components/snake-border';
 
-const YEARS = ['All', ...Array.from(new Set(WORKS.map((w) => w.year))).sort((a, b) => b.localeCompare(a))];
+// Yil yerine calisma alani: yil bir projenin ne oldugunu anlatmiyor, alan anlatiyor.
+// Alanlar ortusmeli — bir proje hem web hem otomasyon olabilir.
+const AREA_COUNTS = Object.fromEntries(
+  AREA_KEYS.map((k) => [k, WORKS.filter((w) => isInArea(w, k)).length])
+) as Record<AreaKey, number>;
 const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
 
 type ShowcaseView = 'desktop' | 'mobile';
 
 export default function ProjectsPageClient() {
-  const [activeYear, setActiveYear] = useState('All');
+  const [activeArea, setActiveArea] = useState<AreaKey | 'All'>('All');
   const [showcaseView, setShowcaseView] = useState<ShowcaseView>('desktop');
   const t = useTranslations('projectsPage');
   const tw = useTranslations('works');
+  const ta = useTranslations('areas');
 
-  const filteredWorks = activeYear === 'All' ? WORKS : WORKS.filter((w) => w.year === activeYear);
+  const filteredWorks =
+    activeArea === 'All' ? WORKS : WORKS.filter((w) => isInArea(w, activeArea));
 
   return (
     <PageShell>
@@ -95,14 +102,22 @@ export default function ProjectsPageClient() {
 
       {/* Year filter */}
       <section className="sp-filter">
-        {YEARS.map((year) => (
+        <button
+          className={`sp-filter-btn ${activeArea === 'All' ? 'active' : ''}`}
+          onClick={() => setActiveArea('All')}
+          data-cursor="hover"
+        >
+          {t('filterAll')}
+        </button>
+        {AREA_KEYS.map((key) => (
           <button
-            key={year}
-            className={`sp-filter-btn ${activeYear === year ? 'active' : ''}`}
-            onClick={() => setActiveYear(year)}
+            key={key}
+            className={`sp-filter-btn ${activeArea === key ? 'active' : ''}`}
+            onClick={() => setActiveArea(key)}
             data-cursor="hover"
           >
-            {year === 'All' ? t('filterAll') : year}
+            {ta(`${key}.label`)}
+            <span className="sp-filter-count">{AREA_COUNTS[key]}</span>
           </button>
         ))}
       </section>

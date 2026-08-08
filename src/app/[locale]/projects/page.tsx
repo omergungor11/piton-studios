@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/site";
 import ProjectsPageClient from "./page-client";
 
-const NAMESPACES = ["projectsPage", "delivery", "works", "common"] as const;
+const NAMESPACES = ["projectsPage", "delivery", "areas", "works", "common"] as const;
 
 type Props = {
   params: Promise<{ locale: string }>;

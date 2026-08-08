@@ -17,7 +17,7 @@ import CapabilityMap from '@/components/about/capability-map';
  */
 const CLIENTS = [
   'Velis LTD', 'BT Elevator', 'Gel Gez Gör', 'Nexos Investment',
-  'Ambalaj Cini', 'ISUZU Bursa', 'Kardeşler Taxi', 'Aydin Transfer',
+  'Ambalaj Cini', 'ISUZU Bursa', 'Alert Mühendislik', 'Aydin Transfer',
 ];
 
 const VALUE_KEYS = [0, 1, 2, 3] as const;

@@ -21,9 +21,10 @@ const CHIPS = CAPABILITIES.filter((c) => c.count >= MIN_USES).slice(0, MAX_CHIPS
 export default function CapabilityMap() {
   const t = useTranslations('aboutSections');
   const tw = useTranslations('works');
-  const [active, setActive] = useState<string | null>(null);
+  // Acilista ilk cip secili — kutu hic bos kalmasin diye
+  const [active, setActive] = useState<string>(CHIPS[0]?.key ?? '');
 
-  const current = CHIPS.find((c) => c.key === active) ?? null;
+  const current = CHIPS.find((c) => c.key === active) ?? CHIPS[0] ?? null;
   const titleOf = (slug: string) =>
     tw.has(`${slug}.title`) ? tw(`${slug}.title`) : TITLE_BY_SLUG[slug];
 
@@ -57,7 +58,7 @@ export default function CapabilityMap() {
       </div>
 
       <div className="cm-detail" key={current?.key ?? 'empty'}>
-        {current ? (
+        {current && (
           <>
             <span className="cm-detail-k">
               {current.key} · {t('capabilities.projectCount', { count: current.count })}
@@ -76,8 +77,6 @@ export default function CapabilityMap() {
               ))}
             </div>
           </>
-        ) : (
-          <span className="cm-detail-hint">{t('capabilities.hint')}</span>
         )}
       </div>
     </section>
