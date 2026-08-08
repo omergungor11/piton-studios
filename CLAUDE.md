@@ -49,7 +49,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   (`src/components/mdx/mdx-components.tsx`).
   > MDXRemote'ta `blockJS: false` **zorunlu** — varsayilan `true`, MDX icindeki tum JS
   > ifadelerini siler ve component prop'lari `undefined` gelir
-- **Ceviriler**: 231/231 eksiksiz (works 56, stories 6, servicesList 15 × 3 dil).
+- **Ceviriler**: 210/210 eksiksiz (works 49, stories 6, servicesList 15 × 3 dil).
   `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
 - **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.
   Resend hesabi `pitonstudios@gmail.com` ile acilmali. Ayrica proje tarihleri duzeltilecek.
@@ -97,6 +97,22 @@ hero arka plani, reel ve case-study sahneleri.
 Cozum: dosyalar repoya alindi. Blob bu olcek icin (876 KB) gereksiz karmasiklik olurdu;
 Blob store'undan da vazgecildi (2026-07-29) — kodda hic kullanilmamisti.
 Gorseller repoda tutuluyor.
+
+### Icerik uretimi tamamlandi (2026-08-08) — Session 10
+
+Blog 2 yazidan **8 yaziya** cikti (× 3 dil = 24 MDX). Uretilen yazilar:
+`seo-to-geo`, `website-cost`, `ai-automation-roi`, `nextjs-vs-wordpress`,
+`multilingual-site`, `ecommerce-cro`.
+
+Altyapi tarafinda MDX grafik component'leri, otomatik icindekiler tablosu ve
+frontmatter `faq` → FAQPage JSON-LD eklendi (detay yukarida "Blog" maddesinde).
+Icerik ici 81 ic link sitemap'e karsi dogrulandi. Statik sayfa 476 → 525.
+
+> **Yeni yazi eklerken**: `translationKey` zorunlu, TOC otomatik (elle yazmayin),
+> `faq` opsiyonel ama SSS bolumu + JSON-LD uretir. Grafiklerde `max` degeri veriden
+> kucuk olamaz (component kelepceliyor ama veriyi dogru vermek yine de gerekir).
+> Yazilardaki sayilar **senaryo modeli / gosterge banti** olarak isaretli — gercek
+> fiyatlandirma farkliysa maliyet yazisindaki bantlar guncellenmeli.
 
 ## Mimari — guncel
 
