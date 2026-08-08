@@ -860,7 +860,7 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
   height: 2px;
   background: rgba(255,255,255,0.12);
   border-radius: 2px;
-  /* overflow gizlenmiyor — yilan cubugun ustunde duruyor */
+  overflow: hidden;
 }
 .preloader-bar-fill {
   position: absolute; inset: 0 auto 0 0;
@@ -869,33 +869,12 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
   box-shadow: 0 0 14px var(--accent);
   transition: width 120ms linear;
 }
-/* Ilerleme noktasinda surunen yilan — bas cubugun ucunda kalsin diye geri kaydirilir */
-.preloader-snake {
-  position: absolute;
-  bottom: 2px; left: 0;
-  width: 92px;
-  aspect-ratio: 1200 / 225;
-  background: url("/assets/brand/piton-crawl/sprite.webp") no-repeat 0 0;
-  background-size: 100% 600%;
-  transform: translateX(-86%);
-  transition: left 120ms linear;
-  animation: snake-crawl 0.74s steps(6) infinite;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.55));
-  pointer-events: none;
-}
-
-/* 6 kare dikey sprite: 0 -> 120% araligi steps(6) ile tam kare hizasina oturur */
-@keyframes snake-crawl {
-  from { background-position: 0 0; }
-  to   { background-position: 0 120%; }
-}
 .preloader-label {
   font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;
   color: var(--muted);
 }
 @media (prefers-reduced-motion: reduce) {
-  .preloader-logo, .preloader-snake { animation: none; }
-  .preloader-snake { transition: none; }
+  .preloader-logo { animation: none; }
 }
 .hero-card {
   padding: 22px 24px;
@@ -4770,6 +4749,12 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
 @media (max-width: 480px) {
   .ap-values-grid { grid-template-columns: 1fr; }
   .ap-clients-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 6 kare dikey sprite: 0 -> 120% araligi steps(6) ile tam kare hizasina oturur */
+@keyframes snake-crawl {
+  from { background-position: 0 0; }
+  to   { background-position: 0 120%; }
 }
 
 /* Arka plan yilanlari — sayfa boyunca surunen dekoratif katman.

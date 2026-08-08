@@ -63,10 +63,8 @@ export default function Preloader() {
       </div>
       <div className="preloader-meta">
         <div className="preloader-count">{String(count).padStart(3, '0')}</div>
-        {/* Yilan cubugun uzerinde surunuyor; yatay konumu gercek ilerlemeye bagli */}
         <div className="preloader-bar">
           <span className="preloader-bar-fill" style={{ width: `${count}%` }} />
-          <span className="preloader-snake" style={{ left: `${count}%` }} />
         </div>
         <div className="preloader-label">PİTON STUDIOS — LOADING</div>
       </div>
