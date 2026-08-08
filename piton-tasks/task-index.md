@@ -88,7 +88,7 @@
 | TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `ba5c5f7` |
 | TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `ba5c5f7` |
 | TASK-042 | Surunen yilan animasyonu: preloader'da ilerlemeye bagli yilan + sayfa arka planinda kaydirmayla suzulen 3 yilan (CSS sprite, 164 KB) | M | COMPLETED | `bac924b` |
-| TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `PENDING` |
+| TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `5ad8d79` |
 
 ---
 
