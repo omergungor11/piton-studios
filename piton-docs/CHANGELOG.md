@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-08-08 (5)
+
+### Removed
+- **Projeler sayfasindaki "Studyo Tanitim" showreel bolumu** tamamen kaldirildi
+  (kullanici karari — Etki Paneli bu alanin isini devraldi). Temizlenenler:
+  `page-client.tsx`'teki `.pp-reel` JSX blogu, `globals.css`'teki ~70 satirlik
+  `.pp-reel*` stil grubu, `reel.ppEyebrow` / `reel.ppTitle` / `reel.ppDesc`
+  ceviri anahtarlari (tr/en/ru) ve sayfanin `NAMESPACES` listesindeki `reel` girdisi.
+  Artik kullanilmayan `imageUrl` import'u ve `useTranslations('reel')` hook'u da dustu
+
+> `reel` namespace'i duruyor — anasayfadaki showreel sahnesi (`scenes/reel.tsx`) hala
+> kullaniyor. `public/assets/optimized/thumbnails/hero.jpg` artik kodda referanssiz;
+> dosya silinmedi.
+
 ## 2026-08-08 (4)
 
 ### Added

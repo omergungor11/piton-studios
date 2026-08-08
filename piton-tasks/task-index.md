@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **35** | **35** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 7 | 7 | 0 | 0 | 0 |
+| **Total** | | **36** | **36** | **0** | **0** | **0** |
 
-**Progress**: 35/35 (100%) ✓
+**Progress**: 36/36 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -81,6 +81,7 @@
 | TASK-033 | Anasayfa nav'ina Blog linki (chrome.tsx masaustu + mobil) — yalnizca ic sayfalarda vardi | S | COMPLETED | `d50eeb8` |
 | TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `1fbce47` |
 | TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `cae515a` |
+| TASK-036 | Projeler sayfasindaki "Studyo Tanitim" showreel bolumu kaldirildi (JSX + CSS + 3 dil ceviri) | S | COMPLETED | `PENDING` |
 
 ---
 
