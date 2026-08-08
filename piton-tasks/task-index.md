@@ -90,10 +90,10 @@
 | TASK-042 | Surunen yilan animasyonu: preloader'da ilerlemeye bagli yilan + sayfa arka planinda kaydirmayla suzulen 3 yilan (CSS sprite, 164 KB) | M | COMPLETED | `bac924b` |
 | TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `5ad8d79` |
 | TASK-044 | Bolum kenarini sarmalayan yilan: CSS Motion Path + onde/arkada iki katman, 3 bolumde deneme | M | COMPLETED | `17dc822` |
-| TASK-045 | Yilan sarmalama elden gecirildi: kose kirilmasi duzeltildi (36 dilim + adim hizalamasi), tek katmana indi, arka plan yilanlari kaldirildi | M | COMPLETED | `PENDING` |
-| TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `PENDING` |
-| TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `PENDING` |
-| TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `PENDING` |
+| TASK-045 | Yilan sarmalama elden gecirildi: kose kirilmasi duzeltildi (36 dilim + adim hizalamasi), tek katmana indi, arka plan yilanlari kaldirildi | M | COMPLETED | `3e6bdc5` |
+| TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `3e6bdc5` |
+| TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `3e6bdc5` |
+| TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `3e6bdc5` |
 
 ---
 
