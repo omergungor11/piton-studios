@@ -19,8 +19,9 @@
   cevrildi (esik 6, kenarlarda yumusatma bandi). Uretilenler: `public/logo.webp` (720px),
   `src/app/icon.png` (256), `apple-icon.png` (180), `favicon.ico` (16/32/48/64).
   Kod tarafinda degisiklik gerekmedi — 8 referansin hepsi zaten `/logo.webp`'e bakiyor
-- **Etki Paneli projeler sayfasindan hizmetler sayfasina tasindi** (hizmet grid'i ile CTA
-  arasi). Icerik yalnizca web isi anlatir gorunuyordu; 5 boyut **6 boyuta** cikarilip tum
+- **Etki Paneli projeler sayfasindan hizmetler sayfasina tasindi.** Once hizmet grid'i ile
+  CTA arasina konuldu, ardindan kullanici istegiyle **hero'nun hemen altina** alindi —
+  filtrenin de ustune, boylece filtre ve grid bir arada kaliyor. Icerik yalnizca web isi anlatir gorunuyordu; 5 boyut **6 boyuta** cikarilip tum
   hizmet yelpazesine yayildi: surec otomasyonu (manuel is saati), AI ile kapasite
   (otomatik karsilanan talep), sistem performansi, arama & AI gorunurlugu, talep donusumu,
   bakim yuku. Karsilastirma serisi "Tipik kurulum" → **"Mevcut duzende"**, kontrol noktasi
