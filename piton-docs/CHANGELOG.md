@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-08-08 (6)
+
+### Added
+- **Teslim Akisi** (`src/components/delivery-flow.tsx`) — projeler sayfasinda, alti adimli
+  interaktif surec seridi: Kesif → Tasarim → Gelistirme → Test → Devreye alma → Buyutme.
+  Dugume hover/tap ile ray o noktaya kadar dolar ve kart degisir. Her kartta sure,
+  ne yapildigi (3 madde), cikti, **musteriden gereken** ve o adimi gosteren gercek bir
+  proje linki var. Ornek projeler bilerek farkli disiplinlerden secildi — Emlak Sync
+  (Web App · Automation), FurCRM (SaaS), Nexos Investment (Full-Stack), Deprem Erken
+  Uyari (AI/ML), Odeme Takip Botu (Automation · Backend), Ambalaj Cini (E-ticaret).
+  Mobilde serit yatay kayar, kart tek kolona iner; klavyeyle gezilebilir
+- `delivery` i18n namespace'i (tr/en/ru)
+
+### Changed
+- **Yeni marka logosu** — python + devre karti dunya. Kaynak PNG opak siyah zeminliydi;
+  cam yuzeyler ve acik temada kare blok cikardigi icin arka plan flood-fill ile alfaya
+  cevrildi (esik 6, kenarlarda yumusatma bandi). Uretilenler: `public/logo.webp` (720px),
+  `src/app/icon.png` (256), `apple-icon.png` (180), `favicon.ico` (16/32/48/64).
+  Kod tarafinda degisiklik gerekmedi — 8 referansin hepsi zaten `/logo.webp`'e bakiyor
+- **Etki Paneli projeler sayfasindan hizmetler sayfasina tasindi** (hizmet grid'i ile CTA
+  arasi). Icerik yalnizca web isi anlatir gorunuyordu; 5 boyut **6 boyuta** cikarilip tum
+  hizmet yelpazesine yayildi: surec otomasyonu (manuel is saati), AI ile kapasite
+  (otomatik karsilanan talep), sistem performansi, arama & AI gorunurlugu, talep donusumu,
+  bakim yuku. Karsilastirma serisi "Tipik kurulum" → **"Mevcut duzende"**, kontrol noktasi
+  "Lansman" → **"Baslangic"** (otomasyon/AI islerinde dogru terim)
+
+> Teslim Akisi'ndaki sureler (Kesif 2-5 gun, Tasarim 1-3 hafta, Gelistirme 2-8 hafta,
+> Test 3-7 gun, Devreye alma 1-2 gun) tahmindir — gercek tempoya gore
+> `messages/*.json` → `delivery.steps.*.duration` guncellenmeli.
+>
+> Favicon 16-32px'te okunmuyor: logo cok detayli, o boyutta renk lekesine donusuyor.
+> Kucuk boyutlar icin sadelestirilmis bir marka isareti gerekebilir.
+
 ## 2026-08-08 (5)
 
 ### Removed

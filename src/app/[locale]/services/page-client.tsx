@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
 import PageShell from '@/components/page-shell';
+import ImpactPanel from '@/components/impact-panel';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
@@ -87,6 +88,9 @@ export default function ServicesPageClient() {
           })}
         </div>
       </section>
+
+      {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
+      <ImpactPanel />
 
       {/* CTA */}
       <section className="sp-cta glass strong">
