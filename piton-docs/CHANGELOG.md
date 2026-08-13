@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-08-13 (18)
+
+### Removed
+- **Uc hizmet kaldirildi**: `ai-training`, `ai-chatbot`, `prompt-engineering`
+  (kullanici karari). 15 -> 12 hizmet. Silinen yerler: `data.ts` SERVICES,
+  `messages/{tr,en,ru}.json` servicesList, `service-icons.tsx` ikon kayitlari.
+  - `n` alani 01..12 olarak yeniden numaralandirildi
+  - Kalan hizmetlerdeki kirik `relatedServices` referanslari duzeltildi:
+    agentic-ai'daki `ai-chatbot` -> `ai-consulting`, ai-consulting'deki
+    `ai-training` -> `how-to-do`
+  - Anasayfadaki hizmet sayisi `SERVICES.length`ten geldigi icin kendiliginden
+    12'ye dustu; `Agentic` kategorisi 5 -> 2, bos kalan filtre yok
+  - Statik sayfa 525 -> 507, sitemap 288 URL
+
+### Added
+- **Kaldirilan hizmetler icin kalici (301) yonlendirme** (`next.config.ts`).
+  Bu sayfalar canlida yayindaydi ve sitemap'te yer aliyordu, yani indekslenmis
+  olabilirler; 404 vermek hem birikmis SEO degerini atardi hem de disaridan
+  verilmis linkleri kirardi. Anlamca en yakin hizmete gidiyorlar:
+  `ai-training` → `how-to-do`, `ai-chatbot` ve `prompt-engineering` →
+  `ai-integration`. Uc dilin tamami (TR `/hizmetler`, en/ru `/services`) — 9 kural
+
+### Changed
+- Portfoyde kaydi olmayan dort hizmete kullanicidan gelen **gercek rakamlar**
+  islendi: google-ads 20+ yonetilen musteri, how-to-do 8+ egitim verilen kurum,
+  cloud-ecosystem 6+ kurulan altyapi, ai-consulting 8+ danisilan sirket
+
 ## 2026-08-13 (17)
 
 ### Changed

@@ -1536,8 +1536,8 @@
           "label": "Çalışma modeli"
         },
         {
-          "value": "Arama / Görüntülü",
-          "label": "Kampanya türü"
+          "value": "20+",
+          "label": "Yönetilen müşteri"
         },
         {
           "value": "Aylık",
@@ -1734,8 +1734,8 @@
           "label": "Tipik süre"
         },
         {
-          "value": "Kuruma özel",
-          "label": "Program tasarımı"
+          "value": "8+",
+          "label": "Eğitim verilen kurum"
         },
         {
           "value": "Uygulamalı",
@@ -1932,16 +1932,16 @@
           "label": "Tipik süre"
         },
         {
-          "value": "Vercel / GCP / Docker",
-          "label": "Kullanılan altyapı"
+          "value": "6+",
+          "label": "Kurulan altyapı"
         },
         {
           "value": "%99,9",
           "label": "Uptime hedefi"
         },
         {
-          "value": "Sürekli",
-          "label": "Çalışma modeli"
+          "value": "Vercel / GCP",
+          "label": "Kullanılan altyapı"
         }
       ],
       "faq": [
@@ -2062,105 +2062,6 @@
         }
       ]
     },
-    "ai-training": {
-      "title": "AI Eğitimi",
-      "desc": "Uygulamalı AI eğitimi — LLM, agent ve AI-native geliştirme workshopları.",
-      "longDesc": "LLM'lerle gerçekten üretim yapan ekipler için pratik AI eğitimi.",
-      "items": [
-        "Workshop & Bootcamp",
-        "Ekip Geliştirme",
-        "LLM & Agent Kursları"
-      ],
-      "features": [
-        {
-          "title": "Özel Müfredat",
-          "desc": "Ekibinizin teknoloji yığını ve seviyesine göre özelleştirilmiş programlar."
-        },
-        {
-          "title": "Uygulamalı Laboratuvar",
-          "desc": "Workshop sırasında gerçek AI özellikleri geliştirin."
-        },
-        {
-          "title": "Prompt Engineering",
-          "desc": "Prompt tasarımı ve yapılandırılmış çıktılarda ustalaşın."
-        },
-        {
-          "title": "Agent Geliştirme",
-          "desc": "Otonom AI agentları geliştirmeyi, test etmeyi ve deploy etmeyi öğrenin."
-        },
-        {
-          "title": "RAG & Arama",
-          "desc": "Kendi verileriniz için retrieval-augmented generation uygulayın."
-        },
-        {
-          "title": "AI Güvenliği",
-          "desc": "Güvenlik katmanları ve sorumlu AI uygulamalarını anlayın."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Değerlendirme",
-          "desc": "Ekibin mevcut AI bilgisini değerlendirin."
-        },
-        {
-          "step": "02",
-          "title": "Müfredat Tasarımı",
-          "desc": "Araçlarınıza özel program oluşturun."
-        },
-        {
-          "step": "03",
-          "title": "Eğitim",
-          "desc": "Canlı kodlama ve gerçek dünya alıştırmalarıyla workshoplar."
-        },
-        {
-          "step": "04",
-          "title": "Uygulama",
-          "desc": "Öğrenilen becerilerin gerçek sorunlara uygulanması."
-        },
-        {
-          "step": "05",
-          "title": "Takip",
-          "desc": "Eğitim sonrası destek ve soru-cevap oturumları."
-        }
-      ],
-      "stats": [
-        {
-          "value": "2–5 gün",
-          "label": "Program süresi"
-        },
-        {
-          "value": "Kuruma özel",
-          "label": "İçerik"
-        },
-        {
-          "value": "Uygulamalı",
-          "label": "Format"
-        },
-        {
-          "value": "Materyal dahil",
-          "label": "Teslim edilenler"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Eğitim kime yönelik?",
-          "a": "AI entegre etmek isteyen yazılım mühendisleri ve teknik liderler."
-        },
-        {
-          "q": "AI deneyimimiz olması gerekiyor mu?",
-          "a": "Hayır — başlangıçtan ileri seviyeye kadar programlarımız var."
-        },
-        {
-          "q": "Eğitim uzaktan mı yerinde mi?",
-          "a": "Her ikisi de — uzaktan workshoplar ve yerinde bootcamp'ler sunuyoruz."
-        },
-        {
-          "q": "Hangi araçları kapsıyorsunuz?",
-          "a": "Claude, OpenAI, LangChain, Vercel AI SDK ve daha fazlası."
-        }
-      ]
-    },
     "ai-consulting": {
       "title": "AI Danışmanlık",
       "desc": "AI strateji danışmanlığı — AI'ın işletmenizde gerçek değer yarattığı noktaları belirleyin.",
@@ -2229,8 +2130,8 @@
           "label": "Tipik angajman"
         },
         {
-          "value": "Durum analizi",
-          "label": "İlk adım"
+          "value": "8+",
+          "label": "Danışılan şirket"
         },
         {
           "value": "Yol haritası",
@@ -2257,204 +2158,6 @@
         {
           "q": "Minimum angajman süresi nedir?",
           "a": "Odaklanmış 2 haftalık sprint."
-        }
-      ]
-    },
-    "prompt-engineering": {
-      "title": "Prompt Engineering",
-      "desc": "Production-grade prompt tasarımı — güvenilir çıktılar ve maliyet optimizasyonu.",
-      "longDesc": "Production'da güvenilir çalışan promptlar tasarlıyor, test ediyor ve optimize ediyoruz.",
-      "items": [
-        "Prompt Tasarımı & Optimizasyon",
-        "Yapılandırılmış Çıktılar",
-        "Maliyet Düşürme"
-      ],
-      "features": [
-        {
-          "title": "Prompt Mimarisi",
-          "desc": "Karmaşık görevler için prompt zincirleri ve şablonlar."
-        },
-        {
-          "title": "Yapılandırılmış Çıktılar",
-          "desc": "LLM'lerden güvenilir JSON ve tipli yanıtlar."
-        },
-        {
-          "title": "Few-shot & CoT",
-          "desc": "Few-shot öğrenme, düşünce zinciri ve öz-yansıma."
-        },
-        {
-          "title": "Değerlendirme Pipeline'ları",
-          "desc": "Prompt regresyonlarını yakalayan otomatik testler."
-        },
-        {
-          "title": "Maliyet Optimizasyonu",
-          "desc": "Kaliteden ödün vermeden token kullanımını azaltın."
-        },
-        {
-          "title": "Prompt Kütüphaneleri",
-          "desc": "Yeniden kullanılabilir, versiyonlu prompt şablonları."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Temel Değerlendirme",
-          "desc": "Mevcut promptları ve hata modlarını anlayın."
-        },
-        {
-          "step": "02",
-          "title": "Tasarım",
-          "desc": "Optimize edilmiş promptlar oluşturun."
-        },
-        {
-          "step": "03",
-          "title": "Test",
-          "desc": "Çeşitli senaryolara karşı değerlendirmeler."
-        },
-        {
-          "step": "04",
-          "title": "Optimizasyon",
-          "desc": "Kaliteyi koruyarak maliyet ve gecikmeyi azaltın."
-        },
-        {
-          "step": "05",
-          "title": "Dokümantasyon",
-          "desc": "Kullanım kılavuzlarıyla prompt kütüphanesi teslim edin."
-        }
-      ],
-      "stats": [
-        {
-          "value": "1–3 hafta",
-          "label": "Tipik süre"
-        },
-        {
-          "value": "Ölçüm setiyle",
-          "label": "Çalışma yöntemi"
-        },
-        {
-          "value": "Sürüm takibi",
-          "label": "Teslim edilenler"
-        },
-        {
-          "value": "Model bağımsız",
-          "label": "Kapsam"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Neden prompt engineer tutmalıyız?",
-          "a": "İyi ve harika prompt arasındaki fark maliyette 10x, kalitede 5x olabilir."
-        },
-        {
-          "q": "Hangi modeller için optimize ediyorsunuz?",
-          "a": "Claude, GPT-4, Gemini ve açık kaynak modeller."
-        },
-        {
-          "q": "Mevcut promptlarımıza yardım edebilir misiniz?",
-          "a": "Evet — prompt denetimi ve optimizasyon temel hizmetimizdir."
-        },
-        {
-          "q": "Sürekli destek sağlıyor musunuz?",
-          "a": "Evet — model güncellemelerinde prompt bakım sözleşmeleri sunuyoruz."
-        }
-      ]
-    },
-    "ai-chatbot": {
-      "title": "AI Chatbot",
-      "desc": "Ürününüze özel AI asistanlar — müşteri desteği, satış ve dahili araçlar.",
-      "longDesc": "Verilerinizle eğitilmiş, ürününüze entegre AI chatbotlar.",
-      "items": [
-        "Özel AI Asistanlar",
-        "Bilgi Bankası Entegrasyonu",
-        "Çok Kanallı Deploy"
-      ],
-      "features": [
-        {
-          "title": "Özel Bilgi Bankası",
-          "desc": "RAG pipeline'larıyla dokümanlarınız üzerine eğitim."
-        },
-        {
-          "title": "Konuşma Arayüzü",
-          "desc": "Doğal, bağlam farkındalıklı konuşmalar."
-        },
-        {
-          "title": "Çok Kanal",
-          "desc": "Web widget, WhatsApp, Slack ve mobil uygulamalara deploy."
-        },
-        {
-          "title": "İnsana Aktarım",
-          "desc": "Bot sınırlarında canlı agentlara sorunsuz geçiş."
-        },
-        {
-          "title": "Analitik Panosu",
-          "desc": "Konuşmaları ve memnuniyet puanlarını takip edin."
-        },
-        {
-          "title": "Sürekli Öğrenme",
-          "desc": "Yanıtları zamanla iyileştiren geri bildirim döngüleri."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Kapsam",
-          "desc": "Chatbot kişiliğini ve entegrasyon noktalarını tanımlayın."
-        },
-        {
-          "step": "02",
-          "title": "Veri",
-          "desc": "Bilgi bankası ve konuşma geçmişini alın."
-        },
-        {
-          "step": "03",
-          "title": "Geliştirme",
-          "desc": "RAG ve güvenlik katmanlarıyla chatbot geliştirin."
-        },
-        {
-          "step": "04",
-          "title": "Test",
-          "desc": "Kullanıcı testi ve güvenlik kontrolleri."
-        },
-        {
-          "step": "05",
-          "title": "Lansman",
-          "desc": "Analitik ve izleme ile deploy edin."
-        }
-      ],
-      "stats": [
-        {
-          "value": "3–6 hafta",
-          "label": "Tipik süre"
-        },
-        {
-          "value": "Kendi verinizle",
-          "label": "Bilgi kaynağı"
-        },
-        {
-          "value": "<2 sn",
-          "label": "Yanıt hedefi"
-        },
-        {
-          "value": "7/24",
-          "label": "Çalışma düzeni"
-        }
-      ],
-      "faq": [
-        {
-          "q": "ChatGPT'den farkı ne?",
-          "a": "Chatbotlarımız kendi verilerinizle eğitilir ve kullanım durumunuz için tasarlanır."
-        },
-        {
-          "q": "Birden fazla dil destekliyor mu?",
-          "a": "Evet — LLM destekli chatbotlar 50'den fazla dili destekler."
-        },
-        {
-          "q": "Veri gizliliği ne olacak?",
-          "a": "Verileriniz kendi altyapınızda kalır."
-        },
-        {
-          "q": "Halüsinasyonları nasıl ele alıyorsunuz?",
-          "a": "RAG temellendirme, kaynak doğrulama ve insan yedekli güven eşikleri."
         }
       ]
     }
