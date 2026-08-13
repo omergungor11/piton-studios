@@ -85,8 +85,12 @@ export default function SnakeBorder({
 
       // Yuvarlatilmis dikdortgen cevresi: duz kenarlar + kose yaylari
       const perimeter = 2 * (w + h) - 8 * r + 2 * Math.PI * r;
+      // Alt sinir dar ekranda kutu genisligiyle yarisiyor: 190px sabit kalirsa
+      // 375px'lik bir kenarin yarisindan fazlasini kaplayip kose donusu
+      // okunmaz hale geliyor. Ekran daraldikca alt sinir da daralsin.
+      const minLen = Math.min(SIZE_MIN, window.innerWidth * 0.38);
       const len =
-        size ?? Math.min(SIZE_MAX, Math.max(SIZE_MIN, perimeter * SIZE_RATIO));
+        size ?? Math.min(SIZE_MAX, Math.max(minLen, perimeter * SIZE_RATIO));
       const segW = len / SEGMENTS;
 
       layer.style.setProperty('--path', d);
