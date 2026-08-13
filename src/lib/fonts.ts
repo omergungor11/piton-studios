@@ -9,6 +9,20 @@ export const spaceGrotesk = Space_Grotesk({
   weight: ['400', '500', '600', '700'],
   variable: '--font-space-grotesk',
   display: 'swap',
+  // Space Grotesk'te Kiril yok — /ru govde metni kacinilmaz olarak yedege duser.
+  // Yedegi acikca yazmak, next/font'un olcu ayarini (size-adjust/ascent-override)
+  // bu listeye gore uretmesini saglar; aksi halde /ru'da fark edilir bir
+  // yerlesim kaymasi olur.
+  fallback: [
+    'ui-sans-serif',
+    'system-ui',
+    '-apple-system',
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    'Arial',
+    'sans-serif',
+  ],
 });
 
 /**
@@ -21,4 +35,5 @@ export const ibmPlexMono = IBM_Plex_Mono({
   style: ['normal', 'italic'],
   variable: '--font-ibm-plex-mono',
   display: 'swap',
+  fallback: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
 });
