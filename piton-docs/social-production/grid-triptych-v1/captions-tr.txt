@@ -16,7 +16,7 @@ Tasarım, kod ve yapay zekâ tek çatı altında.
 
 Piton Studios; fikir aşamasından yayına kadar uçtan uca çalışan bağımsız bir dijital stüdyo.
 
-piton-studios.vercel.app/tr
+pitonstudios.com
 
 #PitonStudios #DijitalStüdyo #DesignCodeAI
 
