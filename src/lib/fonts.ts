@@ -1,24 +1,24 @@
-import { JetBrains_Mono, IBM_Plex_Mono, Press_Start_2P } from 'next/font/google';
+import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
 
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
+/**
+ * Ana font. Basliklar 600-700, govde 400-500, nav/buton 500-600.
+ * `latin-ext` Turkce glifler (i, I, g, s, c, o, u) icin zorunlu.
+ */
+export const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+/**
+ * Proje numaralari, kategori/ust etiketler, sayaclar, tarihler, teknik metadata.
+ * `cyrillic` /ru icin — Space Grotesk'te Kiril yok, en azindan mono etiketler dogru render olsun.
+ */
+export const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-});
-
-export const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal', 'italic'],
   variable: '--font-ibm-plex-mono',
-  display: 'swap',
-});
-
-export const pressStart2P = Press_Start_2P({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-press-start-2p',
   display: 'swap',
 });

@@ -5,7 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import Preloader from '@/components/preloader';
 import SnakeScroll from '@/components/snake-scroll';
-import { jetbrainsMono, ibmPlexMono, pressStart2P } from '@/lib/fonts';
+import { spaceGrotesk, ibmPlexMono } from '@/lib/fonts';
 import { SITE_URL } from '@/lib/site';
 
 type Props = {
@@ -30,7 +30,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-theme="dark"
-      className={`${jetbrainsMono.variable} ${ibmPlexMono.variable} ${pressStart2P.variable}`}
+      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <meta charSet="utf-8" />

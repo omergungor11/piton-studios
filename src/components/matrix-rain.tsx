@@ -63,7 +63,7 @@ export default function MatrixRain({
       // 8-digit hex: bgColor + '1A' = 10% alpha trail
       ctx.fillStyle = bgColor + '1A';
       ctx.fillRect(0, 0, width, height);
-      ctx.font = `${fontSize}px ui-monospace, "JetBrains Mono", "IBM Plex Mono", monospace`;
+      ctx.font = `${fontSize}px ui-monospace, "IBM Plex Mono", monospace`;
       ctx.textBaseline = 'top';
 
       for (let i = 0; i < cols; i++) {
