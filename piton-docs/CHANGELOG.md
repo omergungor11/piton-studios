@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-08-13 (16)
+
+### Fixed
+- **Anasayfada projeler bolumu mobilde saga tasiyordu.** `.scene` bir grid ve kolonu
+  `auto` idi — yani ic icerigin min-content genisligine kilitleniyordu. 375px'lik
+  ekranda kolon 430px'e cikip paneli disari itiyordu. Grid ogeleri varsayilan
+  `min-width: auto` ile min-content altina inmedigi icin sikisma zincir boyunca
+  yukari tasiniyordu. `.scene`, `.proj-glass`, `.proj-slide`, `.proj-meta-grid` ve
+  `.proj-ctrl` kolonlari `minmax(0, 1fr)` yapildi, zincire `min-width: 0` eklendi.
+  560px altinda meta kutulari ve slider kontrolleri alt alta geciyor; uzun proje
+  URL'si kirpiliyor
+- **Kutu kenarinda gezen yilan mobilde hic gorunmuyordu** — `@media (max-width: 1000px)`
+  altinda `display: none` idi. Kaldirildi; JS zaten viewport'tan bagimsiz calisiyor
+  (ResizeObserver ile olcuyor). Yilan boyunun alt siniri (`SIZE_MIN = 190px`) dar
+  ekranda kutu genisliginin yarisindan fazlasini kapliyordu — artik
+  `min(190, innerWidth * 0.38)`, 375px'te 143px. `prefers-reduced-motion` kurali duruyor
+- `.cjs` dosyalari icin `@typescript-eslint/no-require-imports` kapatildi — CommonJS
+  dosyasinda `require()` dogru kullanim, kural `pnpm lint`i kirip commit'leri blokluyordu
+
+> Not: yilan scrollbar (`.snake-scroll`) mobilde gizli kalmaya devam ediyor —
+> mobilde yerini alacagi bir tarayici cubugu yok.
+
 ## 2026-08-13 (15)
 
 ### Changed

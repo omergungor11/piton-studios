@@ -722,11 +722,13 @@ html[data-theme="light"] .socials a:hover { background: rgba(0,0,0,0.06); }
   position: relative;
   min-height: 100vh;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
   padding: 120px 40px;
 }
 .scene .inner {
   width: min(1200px, 100%);
+  min-width: 0;
   position: relative;
   transition:
     transform 1200ms cubic-bezier(.16,.84,.32,1),
@@ -1095,7 +1097,11 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 
 /* ============ Project Slider ============ */
 .proj-glass {
+  min-width: 0;
   display: grid;
+  /* ortuk kolon `auto` idi: ic icerigin min-content'ine kilitlenip paneli
+     disari tasiriyordu — kolon kapsayiciyla sinirlansin */
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto;
   gap: 28px;
   padding: 36px;
@@ -1108,11 +1114,12 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 .proj-head h3 { font-size: clamp(26px, 3.2vw, 42px); line-height: 1.05; letter-spacing: 0; margin: 0; }
 .proj-head h3 .em { font-style: italic; color: var(--accent); }
 
-.proj-slider { position: relative; overflow: hidden; min-height: 400px; }
+.proj-slider { position: relative; overflow: hidden; min-height: 400px; min-width: 0; }
 
 .proj-slide {
+  min-width: 0;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 32px;
   align-items: start;
   touch-action: pan-y; /* keep vertical scroll native, let drag="x" own horizontal swipes */
@@ -1120,6 +1127,7 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 
 /* Mockup browser frame */
 .proj-mockup {
+  min-width: 0;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -1151,6 +1159,10 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 .proj-dot:nth-child(3) { background: #28ca41; }
 .proj-browser-url {
   margin-left: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 12px;
   letter-spacing: 0.15em;
   color: var(--muted);
@@ -1225,13 +1237,14 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 
 /* Feature boxes */
 .proj-features {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .proj-meta-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 10px;
 }
 .proj-meta-box {
@@ -1307,13 +1320,13 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 /* Controls */
 .proj-ctrl {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 28px;
   align-items: center;
   padding-top: 18px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
-.proj-progress { display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.25em; color: var(--muted); font-family: var(--font-mono); font-weight: 500; }
+.proj-progress { min-width: 0; display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.25em; color: var(--muted); font-family: var(--font-mono); font-weight: 500; }
 .proj-idx { color: var(--ink); font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-weight: 500; }
 .proj-total { font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-weight: 500; }
 .proj-bar { flex: 1; height: 1px; background: rgba(255,255,255,0.12); position: relative; max-width: 280px; }
@@ -1339,9 +1352,18 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 
 @media (max-width: 768px) {
   .proj-glass { padding: 24px 18px; }
-  .proj-slide { grid-template-columns: 1fr; gap: 24px; }
+  .proj-slide { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .proj-screen { padding: 48px 24px; min-height: 220px; }
-  .proj-meta-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .proj-meta-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+}
+
+/* Dar ekranda iki meta kutusu yan yana sigmiyor — "Product / Development" gibi
+   degerler bolunemiyor ve gridi disari tasiyordu. Alt alta gecsinler. */
+@media (max-width: 560px) {
+  .proj-meta-grid { grid-template-columns: minmax(0, 1fr); }
+  /* Sayac + 6 nokta + 2 ok tek satirda ~292px istiyor, dar ekrana sigmiyor */
+  .proj-ctrl { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 14px; }
+  .proj-nav { flex-wrap: wrap; justify-content: center; }
 }
 
 /* Floating video-preview card */
@@ -5048,9 +5070,6 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
     calc(var(--frame, 0) * var(--segh) * -1);
 }
 
-@media (max-width: 1000px) {
-  .snake-border { display: none; }
-}
 @media (prefers-reduced-motion: reduce) {
   .snake-border { display: none; }
 }

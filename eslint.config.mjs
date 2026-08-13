@@ -13,6 +13,11 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "Portgolio/**",
   ]),
+  // .cjs zaten CommonJS — require() orada dogru kullanim, TS kurali gecerli degil.
+  {
+    files: ["**/*.cjs"],
+    rules: { "@typescript-eslint/no-require-imports": "off" },
+  },
 ]);
 
 export default eslintConfig;
