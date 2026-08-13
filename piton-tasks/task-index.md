@@ -94,7 +94,7 @@
 | TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `3e6bdc5` |
 | TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `3e6bdc5` |
 | TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `3e6bdc5` |
-| TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `HEAD` |
+| TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `a3faf7d` |
 
 ---
 
