@@ -60,7 +60,19 @@ export default function ServiceDetail({ service }: Props) {
           <div className="sd-stats">
             {stats.map((stat, i) => (
               <div key={i} className="sd-stat glass">
-                <span className="sd-stat-value">{stat.value}</span>
+                <span
+                  className={
+                    // Degerler her zaman sayi degil: "n8n", "Kuruma özel" gibi
+                    // metinler de var. Sayilar icin ayarlanmis 40px monospace'e
+                    // bir kutuya ~8 karakter siginca metin kelime ortasindan
+                    // boluuyordu — sozcuk iceren degerler daha kucuk render olur.
+                    /\p{L}{4,}/u.test(stat.value)
+                      ? 'sd-stat-value is-text'
+                      : 'sd-stat-value'
+                  }
+                >
+                  {stat.value}
+                </span>
                 <span className="sd-stat-label">{stat.label}</span>
               </div>
             ))}

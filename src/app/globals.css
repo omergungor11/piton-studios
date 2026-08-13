@@ -4012,10 +4012,11 @@ html[data-theme="light"] .admin-nav-item:hover { background: rgba(0,0,0,0.04); }
 
 /* ---- Stats ---- */
 .sd-stats {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px; margin-top: 48px;
 }
 .sd-stat {
+  min-width: 0;
   padding: 28px 22px; border-radius: 20px;
   text-align: center;
   border-top: 1px solid var(--accent-soft) !important;
@@ -4024,10 +4025,22 @@ html[data-theme="light"] .admin-nav-item:hover { background: rgba(0,0,0,0.04); }
 .sd-stat:hover { transform: translateY(-3px); }
 .sd-stat-value {
   display: block;
-  font-family: var(--font-mono); font-size: clamp(36px, 4vw, 48px);
+  font-family: var(--font-mono); font-size: clamp(26px, 3vw, 40px);
   letter-spacing: 0; color: var(--accent);
-  line-height: 1; margin-bottom: 10px;
+  /* Degerler artik yalnizca sayi degil — "n8n", "Sürekli" gibi metinler de var.
+     Tek satira zorlanınca kutudan tasip kirpiliyorlardi. */
+  line-height: 1.1; margin-bottom: 10px;
+  /* `anywhere` kelime ortasindan boluyordu ("webhoo/k"); yalnizca kacinilmazsa bolsun */
+  overflow-wrap: break-word;
+  text-wrap: balance;
   font-weight: 600;
+}
+/* Sozcuk iceren degerler (bkz. service-detail.tsx): sayilar icin ayarlanmis
+   olcek metinde kutuyu asiyor — daha kucuk ve satir arasi biraz acik. */
+.sd-stat-value.is-text {
+  font-size: clamp(15px, 1.5vw, 19px);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
 }
 .sd-stat-label {
   font-size: 12px; letter-spacing: 0.1em;
