@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-08-13 (15)
+
+### Changed
+- **Tipografi sistemi degisti.** Site bastan beri tamamen monospace'ti (JetBrains Mono
+  hem govde hem baslik). Artik iki fontlu bir sistem: **Space Grotesk** baslik (600-700),
+  govde (400-500) ve nav/butonlarda (600); **IBM Plex Mono** proje numaralari, kategori
+  ve ust etiketler, sayaclar, tarihler, tablo basliklari, grafik degerleri ve kodda
+  (500-600). CSS degiskenleri `--mono` / `--display` / `--pixel` yerine
+  **`--font-sans` / `--font-mono`**. Yaklasik 280 kural elden gecirildi;
+  son dagilim 10.764 element Space Grotesk, 3.566 IBM Plex Mono
+- **JetBrains Mono ve Press Start 2P kaldirildi.** Press Start 2P yalnizca 404
+  sayfasindaki pixel "404" icin kullaniliyordu; o da IBM Plex Mono'ya gecti.
+  404 sayfasi ayrica Google Fonts CDN `<link>`'i yerine `next/font`'a tasindi
+  (bu sayfa locale layout disinda kendi `<html>`'ini render ediyor)
+- **58 negatif `letter-spacing` sifirlandi.** Sikistirilmis tracking mono icin
+  ayarlanmisti; Space Grotesk'te gereksiz. Etiket sisteminin 193 pozitif tracking
+  degeri gorsel hiyerarsiyi korumak icin oldugu gibi birakildi
+
+### Fixed
+- **`subsets: ['latin']` Turkce glifleri kapsamiyordu.** `ı İ ğ Ğ ş Ş` latin-ext'te;
+  eski kurulumda bu glifler yuklu fontta yoktu ve sessizce sistem fontuna dusuyordu.
+  Her iki fonta da **`latin-ext`** eklendi
+- **404 sayfasinda 5px yatay kayma.** `.not-found-canvas { max-width: 90vw }` ile
+  kapsayicinin 2×24px padding'i toplamda 100vw'yi asiyordu. `max-width: 100%` yapildi
+
+### Notes
+- **Space Grotesk'in Kiril destegi yok** (Google Fonts boyle bir subset sunmuyor),
+  yani `/ru` govde metni sistem sans fontuna dusuyor. Bu eskiden de boyleydi
+  (JetBrains Mono da yalnizca `latin` ile yuklenmisti). Mono tarafi duzeltildi:
+  IBM Plex Mono'ya `cyrillic` eklendi, /ru'daki etiket ve sayilar artik dogru
+- **Space Grotesk'in gercek italigi yok**; kodda 19 yerde `font-style: italic` var,
+  tarayici bunlari egdiriyor (sentetik oblik)
+- Mobil anasayfadaki **58px yatay kayma bu degisiklikten once de vardi** — degisiklik
+  oncesi build'de birebir olculdu. Sebep ekran disina konumlanan mobil menu paneli ve
+  dekoratif aurora bloblari; font ile ilgisi yok
+
 ## 2026-08-08 (14)
 
 ### Fixed

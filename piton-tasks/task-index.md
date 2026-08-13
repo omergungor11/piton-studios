@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 18 | 18 | 0 | 0 | 0 |
-| **Total** | | **47** | **47** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 19 | 19 | 0 | 0 | 0 |
+| **Total** | | **48** | **48** | **0** | **0** | **0** |
 
-**Progress**: 47/47 (100%) ✓
+**Progress**: 48/48 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -94,6 +94,7 @@
 | TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `3e6bdc5` |
 | TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `3e6bdc5` |
 | TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `3e6bdc5` |
+| TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `HEAD` |
 
 ---
 
