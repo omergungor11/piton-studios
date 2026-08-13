@@ -39,12 +39,12 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Web tasarim, gelistirme ve yapay zeka uzerine yazilar — Piton Studios ekibinden.",
+    "metaDescription": "Web tasarım, geliştirme ve yapay zekâ üzerine yazılar — Piton Studios ekibinden.",
     "title": "Blog",
-    "subtitle": "Tasarim, kod ve yapay zeka uzerine notlar.",
+    "subtitle": "Tasarım, kod ve yapay zekâ üzerine notlar.",
     "readingTime": "{minutes} dk okuma",
     "publishedOn": "Yayin",
-    "updatedOn": "Guncelleme",
+    "updatedOn": "Güncelleme",
     "author": "Yazar",
     "tags": "Etiketler",
     "allPosts": "Tum yazilar",
@@ -54,10 +54,10 @@
     "empty": "Bu dilde henuz yazi yok.",
     "emptyTag": "Bu etikette henuz yazi yok.",
     "backToBlog": "Bloga don",
-    "relatedPosts": "Ilgili yazilar",
+    "relatedPosts": "İlgili yazılar",
     "readMore": "Devamini oku",
     "shareTitle": "Paylas",
-    "tableOfContents": "Icindekiler",
+    "tableOfContents": "İçindekiler",
     "faqTitle": "Sikca sorulan sorular"
   },
   "hero": {
