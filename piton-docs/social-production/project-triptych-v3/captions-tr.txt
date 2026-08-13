@@ -1,0 +1,53 @@
+UPLOAD 01 - VELDARA
+
+Veldara, Svelte 5 ile Three.js’i birleştiren bir geliştirici kütüphanesi konsepti için hazırladığımız ürün sitesi.
+
+Teknik bir aracı yalnızca özellik listesiyle değil; dokümantasyon, showcase ve modül yapısını aynı anlatı içinde birleştirerek konumlandırdık. Sonuç, geliştiricinin ürünü hızla anlamasını ve denemeye geçmesini hedefleyen developer-first bir deneyim.
+
+Kapsam:
+• Developer tool ürün anlatımı
+• 3D web yönü
+• Dokümantasyon mimarisi
+• Responsive landing page
+
+pitonstudios.com
++90 543 950 07 50
+
+#PitonStudios #Veldara #Threejs #Svelte #DeveloperTools #3DWeb
+
+---
+
+UPLOAD 02 - JACK 3D CREATOR
+
+Jack, bir 3D içerik üreticisi için tasarladığımız kişisel portfolyo konsepti.
+
+Scroll ile açılan metin animasyonları, proje vitrini ve fiyatlandırma alanı; üreticinin karakterini ve çalışmalarını tek bir görsel ritim içinde sunuyor. Tasarımın merkezinde yalnızca işler değil, yaratıcı kimlik var.
+
+Kapsam:
+• Kişisel marka portfolyosu
+• Animasyon koreografisi
+• Proje galerisi
+• Responsive deneyim
+
+pitonstudios.com
+
+#PitonStudios #JackPortfolio #CreativePortfolio #MotionDesign #3DArtist
+
+---
+
+UPLOAD 03 - ARAÇ TAKİP SİSTEMİ
+
+Video akışında birden fazla aracı gerçek zamanlı tespit eden ve kareler boyunca kimliğini koruyarak takip eden bir bilgisayarlı görü sistemi geliştirdik.
+
+YOLO11 modelini özel veriyle iyileştirdik; ByteTrack ile çoklu nesne takibini sisteme dahil ettik. Bu Ar-Ge çalışması trafik analizi, güvenlik ve akıllı şehir senaryolarına uyarlanabilecek bir temel sunuyor.
+
+Teknik kapsam:
+• YOLO11 ile nesne tespiti
+• ByteTrack ile kimlik korumalı takip
+• Özel veri seti ve model iyileştirme
+• Python tabanlı analiz akışı
+
+AI projenizi konuşalım:
++90 543 950 07 50
+
+#PitonStudios #ComputerVision #YOLO11 #ByteTrack #ArtificialIntelligence #Python

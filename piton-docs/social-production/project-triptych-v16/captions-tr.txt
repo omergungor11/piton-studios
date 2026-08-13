@@ -1,0 +1,53 @@
+UPLOAD 01 - HOLLY TRADER
+
+Holly Trader, piyasa verilerini izleyerek alım-satım analizleri ve sinyaller üreten Node.js tabanlı fintech araç prototipi.
+
+Veri toplama, sinyal üretimi ve raporlama akışlarını tek serviste birleştiren çalışma; gerçek zamanlı veri işleme ve finansal otomasyon alanındaki ürün geliştirme deneyimimizi gösteriyor.
+
+Kapsam:
+• Piyasa verisi işleme
+• Sinyal üretimi
+• Analiz ve raporlama
+• Node.js ürün prototipi
+
+pitonstudios.com
++90 543 950 07 50
+
+#PitonStudios #HollyTrader #Fintech #TradingAnalytics #ProductDevelopment
+
+---
+
+UPLOAD 02 - SOCIAL PRO
+
+Social Pro, birden fazla sosyal medya hesabının planlama ve performans süreçlerini tek panelde birleştiren SaaS prototipi.
+
+İçerik takvimi, yayın planlama, çoklu hesap mimarisi ve temel analiz görünümleri Next.js üzerinde kurgulandı. Çalışma, operasyonel bir ihtiyacın ürünleştirilebilir bir yönetim deneyimine dönüşümünü gösteriyor.
+
+Kapsam:
+• Sosyal medya yönetim paneli
+• İçerik planlama ve takvim
+• Çoklu hesap mimarisi
+• Next.js SaaS prototipi
+
+pitonstudios.com
+
+#PitonStudios #SocialPro #SocialMediaSaaS #Dashboard #NextJS
+
+---
+
+UPLOAD 03 - CONTENTFLOW AI
+
+ContentFlow AI, içerik fikrinden taslağa ve yayın planına uzanan üretim sürecini yapay zekâ desteğiyle hızlandıran SaaS ürün prototipi.
+
+Next.js üzerinde geliştirilen yapı; fikir yönetimi, AI destekli taslak, SEO önerileri ve yayın akışını tek çalışma alanında topluyor. Proje, AI entegrasyonu ile ürün tasarımını aynı sistemde buluşturuyor.
+
+Kapsam:
+• AI destekli içerik üretimi
+• Fikir ve taslak yönetimi
+• Yayın iş akışı
+• Next.js SaaS mimarisi
+
+Ürün fikrinizi birlikte geliştirelim:
++90 543 950 07 50
+
+#PitonStudios #ContentFlowAI #AISaaS #ContentWorkflow #ProductDesign
