@@ -1605,8 +1605,8 @@
           "label": "Engagement model"
         },
         {
-          "value": "Search / Display",
-          "label": "Campaign types"
+          "value": "20+",
+          "label": "Clients managed"
         },
         {
           "value": "Monthly",
@@ -1803,8 +1803,8 @@
           "label": "Typical duration"
         },
         {
-          "value": "Tailored",
-          "label": "Program design"
+          "value": "8+",
+          "label": "Organizations trained"
         },
         {
           "value": "Hands-on",
@@ -2001,16 +2001,16 @@
           "label": "Typical timeline"
         },
         {
-          "value": "Vercel / GCP / Docker",
-          "label": "Stack used"
+          "value": "6+",
+          "label": "Setups delivered"
         },
         {
           "value": "99.9%",
           "label": "Uptime target"
         },
         {
-          "value": "Ongoing",
-          "label": "Engagement model"
+          "value": "Vercel / GCP",
+          "label": "Stack used"
         }
       ]
     },
@@ -2113,105 +2113,6 @@
         }
       ]
     },
-    "ai-training": {
-      "title": "AI Training",
-      "desc": "Hands-on AI education — workshops, bootcamps, and team upskilling.",
-      "longDesc": "Practical AI training for teams who want to build with LLMs.",
-      "items": [
-        "Workshops & Bootcamps",
-        "Team Upskilling",
-        "LLM & Agent Courses"
-      ],
-      "features": [
-        {
-          "title": "Custom Curriculum",
-          "desc": "Programs tailored to your team's stack and level."
-        },
-        {
-          "title": "Hands-on Labs",
-          "desc": "Build real AI features, not toy examples."
-        },
-        {
-          "title": "Prompt Engineering",
-          "desc": "Master prompt design and structured outputs."
-        },
-        {
-          "title": "Agent Development",
-          "desc": "Build, test, and deploy autonomous agents."
-        },
-        {
-          "title": "RAG & Search",
-          "desc": "Implement RAG for your own data."
-        },
-        {
-          "title": "AI Safety",
-          "desc": "Guardrails and responsible AI practices."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Assessment",
-          "desc": "Evaluate team AI literacy."
-        },
-        {
-          "step": "02",
-          "title": "Curriculum",
-          "desc": "Build custom program."
-        },
-        {
-          "step": "03",
-          "title": "Delivery",
-          "desc": "Interactive workshops with live coding."
-        },
-        {
-          "step": "04",
-          "title": "Practice",
-          "desc": "Guided project work."
-        },
-        {
-          "step": "05",
-          "title": "Follow-up",
-          "desc": "Post-training support and Q&A."
-        }
-      ],
-      "stats": [
-        {
-          "value": "2–5 days",
-          "label": "Program length"
-        },
-        {
-          "value": "Tailored",
-          "label": "Curriculum"
-        },
-        {
-          "value": "Hands-on",
-          "label": "Format"
-        },
-        {
-          "value": "Materials included",
-          "label": "Deliverables"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Who is this for?",
-          "a": "Engineers, PMs, and tech leads wanting to integrate AI."
-        },
-        {
-          "q": "Need AI experience?",
-          "a": "No — beginner to advanced tracks available."
-        },
-        {
-          "q": "Remote or on-site?",
-          "a": "Both — worldwide."
-        },
-        {
-          "q": "What tools?",
-          "a": "Claude, OpenAI, LangChain, Vercel AI SDK, RAG."
-        }
-      ]
-    },
     "ai-consulting": {
       "title": "AI Consulting",
       "desc": "AI strategy advisory — find where AI creates real value.",
@@ -2280,8 +2181,8 @@
           "label": "Typical engagement"
         },
         {
-          "value": "Current-state audit",
-          "label": "First step"
+          "value": "8+",
+          "label": "Companies advised"
         },
         {
           "value": "Roadmap",
@@ -2308,204 +2209,6 @@
         {
           "q": "Minimum engagement?",
           "a": "Focused 2-week sprint."
-        }
-      ]
-    },
-    "prompt-engineering": {
-      "title": "Prompt Engineering",
-      "desc": "Production-grade prompt design — reliable outputs and cost optimization.",
-      "longDesc": "We design, test, and optimize prompts that work reliably in production.",
-      "items": [
-        "Prompt Design & Optimization",
-        "Structured Outputs",
-        "Cost Reduction"
-      ],
-      "features": [
-        {
-          "title": "Prompt Architecture",
-          "desc": "Chains and templates for complex tasks."
-        },
-        {
-          "title": "Structured Outputs",
-          "desc": "Reliable JSON and typed responses."
-        },
-        {
-          "title": "Few-shot & CoT",
-          "desc": "Advanced techniques for quality."
-        },
-        {
-          "title": "Evaluation Pipelines",
-          "desc": "Catch regressions before production."
-        },
-        {
-          "title": "Cost Optimization",
-          "desc": "Reduce tokens without losing quality."
-        },
-        {
-          "title": "Prompt Libraries",
-          "desc": "Reusable, versioned templates."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Baseline",
-          "desc": "Understand current prompts and failures."
-        },
-        {
-          "step": "02",
-          "title": "Design",
-          "desc": "Craft optimized prompts."
-        },
-        {
-          "step": "03",
-          "title": "Test",
-          "desc": "Evaluate against diverse scenarios."
-        },
-        {
-          "step": "04",
-          "title": "Optimize",
-          "desc": "Reduce cost and latency."
-        },
-        {
-          "step": "05",
-          "title": "Document",
-          "desc": "Deliver versioned library."
-        }
-      ],
-      "stats": [
-        {
-          "value": "1–3 wks",
-          "label": "Typical timeline"
-        },
-        {
-          "value": "Eval-driven",
-          "label": "Method"
-        },
-        {
-          "value": "Versioned prompts",
-          "label": "Deliverable"
-        },
-        {
-          "value": "Model-agnostic",
-          "label": "Scope"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Why hire a prompt engineer?",
-          "a": "10x cost difference, 5x quality difference."
-        },
-        {
-          "q": "Which models?",
-          "a": "Claude, GPT-4, Gemini, and open-source."
-        },
-        {
-          "q": "Help with existing prompts?",
-          "a": "Yes — audits and optimization."
-        },
-        {
-          "q": "Ongoing support?",
-          "a": "Yes — maintenance contracts."
-        }
-      ]
-    },
-    "ai-chatbot": {
-      "title": "AI Chatbot",
-      "desc": "Custom AI assistants — support, sales, and internal tools.",
-      "longDesc": "Purpose-built chatbots trained on your data, deployed across channels.",
-      "items": [
-        "Custom AI Assistants",
-        "Knowledge Base Integration",
-        "Multi-channel Deploy"
-      ],
-      "features": [
-        {
-          "title": "Custom Knowledge Base",
-          "desc": "Train on your docs and FAQs via RAG."
-        },
-        {
-          "title": "Conversational UI",
-          "desc": "Natural, context-aware conversations."
-        },
-        {
-          "title": "Multi-channel",
-          "desc": "Web, WhatsApp, Slack, and mobile."
-        },
-        {
-          "title": "Handoff to Human",
-          "desc": "Seamless escalation to live agents."
-        },
-        {
-          "title": "Analytics Dashboard",
-          "desc": "Track satisfaction and resolution rates."
-        },
-        {
-          "title": "Continuous Learning",
-          "desc": "Feedback loops improve responses."
-        }
-      ],
-      "process": [
-        {
-          "step": "01",
-          "title": "Scope",
-          "desc": "Define persona and integrations."
-        },
-        {
-          "step": "02",
-          "title": "Data",
-          "desc": "Ingest knowledge base."
-        },
-        {
-          "step": "03",
-          "title": "Build",
-          "desc": "Develop with RAG and guardrails."
-        },
-        {
-          "step": "04",
-          "title": "Test",
-          "desc": "User testing and safety checks."
-        },
-        {
-          "step": "05",
-          "title": "Launch",
-          "desc": "Deploy with analytics."
-        }
-      ],
-      "stats": [
-        {
-          "value": "3–6 wks",
-          "label": "Typical timeline"
-        },
-        {
-          "value": "Your own content",
-          "label": "Knowledge source"
-        },
-        {
-          "value": "<2 s",
-          "label": "Response target"
-        },
-        {
-          "value": "24/7",
-          "label": "Availability"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Different from ChatGPT?",
-          "a": "Trained on your data, embedded in your product."
-        },
-        {
-          "q": "Multiple languages?",
-          "a": "Yes — 50+ languages out of the box."
-        },
-        {
-          "q": "Data privacy?",
-          "a": "Your data stays on your infrastructure."
-        },
-        {
-          "q": "Hallucinations?",
-          "a": "RAG grounding and confidence thresholds."
         }
       ]
     }
