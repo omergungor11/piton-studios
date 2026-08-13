@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-08-13 (17)
+
+### Changed
+- **Hizmet detay sayfalarindaki rakamlar savunulabilir hale getirildi** (15 hizmet
+  x 4 rakam x 3 dil). Onceki hali site icinde celisiyordu: hizmet sayfalarindaki
+  teslimat sayilari toplandiginda **750+** cikiyordu, anasayfa ise "40+ Tamamlanan
+  Proje" diyor. Ornekler: 200+ otomasyon (portfoyde 2 Automation projesi),
+  100+ site (32 Web Design), 500+ egitilen muhendis ve 50+ warehouse
+  (portfoyde karsiligi yok).
+
+  Yeni kural — her hizmette sabit 4 slot:
+  *tipik sure · portfoyden gelen sayi ya da kapsam gercegi · acikca etiketlenmis
+  hedef · calisma modeli*
+  - Gecmis is sayisi YALNIZCA WORKS'te karsiligi varsa ve **asagi yuvarlanmis**:
+    30+ site (32), 12+ SEO sitesi (13 SEO etiketli), 8+ uygulama (6 Web App +
+    2 SaaS + 1 Simulation), 5+ AI projesi (5 AI/ML). Hicbiri 49'u asmiyor
+  - Karsiligi olmayan hizmetlerde sayi hic kullanilmadi; yerine kapsam gercegi
+    (kullanilan platform, teslim edilenler, calisma modeli)
+  - Performans iddialari yalnizca **hedef** etiketiyle ("Uptime hedefi"),
+    "ort. ulasilan" gibi olculmus sonuc iddiasi birakilmadi
+- Birim ve bicim hatalari duzeltildi: TR/RU dosyalarinda `8–16wk`, `3–6mo`,
+  `15hrs`, `Ongoing`, `Top 3` gibi cevrilmemis Ingilizce birimler; yuzde
+  biciminde `60%` / `%60` karisikligi
+
+### Fixed
+- **Stat kutulari metin degerlerde tasiyordu.** `.sd-stat-value` sayilar icin
+  `clamp(36px, 4vw, 48px)` monospace: bir kutuya ~8 karakter siginca "n8n / webhook"
+  ve "Sürekli bakım" kirpiliyor, `overflow-wrap: anywhere` ile de kelime ortasindan
+  boluniyordu ("webhoo/k"). `service-detail.tsx` artik sozcuk iceren degerlere
+  `is-text` sinifi veriyor (daha kucuk olcek); sayilar buyuk ve baskin kaliyor.
+  15 hizmet x 3 dil x 2 viewport olculdu, tasma yok
+
+> **Bekleyen:** google-ads, how-to-do, cloud-ecosystem, ai-training, ai-consulting
+> hizmetlerinin portfoyde kaydi yok ama kullanici bu isleri yaptiklarini belirtti.
+> Gercek rakamlar gelince o bes hizmette kapsam gercekleri sayilarla degistirilecek.
+
 ## 2026-08-13 (16)
 
 ### Fixed

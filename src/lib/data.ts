@@ -1108,10 +1108,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Handoff", desc: "Developer-ready files, design tokens exported, component annotations, and a recorded walkthrough." },
     ],
     stats: [
-      { value: "3–6wk", label: "Typical timeline" },
-      { value: "100+", label: "Sites shipped" },
-      { value: "98", label: "Avg Lighthouse score" },
-      { value: "2×", label: "Conversion lift avg." },
+      { value: "3–6 wks", label: "Typical timeline" },
+      { value: "30+", label: "Sites delivered" },
+      { value: "90+", label: "Lighthouse target" },
+      { value: "Next.js / WordPress", label: "Stack used" },
     ],
     faq: [
       { q: "Do you build the site or just design it?", a: "Both. We offer design-only engagements for teams with developers, and full design-to-code delivery. Most clients take the full package." },
@@ -1147,10 +1147,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Launch", desc: "Production environment setup, monitoring configured, documentation written, and team handover session." },
     ],
     stats: [
-      { value: "8–16wk", label: "Typical timeline" },
-      { value: "50+", label: "Apps shipped" },
+      { value: "8–16 wks", label: "Typical timeline" },
+      { value: "8+", label: "Apps delivered" },
       { value: "99.9%", label: "Uptime target" },
-      { value: "<200ms", label: "Avg API response" },
+      { value: "<200 ms", label: "API response target" },
     ],
     faq: [
       { q: "Do you work with an existing codebase?", a: "Yes. We've joined projects mid-way, refactored legacy codebases, and extended existing products. We always start with an audit." },
@@ -1186,10 +1186,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Launch", desc: "Web App Manifest configured, HTTPS enforced, analytics tracking installed. Your PWA is live everywhere instantly." },
     ],
     stats: [
-      { value: "4–10wk", label: "Typical timeline" },
-      { value: "40+", label: "PWAs shipped" },
-      { value: "100", label: "Lighthouse PWA score" },
-      { value: "60%", label: "Cost savings vs native" },
+      { value: "4–10 wks", label: "Typical timeline" },
+      { value: "Installable", label: "Core capability" },
+      { value: "90+", label: "Lighthouse PWA target" },
+      { value: "Single codebase", label: "Delivery model" },
     ],
     faq: [
       { q: "PWA vs native app — when to choose which?", a: "PWA covers 90% of use cases — content apps, dashboards, e-commerce, tools. Go native only if you need hardware APIs like Bluetooth, NFC, or advanced camera controls." },
@@ -1225,10 +1225,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Handover", desc: "Documentation, training for your team, and a 30-day support window post-launch." },
     ],
     stats: [
-      { value: "200+", label: "Automations built" },
-      { value: "15hrs", label: "Avg weekly time saved" },
-      { value: "99.5%", label: "Execution success rate" },
-      { value: "2–4wk", label: "Typical timeline" },
+      { value: "2–4 wks", label: "Typical timeline" },
+      { value: "n8n / webhooks", label: "Core platform" },
+      { value: "99.5%", label: "Execution target" },
+      { value: "Ongoing upkeep", label: "Engagement model" },
     ],
     faq: [
       { q: "We already use Zapier — can you improve what we have?", a: "Absolutely. We audit existing Zaps, identify fragile steps, and rebuild or extend them. Often we migrate the most complex ones to n8n." },
@@ -1264,10 +1264,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Monitor & Iterate", desc: "Post-launch monitoring with regular quality reviews and model updates as the landscape evolves." },
     ],
     stats: [
-      { value: "40+", label: "AI integrations shipped" },
-      { value: "3×", label: "Avg accuracy vs baseline" },
-      { value: "60%", label: "Avg cost reduction" },
-      { value: "6–12wk", label: "Typical timeline" },
+      { value: "6–12 wks", label: "Typical timeline" },
+      { value: "5+", label: "AI projects delivered" },
+      { value: "Claude / GPT / Gemini", label: "Models used" },
+      { value: "Ongoing", label: "Engagement model" },
     ],
     faq: [
       { q: "Which LLM should we use?", a: "It depends on your use case. We'll run a structured evaluation against your actual data and recommend based on results, not hype." },
@@ -1303,10 +1303,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Scale", desc: "Proven campaigns scaled methodically. Budget increases tied to efficiency thresholds, not ambition." },
     ],
     stats: [
-      { value: "3.2×", label: "Avg ROAS improvement" },
-      { value: "45%", label: "Avg CPA reduction" },
-      { value: "60+", label: "Accounts managed" },
       { value: "Ongoing", label: "Engagement model" },
+      { value: "Search / Display", label: "Campaign types" },
+      { value: "Monthly", label: "Reporting" },
+      { value: "ROAS / CPA", label: "Tracked metrics" },
     ],
     faq: [
       { q: "What budget do we need to start?", a: "Minimum $1,500/month ad spend. Below that, the learning period takes too long to generate meaningful data." },
@@ -1342,10 +1342,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Monitor & Iterate", desc: "Monthly reporting on rankings, traffic, and citation mentions. Strategy adjusted as the landscape evolves." },
     ],
     stats: [
-      { value: "3–6mo", label: "Typical payoff window" },
-      { value: "180%", label: "Avg organic traffic lift" },
-      { value: "Top 3", label: "Avg ranking position" },
-      { value: "40+", label: "Sites optimized" },
+      { value: "3–6 mos", label: "Typical payoff window" },
+      { value: "12+", label: "Sites optimized" },
+      { value: "Technical + content", label: "Scope" },
+      { value: "Monthly", label: "Reporting" },
     ],
     faq: [
       { q: "What's GEO and why does it matter?", a: "Generative Engine Optimization is the practice of making your content citable by AI models. As more users get answers from AI, being cited by Claude or ChatGPT becomes as important as ranking on Google." },
@@ -1381,10 +1381,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Takip & Mentorluk", desc: "Eğitim sonrası bireysel derinleşme isteyenler için opsiyonel 1:1 mentorluk session'ları." },
     ],
     stats: [
-      { value: "300+", label: "Eğitim alan kişi" },
-      { value: "50+", label: "Workshop tamamlandı" },
-      { value: "5×", label: "Ort. verimlilik artışı" },
-      { value: "4.9★", label: "Katılımcı puanı" },
+      { value: "1–3 days", label: "Typical duration" },
+      { value: "Tailored", label: "Program design" },
+      { value: "Hands-on", label: "Session format" },
+      { value: "Recording + materials", label: "Deliverables" },
     ],
     faq: [
       { q: "Hangi konularda eğitim veriyorsunuz?", a: "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (Supabase, PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz." },
@@ -1420,10 +1420,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Dashboard Delivery", desc: "Business dashboards built with stakeholders, not for them. Iteration included." },
     ],
     stats: [
-      { value: "8–16wk", label: "Typical timeline" },
-      { value: "50+", label: "Warehouses built" },
-      { value: "99.9%", label: "Pipeline reliability" },
-      { value: "10×", label: "Avg query speed improvement" },
+      { value: "8–16 wks", label: "Typical timeline" },
+      { value: "Ingest → warehouse → report", label: "Scope" },
+      { value: "99.9%", label: "Pipeline target" },
+      { value: "Ongoing upkeep", label: "Engagement model" },
     ],
     faq: [
       { q: "Which warehouse should we use?", a: "BigQuery for GCP shops, Snowflake for enterprise, Postgres for early-stage. We'll recommend based on your team size, budget, and existing stack." },
@@ -1459,10 +1459,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Handover", desc: "Documentation package, team training session, and 30-day support window." },
     ],
     stats: [
-      { value: "99.99%", label: "Uptime achieved" },
-      { value: "60%", label: "Avg cost reduction" },
-      { value: "70+", label: "Cloud setups built" },
-      { value: "4–10wk", label: "Typical timeline" },
+      { value: "4–10 wks", label: "Typical timeline" },
+      { value: "Vercel / GCP / Docker", label: "Stack used" },
+      { value: "99.9%", label: "Uptime target" },
+      { value: "Ongoing", label: "Engagement model" },
     ],
     faq: [
       { q: "Why Google Cloud over AWS?", a: "Google Cloud offers superior managed services, better pricing models, and tighter integration with AI/ML tooling. For most workloads we handle, GCP + Vercel is the optimal combination." },
@@ -1497,10 +1497,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Optimize", desc: "Continuous improvement based on production metrics and feedback." },
     ],
     stats: [
-      { value: "10x", label: "Faster Task Completion" },
-      { value: "85%", label: "Automation Rate" },
-      { value: "24/7", label: "Always Available" },
-      { value: "99.5%", label: "Accuracy Target" },
+      { value: "6–12 wks", label: "Typical timeline" },
+      { value: "Tool-using agents", label: "Scope" },
+      { value: "Human-approved", label: "Control model" },
+      { value: "24/7", label: "Runs continuously" },
     ],
     faq: [
       { q: "What tasks can AI agents automate?", a: "Customer support, data processing, content generation, research, reporting, and multi-step business workflows." },
@@ -1535,10 +1535,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Follow-up", desc: "Post-training support, code reviews, and Q&A sessions." },
     ],
     stats: [
-      { value: "500+", label: "Engineers Trained" },
-      { value: "4.9", label: "Average Rating" },
-      { value: "3x", label: "Productivity Gain" },
-      { value: "2-5", label: "Day Programs" },
+      { value: "2–5 days", label: "Program length" },
+      { value: "Tailored", label: "Curriculum" },
+      { value: "Hands-on", label: "Format" },
+      { value: "Materials included", label: "Deliverables" },
     ],
     faq: [
       { q: "Who is this training for?", a: "Software engineers, product managers, and technical leads who want to integrate AI into their products." },
@@ -1573,10 +1573,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Handoff", desc: "Detailed documentation, vendor recommendations, and next steps." },
     ],
     stats: [
-      { value: "40+", label: "Companies Advised" },
-      { value: "3x", label: "Avg ROI" },
-      { value: "2-4", label: "Week Engagements" },
-      { value: "90%", label: "Implementation Rate" },
+      { value: "2–4 wks", label: "Typical engagement" },
+      { value: "Current-state audit", label: "First step" },
+      { value: "Roadmap", label: "Deliverable" },
+      { value: "Build support", label: "Follow-through" },
     ],
     faq: [
       { q: "Do you also build the AI solution?", a: "Yes — consulting often leads to implementation. We offer end-to-end service from strategy to deployment." },
@@ -1611,10 +1611,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Document", desc: "Deliver versioned prompt library with usage guides." },
     ],
     stats: [
-      { value: "60%", label: "Cost Reduction" },
-      { value: "95%", label: "Output Accuracy" },
-      { value: "3x", label: "Faster Iteration" },
-      { value: "100+", label: "Prompts Optimized" },
+      { value: "1–3 wks", label: "Typical timeline" },
+      { value: "Eval-driven", label: "Method" },
+      { value: "Versioned prompts", label: "Deliverable" },
+      { value: "Model-agnostic", label: "Scope" },
     ],
     faq: [
       { q: "Why hire a prompt engineer?", a: "The difference between a good and great prompt can be 10x in cost and 5x in quality. Production prompts need systematic design." },
@@ -1649,10 +1649,10 @@ export const SERVICES: Service[] = [
       { step: "05", title: "Launch", desc: "Deploy with analytics, monitoring, and iteration plan." },
     ],
     stats: [
-      { value: "70%", label: "Ticket Deflection" },
-      { value: "< 2s", label: "Response Time" },
+      { value: "3–6 wks", label: "Typical timeline" },
+      { value: "Your own content", label: "Knowledge source" },
+      { value: "<2 s", label: "Response target" },
       { value: "24/7", label: "Availability" },
-      { value: "92%", label: "User Satisfaction" },
     ],
     faq: [
       { q: "How is this different from ChatGPT?", a: "Our chatbots are trained on your specific data, embedded in your product, and designed for your use case — not a generic assistant." },
