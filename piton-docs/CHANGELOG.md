@@ -22,6 +22,17 @@
 > Not: yilan scrollbar (`.snake-scroll`) mobilde gizli kalmaya devam ediyor —
 > mobilde yerini alacagi bir tarayici cubugu yok.
 
+### Added
+- Her iki fonta acik **`fallback` listesi**. Space Grotesk'te Kiril olmadigi icin
+  /ru govde metni kacinilmaz olarak yedege dusuyor; yedegi acikca yazmak next/font'un
+  `size-adjust` / `ascent-override` degerlerini bu listeye gore uretmesini saglar,
+  aksi halde /ru'da fark edilir bir yerlesim kaymasi oluyordu
+
+> Bu degisiklik ayni zamanda uretilen font modulunun hash'ini degistirdi
+> (`space_grotesk_d4fd9891` → `736ded06`). Vercel'de font setini degistiren ilk
+> deploy, eski build onbelleginden gelen modul CSS'i artik var olmayan font
+> dosyalarina referans verdigi icin `module-not-found` ile patlamisti.
+
 ## 2026-08-13 (15)
 
 ### Changed
