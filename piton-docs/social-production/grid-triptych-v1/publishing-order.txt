@@ -1,0 +1,21 @@
+INSTAGRAM YUKLEME SIRASI
+
+Instagram profilinde en yeni gonderi solda gorunur. Bu nedenle gorseller su sirayla paylasilir:
+
+1. `upload-01-right.jpg`  - Sag panel / Kod + AI
+2. `upload-02-center.jpg` - Orta panel / Piton Studios
+3. `upload-03-left.jpg`   - Sol panel / Tasarim
+
+Uc gonderi de paylasildiginda profil satiri soldan saga:
+
+Tasarim | Piton Studios | Kod + AI
+
+DIKKAT
+
+- Uc gonderiyi art arda paylasin.
+- Paylasim sirasinda Instagram kirpma ekraninda 3:4 oranini koruyun.
+- Otomatik filtre veya yeniden kadraj uygulamayin.
+- Araya baska bir feed gonderisi girmemeli.
+- Sonraki yayinlar da uclu paketler halinde yapilmali. Tek veya iki gonderi paylasmak eski satirlarin hizasini kaydirir.
+- Mevcut profilinizde sabitlenmis gonderiler varsa once grid onizlemesini kontrol edin.
+- Sabitleme kullanacaksaniz uc gonderinin de son grid siralamasini uygulama onizlemesinde kontrol edin.

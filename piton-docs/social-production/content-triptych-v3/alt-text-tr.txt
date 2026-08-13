@@ -1,0 +1,20 @@
+UPLOAD 01 / SOSYAL MEDYA VE WEB SİTESİ CAROUSEL
+
+01: “Sosyal medya varken web sitesi neden gerekli?” başlığı altında sosyal medya ve web sitesinin farklı özelliklerini karşılaştıran iki panel.
+02: Sosyal medya ile web sitesini ana görev, içerik ömrü, kontrol, aksiyon ve arama görünürlüğü açısından karşılaştıran tablo.
+03: Merkezde web sitesi; çevresinde sosyal medya, arama ve SEO, CRM ve otomasyon ile ölçüm düğümlerinin bulunduğu dijital ekosistem şeması.
+04: Teklifin büyümesi, güven eksikliği, dağınık talepler, aramada bulunmama, manuel süreçler ve ölçüm eksikliği başlıklarıyla web sitesinin öncelik olması gereken altı durumu gösteren karar paneli.
+
+UPLOAD 02 / NEDEN PİTON STUDIOS CAROUSEL
+
+01: Piton Studios'un kırmızı dijital pitonun mavi kablolu dünyayı sardığı logosu ve “Neden Piton Studios?” başlığı.
+02: Strateji, tasarım, geliştirme ve büyüme katmanlarını açıklayan dört yatay bilgi paneli.
+03: Keşif, mimari, üretim ve doğrulama adımlarından oluşan proje sürecini gösteren dört kutulu akış.
+04: Tasarım, kod, hız, SEO/GEO, dönüşüm ve bakım eksenlerinden oluşan radar grafik ile iş hedefi, teknik kalite ve uzun vade açıklamaları.
+
+UPLOAD 03 / NEDEN WEB SİTESİ CAROUSEL
+
+01: “Neden bir web sitesine ihtiyacınız var?” başlığı altında bulunurluk, güven, talep ve sistem görevlerini gösteren dört büyük renkli bilgi kartı.
+02: Web sitesinin bulunur olmak, güven oluşturmak, talep toplamak ve iş süreçlerini desteklemek görevlerini açıklayan iki sütunlu dört büyük bilgi kartı.
+03: Keşif, anlama, güven ve aksiyon aşamalarından oluşan ziyaretçiden müşteriye karar yolculuğu.
+04: Kalıcı içerik, ölçülebilir davranış, iş araçlarıyla entegrasyon ve büyüyebilir yapı özelliklerini açıklayan dijital varlık paneli.

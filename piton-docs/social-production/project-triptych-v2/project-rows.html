@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=3240, initial-scale=1">
+  <title>Piton Studios - Selected Works Rows</title>
+  <style>
+    @font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/6a5386fd6038edbe-s.16fk0g~ypa53a.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:"Press Start 2P";font-style:normal;font-weight:400;font-display:block;src:url("../../../.next/static/media/96074e70a40501da-s.0fw52gc_mc5b0.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"Press Start 2P";font-style:normal;font-weight:400;font-display:block;src:url("../../../.next/static/media/de161955856a921d-s.p.04z8pihzuh7s1.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    :root{--black:#0a0a0a;--white:#f2efe9;--soft:#d5d1c9;--muted:#777775;--red:#d33a3e;--cyan:#00a0d0;--blue:#0870a0;--line:rgba(242,239,233,.14)}
+    *{box-sizing:border-box}html,body{margin:0;width:3240px;min-width:3240px;background:#000;color:var(--white);font-family:"JetBrains Mono",monospace}body{overflow:hidden}
+    .row{position:relative;width:3240px;height:1440px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),var(--black);background-size:54px 54px,54px 54px,auto}
+    .row::before{content:"";position:absolute;inset:34px;z-index:20;border:1px solid var(--line);pointer-events:none}.row::after{content:"";position:absolute;inset:0;z-index:21;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(255,255,255,.012) 6px);mix-blend-mode:screen;pointer-events:none}
+    .panel{position:absolute;top:0;width:1080px;height:1440px;padding:76px 82px 68px}.panel:nth-child(1){left:0}.panel:nth-child(2){left:1080px;border-left:1px solid rgba(242,239,233,.08)}.panel:nth-child(3){left:2160px;border-left:1px solid rgba(242,239,233,.08)}
+    .top,.footer{position:relative;z-index:15;display:flex;align-items:center;justify-content:space-between;color:var(--soft);font-size:16px;text-transform:uppercase}.series{display:flex;align-items:center}.series::before{content:"";width:10px;height:10px;margin-right:50px;background:var(--red);box-shadow:18px 0 0 rgba(211,58,62,.35),36px 0 0 rgba(0,160,208,.6)}.top b{color:var(--cyan);font-weight:500}
+    .project-copy{position:absolute;z-index:15;top:196px;left:82px;right:82px;text-align:center}.eyebrow{font-family:"Press Start 2P",monospace;color:var(--red);font-size:13px;line-height:1.6;text-transform:uppercase}.project-copy h1{margin:29px 0 0;font-size:62px;line-height:1.05;font-weight:600}.project-copy h1 em{color:var(--cyan);font-style:normal}.project-copy p{max-width:760px;margin:25px auto 0;color:var(--soft);font-size:19px;line-height:1.55}.tags{display:flex;justify-content:center;gap:9px;margin-top:26px}.tags span{padding:8px 12px;border:1px solid var(--line);color:var(--muted);font-size:12px;text-transform:uppercase}.tags span:first-child{color:var(--cyan);border-color:rgba(0,160,208,.32)}
+    .showcase{position:absolute;z-index:12;left:58px;right:58px;top:670px;height:515px}.meta{display:flex;justify-content:space-between;padding:0 20px;color:var(--muted);font-size:13px;text-transform:uppercase}.meta strong{color:var(--cyan);font-weight:500}.desktop{position:absolute;left:0;top:38px;width:830px;height:430px;overflow:hidden;border:1px solid rgba(242,239,233,.22);border-radius:8px;background:#111;box-shadow:0 30px 70px rgba(0,0,0,.72)}.bar{height:31px;display:flex;align-items:center;gap:8px;padding:0 13px;border-bottom:1px solid rgba(242,239,233,.12);background:#151719}.bar i{width:7px;height:7px;border-radius:50%;background:rgba(242,239,233,.22)}.bar i:first-child{background:var(--red)}.bar i:last-of-type{background:var(--cyan)}.bar span{margin-left:8px;color:var(--muted);font-size:10px}.desktop img{display:block;width:100%;height:calc(100% - 31px);object-fit:cover;object-position:top center}.phone{position:absolute;z-index:3;right:0;top:95px;width:220px;height:405px;overflow:hidden;border:8px solid #17191b;border-radius:28px;background:#111;box-shadow:0 26px 54px rgba(0,0,0,.82),0 0 0 1px rgba(242,239,233,.2)}.phone::before{content:"";position:absolute;z-index:3;top:7px;left:50%;width:54px;height:5px;transform:translateX(-50%);border-radius:4px;background:rgba(10,10,10,.76)}.phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}.showcase.reverse .desktop{left:auto;right:0}.showcase.reverse .phone{left:0;right:auto}.showcase.solo .desktop{left:40px;width:876px}.showcase.solo .vision-legend{position:absolute;z-index:4;right:2px;bottom:14px;width:260px;padding:18px;border:1px solid rgba(0,160,208,.28);background:rgba(10,10,10,.92);box-shadow:0 20px 40px rgba(0,0,0,.6)}.vision-legend b{display:block;color:var(--cyan);font-size:13px}.vision-legend span{display:block;margin-top:10px;color:var(--soft);font-size:12px}.vision-legend i{display:inline-block;width:42px;height:4px;margin-right:8px;background:var(--red)}
+    .footer{position:absolute;left:82px;right:82px;bottom:61px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}.footer strong{color:var(--soft);font-weight:500}.data-line{position:absolute;z-index:5;left:35px;right:35px;bottom:292px;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),var(--red),var(--cyan),transparent);box-shadow:0 0 20px rgba(0,160,208,.35)}
+    .row-b{position:absolute;top:1440px;left:0}.row-b .eyebrow{color:var(--cyan)}.row-b .project-copy h1 em{color:var(--red);font-style:italic}.row-b .tags span:first-child{color:var(--red);border-color:rgba(211,58,62,.32)}
+  </style>
+</head>
+<body>
+  <section class="row row-a">
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 02</span><b>01 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">Platform · 2025</div><h1>Gel Gez <em>Gör</em></h1><p>KKTC için çok kategorili ilan, gelişmiş filtreleme ve SEO altyapısına sahip dijital platform.</p><div class="tags"><span>Web App</span><span>Next.js</span><span>Platform</span><span>SEO</span></div></div>
+      <div class="showcase"><div class="meta"><strong>Desktop + Mobile</strong><span>Responsive experience</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>gelgezgor.com</span></div><img src="../../../public/assets/previews/desktop/gel-gez-gor.webp" alt=""></div><div class="phone"><img src="../../../public/assets/previews/mobile/gel-gez-gor.webp" alt=""></div></div>
+      <footer class="footer"><strong>Gel Gez Gör</strong><span>pitonstudios.com</span></footer>
+    </article>
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 02</span><b>02 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">Interactive · 2026</div><h1>Mind<em>loop</em></h1><p>3D sahne, scroll tabanlı anlatım ve newsletter akışıyla şekillenen kişisel marka deneyimi.</p><div class="tags"><span>3D</span><span>Interactive</span><span>Storytelling</span><span>Brand</span></div></div>
+      <div class="showcase reverse"><div class="meta"><strong>Immersive Web</strong><span>Desktop + Mobile</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>mindloop / experience</span></div><img src="../../../public/assets/previews/desktop/mindloop.webp" alt=""></div><div class="phone"><img src="../../../public/assets/previews/mobile/mindloop.webp" alt=""></div></div>
+      <footer class="footer"><strong>Mindloop</strong><span>pitonstudios.com</span></footer>
+    </article>
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 02</span><b>03 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">Security SaaS · 2026</div><h1>Securi<em>fy</em></h1><p>Veri güvenliği ürününü güçlü tipografi, güven sinyalleri ve net ürün anlatımıyla konumlandıran SaaS sitesi.</p><div class="tags"><span>SaaS</span><span>Security</span><span>Landing</span><span>Branding</span></div></div>
+      <div class="showcase"><div class="meta"><strong>Product Story</strong><span>Desktop + Mobile</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>securify / platform</span></div><img src="../../../public/assets/previews/desktop/securify.webp" alt=""></div><div class="phone"><img src="../../../public/assets/previews/mobile/securify.webp" alt=""></div></div>
+      <footer class="footer"><strong>Securify</strong><span>+90 543 950 07 50</span></footer>
+    </article>
+    <div class="data-line"></div>
+  </section>
+
+  <section class="row row-b">
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 03</span><b>01 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">Computer Vision · 2025</div><h1>Araç <em>Takip</em></h1><p>Video akışında çoklu araç tespiti ve kimlik korumalı takip için geliştirdiğimiz bilgisayarlı görü Ar-Ge’si.</p><div class="tags"><span>YOLO11</span><span>ByteTrack</span><span>Python</span><span>AI / ML</span></div></div>
+      <div class="showcase solo"><div class="meta"><strong>Research / Development</strong><span>Detection + Tracking</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>vehicle-tracking / live frame</span></div><img src="../../../public/assets/previews/desktop/arac-takip-yolo.webp" alt=""></div><div class="vision-legend"><b>PIPELINE</b><span><i></i>Detection</span><span><i style="background:#00a0d0"></i>Identity tracking</span><span><i style="background:#f2efe9"></i>Frame analysis</span></div></div>
+      <footer class="footer"><strong>Araç Takip Sistemi</strong><span>pitonstudios.com</span></footer>
+    </article>
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 03</span><b>02 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">3D Portfolio · 2026</div><h1>Jack <em>Creator</em></h1><p>Animasyon koreografisi ve güçlü görsel anlatımla hazırlanan 3D içerik üreticisi portfolyo konsepti.</p><div class="tags"><span>3D</span><span>Animation</span><span>Portfolio</span><span>Brand</span></div></div>
+      <div class="showcase reverse"><div class="meta"><strong>Creative Direction</strong><span>Desktop + Mobile</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>jack / creator portfolio</span></div><img src="../../../public/assets/previews/desktop/jack-portfolio.webp" alt=""></div><div class="phone"><img src="../../../public/assets/previews/mobile/jack-portfolio.webp" alt=""></div></div>
+      <footer class="footer"><strong>Jack - 3D Creator</strong><span>pitonstudios.com</span></footer>
+    </article>
+    <article class="panel">
+      <header class="top"><span class="series">Selected Works / 03</span><b>03 / 03</b></header>
+      <div class="project-copy"><div class="eyebrow">Developer Tool · 2026</div><h1>Vel<em>dara</em></h1><p>Svelte 5 ve Three.js tabanlı geliştirici kütüphanesi için dokümantasyon ve ürün anlatımı konsepti.</p><div class="tags"><span>Three.js</span><span>Svelte</span><span>Developer</span><span>3D Web</span></div></div>
+      <div class="showcase"><div class="meta"><strong>Developer-first</strong><span>Desktop + Mobile</span></div><div class="desktop"><div class="bar"><i></i><i></i><i></i><span>veldara / documentation</span></div><img src="../../../public/assets/previews/desktop/veldara.webp" alt=""></div><div class="phone"><img src="../../../public/assets/previews/mobile/veldara.webp" alt=""></div></div>
+      <footer class="footer"><strong>Veldara</strong><span>+90 543 950 07 50</span></footer>
+    </article>
+    <div class="data-line"></div>
+  </section>
+</body>
+</html>

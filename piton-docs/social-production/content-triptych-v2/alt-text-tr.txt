@@ -1,0 +1,17 @@
+UPLOAD 01 / CAROUSEL
+
+01: Siyah teknik ızgara üzerinde “Ziyaretçi neden iletişime geçmiyor?” başlığı ve ziyaretçiden talebe uzanan borudaki üç kırmızı kaçak noktası.
+02: Mesaj, kanıt, aksiyon ve sürtünme başlıkları altında dört dönüşüm kaçağını açıklayan liste.
+03: Tek cümlede teklif, karara yakın kanıt, birincil CTA ve düşük eşikli temas başlıklarıyla dört düzeltme önerisi.
+04: Bir web sitesini mesaj, güven, aksiyon ve mobil netlik açısından değerlendiren 30 saniyelik kontrol listesi.
+
+UPLOAD 02 / TEK GÖRSEL
+
+“Site adresinizi gönderin” başlıklı mini inceleme teklifi. Mesaj netliği, güven sinyalleri ve aksiyon akışı olmak üzere üç değerlendirme alanı ile Piton Studios telefon numarası bulunuyor.
+
+UPLOAD 03 / CAROUSEL
+
+01: “Formunuz müşteri kaybettiriyor mu?” başlığı ve uzun, belirsiz alanları işaretlenmiş eğimli teklif formu arayüzü.
+02: Fazla alan, belirsiz beklenti, zayıf mobil deneyim ve güven eksikliği başlıklarıyla form sürtünmesi teşhisi.
+03: Üç alanlı kısa teklif formu örneği ile kısa, net, güvenli ve mobil özelliklerini anlatan iyi form anatomisi.
+04: Formu 60 saniyede tamamlama, yanıt süresi, hata mesajı ve başarı mesajı açısından değerlendiren beş dakikalık kontrol listesi.

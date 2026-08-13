@@ -1,0 +1,53 @@
+UPLOAD 01 - DOLMUŞ GÜZERGAH KONTROL
+
+GPS takip programından alınan Excel verisini işleyerek dolmuş hatları için güzergah uyum ve zamanlama raporları üreten bir otomasyon sistemi geliştirdik.
+
+Flask tabanlı web uygulaması; araç, hat ve saat verilerini denetleyerek sapmaları görünür hale getiriyor. Elle saatler süren kontrol süreci, tekrar kullanılabilir ve ölçülebilir bir raporlama akışına dönüşüyor.
+
+Kapsam:
+• GPS ve Excel veri işleme
+• Güzergah uyum kontrolü
+• Flask web uygulaması
+• Otomatik raporlama
+
+pitonstudios.com
++90 543 950 07 50
+
+#PitonStudios #Automation #DataProcessing #Flask #TransportationTech
+
+---
+
+UPLOAD 02 - EMLAK SYNC
+
+Emlak Sync, ilanların tek panelden farklı emlak portallarına yayınlanmasını ve güncel tutulmasını sağlayan çoklu platform otomasyon ürünü.
+
+HangiEv ve 101evler gibi portallara yapılan entegrasyonlar mükerrer veri girişini ortadan kaldırıyor. Tek bir ana kaynaktan çalışan sistem, emlak ofislerinin ilan operasyonunu daha hızlı ve tutarlı hale getiriyor.
+
+Kapsam:
+• Çoklu portal entegrasyonu
+• İlan senkronizasyonu
+• Merkezi yönetim paneli
+• Emlak operasyon otomasyonu
+
+pitonstudios.com
+
+#PitonStudios #EmlakSync #PropTech #Automation #SaaS
+
+---
+
+UPLOAD 03 - ÖDEME TAKİP BOTU
+
+Şirket ödemelerini takip eden ve vade yaklaşınca Telegram üzerinden otomatik hatırlatma gönderen bir yönetim sistemi geliştirdik.
+
+Node.js, Express ve SQLite tabanlı yapı; taksitli ödemelerde otomatik vade üretimi, geciken kayıtlar, yedi günlük özet ve finansal bütünlük kontrollerini tek panelde topluyor.
+
+Kapsam:
+• Ödeme ve vade yönetimi
+• Telegram bildirim botu
+• Taksit planı otomasyonu
+• Node.js, Express ve SQLite
+
+Sürecinizi otomatikleştirelim:
++90 543 950 07 50
+
+#PitonStudios #PaymentAutomation #TelegramBot #NodeJS #Fintech

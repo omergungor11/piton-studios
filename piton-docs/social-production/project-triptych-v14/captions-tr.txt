@@ -1,0 +1,53 @@
+UPLOAD 01 - HAVA GÖRÜNTÜSÜ SEGMENTASYONU
+
+Uydu görüntülerini bina, yol ve bitki örtüsü dahil altı sınıfa ayıran U-Net tabanlı semantik segmentasyon modeli geliştirdik.
+
+Model, görüntüyü yalnızca sınıflandırmak yerine her pikselin hangi sınıfa ait olduğunu belirliyor. Bu Ar-Ge yaklaşımı şehir planlama, tarım ve afet analizi gibi coğrafi veri senaryoları için ölçeklenebilir bir temel oluşturuyor.
+
+Kapsam:
+• U-Net model mimarisi
+• Altı sınıflı semantik segmentasyon
+• Uydu görüntüsü işleme
+• Model eğitimi ve değerlendirme
+
+pitonstudios.com
++90 543 950 07 50
+
+#PitonStudios #ComputerVision #UNet #SatelliteImagery #MachineLearning
+
+---
+
+UPLOAD 02 - YÜZ DUYGU ANALİZİ
+
+MediaPipe Face Mesh tarafından çıkarılan 468 yüz noktasını kullanarak gerçek zamanlı duygu tahmini yapan açıklanabilir bir sistem geliştirdik.
+
+Kural tabanlı yaklaşım sayesinde her sonucun hangi yüz hareketlerinden üretildiği izlenebiliyor. Web kamerasıyla anlık çalışan proje, etkileşimli uygulamalar ve kullanıcı deneyimi araştırmaları için pratik bir bilgisayarlı görü temeli sunuyor.
+
+Kapsam:
+• 468 yüz noktası analizi
+• Gerçek zamanlı görüntü işleme
+• Açıklanabilir tahmin yaklaşımı
+• MediaPipe ve Python
+
+pitonstudios.com
+
+#PitonStudios #EmotionAnalysis #MediaPipe #ComputerVision #ExplainableAI
+
+---
+
+UPLOAD 03 - TRAFİK LEVHA OKUMA
+
+Trafik levhalarını önce YOLO ile tespit eden, ardından kırpılan görüntüleri CNN ile sınıflandıran iki aşamalı bir bilgisayarlı görü hattı geliştirdik.
+
+Tespit ve sınıflandırma modellerinin aynı üretim akışında birleştiği çalışma; sürücü destek sistemleri ve harita güncelleme senaryolarına temel olabilecek bir Ar-Ge örneği.
+
+Kapsam:
+• YOLO nesne tespiti
+• CNN görüntü sınıflandırma
+• İki aşamalı model hattı
+• Python tabanlı Ar-Ge
+
+AI projenizi konuşalım:
++90 543 950 07 50
+
+#PitonStudios #YOLO #CNN #TrafficSignDetection #AIResearch

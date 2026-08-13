@@ -65,3 +65,9 @@ tmp/
 /public/assets/brand/piton-globe-python-red-v1.png
 /public/assets/brand/piton-globe-python-circuit-v2.png
 /public/assets/brand/piton-globe-python-brand-red-v3.png
+
+# Sosyal medya gorsel ciktilari — 285 dosya, 93 MB. Site kodu bunlara hic referans
+# vermiyor (src/ ve content/ tarandi); yalnizca piton-docs/social-production/
+# altindaki uretim notlari bahsediyor. Uretim notlari ve alt metinler repoda,
+# gorsellerin kendisi disarida.
+/public/assets/social/
