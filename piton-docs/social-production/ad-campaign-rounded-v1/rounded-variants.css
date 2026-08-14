@@ -1,0 +1,111 @@
+.rounded-preview .frame {
+  border-radius: 22px;
+}
+
+.rounded-preview .browser,
+.rounded-preview .offer-card,
+.rounded-preview .feature-strip,
+.rounded-preview .ads-panel,
+.rounded-preview .proof-card,
+.rounded-preview .metric-grid,
+.rounded-preview .partner-badge,
+.rounded-preview .cta {
+  overflow: hidden;
+}
+
+.rounded-preview .feature-strip,
+.rounded-preview .metric-grid {
+  isolation: isolate;
+}
+
+/* 01: Restrained radius. Keeps the current technical character. */
+.rounded-soft .frame {
+  border-radius: 18px;
+}
+
+.rounded-soft .browser {
+  border-radius: 16px;
+}
+
+.rounded-soft .phone {
+  border-radius: 36px;
+}
+
+.rounded-soft .offer-card,
+.rounded-soft .feature-strip,
+.rounded-soft .cta {
+  border-radius: 14px;
+}
+
+.rounded-soft .offer-card {
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.3);
+}
+
+/* 02: More expressive cards for a premium, product-led look. */
+.rounded-layered .frame {
+  border-radius: 32px;
+}
+
+.rounded-layered .browser {
+  border-radius: 28px;
+  box-shadow: 0 34px 85px rgba(0, 0, 0, 0.58);
+}
+
+.rounded-layered .phone {
+  border-radius: 44px;
+}
+
+.rounded-layered .offer-card {
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(211, 58, 62, 0.21), rgba(13, 17, 19, 0.98));
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.38);
+}
+
+.rounded-layered .feature-strip {
+  border-radius: 20px;
+  background: rgba(14, 18, 20, 0.96);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+}
+
+.rounded-layered .cta {
+  border-radius: 22px;
+  box-shadow: 0 24px 65px rgba(211, 58, 62, 0.24);
+}
+
+/* 03: Rounded dashboard language for the performance creative. */
+.rounded-performance .frame {
+  border-radius: 28px;
+}
+
+.rounded-performance .partner-badge {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.rounded-performance .offer-card,
+.rounded-performance .proof-card {
+  border-radius: 18px;
+}
+
+.rounded-performance .proof-card {
+  border-left-width: 7px;
+}
+
+.rounded-performance .ads-panel {
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.44);
+}
+
+.rounded-performance .metric-grid {
+  border-radius: 14px;
+}
+
+.rounded-performance .bar-track,
+.rounded-performance .bar-fill {
+  border-radius: 999px;
+}
+
+.rounded-performance .cta {
+  border-radius: 18px;
+  box-shadow: 0 24px 65px rgba(211, 58, 62, 0.24);
+}

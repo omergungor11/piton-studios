@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piton Studios - Meta Ads Campaign V1</title>
+  <style>
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/28868e710e86be81.p.0rx81dn62y51_.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/2e95a7d252b9825a.p.0dgq8lqrj3gc_.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/23b7a97ae3b5c134.p.0o14nraug8u5s.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+    :root{
+      --bg:#08090a;
+      --ink:#f2efe9;
+      --soft:#c7c5bf;
+      --muted:#777a7b;
+      --line:rgba(242,239,233,.16);
+      --red:#d33a3e;
+      --cyan:#00a0d0;
+      --green:#65d68a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;width:1080px;background:#18191b;color:var(--ink);font-family:"Space Grotesk",sans-serif}
+    body{display:grid;gap:40px;padding:40px 0}
+    .creative{position:relative;width:1080px;overflow:hidden;background:var(--bg);isolation:isolate}
+    .feed{height:1350px}
+    .story{height:1920px}
+    .creative::before{content:"";position:absolute;inset:0;z-index:-4;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px}
+    .creative::after{content:"";position:absolute;inset:0;z-index:-3;border:1px solid rgba(255,255,255,.08);pointer-events:none}
+    .wash{position:absolute;z-index:-2;inset:0;background:linear-gradient(135deg,rgba(211,58,62,.08),transparent 34%,rgba(0,160,208,.065) 72%,transparent)}
+    .frame{position:absolute;inset:24px;border:1px solid rgba(255,255,255,.09);pointer-events:none}
+    .topbar{position:absolute;top:52px;left:64px;right:64px;display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+    .brand{display:flex;align-items:center;gap:38px}
+    .brand::before{content:"";width:10px;height:10px;background:var(--red);box-shadow:18px 0 0 rgba(211,58,62,.38),36px 0 0 rgba(0,160,208,.8)}
+    .count{color:var(--cyan)}
+    .copy-block{position:absolute;left:64px;right:64px;top:150px}
+    .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+    .headline{max-width:940px;margin:24px 0 0;font-size:72px;font-weight:650;line-height:1.02;letter-spacing:0}
+    .headline .red{color:var(--red)}
+    .headline .blue{color:var(--cyan)}
+    .sub{max-width:790px;margin:24px 0 0;color:var(--soft);font-size:25px;line-height:1.42}
+    .mini-label{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+    .browser{position:absolute;overflow:hidden;border:1px solid rgba(255,255,255,.22);background:#111;box-shadow:0 26px 70px rgba(0,0,0,.5)}
+    .browser::before{content:"";display:block;height:38px;background:#151719;border-bottom:1px solid rgba(255,255,255,.13)}
+    .browser::after{content:"";position:absolute;left:17px;top:15px;width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:16px 0 0 #e7b84c,32px 0 0 #4fbd79}
+    .browser img{display:block;width:100%;height:calc(100% - 38px);object-fit:cover;object-position:top}
+    .phone{position:absolute;overflow:hidden;border:8px solid #24272a;border-radius:32px;background:#111;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+    .phone::before{content:"";position:absolute;z-index:2;left:50%;top:7px;width:72px;height:15px;transform:translateX(-50%);border-radius:0 0 10px 10px;background:#24272a}
+    .phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+    .tablet{position:absolute;overflow:hidden;border:7px solid #24272a;border-radius:24px;background:#111;box-shadow:0 28px 70px rgba(0,0,0,.55)}
+    .tablet::before{content:"";position:absolute;z-index:2;left:50%;top:5px;width:7px;height:7px;transform:translateX(-50%);border-radius:50%;background:#555b60}
+    .tablet img{width:100%;height:100%;object-fit:cover;object-position:top}
+    .cta{position:absolute;left:64px;right:64px;bottom:62px;height:108px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;border:1px solid rgba(255,255,255,.15);background:var(--red);color:#fff}
+    .cta-copy b{display:block;font-size:23px;font-weight:650}
+    .cta-copy span{display:block;margin-top:7px;font-family:"IBM Plex Mono",monospace;font-size:16px;font-weight:600;color:rgba(255,255,255,.88)}
+    .cta-arrow{font-size:43px;font-weight:400}
+
+    /* Creative 01: conversion */
+    .c1 .browser{left:64px;top:545px;width:765px;height:430px}
+    .c1 .phone{right:65px;top:645px;width:235px;height:455px}
+    .signal-row{position:absolute;left:64px;right:335px;top:1000px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .signal{padding:20px 18px;border-right:1px solid var(--line)}
+    .signal:last-child{border-right:0}
+    .signal b{display:block;color:var(--cyan);font-family:"IBM Plex Mono",monospace;font-size:17px}
+    .signal span{display:block;margin-top:7px;color:var(--muted);font-size:15px}
+
+    /* Creative 02: services */
+    .c2 .eyebrow{color:var(--cyan)}
+    .c2 .service-rail{position:absolute;left:64px;top:560px;width:250px;display:grid;gap:12px}
+    .service-item{position:relative;min-height:120px;padding:24px 20px 20px 28px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .service-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--cyan)}
+    .service-item:nth-child(2)::before{background:var(--red)}
+    .service-item b{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--cyan)}
+    .service-item:nth-child(2) b{color:var(--red)}
+    .service-item strong{display:block;margin-top:13px;font-size:22px}
+    .c2 .browser.main{left:340px;top:545px;width:675px;height:392px}
+    .c2 .tablet{left:405px;top:900px;width:465px;height:250px;border-color:rgba(211,58,62,.45)}
+    .c2 .phone{right:70px;top:845px;width:190px;height:355px}
+    .flow{position:absolute;left:64px;right:64px;top:1160px;display:flex;align-items:center;justify-content:center;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;color:var(--soft)}
+    .flow i{width:60px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--red))}
+    .c2 .cta{background:var(--red)}
+
+    /* Creative 03: trust */
+    .c3 .copy-block{right:420px}
+    .c3 .headline{font-size:65px}
+    .c3 .sub{font-size:23px}
+    .globe{position:absolute;z-index:-1;right:-105px;top:365px;width:720px;height:720px;object-fit:contain;filter:drop-shadow(0 40px 90px rgba(0,0,0,.65))}
+    .stats{position:absolute;left:64px;top:620px;width:360px;border-top:1px solid var(--line)}
+    .stat{display:grid;grid-template-columns:125px 1fr;align-items:center;min-height:118px;border-bottom:1px solid var(--line)}
+    .stat b{font-family:"IBM Plex Mono",monospace;font-size:42px;color:var(--cyan)}
+    .stat:nth-child(2) b{color:var(--red)}
+    .stat span{color:var(--soft);font-size:17px;line-height:1.3}
+    .capabilities{position:absolute;left:64px;right:64px;top:1020px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+    .capability{padding:24px 18px;border-right:1px solid var(--line);text-align:center;font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;color:var(--soft)}
+    .capability:last-child{border-right:0}
+
+    /* Creative 04: website package */
+    .c4 .copy-block{right:285px}
+    .c4 .headline{font-size:62px}
+    .c4 .sub{font-size:23px;max-width:780px}
+    .brand-mark{position:absolute;width:190px;height:190px;object-fit:contain;filter:drop-shadow(0 22px 48px rgba(0,0,0,.58))}
+    .c4 .brand-mark{right:64px;top:435px}
+    .offer-card{position:absolute;padding:22px 26px;border:1px solid rgba(211,58,62,.62);background:linear-gradient(135deg,rgba(211,58,62,.17),rgba(8,9,10,.96));box-shadow:0 24px 65px rgba(0,0,0,.28)}
+    .offer-card span{display:block;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+    .offer-card b{display:block;margin-top:9px;font-size:39px;line-height:1;color:var(--ink)}
+    .offer-card small{display:block;margin-top:9px;color:var(--muted);font-size:14px}
+    .c4 .offer-card{left:64px;top:500px;width:470px;height:135px}
+    .c4 .browser.web-main{left:64px;top:680px;width:820px;height:365px}
+    .c4 .phone{right:64px;top:735px;width:220px;height:400px}
+    .feature-strip{position:absolute;display:grid;border:1px solid var(--line);background:rgba(8,9,10,.9)}
+    .feature{padding:18px 14px;border-right:1px solid var(--line)}
+    .feature:last-child{border-right:0}
+    .feature b{display:block;font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--cyan)}
+    .feature span{display:block;margin-top:7px;color:var(--soft);font-size:15px}
+    .c4 .feature-strip{left:64px;right:310px;top:1060px;grid-template-columns:repeat(4,1fr)}
+
+    /* Creative 05: performance marketing */
+    .c5 .eyebrow{color:var(--cyan)}
+    .c5 .headline{font-size:62px;max-width:900px}
+    .c5 .sub{font-size:23px;max-width:820px}
+    .c5 .brand-mark{right:64px;top:455px;width:145px;height:145px}
+    .partner-row{position:absolute;display:flex;gap:12px}
+    .partner-badge{height:58px;display:flex;align-items:center;gap:12px;padding:0 20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.055);font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;color:var(--ink)}
+    .partner-badge svg{display:block;flex:none}
+    .partner-badge .meta-logo{display:block;width:34px;height:24px;object-fit:contain;flex:none}
+    .c5 .partner-row{left:64px;top:480px}
+    .c5 .offer-card{left:64px;top:575px;width:410px;height:170px}
+    .c5 .offer-card b{font-size:35px;line-height:1.08}
+    .ads-panel{position:absolute;padding:30px 32px;border:1px solid rgba(0,160,208,.36);background:rgba(10,15,18,.95);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+    .ads-panel-title{display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;color:var(--soft)}
+    .ads-panel-title span:last-child{color:var(--green)}
+    .performance-bars{display:grid;gap:22px;margin-top:32px}
+    .bar-label{display:flex;justify-content:space-between;margin-bottom:9px;font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--soft)}
+    .bar-track{height:22px;background:rgba(255,255,255,.075)}
+    .bar-fill{height:100%;background:linear-gradient(90deg,var(--cyan),#65d68a)}
+    .bar-row:nth-child(2) .bar-fill{background:linear-gradient(90deg,var(--red),#f07563)}
+    .bar-row:nth-child(3) .bar-fill{background:linear-gradient(90deg,#e8b94f,var(--red))}
+    .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:32px;border:1px solid var(--line)}
+    .metric{padding:17px 12px;border-right:1px solid var(--line)}
+    .metric:last-child{border-right:0}
+    .metric b{display:block;font-family:"IBM Plex Mono",monospace;font-size:20px;color:var(--cyan)}
+    .metric span{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+    .c5 .ads-panel{right:64px;top:610px;width:500px;height:455px}
+    .proof-card{position:absolute;padding:22px 24px;border-left:7px solid var(--red);background:rgba(255,255,255,.045)}
+    .proof-card b{display:block;font-family:"IBM Plex Mono",monospace;font-size:34px;color:var(--red)}
+    .proof-card span{display:block;margin-top:7px;color:var(--soft);font-size:16px;line-height:1.35}
+    .c5 .proof-card{left:64px;top:790px;width:410px;height:130px}
+    .channel-strip{position:absolute;display:flex;align-items:center;justify-content:center;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;color:var(--soft)}
+    .channel-strip i{width:58px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--red))}
+    .c5 .channel-strip{left:64px;right:64px;top:1102px}
+
+    /* Story adaptations */
+    .story .topbar{top:76px;left:72px;right:72px;font-size:17px}
+    .story .frame{inset:30px}
+    .story .copy-block{left:72px;right:72px;top:200px}
+    .story .eyebrow{font-size:18px}
+    .story .headline{margin-top:32px;font-size:86px;line-height:1.02}
+    .story .sub{max-width:850px;margin-top:32px;font-size:30px;line-height:1.45}
+    .story .cta{left:72px;right:72px;bottom:105px;height:130px;padding:0 40px}
+    .story .cta-copy b{font-size:28px}
+    .story .cta-copy span{font-size:19px}
+    .story .cta-arrow{font-size:50px}
+
+    .story.c1 .browser{left:72px;top:760px;width:880px;height:520px}
+    .story.c1 .phone{right:85px;top:1050px;width:285px;height:555px}
+    .story.c1 .signal-row{left:72px;right:400px;top:1335px}
+    .story.c1 .signal{min-height:135px;padding:28px 18px}
+    .story.c1 .signal b{font-size:20px}
+    .story.c1 .signal span{font-size:17px}
+
+    .story.c2 .service-rail{left:72px;top:770px;width:280px;gap:16px}
+    .story.c2 .service-item{min-height:145px;padding:30px 24px 24px 32px}
+    .story.c2 .service-item b{font-size:17px}
+    .story.c2 .service-item strong{font-size:26px}
+    .story.c2 .browser.main{left:385px;top:750px;width:620px;height:430px}
+    .story.c2 .tablet{left:360px;top:1170px;width:535px;height:300px}
+    .story.c2 .phone{right:70px;top:1120px;width:220px;height:420px}
+    .story.c2 .flow{left:72px;right:72px;top:1570px;font-size:18px;gap:25px}
+    .story.c2 .flow i{width:72px}
+
+    .story.c3 .copy-block{right:72px}
+    .story.c3 .headline{font-size:82px;max-width:920px}
+    .story.c3 .sub{font-size:29px;max-width:820px}
+    .story.c3 .globe{right:20px;top:660px;width:930px;height:930px;opacity:.95}
+    .story.c3 .stats{left:72px;right:72px;top:1390px;width:auto;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:rgba(8,9,10,.86)}
+    .story.c3 .stat{display:block;min-height:160px;padding:26px;border-right:1px solid var(--line);border-bottom:0}
+    .story.c3 .stat:last-child{border-right:0}
+    .story.c3 .stat b{display:block;font-size:48px}
+    .story.c3 .stat span{display:block;margin-top:13px;font-size:18px}
+    .story.c3 .capabilities{left:72px;right:72px;top:1575px}
+    .story.c3 .capability{padding:25px 12px;font-size:15px;background:rgba(8,9,10,.9)}
+
+    .story.c4 .copy-block{right:72px}
+    .story.c4 .headline{font-size:80px;max-width:930px}
+    .story.c4 .sub{font-size:29px;max-width:850px}
+    .story.c4 .offer-card{left:72px;top:660px;width:520px;height:160px;padding:26px 30px}
+    .story.c4 .offer-card b{font-size:46px}
+    .story.c4 .offer-card small{font-size:16px}
+    .story.c4 .brand-mark{right:72px;top:625px;width:225px;height:225px}
+    .story.c4 .browser.web-main{left:72px;top:870px;width:875px;height:490px}
+    .story.c4 .phone{right:76px;top:1060px;width:270px;height:500px}
+    .story.c4 .feature-strip{left:72px;right:72px;top:1565px;grid-template-columns:repeat(4,1fr)}
+    .story.c4 .feature{padding:22px 16px}
+    .story.c4 .feature b{font-size:16px}
+    .story.c4 .feature span{font-size:17px}
+
+    .story.c5 .headline{font-size:80px;max-width:940px}
+    .story.c5 .sub{font-size:28px;max-width:850px}
+    .story.c5 .partner-row{left:72px;top:660px;gap:16px}
+    .story.c5 .partner-badge{height:68px;padding:0 24px;font-size:17px}
+    .story.c5 .partner-badge .meta-logo{width:42px;height:28px}
+    .story.c5 .brand-mark{right:72px;top:625px;width:170px;height:170px}
+    .story.c5 .ads-panel{left:72px;right:72px;top:790px;width:auto;height:570px;padding:38px 42px}
+    .story.c5 .ads-panel-title{font-size:18px}
+    .story.c5 .performance-bars{gap:28px;margin-top:38px}
+    .story.c5 .bar-label{font-size:17px;margin-bottom:12px}
+    .story.c5 .bar-track{height:28px}
+    .story.c5 .metric-grid{margin-top:38px}
+    .story.c5 .metric{padding:22px 18px}
+    .story.c5 .metric b{font-size:26px}
+    .story.c5 .metric span{font-size:16px}
+    .story.c5 .offer-card{left:72px;top:1415px;width:455px;height:155px}
+    .story.c5 .offer-card b{font-size:38px}
+    .story.c5 .proof-card{left:auto;right:72px;top:1415px;width:455px;height:155px;padding:24px 26px}
+    .story.c5 .proof-card b{font-size:38px}
+    .story.c5 .proof-card span{font-size:17px}
+    .story.c5 .channel-strip{left:72px;right:72px;top:1610px;font-size:18px}
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <symbol id="google-partner-icon" viewBox="0 0 24 24">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </symbol>
+    </defs>
+  </svg>
+  <!-- 01 / Feed -->
+  <section class="creative feed c1" data-output="creative-01-conversion-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web</div><div class="count">01 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Ziyaret değil, talep</div>
+      <h1 class="headline">Web siteniz var.<br><span class="red">Peki müşteri getiriyor mu?</span></h1>
+      <p class="sub">Hızlı, bulunabilir ve ziyaretçiyi doğru aksiyona taşıyan web deneyimleri geliştiriyoruz.</p>
+    </div>
+    <div class="browser"><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil görünüm" /></div>
+    <div class="signal-row">
+      <div class="signal"><b>HIZ</b><span>Akıcı deneyim</span></div>
+      <div class="signal"><b>SEO</b><span>Doğru bulunurluk</span></div>
+      <div class="signal"><b>TALEP</b><span>Net aksiyon</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz web sitesi analizi isteyin</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 01 / Story -->
+  <section class="creative story c1" data-output="creative-01-conversion-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web</div><div class="count">01 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Ziyaret değil, talep</div>
+      <h1 class="headline">Web siteniz var.<br><span class="red">Peki müşteri getiriyor mu?</span></h1>
+      <p class="sub">Hızlı, bulunabilir ve ziyaretçiyi doğru aksiyona taşıyan web deneyimleri geliştiriyoruz.</p>
+    </div>
+    <div class="browser"><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil görünüm" /></div>
+    <div class="signal-row">
+      <div class="signal"><b>HIZ</b><span>Akıcı deneyim</span></div>
+      <div class="signal"><b>SEO</b><span>Doğru bulunurluk</span></div>
+      <div class="signal"><b>TALEP</b><span>Net aksiyon</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz web sitesi analizi isteyin</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 02 / Feed -->
+  <section class="creative feed c2" data-output="creative-02-digital-product-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Product</div><div class="count">02 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Tasarım + Kod + AI</div>
+      <h1 class="headline">Fikriniz hazır.<br><span class="blue">Dijital ürünü birlikte kuralım.</span></h1>
+      <p class="sub">Web, mobil ve AI tabanlı çözümleri tek ekip ve net bir ürün süreciyle hayata geçiriyoruz.</p>
+    </div>
+    <div class="service-rail">
+      <div class="service-item"><b>01</b><strong>Web & Mobil</strong></div>
+      <div class="service-item"><b>02</b><strong>AI & Otomasyon</strong></div>
+      <div class="service-item"><b>03</b><strong>Ürün Tasarımı</strong></div>
+    </div>
+    <div class="browser main"><img src="../../../public/assets/previews/desktop/fur-crm.webp" alt="FurCRM web uygulaması" /></div>
+    <div class="tablet"><img src="../../../public/assets/previews/desktop/mindloop.webp" alt="Mindloop tablet görünümü" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/securify.webp" alt="Securify mobil görünüm" /></div>
+    <div class="flow"><span>FİKİR</span><i></i><span>TASARIM</span><i></i><span>KOD</span><i></i><span>YAYIN</span></div>
+    <div class="cta"><div class="cta-copy"><b>Projenizi anlatın, yol haritasını çıkaralım</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 02 / Story -->
+  <section class="creative story c2" data-output="creative-02-digital-product-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Product</div><div class="count">02 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Tasarım + Kod + AI</div>
+      <h1 class="headline">Fikriniz hazır.<br><span class="blue">Dijital ürünü birlikte kuralım.</span></h1>
+      <p class="sub">Web, mobil ve AI tabanlı çözümleri tek ekip ve net bir ürün süreciyle hayata geçiriyoruz.</p>
+    </div>
+    <div class="service-rail">
+      <div class="service-item"><b>01</b><strong>Web & Mobil</strong></div>
+      <div class="service-item"><b>02</b><strong>AI & Otomasyon</strong></div>
+      <div class="service-item"><b>03</b><strong>Ürün Tasarımı</strong></div>
+    </div>
+    <div class="browser main"><img src="../../../public/assets/previews/desktop/fur-crm.webp" alt="FurCRM web uygulaması" /></div>
+    <div class="tablet"><img src="../../../public/assets/previews/desktop/mindloop.webp" alt="Mindloop tablet görünümü" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/securify.webp" alt="Securify mobil görünüm" /></div>
+    <div class="flow"><span>FİKİR</span><i></i><span>TASARIM</span><i></i><span>KOD</span><i></i><span>YAYIN</span></div>
+    <div class="cta"><div class="cta-copy"><b>Projenizi anlatın, yol haritasını çıkaralım</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 03 / Feed -->
+  <section class="creative feed c3" data-output="creative-03-consultation-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Studio</div><div class="count">03 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Bağımsız dijital stüdyo</div>
+      <h1 class="headline">Dijital projenizi<br><span class="red">doğru ekiple büyütün.</span></h1>
+      <p class="sub">Tasarım, yazılım ve büyüme altyapısını tek çalışan sistemde buluşturuyoruz.</p>
+    </div>
+    <img class="globe" src="../../../public/logo.webp" alt="Piton Studios dünya ve piton logosu" />
+    <div class="stats">
+      <div class="stat"><b>40+</b><span>Tamamlanan proje</span></div>
+      <div class="stat"><b>5+</b><span>Yıllık deneyim</span></div>
+      <div class="stat"><b>24h</b><span>İçinde ilk yanıt</span></div>
+    </div>
+    <div class="capabilities"><div class="capability">WEB</div><div class="capability">MOBİL</div><div class="capability">AI</div><div class="capability">OTOMASYON</div></div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz proje görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 03 / Story -->
+  <section class="creative story c3" data-output="creative-03-consultation-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Studio</div><div class="count">03 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Bağımsız dijital stüdyo</div>
+      <h1 class="headline">Dijital projenizi<br><span class="red">doğru ekiple büyütün.</span></h1>
+      <p class="sub">Tasarım, yazılım ve büyüme altyapısını tek çalışan sistemde buluşturuyoruz.</p>
+    </div>
+    <img class="globe" src="../../../public/logo.webp" alt="Piton Studios dünya ve piton logosu" />
+    <div class="stats">
+      <div class="stat"><b>40+</b><span>Tamamlanan proje</span></div>
+      <div class="stat"><b>5+</b><span>Yıllık deneyim</span></div>
+      <div class="stat"><b>24h</b><span>İçinde ilk yanıt</span></div>
+    </div>
+    <div class="capabilities"><div class="capability">WEB</div><div class="capability">MOBİL</div><div class="capability">AI</div><div class="capability">OTOMASYON</div></div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz proje görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 04 / Feed -->
+  <section class="creative feed c4" data-output="creative-04-website-package-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web Package</div><div class="count">04A / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Kurumsal web sitesi paketi</div>
+      <h1 class="headline">Markanız için<br><span class="red">çalışan bir web sitesi.</span></h1>
+      <p class="sub">Özel tasarım, mobil uyum, temel SEO ve dönüşüm odaklı iletişim akışı tek kapsamda.</p>
+    </div>
+    <div class="offer-card"><span>Başlangıç fiyatı</span><b>10.000 TL’den</b><small>Başlayan fiyatlarla · Kapsama göre değişir.</small></div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="browser web-main"><img src="../../../public/assets/previews/desktop/sammys-hotel.webp" alt="Sammys Hotel kurumsal web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/sammys-hotel.webp" alt="Sammys Hotel mobil görünüm" /></div>
+    <div class="feature-strip">
+      <div class="feature"><b>01</b><span>Özel tasarım</span></div>
+      <div class="feature"><b>02</b><span>Mobil uyum</span></div>
+      <div class="feature"><b>03</b><span>Teknik SEO</span></div>
+      <div class="feature"><b>04</b><span>Form + WhatsApp</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz kapsam görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 04 / Story -->
+  <section class="creative story c4" data-output="creative-04-website-package-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web Package</div><div class="count">04A / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Kurumsal web sitesi paketi</div>
+      <h1 class="headline">Markanız için<br><span class="red">çalışan bir web sitesi.</span></h1>
+      <p class="sub">Özel tasarım, mobil uyum, temel SEO ve dönüşüm odaklı iletişim akışı tek kapsamda.</p>
+    </div>
+    <div class="offer-card"><span>Başlangıç fiyatı</span><b>10.000 TL’den</b><small>Başlayan fiyatlarla · Kapsama göre değişir.</small></div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="browser web-main"><img src="../../../public/assets/previews/desktop/sammys-hotel.webp" alt="Sammys Hotel kurumsal web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/sammys-hotel.webp" alt="Sammys Hotel mobil görünüm" /></div>
+    <div class="feature-strip">
+      <div class="feature"><b>01</b><span>Özel tasarım</span></div>
+      <div class="feature"><b>02</b><span>Mobil uyum</span></div>
+      <div class="feature"><b>03</b><span>Teknik SEO</span></div>
+      <div class="feature"><b>04</b><span>Form + WhatsApp</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz kapsam görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 04B / Feed - Nexos -->
+  <section class="creative feed c4" data-output="creative-04b-website-package-nexos-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web Package</div><div class="count">04B / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Kurumsal web sitesi paketi</div>
+      <h1 class="headline">Markanız için<br><span class="red">çalışan bir web sitesi.</span></h1>
+      <p class="sub">Özel tasarım, mobil uyum, temel SEO ve dönüşüm odaklı iletişim akışı tek kapsamda.</p>
+    </div>
+    <div class="offer-card"><span>Başlangıç fiyatı</span><b>10.000 TL’den</b><small>Başlayan fiyatlarla · Kapsama göre değişir.</small></div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="browser web-main"><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment kurumsal web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil görünüm" /></div>
+    <div class="feature-strip">
+      <div class="feature"><b>01</b><span>Özel tasarım</span></div>
+      <div class="feature"><b>02</b><span>Mobil uyum</span></div>
+      <div class="feature"><b>03</b><span>Teknik SEO</span></div>
+      <div class="feature"><b>04</b><span>Form + WhatsApp</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz kapsam görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 04B / Story - Nexos -->
+  <section class="creative story c4" data-output="creative-04b-website-package-nexos-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Web Package</div><div class="count">04B / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Kurumsal web sitesi paketi</div>
+      <h1 class="headline">Markanız için<br><span class="red">çalışan bir web sitesi.</span></h1>
+      <p class="sub">Özel tasarım, mobil uyum, temel SEO ve dönüşüm odaklı iletişim akışı tek kapsamda.</p>
+    </div>
+    <div class="offer-card"><span>Başlangıç fiyatı</span><b>10.000 TL’den</b><small>Başlayan fiyatlarla · Kapsama göre değişir.</small></div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="browser web-main"><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment kurumsal web sitesi" /></div>
+    <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil görünüm" /></div>
+    <div class="feature-strip">
+      <div class="feature"><b>01</b><span>Özel tasarım</span></div>
+      <div class="feature"><b>02</b><span>Mobil uyum</span></div>
+      <div class="feature"><b>03</b><span>Teknik SEO</span></div>
+      <div class="feature"><b>04</b><span>Form + WhatsApp</span></div>
+    </div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz kapsam görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 05 / Feed -->
+  <section class="creative feed c5" data-output="creative-05-ads-management-feed">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Performance</div><div class="count">05 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Google Ads + Meta Ads</div>
+      <h1 class="headline">Reklam bütçeniz<br><span class="red">doğru müşteriye ulaşsın.</span></h1>
+      <p class="sub">Dönüşüm takibi, kampanya yönetimi, kreatif testleri ve anlaşılır raporlama.</p>
+    </div>
+    <div class="partner-row">
+      <div class="partner-badge"><svg width="22" height="22" aria-hidden="true"><use href="#google-partner-icon"/></svg><span>Google Partner</span></div>
+      <div class="partner-badge"><img class="meta-logo" src="../../../public/assets/brand/meta-platforms-logo.svg" alt="Meta" /><span>Meta Partner</span></div>
+    </div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="offer-card"><span>Aylık yönetim</span><b>7.000 TL’den</b><small>Başlayan fiyatlarla · Reklam bütçesi hariçtir.</small></div>
+    <div class="proof-card"><b>%30 büyüme</b><span>Bir müşteri projesinde Google ve Meta reklamlarıyla elde edilen sonuç.</span></div>
+    <div class="ads-panel">
+      <div class="ads-panel-title"><span>KAMPANYA PERFORMANSI</span><span>● CANLI</span></div>
+      <div class="performance-bars">
+        <div class="bar-row"><div class="bar-label"><span>Doğru kitle</span><span>%88</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Kreatif eşleşmesi</span><span>%76</span></div><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Dönüşüm sinyali</span><span>%67</span></div><div class="bar-track"><div class="bar-fill" style="width:67%"></div></div></div>
+      </div>
+      <div class="metric-grid"><div class="metric"><b>01</b><span>Ölçüm</span></div><div class="metric"><b>02</b><span>Optimizasyon</span></div><div class="metric"><b>03</b><span>Raporlama</span></div></div>
+    </div>
+    <div class="channel-strip"><span>GOOGLE ADS</span><i></i><span>META ADS</span><i></i><span>DÖNÜŞÜM TAKİBİ</span></div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz reklam hesabı analizi isteyin</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+
+  <!-- 05 / Story -->
+  <section class="creative story c5" data-output="creative-05-ads-management-story">
+    <div class="wash"></div><div class="frame"></div>
+    <header class="topbar"><div class="brand">Piton Studios / Performance</div><div class="count">05 / 05</div></header>
+    <div class="copy-block">
+      <div class="eyebrow">Google Ads + Meta Ads</div>
+      <h1 class="headline">Reklam bütçeniz<br><span class="red">doğru müşteriye ulaşsın.</span></h1>
+      <p class="sub">Dönüşüm takibi, kampanya yönetimi, kreatif testleri ve anlaşılır raporlama.</p>
+    </div>
+    <div class="partner-row">
+      <div class="partner-badge"><svg width="26" height="26" aria-hidden="true"><use href="#google-partner-icon"/></svg><span>Google Partner</span></div>
+      <div class="partner-badge"><img class="meta-logo" src="../../../public/assets/brand/meta-platforms-logo.svg" alt="Meta" /><span>Meta Partner</span></div>
+    </div>
+    <img class="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <div class="ads-panel">
+      <div class="ads-panel-title"><span>KAMPANYA PERFORMANSI</span><span>● CANLI</span></div>
+      <div class="performance-bars">
+        <div class="bar-row"><div class="bar-label"><span>Doğru kitle</span><span>%88</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Kreatif eşleşmesi</span><span>%76</span></div><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Dönüşüm sinyali</span><span>%67</span></div><div class="bar-track"><div class="bar-fill" style="width:67%"></div></div></div>
+      </div>
+      <div class="metric-grid"><div class="metric"><b>01</b><span>Ölçüm</span></div><div class="metric"><b>02</b><span>Optimizasyon</span></div><div class="metric"><b>03</b><span>Raporlama</span></div></div>
+    </div>
+    <div class="offer-card"><span>Aylık yönetim</span><b>7.000 TL’den</b><small>Başlayan fiyatlarla · Reklam bütçesi hariçtir.</small></div>
+    <div class="proof-card"><b>%30 büyüme</b><span>Bir müşteri projesinde Google ve Meta reklamlarıyla elde edilen sonuç.</span></div>
+    <div class="channel-strip"><span>GOOGLE ADS</span><i></i><span>META ADS</span><i></i><span>DÖNÜŞÜM TAKİBİ</span></div>
+    <div class="cta"><div class="cta-copy"><b>Ücretsiz reklam hesabı analizi isteyin</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow">→</div></div>
+  </section>
+</body>
+</html>
