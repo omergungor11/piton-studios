@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>Piton Studios - Animated Website Ad</title>
+  <style>
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/28868e710e86be81.p.0rx81dn62y51_.woff2") format("woff2")}
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2") format("woff2")}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/2e95a7d252b9825a.p.0dgq8lqrj3gc_.woff2") format("woff2")}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/23b7a97ae3b5c134.p.0o14nraug8u5s.woff2") format("woff2")}
+
+    :root{
+      --bg:#08090a;
+      --ink:#f2efe9;
+      --soft:#c7c5bf;
+      --muted:#777a7b;
+      --line:rgba(242,239,233,.16);
+      --red:#d33a3e;
+      --cyan:#00a0d0;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#08090a;color:var(--ink);font-family:"Space Grotesk",sans-serif}
+    .video{position:relative;width:1080px;height:1920px;overflow:hidden;background:#08090a;isolation:isolate}
+    .grid{position:absolute;inset:0;z-index:-5;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px}
+    .wash{position:absolute;inset:0;z-index:-4;background:linear-gradient(135deg,rgba(211,58,62,.12),transparent 34%,rgba(0,160,208,.08) 76%,transparent)}
+    .edge-light{position:absolute;z-index:-3;left:-220px;bottom:-280px;width:1500px;height:520px;background:linear-gradient(90deg,rgba(211,58,62,.16),rgba(0,160,208,.08),transparent);filter:blur(70px);transform:rotate(-4deg)}
+    .scanline{position:absolute;z-index:-2;left:30px;right:30px;height:2px;background:linear-gradient(90deg,transparent,rgba(0,160,208,.4),rgba(211,58,62,.35),transparent);opacity:.38}
+    .frame{position:absolute;inset:30px;border:1px solid rgba(255,255,255,.1);border-radius:32px;pointer-events:none}
+    .topbar{position:absolute;top:76px;left:72px;right:72px;display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:17px;font-weight:600;text-transform:uppercase;color:var(--soft)}
+    .brand{display:flex;align-items:center;gap:38px}
+    .brand::before{content:"";width:10px;height:10px;background:var(--red);box-shadow:18px 0 0 rgba(211,58,62,.38),36px 0 0 rgba(0,160,208,.8)}
+    .count{color:var(--cyan)}
+    .copy-block{position:absolute;left:72px;right:72px;top:200px}
+    .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:18px;font-weight:600;text-transform:uppercase;color:var(--red)}
+    .headline{margin:32px 0 0;font-size:80px;font-weight:650;line-height:1.02;letter-spacing:0}
+    .headline span{display:block}
+    .headline .red{color:var(--red)}
+    .sub{max-width:850px;margin:32px 0 0;color:var(--soft);font-size:29px;line-height:1.45}
+    .offer-card{position:absolute;left:72px;top:660px;width:520px;height:160px;padding:26px 30px;border:1px solid rgba(211,58,62,.62);border-radius:24px;background:linear-gradient(145deg,rgba(211,58,62,.21),rgba(13,17,19,.98));box-shadow:0 26px 70px rgba(0,0,0,.38);overflow:hidden}
+    .offer-card span{display:block;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;text-transform:uppercase;color:var(--red)}
+    .offer-card b{display:block;margin-top:9px;font-size:46px;line-height:1;color:var(--ink)}
+    .offer-card small{display:block;margin-top:10px;color:var(--muted);font-size:16px}
+    .brand-mark{position:absolute;right:72px;top:625px;width:225px;height:225px;object-fit:contain;filter:drop-shadow(0 22px 48px rgba(0,0,0,.58));transform-origin:center}
+    .browser{position:absolute;left:72px;top:870px;width:875px;height:490px;border:1px solid rgba(255,255,255,.24);border-radius:28px;background:#111;box-shadow:0 34px 85px rgba(0,0,0,.58);overflow:hidden}
+    .browser-bar{height:40px;display:flex;align-items:center;padding-left:18px;background:#151719;border-bottom:1px solid rgba(255,255,255,.13)}
+    .browser-bar i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:16px 0 0 #e7b84c,32px 0 0 #4fbd79}
+    .browser-bar span{margin-left:auto;margin-right:20px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
+    .browser-viewport{position:relative;height:450px;overflow:hidden;background:#0d1113}
+    .browser-viewport img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transform-origin:center top}
+    .device-shine{position:absolute;z-index:3;left:-30%;top:0;width:24%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:skewX(-16deg);pointer-events:none}
+    .phone{position:absolute;z-index:4;right:76px;top:1060px;width:270px;height:500px;border:8px solid #24272a;border-radius:44px;background:#111;box-shadow:0 34px 82px rgba(0,0,0,.62);overflow:hidden;transform-origin:center bottom}
+    .phone::before{content:"";position:absolute;z-index:2;left:50%;top:7px;width:84px;height:17px;transform:translateX(-50%);border-radius:0 0 11px 11px;background:#24272a}
+    .phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transform-origin:center top}
+    .feature-strip{position:absolute;left:72px;right:72px;top:1565px;height:95px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;background:rgba(14,18,20,.96);box-shadow:0 20px 55px rgba(0,0,0,.32);overflow:hidden}
+    .feature{padding:20px 16px;border-right:1px solid var(--line)}
+    .feature:last-child{border-right:0}
+    .feature b{display:block;font-family:"IBM Plex Mono",monospace;font-size:16px;color:var(--cyan)}
+    .feature span{display:block;margin-top:7px;color:var(--soft);font-size:17px}
+    .cta{position:absolute;left:72px;right:72px;bottom:105px;height:130px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border:1px solid rgba(255,255,255,.16);border-radius:22px;background:var(--red);color:#fff;box-shadow:0 24px 65px rgba(211,58,62,.24);overflow:hidden}
+    .cta-copy b{display:block;font-size:28px;font-weight:650}
+    .cta-copy span{display:block;margin-top:7px;font-family:"IBM Plex Mono",monospace;font-size:19px;font-weight:600;color:rgba(255,255,255,.9)}
+    .cta-arrow{font-size:50px;font-weight:400}
+  </style>
+</head>
+<body>
+  <main class="video" id="video">
+    <div class="grid"></div><div class="wash"></div><div class="edge-light"></div><div class="scanline"></div><div class="frame"></div>
+    <header class="topbar" id="topbar"><div class="brand">Piton Studios / Web Package</div><div class="count">Meta Ads / 12s</div></header>
+    <section class="copy-block">
+      <div class="eyebrow" id="eyebrow">Kurumsal web sitesi paketi</div>
+      <h1 class="headline"><span id="headline-a">Markanız için</span><span class="red" id="headline-b">çalışan bir web sitesi.</span></h1>
+      <p class="sub" id="sub">Özel tasarım, mobil uyum, temel SEO ve dönüşüm odaklı iletişim akışı tek kapsamda.</p>
+    </section>
+    <div class="offer-card" id="offer"><span>Başlangıç fiyatı</span><b>10.000 TL’den</b><small>Başlayan fiyatlarla · Kapsama göre değişir.</small></div>
+    <img class="brand-mark" id="brand-mark" src="../../../public/logo.webp" alt="Piton Studios logosu" />
+    <section class="browser" id="browser">
+      <div class="browser-bar"><i></i><span>nexos / property experience</span></div>
+      <div class="browser-viewport"><img id="desktop-image" src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment masaüstü görünüm" /></div>
+      <div class="device-shine" id="device-shine"></div>
+    </section>
+    <div class="phone" id="phone"><img id="phone-image" src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil görünüm" /></div>
+    <div class="feature-strip" id="features">
+      <div class="feature" id="feature-a"><b>01</b><span>Özel tasarım</span></div>
+      <div class="feature" id="feature-b"><b>02</b><span>Mobil uyum</span></div>
+      <div class="feature" id="feature-c"><b>03</b><span>Teknik SEO</span></div>
+      <div class="feature" id="feature-d"><b>04</b><span>Form + WhatsApp</span></div>
+    </div>
+    <div class="cta" id="cta"><div class="cta-copy"><b>Ücretsiz kapsam görüşmesi planlayın</b><span>pitonstudios.com · hi@pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-arrow" id="cta-arrow">→</div></div>
+  </main>
+  <script>
+    const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+    const easeOut = (value) => 1 - Math.pow(1 - clamp(value), 3);
+    const easeInOut = (value) => {
+      const x = clamp(value);
+      return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+    };
+    const byId = (id) => document.getElementById(id);
+
+    function enter(id, time, start, duration, options = {}) {
+      const element = byId(id);
+      const progress = easeOut((time - start) / duration);
+      const x = (options.x || 0) * (1 - progress);
+      const y = (options.y || 0) * (1 - progress);
+      const fromScale = options.scale ?? 0.98;
+      const scale = fromScale + (1 - fromScale) * progress;
+      element.style.opacity = progress;
+      element.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+      return progress;
+    }
+
+    window.renderAt = (time) => {
+      enter("topbar", time, 0.05, 0.55, { y: -18, scale: 1 });
+      enter("eyebrow", time, 0.25, 0.65, { y: 22, scale: 1 });
+      enter("headline-a", time, 0.5, 0.8, { y: 44, scale: 0.985 });
+      enter("headline-b", time, 0.9, 0.85, { y: 48, scale: 0.985 });
+      enter("sub", time, 1.45, 0.75, { y: 24, scale: 1 });
+
+      const logoProgress = enter("brand-mark", time, 1.9, 0.9, { x: 38, scale: 0.8 });
+      const logoFloat = logoProgress * Math.sin(time * 1.8) * 5;
+      const logoRotation = -8 + logoProgress * 8 + logoProgress * Math.sin(time * 0.85) * 1.8;
+      byId("brand-mark").style.transform = `translate3d(0, ${logoFloat}px, 0) scale(${0.8 + logoProgress * 0.2}) rotate(${logoRotation}deg)`;
+
+      const browserProgress = enter("browser", time, 2.15, 1.05, { y: 82, scale: 0.945 });
+      const desktopPan = easeInOut((time - 3.0) / 4.8);
+      byId("desktop-image").style.transform = `translateY(${-15 * desktopPan}px) scale(${1.07 - desktopPan * 0.025})`;
+      const shineProgress = clamp((time - 2.8) / 1.4);
+      byId("device-shine").style.transform = `translateX(${shineProgress * 600}px) skewX(-16deg)`;
+
+      const phoneProgress = easeOut((time - 3.0) / 1.0);
+      byId("phone").style.opacity = phoneProgress;
+      byId("phone").style.transform = `translate3d(${92 * (1 - phoneProgress)}px, ${34 * (1 - phoneProgress)}px, 0) scale(${0.9 + 0.1 * phoneProgress}) rotate(${6 * (1 - phoneProgress)}deg)`;
+      const phonePan = easeInOut((time - 4.0) / 4.0);
+      byId("phone-image").style.transform = `translateY(${-10 * phonePan}px) scale(${1.05 - phonePan * 0.015})`;
+
+      enter("offer", time, 4.15, 0.85, { x: -42, scale: 0.97 });
+      enter("features", time, 5.0, 0.75, { y: 30, scale: 0.985 });
+      enter("feature-a", time, 5.35, 0.45, { y: 12, scale: 1 });
+      enter("feature-b", time, 5.6, 0.45, { y: 12, scale: 1 });
+      enter("feature-c", time, 5.85, 0.45, { y: 12, scale: 1 });
+      enter("feature-d", time, 6.1, 0.45, { y: 12, scale: 1 });
+      const ctaProgress = enter("cta", time, 7.5, 0.85, { y: 54, scale: 0.985 });
+
+      const arrowPulse = ctaProgress * Math.max(0, Math.sin((time - 8.1) * 3.2)) * 10;
+      byId("cta-arrow").style.transform = `translateX(${arrowPulse}px)`;
+      document.querySelector(".scanline").style.transform = `translateY(${(time * 125) % 1920}px)`;
+      document.querySelector(".edge-light").style.opacity = 0.72 + Math.sin(time * 0.7) * 0.08;
+      void browserProgress;
+    };
+
+    window.renderAt(0);
+  </script>
+</body>
+</html>
