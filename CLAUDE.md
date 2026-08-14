@@ -25,7 +25,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 ## Mevcut Durum
 
-**Progress**: 33/33 task (%100) — Phase 5 (Icerik Uretimi) 2026-08-08'de tamamlandi.
+**Progress**: 50/50 task (%100) — son is TASK-051 (SSS sayfasi), 2026-08-14.
 
 > `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
 > (Supabase kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;

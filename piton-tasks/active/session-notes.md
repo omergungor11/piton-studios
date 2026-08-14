@@ -404,3 +404,95 @@ Icerik uretimi sessioni. Blog altyapisi grafik/TOC/SSS destegiyle genisletildi,
   farkliysa maliyet yazisindaki bantlar guncellenmeli
 - Ic link dogrulamasi icin pratik yontem: MDX'lerden `/xx/...` linklerini cikarip
   `.next/server/app/sitemap.xml.body` ile `comm -23` karsilastirmasi
+
+---
+
+## 2026-08-14 — Session 11
+
+Tek konu: **kapsamli SSS sayfasi** (TASK-051). Yaninda iki kucuk UI duzeltmesi.
+
+### Completed
+
+- [x] **TASK-051 — SSS sayfasi**: `/sss` · `/en/faq` · `/ru/faq`
+      12 kategori, **75 soru x 3 dil = 225 soru-cevap**. Plan: `piton-plans/faq-page-plan.md`
+- [x] `src/lib/faq.ts` — kanonik iskelet: kategori sirasi, **kalici soru id'leri**,
+      ilgili hizmet/blog baglantilari. Metinler `messages/*.json` -> `faqItems`
+- [x] `src/lib/faq-content.ts` — eksik cevirili soruyu sessizce atlayan okuyucu;
+      JSON-LD ve llms.txt ayni kaynagi kullaniyor
+- [x] `src/lib/seo.ts`: `webPageJsonLd()` eklendi; `faqJsonLd()` geriye uyumlu
+      sekilde `@id` + `inLanguage` aliyor (12 hizmet sayfasindaki cagrilar bozulmadi)
+- [x] `/llms.txt` (llmstxt.org bicimi) — 12 hizmet, 75 SSS sorusu anchor'iyla,
+      blog yazilari, iletisim
+- [x] `robots.ts` — 14 AI crawler icin acik `allow` (GPTBot, OAI-SearchBot,
+      ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended vd.)
+- [x] `check-translations.ts` artik `faqItems`'i da dogruluyor — 426 kontrol, 0 sorun
+- [x] Nav + footer'a SSS linki — `chrome.tsx` **ve** `page-shell.tsx` ikisine birden
+- [x] `.bottom-chrome` grid duzeltmesi: `auto 1fr auto` -> `1fr auto 1fr`
+- [x] Meta partner ikonu gercek Meta "infinity" markasiyla degistirildi
+
+### GEO/LLM kurallari — sayfanin varlik sebebi, bozmayin
+
+- **Cevap-once**: her cevabin ilk paragrafi (`a`) soruyu **40-60 kelimede dogrudan**
+  yanitlar. LLM'in alintiladigi pasaj bu. "Duruma gore degisir" girisi yasak
+- **Native `<details>`**: cevaplar akordeon **kapaliyken de DOM'da**. Kosullu render
+  (`{open && ...}`) yasak — JS kapaliyken de 75 cevabin tamami gorunur
+- **Kalici anchor** (`#faq-{id}`): id'ler degismez, disaridan tek soruya atif yapilabilir
+- Arama filtresi eslesmeyeni **DOM'dan silmez**, `hidden` verir
+- **Kendi kendine yeten cevaplar**: "yukarida anlattigimiz gibi" tarzi baglam
+  bagimliligi yok — LLM pasaji izole alintiliyor
+
+### Nasil uretildi
+
+Ana oturum plani + iskeleti yazdi, icerik 6 paralel agent'a dagitildi (dizin
+izolasyonuyla): altyapi 1 agent, TR icerik 2, EN cevirisi 2, RU cevirisi 2.
+Icerik agent'lari `src/messages/*.json`'a **dogrudan yazmadi** — scratchpad'e JSON
+uretti, ana oturum `faq.ts` sirasina gore merge etti. Cakisma olmadi.
+
+### Dogrulama
+
+- `typecheck` temiz · `lint` 0 error (18 onceden var olan warning)
+- `build` basarili: statik sayfa **506 -> 514** (3 SSS + 3 OG + llms.txt)
+- `content:check`: **426 kontrol, 0 sorun** (tr/en/ru faqItems 75/75)
+- Render edilen HTML: 75 `<details>`, hepsi **kapali** (`open` attribute yok),
+  75 cevap yine de DOM'da. 1 `h1` / 12 `h2` / 75 `h3`. 87 benzersiz `faq-*` anchor
+- JSON-LD 4 blok; FAQPage'de 75 soru, **bos/kisa cevap 0**. hreflang 3 dil + `x-default`
+
+### Yarim kalan yok
+
+Session'da baslanip bitirilmemis is yok.
+
+### Pending — kullanici karari bekliyor
+
+- [ ] `robots.ts`'te **`CCBot` ve `Bytespider`** de izinli. Bunlar cevap motoru degil,
+      egitim verisi toplayicisi — GEO gorunurlugune katkisi yok. Istenmiyorsa cikarilir
+- [ ] **Anasayfada onceden var olan hata** (bu isin parcasi degil, `HEAD`'de de vardi):
+      `workScene.heading` = `"Öne Çıkan <em>Projeler</em>"` next-intl'e rich-text
+      handler'i verilmeden cagriliyor, konsola `FORMATTING_ERROR` basiyor
+
+### Pending — kullanici tarafinda (onceki session'lardan devam)
+
+- [ ] **`NEXT_PUBLIC_SITE_URL`** Vercel'e eklenmeli — yoksa SSS sayfasinin da
+      canonical / hreflang / JSON-LD `@id` / llms.txt URL'leri deploy adresinden uretilir
+- [ ] **`RESEND_API_KEY`** — Resend hesabi `pitonstudios@gmail.com` ile acilmali
+- [ ] Proje tarihleri duzeltilecek; avie-global Saiber atifi teyit bekliyor
+
+### Next Session
+
+- [ ] Deploy sonrasi `/sss`, `/en/faq`, `/ru/faq` ve `/llms.txt` canli dogrula
+- [ ] Search Console'a guncel sitemap gonder, SSS sayfasinin indexlenmesini izle
+- [ ] Rich Results Test ile FAQPage yapilandirilmis verisini dogrula
+- [ ] Lighthouse audit — Sprint 1'den beri olculmedi, SSS sayfasi da yeni
+
+### Notes / Dikkat
+
+- **Soru id'leri kalici anchor'dir.** Soru silinmedikce `faq.ts`'teki `id` degistirilmez —
+  LLM'ler ve harici siteler `#faq-{id}` adresine atif yapiyor
+- **Yeni soru eklerken**: `faq.ts`'e girdi + **3 dilde** `faqItems.<id>` + `pnpm content:check`
+- **Fiyat bantlari SSS'te de var.** Fiyat degisirse artik 5 blog yazisi x 3 dil'e ek
+  olarak `faqItems`'taki `pricing` ve `ecommerce` kategorileri de guncellenmeli
+  (TR TL, en/ru euro; kur 1 EUR = 45 TL)
+- **Nav hala iki yerde** — `chrome.tsx` + `page-shell.tsx`. Ayrica `page-shell.tsx`
+  nav etiketlerini `nav` degil **`common`** namespace'inden okuyor; yeni link eklerken
+  her iki namespace'e de etiket gerekebiliyor
+- Sosyal medya uretim dosyalari (`piton-docs/social-production/`, `render-*.cjs`)
+  bu oturumun isi degildi; karismasin diye **ayri commit'e** alindi (`1b7f299`)
