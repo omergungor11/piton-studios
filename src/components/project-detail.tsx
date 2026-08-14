@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { imageUrl } from '@/lib/media';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 import ProjectPlaceholder from '@/components/project-placeholder';
@@ -42,7 +41,6 @@ export default function ProjectDetail({ project }: Props) {
   const year         = project.year;
   const role         = project.role;
   const tags         = project.tags;
-  const image        = imageUrl(project.image);
   const client       = project.type === 'work' ? project.client : project.client;
   const kind         = project.type === 'work' ? project.kind : undefined;
   const scope        = project.type === 'work' ? project.scope : undefined;
@@ -55,9 +53,10 @@ export default function ProjectDetail({ project }: Props) {
 
   const [view, setView] = useState<'desktop' | 'mobile'>('desktop');
 
+  // Yalnizca hasPreviews dalinda okunuyor; onizleme yoksa ProjectPlaceholder ciziliyor.
   const heroSrc = hasPreviews
     ? (view === 'mobile' && hasMobile ? previews!.mobile! : previews!.desktop!)
-    : image;
+    : '';
 
   const translationNs = project.type === 'work' ? tw : ts;
   const title   = translationNs.has(`${slug}.title`)   ? translationNs(`${slug}.title`)   : project.title;
