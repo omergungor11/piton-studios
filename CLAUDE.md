@@ -49,6 +49,18 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   (`src/components/mdx/mdx-components.tsx`).
   > MDXRemote'ta `blockJS: false` **zorunlu** — varsayilan `true`, MDX icindeki tum JS
   > ifadelerini siler ve component prop'lari `undefined` gelir
+- **SSS sayfasi** (2026-08-14): `/sss` · `/en/faq` · `/ru/faq` — 12 kategori, **75 soru × 3 dil**.
+  Yapi `src/lib/faq.ts` (kategoriler + kalici soru id'leri + ilgili hizmet/blog baglantilari),
+  metinler `messages/*.json` → `faqItems`. Plan: `piton-plans/faq-page-plan.md`
+  > **Soru id'leri kalici anchor'dir** (`#faq-{id}`) — soru silinmedikce id degistirilmez.
+  > Yeni soru eklerken: `faq.ts`'e girdi + 3 dilde `faqItems.<id>` + `pnpm content:check`.
+  >
+  > **GEO kurallari** (bozmayin): cevabin ilk paragrafi (`a`) soruyu 40-60 kelimede
+  > dogrudan yanitlar; cevaplar native `<details>` icinde **kapaliyken de DOM'da** durur
+  > (kosullu render yasak); arama eslesmeyeni silmez, `hidden` verir.
+  >
+  > JSON-LD: FAQPage + WebPage(`speakable`) + BreadcrumbList + Organization.
+  > `/llms.txt` (llmstxt.org bicimi) ve `robots.ts`'teki 14 AI crawler izni de bu isin parcasi.
 - **Ceviriler**: 210/210 eksiksiz (works 49, stories 6, servicesList 15 × 3 dil).
   `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
 - **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.

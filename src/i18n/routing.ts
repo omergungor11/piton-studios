@@ -41,6 +41,11 @@ export const routing = defineRouting({
       en: '/blog/tag/[tag]',
       ru: '/blog/tag/[tag]',
     },
+    '/faq': {
+      tr: '/sss',
+      en: '/faq',
+      ru: '/faq',
+    },
     '/about': {
       tr: '/hakkinda',
       en: '/about',

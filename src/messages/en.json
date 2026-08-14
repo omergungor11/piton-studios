@@ -23,6 +23,10 @@
     "contact": {
       "title": "Contact",
       "description": "Let's talk about your project. Get in touch with Piton Studios — we usually reply within 24 hours."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton Studios."
     }
   },
   "nav": {
@@ -36,7 +40,8 @@
     "gallery": "Gallery",
     "home": "Home",
     "contactCta": "Get in Touch",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "FAQ"
   },
   "blog": {
     "metaTitle": "Blog",
@@ -551,7 +556,8 @@
     "gallery": "Gallery",
     "contact": "Contact",
     "about": "About",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "FAQ"
   },
   "works": {
     "velis-ltd": {
@@ -2267,6 +2273,757 @@
         "Clean typography, fluid animation and responsive layout were used to create a confident first impression."
       ],
       "role": "Design / Development"
+    }
+  },
+  "faqPage": {
+    "title": "FAQ",
+    "subtitle": "Frequently Asked Questions",
+    "lead": "Pricing, timelines, technology, ownership and support — direct answers to the 75 questions we hear most before a project starts. Not here? Just ask.",
+    "updatedLabel": "Last updated",
+    "countLabel": "{count} questions",
+    "searchPlaceholder": "Search questions — e.g. \"cost\", \"timeline\", \"ownership\"",
+    "searchEmpty": "No question matches that search. Try another word, or write to us directly.",
+    "resultCount": "{count} results",
+    "allCategories": "All",
+    "relatedServices": "Related services",
+    "relatedPosts": "Further reading",
+    "copyLink": "Link to this question",
+    "ctaEyebrow": "Still unanswered?",
+    "ctaTitle": "Question not covered here?",
+    "ctaDesc": "Tell us about your project and we will come back within one business day with scope, timeline and a budget range.",
+    "ctaButton": "Get in touch",
+    "categories": {
+      "studio": {
+        "title": "Studio & Team",
+        "desc": "Who Piton Studios is, where we work and who you deal with on your project."
+      },
+      "services": {
+        "title": "Services & Scope",
+        "desc": "The work we take on and where a project scope starts and ends."
+      },
+      "pricing": {
+        "title": "Pricing & Payment",
+        "desc": "Budget ranges, payment schedules and exactly what the price covers."
+      },
+      "process": {
+        "title": "Process & Timeline",
+        "desc": "Every step from first call to launch, how long it takes and what we need from you."
+      },
+      "tech": {
+        "title": "Technology & Infrastructure",
+        "desc": "Our stack, hosting, performance budget and accessibility approach."
+      },
+      "seo": {
+        "title": "SEO, GEO & AI Visibility",
+        "desc": "How to stay visible in search results and in generative AI answers."
+      },
+      "ai": {
+        "title": "AI & Automation",
+        "desc": "Where AI fits in your business, which tools we use and what safeguards apply."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "desc": "Platform choice, payment and shipping integrations, conversion optimisation."
+      },
+      "mobile": {
+        "title": "Mobile & PWA",
+        "desc": "Native app versus PWA, store publishing and offline behaviour."
+      },
+      "support": {
+        "title": "Maintenance, Support & Warranty",
+        "desc": "What happens after launch: care plans, bug warranty and response times."
+      },
+      "legal": {
+        "title": "Contracts, Ownership & Data",
+        "desc": "Who owns the code, which agreements we sign and where your data lives."
+      },
+      "working": {
+        "title": "Working Model & Contact",
+        "desc": "Remote work, languages, contact channels and international invoicing."
+      }
+    }
+  },
+  "faqItems": {
+    "what-is-piton-studios": {
+      "q": "What is Piton Studios, and what does it do?",
+      "a": "Piton Studios is an independent digital studio founded in 2021, working end-to-end from concept to launch across web design, web applications, automation, AI integration, and digital growth. Design, code, and business strategy are handled by the same team rather than being split across separate vendors. Its portfolio includes 49 delivered projects.",
+      "detail": [
+        "It works as one team spanning design, code, and AI — the same people carry a project from discovery through launch, with no coordination loss between separate agencies.",
+        "It works across 12 service areas, from web design and web applications to e-commerce, process automation, AI/ML projects, and SEO/GEO — which one fits is decided project by project in a discovery call."
+      ],
+      "list": [
+        "Web design and web applications",
+        "E-commerce and integrations",
+        "Automation and AI integration",
+        "SEO & GEO",
+        "Cloud infrastructure and data engineering"
+      ]
+    },
+    "where-are-you-located": {
+      "q": "Where are you based, and which regions do you serve?",
+      "a": "Piton Studios is a Turkey-based, fully remote independent studio. No office visit is required — calls run over video and written communication, so work happens with local businesses and international clients alike, without geographic limits. Clients across Europe and the Gulf are served on the same basis as clients in Turkey.",
+      "detail": [
+        "The team works in the Turkey time zone, but the project flow is not bound to it — discovery, design, and development steps are scheduled around the time difference, with calls set early or late when needed.",
+        "For international clients, invoicing and payment are set up for international transfer and card payments; details are settled at the quote stage."
+      ]
+    },
+    "team-size": {
+      "q": "How big is the team, and who will I work with on my project?",
+      "a": "The core team is small and focused: the founder acts as full-stack developer and digital product designer, owning the project from discovery through launch. For work needing scale or extra disciplines, capacity is extended through the Saiber partnership — but your point of contact stays the same throughout.",
+      "detail": [
+        "The advantage of a small team is no loss of responsibility — the person who takes on your project is the same person who carries it from discovery to launch, with no information lost between briefs.",
+        "For large-scope work needing multiple disciplines, extra capacity comes in through the Saiber partnership; it appears on 18 portfolio projects and does not require a separate vendor conversation for the client."
+      ]
+    },
+    "why-choose-you": {
+      "q": "Why choose Piton Studios over a large agency?",
+      "a": "At a large agency, a project changes hands between multiple teams; at Piton Studios, the same person carries responsibility for it from discovery through launch — no information loss, no delay between layers, none of the general shallowness that comes with bigger agency overhead.",
+      "detail": [
+        "No price is quoted without a written scope — the output of each step and what is expected from you are both clear, so there is no surprise invoice or vague timeline.",
+        "Staying small keeps design, code, and AI under one roof instead of losing coordination between separate vendors — everything runs through one hand. For high-volume or multi-discipline work, capacity is extended through the Saiber partnership."
+      ]
+    },
+    "saiber-partnership": {
+      "q": "What does the Saiber partnership mean?",
+      "a": "Saiber is a partner Piton Studios works with on some projects for extra capacity and expertise; the \"Collaboration: Saiber\" note on 18 portfolio projects marks this partnership. Piton Studios manages the project and remains the client's point of contact; Saiber supports specific steps behind the scenes.",
+      "detail": [
+        "The partnership comes in for projects that need scale, tight timelines, or an extra discipline. Piton Studios remains the client's single point of contact — process, communication, and delivery responsibility do not change.",
+        "Which projects involve the partnership is shown openly as a \"Collaboration\" meta field on the project detail page — it is not hidden, for the sake of transparency."
+      ]
+    },
+    "portfolio-proof": {
+      "q": "What have you built before? Can you show references?",
+      "a": "The portfolio includes 49 delivered projects across web design, web applications, e-commerce, AI/ML, automation, and simulation. Standout work such as Nexos Investment, Ambalaj Cini, and Sammys can be reviewed as case studies on their project pages, with process and outcome laid out in detail.",
+      "detail": [
+        "Every project page shows the client, year, scope, and technology used; larger cases are also told in detail as a full case study covering process and outcome.",
+        "If a direct reference call is requested, we can put you in touch with the relevant client — except for projects under an NDA."
+      ]
+    },
+    "services-overview": {
+      "q": "What services do you offer?",
+      "a": "Piton Studios works across 12 service areas: web design, web applications, progressive web apps, automation, AI integration, Google Ads, SEO & GEO, training (How To Do), data engineering, cloud infrastructure, agentic AI, and AI consulting. Most projects combine two or three of these under a single scope.",
+      "detail": [
+        "Each service is described on its own page with its process, tech stack, and FAQs. Multiple services often run together on one project — a web app, automation, and SEO can sit in a single scope, for example.",
+        "Which service is the right fit gets decided together in the discovery call; you do not need to know the service name, only describe the problem."
+      ],
+      "list": [
+        "Web design and web applications",
+        "Progressive web apps",
+        "Automation and AI integration",
+        "Google Ads and SEO & GEO",
+        "Data engineering and cloud infrastructure",
+        "Agentic AI and AI consulting"
+      ]
+    },
+    "small-projects": {
+      "q": "Do you take on small jobs? Is there a minimum project size?",
+      "a": "There is no fixed minimum project size — work ranges from a small template-based brochure site to a custom web application. What matters is not budget size but whether the scope can be clearly defined; a well-defined small job is easier to take on than a vague large one.",
+      "detail": [
+        "For very small jobs (a single page, a simple fix) the process is simplified; discovery stays short and the full six-step delivery flow is not applied in full.",
+        "\"Small\" jobs with undefined, constantly growing scope tend to turn into large projects in practice — in that case the work gets split into phases, with the most critical piece delivered first."
+      ]
+    },
+    "redesign-existing-site": {
+      "q": "Do you build our site from scratch, or can you redesign an existing one?",
+      "a": "Both are possible. If the existing site's infrastructure is solid, we redesign on top of the current content and design; if the infrastructure is limiting — slow, cannot go multilingual, closed to SEO — a rebuild from scratch is recommended, decided together after a technical audit during discovery.",
+      "detail": [
+        "In a redesign, the existing content inventory, SEO value (backlinks, rankings), and brand assets are preserved — only the visual language and, if needed, the technology layer change.",
+        "For a rebuild, a redirect map and content migration plan are drawn up beforehand — the transition happens without losing existing SEO value."
+      ]
+    },
+    "branding-and-design": {
+      "q": "Do you also do logo and brand identity work?",
+      "a": "Yes, brand identity is part of the web design service — logo, color palette, typography, and core brand voice are built from scratch. If you already have a brand, we work with your existing system and adapt it digitally rather than writing a new identity over it.",
+      "detail": [
+        "Building a brand from scratch merges with the visual-direction step of the design process: two distinct visual directions are explored, one is developed further, then turned into a design system.",
+        "For clients with an existing brand, a brand audit comes first — checking whether the logo, color, and typography hold up consistently in a digital setting — then it is adapted."
+      ]
+    },
+    "content-and-copy": {
+      "q": "Do you write the site copy and produce the images, or do we?",
+      "a": "Both are possible — the client can supply their own copy and images, or Piton Studios can produce them. When content production is added to the budget, it typically adds roughly 15-35% to the total cost, since copywriting and photo or video work are a separate line of effort.",
+      "detail": [
+        "Who supplies the content is written explicitly into the contract — it is the most common cause of project delay; even with design and code ready, launch can slip by weeks waiting on content.",
+        "If you prepare your own content, you recover part of the budget directly; if not, content production is factored into scope and delivery date at the brief stage."
+      ]
+    },
+    "white-label": {
+      "q": "Do you work white-label as a subcontractor for agencies?",
+      "a": "Yes, white-label development and design support is offered to agencies — the agency's brand stays visible to the client, while Piton Studios handles the technical execution. This is used when an agency's capacity falls short or a specific expertise is needed for a particular project.",
+      "detail": [
+        "The process is protected by an NDA; communication runs directly through the agency, and contact with the end client is at the agency's discretion.",
+        "Pricing and delivery times follow the same standard project flow; the only difference is brand visibility and the communication channel."
+      ]
+    },
+    "industries": {
+      "q": "Which industries do you have experience in?",
+      "a": "The portfolio includes 49 projects across construction/engineering, real estate, tourism, finance, transportation, e-commerce, food/packaging, and SaaS/AI-ML. The leading sector shifts year to year with demand, but the way of working, process, and team have stayed the same since 2021.",
+      "detail": [
+        "2021-2022 leaned toward corporate sites and branding, 2022-2023 toward e-commerce and real estate/tourism, 2024 toward finance and transportation, and 2025 toward AI/ML and SaaS projects.",
+        "For regulated fields requiring deep sector-specific compliance knowledge, such as healthcare or legal, extra research is done before the project starts — this can extend the discovery timeline slightly."
+      ]
+    },
+    "website-cost": {
+      "q": "How much does a website cost?",
+      "a": "A single average is misleading: a template-based brochure site runs €220-670, a custom-designed corporate site €780-2,700, e-commerce €900-4,400, and a custom web application €3,300 and up. What sets the price is not page count but the number of features that need custom development.",
+      "detail": [
+        "These bands are indicative, not a commitment — the real price is settled after discovery, together with a written scope document.",
+        "Six variables drive the price: design source (ready-made theme vs. original), number of languages, content management panel, number of integrations, performance/SEO budget, and who produces the content."
+      ],
+      "list": [
+        "Template/WordPress brochure site: €220-670",
+        "Custom-designed corporate site: €780-2,700",
+        "E-commerce: €900-4,400",
+        "Custom web application: €3,300+"
+      ]
+    },
+    "pricing-model": {
+      "q": "Do you work fixed price or hourly?",
+      "a": "Fixed price is used for projects with a clear scope; a time-and-materials model applies where scope will take shape during the process or grow in stages. In practice the healthiest approach is a mix: fixed price for discovery, then a fixed-price development quote once scope is settled.",
+      "detail": [
+        "With fixed price, risk gets baked into the number and the budget becomes predictable; with time-and-materials, flexibility is high but the total budget rests on a ranged estimate.",
+        "Skipping discovery and quoting fixed price directly is not reliable — it either overloads the price with risk or turns into a change order mid-project. That is why we do not quote before scope is written down."
+      ]
+    },
+    "whats-included-in-price": {
+      "q": "What is included in the price? Are there hidden costs?",
+      "a": "The quote covers discovery, design, development, content/translation support, testing, and launch in full — nothing outside the written scope document is included in the price or added later. Hidden costs are what happens when a quote is taken without a defined scope in the first place.",
+      "detail": [
+        "Items typically not included: domain, hosting/cloud fees, third-party licenses (payment infrastructure, email service), and a post-launch maintenance package — these are written as separate, explicit line items.",
+        "A scope change (a new page, extra integration, additional revision round) is not free, but it is not hidden either — every change shows up as its own quote, so no surprise invoice appears."
+      ],
+      "list": [
+        "Included: discovery, design, development, testing, launch",
+        "Not included: domain, hosting, third-party licenses",
+        "Separate line: post-launch maintenance/support package"
+      ]
+    },
+    "payment-schedule": {
+      "q": "How does the payment schedule work?",
+      "a": "Payment runs in installments tied to delivery milestones — typically an upfront payment at discovery/contract stage, a midpoint payment during development, and the remaining balance at launch. The exact ratios are settled in the quote based on project size and duration.",
+      "detail": [
+        "For small, short jobs (2-4 weeks), a two-installment plan (start and delivery) is enough; for longer custom software projects, sprint-based payment fits better.",
+        "International clients can pay by international transfer or card; currency and payment method are set at the quote stage."
+      ]
+    },
+    "ecommerce-cost": {
+      "q": "How much does an e-commerce site cost?",
+      "a": "E-commerce projects typically fall in the €900-4,400 range. The width of that band comes from the number of integrations, not the number of products — a store connected to accounting or an ERP, plus shipping and marketplace integrations, costs roughly twice as much as one without them.",
+      "detail": [
+        "Cost drivers: payment infrastructure integration, shipping and marketplace integrations, inventory and order flow automation, returns process management, and a multilingual product catalog.",
+        "On the Ambalaj Cini project we ran e-commerce infrastructure together with ad management and delivered 30% growth — scope and results are covered in the case study on the project page."
+      ]
+    },
+    "ai-automation-cost": {
+      "q": "How much does an AI or automation project cost?",
+      "a": "Rather than a fixed band, an indicative scenario model is used: return on investment is calculated on an assumed labor cost of about €5.5 an hour and a setup cost of roughly €1,550. The real cost varies with how complex the process is and how many systems need integrating.",
+      "detail": [
+        "There is a wide price gap between a simple webhook-based automation (2-4 weeks) and a multi-system agent architecture (6-12 weeks); discovery works out how much time each candidate process would actually save.",
+        "What matters for the investment decision is not the one-time setup cost but the hours of labor the automation saves monthly — this scenario model also accounts for ongoing maintenance and development."
+      ]
+    },
+    "running-costs": {
+      "q": "What are the annual running costs — hosting, domain, licenses?",
+      "a": "For a corporate site on static, managed infrastructure, annual running costs — domain, hosting, email, and backups combined — typically run about 15-25% of the build cost. Plugin-based CMS setups run higher, mainly because of the ongoing cost of security updates.",
+      "detail": [
+        "Typical indicative lines: domain €10-35/year, hosting/cloud €0-130/year (a free tier is often enough on static sites), business email €25-110/year per user, content and maintenance €110-400/year.",
+        "Over three years, the gap between static/managed infrastructure and a plugin-based CMS widens — SSL is included on modern platforms, and security updates cost next to nothing on a static site while running as a constant expense on setups like WordPress."
+      ],
+      "list": [
+        "Domain: €10-35/year",
+        "Hosting/cloud: €0-130/year",
+        "Business email: €25-110/year (per user)",
+        "Content and maintenance: €110-400/year"
+      ]
+    },
+    "budget-too-low": {
+      "q": "Our budget is below your range — what should we do?",
+      "a": "Split the scope into phases — launch phase one with only the pages and features actually needed, and push items like a blog, multiple languages, or an admin panel to phase two. This is not about making the work cheaper, it is about delivering it in the right order.",
+      "detail": [
+        "Supplying your own content (copy, images) recovers roughly 15% of the budget directly; accepting ready-made component systems also lowers cost — not every button needs original design.",
+        "There are also wrong ways to cut a budget: skipping testing, pushing SEO to later, or picking the cheapest quote without reading the scope — these look like savings short-term but cost more in the medium term.",
+        "If you are entirely outside the range, we say so honestly; we either suggest a small starter package or point you toward a solution that fits your need better."
+      ]
+    },
+    "how-project-starts": {
+      "q": "How does a project start?",
+      "a": "A project starts with an initial call, usually returned within 24 hours of a request sent through the contact form or WhatsApp, followed by a discovery step lasting 2-5 days. Discovery ends with a written scope document and a fixed-price quote based on it.",
+      "detail": [
+        "During discovery, the existing process is mapped, scope and priority order are settled, and we agree which number will define success. This step is where most projects are won or lost.",
+        "No price is quoted before scope is written down — a verbal agreement gets forgotten, while a written scope document protects both the client and the studio."
+      ]
+    },
+    "project-timeline": {
+      "q": "How long does a project take?",
+      "a": "Timeline depends on project type: a web design job typically takes 3-6 weeks, a web application 8-16 weeks, an automation project 2-4 weeks, and an AI integration 6-12 weeks. The full delivery flow runs six steps from discovery through to launch.",
+      "detail": [
+        "Within that flow: discovery 2-5 days, design 1-3 weeks, development 2-8 weeks, testing 3-7 days, launch 1-2 days; the growth step then continues on an ongoing basis after launch.",
+        "The biggest timeline risk is scope change — a shift in direction mid-project costs far more time than discovery would have. That is why a firm timeline estimate is only given once scope is settled."
+      ]
+    },
+    "discovery-phase": {
+      "q": "What do you need from us during discovery?",
+      "a": "Discovery asks for a one-hour call and whatever numbers you already have — monthly enquiries, conversion rate, transaction volume, and similar. In this call the existing process gets mapped, and we agree together which number will define success for the project.",
+      "detail": [
+        "The step takes 2-5 days and its output is a scope document plus a fixed-price quote; development does not start without this document.",
+        "Coming prepared speeds things up — thinking in advance about which decisions your competitors have effectively already made for you, and which ones are still open, makes the call more productive."
+      ]
+    },
+    "revisions": {
+      "q": "How many rounds of revisions do we get?",
+      "a": "Two revision rounds are included as standard at each major design stage; rounds beyond that limit are billed separately at an hourly rate. In practice this limit is rarely reached, since expectations get settled clearly during discovery, before design work begins.",
+      "detail": [
+        "The number of approval rounds is a direct cost line — that is why we recommend naming a single decision-maker; conflicting feedback from multiple people drives the round count up fast.",
+        "A revision is cheapest during the design stage, when moving a screen takes minutes; the same change after development is complete can take days. That is why feedback is gathered early."
+      ]
+    },
+    "client-involvement": {
+      "q": "How much time do we need to set aside during the process?",
+      "a": "A one-hour call at discovery, two rounds of feedback during design, a short weekly check-in through development, and a walkthrough of your own flow during testing — regular but brief touchpoints spread across the project timeline are all that is needed.",
+      "detail": [
+        "The most critical input comes at discovery and design approval; during development, a working version updates weekly at a preview address, and glancing at it is all that is needed.",
+        "Before launch you are asked to walk through your own flow and test it — the user who knows the business finds the best bugs."
+      ]
+    },
+    "project-communication": {
+      "q": "How do we track progress?",
+      "a": "During development, a working version is shared and updated weekly at a preview address — you watch progress with your own eyes, there is no \"you'll see it at the end\" stage. A short weekly check-in call rounds out that tracking throughout the project.",
+      "detail": [
+        "Code is kept under version control with a full history; every integration is connected and verified one by one, and these steps show up in the preview version too.",
+        "After launch, communication continues through a monthly measurement summary and a priority list for the next round — the growth phase runs on a steady rhythm of check-ins."
+      ]
+    },
+    "launch-checklist": {
+      "q": "What gets checked before launch?",
+      "a": "Testing covers function, performance, and accessibility audits — checked on real devices and in every language, running load and edge-case scenarios. Launch sets up publishing, monitoring, and backups, then hands over access credentials so the client owns everything outright.",
+      "detail": [
+        "The cost of a bug depends on when it is found — a bug found after launch costs a multiple of what it would have cost earlier; that is why testing is a planned step, never a cut corner.",
+        "Launch is not a button press, it is a handover: domain, code repository, and all accounts transfer to the client's name, with a short usage walkthrough for your team."
+      ],
+      "list": [
+        "Function, performance, accessibility audits",
+        "Checked on real devices and in every language",
+        "Load and edge-case scenarios",
+        "Publishing, monitoring, backup setup",
+        "Domain, repository, account transfer"
+      ]
+    },
+    "tech-stack": {
+      "q": "What technologies do you use?",
+      "a": "The core stack is Next.js, React, and TypeScript; Python and Node.js on the backend; Supabase and PostgreSQL for the database; Vercel and Google Cloud for deployment. Claude AI is used for AI integrations, and n8n is the platform of choice for automation projects.",
+      "detail": [
+        "Technology choice follows the need, not habit — WordPress can be the right call for a static brochure site; Next.js and TypeScript are preferred for projects needing custom business logic, real-time features, or a complex data model.",
+        "The Piton Studios site itself is built with Next.js, hosted on Vercel, fully static, and trilingual (tr/en/ru) — that choice also serves as an example of the studio's own output."
+      ],
+      "list": [
+        "Next.js, React, TypeScript",
+        "Python, Node.js",
+        "Supabase, PostgreSQL",
+        "Google Cloud, Vercel",
+        "Claude AI, n8n"
+      ]
+    },
+    "nextjs-vs-wordpress": {
+      "q": "Next.js or WordPress — which fits us?",
+      "a": "For a brochure site with fixed content, infrequent updates, and a limited budget, WordPress is still a reasonable choice. If you need custom business logic, a high performance target, complex integrations, or long-term scale, Next.js delivers a more sustainable result over time.",
+      "detail": [
+        "WordPress's advantage is speed and low starting cost; thousands of ready-made plugins cover most needs quickly. Its downside is that performance drops as plugins pile up, and security updates turn into a constant expense.",
+        "Next.js has a slightly higher starting cost because every feature is custom-built; in return, a performance budget is built in from day one, the attack surface is close to zero on static generation, and the system does not slow down as features get added.",
+        "The decision is not a technology preference alone — content update frequency, the team's technical skill level, and the growth plan are weighed together during discovery."
+      ]
+    },
+    "cms-and-editing": {
+      "q": "Will we be able to update content ourselves? Do you provide a panel?",
+      "a": "Yes — depending on the project, a headless CMS like Contentful or Sanity, or a custom admin panel, is set up so non-technical editors can update content without touching code. On small brochure sites, content lives directly in the code repository and is updated with post-delivery instructions.",
+      "detail": [
+        "Whether a panel is needed gets settled during the scope conversation — a panel is recommended for a frequently updated product catalog, blog, or multilingual content; for rarely changing corporate content, a panel's cost is unnecessary.",
+        "Once a panel is set up, your team gets a short usage walkthrough during launch — no extra learning curve is left hanging."
+      ]
+    },
+    "hosting-and-deployment": {
+      "q": "Where is the site hosted?",
+      "a": "Static and Next.js-based projects are hosted mainly on Vercel; work needing data or custom infrastructure runs on Google Cloud. Domain, hosting account, and code repository transfer to the client's name during the launch step, not held back afterward.",
+      "detail": [
+        "Vercel offers automatic deployment tied to version control, preview environments, and a global CDN — the weekly-updated preview version is possible thanks to this infrastructure.",
+        "The hosting account is opened in the client's name, not the studio's — that is the only real guarantee of freedom to change agencies. All access credentials are shared at handover."
+      ]
+    },
+    "performance": {
+      "q": "How do you guarantee the site will be fast?",
+      "a": "Performance is not bolted on afterward, it is built in as a budget from the start — the target is a Lighthouse score of 90 or above. Static generation, image optimization, and a minimal-JavaScript approach keep the system fast even as scope and content grow over time.",
+      "detail": [
+        "Setups that pile up plugins and layers get slightly heavier with every new feature; a system built with measurement stays constant on response time as scope grows — the gap becomes visible within 6-12 months.",
+        "Performance auditing is a standard part of testing; measurements run on real devices and slow connections, and issues get fixed before launch, not after."
+      ]
+    },
+    "accessibility": {
+      "q": "Do you follow accessibility (WCAG) standards?",
+      "a": "Accessibility is a standard part of testing — keyboard navigation, screen-reader compatibility, contrast ratios, and semantic HTML are all checked. The target is WCAG 2.1 AA; skipping it creates both legal risk and a real loss of users who cannot use the site.",
+      "detail": [
+        "Accessibility is not a patch added after launch, it is a requirement built in alongside design and development — color contrast and focus order are part of the component system from the start.",
+        "Accessibility priority is settled during the scope conversation; for projects with heavier regulatory pressure, such as public-sector or enterprise clients, the audit runs more thoroughly."
+      ]
+    },
+    "multilingual": {
+      "q": "Do you build multilingual sites?",
+      "a": "Yes — multilingual sites are built with hreflang, translation management, and a language-based URL structure; our own site is trilingual (tr/en/ru) itself. Adding languages typically adds roughly 25-40% to the budget, depending on how much content needs translating.",
+      "detail": [
+        "Each language gets its own SEO metadata, canonical tags, and hreflang tags — this prevents the same content in different languages from accidentally competing with itself.",
+        "The source of translation is settled per project: the client can supply their own translation, or the process is included in scope and budget; machine translation alone is not recommended, at least one editorial pass is required."
+      ]
+    },
+    "seo-included": {
+      "q": "Is SEO included in the price?",
+      "a": "Baseline technical SEO — fast loading, correct meta tags, crawlable structure, basic schema markup — is standard in every web design and web application quote. Full content strategy, GEO, and ongoing optimization are quoted as a separate service, billed on its own schedule.",
+      "detail": [
+        "Technical SEO added later costs roughly twice what it costs to build in from the start — that is why the performance budget and SEO structure are set up during development, not left until the end.",
+        "Ongoing SEO work requiring monthly reporting, topic-cluster mapping, and an editorial calendar runs as a separate monthly scope, outside the one-time development price."
+      ]
+    },
+    "what-is-geo": {
+      "q": "What is GEO (Generative Engine Optimization)?",
+      "a": "GEO is the practice of structuring content so generative AI models like ChatGPT, Claude, Gemini, and Perplexity can read it and cite it as a source. As users increasingly get answers from these tools instead of a search engine, it is becoming as important as classic SEO.",
+      "detail": [
+        "Classic SEO prepares a page to rank; GEO prepares a passage to be quoted — answer-first writing, self-contained paragraphs, concrete numbers and names, structured data, and plain-text summaries like llms.txt are GEO's core tools.",
+        "This FAQ page applies GEO principles itself: every answer addresses the question in its first sentence, stands on its own when read in isolation, and is marked up with FAQPage structured data — the goal is for a language model to be able to quote this page directly."
+      ]
+    },
+    "llm-visibility": {
+      "q": "How do we get visibility in tools like ChatGPT, Claude, and Gemini?",
+      "a": "Through three concrete techniques: structured data (schema.org — Organization, FAQPage, Article), answer-first content that stands on its own, and a plain-text site summary for crawlers, such as an llms.txt file. Together these make it easier for a model to read your content correctly and cite it.",
+      "detail": [
+        "Authority matters too — models tend to cite sources when multiple places agree consistently; that is why on-site consistency (the same price, the same process explained the same way) and an off-site link profile are both part of GEO work.",
+        "Measuring the result differs from classic SEO — instead of rankings, we periodically ask models direct questions and check whether the brand shows up in the answer, and whether it is described accurately."
+      ]
+    },
+    "seo-timeline": {
+      "q": "When do SEO results show up?",
+      "a": "Technical fixes show effect within 2-4 weeks; content and ranking impact typically takes 3-6 months. GEO and AI visibility results are harder to measure but usually become noticeable within 2-3 months, as models pick up freshly structured content.",
+      "detail": [
+        "These timelines shift with how competitive the space is and the starting condition of the existing site — a newly launched site earning its first rankings follows a different timeline than re-optimizing a site that already has authority.",
+        "Ongoing SEO work runs on a monthly reporting rhythm; rankings, traffic, and citation wins — showing up in LLM answers — are tracked together."
+      ]
+    },
+    "structured-data": {
+      "q": "Do you set up structured data (schema.org)?",
+      "a": "Yes — schema.org types such as Organization, WebSite, BreadcrumbList, Article, Service, and FAQPage are applied depending on the project. This tells search engines and AI models exactly what the content is, increasing the chance of rich results and citation in generative answers.",
+      "detail": [
+        "This FAQ page is itself marked up with FAQPage structured data — every answer is separately encoded in JSON-LD, so the page becomes structurally readable by search engines and language models without changing how it looks.",
+        "Schema setup is not a one-time job; as content changes (price, service, team information), structured data is kept in sync — an inconsistent signal otherwise erodes a search engine's trust."
+      ]
+    },
+    "migration-seo": {
+      "q": "Will we lose our current SEO value in a site redesign?",
+      "a": "Not in a properly planned redesign — if the URL structure will change, a redirect map is drawn up in advance, and the existing content inventory and backlink value are preserved. The risk comes from a rushed transition made without that plan in place.",
+      "detail": [
+        "Before a redesign, the current site's indexed pages, ranking keywords, and inbound links are extracted; the new site structure is mapped against them.",
+        "Checking indexing in Search Console after the transition is a standard step in the first month — confirming redirects work correctly and traffic has not dropped, so problems get caught early."
+      ]
+    },
+    "google-ads-vs-seo": {
+      "q": "Google Ads or SEO — where should we put our budget?",
+      "a": "For fast, measurable results, Google Ads fits; for lasting, compounding visibility, SEO & GEO fits better. With Google Ads, traffic stops when the ad spend stops; with SEO, impact starts slower but steadily reduces reliance on ad budget over time.",
+      "detail": [
+        "Starting Google Ads indicatively needs a minimum ad spend of around $1,500 a month; below that, the learning phase cannot gather enough data to produce meaningful results.",
+        "The healthiest approach is running both together: Ads delivers fast demand flow while SEO/GEO grows in the background; as SEO matures, it starts meeting the same demand at lower cost, taking pressure off the ad budget."
+      ]
+    },
+    "ai-use-cases": {
+      "q": "Where can we use AI in our business?",
+      "a": "You'll see the highest return on tasks that are repetitive, have clear rules, and take standardized input: customer support responses, document or invoice data extraction, content generation, multi-step process automation, and decision-support reporting. Starting with one frequent, low-error-cost process delivers a faster and more reliable payoff than trying to automate everything at once.",
+      "detail": [
+        "The right starting point isn't which tool to use — it's which process to pick. Without measuring how often it runs per month, how clear its rules are, how standardized its input is, and what a mistake costs, judging which process suits AI is guesswork; we run that assessment with your real data under our ai-consulting service, not off a template.",
+        "Our portfolio has projects built on this logic: Emlak Sync eliminates manual listing entry across multiple platforms, while ContentFlow AI and Social Pro apply the same principle to content production and marketing workflows. All three share one thing — a measured process with known volume and cost, automated systematically."
+      ],
+      "list": [
+        "Customer support and chatbots",
+        "Document/data extraction (invoices, forms, receipts)",
+        "Content generation",
+        "Multi-step process automation",
+        "Decision support and reporting"
+      ]
+    },
+    "chatbot-on-site": {
+      "q": "Can you add an AI assistant to our site?",
+      "a": "Yes — we integrate a retrieval-augmented generation (RAG) assistant into your site. It draws answers from your own content rather than the model's general knowledge, which significantly lowers the risk of made-up answers. Scope, timeline, and cost depend on the use case; we work this out project by project under our ai-integration service.",
+      "detail": [
+        "Setup isn't just technically wiring a model to your site: preparing the content source, systematically testing answer quality against representative questions, and handing the conversation to a human when the assistant can't answer or isn't confident are all part of the build. Skip these and the assistant looks unreliable to visitors even when it gets the facts right.",
+        "What data the assistant can access, what topics it never answers, and how answers get verified are settled with you at project start. We cover the concrete technical safeguards — source restriction, confidence thresholds, human approval, logging — in much more detail under the hallucination question."
+      ]
+    },
+    "which-llm": {
+      "q": "Which AI model do you use?",
+      "a": "We pick the model per task — we're not locked into one provider. Claude for complex reasoning and multi-step agent work, GPT or Gemini for more general-purpose tasks; the choice comes from a structured evaluation against your real data, not whichever model is trending.",
+      "detail": [
+        "The evaluation weighs cost, latency, accuracy, and data privacy policy together; a model scoring well on a general benchmark table doesn't mean it's right for your specific use case, so we don't commit to one without testing it against your own data.",
+        "This evaluation is the first and most important step of our ai-integration and agentic-ai services; the model choice can be revisited as the project progresses, because providers ship new versions and pricing updates frequently, and what's right today may not be ideal six months from now — so we review it periodically rather than treating it as a one-time decision."
+      ]
+    },
+    "ai-data-privacy": {
+      "q": "Is our data used to train the model?",
+      "a": "Under enterprise and API plans from major providers (Anthropic, OpenAI, Google, and similar), data sent via the API is not used for model training by default — but this policy varies by provider, plan, and changes over time. So on every project we verify the current data-use terms with you rather than assuming.",
+      "detail": [
+        "Consumer plans — free or individual — and enterprise API plans are typically governed by different rules; which plan and which interface (web UI or direct API) you're using is a critical detail we pin down clearly at project start, with no room for confusion.",
+        "We apply the same cautious principle on our own site: Piton Studios doesn't use a database, contact form submissions go straight to email via Resend and aren't stored anywhere. The principle stays the same on client projects — don't collect data you don't need, and state clearly what you do collect."
+      ]
+    },
+    "hallucination": {
+      "q": "How do you prevent AI from giving wrong answers?",
+      "a": "There's no single fix — we layer several safeguards: a RAG architecture that grounds answers in your own data, a validation step that checks output against the expected schema, a human-approval threshold that kicks in on low confidence, and logging for every response. These layers work together, each covering the others' gaps.",
+      "detail": [
+        "Before launch we run an eval suite that systematically measures how the model handles both typical and edge-case scenarios; after launch we keep checking with regular sampling, because patterns in source data or user questions shift over time and a one-time test is never enough.",
+        "Risk can't be reduced to zero, but it can be made manageable — which is why we never fully remove human approval from critical decisions like payments, legal commitments, or irreversible actions. We deliberately cap automation speed at those points, because speed should never come before accuracy."
+      ],
+      "list": [
+        "Source restriction / RAG",
+        "Output schema validation",
+        "Confidence threshold + human approval",
+        "Logging and regular sampling evaluation"
+      ]
+    },
+    "automation-tools": {
+      "q": "What tools do you use to build automations?",
+      "a": "Our primary tool is n8n — an open-source automation platform we favor for complex, multi-step flows. We also audit and improve existing Zapier setups, migrating the steps that break often and grow harder to maintain into n8n for a more resilient, traceable, and manageable structure.",
+      "detail": [
+        "We build multi-system automations spanning CRM, ERP, Slack, email, databases, and custom APIs; complexity naturally grows with the number of integrations, but our method — map the process end to end first, then build it step by step — stays the same at any scale. We don't look for shortcuts.",
+        "We document every flow we build step by step and in plain language so your team can maintain it themselves — we don't leave you with a black box. As the process evolves, an ongoing retainer for updates is available, but it's never mandatory; the choice is always yours."
+      ]
+    },
+    "ai-roi": {
+      "q": "How do we measure ROI on an AI investment?",
+      "a": "We measure payback with a simple formula: setup cost divided by monthly net saving, where net saving equals hours saved times hourly cost, plus errors avoided, minus monthly running cost. In one scenario, a setup cost of €1,550 with €233 in monthly net savings pays for itself in roughly 6-7 months, with a twelve-month return of around 80%.",
+      "detail": [
+        "The formula is only as good as its inputs are honest; before setup we carefully measure the time spent and error rate of the current process for at least two weeks. Without that baseline, an automation's return isn't a calculation — it's a guess, and guess-based decisions usually land somewhere different than expected.",
+        "We walk through this approach in detail, with a worked example, in our ai-automation-roi blog post; the figures there are a scenario model, not a guarantee — your actual result will depend on your process, transaction volume, and the baseline you measure, so we recommend recalculating with your own numbers."
+      ]
+    },
+    "ecommerce-platform": {
+      "q": "Shopify or a custom e-commerce build?",
+      "a": "We build both — the choice depends on scale and customization needs. For standard catalogs and a fast start, we recommend Shopify; for complex business rules, custom integrations, or high traffic, we recommend a Next.js-based custom e-commerce build. Both deliver the same quality; the only question is which fits your needs.",
+      "detail": [
+        "There's a clear cost difference too: Shopify projects start lower on our indicative pricing band and typically launch faster, while custom builds sit in the €900-4,400 range, since the data model and integrations are built entirely from scratch around your needs — which directly affects both timeline and cost.",
+        "The decision isn't one-way — moving a growing Shopify store to a custom build is possible, and so is the reverse. We cover that migration process in much more detail, step by step, under the ecommerce-migration question."
+      ],
+      "list": [
+        "Shopify fits: standard catalog, fast start, low customization",
+        "Custom build fits: complex rules, high traffic, custom integrations"
+      ]
+    },
+    "payment-integration": {
+      "q": "Which payment infrastructures do you work with?",
+      "a": "It depends on the project — from international card processors to local payment providers built for the Turkish market, we choose and set up whichever integration fits your needs best. The choice is settled during discovery based on target market, currency, installment requirements, and your existing accounting system — we don't push a single default provider.",
+      "detail": [
+        "Card data security, i.e. PCI compliance, is the payment provider's responsibility; we implement whatever integration method the provider recommends — hosted checkout, iframe, or direct API — and never store or process card data on our own servers at any stage. This distinction matters for security and isn't negotiable.",
+        "Webhook-based payment status tracking, refund flows, partial payments, and failed-transaction scenarios are a standard part of every integration; none of them go live until each scenario has been individually tested and verified — reducing risk from the start."
+      ]
+    },
+    "marketplace-integration": {
+      "q": "Do you handle marketplace and shipping carrier integrations?",
+      "a": "Yes, under our automation service we integrate with marketplace and shipping carrier APIs — syncing order, inventory, and tracking data across systems automatically instead of manual entry. The goal is to eliminate the burden of entering the same information into multiple panels over and over.",
+      "detail": [
+        "These integrations are a typical, generally high-return automation candidate: instead of manually entering the same data into multiple panels, we feed it from a single source and reflect it automatically on every platform. Multi-system sync is broadly our specialty — CRM, ERP, email, and custom APIs all connect the same way.",
+        "Scope depends on which marketplace and carrier you use and how open and well-documented their APIs are; during discovery we assess your existing systems and API access together and produce a realistic, actionable scope — not a vague promise, a concrete plan."
+      ]
+    },
+    "conversion-optimization": {
+      "q": "How do you improve conversion rate?",
+      "a": "We start by measuring the funnel step by step — finding exactly where visitors drop off between a visit and a completed order — then apply fixes prioritized by impact versus effort. In our experience, the biggest wins come from showing shipping cost early, enabling guest checkout, and shortening the mobile payment form.",
+      "detail": [
+        "Before changing anything we collect at least two weeks of baseline data and always report mobile and desktop separately; an averaged number usually hides the real mobile problem. Pouring ad budget into a leaking funnel only grows the loss, so we fix the funnel before we touch traffic.",
+        "We applied this approach on the Ambalaj Cini project, running the e-commerce build and Google Ads campaigns together in parallel; the 30% growth the company saw was a direct result of funnel improvements and ad performance working in coordination — neither alone would have been enough."
+      ],
+      "list": [
+        "Show shipping cost next to the price",
+        "Allow guest checkout",
+        "Shorten the mobile payment form",
+        "Add more product images and video",
+        "Measure page speed and tie it to a budget"
+      ]
+    },
+    "ecommerce-migration": {
+      "q": "Can you migrate our existing store?",
+      "a": "Yes — we migrate your product catalog, customer data, and order history to the new platform in full. To protect your SEO value, we set up 301 redirects from old URLs to new ones and preserve your existing search rankings; skipping this step is a common, easily avoidable cause of post-migration traffic loss.",
+      "detail": [
+        "The migration is planned in stages so it's seamless: the new platform is first built and tested in parallel, data is verified end to end, and only once everything checks out is live traffic switched over at cutover. The goal is to never create a downtime window that stops sales.",
+        "During migration we also revisit your conversion funnel from scratch — friction points from the old store rarely need to carry over as-is, which turns the migration into an improvement opportunity beyond a simple like-for-like copy. We don't want you to waste that opportunity."
+      ]
+    },
+    "native-vs-pwa": {
+      "q": "Native app or PWA?",
+      "a": "In most scenarios a PWA is enough, and cheaper — around 90% of content apps, dashboards, e-commerce, and tools are well served by one. We move to native only when you genuinely need hardware APIs like Bluetooth, NFC, or advanced camera control, not just because native looks more professional.",
+      "detail": [
+        "The cost difference is substantial: a PWA covers both web and mobile experience from a single codebase, while native requires separate development, separate testing, and separate store approval for iOS and Android — which directly grows both budget and timeline.",
+        "PWAs install on all current browsers including iOS Safari, work offline, and can send push notifications; the gap with Android is now fairly minimal — much closer and more consistent than a few years ago, as iOS-side improvements have closed it quickly."
+      ],
+      "list": [
+        "PWA is enough: content apps, dashboards, e-commerce, tools",
+        "Native is needed: Bluetooth, NFC, advanced camera control"
+      ]
+    },
+    "app-store-publishing": {
+      "q": "Do you publish the app to the App Store and Google Play?",
+      "a": "For native app projects, we handle App Store and Google Play publishing end to end. For PWA projects, no store approval is needed at all — users install the app directly from their browser via Add to Home Screen, with no separate approval process to wait on.",
+      "detail": [
+        "Apple and Google's review processes run on their own timelines, usually a few days but sometimes longer; this is entirely outside our control and should always be built into the launch plan as buffer time — otherwise the delivery date isn't realistic.",
+        "The developer account — Apple Developer and Google Play Console — is opened directly in your name at project start; this guarantees the app's ownership and the right to publish future updates always stays with you. We remain an intermediary; you're the account owner."
+      ]
+    },
+    "mobile-responsive": {
+      "q": "How do your sites perform on mobile?",
+      "a": "Every site we build is designed mobile-first — not a shrunk-down version of desktop, but an experience built mobile-first from the start. We work against a performance budget, so load time and interaction speed stay within set limits regardless of screen size or connection speed.",
+      "detail": [
+        "We test on real physical devices during QA, not just browser simulators; touch target size, form-filling experience, keyboard behavior, and actual load time on mobile are each checked as a separate, rigorous item — never skipped as a formality.",
+        "We cover our approach and measurement method for speed in detail in our fast website blog post; mobile performance gets its own section there because a site that runs well on desktop can still be much slower and problematic on a mobile connection — a gap teams often miss until it's grown large."
+      ]
+    },
+    "offline-support": {
+      "q": "Does the app work offline?",
+      "a": "For PWAs, yes — Service Worker technology caches core content and recently viewed data on the device, so the app doesn't fully break or show a confusing blank error screen when the connection drops. What data is available offline is decided with you during project scope, not applied as a single default.",
+      "detail": [
+        "Read-only content — previously viewed pages, a product list, and similar — is relatively easy to support offline; payment or real-time data flows are designed separately and carefully to sync automatically in the background once the connection returns, reducing data-loss risk.",
+        "Not every feature is built to work offline — that's a deliberate choice requiring extra development scope and testing effort; during discovery we look together at which flows are genuinely critical and set final scope accordingly, without adding unnecessary complexity or inflating the budget."
+      ]
+    },
+    "after-launch-support": {
+      "q": "Do you provide support after launch?",
+      "a": "Yes. Bug fixes are covered under warranty for a defined period after delivery; the scope and length are written into the contract up front. Beyond that, change requests and new features are priced as a maintenance package or a separate line item — they're not covered under warranty.",
+      "detail": [
+        "Launch isn't an ending for us; in the post-delivery growth phase, a short monthly review call tracks the metrics we agreed on during discovery against real data, and we prioritize the next step accordingly — so support proceeds on a plan, not at random.",
+        "What's covered under warranty versus billed separately is written clearly into the contract from the start; settling that distinction early largely and permanently prevents expectation mismatches later in the relationship, and both sides are more comfortable knowing it upfront."
+      ]
+    },
+    "maintenance-packages": {
+      "q": "How do your maintenance packages work?",
+      "a": "A maintenance package is a monthly agreement covering regular updates, monitoring, and small change requests; scope and fee are settled together at the proposal stage based on project size and how often support is needed. We don't have a fixed, one-size-fits-all price list — every project carries a different infrastructure and traffic load.",
+      "detail": [
+        "A maintenance package is never mandatory; many clients choose to continue with their own team or another vendor after delivery, since the code repository and all accounts already belong to them from the start and create no dependency on us — that's a deliberate design choice.",
+        "A similar logic applies to automation projects: we document the flows we build in detail so you're not permanently dependent on us, but as the process evolves, an ongoing retainer for updates is also available on request — the decision is always yours."
+      ]
+    },
+    "bug-warranty": {
+      "q": "Do you charge for bugs found after delivery?",
+      "a": "A bug within the delivered scope — meaning a feature ordered but not working as expected — is fixed entirely free within a defined warranty period, written clearly into the contract. A new request, a scope change, or an issue caused by a third-party system update falls outside warranty and is handled separately.",
+      "detail": [
+        "We always put scope in writing to settle this distinction upfront — the output of discovery is a scope document and a fixed-price quote, and we never quote before scope is written down. That largely prevents the bug-versus-request debate, since the reference point is clear from the start and leaves no room for dispute.",
+        "In practice this kind of dispute rarely happens because functional, performance, and accessibility testing is already thorough during QA; the number of post-launch bugs stays low as a result, and the warranty period usually passes without issue."
+      ]
+    },
+    "response-time": {
+      "q": "How quickly do you respond to support requests?",
+      "a": "Our target for a first response is 24 hours — the standard for contact-form and general inquiries. On projects with an active maintenance agreement, priority order and response time are defined separately and clearly in the scope contract; a critical outage and a minor visual fix are never treated at the same priority.",
+      "detail": [
+        "A single fixed SLA number can't apply equally to every project, since infrastructure, traffic load, and criticality vary significantly from one project to the next; that's why response time is defined as a project-specific line in the contract rather than a general promise.",
+        "For general questions and quote requests, the 24-hour response is applied consistently; for complex requests, that means a next step — usually a discovery call proposal — arrives within 24 hours, not a firm price. The firm price comes once scope is clear."
+      ]
+    },
+    "backups-and-uptime": {
+      "q": "What happens with backups and outages?",
+      "a": "We carefully choose hosting platforms (Vercel, Supabase, Google Cloud, and similar) that offer daily automated backups and managed infrastructure; recovery in an outage largely relies on those providers' own infrastructure guarantees. For critical projects, a disaster-recovery procedure is defined separately during the architecture phase, not added later.",
+      "detail": [
+        "RTO — acceptable downtime — and RPO — acceptable data-loss window — are set together with you while the architecture is built and come with tested recovery procedures; disaster recovery isn't an afterthought for us, it's an integral part of the design from the start.",
+        "Piton Studios' own site is fully static and uses no database, so backups aren't relevant to our own site; on client projects it's set up carefully based on the infrastructure choice and how critical the data is — there's no single default."
+      ]
+    },
+    "security-updates": {
+      "q": "Who's responsible for security updates?",
+      "a": "At delivery, all dependencies are up to date and audited. Updates after that fall to us if you're on a maintenance package, or to your own team taking over the project if not — the contract states clearly which applies. Since the code repository belongs to you, you can continue with your own team or another agency at any time.",
+      "detail": [
+        "Input validation, CSRF protection, rate limiting, and regular dependency audits are an integral part of standard delivery; these aren't a one-time setup but items that need continuous attention throughout the project's lifecycle, growing more important over time — never a set-and-forget task.",
+        "For clients without a maintenance package, we also document clearly after delivery which dependencies need regular updates, so their own team or another agency taking over can do so smoothly with no loss of information — never needing to start from zero."
+      ]
+    },
+    "who-owns-the-code": {
+      "q": "Who owns the code and design?",
+      "a": "Once payment is complete, ownership of the source code, design files, and every delivered output transfers fully to you; the code repository, domain, and accounts are registered in your name. External licenses — fonts, stock imagery, or third-party SaaS subscriptions — fall outside this scope and are governed by their own license terms.",
+      "detail": [
+        "At go-live, once deployment, monitoring, and backups are set up, the domain, code repository, and all accounts are handed over to you in full — that's the real guarantee of your freedom to switch agencies; you're never obligated to keep working with us, the decision always stays yours.",
+        "Third-party licenses — purchased fonts, stock imagery, paid SaaS subscriptions, and similar — don't transfer to you automatically with the project; their license terms are spelled out separately and clearly in the scope document, so there are no surprises after delivery, everything is written down up front."
+      ]
+    },
+    "contract-and-nda": {
+      "q": "Do you sign a contract and NDA?",
+      "a": "Yes, we sign a contract covering scope and payment terms on every project; a separate non-disclosure agreement (NDA) can also be signed on request. This isn't legal advice — we always recommend reviewing contract details carefully with your own legal counsel.",
+      "detail": [
+        "The contract is built on the scope document that comes out of discovery; we never quote before scope is written down, so the contract rarely contains a surprise clause — it's simply what was discussed and agreed on during discovery, put into writing, with no extra clause or hidden condition ever added.",
+        "An NDA is usually requested separately when a not-yet-public product or a strategy that needs protecting from competitors is involved; on a standard website project, most clients don't need one — a single contract is usually more than enough on every front."
+      ]
+    },
+    "kvkk-gdpr": {
+      "q": "Do you ensure KVKK/GDPR compliance?",
+      "a": "We build the technical infrastructure to meet the core requirements of KVKK (Turkey's personal data protection law) and GDPR — data minimization, access control, column-level masking where needed. But this is technical compliance, not legal advice; for legal obligations like privacy notices, explicit consent flows, and data processing agreements, you need to work with your own legal counsel.",
+      "detail": [
+        "On data engineering projects, we apply column-level masking, role-based access control, and data classification as standard; these practices substantially strengthen the technical side of compliance but never fully remove your legal responsibility — we keep that distinction clear from the start.",
+        "We apply the same principle on our own site by collecting the least data possible: no database, contact form data goes straight to email via Resend and isn't stored in any system — that's our standing, unchanging default too."
+      ]
+    },
+    "data-storage-location": {
+      "q": "Where is our data stored?",
+      "a": "It depends on the project — we typically build infrastructure on Vercel and Supabase, in whichever geographic region fits your needs; the region is settled with you at project start based on your data privacy requirements. Piton Studios' own site uses no database at all; contact form data goes straight to email via Resend and isn't stored separately.",
+      "detail": [
+        "We don't claim a fixed default region because the right answer varies significantly client to client — some projects prefer EU hosting, others need local hosting; this decision is made together with you during the architecture phase, based on your requirements, and is never imposed unilaterally.",
+        "The same minimal approach applies to analytics: on our own site we use Vercel Analytics and Speed Insights, both cookie-free and collecting no personal data from visitors — only aggregate, fully anonymous statistics, with no identifying information ever processed."
+      ]
+    },
+    "portfolio-usage": {
+      "q": "Will you feature our project in your portfolio?",
+      "a": "Only with your permission. By default we'd like to showcase completed projects in our portfolio as references, but for projects requiring confidentiality we either get your approval first or don't share at all — this preference is usually settled with you upfront at the contract stage and isn't changed unilaterally later.",
+      "detail": [
+        "On collaborative projects we show that just as transparently: on projects run with Saiber, for example, the collaboration is noted clearly and separately on the project detail page — credit is never presented as entirely ours, effort is always attributed correctly.",
+        "When a sharing request comes in, a screenshot and a short summary are usually enough; client data, internal system information, or anything resembling a trade secret is never included in the portfolio under any circumstance — we don't compromise on this at all."
+      ]
+    },
+    "exit-and-handover": {
+      "q": "If we end the engagement, how does handover work?",
+      "a": "Since the code repository, domain, hosting, and all accounts are already registered in your name from the start, leaving creates no technical obstacle — there's no access for us to revoke. On request we also provide up-to-date documentation and a short usage handover call, both optional.",
+      "detail": [
+        "This is a natural result of how we go live: on every project we launch, the domain, code repository, and accounts are already handed over to you, and your team gets a short usage handover — the handover isn't built in on the day the relationship ends, it's designed in from the day the project starts, never a step added later.",
+        "If there's an ongoing maintenance agreement, support up to the termination date is completed in full as stated in the contract; after that, your own team or another agency taking over can pick up maintenance directly, smoothly, with no loss of information."
+      ]
+    },
+    "remote-work": {
+      "q": "Do you work remotely, or is an in-person meeting possible?",
+      "a": "We work fully remote — the studio is based in Turkey, and the whole process runs on video calls, written communication, and weekly previews. An in-person meeting can be considered on request when location allows, but that's not our standard, default way of working.",
+      "detail": [
+        "During development, a working version is published live to a preview URL every week; what we ask of you is a short weekly look, not a long meeting chain or constantly asking for status — the process itself is already visible right there in the preview.",
+        "That same rhythm continues after launch: a short monthly review call goes over the metrics together, and working remotely never reduces the frequency or quality of communication — it just changes the format and the channel used at that moment."
+      ]
+    },
+    "languages-spoken": {
+      "q": "What languages do you communicate in?",
+      "a": "Turkish, English, and Russian — our site is live in all three, and the entire process can run comfortably and fluently in whichever of those three you prefer; there's no restriction on our end.",
+      "detail": [
+        "For written communication — email, WhatsApp, and all project documentation — all three languages are used with the same fluency; which language to use usually settles naturally at first contact, with no separate preference step or form to fill out.",
+        "For international clients working across time zones, written and asynchronous communication — weekly summaries, written task tracking, and similar — is especially favored; this approach makes both the language and time-zone gap a small, practically irrelevant detail and never slows communication down."
+      ]
+    },
+    "contact-channels": {
+      "q": "How can we reach you?",
+      "a": "By email (hi@pitonstudios.com) or WhatsApp (+90 543 950 07 50); the contact form on the site also lands directly in our inbox when submitted. General questions and new business inquiries are handled through the same channels, by the same team, at a similar speed — there's no separate queue.",
+      "detail": [
+        "The contact form routes to email through Resend; whatever you leave in the form is never stored in a separate database — it goes straight to our inbox to be answered and stays there. We don't run a separate customer-record system; that's a deliberate privacy choice on our part.",
+        "For something urgent or quick, WhatsApp works better in practice; for a more detailed project description, email or the form works better — but whichever channel you pick, you reach the same team, at roughly the same speed, with the same care and attention."
+      ],
+      "list": [
+        "Email: hi@pitonstudios.com",
+        "WhatsApp: +90 543 950 07 50",
+        "On-site contact form"
+      ]
+    },
+    "response-to-inquiry": {
+      "q": "How quickly do you respond to quote requests?",
+      "a": "We generally respond to quote requests within 24 hours. Complex requests can take a bit longer, because the first reply is usually a discovery call proposal rather than a firm price — a fixed price is only given once scope is written down, that is, after discovery is complete.",
+      "detail": [
+        "The reason is that we never give a price before scope is written down: in the discovery call we work out together what the job actually is, because a quote based on a wrong assumption becomes a serious, costly problem for both sides when it changes direction mid-development — we'd rather prevent that upfront.",
+        "What we ask for the discovery call is an hour of your time and any numbers you already have — monthly inquiry volume, conversion rate, transaction volume, and similar. The clearer that information, the faster and more accurate the quote — we don't work with a guessed number."
+      ]
+    },
+    "international-clients": {
+      "q": "Can you work with international clients, and how is billing handled?",
+      "a": "Yes, we work remotely with international clients regularly and comfortably; communication runs in Turkish, English, or Russian, and time-zone differences are accounted for upfront when scheduling calls. Billing can be in TRY, EUR, or USD depending on the project's language and market — since exact tax and invoicing rules depend on your own country's regulations, we don't provide legal or tax advice on this.",
+      "detail": [
+        "Time-zone differences don't create a real practical problem, since the process already runs written and asynchronous: weekly preview releases, written progress updates, and pre-scheduled calls work just as clearly and efficiently across time zones, with little delay or friction.",
+        "Currency is usually settled together based on the client's own accounting practice; for questions of exact tax liability, VAT, or withholding, we strongly and consistently recommend working with your own accountant or legal counsel — that's never been our area of expertise."
+      ]
     }
   }
 }

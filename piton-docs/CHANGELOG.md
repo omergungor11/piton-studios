@@ -1,5 +1,46 @@
 # Changelog
 
+## 2026-08-14 (19)
+
+### Added
+- **SSS sayfasi** — `/sss`, `/en/faq`, `/ru/faq`. 12 kategori, **75 soru x 3 dil**.
+  Plan: `piton-plans/faq-page-plan.md`
+  - `src/lib/faq.ts` — kanonik yapi (kategori sirasi, kalici soru id'leri, ilgili
+    hizmet/blog baglantilari). Metinler `messages/*.json` -> `faqItems`
+  - `src/lib/faq-content.ts` — eksik ceviriyi sessizce atlayan okuyucu; JSON-LD
+    ve llms.txt ayni kaynagi kullaniyor
+  - JSON-LD: **FAQPage** (75 soru), **WebPage** (`speakable`, `dateModified`),
+    BreadcrumbList, Organization
+  - `src/lib/seo.ts`: `webPageJsonLd()` eklendi, `faqJsonLd()` geriye uyumlu
+    sekilde `@id` + `inLanguage` alacak hale getirildi
+- **`/llms.txt`** — llmstxt.org bicimi duz metin site dizini: 12 hizmet,
+  75 SSS sorusu kalici anchor'iyla, blog yazilari, iletisim
+- **AI crawler izinleri** (`robots.ts`) — GPTBot, OAI-SearchBot, ClaudeBot,
+  PerplexityBot, Google-Extended, Applebot-Extended vd. 14 bot icin acik `allow`
+- `scripts/check-translations.ts` artik `faqItems`'i da dogruluyor (426 kontrol, 0 sorun)
+
+### GEO/LLM tasarim kararlari
+- **Cevap-once yazim**: her cevabin ilk paragrafi soruyu 40-60 kelimede dogrudan
+  yanitliyor — LLM'in alintiladigi pasaj bu
+- **Native `<details>`**: cevaplar akordeon kapaliyken de DOM'da. Kosullu render
+  (`{open && ...}`) kullanilmadi; JS kapaliyken de 75 cevabin tamami gorunur
+- **Kalici anchor** (`#faq-{id}`): id'ler degismez, disaridan tek soruya atif yapilabilir
+- Arama filtresi eslesmeyeni **DOM'dan silmiyor**, `hidden` veriyor
+
+### Changed
+- `.bottom-chrome` grid'i `auto 1fr auto` -> `1fr auto 1fr`. Onceki halde ortadaki
+  `.scene-indicator` kendi sutununun ortasindaydi, ekranin degil — yan sutunlarin
+  genisligi farkli oldugu icin gorunur bicimde kayiktir. `.tag-avail`'e
+  `justify-self: start` eklendi (1fr icinde esnemesin)
+- Meta partner ikonu gercek Meta "infinity" markasiyla degistirildi (simple-icons)
+- Nav + footer'a SSS linki — `chrome.tsx` **ve** `page-shell.tsx` ikisine birden
+
+### Notlar
+- Statik sayfa 506 -> 514 (3 SSS + 3 OG gorseli + llms.txt)
+- Anasayfada **onceden var olan** bir hata tespit edildi, duzeltilmedi:
+  `workScene.heading` (`"Öne Çıkan <em>Projeler</em>"`) next-intl'e rich-text
+  handler'i verilmeden cagriliyor, konsola `FORMATTING_ERROR` basiyor
+
 ## 2026-08-13 (18)
 
 ### Removed
