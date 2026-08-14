@@ -39,16 +39,19 @@ export default function ServicesScene() {
         </div>
       </Reveal>
       <div className="svc-grid" ref={gridRef}>
-        {SERVICES.filter((s) => FEATURED.includes(s.slug)).map((s) => {
+        {SERVICES.filter((s) => FEATURED.includes(s.slug)).map((s, i) => {
+          // Anasayfada 6 one cikan hizmet gosteriliyor; numaralar data.ts'teki global
+          // sirayi degil, bu listedeki sirayi yansitmali (01-06).
+          const n = String(i + 1).padStart(2, '0');
           const hasTranslation = (() => { try { ts(`${s.slug}.title`); return true; } catch { return false; } })();
           const title = hasTranslation ? ts(`${s.slug}.title`) : s.title;
           const desc = hasTranslation ? ts(`${s.slug}.desc`) : s.desc;
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
+            <Link key={s.slug} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
               <div className="svc-top">
-                <span className="n">{s.n}</span>
+                <span className="n">{n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>
               </div>
               <div className="svc-icon">
