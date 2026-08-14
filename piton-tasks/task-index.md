@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 20 | 20 | 0 | 0 | 0 |
-| **Total** | | **49** | **49** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 21 | 21 | 0 | 0 | 0 |
+| **Total** | | **50** | **50** | **0** | **0** | **0** |
 
-**Progress**: 49/49 (100%) ✓
+**Progress**: 50/50 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -96,6 +96,7 @@
 | TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `3e6bdc5` |
 | TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `a3faf7d` |
 | TASK-050 | Hizmet sayfalarindaki abartili rakamlar portfoye dayandirildi (15 hizmet x 4 rakam x 3 dil; site ici celiski 750+ vs 40+); 3 hizmet kaldirildi (ai-training, ai-chatbot, prompt-engineering) + 301 yonlendirme | L | COMPLETED | `4fa2651`, `00fb701` |
+| TASK-051 | SSS sayfasi: 12 kategori x 75 soru x 3 dil (225 soru-cevap), FAQPage + WebPage(speakable) JSON-LD, `/llms.txt`, 14 AI crawler izni, cevap-once GEO yazimi, native `<details>` (kapaliyken de DOM'da) | L | COMPLETED | — |
 
 ---
 

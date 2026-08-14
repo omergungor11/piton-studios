@@ -180,11 +180,59 @@ export function serviceJsonLd(input: {
   };
 }
 
-export function faqJsonLd(faq: { q: string; a: string }[]): JsonLdObject | null {
+/**
+ * Sayfanin kendisini tanimlayan WebPage dugumu.
+ *
+ * `@id` sayesinde ayni sayfadaki diger dugumler (FAQPage, BreadcrumbList)
+ * bu dugume baglanabilir; `speakable` sesli asistanlara hangi bolumun
+ * okunabilecegini soyler — GEO gorunurlugu icin isaret degeri var.
+ */
+export function webPageJsonLd(input: {
+  url: string;
+  name: string;
+  description: string;
+  locale: Locale;
+  dateModified?: string;
+  breadcrumbUrl?: string;
+  speakableSelectors?: string[];
+}): JsonLdObject {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${input.url}#webpage`,
+    url: input.url,
+    name: input.name,
+    description: input.description,
+    inLanguage: input.locale,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+    ...(input.breadcrumbUrl ? { breadcrumb: { '@id': input.breadcrumbUrl } } : {}),
+    ...(input.speakableSelectors?.length
+      ? {
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: input.speakableSelectors,
+          },
+        }
+      : {}),
+  };
+}
+
+/**
+ * FAQPage dugumu. `opts` opsiyoneldir — mevcut hizmet sayfasi cagrilari
+ * tek parametreyle calismaya devam eder.
+ */
+export function faqJsonLd(
+  faq: { q: string; a: string }[],
+  opts: { id?: string; inLanguage?: Locale } = {}
+): JsonLdObject | null {
   if (!faq.length) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    ...(opts.id ? { '@id': opts.id } : {}),
+    ...(opts.inLanguage ? { inLanguage: opts.inLanguage } : {}),
     mainEntity: faq.map((item) => ({
       '@type': 'Question',
       name: item.q,

@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries('/projects', { changeFrequency: 'weekly', priority: 0.9 }),
     ...entries('/services', { changeFrequency: 'monthly', priority: 0.9 }),
     ...entries('/blog', { changeFrequency: 'weekly', priority: 0.8 }),
+    ...entries('/faq', { changeFrequency: 'monthly', priority: 0.8 }),
     ...entries('/about', { changeFrequency: 'yearly', priority: 0.6 }),
     ...entries('/contact', { changeFrequency: 'yearly', priority: 0.7 }),
   ];

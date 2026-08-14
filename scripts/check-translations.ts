@@ -16,6 +16,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { WORKS, SERVICES, STORIES } from '../src/lib/data';
+import { FAQ_ITEMS } from '../src/lib/faq';
 
 const LOCALES = ['tr', 'en', 'ru'] as const;
 type Locale = (typeof LOCALES)[number];
@@ -80,6 +81,15 @@ function collect(): Row[] {
         status: statusOf(m.servicesList?.[service.slug], ['title', 'desc', 'longDesc']),
       });
     }
+    // SSS: `detail` ve `list` opsiyonel — zorunlu olan soru ve cevap-once lead.
+    for (const item of FAQ_ITEMS) {
+      rows.push({
+        locale,
+        namespace: 'faqItems',
+        slug: item.id,
+        status: statusOf(m.faqItems?.[item.id], ['q', 'a']),
+      });
+    }
   }
 
   return rows;
@@ -102,7 +112,7 @@ function main() {
     };
 
     console.log(
-      `${locale}: ${byNs('works')}, ${byNs('stories')}, ${byNs('servicesList')}` +
+      `${locale}: ${byNs('works')}, ${byNs('stories')}, ${byNs('servicesList')}, ${byNs('faqItems')}` +
         (bad.length ? `  → ${bad.length} SORUNLU` : '  ✓')
     );
 

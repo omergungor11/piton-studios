@@ -23,6 +23,10 @@
     "contact": {
       "title": "İletişim",
       "description": "Projenizi konuşalım. Piton Studios ile iletişime geçin — genelde 24 saat içinde dönüş yapıyoruz."
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
     }
   },
   "nav": {
@@ -35,7 +39,8 @@
     "gallery": "Galeri",
     "home": "Ana Sayfa",
     "contactCta": "İletişime Geç",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "SSS"
   },
   "blog": {
     "metaTitle": "Blog",
@@ -550,7 +555,8 @@
     "gallery": "Galeri",
     "contact": "İletişim",
     "about": "Hakkında",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "SSS"
   },
   "works": {
     "velis-ltd": {
@@ -2216,6 +2222,757 @@
         "Temiz tipografi, akıcı animasyonlar ve responsive tasarım ile profesyonel bir ilk izlenim oluşturmayı hedefledik."
       ],
       "role": "Tasarım / Geliştirme"
+    }
+  },
+  "faqPage": {
+    "title": "SSS",
+    "subtitle": "Sıkça Sorulan Sorular",
+    "lead": "Fiyat, süre, teknoloji, sahiplik ve destek — teklif öncesi en çok sorulan 75 sorunun doğrudan yanıtı. Aradığınız soru burada yoksa bize yazın.",
+    "updatedLabel": "Son güncelleme",
+    "countLabel": "{count} soru",
+    "searchPlaceholder": "Soru ara — örn. \"fiyat\", \"süre\", \"kod sahipliği\"",
+    "searchEmpty": "Bu aramaya uyan soru bulunamadı. Farklı bir kelime deneyin veya doğrudan bize yazın.",
+    "resultCount": "{count} sonuç",
+    "allCategories": "Tümü",
+    "relatedServices": "İlgili hizmetler",
+    "relatedPosts": "Detaylı okuma",
+    "copyLink": "Bu sorunun bağlantısı",
+    "ctaEyebrow": "Hâlâ cevapsız mı?",
+    "ctaTitle": "Sorunuz burada yok mu?",
+    "ctaDesc": "Projenizi anlatın; bir iş günü içinde kapsam, süre ve bütçe bandıyla birlikte net bir yanıt dönelim.",
+    "ctaButton": "İletişime geçin",
+    "categories": {
+      "studio": {
+        "title": "Stüdyo & Ekip",
+        "desc": "Piton Studios kimdir, nerede çalışır ve projenizde kiminle muhatap olursunuz."
+      },
+      "services": {
+        "title": "Hizmetler & Kapsam",
+        "desc": "Hangi işleri alıyoruz, kapsam nerede başlayıp nerede bitiyor."
+      },
+      "pricing": {
+        "title": "Fiyatlandırma & Ödeme",
+        "desc": "Bütçe bantları, ödeme planı ve fiyata dahil olan her şey."
+      },
+      "process": {
+        "title": "Süreç & Zaman Çizelgesi",
+        "desc": "İlk görüşmeden yayına kadar adımlar, süreler ve sizden beklenenler."
+      },
+      "tech": {
+        "title": "Teknoloji & Altyapı",
+        "desc": "Kullandığımız stack, barındırma, performans ve erişilebilirlik yaklaşımı."
+      },
+      "seo": {
+        "title": "SEO, GEO & AI Görünürlüğü",
+        "desc": "Aramada ve yapay zeka yanıtlarında görünür olmanın yolu."
+      },
+      "ai": {
+        "title": "Yapay Zeka & Otomasyon",
+        "desc": "Yapay zekayı işinizde nerede, hangi araçlarla ve hangi güvenceyle kullanırız."
+      },
+      "ecommerce": {
+        "title": "E-ticaret",
+        "desc": "Platform seçimi, ödeme ve kargo entegrasyonları, dönüşüm optimizasyonu."
+      },
+      "mobile": {
+        "title": "Mobil & PWA",
+        "desc": "Native uygulama mı PWA mı, mağaza yayını ve çevrimdışı çalışma."
+      },
+      "support": {
+        "title": "Bakım, Destek & Garanti",
+        "desc": "Yayın sonrası ne oluyor: bakım paketleri, hata garantisi ve yanıt süreleri."
+      },
+      "legal": {
+        "title": "Sözleşme, Sahiplik & Veri",
+        "desc": "Kod kime ait, hangi sözleşmeler imzalanıyor, veriler nerede saklanıyor."
+      },
+      "working": {
+        "title": "Çalışma Modeli & İletişim",
+        "desc": "Uzaktan çalışma, diller, iletişim kanalları ve yurt dışı faturalandırma."
+      }
+    }
+  },
+  "faqItems": {
+    "what-is-piton-studios": {
+      "q": "Piton Studios nedir, ne iş yapar?",
+      "a": "Piton Studios, 2021'de kurulmuş bağımsız bir dijital stüdyodur; web tasarımı, web uygulaması, otomasyon, yapay zeka entegrasyonu ve dijital büyüme alanlarında fikir aşamasından lansmana uçtan uca çalışır. Portfolyosunda 49 teslim edilmiş proje bulunur.",
+      "detail": [
+        "Tasarım, kod ve yapay zekâyı tek çatı altında toplayan bir yapıyla çalışır — ayrı ajanslar arasında koordinasyon kaybı olmadan, aynı ekip keşiften devreye almaya kadar sürecin tamamını yürütür.",
+        "Web tasarım ve web uygulamadan e-ticarete, süreç otomasyonundan AI/ML projelerine ve SEO/GEO çalışmalarına kadar 12 hizmet alanında çalışır; hangisinin doğru çözüm olduğuna proje bazında keşif görüşmesinde karar verilir."
+      ],
+      "list": [
+        "Web tasarım ve web uygulama",
+        "E-ticaret ve entegrasyonlar",
+        "Otomasyon ve AI entegrasyonu",
+        "SEO & GEO",
+        "Bulut altyapı ve veri mühendisliği"
+      ]
+    },
+    "where-are-you-located": {
+      "q": "Nerede bulunuyorsunuz, hangi bölgelere hizmet veriyorsunuz?",
+      "a": "Piton Studios Türkiye merkezli, tamamen uzaktan çalışan bağımsız bir stüdyodur. Fiziksel ofis ziyareti şart değildir; görüşmeler görüntülü toplantı ve yazılı iletişimle yürütülür, bu sayede yerel işletmelerden uluslararası müşterilere kadar coğrafi sınır gözetmeden çalışılır.",
+      "detail": [
+        "Ekip Türkiye saat diliminde çalışır ama proje akışı buna bağlı değildir — keşif, tasarım ve geliştirme adımları zaman farkına göre planlanır, gerektiğinde erken ya da geç saatte görüşme ayarlanır.",
+        "Yurt dışı müşteriler için fatura ve ödeme süreçleri uluslararası transfer ve kart ödemelerine uygun şekilde kurulur; detaylar teklif aşamasında netleştirilir."
+      ]
+    },
+    "team-size": {
+      "q": "Ekip kaç kişi, projemde kiminle çalışacağım?",
+      "a": "Çekirdek ekip küçük ve odaklı tutulur; kurucu, full-stack geliştirici ve dijital ürün tasarımcısı olarak projenin keşiften devreye almaya kadar tüm aşamalarının sorumluluğunu üstlenir. Ölçek veya çoklu disiplin gerektiren işlerde Saiber iş birliğiyle kapasite büyütülür, ama tek muhatabınız değişmez.",
+      "detail": [
+        "Küçük ekip yapısının avantajı sorumluluk kaybının olmamasıdır — projenizi devralan kişi keşiften lansmana kadar aynı kişidir, brief'ler arasında bilgi kaybı yaşanmaz.",
+        "Çoklu disiplin isteyen büyük kapsamlı işlerde Saiber ortaklığıyla ek kapasite devreye girer; bu ortaklık portfolyoda 18 projede görünür ve müşteri için ayrı bir tedarikçi görüşmesi gerektirmez."
+      ]
+    },
+    "why-choose-you": {
+      "q": "Neden büyük bir ajans yerine Piton Studios'u seçmeliyim?",
+      "a": "Büyük ajanslarda proje birden fazla ekip arasında el değiştirir; Piton Studios'ta aynı kişi keşiften devreye almaya kadar projenin sorumluluğunu taşır — bilgi kaybı, katmanlar arası iletişim gecikmesi ve genel ajans yüzeyselliği olmaz.",
+      "detail": [
+        "Kapsam yazılı olmadan fiyat verilmez, her adımın çıktısı ve sizden istenen belli — sürpriz fatura veya belirsiz zaman çizelgesi olmaz.",
+        "Küçük ölçek, tasarım, kod ve AI'ı aynı çatı altında tutmayı mümkün kılar; ayrı tedarikçiler arasında koordinasyon kaybetmek yerine tek elden ilerlenir. Büyük hacimli veya çok disiplinli işlerde Saiber ortaklığıyla kapasite genişletilir."
+      ]
+    },
+    "saiber-partnership": {
+      "q": "Saiber iş birliği ne anlama geliyor?",
+      "a": "Saiber, bazı projelerde ek kapasite ve uzmanlık için birlikte çalışılan bir iş ortağıdır; portfolyodaki 18 projede 'İş Birliği: Saiber' notu bu ortaklığı gösterir. Piton Studios projeyi yönetir, Saiber ilgili adımlarda destek verir.",
+      "detail": [
+        "Ortaklık; ölçek, zaman baskısı veya ek disiplin gerektiren projelerde devreye girer. Müşteri için tek muhatap Piton Studios'tur — süreç, iletişim ve teslim sorumluluğu değişmez.",
+        "Hangi projede iş birliği olduğu proje detay sayfasında 'İş Birliği' meta bilgisi olarak açıkça görünür; şeffaflık için gizlenmez."
+      ]
+    },
+    "portfolio-proof": {
+      "q": "Daha önce hangi işleri yaptınız, referans verebilir misiniz?",
+      "a": "Portfolyoda 49 teslim edilmiş proje yer alır — web tasarım, web uygulama, e-ticaret, AI/ML, otomasyon ve simülasyon disiplinlerinde. Nexos Investment, Ambalaj Cini ve Sammys gibi öne çıkan işler proje sayfasında case study olarak incelenebilir.",
+      "detail": [
+        "Her proje sayfasında müşteri, yıl, kapsam ve kullanılan teknoloji görünür; büyük vakalarda süreç ve sonuç ayrıca ayrıntılı case study olarak anlatılır.",
+        "Doğrudan referans görüşmesi talep edilirse, gizlilik anlaşması kapsamındaki projeler hariç, ilgili müşteriyle bağlantı kurulması için iletişime geçilebilir."
+      ]
+    },
+    "services-overview": {
+      "q": "Hangi hizmetleri sunuyorsunuz?",
+      "a": "Piton Studios 12 hizmet alanında çalışır: web tasarım, web uygulama, progressive web app, otomasyon, AI entegrasyonu, Google Ads, SEO & GEO, eğitim (How To Do), veri mühendisliği, bulut altyapı, agentic AI ve AI danışmanlığı.",
+      "detail": [
+        "Her hizmet kendi süreci, teknoloji seti ve sık sorulan sorularıyla ayrı bir sayfada anlatılır. Bir projede birden fazla hizmet birlikte yürütülebilir — örneğin web uygulama, otomasyon ve SEO tek kapsamda birleşebilir.",
+        "Hangi hizmetin doğru çözüm olduğuna keşif görüşmesinde birlikte karar verilir; müşterinin hizmet adını bilmesi gerekmez, sorunu anlatması yeterlidir."
+      ],
+      "list": [
+        "Web tasarım ve web uygulama",
+        "Progressive web app",
+        "Otomasyon ve AI entegrasyonu",
+        "Google Ads ve SEO & GEO",
+        "Veri mühendisliği ve bulut altyapı",
+        "Agentic AI ve AI danışmanlığı"
+      ]
+    },
+    "small-projects": {
+      "q": "Küçük ölçekli işler alıyor musunuz, minimum proje büyüklüğü var mı?",
+      "a": "Sabit bir minimum proje büyüklüğü yok — şablon tabanlı küçük bir tanıtım sitesinden özel web uygulamasına kadar farklı ölçekte iş alınır. Belirleyici olan bütçe büyüklüğü değil, kapsamın net tanımlanabilir olmasıdır.",
+      "detail": [
+        "Çok küçük işlerde (tek sayfa, basit düzeltme) süreç sadeleştirilir; keşif görüşmesi kısa tutulur, tam altı adımlı teslim akışının tamamı uygulanmaz.",
+        "Kapsamı belirsiz, sürekli büyüyen 'küçük' işler pratikte büyük projeye dönüşür — bu durumda iş aşamalara bölünür ve önce en kritik parça teslim edilir."
+      ]
+    },
+    "redesign-existing-site": {
+      "q": "Mevcut sitemizi sıfırdan mı yapıyorsunuz, yoksa yenileyebiliyor musunuz?",
+      "a": "İkisi de mümkün. Mevcut site altyapısı sağlamsa içerik ve tasarım üzerinden yenileme yapılır; altyapı sınırlıyorsa (yavaş, çok dilli olamıyor, SEO'ya kapalı) sıfırdan yeniden geliştirme önerilir. Karar, keşif aşamasında mevcut sitenin teknik denetimi yapıldıktan sonra birlikte verilir.",
+      "detail": [
+        "Yenilemede mevcut içerik envanteri, SEO değeri (backlink, sıralama) ve marka varlıkları korunur; sadece görsel dil ve gerekirse teknoloji katmanı değişir.",
+        "Sıfırdan yapımda ise yönlendirme haritası ve içerik geçiş planı önceden çıkarılır — mevcut SEO değeri kaybedilmeden geçiş yapılır."
+      ]
+    },
+    "branding-and-design": {
+      "q": "Logo ve marka kimliği de yapıyor musunuz?",
+      "a": "Evet, marka kimliği web tasarım hizmetinin bir parçasıdır — logo, renk paleti, tipografi ve temel marka dili sıfırdan kurulur. Zaten bir markanız varsa mevcut sistemle çalışılır ve dijitale uyarlanır, üzerine yeni bir kimlik yazılmaz.",
+      "detail": [
+        "Sıfırdan marka kurulumu, tasarım sürecinin görsel yön adımıyla birleşir: iki farklı görsel yön keşfedilir, biri geliştirilir, sonrasında tasarım sistemine dönüştürülür.",
+        "Mevcut markası olan müşterilerde önce bir marka denetimi yapılır — logo, renk ve tipografinin dijital ortamda tutarlı çalışıp çalışmadığı kontrol edilir, sonra uyarlanır."
+      ]
+    },
+    "content-and-copy": {
+      "q": "Site metinlerini ve görselleri siz mi hazırlıyorsunuz?",
+      "a": "İkisi de mümkün — müşteri kendi metin ve görsellerini sağlayabilir ya da Piton Studios üretebilir. İçerik üretimi bütçeye eklendiğinde toplam maliyetin yaklaşık %15-35'i kadar ek kalem oluşturur, çünkü metin yazarlığı ve fotoğraf/video ayrı bir iş yüküdür.",
+      "detail": [
+        "İçeriğin kim tarafından sağlanacağı sözleşmede net yazılır — bu, projelerin en sık gecikme nedenidir; tasarım ve kod hazır olsa da içerik gelmediği için lansman haftalarca ertelenebilir.",
+        "Kendi içeriğinizi hazırlıyorsanız bütçenin bir kısmını doğrudan geri kazanırsınız; hazırlamıyorsanız içerik üretimi de brief aşamasında kapsam ve teslim tarihine dahil edilir."
+      ]
+    },
+    "white-label": {
+      "q": "Ajanslara white-label / taşeron olarak çalışıyor musunuz?",
+      "a": "Evet, ajanslara white-label geliştirme ve tasarım desteği veriliyor — müşteriye karşı ajans marka adı görünür kalır, teknik uygulama Piton Studios tarafından yürütülür. Kapasite yetersiz kaldığında veya özel bir uzmanlık gerektiğinde tercih edilir.",
+      "detail": [
+        "Süreç gizlilik anlaşmasıyla korunur; iletişim doğrudan ajans üzerinden yürütülür, son müşteriyle temas ajansın tercihine bağlıdır.",
+        "Fiyatlandırma ve teslim süreleri standart proje akışıyla aynıdır; fark yalnızca marka görünürlüğü ve iletişim kanalıdır."
+      ]
+    },
+    "industries": {
+      "q": "Hangi sektörlerde deneyiminiz var?",
+      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 49 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
+      "detail": [
+        "2021-2022 döneminde kurumsal site ve marka işleri, 2022-2023'te e-ticaret ve emlak/turizm, 2024'te finans ve taşımacılık, 2025'te AI/ML ve SaaS ağırlıklı projeler öne çıktı.",
+        "Sektöre özel derin mevzuat bilgisi gerektiren regüle alanlarda (sağlık, hukuk gibi) proje öncesi ek araştırma yapılır; bu durum keşif süresini biraz uzatabilir."
+      ]
+    },
+    "website-cost": {
+      "q": "Bir web sitesi ne kadara mal olur?",
+      "a": "Tek bir ortalama yanıltıcıdır: şablon tabanlı tanıtım sitesi 10.000-30.000 ₺, özel tasarım kurumsal site 35.000-120.000 ₺, e-ticaret 40.000-200.000 ₺, özel web uygulaması 150.000 ₺ ve üzeridir. Belirleyici olan sayfa sayısı değil, özel geliştirme gerektiren işlev sayısıdır.",
+      "detail": [
+        "Bu bantlar gösterge niteliğindedir, taahhüt değildir — gerçek fiyat keşif görüşmesinden sonra yazılı kapsam dökümanıyla birlikte netleşir.",
+        "Fiyatı belirleyen altı değişken: tasarım kaynağı (hazır tema/özgün), dil sayısı, içerik yönetimi paneli, entegrasyon sayısı, performans/SEO bütçesi ve içeriğin kim tarafından üretileceğidir."
+      ],
+      "list": [
+        "Şablon/WordPress tanıtım sitesi: 10.000-30.000 ₺",
+        "Özel tasarım kurumsal site: 35.000-120.000 ₺",
+        "E-ticaret: 40.000-200.000 ₺",
+        "Özel web uygulaması: 150.000 ₺+"
+      ]
+    },
+    "pricing-model": {
+      "q": "Sabit fiyat mı, saatlik mi çalışıyorsunuz?",
+      "a": "Kapsamı net olan projelerde sabit fiyat, kapsamın süreç içinde şekilleneceği veya aşamalı büyüyeceği projelerde zaman-malzeme modeli uygulanır. Pratikte en sağlıklısı karışımdır: keşif aşaması sabit fiyat, sonrasında netleşen kapsam için sabit fiyatlı geliştirme teklifi.",
+      "detail": [
+        "Sabit fiyatta risk fiyata gömülür ve bütçe öngörülebilir olur; zaman-malzeme modelinde esneklik yüksektir ama toplam bütçe aralıklı tahmine dayanır.",
+        "Keşif aşaması atlanıp doğrudan sabit fiyat verilmesi güvenilir değildir — ya riski fiyata fazlasıyla yükler ya da proje ortasında ek teklife dönüşür. Bu yüzden kapsam yazılı olmadan fiyat verilmez."
+      ]
+    },
+    "whats-included-in-price": {
+      "q": "Fiyata neler dahil, gizli maliyet var mı?",
+      "a": "Teklif; keşif, tasarım, geliştirme, içerik/çeviri desteği, test ve devreye alma adımlarının tamamını kapsar — kapsam dökümanında yazılı olmayan hiçbir iş fiyata dahil edilmez ve sonradan eklenmez. Gizli maliyet, kapsamı belirsiz teklif almanın sonucudur.",
+      "detail": [
+        "Fiyata dahil olmayan tipik kalemler: alan adı, hosting/bulut ücreti, üçüncü taraf lisanslar (ödeme altyapısı, e-posta servisi) ve lansman sonrası bakım paketi — bunlar ayrı ve açık kalemler olarak yazılır.",
+        "Kapsam değişikliği (yeni sayfa, ek entegrasyon, ekstra revizyon turu) ücretsiz değildir ama gizli de değildir — her değişiklik ek teklif olarak görünür hale getirilir, sürpriz fatura çıkmaz."
+      ],
+      "list": [
+        "Dahil: keşif, tasarım, geliştirme, test, devreye alma",
+        "Dahil değil: alan adı, hosting, üçüncü taraf lisanslar",
+        "Ayrı kalem: lansman sonrası bakım/destek paketi"
+      ]
+    },
+    "payment-schedule": {
+      "q": "Ödeme planı nasıl işliyor?",
+      "a": "Ödeme, teslim adımlarına bağlı taksitlerle yapılır — tipik olarak keşif/sözleşme aşamasında bir ön ödeme, geliştirme ortasında bir ara ödeme ve devreye almada kalan bakiye. Oranlar proje büyüklüğüne göre teklifte netleşir.",
+      "detail": [
+        "Küçük ve kısa süreli işlerde (2-4 haftalık) iki taksitli plan (başlangıç ve teslim) yeterli olur; uzun süreli özel yazılım projelerinde sprint bazlı ödeme daha uygundur.",
+        "Yurt dışı müşteriler için uluslararası transfer veya kart ödemesi desteklenir; para birimi ve ödeme yöntemi teklif aşamasında belirlenir."
+      ]
+    },
+    "ecommerce-cost": {
+      "q": "E-ticaret sitesi maliyeti ne kadar?",
+      "a": "E-ticaret projeleri tipik olarak 40.000-200.000 ₺ bandındadır. Bandın genişliği ürün sayısından değil entegrasyon sayısından gelir — muhasebe veya ERP bağlantısı olan, kargo ve pazaryeri entegre edilmiş bir mağaza, bunlara sahip olmayanın yaklaşık iki katı maliyetlidir.",
+      "detail": [
+        "Fiyatı yükselten kalemler: ödeme altyapısı entegrasyonu, kargo ve pazaryeri entegrasyonları, stok ve sipariş akışı otomasyonu, iade süreç yönetimi ve çok dilli ürün kataloğu.",
+        "Ambalaj Cini projesinde e-ticaret altyapısı ile reklam yönetimini birlikte yürüttük ve %30 büyüme elde ettik — kapsam ve sonuç detayları proje sayfasındaki case study'de anlatılıyor."
+      ]
+    },
+    "ai-automation-cost": {
+      "q": "Yapay zeka / otomasyon projesi ne kadar tutar?",
+      "a": "Kesin bir bant yerine gösterge bir senaryo modeli kullanılır: 250 ₺/saat iş gücü maliyeti ve yaklaşık 70.000 ₺ kurulum bedeli varsayımıyla yatırım geri dönüşü hesaplanır. Gerçek maliyet, otomatikleştirilecek sürecin karmaşıklığına ve entegre edilecek sistem sayısına göre değişir.",
+      "detail": [
+        "Basit bir webhook tabanlı otomasyon (2-4 hafta) ile çok sistemli bir agent mimarisi (6-12 hafta) arasında fiyat farkı büyüktür; keşif aşamasında hangi sürecin ne kadar zaman kazandıracağı hesaplanır.",
+        "Yatırım kararı verirken önemli olan tek seferlik kurulum bedeli değil, otomasyonun aylık kazandırdığı iş gücü saatidir — bu senaryo modeli sürekli bakım ve geliştirme ihtiyacını da içerir."
+      ]
+    },
+    "running-costs": {
+      "q": "Yıllık işletme maliyetleri (hosting, alan adı, lisans) ne kadar?",
+      "a": "Statik ve yönetilen altyapı kullanan bir kurumsal sitede yıllık işletme maliyeti alan adı, hosting, e-posta ve yedekleme kalemleriyle toplamda geliştirme bedelinin yaklaşık %15-25'i kadardır. Eklenti tabanlı CMS kurulumlarında bu oran güvenlik güncellemeleri nedeniyle daha yüksektir.",
+      "detail": [
+        "Tipik gösterge kalemler: alan adı 500-1.500 ₺/yıl, hosting/bulut 0-6.000 ₺/yıl (statik sitelerde ücretsiz kademe çoğu zaman yeterli), kurumsal e-posta kullanıcı başına 1.200-5.000 ₺/yıl, içerik ve bakım 5.000-18.000 ₺/yıl.",
+        "Üç yıllık toplamda statik/yönetilen altyapı ile eklenti tabanlı CMS arasındaki fark büyür — SSL modern platformlarda dahildir, güvenlik güncellemesi statik sitede neredeyse sıfıra yakınken WordPress gibi kurulumlarda sürekli bir gider kalemidir."
+      ],
+      "list": [
+        "Alan adı: 500-1.500 ₺/yıl",
+        "Hosting/bulut: 0-6.000 ₺/yıl",
+        "Kurumsal e-posta: 1.200-5.000 ₺/yıl (kullanıcı başına)",
+        "İçerik ve bakım: 5.000-18.000 ₺/yıl"
+      ]
+    },
+    "budget-too-low": {
+      "q": "Bütçem bandınızın altında, ne yapmalıyım?",
+      "a": "Kapsamı aşamalara bölün — birinci aşamada gerçekten gereken sayfa ve özelliklerle yayına çıkılır, blog, çok dil veya panel gibi kalemler ikinci aşamaya bırakılır. Bu, işi ucuzlaştırmak değil doğru sırayla teslim etmektir.",
+      "detail": [
+        "İçeriği (metin, görsel) kendiniz sağlarsanız bütçenin yaklaşık %15'ini doğrudan geri kazanırsınız; hazır bileşen sistemlerini kabul etmek de maliyeti düşürür — her düğmenin özgün tasarlanması gerekmez.",
+        "Bütçeyi düşürmenin yanlış yolları da vardır: test aşamasını kesmek, SEO'yu sonraya bırakmak veya kapsamı okumadan en ucuz teklifi seçmek — bunlar kısa vadede tasarruf gibi görünse de orta vadede daha pahalıya patlar.",
+        "Bandın tamamen dışındaysanız bu dürüstçe söylenir; küçük bir başlangıç paketi önerilir ya da ihtiyacınıza daha uygun bir çözüm için yönlendirme yapılır."
+      ]
+    },
+    "how-project-starts": {
+      "q": "Bir proje nasıl başlıyor?",
+      "a": "Proje, iletişim formu veya WhatsApp üzerinden gelen bir talep sonrası genellikle 24 saat içinde dönülen bir ön görüşmeyle başlar; ardından 2-5 gün süren keşif adımına geçilir. Keşif sonunda yazılı kapsam dökümanı ve sabit fiyat teklifi verilir.",
+      "detail": [
+        "Keşif aşamasında mevcut sürecin haritası çıkarılır, kapsam ve öncelik sırası netleşir, başarının hangi sayıyla ölçüleceği kararlaştırılır. Bu adım çoğu projenin kazanıldığı ya da kaybedildiği yerdir.",
+        "Kapsam yazılı olmadan fiyat verilmez — sözlü mutabakat unutulur, yazılı kapsam dökümanı hem müşteriyi hem stüdyoyu korur."
+      ]
+    },
+    "project-timeline": {
+      "q": "Proje ne kadar sürer?",
+      "a": "Süre proje tipine göre değişir: bir web tasarım işi tipik olarak 3-6 hafta, bir web uygulaması 8-16 hafta, bir otomasyon projesi 2-4 hafta, bir AI entegrasyonu 6-12 hafta sürer. Tam teslim akışı keşiften devreye almaya altı adımdan oluşur.",
+      "detail": [
+        "Teslim akışında keşif 2-5 gün, tasarım 1-3 hafta, geliştirme 2-8 hafta, test 3-7 gün, devreye alma 1-2 gündür; büyütme adımı ise lansman sonrası sürekli devam eder.",
+        "En büyük süre riski kapsam değişikliğidir — proje ortasında yön değişmesi, keşif aşamasının maliyetinin çok üzerinde zaman kaybettirir. Bu yüzden kesin süre tahmini, kapsam netleştikten sonra verilir."
+      ]
+    },
+    "discovery-phase": {
+      "q": "Keşif aşamasında bizden ne isteniyor?",
+      "a": "Keşif aşamasında bir saatlik görüşme ve varsa mevcut sayılarınız istenir — aylık talep, dönüşüm oranı, işlem hacmi gibi. Bu görüşmede mevcut sürecin haritası çıkarılır ve başarının hangi sayıyla ölçüleceği birlikte belirlenir.",
+      "detail": [
+        "Süreç 2-5 gün sürer ve çıktısı bir kapsam dökümanı ile sabit fiyat teklifidir; bu döküman olmadan geliştirmeye geçilmez.",
+        "Hazırlıklı gelmek süreci hızlandırır: rakiplerin hangi kararı sizin için zaten aldığını, hangisinin hâlâ açık olduğunu önceden düşünmek görüşmenin verimini artırır."
+      ]
+    },
+    "revisions": {
+      "q": "Kaç revizyon hakkımız var?",
+      "a": "Standart olarak her büyük tasarım aşamasında iki revizyon turu dahildir; bu sınırın ötesindeki ek turlar saatlik ücret üzerinden ayrıca faturalanır. Pratikte keşif aşamasında beklentiler netleştiği için bu sınıra nadiren ulaşılır.",
+      "detail": [
+        "Onay turu sayısı doğrudan bir maliyet kalemidir — bu yüzden tek bir karar verici belirlenmesi önerilir; birden fazla kişinin çelişen geri bildirim vermesi tur sayısını hızla artırır.",
+        "Revizyon, tasarım aşamasında bir ekranı taşımanın en ucuz olduğu andır; geliştirme tamamlandıktan sonra aynı değişiklik günler sürebilir. Bu yüzden geri bildirim erken toplanır."
+      ]
+    },
+    "client-involvement": {
+      "q": "Süreçte bizim ne kadar zaman ayırmamız gerekiyor?",
+      "a": "Keşifte bir saatlik görüşme, tasarım aşamasında iki tur geri bildirim, geliştirme boyunca haftada bir kısa bakış ve test aşamasında kendi akışınızda bir gezinti — toplamda proje süresine yayılan, düzenli ama kısa temas noktaları yeterlidir.",
+      "detail": [
+        "En kritik katkı keşifte ve tasarım onayında verilir; geliştirme aşamasında her hafta çalışan bir sürüm önizleme adresinde paylaşılır, isterseniz sadece göz atmanız yeterlidir.",
+        "Yayına almadan önce kendi akışınızda gezinip test etmeniz istenir — işi bilen kullanıcı en iyi hataları bulur."
+      ]
+    },
+    "project-communication": {
+      "q": "İlerlemeyi nasıl takip ediyoruz?",
+      "a": "Geliştirme aşamasında her hafta önizleme adresinde güncellenen, çalışan bir sürüm paylaşılır — ilerlemeyi kendi gözünüzle takip edersiniz, 'sonunda görürsünüz' diye bir aşama yoktur. Haftada bir kısa bir bakış görüşmesi bu takibi tamamlar.",
+      "detail": [
+        "Kod sürüm kontrolünde tutulur, geçmiş kayıtlıdır; her entegrasyon tek tek bağlanıp doğrulanır ve bu adımlar da önizleme sürümüne yansır.",
+        "Lansman sonrasında ise aylık ölçüm özeti ve bir sonraki tur için öncelik listesiyle iletişim sürer — büyütme aşaması sürekli bir görüşme ritmi üzerine kurulur."
+      ]
+    },
+    "launch-checklist": {
+      "q": "Yayına almadan önce neler kontrol ediliyor?",
+      "a": "Test aşamasında fonksiyon, performans ve erişilebilirlik denetimi yapılır; gerçek cihazlarda ve tüm dillerde kontrol edilir, yük ve uç durum senaryoları çalıştırılır. Devreye almada yayın, izleme ve yedekleme kurulur, ardından erişim bilgileri devredilir.",
+      "detail": [
+        "Hatanın maliyeti bulunduğu ana bağlıdır — lansmandan sonra bulunan bir hata, önce bulunanının katına mal olur; bu yüzden test kesilen değil planlanan bir adımdır.",
+        "Yayına alma bir düğmeye basmak değil devir teslimdir: alan adı, kod deposu ve tüm hesaplar müşteri adına devredilir, ekibe kısa bir kullanım aktarımı yapılır."
+      ],
+      "list": [
+        "Fonksiyon, performans, erişilebilirlik denetimi",
+        "Gerçek cihaz ve tüm dillerde kontrol",
+        "Yük ve uç durum senaryoları",
+        "Yayın, izleme, yedekleme kurulumu",
+        "Alan adı, depo, hesap devri"
+      ]
+    },
+    "tech-stack": {
+      "q": "Hangi teknolojileri kullanıyorsunuz?",
+      "a": "Temel yığın Next.js, React ve TypeScript; backend tarafında Python ve Node.js, veritabanında Supabase ve PostgreSQL, dağıtımda Vercel ve Google Cloud kullanılır. AI entegrasyonlarında Claude AI, otomasyon projelerinde ise n8n tercih edilen ana platformdur.",
+      "detail": [
+        "Teknoloji seçimi aşinalığa değil ihtiyaca göre yapılır — statik bir tanıtım sitesinde WordPress de doğru seçim olabilir; özel iş mantığı, gerçek zamanlı özellik veya karmaşık veri modeli gerektiren projelerde Next.js ve TypeScript tercih edilir.",
+        "Sitenin kendisi de Next.js ile yapılmış, Vercel'de barındırılan, üç dilli (tr/en/ru), tamamen statik bir yapıdır — bu tercih projelerin sonuç ürünü olarak da örnek gösterilebilir."
+      ],
+      "list": [
+        "Next.js, React, TypeScript",
+        "Python, Node.js",
+        "Supabase, PostgreSQL",
+        "Google Cloud, Vercel",
+        "Claude AI, n8n"
+      ]
+    },
+    "nextjs-vs-wordpress": {
+      "q": "Next.js mi WordPress mi — hangisi bize uygun?",
+      "a": "Sabit içerikli, sık güncellenmeyen ve bütçesi sınırlı bir tanıtım sitesi için WordPress hâlâ makul bir seçimdir. Özel iş mantığı, yüksek performans hedefi, karmaşık entegrasyon veya uzun vadeli ölçeklenme isteniyorsa Next.js daha sürdürülebilir sonuç verir.",
+      "detail": [
+        "WordPress'in avantajı hız ve düşük başlangıç maliyetidir; binlerce hazır eklenti mevcut ihtiyacı hızlıca karşılar. Dezavantajı ise eklenti biriktikçe performansın düşmesi ve güvenlik güncellemesinin sürekli bir gider kalemine dönüşmesidir.",
+        "Next.js'te başlangıç maliyeti biraz daha yüksektir çünkü her özellik özel geliştirilir; karşılığında performans bütçesi baştan kurulur, saldırı yüzeyi statik üretimde neredeyse sıfırdır ve sistem özellik eklendikçe yavaşlamaz.",
+        "Karar tek başına teknoloji tercihi değildir — keşif aşamasında içerik güncelleme sıklığı, ekip teknik yetkinliği ve büyüme planı birlikte değerlendirilerek verilir."
+      ]
+    },
+    "cms-and-editing": {
+      "q": "İçeriği kendimiz güncelleyebilecek miyiz, panel veriyor musunuz?",
+      "a": "Evet — projeye göre Contentful, Sanity gibi headless CMS'ler veya özel yönetim panelleri kurulur; teknik olmayan editörler koda dokunmadan içerik güncelleyebilir. Küçük tanıtım sitelerinde içerik doğrudan kod deposunda, teslim sonrası talimatla güncellenir.",
+      "detail": [
+        "Panel ihtiyacı kapsam görüşmesinde netleştirilir — sık güncellenen ürün kataloğu, blog veya çok dilli içerik gibi durumlarda panel önerilir; nadiren değişen kurumsal içerikte panel maliyeti gereksizdir.",
+        "Panel kurulduğunda devreye alma adımında ekibinize kısa bir kullanım aktarımı yapılır; ekstra bir öğrenme eğrisi bırakılmaz."
+      ]
+    },
+    "hosting-and-deployment": {
+      "q": "Site nerede barındırılıyor?",
+      "a": "Statik ve Next.js tabanlı projeler ağırlıklı olarak Vercel'de, veri ve özel altyapı gerektiren işler Google Cloud üzerinde barındırılır. Alan adı, hosting hesabı ve kod deposu devreye alma adımında müşteri adına devredilir.",
+      "detail": [
+        "Vercel, sürüm kontrolüne bağlı otomatik dağıtım, önizleme ortamı ve global CDN sunar — her hafta güncellenen önizleme sürümü bu altyapı sayesinde mümkündür.",
+        "Hosting hesabı stüdyo adına değil müşteri adına açılır; bu, ajans değiştirme özgürlüğünün tek garantisidir. Devir teslimde tüm erişim bilgileri paylaşılır."
+      ]
+    },
+    "performance": {
+      "q": "Sitenin hızlı olacağını nasıl garanti ediyorsunuz?",
+      "a": "Performans sonradan eklenmez, baştan bir bütçe olarak kurulur — hedef Lighthouse skoru 90 ve üzeridir. Statik üretim, görsel optimizasyonu ve minimum JavaScript yaklaşımıyla sistem, kapsam ve içerik zamanla büyüse de yavaşlamaz.",
+      "detail": [
+        "Eklenti ve katman biriktiren kurulumlar her yeni özellikle biraz daha ağırlaşır; ölçülerek kurulan bir sistemde yanıt süresi kapsam büyürken sabit kalır — bu fark 6-12 ay içinde belirgin hale gelir.",
+        "Test aşamasında performans denetimi standart bir adımdır; gerçek cihazlarda ve yavaş bağlantılarda ölçüm yapılır, sorun sonradan değil yayına çıkmadan önce düzeltilir."
+      ]
+    },
+    "accessibility": {
+      "q": "Erişilebilirlik (WCAG) standartlarına uyuyor musunuz?",
+      "a": "Erişilebilirlik test aşamasının standart bir parçasıdır — klavye navigasyonu, ekran okuyucu uyumu, kontrast oranları ve semantik HTML kontrol edilir. Hedef WCAG 2.1 AA seviyesidir; atlanması hem yasal risk hem gerçek kullanıcı kaybı yaratır.",
+      "detail": [
+        "Erişilebilirlik lansmandan sonra eklenen bir yama değil, tasarım ve geliştirme aşamasında birlikte kurulan bir gereksinimdir — renk kontrastı ve odak sırası bileşen sistemine baştan dahil edilir.",
+        "Kapsam görüşmesinde erişilebilirlik önceliği netleştirilir; kamu kurumu veya kurumsal müşteri gibi mevzuat baskısı yüksek projelerde denetim daha kapsamlı yürütülür."
+      ]
+    },
+    "multilingual": {
+      "q": "Çok dilli site yapıyor musunuz?",
+      "a": "Evet — hreflang, çeviri yönetimi ve dil bazlı URL yapısıyla çok dilli site kuruluyor; kendi sitemiz de tr/en/ru olmak üzere üç dillidir. Dil sayısı arttıkça bütçeye etkisi yaklaşık %25-40 arasındadır.",
+      "detail": [
+        "Her dil için ayrı SEO metadata, canonical ve hreflang etiketleri kurulur — bu, aynı içeriğin farklı dillerde yanlışlıkla birbirine rakip olmasını önler.",
+        "Çeviri kaynağı proje bazında netleştirilir: müşteri kendi çevirisini sağlayabilir ya da çeviri süreci kapsam ve bütçeye dahil edilir; makine çevirisi tek başına önerilmez, en az bir editör kontrolü istenir."
+      ]
+    },
+    "seo-included": {
+      "q": "SEO fiyata dahil mi?",
+      "a": "Temel teknik SEO — hızlı yükleme, doğru meta etiketleri, taranabilir yapı, temel schema markup — web tasarım ve web uygulama tekliflerine standart olarak dahildir. Kapsamlı içerik stratejisi, GEO ve sürekli optimizasyon ayrı bir hizmet olarak tekliflenir.",
+      "detail": [
+        "Sonradan eklenen teknik SEO, baştan kurulanın maliyetinin iki katına mal olur — bu yüzden performans bütçesi ve SEO yapısı geliştirme aşamasında, sona bırakılmadan kurulur.",
+        "Aylık raporlama, konu kümesi haritalama ve editoryal takvim gerektiren sürekli SEO çalışması, tek seferlik geliştirme fiyatının dışında ayrı bir aylık kapsam olarak yürütülür."
+      ]
+    },
+    "what-is-geo": {
+      "q": "GEO (Generative Engine Optimization) nedir?",
+      "a": "GEO, içeriğin ChatGPT, Claude, Gemini ve Perplexity gibi üretken yapay zeka modelleri tarafından okunup kaynak olarak alıntılanabilmesi için yapılandırılması pratiğidir. Kullanıcılar cevapları arama motoru yerine bu araçlardan aldıkça, klasik SEO kadar önemli hale geliyor.",
+      "detail": [
+        "Klasik SEO sayfayı sıralamaya, GEO ise pasajı alıntıya hazırlar — cevap-önce yazım, kendi kendine yeten paragraflar, somut sayı ve isim kullanımı, yapılandırılmış veri ve llms.txt gibi düz metin özetler GEO'nun temel araçlarıdır.",
+        "Bu SSS sayfası GEO ilkelerini kendisi de uygular: her cevap ilk cümlede soruyu yanıtlar, tek başına okunduğunda anlamlıdır ve FAQPage yapılandırılmış verisiyle işaretlenmiştir — bir dil modelinin bu sayfayı doğrudan alıntılayabilmesi hedeflenir."
+      ]
+    },
+    "llm-visibility": {
+      "q": "ChatGPT, Claude, Gemini gibi araçlarda nasıl görünürüz?",
+      "a": "Üç somut teknikle: yapılandırılmış veri (schema.org — Organization, FAQPage, Article), cevap-önce yazılmış ve tek başına anlamlı içerik, ve llms.txt gibi crawler'lar için düz metin site özeti. Bu üçü birlikte modelin içeriğinizi doğru okuyup kaynak göstermesini kolaylaştırır.",
+      "detail": [
+        "Otorite de önemlidir — modeller genellikle birden fazla kaynaktan tutarlı bilgi gördüğünde alıntı yapar; bu yüzden site içi tutarlılık (aynı fiyat, aynı süreç anlatımı) ve dış bağlantı profili GEO çalışmasının bir parçasıdır.",
+        "Sonuç ölçümü klasik SEO'dan farklıdır — sıralama yerine, modellere doğrudan soru sorup markanın cevapta geçip geçmediği ve doğru anlatılıp anlatılmadığı periyodik olarak kontrol edilir."
+      ]
+    },
+    "seo-timeline": {
+      "q": "SEO sonuçları ne zaman gelir?",
+      "a": "Teknik düzeltmeler 2-4 haftada etkisini gösterir; içerik ve sıralama etkisi tipik olarak 3-6 ay sürer. GEO ve AI görünürlüğü sonuçlarını ölçmek daha zordur ama genellikle 2-3 ayda gözle görülür hale gelir.",
+      "detail": [
+        "Bu süreler rekabetin yoğunluğuna ve mevcut sitenin başlangıç durumuna göre değişir — yeni kurulan bir sitenin ilk sıralamayı alması, otorite kazanmış bir siteyi yeniden optimize etmekten farklı bir zaman çizelgesi izler.",
+        "Sürekli SEO çalışması aylık raporlama ritmiyle yürütülür; sıralama, trafik ve alıntı bahisleri (LLM cevaplarında görünme) birlikte takip edilir."
+      ]
+    },
+    "structured-data": {
+      "q": "Yapılandırılmış veri (schema.org) kuruyor musunuz?",
+      "a": "Evet — Organization, WebSite, BreadcrumbList, Article, Service ve FAQPage gibi schema.org türleri projeye göre uygulanır. Arama motorlarına ve AI modellerine içeriğin tam olarak ne olduğunu açık biçimde söyler, rich result ve alıntılanma olasılığını artırır.",
+      "detail": [
+        "Bu SSS sayfası kendisi de FAQPage yapılandırılmış verisiyle işaretlenmiştir — her sorunun cevabı JSON-LD içinde ayrıca kodlanır, sayfa görsel olarak değişmeden arama motorları ve dil modelleri tarafından yapısal olarak okunabilir hale gelir.",
+        "Schema kurulumu tek seferlik bir iş değildir; içerik değiştikçe (fiyat, hizmet, ekip bilgisi) yapılandırılmış veri de güncel tutulur, aksi halde tutarsız sinyal arama motoruna güven kaybettirir."
+      ]
+    },
+    "migration-seo": {
+      "q": "Site yenilemede mevcut SEO değerimizi kaybeder miyiz?",
+      "a": "Doğru planlanmış bir yenilemede hayır — URL yapısı değişecekse önceden yönlendirme haritası çıkarılır, mevcut içerik envanteri ve backlink değeri korunur. Riskli olan, bu plan hazırlanmadan aceleyle yapılan ani geçişlerdir.",
+      "detail": [
+        "Yenileme öncesi mevcut sitenin indekslenmiş sayfaları, sıralama aldığı anahtar kelimeler ve gelen bağlantıları çıkarılır; yeni site yapısı bunlara göre eşlenir.",
+        "Geçiş sonrası Search Console'da indeksleme kontrolü ilk ayın standart adımıdır — yönlendirmelerin doğru çalıştığı ve trafiğin kaybolmadığı doğrulanır, sorun erken yakalanır."
+      ]
+    },
+    "google-ads-vs-seo": {
+      "q": "Google Ads mi SEO mu — hangisine bütçe ayırmalıyız?",
+      "a": "Hızlı ve ölçülebilir sonuç için Google Ads, kalıcı ve bileşik büyüyen görünürlük için SEO & GEO daha uygundur. Google Ads'te trafik reklam durunca durur; SEO'da etki yavaş başlar ama zamanla reklam bütçesine bağımlılığı azaltır.",
+      "detail": [
+        "Google Ads'e başlamak için gösterge minimum aylık 1.500 dolar reklam harcaması gerekir; bunun altında öğrenme süreci anlamlı veri üretmek için yeterli veri toplayamaz.",
+        "En sağlıklı yaklaşım ikisini birlikte kullanmaktır: Ads hızlı talep akışı sağlarken SEO/GEO arka planda büyür; SEO olgunlaştıkça reklam bütçesi aynı talebi daha düşük maliyetle karşılamaya başlar."
+      ]
+    },
+    "ai-use-cases": {
+      "q": "İşimizde yapay zekayı nerede kullanabiliriz?",
+      "a": "En yüksek getiriyi tekrarlayan, kuralları net ve girdisi standart işlerde görürsünüz: müşteri destek yanıtlama, belge veya fatura verisi çıkarma, içerik üretimi, çok adımlı iş süreçlerinin otomasyonu ve karar destek raporlaması. Sık tekrarlanan, hata maliyeti düşük bir süreçle başlamak, tüm süreçleri aynı anda otomatikleştirmeye çalışmaktan çok daha hızlı ve daha güvenilir bir geri dönüş sağlıyor.",
+      "detail": [
+        "Doğru başlangıç noktası hangi aracın kullanılacağı değil, hangi sürecin seçileceğidir. Ayda kaç kez çalıştığı, kurallarının ne kadar net olduğu, girdisinin ne kadar standart geldiği ve bir hatanın maliyeti ölçülmeden hangi sürecin yapay zekaya uygun olduğu tahminden ibaret kalır; bu değerlendirmeyi ai-consulting hizmeti kapsamında gerçek verilerinizle birlikte yapıyoruz, hazır bir şablon üzerinden değil.",
+        "Portfolyomuzda bu mantıkla kurulmuş projeler var: Emlak Sync, birden fazla platforma elle ilan girme işini ortadan kaldırıyor; ContentFlow AI ve Social Pro ise aynı prensibi içerik üretimi ve pazarlama süreçlerine uyguluyor. Üçünde de ortak nokta aynı: önce ölçülmüş, hacmi ve maliyeti belli bir sürecin sistematik olarak otomatikleştirilmesi."
+      ],
+      "list": [
+        "Müşteri desteği ve chatbot",
+        "Belge/veri çıkarma (fatura, form, dekont)",
+        "İçerik üretimi",
+        "Çok adımlı süreç otomasyonu",
+        "Karar destek ve raporlama"
+      ]
+    },
+    "chatbot-on-site": {
+      "q": "Sitemize yapay zeka asistanı ekleyebilir misiniz?",
+      "a": "Evet — sitenize retrieval-augmented generation (RAG) tabanlı bir asistan entegre ediyoruz. Asistan yanıtlarını modelin genel bilgisinden değil doğrudan sizin kendi içeriğinizden alır, bu da uydurma cevap riskini belirgin şekilde düşürür. Kapsam, süre ve maliyet kullanım senaryosuna göre değişir; bu entegrasyonu ai-integration hizmetimiz altında proje bazında birlikte değerlendiriyoruz.",
+      "detail": [
+        "Kurulum yalnızca bir modeli sitenize teknik olarak bağlamaktan ibaret değil: içerik kaynağının hazırlanması, temsili sorularla cevap kalitesinin sistematik olarak test edilmesi ve asistanın cevaplayamadığı ya da emin olmadığı durumlarda konuşmayı bir insana devretmesi de kurulumun ayrılmaz bir parçası. Bu adımlar atlanırsa asistan doğru bilgiyi bulsa bile ziyaretçiye güvenilir görünmez.",
+        "Hangi verinin asistana açılacağı, hangi konularda hiç yanıt vermeyeceği ve yanıtların nasıl doğrulanacağı proje başında sizinle birlikte netleştirilir. Bu konudaki somut teknik önlemleri — kaynak kısıtlama, güven eşiği, insan onayı, log kaydı — hallucination sorusunda ayrı bir başlık altında ve çok daha ayrıntılı biçimde anlatıyoruz."
+      ]
+    },
+    "which-llm": {
+      "q": "Hangi yapay zeka modelini kullanıyorsunuz?",
+      "a": "Modeli göreve göre seçiyoruz, tek bir sağlayıcıya sabitlenmiş değiliz. Karmaşık akıl yürütme ve çok adımlı agent görevlerinde Claude, daha genel amaçlı görevlerde GPT veya Gemini kullanılabilir; seçim gerçek verinizle yapılan yapılandırılmış bir değerlendirmeye dayanır, hangi modelin o an gündemde ve popüler olduğuna değil.",
+      "detail": [
+        "Değerlendirmede maliyet, yanıt gecikmesi, doğruluk oranı ve veri gizliliği politikası birlikte tartılır; bir modelin genel bir karşılaştırma tablosunda iyi çıkması, sizin özel kullanım senaryonuzda en uygun seçenek olduğu anlamına gelmez, bu yüzden kendi verinizle sınamadan bir modele bağlanmayı tercih etmiyoruz.",
+        "Bu değerlendirme ai-integration ve agentic-ai hizmetlerinin ilk ve en önemli adımıdır; model seçimi proje ilerledikçe yeniden gözden geçirilebilir, çünkü sağlayıcılar sık aralıklarla yeni sürümler ve fiyatlandırma güncellemeleri yayınlıyor ve bugün doğru olan seçim altı ay sonra ideal olmaktan çıkabiliyor; bu yüzden seçimi periyodik olarak yeniden gözden geçiriyoruz, tek seferlik bir karar olarak görmüyoruz."
+      ]
+    },
+    "ai-data-privacy": {
+      "q": "Verilerimiz model eğitiminde kullanılır mı?",
+      "a": "Büyük sağlayıcıların (Anthropic, OpenAI, Google gibi) kurumsal ve API planlarında, API üzerinden gönderilen veri varsayılan olarak model eğitiminde kullanılmaz; ancak bu politika sağlayıcıya, plana ve zaman içindeki değişikliklere göre farklılaşabilir. Bu yüzden her projede ilgili sağlayıcının o anki güncel veri kullanım koşullarını sizinle birlikte doğruluyoruz, varsayımla ilerlemiyoruz.",
+      "detail": [
+        "Tüketici, yani ücretsiz veya bireysel planlar ile kurumsal API planları genellikle birbirinden farklı kurallara tabidir; bu yüzden hangi plan ve hangi arayüz — web arayüzü mü, doğrudan API mi — üzerinden çalışıldığı kritik bir detaydır ve entegrasyon kurulurken bu ayrım proje başında net biçimde belirlenir, karışıklığa mahal bırakılmaz.",
+        "Kendi sitemizde de aynı ihtiyatlı ilkeyi uyguluyoruz: Piton Studios veritabanı kullanmıyor, iletişim formunda bıraktığınız bilgi Resend üzerinden doğrudan e-postaya gidiyor ve ayrıca hiçbir yerde saklanmıyor. Prensip müşteri projelerinde de aynı kalıyor: gereksiz veri toplamayın, topladığınızı da açıkça ve net biçimde belirtin."
+      ]
+    },
+    "hallucination": {
+      "q": "Yapay zekanın yanlış cevap vermesini nasıl engelliyorsunuz?",
+      "a": "Tek bir çözüm yok, birkaç katmanı üst üste koyuyoruz: yanıtları kendi verinize dayandıran RAG mimarisi, çıktının beklenen şemaya uyup uymadığını kontrol eden doğrulama adımı, düşük güven skorunda devreye giren bir insan onayı eşiği ve her yanıtın kayıt altına alındığı bir log sistemi. Bu katmanlar birbirini tamamlayacak şekilde birlikte çalışır.",
+      "detail": [
+        "Yayın öncesinde bir değerlendirme, yani eval süiti çalıştırıp modelin hem tipik hem de uç senaryolarda nasıl yanıt verdiğini sistematik olarak ölçüyoruz; yayın sonrasında da düzenli örnekleme ile kontrol ediyoruz, çünkü kaynak veri veya kullanıcı sorularının kalıpları zamanla değişebiliyor ve tek seferlik bir test asla yeterli olmuyor.",
+        "Riski sıfıra indirmek mümkün değil, yönetilebilir kılmak mümkün — bu yüzden ödeme, hukuki taahhüt veya geri alınamaz işlemler gibi kritik kararlarda insan onayını süreçten hiçbir zaman tamamen çıkarmıyoruz, otomasyonun hızını bu tür noktalarda bilinçli olarak sınırlı tutuyoruz, çünkü hız hiçbir zaman doğruluğun önüne geçmemeli."
+      ],
+      "list": [
+        "Kaynak kısıtlama / RAG",
+        "Çıktı şeması doğrulama",
+        "Güven eşiği + insan onayı",
+        "Log ve düzenli örnekleme değerlendirmesi"
+      ]
+    },
+    "automation-tools": {
+      "q": "Otomasyonları hangi araçlarla kuruyorsunuz?",
+      "a": "Ana aracımız n8n — açık kaynaklı, karmaşık ve çok adımlı akışlar için özellikle tercih ettiğimiz bir otomasyon platformu. Mevcut Zapier kurulumlarını da denetleyip iyileştiriyoruz, özellikle sık kırılan ve bakımı gitgide zorlaşan adımları n8n'e taşıyarak daha dayanıklı, daha izlenebilir ve daha kolay yönetilebilir bir yapıya kavuşturuyoruz.",
+      "detail": [
+        "CRM, ERP, Slack, e-posta, veritabanları ve özel API'lar dahil çoklu sistem otomasyonu kurabiliyoruz; entegrasyon sayısı arttıkça akışın karmaşıklığı elbette artar, ama izlediğimiz yöntem — önce süreci baştan sona haritalamak, sonra adım adım kurmak — her ölçekte değişmeden aynı kalıyor, kısayol aramıyoruz.",
+        "Kurduğumuz her akışı adım adım ve anlaşılır biçimde belgeliyoruz ki ekibiniz gerektiğinde bakımını kendisi yapabilsin, size kara kutu bir sistem bırakmıyoruz. Süreç zamanla değiştikçe devam eden güncellemeler için ayrı bir retainer desteği de tercih edilebiliyor, ama bu hiçbir zaman zorunlu değil, tercihiniz her zaman açık kalıyor."
+      ]
+    },
+    "ai-roi": {
+      "q": "Yapay zeka yatırımının geri dönüşünü nasıl ölçüyoruz?",
+      "a": "Geri ödeme süresini basit bir formülle ölçüyoruz: kurulum maliyeti bölü aylık net tasarruf, yani kurtarılan saat çarpı saatlik maliyet artı önlenen hata maliyeti, eksi aylık işletme maliyeti. Bir senaryo hesabında 70.000 ₺ kurulum, ayda 10.500 ₺ net tasarrufla yaklaşık 6-7 ayda kendini geri ödüyor, on iki aylık getirisi de yaklaşık %80 oluyor.",
+      "detail": [
+        "Formülün doğruluğu tamamen girdilerin dürüstlüğüne bağlı; kurulumdan önce sürecin mevcut hâlinde harcanan süreyi ve hata oranını en az iki hafta boyunca dikkatle ölçüyoruz. Bu taban ölçüm olmadan otomasyonun getirisi bir hesap değil, sadece bir tahminden ibaret kalır ve tahmine dayalı kararlar genellikle beklenenden farklı çıkıyor.",
+        "Bu yaklaşımı ayrıntısıyla ai-automation-roi başlıklı blog yazımızda örnek bir hesapla birlikte anlattık; oradaki rakamlar bir senaryo modelidir, kesin bir taahhüt değildir — gerçek sonuç sizin sürecinize, işlem hacminize ve ölçtüğünüz baz değerlere göre elbette değişecektir, bu yüzden kendi rakamlarınızla yeniden hesaplamanızı öneririz."
+      ]
+    },
+    "ecommerce-platform": {
+      "q": "Shopify mı, özel e-ticaret mi?",
+      "a": "İkisini de kuruyoruz; seçim ölçek ve özelleştirme ihtiyacına bağlı. Standart ürün kataloğu ve hızlı başlangıç isteyen mağazalar için Shopify, karmaşık iş kuralları, özel entegrasyon veya yüksek trafik gerektiren projeler için Next.js tabanlı özel e-ticaret altyapısı öneriyoruz; ikisi de aynı kalitede sonuç veriyor, tek fark hangi aracın sizin ihtiyacınıza uygun olduğu.",
+      "detail": [
+        "Maliyet tarafında da belirgin bir fark var: Shopify projeleri gösterge bandımızda daha alt seviyede başlıyor ve genellikle daha hızlı yayına alınıyor, özel altyapı ise 40.000-200.000 ₺ aralığında konumlanıyor çünkü veri modeli ve entegrasyonlar sıfırdan tamamen sizin ihtiyacınıza göre kurgulanıyor, bu da hem süreyi hem maliyeti doğrudan etkiliyor.",
+        "Karar tek yönlü değildir; mevcut bir Shopify mağazasını büyüdükçe özel altyapıya taşımak da, tam tersi yönde bir geçiş yapmak da mümkündür — bu geçiş sürecini ecommerce-migration sorusunda ayrıca ve çok daha ayrıntılı biçimde anlatıyoruz, orada adım adım nasıl ilerlediğimizi görebilirsiniz."
+      ],
+      "list": [
+        "Shopify uygun: standart katalog, hızlı başlangıç, düşük özelleştirme",
+        "Özel altyapı uygun: karmaşık kural, yüksek trafik, özel entegrasyon"
+      ]
+    },
+    "payment-integration": {
+      "q": "Hangi ödeme altyapılarıyla çalışıyorsunuz?",
+      "a": "Projeye göre değişir: uluslararası kart altyapılarından Türkiye pazarına özel yerel ödeme sağlayıcılarına kadar ihtiyacınıza en uygun entegrasyonu birlikte seçip kuruyoruz. Seçim hedef pazar, para birimi, taksit gereksinimi ve mevcut muhasebe sisteminizle uyum gözetilerek keşif aşamasında netleştirilir, size hazır tek bir sağlayıcı dayatmıyoruz.",
+      "detail": [
+        "Kart bilgisinin güvenliği, yani PCI uyumu, doğrudan ödeme sağlayıcısının sorumluluğundadır; biz sağlayıcının önerdiği entegrasyon yöntemini — checkout sayfası, iframe veya doğrudan API tabanlı — uyguluyor, kart verisini hiçbir aşamada kendi sunucumuzda tutmuyor veya işlemiyoruz; bu ayrım güvenlik açısından önemli ve pazarlık konusu değil.",
+        "Webhook tabanlı ödeme durumu takibi, iade akışı, kısmi ödeme ve başarısız işlem senaryoları her entegrasyonun standart bir parçasıdır; bu senaryolar tek tek test edilip doğrulanmadan hiçbir ödeme entegrasyonu canlı ortama, yani gerçek yayına asla alınmaz, riski en baştan böylece azaltmış oluyoruz."
+      ]
+    },
+    "marketplace-integration": {
+      "q": "Pazaryeri ve kargo entegrasyonu yapıyor musunuz?",
+      "a": "Evet, otomasyon hizmetimiz kapsamında pazaryeri ve kargo firması API'leriyle entegrasyon kuruyoruz — sipariş, stok ve kargo takip bilgisinin sistemler arasında elle girilmeden otomatik olarak senkronize edilmesini sağlıyoruz. Amaç, aynı bilgiyi birden fazla panele tekrar tekrar elle girme yükünü baştan sona ortadan kaldırmak.",
+      "detail": [
+        "Bu tür entegrasyonlar tipik ve genellikle yüksek getirili otomasyon adaylarıdır: aynı veriyi birden fazla panele elle girmek yerine tek bir kaynaktan besleyip her platforma otomatik olarak yansıtırız. Çoklu sistem senkronizasyonu genel olarak uzmanlık alanımız — CRM, ERP, e-posta ve özel API'lar dahil hepsini birbirine bağlayabiliyoruz.",
+        "Entegrasyon kapsamı hangi pazaryeri ve hangi kargo firmasıyla çalıştığınıza, onların API'lerinin ne kadar açık ve dokümante olduğuna göre değişir; keşif aşamasında mevcut sistemlerinizi ve API erişim durumunuzu birlikte değerlendirip gerçekçi, uygulanabilir bir kapsam çıkarıyoruz; belirsiz bir vaatle değil somut bir planla ilerliyoruz."
+      ]
+    },
+    "conversion-optimization": {
+      "q": "Dönüşüm oranını nasıl artırıyorsunuz?",
+      "a": "Huniyi adım adım ölçerek başlıyoruz — ziyaretten sipariş tamamlamaya kadar her geçişte tam olarak nerede kayıp olduğunu buluyoruz, ardından etki ile efor oranına göre önceliklendirilmiş düzeltmeler uyguluyoruz. Deneyimimizde en yüksek getiriyi kargo bedelini erken göstermek, misafir alışverişini açmak ve mobil ödeme formunu kısaltmak sağlıyor.",
+      "detail": [
+        "Herhangi bir değişiklik yapmadan önce en az iki hafta taban ölçüm alıyoruz ve mobil ile masaüstünü mutlaka ayrı raporluyoruz; ortalama bir rakam mobildeki gerçek sorunu çoğu zaman gizler. Sızdıran bir huniye reklam bütçesi akıtmak kaybı büyütür, bu yüzden önce huni sonra trafik sırasını titizlikle izliyoruz.",
+        "Bu yaklaşımı Ambalaj Cini projesinde e-ticaret altyapısıyla Google Ads kampanyalarını birlikte ve eş zamanlı yürüterek uyguladık; firmanın elde ettiği %30 büyüme, huni tarafındaki iyileştirme ile reklam tarafının aynı anda ve koordineli biçimde çalışmasının doğrudan sonucuydu, tek başına ne biri ne diğeri yeterdi."
+      ],
+      "list": [
+        "Kargo bedelini fiyatın yanında göster",
+        "Misafir alışverişine izin ver",
+        "Mobil ödeme formunu kısalt",
+        "Ürün görseli ve video sayısını artır",
+        "Sayfa hızını ölç ve bir bütçeye bağla"
+      ]
+    },
+    "ecommerce-migration": {
+      "q": "Mevcut mağazamızı taşıyabilir misiniz?",
+      "a": "Evet — ürün kataloğu, müşteri verisi ve sipariş geçmişini yeni altyapıya eksiksiz taşıyoruz. SEO değerinizin kaybolmaması için eski URL'lerden yenilerine 301 yönlendirme kurup mevcut arama sıralamanızı koruyacak şekilde geçiş yapıyoruz; bu adım atlanırsa taşıma sonrası trafik kaybı çok sık görülen ve kolayca önlenebilir bir hata oluyor.",
+      "detail": [
+        "Geçiş kesintisiz olsun diye kademeli olarak planlanır: önce yeni altyapı paralel bir ortamda kurulur ve baştan sona test edilir, veri doğrulaması yapılır, ancak her şey doğrulandıktan sonra gerçek trafik kesin geçiş anında yeni sisteme yönlendirilir. Amaç, satışın durduğu bir kesinti penceresi hiç yaratmamak.",
+        "Taşıma sırasında dönüşüm huninizi de baştan gözden geçiriyoruz — genellikle eski mağazadaki sürtünme noktalarının yeni altyapıya aynen taşınmaması, geçişi sadece bire bir kopyalamanın ötesinde ayrıca bir iyileştirme fırsatına da çeviriyor; bu fırsatı boşa harcamamanızı hiç istemeyiz."
+      ]
+    },
+    "native-vs-pwa": {
+      "q": "Native uygulama mı, PWA mı?",
+      "a": "Çoğu senaryoda PWA yeterli ve daha ucuzdur — içerik uygulamaları, dashboard'lar, e-ticaret ve araçların yaklaşık %90'ı PWA ile karşılanır. Native uygulamaya yalnızca Bluetooth, NFC veya gelişmiş kamera kontrolü gibi donanım API'larına gerçekten ihtiyaç duyduğunuzda geçiyoruz, sadece daha profesyonel görünür gerekçesiyle ekstra maliyete girmiyoruz.",
+      "detail": [
+        "Maliyet farkı oldukça büyük: PWA tek bir codebase üzerinden hem web hem mobil deneyimi karşılar, native ise iOS ve Android için ayrı geliştirme, ayrı test süreci ve ayrı mağaza onay süreci gerektirir; bu da toplam bütçeyi ve teslim süresini doğrudan büyütür.",
+        "PWA'lar iOS Safari dahil güncel tüm tarayıcılarda yüklenebilir, çevrimdışı çalışabilir ve push bildirim gönderebilir; Android ile aradaki fark artık oldukça minimal düzeyde, birkaç yıl öncesine kıyasla çok daha yakın ve tutarlı bir kullanıcı deneyimi sunuyor; iOS tarafındaki gelişmeler bu farkı hızla kapattı."
+      ],
+      "list": [
+        "PWA yeterli: içerik uygulaması, dashboard, e-ticaret, araçlar",
+        "Native gerekir: Bluetooth, NFC, gelişmiş kamera kontrolü"
+      ]
+    },
+    "app-store-publishing": {
+      "q": "Uygulamayı App Store ve Google Play'e yayınlıyor musunuz?",
+      "a": "Native uygulama geliştirdiğimiz projelerde App Store ve Google Play'e yayınlama sürecini uçtan uca biz yürütüyoruz. PWA projelerinde ise mağaza onayına hiç gerek kalmadan kullanıcılar tarayıcıdan \"Ana Ekrana Ekle\" seçeneğiyle uygulamayı doğrudan cihazlarına yüklüyor, ayrı bir onay sürecini beklemek zorunda kalmıyor.",
+      "detail": [
+        "Apple ve Google'ın inceleme süreçleri kendi takvimlerine göre işler, genellikle birkaç gün sürer ama bazen daha da uzayabilir; bu süre tamamen bizim kontrolümüz dışındadır ve lansman planına mutlaka bir tampon süre olarak baştan eklenmelidir, aksi halde teslim tarihi gerçekçi olmaz.",
+        "Geliştirici hesabı, yani Apple Developer ve Google Play Console, proje başında doğrudan sizin adınıza açılır; bu, uygulamanın mülkiyetinin ve gelecekteki güncelleme yayınlama yetkisinin daima size ait kalmasını garanti eder, biz her zaman yalnızca aracı konumunda kalırız, hesabın sahibi siz olursunuz."
+      ]
+    },
+    "mobile-responsive": {
+      "q": "Yaptığınız siteler mobilde nasıl çalışıyor?",
+      "a": "Tüm sitelerimiz mobile-first tasarlanıyor — masaüstünün küçültülmüş bir hali değil, en baştan mobil öncelikli kurgulanmış bir deneyim. Performans bütçesiyle çalışıyoruz, böylece ekran boyutu ve bağlantı hızı ne olursa olsun sayfa yükleme süresi ile etkileşim hızı önceden belirlenen sınırların içinde kalıyor.",
+      "detail": [
+        "Test aşamasında gerçek fiziksel cihazlarda kontrol yapıyoruz, yalnızca tarayıcı simülatöründe değil; dokunma hedefi boyutu, form doldurma deneyimi, klavye davranışı ve gerçek yükleme süresi mobilde ayrı ve titiz bir denetim kalemi olarak ele alınıyor, atlanacak bir formalite değil.",
+        "Hız konusundaki yaklaşımımızı ve ölçüm yöntemimizi hızlı web sitesi başlıklı blog yazımızda ayrıntılı şekilde anlattık; mobil performans orada ayrı bir madde çünkü masaüstünde iyi çalışan bir site, mobil bağlantıda çok daha yavaş ve sorunlu kalabiliyor, bu fark ekiplerin çoğu zaman gözünden kaçıyor ve fark edilmeden büyüyor."
+      ]
+    },
+    "offline-support": {
+      "q": "Uygulama çevrimdışı çalışır mı?",
+      "a": "PWA'larda evet — Service Worker teknolojisiyle temel içerik ve son görüntülenen veriler cihazda önbelleğe alınır, internet kesildiğinde uygulama tamamen kapanmaz ve boş, kullanıcıyı şaşırtan bir hata ekranı göstermez. Hangi verinin çevrimdışı erişilebilir olacağı proje kapsamında sizinle birlikte kararlaştırılır, tek tip bir varsayılan davranış uygulanmaz.",
+      "detail": [
+        "Salt okunur içerik — daha önce görüntülenen sayfalar, ürün listesi gibi — çevrimdışı desteklemek nispeten kolaydır; ödeme veya gerçek zamanlı veri gerektiren işlemler ise bağlantı geri geldiğinde arka planda otomatik olarak senkronize edilecek şekilde ayrıca ve dikkatle tasarlanır, veri kaybı riski böyle azaltılır.",
+        "Her özellik çevrimdışı çalışacak şekilde kurulmaz — bu, ek geliştirme kapsamı ve ek test yükü gerektiren bilinçli bir tercihtir; keşif aşamasında hangi akışların gerçekten kritik olduğuna birlikte bakılarak nihai kapsam dahiline alınır, gereksiz yere karmaşıklık eklenmez ve bütçe boşuna şişmez."
+      ]
+    },
+    "after-launch-support": {
+      "q": "Yayına aldıktan sonra destek veriyor musunuz?",
+      "a": "Evet. Teslimden sonraki belirli bir süre hata düzeltmesi garanti kapsamındadır; kapsamı ve süresi sözleşmede yazılı olarak açıkça ve önceden belirlenir. Bunun ötesindeki değişiklik ve yeni özellik talepleri ise bakım paketi veya ayrı bir iş kalemi olarak fiyatlandırılır, garanti kapsamına dahil edilmez.",
+      "detail": [
+        "Lansman bizim için bir bitiş değil; teslim sonrası büyütme adımında ayda bir kısa bir değerlendirme görüşmesiyle keşif aşamasında birlikte belirlediğimiz metrikleri artık gerçek veriyle takip ediyoruz ve bir sonraki adımı buna göre birlikte önceliklendiriyoruz, böylece destek rastgele değil planlı ilerliyor.",
+        "Hangi desteğin garanti kapsamında, hangisinin ayrı ücretlendirileceği daha en baştaki sözleşmede net biçimde yazılır; bu ayrımı önceden netleştirmek, ilişkinin ilerleyen aşamalarında beklenti uyuşmazlığı yaşanmasını büyük ölçüde ve kalıcı biçimde önlüyor, her iki taraf da bu netlikten baştan rahat ediyor."
+      ]
+    },
+    "maintenance-packages": {
+      "q": "Bakım paketleriniz nasıl işliyor?",
+      "a": "Bakım paketi, düzenli güncelleme, izleme ve küçük değişiklik taleplerini kapsayan aylık bir anlaşmadır; kapsam ve ücret projenin büyüklüğüne ve ihtiyaç duyulan destek sıklığına göre teklif aşamasında birlikte netleştirilir. Sabit ve tek tip bir fiyat listemiz yok — çünkü her proje farklı bir altyapı ve trafik yüküne sahip.",
+      "detail": [
+        "Bakım paketi hiçbir zaman zorunlu değil; birçok müşteri teslim sonrasında kendi ekibiyle veya başka bir tedarikçiyle devam etmeyi tercih ediyor, çünkü kod deposu ve tüm hesaplar zaten en baştan kendilerine ait ve size karşı hiçbir bağımlılık oluşturmuyoruz, bu bilinçli bir tasarım tercihi.",
+        "Otomasyon projelerinde de benzer bir mantık işliyor: kurduğumuz akışları ayrıntılı biçimde belgeliyoruz ki bize sürekli bağımlı kalmayın, ama süreç zamanla değiştikçe devam eden güncellemeler için ayrı bir retainer desteği de talep üzerine ayrıca tercih edilebiliyor, kararı her zaman siz veriyorsunuz."
+      ]
+    },
+    "bug-warranty": {
+      "q": "Teslimden sonra hata çıkarsa ücret alıyor musunuz?",
+      "a": "Teslim kapsamındaki bir hata — yani sipariş edilen bir işlevin beklendiği gibi çalışmaması — belirli bir garanti süresi içinde tamamen ücretsiz düzeltilir; bu sürenin uzunluğu sözleşmede açıkça yazılıdır. Yeni bir istek, kapsam değişikliği veya üçüncü taraf sistem güncellemesinden kaynaklanan sorun ise garanti dışıdır ve ayrı olarak değerlendirilir.",
+      "detail": [
+        "Bu ayrımı baştan netleştirmek için kapsamı her zaman yazılı hale getiriyoruz — keşif aşamasının çıktısı bir kapsam dökümanı ve sabit fiyat teklifidir, kapsam yazılı olmadan hiçbir zaman fiyat vermiyoruz, bu da hata mı istek mi tartışmasını büyük ölçüde önlüyor, çünkü referans noktası daha en baştan bellidir ve tartışmaya yer bırakmaz.",
+        "Pratikte bu tür bir tartışma nadiren yaşanıyor çünkü test aşamasında fonksiyon, performans ve erişilebilirlik denetimi zaten kapsamlı biçimde yapılmış oluyor; lansman sonrası ortaya çıkan hata sayısı bu sayede genellikle çok düşük kalıyor ve garanti süresi çoğunlukla sorunsuz geçiyor."
+      ]
+    },
+    "response-time": {
+      "q": "Destek taleplerine ne kadar sürede dönüyorsunuz?",
+      "a": "İlk dönüş için hedefimiz 24 saat — iletişim formu ve genel talepler için geçerli olan standart budur. Aktif bakım anlaşması olan projelerde öncelik sırası ve müdahale süresi kapsam sözleşmesinde ayrıca ve net biçimde belirlenir; kritik bir kesinti ile küçük bir görsel düzeltme hiçbir zaman aynı öncelikte değerlendirilmez.",
+      "detail": [
+        "Sabit ve tek bir SLA rakamı her proje için aynı olamaz çünkü altyapı, trafik yükü ve kritiklik seviyesi projeden projeye önemli ölçüde farklıdır; bu yüzden müdahale süresi genel bir vaat yerine sözleşmede yazılı, projeye özel bir kalem olarak ayrıca tanımlanır.",
+        "Genel sorularda ve teklif taleplerinde 24 saatlik dönüş süresi tutarlı biçimde uygulanıyor; karmaşık kapsamlı taleplerde bu, kesin bir fiyatın değil bir sonraki adımın — genellikle bir keşif görüşmesi önerisinin — 24 saat içinde geldiği anlamına geliyor, kesin fiyat kapsam netleşince gelir."
+      ]
+    },
+    "backups-and-uptime": {
+      "q": "Yedekleme ve kesinti durumunda ne oluyor?",
+      "a": "Barındırma platformlarını (Vercel, Supabase, Google Cloud gibi) günlük otomatik yedekleme ve yönetilen altyapı sunanlar arasından özenle seçiyoruz; kesinti durumunda kurtarma büyük ölçüde bu sağlayıcıların kendi altyapı garantilerine dayanır. Kritik projelerde felaket kurtarma prosedürü mimari aşamasında ayrıca ve özel olarak tanımlanır, sonradan eklenmez.",
+      "detail": [
+        "RTO, yani kabul edilebilir kesinti süresi, ve RPO, yani kabul edilebilir veri kaybı penceresi, mimari kurulurken sizinle birlikte belirlenir ve test edilmiş kurtarma prosedürleriyle birlikte gelir; felaket kurtarma bizde sonradan akla gelen bir ekleme değil, en baştan tasarımın ayrılmaz bir parçasıdır.",
+        "Piton Studios'un kendi sitesi tamamen statik ve hiçbir veritabanı kullanmıyor; bu yüzden kendi sitemiz özelinde yedekleme konusu geçerli değil, ama müşteri projelerinde altyapı seçimine ve verinin ne kadar kritik olduğuna göre ayrıca ve özenle kurulur, tek tip bir varsayılan uygulanmaz."
+      ]
+    },
+    "security-updates": {
+      "q": "Güvenlik güncellemeleri kimin sorumluluğunda?",
+      "a": "Teslim sırasında tüm bağımlılıklar güncel ve denetlenmiş halde teslim edilir. Sonrasındaki güncellemeler bakım paketi kapsamındaysa bizde, değilse projeyi devralan kendi ekibinizdedir — hangisinin geçerli olduğu sözleşmede açıkça belirtilir. Kod deposu size ait olduğu için istediğiniz zaman kendi ekibinizle veya başka bir ajansla devam edebilirsiniz.",
+      "detail": [
+        "Input doğrulama, CSRF koruması, rate limiting ve düzenli bağımlılık denetimi standart teslimatın ayrılmaz bir parçasıdır; bunlar bir kerelik kurulum değil, projenin tüm yaşam döngüsü boyunca sürekli takip edilmesi gereken, zamanla giderek daha fazla önem kazanan kalemlerdir, bir kez yapılıp unutulmaz.",
+        "Bakım paketi almayan müşterilere de teslim sonrasında hangi bağımlılıkların düzenli olarak güncellenmesi gerektiğini net biçimde belgeliyoruz, böylece kendi ekipleri ya da devraldığı başka bir ajans süreci sorunsuz ve hiçbir bilgi kaybı yaşamadan devralabiliyor, sıfırdan başlamak hiç zorunda kalmıyor."
+      ]
+    },
+    "who-owns-the-code": {
+      "q": "Kod ve tasarım kime ait?",
+      "a": "Ödeme tamamlandığında kaynak kodun, tasarım dosyalarının ve tüm teslim edilen çıktıların mülkiyeti tamamen size geçer; kod deposu, alan adı ve hesaplar sizin adınıza kayıtlıdır. Font, stok görsel veya üçüncü taraf SaaS abonelikleri gibi harici lisanslar bu kapsamın dışındadır ve kendi lisans koşullarına tabidir.",
+      "detail": [
+        "Devreye alma adımında yayın, izleme ve yedekleme kurulduktan sonra alan adı, kod deposu ve tüm hesaplar eksiksiz olarak size devredilir; bu, ajans değiştirme özgürlüğünüzün tek gerçek garantisidir — bizimle çalışmaya sonsuza kadar devam etmek zorunda kalmıyorsunuz, karar her zaman sizde kalıyor.",
+        "Üçüncü taraf lisanslar — satın alınmış font, stok görsel, ödemeli SaaS abonelikleri gibi — projeyle birlikte otomatik olarak size geçmez; bu tür kalemlerin kendi lisans şartları kapsam dökümanında ayrıca ve açıkça belirtilir, teslim sonrası sürpriz çıkmaz, her şey baştan yazılı olur."
+      ]
+    },
+    "contract-and-nda": {
+      "q": "Sözleşme ve gizlilik anlaşması imzalıyor musunuz?",
+      "a": "Evet, her projede kapsam ve ödeme koşullarını içeren bir sözleşme imzalıyoruz; talep edilmesi halinde ayrı bir gizlilik anlaşması, yani NDA da imzalanabilir. Bu bir hukuki tavsiye değildir — sözleşme detaylarını her zaman kendi hukuk danışmanınızla birlikte dikkatle gözden geçirmenizi öneririz.",
+      "detail": [
+        "Sözleşmenin temeli keşif aşamasının çıktısı olan kapsam dökümanıdır; kapsam yazılı olmadan fiyat vermiyoruz, bu yüzden sözleşme genellikle sürpriz bir madde içermez, sadece keşifte birlikte konuşulanların yazıya dökülmüş, üzerinde mutabık kalınmış hâlidir, ekstra bir madde ya da sürpriz bir koşul asla eklenmez.",
+        "NDA genellikle henüz kamuya açık olmayan bir ürün veya rakiplerden özenle gizlenmesi gereken bir strateji söz konusu olduğunda ayrıca talep ediliyor; standart bir web sitesi projesinde çoğu müşteri buna ihtiyaç duymuyor, tek bir sözleşme genellikle her açıdan fazlasıyla yeterli oluyor."
+      ]
+    },
+    "kvkk-gdpr": {
+      "q": "KVKK / GDPR uyumluluğu sağlıyor musunuz?",
+      "a": "Teknik altyapıyı KVKK ve GDPR'ın temel gerekliliklerine uygun kuruyoruz — veri minimizasyonu, erişim kontrolü, gerektiğinde sütun düzeyinde maskeleme. Ancak bu teknik uyumluluktur, hukuki danışmanlık değildir; aydınlatma metni, açık rıza akışı ve veri işleme sözleşmesi gibi hukuki yükümlülükler için kendi hukuk danışmanınızla mutlaka birlikte çalışmanız gerekir.",
+      "detail": [
+        "Veri mühendisliği projelerinde standart olarak sütun düzeyinde maskeleme, rol bazlı erişim kontrolü ve veri sınıflandırması uyguluyoruz; bu uygulamalar uyumluluğun teknik altyapı tarafını önemli ölçüde güçlendirir ama hukuki sorumluluğu sizin adınıza asla tamamen ortadan kaldırmaz, bu ayrımı baştan itibaren net tutmayı önemsiyoruz.",
+        "Kendi sitemizde de aynı prensibi mümkün olan en az veriyi toplayarak uyguluyoruz: veritabanı yok, iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor ve ayrıca hiçbir sistemde saklanmıyor — bu bizim için de her zaman geçerli olan, değişmeyen varsayılan bir tercih."
+      ]
+    },
+    "data-storage-location": {
+      "q": "Verilerimiz nerede saklanıyor?",
+      "a": "Projeye göre değişir — altyapıyı genellikle Vercel ve Supabase üzerinde, ihtiyacınıza en uygun coğrafi bölgede kuruyoruz; hangi bölgenin seçileceği veri gizliliği gereksinimlerinize göre proje başında sizinle birlikte netleştirilir. Piton Studios'un kendi sitesi ise veritabanı kullanmıyor; iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor, ayrıca saklanmıyor.",
+      "detail": [
+        "Sabit bir varsayılan bölge iddia etmiyoruz çünkü doğru cevap müşteriden müşteriye önemli ölçüde değişir — bazı projelerde AB bölgesi tercih edilirken bazılarında yerel barındırma gerekebilir; bu karar mimari aşamasında sizinle birlikte, sizin gereksinimlerinize göre karşılıklı olarak verilir, tek taraflı olarak size hiçbir zaman dayatılmaz.",
+        "Analytics tarafında da aynı minimal yaklaşım geçerli: kendi sitemizde Vercel Analytics ve Speed Insights kullanıyoruz, ikisi de çerezsiz çalışıyor ve ziyaretçiden hiçbir kişisel veri toplamıyor, yalnızca toplu ve tamamen anonim istatistik üretiyor, kimlik bilgisi hiç işlenmiyor."
+      ]
+    },
+    "portfolio-usage": {
+      "q": "Projemizi portfolyonuzda paylaşacak mısınız?",
+      "a": "Yalnızca izninizle. Varsayılan olarak tamamlanan projeleri portfolyomuzda referans olarak göstermek isteriz, ancak gizlilik gerektiren projelerde paylaşmadan önce mutlaka onayınızı alırız ya da hiç paylaşmayız — bu tercih genellikle sözleşme aşamasında sizinle birlikte önceden netleştirilir ve sonradan tek taraflı olarak değiştirilmez.",
+      "detail": [
+        "İş birliği yaptığımız projelerde bunu da tamamen şeffaf gösteriyoruz: örneğin Saiber ile birlikte yürütülen projelerde proje detay sayfasında iş birliği bilgisi ayrıca ve açıkça belirtiliyor, katkı hiçbir zaman tek taraflı bizim adımızaymış gibi sunulmuyor, emek her zaman doğru şekilde paylaştırılıyor.",
+        "Paylaşım talebi geldiğinde genellikle bir ekran görüntüsü ve kısa bir özet yeterli oluyor; müşteri verisi, iç sistem bilgisi veya ticari sır niteliğindeki hiçbir detay portfolyoya hiçbir zaman ve hiçbir koşulda dahil edilmiyor, bu konuda kesinlikle hiç taviz vermiyoruz."
+      ]
+    },
+    "exit-and-handover": {
+      "q": "Çalışmayı sonlandırırsak devir nasıl oluyor?",
+      "a": "Kod deposu, alan adı, hosting ve tüm hesaplar zaten en baştan sizin adınıza kayıtlı olduğu için ayrılma teknik bir engel oluşturmaz; kesmemiz gereken hiçbir erişim yoktur. Talep ederseniz güncel dokümantasyonu ve kısa bir kullanım aktarım görüşmesini de ayrıca ve isteğe bağlı olarak sağlıyoruz.",
+      "detail": [
+        "Bu, devreye alma adımının doğal bir sonucudur: yayına aldığımız her projede alan adı, kod deposu ve hesaplar zaten en başından size devredilir, ekibinize kısa bir kullanım aktarımı yapılır — devir, ilişkinin bittiği günde değil, projenin daha başladığı günde baştan kurgulanır, hiçbir zaman sonradan eklenen bir adım değildir.",
+        "Devam eden bir bakım anlaşması varsa sonlandırma tarihine kadar olan destek sözleşmede belirtilen şekilde eksiksiz tamamlanır; sonrasında sistemin bakımını kendi ekibiniz veya devraldığınız başka bir ajans sorunsuz ve hiçbir bilgi kaybı yaşamadan doğrudan üstlenebilir."
+      ]
+    },
+    "remote-work": {
+      "q": "Uzaktan mı çalışıyorsunuz, yüz yüze görüşme mümkün mü?",
+      "a": "Tamamen uzaktan çalışıyoruz — stüdyo Türkiye merkezli ve tüm süreç video görüşme, yazılı iletişim ve haftalık önizleme üzerinden düzenli biçimde yürütülüyor. Yüz yüze görüşme talep üzerine ve konum uygun olduğunda ayrıca değerlendirilebilir, ancak bu bizim standart, varsayılan çalışma modelimiz değil.",
+      "detail": [
+        "Geliştirme aşamasında her hafta çalışan bir sürüm önizleme adresinde canlı olarak yayınlanır; sizden istenen şey haftada bir kısa bir bakış atmak, uzun bir toplantı zincirine katılmak ya da sürekli statü sormak değil, sürecin kendisi zaten önizleme adresinde açıkça görünür.",
+        "Lansman sonrasında da bu ritim aynen devam ediyor: ayda bir kısa bir değerlendirme görüşmesiyle metrikleri birlikte gözden geçiriyoruz, uzaktan çalışma modeli iletişim sıklığını ya da kalitesini hiçbir şekilde azaltmıyor, sadece biçimini ve o an tercih edilen kanalını değiştiriyor."
+      ]
+    },
+    "languages-spoken": {
+      "q": "Hangi dillerde iletişim kuruyorsunuz?",
+      "a": "Türkçe, İngilizce ve Rusça — sitemiz de bu üç dilde yayında, iletişim sürecinin tamamı aynı üç dilin herhangi birinde rahatlıkla ve akıcı biçimde sürdürülebiliyor; hangi dilin tercih edileceği tamamen sizin tercihinize ve rahatlığınıza bağlı, bizim tarafımızdan herhangi bir kısıt söz konusu değil.",
+      "detail": [
+        "Yazılı iletişimde e-posta, WhatsApp ve tüm proje dokümantasyonu dahil üç dilin hepsi aynı akıcılıkla kullanılıyor; hangi dilin tercih edileceği genellikle müşteriyle ilk temasta kendiliğinden ve doğal olarak netleşiyor, ayrı bir tercih adımı ya da form doldurmaya hiç gerek kalmıyor.",
+        "Farklı saat dilimlerinde çalışan uluslararası müşteriler için yazılı ve asenkron iletişim — haftalık özet, yazılı görev takibi gibi — özellikle tercih ediliyor; bu yaklaşım hem dil hem de zaman farkını pratikte önemsiz, küçük bir ayrıntı hâline getiriyor, iletişimi hiçbir zaman yavaşlatmıyor."
+      ]
+    },
+    "contact-channels": {
+      "q": "Size nasıl ulaşabiliriz?",
+      "a": "E-posta (hi@pitonstudios.com) veya WhatsApp (+90 543 950 07 50) üzerinden; site üzerindeki iletişim formu da doldurulduğunda doğrudan e-postamıza düşüyor. Genel sorular ve yeni iş talepleri tamamen aynı kanallardan, aynı ekip tarafından ve benzer hızda karşılanıyor, ayrı bir bekleme kuyruğu yok.",
+      "detail": [
+        "İletişim formu Resend üzerinden e-postaya gidiyor; formda bıraktığınız bilgi ayrı bir veritabanında hiçbir zaman saklanmıyor, doğrudan yanıtlanmak üzere e-postamıza iletiliyor ve orada kalıyor, ayrı bir müşteri kaydı sistemi işletmiyoruz, bu bizim için bilinçli bir gizlilik tercihidir.",
+        "Acil veya hızlı bir soru için WhatsApp, daha detaylı bir proje anlatımı için e-posta veya form pratikte daha iyi çalışıyor — ama hangi kanalı seçerseniz seçin sonuçta aynı ekibe, aşağı yukarı aynı hızda, aynı özenle ve aynı dikkatle ulaşıyorsunuz."
+      ],
+      "list": [
+        "E-posta: hi@pitonstudios.com",
+        "WhatsApp: +90 543 950 07 50",
+        "Site içi iletişim formu"
+      ]
+    },
+    "response-to-inquiry": {
+      "q": "Teklif talebine ne kadar sürede dönüş yapıyorsunuz?",
+      "a": "Teklif taleplerine genellikle 24 saat içinde dönüş yapıyoruz. Karmaşık kapsamlı talepler biraz daha uzun sürebilir çünkü ilk yanıt genellikle bir keşif görüşmesi teklifidir, kesin bir fiyat değil — sabit fiyat ancak kapsam yazılı olarak netleştikten, yani keşif tamamlandıktan sonra taraflara sunulur.",
+      "detail": [
+        "Bunun sebebi kapsam yazılı olmadan hiçbir zaman fiyat vermememiz: keşif görüşmesinde işin gerçekte ne olduğunu birlikte çıkarıyoruz, çünkü yanlış bir varsayımla verilen fiyat teklifi, geliştirmenin ortasında yön değiştirdiğinde her iki taraf için de ciddi ve maliyetli bir soruna dönüşüyor, bunu baştan önlemeyi tercih ediyoruz.",
+        "Keşif görüşmesi için sizden istenen şey bir saatlik zaman ve varsa mevcut sayılarınız — aylık talep hacmi, dönüşüm oranı, işlem hacmi gibi. Bu bilgiler ne kadar netse teklif de o kadar hızlı ve o kadar isabetli netleşiyor, tahmine dayalı bir rakamla uğraşmıyoruz."
+      ]
+    },
+    "international-clients": {
+      "q": "Yurt dışından çalışabilir miyiz, faturalandırma nasıl?",
+      "a": "Evet, uluslararası müşterilerle rahatlıkla ve düzenli olarak uzaktan çalışıyoruz; iletişim Türkçe, İngilizce veya Rusça, saat dilimi farkı ise video görüşmeleri planlarken en baştan dikkate alınıyor. Faturalandırma projenin diline ve pazarına göre TL, € veya $ üzerinden yapılabiliyor — kesin vergi ve fatura düzenlemesi kendi ülkenizin mevzuatına bağlı olduğundan bu konuda hukuki veya vergi tavsiyesi vermiyoruz.",
+      "detail": [
+        "Saat dilimi farkı pratikte ciddi bir sorun oluşturmuyor çünkü süreç zaten yazılı ve asenkron biçimde ilerliyor: haftalık önizleme sürümü, yazılı ilerleme güncellemeleri ve önceden planlanmış görüşmeler farklı saat dilimlerinde de aynı netlikte ve verimlilikte işliyor, gecikme ya da aksaklık pek yaşanmıyor.",
+        "Para birimi seçimi genellikle müşterinin kendi muhasebe pratiğine göre birlikte belirleniyor; kesin vergi mükellefiyeti, KDV veya stopaj durumu gibi konularda ise kendi mali müşavirinizle ya da hukuk danışmanınızla ilerlemenizi önemle ve ısrarla öneririz, bu alan hiçbir zaman bizim uzmanlık alanımız olmadı."
+      ]
     }
   }
 }
