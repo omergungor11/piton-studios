@@ -1,0 +1,17 @@
+UPLOAD 01 / İŞ AKIŞI OTOMASYONU CAROUSEL
+
+01: “Tekrarlanan işi otomasyona bırakın” başlığı etrafında form, CRM, bildirim ve rapor panellerinin merkezi otomasyon düğümüne bağlandığı yuvarlatılmış sistem şeması.
+02: Tekrar, kopyala-yapıştır, geciken takip ve dağınık rapor başlıklarıyla otomasyona uygun dört iş sinyalini açıklayan dört büyük panel.
+03: Tetikleyici, kural, aksiyon, doğrulama ve uyarı-kayıt adımlarından oluşan beş aşamalı otomasyon akışı.
+04: Hız, doğruluk, izlenebilirlik ve ölçek başlıklarıyla otomasyonun iş sonuçlarını açıklayan dört yuvarlatılmış kart ve iletişim çağrısı.
+
+UPLOAD 02 / SÜREÇ HARİTASI TEK GÖNDERİ
+
+Piton Studios logosu altında talep, görev, onay ve rapor adımlarını gösteren süreç haritası; ücretsiz kapsam görüşmesi çağrısı, web sitesi ve telefon numarası.
+
+UPLOAD 03 / CRM VE İÇ OPERASYON CAROUSEL
+
+01: FurCRM masaüstü ve mobil ekranlarıyla “Dağınık işleri tek panelde yönetin” başlıklı CRM ve iç operasyon sistemi kapağı.
+02: Müşteri, teklif, görev, stok-üretim, rol-yetki ve raporlama modüllerini açıklayan altı büyük yuvarlatılmış kart.
+03: Web formu, WhatsApp ve e-postadan gelen verinin ortak veri katmanında birleşerek satış, operasyon ve yönetim görünümlerine dağıldığı sistem şeması ve FurCRM ekranı.
+04: Hazır araç ile özel sistem kararını süreç uyumu, entegrasyon, veri-yetki ve büyüme başlıklarında değerlendiren kontrol listesi.

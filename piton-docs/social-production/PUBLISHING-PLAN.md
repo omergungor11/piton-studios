@@ -29,11 +29,19 @@ Her gun tek satir, yani uc gonderi yayinlanacak. Proje ve bilgi icerigi ritmi ik
 | 19 Agustos | Icerik | Build Notes / 01 | Web carousel, Iletisim, AI carousel |
 | 20 Agustos | Proje | Selected Works / 11 | BT Elevator, EKH Yapi, RNV Trading |
 | 21 Agustos | Proje | Selected Works / 09 | Alp Sigorta, All Pro Cyprus, Ozge Ozler |
-| 22 Agustos | Icerik | Yeni icerik satiri / 04 | Uretilecek, takvimde bos birakildi |
+| 22 Agustos | Icerik | Business Systems / 01 | CRM carousel, Surec haritasi, Otomasyon carousel |
 | 23 Agustos | Proje | Ust vitrin seckisi | Dental Health, Vanguard, Lithos |
 | 24 Agustos | Proje | Kurumsal projeler | Beton Store, Alert Muhendislik, Velis LTD |
+| 25 Agustos | Icerik | Growth Systems / 01 | Raporlama carousel, Kazanim kontrolu, Musteri kazanimi carousel |
 
-14-21 ve 23-24 Agustos satirlari Meta'da planlandi ve iki kanal kayitlari dogrulandi. Icerik satiri / 04 tasarlandiktan sonra 22 Agustos'taki bosluga planlanacak. v1-v2 bilgi icerikleri buyuk tipografi standardina getirildi.
+14-25 Agustos arasindaki tum satirlar Meta'da planlandi ve Facebook + Instagram kayitlari dogrulandi. 22 ve 25 Agustos icerik gunlerinde takvimde uc gonderi x iki kanal olmak uzere altisar kayit gorunuyor. Iki proje satiri + bir icerik satiri ritmi korunuyor. v1-v2 bilgi icerikleri buyuk tipografi standardina getirildi.
+
+### Yeni icerik satirlarinin yukleme saatleri
+
+| Tarih | 19:00 | 19:05 | 19:10 |
+|---|---|---|---|
+| 22 Agustos | Is akisi otomasyonu | Surec haritasi gorusmesi | CRM ve ic operasyon sistemi |
+| 25 Agustos | Reklamdan musteriye kazanim sistemi | Musteri kazanim sistemi kontrolu | Olcum ve yonetim paneli |
 
 ## Uygulama Kurallari
 
