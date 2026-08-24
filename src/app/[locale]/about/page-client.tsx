@@ -142,7 +142,7 @@ export default function AboutPageClient() {
       </Reveal>
 
       <div className="subpage-spark">
-        <SparkScene />
+        <SparkScene hideStats sub={ts('cta.desc')} />
       </div>
     </PageShell>
   );

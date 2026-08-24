@@ -156,7 +156,7 @@ export default function ProjectsPageClient() {
       </section>
 
       <div className="subpage-spark">
-        <SparkScene />
+        <SparkScene hideStats sub={t('ctaSub')} />
       </div>
     </PageShell>
   );
