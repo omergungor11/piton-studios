@@ -8,6 +8,7 @@ import SERVICE_ICONS from '@/components/service-icons';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
 import SnakeBorder from '@/components/snake-border';
+import ContactScene from '@/components/scenes/contact';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
@@ -95,17 +96,7 @@ export default function ServicesPageClient() {
         </section>
       </SnakeBorder>
 
-      {/* CTA */}
-      <section className="sp-cta glass strong">
-        <div className="sp-cta-text">
-          <h3>{t('ctaTitle')}</h3>
-          <p>{t('ctaSub')}</p>
-        </div>
-        <Link href="/contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
-          <span>{t('ctaBtn')}</span>
-          <span>↗</span>
-        </Link>
-      </section>
+      <ContactScene />
     </PageShell>
   );
 }
