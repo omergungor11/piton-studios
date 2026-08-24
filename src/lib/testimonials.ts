@@ -1,56 +1,17 @@
-// DİKKAT: Yorum metinleri TASLAKTIR — yayına almadan önce müşteri onayı alınmalı,
-// approved:true yapılmadan bileşen 'taslak' kabul edilir.
-// Yorum metinleri src/messages/*.json → "testimonials.quotes.<quoteKey>" altında durur.
-
-export interface Testimonial {
-  id: string;
+// Vaka sonuc kartlari — anasayfa "Referanslar" sahnesi.
+// Bunlar musteri alintisi DEGIL: her kart bizim agzimizdan, data.ts'teki
+// proje kapsamiyla dogrulanabilir bir sonuc cumlesi tasir. Metinler
+// messages/*.json -> testimonials.results.{id} altindadir.
+export interface CaseResult {
+  id: string; // messages anahtari: testimonials.results.{id}
   workSlug: string;
-  clientName: string;
-  quoteKey: string;
-  approved: boolean;
 }
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: "t-nexos",
-    workSlug: "nexos-investment",
-    clientName: "Nexos Investment",
-    quoteKey: "nexos",
-    approved: false,
-  },
-  {
-    id: "t-ambalaj-cini",
-    workSlug: "ambalaj-cini",
-    clientName: "Ambalaj Cini",
-    quoteKey: "ambalajCini",
-    approved: false,
-  },
-  {
-    id: "t-sammys",
-    workSlug: "sammys-hotel",
-    clientName: "Sammys Hotel",
-    quoteKey: "sammys",
-    approved: false,
-  },
-  {
-    id: "t-radyo-juke",
-    workSlug: "radyo-juke",
-    clientName: "Radyo Juke",
-    quoteKey: "radyoJuke",
-    approved: false,
-  },
-  {
-    id: "t-velis",
-    workSlug: "velis-ltd",
-    clientName: "Velis Ticaret LTD",
-    quoteKey: "velis",
-    approved: false,
-  },
-  {
-    id: "t-bt-elevator",
-    workSlug: "bt-elevator",
-    clientName: "BT Elevator",
-    quoteKey: "btElevator",
-    approved: false,
-  },
+export const CASE_RESULTS: CaseResult[] = [
+  { id: "ambalajCini", workSlug: "ambalaj-cini" },
+  { id: "nexos", workSlug: "nexos-investment" },
+  { id: "sammys", workSlug: "sammys-hotel" },
+  { id: "emlakSync", workSlug: "emlak-sync" },
+  { id: "radyoJuke", workSlug: "radyo-juke" },
+  { id: "lefkosaTaksi", workSlug: "kibris-lefkosa-taksi" },
 ];

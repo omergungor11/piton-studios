@@ -84,6 +84,12 @@ export default async function SectorPage({ params }: Props) {
     .map((i) => sectorText(messages, slug, `painPoints.${i}`))
     .filter((p): p is string => Boolean(p));
 
+  // Opsiyonel duzyazi bolumu: ceviri anahtari yoksa bolum hic render edilmez.
+  const detailParagraphs = [1, 2, 3]
+    .map((i) => sectorText(messages, slug, `detail.${i}`))
+    .filter((p): p is string => Boolean(p));
+  const detailTitle = messageString(messages, ["sectorsPage", "detailTitle"]);
+
   const works = sector.workSlugs
     .map((workSlug) => WORKS.find((w) => w.slug === workSlug))
     .filter((w): w is (typeof WORKS)[number] => Boolean(w));
@@ -189,6 +195,35 @@ export default async function SectorPage({ params }: Props) {
                   <span className="sec-pain-n">{String(i + 1).padStart(2, "0")}</span>
                   <p>{point}</p>
                 </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Opsiyonel duzyazi: sectorItems.{slug}.detail.1..3 */}
+        {detailParagraphs.length > 0 && (
+          <section className="sec-block">
+            {detailTitle && (
+              <div className="sec-head">
+                <span className="sec-head-n" aria-hidden="true">
+                  ◦
+                </span>
+                <h2 className="sec-head-title">{detailTitle}</h2>
+              </div>
+            )}
+            <div className="sec-detail">
+              {detailParagraphs.map((paragraph, i) => (
+                <p
+                  key={i}
+                  style={{
+                    maxWidth: "68ch",
+                    color: "var(--muted)",
+                    lineHeight: 1.7,
+                    margin: "0 0 16px",
+                  }}
+                >
+                  {paragraph}
+                </p>
               ))}
             </div>
           </section>

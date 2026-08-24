@@ -3002,22 +3002,35 @@
     }
   },
   "testimonials": {
-    "eyebrow": "§ 06 · Referanslar",
-    "title": "Müşterilerimiz {accent}",
-    "titleAccent": "anlatıyor",
-    "subtitle": "Birlikte çalıştığımız markaların projeleri hakkında söyledikleri — her yorum gerçek bir işe bağlı.",
-    "viewProject": "Projeyi gör",
-    "prevLabel": "Önceki yorum",
-    "nextLabel": "Sonraki yorum",
-    "goTo": "Yorum {index}",
-    "draftBadge": "Taslak",
-    "quotes": {
-      "nexos": "Hazır temalar ihtiyacımızı karşılamıyordu; Piton Studios bize sıfırdan, harita destekli ve çok dilli bir ilan yönetim sistemi kurdu. İlan verisinden otomatik PDF ve sunum üretimi sayesinde teklif hazırlamak saatler yerine dakikalar alıyor.",
-      "ambalajCini": "E-ticaret altyapımızı ödeme entegrasyonu ve stok takibiyle birlikte kurdular. Site 2022'den beri kesintisiz çalışıyor ve online satışlarımızda %30 büyüme yakaladık.",
-      "sammys": "Otelimiz için misafiri ön plana çıkaran, sıcak bir site tasarladılar. Online rezervasyon ve çok dilli yapı sayesinde uluslararası misafirlere çok daha kolay ulaşıyoruz.",
-      "radyoJuke": "Canlı yayın akışımız için bize özel bir platform geliştirdiler. Mobilde ve masaüstünde kesintisiz dinleme deneyimi sunuyoruz; sosyal medya entegrasyonuyla dinleyici kitlemiz genişledi.",
-      "velis": "25 yıllık sektör deneyimimizi yansıtan, ürün kataloğu ve çok dilli yapıya sahip kurumsal bir site teslim ettiler. İçerik yönetimi o kadar kolay ki güncellemeleri kendi ekibimiz yapıyor.",
-      "btElevator": "Çok dilli kurumsal sitemizi teknik SEO çalışmasıyla birlikte hayata geçirdiler. Arama motorlarındaki görünürlüğümüz belirgin şekilde arttı ve site kurumsal kimliğimizi tam olarak yansıtıyor."
+    "eyebrow": "Referanslar",
+    "title": "Söz değil, {accent}",
+    "titleAccent": "sonuç",
+    "subtitle": "Her kartın arkasında gerçek bir proje var — tıklayın, kendiniz inceleyin.",
+    "results": {
+      "ambalajCini": {
+        "highlight": "%30 satış büyümesi",
+        "desc": "Ambalaj tedarikçisi için ödeme entegrasyonlu e-ticaret sitesi; yayına alındıktan sonra çevrimiçi satışlar %30 arttı."
+      },
+      "nexos": {
+        "highlight": "Uçtan uca özel sistem",
+        "desc": "Harita, çok dillilik ve otomatik PDF/PPT teklifleriyle çalışan özel emlak ilan ve yönetim sistemi."
+      },
+      "sammys": {
+        "highlight": "Komisyonsuz rezervasyon",
+        "desc": "Butik otel, oda rezervasyonlarını aracı komisyonu ödemeden kendi sitesi üzerinden alıyor."
+      },
+      "emlakSync": {
+        "highlight": "Tek panelden çoklu portal",
+        "desc": "İlan bir kez giriliyor, birden fazla emlak portalına otomatik olarak yayınlanıyor."
+      },
+      "radyoJuke": {
+        "highlight": "Canlı yayın entegrasyonu",
+        "desc": "Online radyo, canlı yayın altyapısıyla birlikte web platformuna taşındı."
+      },
+      "lefkosaTaksi": {
+        "highlight": "Yerel aramada görünürlük",
+        "desc": "Lefkoşa'da taksi ve transfer aramaları için kurgulanmış rezervasyon sitesi."
+      }
     }
   },
   "processScene": {
@@ -3039,7 +3052,7 @@
       },
       "4": {
         "title": "Geliştirme",
-        "desc": "Projeye göre Next.js veya WordPress ile geliştiriyoruz. Her hafta çalışan bir sürüm görürsünüz; ilerleme söz değil, ekran."
+        "desc": "Projenin ihtiyacına en uygun teknolojiyi seçip onunla geliştiriyoruz. Her hafta çalışan bir sürüm görürsünüz; ilerleme söz değil, ekran."
       },
       "5": {
         "title": "Yayın",
@@ -3201,7 +3214,12 @@
         "2": "Tasarım güven vermiyor — para emanet edilecek bir işletmede eskimiş veya derme çatma bir site, ziyaretçiyi daha kapıdan geri çeviriyor.",
         "3": "Site tek dilli kalıyor; yabancı müşterinin yoğun olduğu bir pazarda İngilizce ve Rusça bilmeyen bir site potansiyel müşterilerin büyük kısmını dışarıda bırakıyor."
       },
-      "ctaText": "Finans siteniz için bize yazın — projenizi birlikte planlayalım."
+      "ctaText": "Finans siteniz için bize yazın — projenizi birlikte planlayalım.",
+      "detail": {
+        "1": "Finans sektöründe web sitesi, güvenin ilk test edildiği yerdir; insanlar parasını emanet edeceği işletmeyi önce internette tartar. Canlı kur verisini şeffaf kurumsal bilgiyle birleştiren bir site, 'güncel fiyat için arayın' ekranından çıkıp müşterinin gün içinde tekrar tekrar başvurduğu bir araca dönüşür. Bu dönüşüm, ziyaretçiyi telefon trafiğine düşmeden müşteriye çevirir.",
+        "2": "Finans projelerinde canlı veri ile kurumsal güveni aynı tasarımda kuruyoruz. Halas Exchange'de canlı kur bilgisini şube lokasyonları ve kurumsal içerikle tek deneyimde birleştirdik; Arslan Coin Center'da kripto alım-satım hizmetini şeffaflık vurgusuyla sunan bir site teslim ettik. Kendi tarafımızda ise Holly Trader prototipiyle piyasa verisi toplama, işleme ve raporlama akışlarını, Ödeme Takip Botu ile ödeme vadelerini izleyip otomatik hatırlatma gönderen bir iç aracı uçtan uca geliştirdik — canlı veri ve otomasyon gerektiren finans projelerine bu deneyimle giriyoruz.",
+        "3": "Sonuç çerçevesi netlik ve bulunabilirlik üzerine kurulur. Türkçe, İngilizce ve Rusça içerik yerli ve yabancı müşteriyi aynı anda karşılar; yerel SEO klasik aramalarda, soruları doğrudan yanıtlayan sayfa yapısı ise yapay zekâ destekli aramalarda (GEO) görünürlük getirir. Sitenin hangi sayfalarının ilgi gördüğünü ve taleplerin nereden geldiğini ölçerek dijital varlığınızı somut verilerle yönetirsiniz."
+      }
     },
     "e-commerce": {
       "title": "E-Ticaret Web Siteleri",
@@ -3221,7 +3239,12 @@
         "2": "Ödeme adımı güven vermiyor ya da seçenekler eksik; müşteri kart bilgisini girmekten vazgeçip alışverişi terk ediyor.",
         "3": "Ürünler Google'da görünmüyor; satış tamamen reklam bütçesine ve sosyal medya paylaşımlarına bağımlı kalıyor."
       },
-      "ctaText": "E-ticaret projenizi konuşalım — bize yazın."
+      "ctaText": "E-ticaret projenizi konuşalım — bize yazın.",
+      "detail": {
+        "1": "E-ticarette web sitesi vitrin değil, satış sürecinin kendisidir; ziyaretçinin ürünü bulmasından ödemeyi tamamlamasına kadar her adım ya satışa taşır ya da terke sürükler. İyi bir e-ticaret sitesi bu yolculuktaki sürtünmeyi azaltır: hızlı yüklenen sayfalar, net ürün bilgisi, az adımlı sipariş akışı ve güven veren ödeme adımı. Fark, trafiği artırmakta değil, gelen trafiği siparişe çevirmekte ortaya çıkar.",
+        "2": "E-ticaret projelerinde ödeme, katalog ve sipariş yönetimini uçtan uca kuruyoruz. Ambalaj Cini'de ödeme entegrasyonu, ürün yönetimi ve stok takibini 2022'den bu yana aktif çalışan tek platformda topladık; Boon Fresh'te taze gıda teslimatı için hızlı sipariş akışı ve teslimat takibi kurduk; Beton Store'da yapı malzemeleri kataloğunu sipariş yönetimine bağladık. Altyapıyı markaya göre değil projeye göre seçiyoruz: hazır sistemin yettiği yerde hazır sistem, ölçek ve özel ihtiyaç büyüdüğünde özel geliştirme öneriyoruz.",
+        "3": "Sonuç tarafında hedef, satışın tek bir kanala bağımlı kalmamasıdır. Ürün ve kategori sayfalarının arama motorlarında bulunabilir olması organik trafiği, doğrudan yanıt veren içerik yapısı ise yapay zekâ destekli aramalardaki (GEO) görünürlüğü besler. Hangi üründen sipariş geldiğini ve ziyaretçinin akışı hangi adımda terk ettiğini ölçerek mağazanızı sürekli iyileştirilen bir sisteme dönüştürürsünüz."
+      }
     },
     "corporate": {
       "title": "Kurumsal Web Sitesi",
@@ -3241,7 +3264,12 @@
         "2": "Tek dilli bir site, yabancı müşterileri ve iş ortaklarını daha ilk adımda kaybettirir.",
         "3": "Görselliği iyi ama teknik SEO'su zayıf bir site aramalarda çıkmaz; kimsenin bulamadığı vitrin satış getirmez."
       },
-      "ctaText": "Kurumsal siteniz firmanızı gerçekten temsil etsin — projenizi konuşmak için bize yazın."
+      "ctaText": "Kurumsal siteniz firmanızı gerçekten temsil etsin — projenizi konuşmak için bize yazın.",
+      "detail": {
+        "1": "Kurumsal web sitesi, firmanızın güvenilirliğini daha ilk temasta kanıtlayan dijital altyapıdır. Potansiyel müşteriniz, iş ortağınız veya işe alacağınız aday sizinle konuşmadan önce sitenize bakar; orada gördüğü düzen, güncellik ve netlik firmanın kendisine dair bir yargıya dönüşür. Bu yüzden iyi bir kurumsal site yalnızca kim olduğunuzu anlatmaz — hizmetlerinizi, referanslarınızı ve teklif sürecinizi tek bir akışta birleştirip ziyaretçiyi somut bir iletişim adımına taşır.",
+        "2": "Kurumsal projelerde işe görsel tasarımdan önce içerik mimarisiyle başlıyoruz: hangi sayfa hangi soruyu yanıtlayacak, ziyaretçi hangi adımda teklif isteyecek. Bu yaklaşımın izlerini portföyümüzde görebilirsiniz — BT Elevator'da çok dilli yapıyı teknik SEO ve schema işaretlemesiyle birlikte kurduk, Arslan Group'ta holdingin farklı iş kollarını tek çatı altında topladık, Alp Sigorta'da hizmet kataloğunu teklif formuna bağladık, EKH Yapı'da ise proje portföyünü ekibin bize bağımlı kalmadan güncelleyebildiği bir yapıya oturttuk. Teknolojiyi markaya göre değil projeye göre seçiyoruz; ölçeğinize uygun olanı öneriyoruz.",
+        "3": "Doğru kurulmuş bir kurumsal site, yayına girdiği günden itibaren ölçülebilir bir pazarlama varlığına dönüşür. Teknik SEO ve yapılandırılmış veri klasik aramalarda, soruları doğrudan yanıtlayan içerik yapısı ise yapay zekâ destekli aramalarda (GEO) görünürlük kazandırır. Hangi sayfaların ziyaret edildiğini ve hangi formların doldurulduğunu izleyerek siteyi bir gider kalemi olarak değil, performansı takip edilen bir kanal olarak yönetirsiniz."
+      }
     },
     "real-estate": {
       "title": "Emlak Web Sitesi",
@@ -3261,7 +3289,12 @@
         "2": "Aynı ilanı birden fazla platformda elle güncellemek zaman kaybettirir; satılan mülkün ilanı yayında kalmaya devam eder.",
         "3": "Tek dilli bir site, Kıbrıs pazarının en güçlü alıcı kitlesi olan yabancı yatırımcıyı daha arama aşamasında kaybettirir."
       },
-      "ctaText": "Portföyünüzü kendi sitenizden satmaya başlayın — emlak projenizi konuşalım."
+      "ctaText": "Portföyünüzü kendi sitenizden satmaya başlayın — emlak projenizi konuşalım.",
+      "detail": {
+        "1": "Emlak sektöründe web sitesi, portföyünüzün kontrolünü ilan portallarından geri almanızı sağlar. Mülk alıcısı kararını uzun bir araştırma sürecinin sonunda verir; bu süreçte filtrelenebilir ilanlar, harita üzerinde konum, bölge bilgisi ve kendi dilinde içerik sunan site, alıcıyı rakip ilanların yanına değil doğrudan size getirir. Özellikle yabancı yatırımcının güçlü olduğu pazarlarda bu fark, portalda bir satır olmakla marka olmak arasındaki farktır.",
+        "2": "Bu sektörde hem kurumsal emlak siteleri hem de özel yazılım geliştiriyoruz. Nexos Investment için ilan yönetiminden otomatik PDF ve sunum formatında teklif üretimine uzanan, haritalı ve çok dilli özel bir ilan yönetim sistemi kurduk — hazır temaların yetmediği yerde sistemi sıfırdan tasarlıyoruz. Pampas Investment, Pinnacle Yatırım, Arslan Estates ve Homes in Mediterranean ile Kuzey Kıbrıs ve Akdeniz pazarında uluslararası alıcıya dönük siteler teslim ettik; kendi ürünümüz Emlak Sync ise ilanın tek yerden girilip KKTC portallarında otomatik yayınlanmasını sağlayarak mükerrer veri girişini ortadan kaldırıyor.",
+        "3": "Sonuç tarafında hedef, mülk arayan kişinin sizi arama yaptığı her yerde bulmasıdır. Çok dilli sayfalar ve yerel SEO 'satılık villa' gibi klasik sorgularda, net yapılandırılmış içerik ise yapay zekâ destekli aramalarda (GEO) görünürlük kurar. Site üzerinden gelen her talebin hangi ilandan ve hangi kanaldan geldiğini izleyebildiğiniz için, pazarlama bütçenizi tahminle değil veriyle yönetirsiniz."
+      }
     },
     "transportation": {
       "title": "Taşımacılık ve Transfer Web Sitesi",
@@ -3281,7 +3314,162 @@
         "2": "Web'de görünmeyen bir transfer firması, havalimanı aramalarındaki müşteriyi komisyonlu aracı platformlara kaptırır.",
         "3": "Fiyatı ancak telefonla öğrenilebilen hizmet, net fiyat gösteren rakip karşısında güven kaybeder."
       },
-      "ctaText": "Rezervasyonları telefon hattından web'e taşıyalım — transfer sitenizi konuşmak için bize yazın."
+      "ctaText": "Rezervasyonları telefon hattından web'e taşıyalım — transfer sitenizi konuşmak için bize yazın.",
+      "detail": {
+        "1": "Taşımacılık sektöründe web sitesi, rezervasyonu telefon hattının müsaitliğinden bağımsız hale getiren bir satış kanalıdır. Havalimanına inecek yolcu fiyatı ve güzergâhı yola çıkmadan önce görmek ister; net fiyat gösterip online talep alabilen firma, ancak telefonla ulaşılabilen rakibinin müşterisini kazanır. Gece gelen ya da hat meşgulken düşen her talep, site üzerinden kayda girdiğinde kayıp olmaktan çıkar.",
+        "2": "Transfer ve taksi projelerinde rezervasyon akışını, fiyat bilgisini ve iletişim kanallarını tek deneyimde topluyoruz. Jet Transfer Cyprus ve Aydın Transfer'de online rezervasyonu rota ve fiyat hesaplama araçlarıyla birleştirdik; Kıbrıs Lefkoşa Taksi ve Kardeşler Taxi'de tek dokunuşla arama ve WhatsApp akışını mobil öncelikli tasarıma bağladık; Welcome Pickups'ta ise çok dilli yapı ve müşteri yorumlarıyla uluslararası yolcuya güven veren bir platform kurduk. Her projede teknolojiyi ihtiyaca göre seçiyor, akışı telefonundan rezervasyon yapan yolcuya göre tasarlıyoruz.",
+        "3": "Bu yatırımın karşılığı, müşterinin sizi aradığı anda bulması ve talebin kayıt altına girmesidir. Yerel SEO 'lefkoşa taksi', 'kıbrıs transfer' gibi sorgularda, doğrudan yanıt veren içerik ise yapay zekâ destekli aramalarda (GEO) görünürlük sağlar. Web, WhatsApp ve telefon taleplerini ayrı ayrı izleyebildiğiniz için hangi kanalın iş getirdiğini net görür, büyümeyi buna göre planlarsınız."
+      }
+    },
+    "restaurant": {
+      "title": "Restoran ve Kafe Web Siteleri",
+      "metaTitle": "Restoran ve Kafe Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "QR menü, online rezervasyon ve sipariş odaklı restoran ve kafe web siteleri tasarlıyoruz. Menünüz her cihazda hızlı açılır, misafiriniz sizi Google'da bulur.",
+      "intro": "Restoranınız veya kafeniz için dijital menü, rezervasyon ve online sipariş odaklı web siteleri tasarlıyor ve geliştiriyoruz. Bu sektörde site bir vitrin değil, servisin ilk adımıdır: misafir sizi telefonundan bulur, menünüze bakar ve masaya oturmadan kararını verir. Gıda siparişi tarafındaki deneyimimizi Boon Fresh için kurduğumuz taze gıda teslimat platformundan taşıyoruz.",
+      "bullets": {
+        "1": "Dijital ve QR menü — menünüz baskıya bağımlı kalmadan tek yerden güncellenir; fiyat veya ürün değişikliği anında hem masadaki QR kodda hem sitede yayına girer.",
+        "2": "Online rezervasyon akışı — misafir tarih, saat ve kişi sayısını seçer, talep anında size ulaşır; telefonun meşgul olduğu yoğun saatlerde rezervasyon kaybolmaz.",
+        "3": "Yerel SEO ve harita görünürlüğü — 'yakınımdaki restoran' tarzı aramalarda çıkmanız için site içeriğini, işletme bilgilerini ve yapılandırılmış veriyi birlikte kurarız.",
+        "4": "İştah açan, hızlı yüklenen tasarım — fotoğraf ağırlıklı bir sitenin yavaşlamasına izin vermeden mekânın atmosferini ve tabakları ön plana çıkarırız.",
+        "5": "Çok dilli menü ve içerik — turist müşterinin yoğun olduğu bölgelerde menünüzü ve sayfalarınızı Türkçe, İngilizce ve Rusça sunarsınız."
+      },
+      "painTitle": "Restoran ve kafelerin web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Menü yalnızca Instagram gönderilerinde veya taranmış bir PDF'te yaşıyor; misafir güncel fiyatı bulamıyor, okuyamadığı menüden vazgeçip başka mekâna gidiyor.",
+        "2": "Rezervasyon tamamen telefona bağlı; hat meşgulken veya mesai dışında gelen talepler hiç kayda geçmeden kayboluyor.",
+        "3": "Mekân Google'da ve haritalarda görünmüyor; siparişler komisyonlu aracı platformlar üzerinden dönüyor ve müşteri ilişkisi platformun elinde kalıyor."
+      },
+      "ctaText": "Menünüzü ve rezervasyonlarınızı web'e taşıyalım — restoran sitenizi konuşmak için bize yazın.",
+      "detail": {
+        "1": "İyi bir restoran web sitesi, misafirin karar anındaki üç sorusunu tek yerde yanıtlar: menüde ne var, fiyatlar ne ve masa nasıl ayırtılır. Bu üçü sitede net olduğunda telefon trafiği azalır, aracı platformlara ödenen komisyonun yerini kendi kanalınız alır. Menü, rezervasyon ve konum bilgisi tek adreste toplandığında sosyal medya da dağınık bir bilgi kaynağı olmaktan çıkıp bu adrese trafik taşıyan bir kanala dönüşür.",
+        "2": "Restoran projelerine menüden başlıyoruz; çünkü sitenin en sık ziyaret edilen ve en sık değişen parçası menüdür. Menüyü işletmenin kendisinin güncelleyebileceği bir yapıda kurar, rezervasyon ve sipariş akışını mekânın gerçek çalışma düzenine göre tasarlarız; teknolojiyi de markaya değil projeye göre seçeriz — hazır bir sistemin yettiği yerde onu, özel ihtiyaç varsa özel geliştirmeyi öneririz. Turist müşterisi olan mekânlarda çok dilli menü ve içerik yapısını baştan planlarız.",
+        "3": "Sonucu tahminle değil ölçümle takip edersiniz: rezervasyon taleplerinin sayısı, menü sayfası ziyaretleri ve yol tarifi tıklamaları sitenin işe yarayıp yaramadığını doğrudan gösterir. Teknik SEO ve yapılandırılmış veri, mekânınızın yalnızca klasik aramalarda değil, yapay zekâ destekli arama ve öneri araçlarında da doğru bilgiyle anılmasını hedefler. Menü ve işletme bilgileri tek kaynaktan güncel tutulduğu için bu görünürlük zamanla birikir."
+      }
+    },
+    "tourism": {
+      "title": "Turizm ve Otel Web Siteleri",
+      "metaTitle": "Otel ve Turizm Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "Otel, tur ve transfer işletmeleri için çok dilli tanıtım ve rezervasyon odaklı web siteleri kuruyoruz. Sammys Hotel ve Welcome Pickups portföyümüzde.",
+      "intro": "Oteliniz, tur şirketiniz veya turizm işletmeniz için çok dilli tanıtım ve rezervasyon odaklı web siteleri kuruyoruz. Portföyümüzde Sammys Hotel için oda rezervasyonu ve fotoğraf galerisi odaklı otel sitesi ile Welcome Pickups için online rezervasyonlu havalimanı transfer sitesi var. Bu sektörde misafir kararını fotoğraflara ve rezervasyonun ne kadar kolay olduğuna bakarak verir; siteyi bu iki ana yük etrafında tasarlarız.",
+      "bullets": {
+        "1": "Çok dilli tanıtım — odalarınızı, turlarınızı ve hizmetlerinizi Türkçe, İngilizce ve Rusça sunarsınız; misafir kendi dilinde okuduğu yere daha kolay güvenir.",
+        "2": "Rezervasyon akışı — tarih ve kişi seçiminden talebin size ulaşmasına kadar akışı az adımlı kurarız; misafir gece yarısı da rezervasyon talebini bırakabilir.",
+        "3": "Galeri ve tesis sunumu — Sammys Hotel'de olduğu gibi fotoğraf galerisini sitenin taşıyıcısı yaparız; misafir odayı ve mekânı gelmeden önce gezer.",
+        "4": "Uluslararası SEO — misafiriniz başka ülkeden arıyor; hreflang'li çok dilli sayfa yapısıyla her pazarda kendi dilinizdeki sürümünüz bulunur.",
+        "5": "Mobil öncelikli hız — seyahat araştırması çoğunlukla telefonda yapılır; site yavaş bağlantıda bile hızlı açılacak şekilde kurulur."
+      },
+      "painTitle": "Turizm işletmelerinin web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Satış tamamen rezervasyon platformlarından dönüyor; her konaklamadan komisyon gidiyor ve misafirle ilişki platformun müşterisi olarak kalıyor.",
+        "2": "Site tek dilli; yurt dışından gelen misafir kendi dilinde bilgi bulamayınca daha araştırma aşamasında rakip tesise geçiyor.",
+        "3": "Fotoğraflar eski, sezon bilgileri güncel değil; siteye gelen misafir gördüğüyle karşılaşacağından emin olamıyor ve rezervasyonu platform üzerinden yapmayı tercih ediyor."
+      },
+      "ctaText": "Misafirleriniz sizi kendi dillerinde bulsun — turizm sitenizi konuşmak için bize yazın.",
+      "detail": {
+        "1": "İyi bir turizm web sitesi, işletmeye rezervasyon platformlarından bağımsız kendi satış kanalını kazandırır. Misafir tesisi veya turu sizin sitenizde inceleyip rezervasyon talebini doğrudan size bıraktığında araya komisyon girmez ve misafir ilişkisi ilk mesajdan itibaren sizde başlar. Platformlar vazgeçilecek bir kanal değil; ama tek kanal olduklarında fiyatı ve müşteriyi onlar yönetir.",
+        "2": "Turizm projelerine misafirin yolculuğundan başlıyoruz: hangi ülkeden, hangi dilde, hangi cihazla geliyor ve rezervasyona kaç adımda ulaşıyor. Çok dilli içerik yapısını sonradan eklenen bir çeviri değil sitenin omurgası olarak kurar, galeri ve tanıtım sayfalarını görsel ağırlığa rağmen hızlı kalacak biçimde tasarlarız. Teknolojiyi projenin ölçeğine göre seçeriz; rezervasyon akışı da basit bir talep formundan tarih seçimli akışa kadar işletmenin gerçek çalışma düzenine göre şekillenir.",
+        "3": "Sonuç, ölçülebilir sinyaller üzerinden izlenir: sitenin aldığı rezervasyon talepleri, hangi dildeki sayfaların ziyaret edildiği ve misafirlerin hangi ülkelerden geldiği net biçimde görünür. Çok dilli teknik SEO altyapısı, tesisinizin her hedef pazarda kendi dilindeki aramalarda ve yapay zekâ destekli seyahat önerilerinde doğru bilgiyle görünmesini hedefler. Doğrudan gelen her rezervasyon talebi, platform komisyonuna gitmeyen bir kazanç olarak kendini gösterir."
+      }
+    },
+    "health": {
+      "title": "Sağlık ve Klinik Web Siteleri",
+      "metaTitle": "Klinik ve Sağlık Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "Klinik ve sağlık kuruluşları için randevu talebi alan, hasta verisini koruyan ve güven veren çok dilli web siteleri tasarlıyoruz. KVKK hassasiyeti standart.",
+      "intro": "Kliniğiniz, muayenehaneniz veya sağlık kuruluşunuz için güven veren, randevu odaklı web siteleri tasarlıyoruz. Portföyümüzde Dental Health diş kliniği için tedavileri, ekipmanı ve uzman kadroyu sergileyen, hasta güveni kurmaya odaklı bir klinik sitesi var. Sağlıkta ziyaretçi bir müşteri değil bir hastadır; site de önce güven vermek, sonra randevuya giden yolu kısaltmak zorundadır.",
+      "bullets": {
+        "1": "Randevu talebi akışı — hasta uygun bölümü ve tercih ettiği zamanı seçip talebini bırakır; kliniğiniz telefon trafiğine sıkışmadan dönüş yapar.",
+        "2": "Güven kuran kurumsal sunum — hekim kadrosu, uzmanlık alanları, tedaviler ve klinik ortamı şeffaf biçimde sunulur; hasta kime emanet olacağını görerek gelir.",
+        "3": "KVKK ve veri hassasiyeti — formlar yalnızca gerekli bilgiyi ister, aydınlatma ve açık rıza metinleri akışın parçasıdır; hasta verisi üçüncü taraflara sızdırılmaz.",
+        "4": "Anlaşılır tedavi içerikleri — her tedavi sayfası hastanın diliyle yazılır ve sık sorulan soruları yanıtlar; bu yapı aynı zamanda arama görünürlüğünüzü besler.",
+        "5": "Çok dilli yapı — sağlık hizmeti arayan yabancı hastalara Türkçe, İngilizce ve Rusça içerikle kendi dillerinde ulaşırsınız."
+      },
+      "painTitle": "Sağlık sitelerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Randevu yalnızca telefonla alınabiliyor; mesai dışında karar veren hasta ertesi günü beklemek yerine online randevu veren başka bir kliniğe yazıyor.",
+        "2": "Site hekim kadrosunu, tedavileri ve kliniği yeterince anlatmıyor; hastanın sağlığını emanet edeceği yer hakkında ilk izlenimi belirsizlik oluyor.",
+        "3": "İletişim formları ve takip araçları hasta verisi hassasiyeti gözetilmeden kurulmuş; kişisel sağlık bilgisi gereğinden fazla toplanıyor ve KVKK riski birikiyor."
+      },
+      "ctaText": "Hastalarınız size güvenerek gelsin — klinik sitenizi konuşmak için bize yazın.",
+      "detail": {
+        "1": "İyi bir klinik web sitesi, hastanın iki temel ihtiyacını çözer: buraya güvenebilir miyim ve randevuyu nasıl alırım. Hekim kadrosunu, tedavileri ve klinik ortamını şeffaf biçimde gösteren bir site, hasta daha kapıdan girmeden güven ilişkisini başlatır; net bir randevu akışı da bu güveni somut bir adıma çevirir. Sağlıkta kötü bir web sitesi yalnızca estetik bir sorun değildir — hastanın gözünde kliniğin özenini temsil eder.",
+        "2": "Sağlık projelerinde tasarımdan önce hassasiyetle başlıyoruz: hangi veri gerçekten gerekli, nerede saklanacak ve hasta neye rıza gösteriyor. Randevu ve iletişim formlarını veri minimizasyonu ilkesiyle kurar, KVKK aydınlatma ve rıza metinlerini akışın doğal parçası yaparız; teknolojiyi de projeye göre seçeriz — güncel ve bakımı sürdürülebilir bir altyapı, sağlıkta kendi başına bir güvenlik önlemidir. Sağlık turizmine dönük kliniklerde çok dilli içerik yapısını baştan planlarız.",
+        "3": "Sonucun ölçüsü, siteden gelen randevu talepleridir; hangi tedavi sayfasının okunduğu ve hangi kanaldan hasta geldiği net biçimde izlenir. Hastanın diliyle yazılmış, soruları doğrudan yanıtlayan tedavi içerikleri, kliniğinizin hem klasik aramalarda hem de yapay zekâ destekli sağlık aramalarında doğru bilgiyle görünmesini hedefler. Görünürlük tek seferlik bir kampanya değil, güncel tutulan içeriğin zamanla biriktirdiği bir varlıktır."
+      }
+    },
+    "construction": {
+      "title": "İnşaat & Mimarlık Web Siteleri",
+      "metaTitle": "İnşaat ve Mimarlık Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "İnşaat firmaları ve mimarlık ofisleri için proje galerili, kurumsal güven veren, çok dilli web siteleri tasarlıyoruz. EKH Yapı ve Velis LTD portföyümüzde.",
+      "intro": "İnşaat firmanız veya mimarlık ofisiniz için proje galerisi odaklı, kurumsal güven veren web siteleri tasarlıyor ve geliştiriyoruz. Portföyümüzde EKH Yapı için proje portföylü kurumsal site, Velis LTD için ürün kataloglu inşaat firması sitesi ve Beton Store için yapı malzemeleri e-ticaret mağazası var. Bu sektörde bitmiş işleriniz yeni işin kapısını açar; siteyi de bunun etrafında kuruyoruz.",
+      "bullets": {
+        "1": "Proje galerisi ve portföy — tamamlanan ve devam eden projeleriniz yüksek kaliteli görsellerle, künye bilgileriyle ve kategorilere ayrılmış biçimde sergilenir.",
+        "2": "Kurumsal güven sayfaları — firma geçmişi, ekip, belgeler ve referanslarla büyük iş kararlarında aranan ciddiyeti site daha ilk bakışta verir.",
+        "3": "Çok dilli yapı — Türkçe, İngilizce ve Rusça içerikle yabancı yatırımcıya ve uluslararası iş ortaklarına kendi dillerinde ulaşırsınız.",
+        "4": "SEO ve bulunurluk — 'inşaat firması', 'müteahhit' ve bölge bazlı aramalarda görünmeniz için teknik altyapı ve içerik yapısı kurulur.",
+        "5": "Kolay proje yönetimi — yeni biten projeyi ekibiniz bize bağımlı kalmadan dakikalar içinde galeriye ekler."
+      },
+      "painTitle": "İnşaat sitelerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Yıllara mal olmuş projeler sitede ya hiç yok ya da telefonla çekilmiş birkaç fotoğrafla temsil ediliyor; firmanın en güçlü kanıtı görünmez kalıyor.",
+        "2": "Site yıllar önce yapılmış ve bir daha güncellenmemiş; görüşme öncesi siteye bakan yatırımcı veya kurumsal müşteri, durağan bir firma izlenimi ediniyor.",
+        "3": "Firma adıyla arama yapan müşteri siteyi bulamıyor ya da mobilde dağılan bir sayfayla karşılaşıyor; ilk izlenim rakiplere kayıyor."
+      },
+      "ctaText": "İnşaat veya mimarlık siteniz projelerinizi hak ettiği gibi göstersin — bize yazın.",
+      "detail": {
+        "1": "İnşaat ve mimarlıkta iyi bir web sitesi, bitmiş işlerinizi kanıta dönüştürür. Bu sektörde karar referans üzerinden verilir: konut alacak aile de, ihaleye çıkan kurum da önce tamamlanmış projelere bakar. Projelerin yüksek kaliteli görsellerle, künyesiyle ve süreç anlatımıyla sunulduğu bir site, henüz ilk görüşme yapılmadan güven kurar.",
+        "2": "Yaklaşımımız, siteyi proje galerisi etrafında kurmaktır. Görsel ağırlıklı sayfaların hızlı yüklenmesi için projeye uygun teknolojiyi seçiyor, görselleri optimize ediyor ve yeni proje eklemeyi ekibinizin elinde tutan bir içerik yönetimi kuruyoruz. EKH Yapı ve Velis LTD sitelerinde bu yapıyı kurumsal sayfalarla, Beton Store'da ise yapı malzemeleri e-ticaretiyle birleştirdik.",
+        "3": "Doğru kurulmuş bir inşaat sitesinden beklentiniz, satış öncesi güven işini üstlenmesi olmalı. Sizi projelerinizle tanıyarak arayan müşteri, fiyat sormanın ötesine geçmiş demektir; gelen talebin niteliği yükselir. Yatırımcı ve ihale görüşmelerinde de site, her toplantıya taşıyabildiğiniz kalıcı bir referans dosyası görevi görür."
+      }
+    },
+    "education": {
+      "title": "Eğitim & Kurs Web Siteleri",
+      "metaTitle": "Eğitim Kurumu ve Kurs Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "Kurs merkezleri, özel okullar ve eğitim kurumları için online başvuru ve kayıt akışlı, kolay içerik yönetimli, aramalarda bulunan web siteleri tasarlıyoruz.",
+      "intro": "Eğitim kurumunuz, kurs merkeziniz veya özel okulunuz için kayıt ve başvuru odaklı web siteleri tasarlıyor ve geliştiriyoruz. Bu sektörde site bir broşür değil kayıt kanalıdır: program sayfaları, online başvuru akışı ve içerik yönetimi tek yapıda kurulur. Veli ve öğrenci aradığı programı bulur, sorusunun cevabını görür, başvurusunu sitede tamamlar.",
+      "bullets": {
+        "1": "Program ve kurs sayfaları — her programın içeriği, süresi, takvimi ve hedef kitlesi kendi sayfasında net biçimde anlatılır.",
+        "2": "Online başvuru ve kayıt akışı — kısa, mobil uyumlu formlarla başvuru sitede tamamlanır; talepler yapılandırılmış biçimde size ulaşır.",
+        "3": "Kolay içerik yönetimi — duyuruları, dönem takvimini ve etkinlikleri ekibiniz bize bağımlı kalmadan günceller.",
+        "4": "SEO ve bulunurluk — program adı ve bölge bazlı kurs aramalarında görünmeniz için sayfa yapısı ve teknik altyapı kurulur.",
+        "5": "Güven veren kurumsal sunum — eğitmen kadrosu, kurum geçmişi ve sık sorulan sorularla adayın karar öncesi tüm soruları cevaplanır."
+      },
+      "painTitle": "Eğitim sitelerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Kayıt tamamen telefona ve mesaja bağlı; mesai dışında yazan ya da hatta ulaşamayan aday başka kuruma yöneliyor.",
+        "2": "Program bilgileri sitede güncel değil ya da PDF dosyalarına gömülü; aday aradığını bulamayınca ilgisini kaybediyor.",
+        "3": "Kurum aramalarda görünmüyor; yeni kayıt tamamen tavsiyeye ve kayıt dönemi reklamlarına bağımlı kalıyor."
+      },
+      "ctaText": "Kayıtları web'e taşıyalım — eğitim siteniz için bize yazın.",
+      "detail": {
+        "1": "Eğitim sektöründe iyi bir web sitesi, ilgiyi kayda dönüştüren akışı kurar. Veli veya öğrenci programı bulur, içeriğini ve takvimini anlar, başvurusunu telefona gerek kalmadan sitede tamamlar. Bu akış eksik olduğunda ilgi, cevapsız aramalarda ve mesaj kutularında kaybolur.",
+        "2": "Yaklaşımımız, program sayfalarını ve başvuru formunu tek bir kayıt akışı olarak tasarlamaktır. Projeye uygun teknolojiyle her programa kendi sayfasını veriyor, başvuru formunu kısa ve mobil uyumlu tutuyoruz. Duyuru ve dönem takvimi gibi sık değişen içerikleri de ekibinizin bize bağımlı kalmadan güncelleyebileceği bir yapıya bağlıyoruz.",
+        "3": "Doğru kurulmuş bir eğitim sitesinden beklentiniz, kayıt döneminin yükünü paylaşması olmalı. Başvurular tek kanalda ve yapılandırılmış biçimde toplandığında hiçbir talep gözden kaçmaz; ekibiniz telefonda aynı bilgiyi tekrarlamak yerine gelen başvuruları değerlendirmeye zaman ayırır. Programlarınızın aramalarda bulunması da tanıtımı yalnızca kayıt dönemi reklamlarına bağımlı olmaktan çıkarır."
+      }
+    },
+    "beauty": {
+      "title": "Güzellik & Kuaför Web Siteleri",
+      "metaTitle": "Güzellik Salonu ve Kuaför Web Sitesi | Piton Studios",
+      "metaDescription": "Güzellik salonları, kuaförler ve spa merkezleri için randevu talebi, Instagram entegrasyonu ve yerel SEO odaklı, mobil öncelikli web siteleri tasarlıyoruz.",
+      "intro": "Güzellik salonunuz, kuaförünüz veya spa merkeziniz için randevu odaklı web siteleri tasarlıyor ve geliştiriyoruz. Bu sektörde sitenin işi Instagram'ın yerini almak değil onu tamamlamaktır: hizmet menüsü, randevu talebi ve yerel aramalarda bulunurluk tek adreste toplanır. Müşteri sizi bulur, sunduklarınızı görür ve randevusunu mesaj trafiğine girmeden oluşturur.",
+      "bullets": {
+        "1": "Randevu talebi akışı — müşteri hizmetini seçer, uygun zamanını belirtir; talep form veya WhatsApp üzerinden anında size düşer.",
+        "2": "Instagram entegrasyonu — çalışmalarınızı sergileyen görsel akış siteye bağlanır; profiliniz vitrin, siteniz randevu adresi olur.",
+        "3": "Hizmet menüsü sayfaları — her hizmetin kapsamı ve süresi net anlatılır; müşteri sormak zorunda kalmadan karar verir.",
+        "4": "Yerel SEO — Google Business profiliniz ve site içeriği birlikte kurgulanır; 'yakınımda kuaför' gibi aramalarda görünürsünüz.",
+        "5": "Mobil öncelikli hız — müşterinizin neredeyse tamamı telefondan gelir; site saniyeler içinde açılır, randevu talebi birkaç dokunuşla tamamlanır."
+      },
+      "painTitle": "Salon ve kuaför sitelerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Randevular DM ve telefon trafiğinde yönetiliyor; iş yoğunken cevapsız kalan her mesaj, başka salona giden bir müşteri demek.",
+        "2": "İşletme yalnızca Instagram'da yaşıyor; görünürlük tamamen algoritmaya bağlı ve profil, hizmet aramalarında Google'da çıkmıyor.",
+        "3": "Çevrede salon arayan müşteri sizi haritada ve aramalarda bulamıyor; yeni müşteri kazanımı tesadüfe kalıyor."
+      },
+      "ctaText": "Randevuları mesaj trafiğinden çıkaralım — salon siteniz için bize yazın.",
+      "detail": {
+        "1": "Güzellik sektöründe iyi bir web sitesi, randevuyu mesaj trafiğinden kurtarır. Müşteri hizmet menünüzü görür, randevu talebini formdan veya WhatsApp üzerinden iletir; siz koltuk başındayken telefona yetişmek zorunda kalmazsınız. Instagram profiliniz vitrin olmaya devam eder, site ise randevunun toplandığı adres olur.",
+        "2": "Yaklaşımımız, siteyi Instagram'ınızla yarıştırmak değil birleştirmektir. Projeye uygun teknolojiyle hızlı ve mobil öncelikli bir sayfa kuruyor, çalışmalarınızı sergileyen görsel akışı siteye bağlıyor, hizmet menünüzü ve salon bilgilerinizi arama motorlarının anlayacağı yapıda işaretliyoruz. Yerel SEO tarafında harita kaydınız ve site içeriği birbirini destekleyecek şekilde kurgulanır.",
+        "3": "Doğru kurulmuş bir salon sitesinden beklentiniz, çevrenizde arayan müşterinin sizi bulması olmalı. 'Yakınımda kuaför' gibi aramalar o an randevu almak isteyen müşteriden gelir; bu aramalarda görünen bir salon, sosyal medya algoritmasına bağımlı kalmadan yeni müşteri kazanır. Site ayrıca hizmet kapsamı ve süre gibi tekrar eden soruların cevabını üstlenerek mesaj yükünüzü azaltır."
+      }
     }
   },
   "sectorsPage": {
@@ -3299,6 +3487,7 @@
     "projectCount": "{count} proje",
     "ctaTitle": "Projeni anlat",
     "ctaSub": "Sektörünüzü ve hedefinizi yazın; 24 saat içinde somut bir yol haritasıyla dönelim.",
-    "ctaButton": "İletişime geç"
+    "ctaButton": "İletişime geç",
+    "detailTitle": "Sektöre bakışımız"
   }
 }
