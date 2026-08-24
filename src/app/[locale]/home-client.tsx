@@ -22,6 +22,8 @@ import ManifestoScene from "@/components/scenes/manifesto";
 import ServicesScene from "@/components/scenes/services";
 import WorksScene from "@/components/scenes/works";
 import AboutScene from "@/components/scenes/about";
+import ProcessScene from "@/components/scenes/process";
+import TestimonialsScene from "@/components/scenes/testimonials";
 import ContactScene from "@/components/scenes/contact";
 
 export default function HomeClient() {
@@ -197,8 +199,10 @@ export default function HomeClient() {
                 <ServicesScene />
               </SnakeBorder>
             );
+          else if (s.id === "process") inner = <ProcessScene />;
           else if (s.id === "work") inner = <WorksScene onPreview={setPreview} />;
           else if (s.id === "about") inner = <AboutScene />;
+          else if (s.id === "testimonials") inner = <TestimonialsScene />;
           else if (s.id === "contact") inner = <ContactScene />;
           return (
             <section

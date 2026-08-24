@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-08-24 (20)
+
+### Added
+- **Referanslar sahnesi** (anasayfa, "Biz" sonrasi) — 6 musteri yorumu, otomatik dongu +
+  ok/dot navigasyonu, projeye link. `src/lib/testimonials.ts`'te tum girdiler
+  `approved: false`: **musteri onayi olmadan production'da render edilmez** (dev'de
+  "Taslak" rozeti). Review/AggregateRating JSON-LD bilincli olarak eklenmedi
+- **Surec sahnesi** ("Hizmetler" sonrasi) — 6 adimlik "Nasil calisiyoruz"
+  (kesif → teklif → tasarim → gelistirme → yayin → destek), CTA → iletisim
+- **Fiyatlandirma sayfasi** — `/fiyatlandirma` · `/en/pricing` · `/ru/pricing`.
+  4 paket (TR'de TL, en/ru'da euro @ 1€=45₺, €50'ye yuvarlanmis bantlar) + AI otomasyon
+  karti (ROI blog linki) + "fiyati ne etkiler" + SSS anchor'lari. Offer/AggregateOffer
+  JSON-LD yok (bantlar kesin fiyat degil). Nav'a eklendi (chrome + page-shell)
+- **Hero rakamlar seridi** — 49+ proje · 10+ sektor · 12 hizmet alani · 3 dil
+  (hepsi data.ts'ten dogrulanabilir)
+- **5 sektorel landing sayfasi + indeks** — `/sektorler/{corporate, real-estate,
+  transportation, finance, e-commerce}`. Yapi `src/lib/sectors.ts` (workSlugs/
+  serviceSlugs/faqIds/blogSlugs), metinler `messages/*.json` → `sectorsPage` +
+  `sectorItems`. Her sayfa: proje grid'i, hizmet kartlari, SSS linkleri
+  (`/sss#faq-{id}`), blog cipleri; CollectionPage + ItemList + Breadcrumb JSON-LD
+- Routing: `/pricing`, `/sectors`, `/sectors/[slug]` pathname'leri (tr:
+  `/fiyatlandirma`, `/sektorler`); sitemap +18 URL; page-shell `LOCALIZED_PATHS`
+  guncellendi. Build: 301 statik HTML, typecheck/lint 0 hata, content:check 426/426
+
 ## 2026-08-14 (19)
 
 ### Added

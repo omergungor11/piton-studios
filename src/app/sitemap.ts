@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { locales, defaultLocale } from '@/i18n/config';
 import { absoluteUrl, type Href } from '@/lib/seo';
 import { getAllProjectSlugs, getAllServiceSlugs } from '@/lib/data';
+import { getAllSectorSlugs } from '@/lib/sectors';
 import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog';
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -37,6 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries('/services', { changeFrequency: 'monthly', priority: 0.9 }),
     ...entries('/blog', { changeFrequency: 'weekly', priority: 0.8 }),
     ...entries('/faq', { changeFrequency: 'monthly', priority: 0.8 }),
+    ...entries('/pricing', { changeFrequency: 'monthly', priority: 0.8 }),
+    ...entries('/sectors', { changeFrequency: 'monthly', priority: 0.7 }),
     ...entries('/about', { changeFrequency: 'yearly', priority: 0.6 }),
     ...entries('/contact', { changeFrequency: 'yearly', priority: 0.7 }),
   ];
@@ -44,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const slug of getAllProjectSlugs()) {
     all.push(
       ...entries({ pathname: '/projects/[slug]', params: { slug } }, { priority: 0.7 })
+    );
+  }
+
+  for (const slug of getAllSectorSlugs()) {
+    all.push(
+      ...entries({ pathname: '/sectors/[slug]', params: { slug } }, { priority: 0.7 })
     );
   }
 
