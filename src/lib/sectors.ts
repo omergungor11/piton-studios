@@ -108,6 +108,91 @@ export const SECTORS: Sector[] = [
     ],
     blogSlugs: ["ecommerce-cro", "nextjs-vs-wordpress", "website-cost"],
   },
+  {
+    slug: "restaurant",
+    icon: "◍",
+    workSlugs: ["boon-fresh", "virginia-ice-cream"],
+    serviceSlugs: ["web-design", "seo-geo", "google-ads"],
+    faqIds: [
+      "website-cost",
+      "google-ads-vs-seo",
+      "mobile-responsive",
+      "seo-included",
+    ],
+    blogSlugs: ["fast-website", "website-cost"],
+  },
+  {
+    slug: "tourism",
+    icon: "✈",
+    workSlugs: [
+      "sammys-hotel",
+      "welcome-pickups",
+      "jet-transfer-cyprus",
+      "aydin-transfer",
+    ],
+    serviceSlugs: ["web-design", "web-app", "seo-geo", "google-ads"],
+    faqIds: [
+      "multilingual",
+      "website-cost",
+      "google-ads-vs-seo",
+      "seo-included",
+    ],
+    blogSlugs: ["multilingual-site", "website-cost", "seo-to-geo"],
+  },
+  {
+    slug: "health",
+    icon: "✚",
+    workSlugs: ["dental-health"],
+    serviceSlugs: ["web-design", "seo-geo", "google-ads"],
+    faqIds: [
+      "website-cost",
+      "kvkk-gdpr",
+      "project-timeline",
+      "mobile-responsive",
+    ],
+    blogSlugs: ["website-cost", "project-process"],
+  },
+  {
+    slug: "construction",
+    icon: "▲",
+    workSlugs: ["ekh-yapi", "beton-store", "alert-muhendislik"],
+    serviceSlugs: ["web-design", "seo-geo", "google-ads"],
+    faqIds: [
+      "website-cost",
+      "project-timeline",
+      "seo-included",
+      "after-launch-support",
+    ],
+    blogSlugs: ["website-cost", "project-process"],
+  },
+  {
+    slug: "education",
+    icon: "◆",
+    // Portfoyde egitim projesi yok — bilincli olarak referanssiz sektor sayfasi.
+    workSlugs: [],
+    serviceSlugs: ["web-design", "web-app", "ai-integration"],
+    faqIds: [
+      "website-cost",
+      "project-timeline",
+      "multilingual",
+      "after-launch-support",
+    ],
+    blogSlugs: ["website-cost", "project-process"],
+  },
+  {
+    slug: "beauty",
+    icon: "❋",
+    // Portfoyde guzellik/bakim projesi yok — bilincli olarak referanssiz sektor sayfasi.
+    workSlugs: [],
+    serviceSlugs: ["web-design", "seo-geo", "google-ads"],
+    faqIds: [
+      "website-cost",
+      "mobile-responsive",
+      "seo-included",
+      "project-timeline",
+    ],
+    blogSlugs: ["website-cost", "fast-website"],
+  },
 ];
 
 export function getSectorBySlug(slug: string): Sector | undefined {

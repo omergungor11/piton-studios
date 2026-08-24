@@ -3053,22 +3053,35 @@
     }
   },
   "testimonials": {
-    "eyebrow": "§ 06 · Testimonials",
-    "title": "What our clients {accent}",
-    "titleAccent": "say",
-    "subtitle": "Words from the brands we've worked with — every quote is tied to a real project.",
-    "viewProject": "View project",
-    "prevLabel": "Previous testimonial",
-    "nextLabel": "Next testimonial",
-    "goTo": "Testimonial {index}",
-    "draftBadge": "Draft",
-    "quotes": {
-      "nexos": "Off-the-shelf themes couldn't meet our needs; Piton Studios built us a custom, map-driven, multilingual listing management system from scratch. With automatic PDF and presentation generation from listing data, preparing proposals now takes minutes instead of hours.",
-      "ambalajCini": "They built our e-commerce platform with payment integration and stock tracking included. The site has been running non-stop since 2022, and our online sales grew by 30%.",
-      "sammys": "They designed a warm, guest-first website for our hotel. Thanks to online booking and the multilingual setup, reaching international guests is now much easier.",
-      "radyoJuke": "They developed a custom platform for our live broadcast stream. We deliver an uninterrupted listening experience on mobile and desktop, and the social media integration has grown our audience.",
-      "velis": "They delivered a corporate site with a product catalog and multilingual structure that reflects our 25+ years in the industry. Content management is so easy that our own team handles the updates.",
-      "btElevator": "They launched our multilingual corporate site together with technical SEO work. Our visibility in search engines improved noticeably, and the site fully reflects our corporate identity."
+    "eyebrow": "Track Record",
+    "title": "Results you can {accent}",
+    "titleAccent": "verify",
+    "subtitle": "Every card links to a live project — click through and see for yourself.",
+    "results": {
+      "ambalajCini": {
+        "highlight": "30% sales growth",
+        "desc": "E-commerce store with payment integration for a packaging supplier; online sales grew 30% after launch."
+      },
+      "nexos": {
+        "highlight": "End-to-end custom system",
+        "desc": "Custom real estate listing and management system with maps, multi-language support and automated PDF/PPT proposals."
+      },
+      "sammys": {
+        "highlight": "Commission-free bookings",
+        "desc": "A boutique hotel takes room bookings through its own website — no intermediary commissions."
+      },
+      "emlakSync": {
+        "highlight": "One panel, many portals",
+        "desc": "Listings are entered once and published to multiple real estate portals automatically."
+      },
+      "radyoJuke": {
+        "highlight": "Live streaming built in",
+        "desc": "An online radio station moved to the web with its live broadcast infrastructure integrated."
+      },
+      "lefkosaTaksi": {
+        "highlight": "Local search visibility",
+        "desc": "A taxi and transfer booking site built around local searches in Nicosia."
+      }
     }
   },
   "processScene": {
@@ -3090,7 +3103,7 @@
       },
       "4": {
         "title": "Development",
-        "desc": "We build with Next.js or WordPress, whichever fits the project. You see a working version every week — progress you can click, not promises."
+        "desc": "We pick the technology that best fits the project and build with it. You see a working version every week — progress you can click, not promises."
       },
       "5": {
         "title": "Launch",
@@ -3252,7 +3265,12 @@
         "2": "The design fails to inspire trust — for a business people entrust money to, a dated or makeshift website turns visitors away at the door.",
         "3": "The site is single-language; in a market full of international customers, a website without English and Russian shuts out a large share of potential clients."
       },
-      "ctaText": "Write to us about your finance website — let's plan the project together."
+      "ctaText": "Write to us about your finance website — let's plan the project together.",
+      "detail": {
+        "1": "In finance, a website is where trust is tested first: people size up a business online before entrusting it with their money. A site that combines live rate data with transparent corporate information stops being a 'call us for today's price' screen and becomes a tool customers return to throughout the day. That shift turns visitors into customers without routing them through phone traffic.",
+        "2": "On finance projects we build live data and corporate trust into the same design. For Halas Exchange we combined live currency rates with branch locations and corporate content in a single experience; for Arslan Coin Center we delivered a crypto trading site built around transparency. On our own side, we developed the Holly Trader prototype — end-to-end market data collection, processing and reporting — and the Ödeme Takip Botu, an internal tool that tracks payment due dates and sends automatic reminders; we bring that experience into finance projects that need live data and automation.",
+        "3": "The outcome framework rests on clarity and findability. Turkish, English and Russian content serves local and international customers at once; local SEO earns visibility in classic search, while a page structure that answers questions directly earns it in AI-powered search (GEO). By measuring which pages draw interest and where inquiries come from, you manage your digital presence with concrete data."
+      }
     },
     "e-commerce": {
       "title": "E-commerce Websites",
@@ -3272,7 +3290,12 @@
         "2": "The payment step feels untrustworthy or offers too few options, so customers give up rather than enter their card details.",
         "3": "Products don't show up on Google, leaving sales entirely dependent on ad budgets and social media posts."
       },
-      "ctaText": "Let's talk about your e-commerce project — write to us."
+      "ctaText": "Let's talk about your e-commerce project — write to us.",
+      "detail": {
+        "1": "In e-commerce, the website is not a shopfront — it is the sales process itself; every step from finding a product to completing payment either carries the visitor toward a sale or toward abandonment. A good e-commerce site reduces the friction along that journey: fast-loading pages, clear product information, a short checkout flow and a payment step that inspires trust. The difference shows not in driving more traffic, but in converting the traffic you already have into orders.",
+        "2": "On e-commerce projects we build payment, catalog and order management end to end. For Ambalaj Cini we brought payment integration, product management and stock tracking together on a single platform that has been running actively since 2022; for Boon Fresh we built a fast ordering flow and delivery tracking for fresh food; for Beton Store we connected a construction materials catalog to order management. We choose the platform to fit the project, not the brand: a ready-made system where it suffices, custom development when scale and specific needs outgrow it.",
+        "3": "On the results side, the goal is for sales not to depend on a single channel. Product and category pages built to be found in search engines feed organic traffic, while a content structure that answers directly feeds visibility in AI-powered search (GEO). By measuring which products generate orders and at which step visitors abandon the flow, you turn your store into a system that is continuously improved."
+      }
     },
     "corporate": {
       "title": "Corporate Website",
@@ -3292,7 +3315,12 @@
         "2": "A single-language site loses international clients and partners at the very first step.",
         "3": "A site that looks good but is technically weak in SEO never shows up in search — a showcase nobody finds brings no business."
       },
-      "ctaText": "Make your corporate site truly represent your company — write to us to discuss your project."
+      "ctaText": "Make your corporate site truly represent your company — write to us to discuss your project.",
+      "detail": {
+        "1": "A corporate website is the digital infrastructure that proves your company's credibility at first contact. Prospective clients, partners and even job candidates look at your site before they ever speak to you, and the order, freshness and clarity they find there becomes their judgment of the company itself. That is why a good corporate site does more than say who you are — it connects your services, references and quotation process into a single flow that carries the visitor toward a concrete next step.",
+        "2": "On corporate projects we start with content architecture before visual design: which page answers which question, and at which step the visitor asks for a quote. You can trace this approach through our portfolio — for BT Elevator we built the multilingual structure together with technical SEO and schema markup, for Arslan Group we brought the holding's different business lines under one roof, for Alp Sigorta we connected the service catalog to a quote form, and for EKH Yapı we set up the project portfolio so the team can update it without depending on us. We choose technology to fit the project, not the brand — recommending what suits your scale.",
+        "3": "A well-built corporate site becomes a measurable marketing asset from the day it goes live. Technical SEO and structured data earn visibility in classic search, while a content structure that answers questions directly earns it in AI-powered search (GEO). By tracking which pages are visited and which forms are submitted, you manage the site not as a cost item but as a channel whose performance you can follow."
+      }
     },
     "real-estate": {
       "title": "Real Estate Website",
@@ -3312,7 +3340,12 @@
         "2": "Updating the same listing on several platforms by hand wastes time and leaves sold properties still advertised.",
         "3": "A single-language site loses foreign investors — the strongest buyer group in the Cyprus market — before they even inquire."
       },
-      "ctaText": "Start selling your portfolio from your own website — let's talk about your real estate project."
+      "ctaText": "Start selling your portfolio from your own website — let's talk about your real estate project.",
+      "detail": {
+        "1": "In real estate, a website lets you take control of your portfolio back from the listing portals. Property buyers decide at the end of a long research process; a site that offers filterable listings, locations on a map, area information and content in the buyer's own language brings them directly to you instead of placing you next to competing listings. In markets with strong international demand, that is the difference between being a row on a portal and being a brand.",
+        "2": "In this sector we build both corporate real estate websites and custom software. For Nexos Investment we developed a custom, map-based, multilingual listing management system that runs from listing administration all the way to automated PDF and presentation-format proposals — where ready-made themes fall short, we design the system from scratch. With Pampas Investment, Pinnacle Yatırım, Arslan Estates and Homes in Mediterranean we delivered sites aimed at international buyers in the North Cyprus and Mediterranean markets, and our own product Emlak Sync lets a listing be entered once and published automatically to North Cyprus portals, eliminating duplicate data entry.",
+        "3": "On the results side, the goal is for property seekers to find you wherever they search. Multilingual pages and local SEO build visibility for classic queries like 'villa for sale', while clearly structured content earns it in AI-powered search (GEO). Because you can see which listing and which channel every inquiry came from, you manage your marketing budget with data rather than guesswork."
+      }
     },
     "transportation": {
       "title": "Transportation & Transfer Website",
@@ -3332,7 +3365,162 @@
         "2": "A transfer company invisible on the web loses airport-search customers to commission-based middleman platforms.",
         "3": "A service whose price can only be learned by phone loses trust against a competitor that shows clear prices."
       },
-      "ctaText": "Move your bookings from the phone line to the web — write to us about your transfer website."
+      "ctaText": "Move your bookings from the phone line to the web — write to us about your transfer website.",
+      "detail": {
+        "1": "In the transportation sector, a website is a sales channel that makes bookings independent of whether the phone line is free. A passenger about to land wants to see the price and the route before setting out; the company that shows a clear price and takes requests online wins the customer from a competitor who can only be reached by phone. Every request that arrives at night or while the line is busy stops being a loss once it is captured through the site.",
+        "2": "On transfer and taxi projects we bring the booking flow, pricing information and contact channels into one experience. For Jet Transfer Cyprus and Aydın Transfer we combined online booking with route and price calculation tools; for Kıbrıs Lefkoşa Taksi and Kardeşler Taxi we wired one-tap calling and a WhatsApp flow into a mobile-first design; and for Welcome Pickups we built a multilingual platform that reassures international travelers with customer reviews. On every project we choose the technology to fit the need and design the flow around a passenger booking from their phone.",
+        "3": "The return on this investment is being found at the moment a customer searches, with every request captured on record. Local SEO earns visibility for queries like 'nicosia taxi' or 'cyprus transfer', and content that answers directly earns it in AI-powered search (GEO). Because web, WhatsApp and phone requests can be tracked separately, you see clearly which channel brings business and plan growth accordingly."
+      }
+    },
+    "restaurant": {
+      "title": "Restaurant & Cafe Websites",
+      "metaTitle": "Restaurant and Cafe Website Design | Piton Studios",
+      "metaDescription": "We design restaurant and cafe websites focused on digital menus, online reservations and ordering. Fast-loading pages that help guests find you on Google.",
+      "intro": "We design and build websites for restaurants and cafes centered on digital menus, reservations and online ordering. In this sector a website is not a showcase but the first step of service: guests find you on their phone, browse your menu and make up their mind before they ever sit down. We carry our food-ordering experience over from the fresh food delivery platform we built for Boon Fresh.",
+      "bullets": {
+        "1": "Digital and QR menus — your menu is updated in one place with no dependence on print; a price or item change goes live instantly on both the table QR code and the website.",
+        "2": "Online reservation flow — guests pick a date, time and party size, and the request reaches you immediately; no reservation is lost while the phone line is busy at peak hours.",
+        "3": "Local SEO and map visibility — we structure your content, business details and structured data together so you show up for searches like 'restaurant near me'.",
+        "4": "Appetizing, fast-loading design — we put the atmosphere and the plates front and center without letting a photo-heavy site slow down.",
+        "5": "Multilingual menu and content — in areas with tourist traffic, you serve your menu and pages in Turkish, English and Russian."
+      },
+      "painTitle": "Where restaurants and cafes get stuck on the web",
+      "painPoints": {
+        "1": "The menu lives only in Instagram posts or a scanned PDF; guests can't find current prices, give up on a menu they can't read and pick another place.",
+        "2": "Reservations depend entirely on the phone; requests that come in while the line is busy or after hours vanish without ever being recorded.",
+        "3": "The venue is invisible on Google and maps; orders flow through commission-charging intermediary platforms, and the customer relationship stays in the platform's hands."
+      },
+      "ctaText": "Let's move your menu and reservations to the web — write to us about your restaurant website.",
+      "detail": {
+        "1": "A good restaurant website answers the guest's three decision-moment questions in one place: what's on the menu, what does it cost, and how do I book a table. When those three are clear on the site, phone traffic drops and your own channel replaces the commission paid to intermediary platforms. With the menu, reservations and location gathered at one address, social media stops being a scattered source of information and becomes a channel that drives traffic to it.",
+        "2": "We start restaurant projects with the menu, because it is the most visited and most frequently changed part of the site. We build the menu so the business can update it itself, design the reservation and ordering flow around how the venue actually operates, and choose technology to fit the project rather than a brand name — a ready-made system where it suffices, custom development where the needs demand it. For venues with tourist customers, we plan the multilingual menu and content structure from the start.",
+        "3": "You track the outcome by measurement, not guesswork: the number of reservation requests, menu page visits and directions clicks show directly whether the site is doing its job. Technical SEO and structured data aim to have your venue cited with accurate information not only in classic search but also in AI-powered search and recommendation tools. Because the menu and business details are kept current from a single source, that visibility compounds over time."
+      }
+    },
+    "tourism": {
+      "title": "Tourism & Hotel Websites",
+      "metaTitle": "Hotel & Tourism Website Design & Booking | Piton Studios",
+      "metaDescription": "Multilingual promotion and booking-focused websites for hotels, tours and transfer businesses. Sammys Hotel and Welcome Pickups are in our portfolio.",
+      "intro": "We build multilingual, booking-focused websites for hotels, tour operators and tourism businesses. Our portfolio includes the Sammys Hotel website, centered on room reservations and a photo gallery, and the Welcome Pickups airport transfer site with online booking. In this sector guests decide based on photos and on how easy booking feels — so we design the site around exactly those two loads.",
+      "bullets": {
+        "1": "Multilingual promotion — you present your rooms, tours and services in Turkish, English and Russian; guests trust more easily what they can read in their own language.",
+        "2": "Booking flow — from picking dates and party size to the request reaching you, we keep the flow short; a guest can leave a booking request at midnight.",
+        "3": "Gallery and property presentation — as with Sammys Hotel, we make the photo gallery carry the site; guests walk through the room and the property before they arrive.",
+        "4": "International SEO — your guests search from other countries; a multilingual page structure with hreflang makes sure each market finds your site in its own language.",
+        "5": "Mobile-first speed — travel research happens mostly on phones; the site is built to load fast even on slow connections."
+      },
+      "painTitle": "Where tourism businesses get stuck on the web",
+      "painPoints": {
+        "1": "Sales run entirely through booking platforms; every stay pays a commission, and the guest remains the platform's customer, not yours.",
+        "2": "The site is single-language; international guests who can't find information in their own language switch to a competitor while still in the research phase.",
+        "3": "Photos are outdated and seasonal information is stale; visitors can't be sure they'll get what they see, so they prefer to book through a platform instead."
+      },
+      "ctaText": "Let your guests find you in their own language — write to us about your tourism website.",
+      "detail": {
+        "1": "A good tourism website gives the business its own sales channel, independent of booking platforms. When a guest explores the property or the tour on your site and leaves the booking request directly with you, no commission stands in between and the guest relationship is yours from the first message. Platforms are not a channel to abandon — but when they are the only channel, they control both the price and the customer.",
+        "2": "We start tourism projects from the guest's journey: which country they come from, which language they read, which device they use and how many steps it takes them to book. We build the multilingual content structure as the site's backbone rather than a translation bolted on later, and design gallery and promotion pages to stay fast despite their visual weight. We choose technology to match the project's scale, and the booking flow — from a simple request form to a date-selection flow — is shaped around how the business actually operates.",
+        "3": "Results are tracked through measurable signals: the booking requests the site receives, which language versions get visited and which countries your guests come from are all clearly visible. The multilingual technical SEO foundation aims to have your property appear with accurate information in each target market's own-language searches and in AI-powered travel recommendations. Every direct booking request shows up as revenue that never went to a platform commission."
+      }
+    },
+    "health": {
+      "title": "Healthcare & Clinic Websites",
+      "metaTitle": "Clinic and Healthcare Website Design | Piton Studios",
+      "metaDescription": "We build trustworthy, multilingual websites for clinics and healthcare providers — appointment request flows, patient data privacy and clear treatment content.",
+      "intro": "We design trustworthy, appointment-focused websites for clinics, private practices and healthcare organizations. Our portfolio includes the website we built for the Dental Health dental clinic — presenting treatments, equipment and the specialist team, designed to build patient trust. In healthcare a visitor is not a customer but a patient; the site must earn trust first, then shorten the path to an appointment.",
+      "bullets": {
+        "1": "Appointment request flow — patients pick the right department and their preferred time and leave a request; your clinic responds without being trapped in phone traffic.",
+        "2": "Trust-building presentation — the medical team, specialties, treatments and the clinic itself are presented transparently; patients arrive knowing whose care they are entering.",
+        "3": "Data privacy by design — forms ask only for what is necessary, and privacy notices and consent are part of the flow; patient data is never leaked to third parties.",
+        "4": "Clear treatment content — every treatment page is written in the patient's language and answers common questions; the same structure feeds your search visibility.",
+        "5": "Multilingual structure — you reach international patients seeking care with content in Turkish, English and Russian, in their own language."
+      },
+      "painTitle": "The problems we see most often on healthcare websites",
+      "painPoints": {
+        "1": "Appointments can only be made by phone; a patient deciding after hours books with another clinic that takes online requests instead of waiting until tomorrow.",
+        "2": "The site says too little about the medical team, the treatments and the clinic; the patient's first impression of the place they would entrust their health to is uncertainty.",
+        "3": "Contact forms and tracking tools are set up with no regard for patient data sensitivity; more personal health information is collected than needed, and compliance risk accumulates."
+      },
+      "ctaText": "Let your patients come to you with confidence — write to us about your clinic website.",
+      "detail": {
+        "1": "A good clinic website resolves the patient's two fundamental questions: can I trust this place, and how do I get an appointment. A site that transparently shows the medical team, the treatments and the clinic itself starts the trust relationship before the patient walks through the door, and a clear appointment flow turns that trust into a concrete step. In healthcare a bad website is not merely an aesthetic problem — in the patient's eyes it stands for the clinic's level of care.",
+        "2": "In healthcare projects we start with sensitivity before design: which data is genuinely necessary, where it will be stored and what the patient is consenting to. We build appointment and contact forms on the principle of data minimization and make privacy notices and consent a natural part of the flow; we also choose technology to fit the project — an up-to-date, maintainable foundation is itself a security measure in healthcare. For clinics serving health tourism, we plan the multilingual content structure from the start.",
+        "3": "The measure of success is the appointment requests coming through the site; which treatment pages are read and which channel each patient arrives from are tracked clearly. Treatment content written in the patient's language, answering questions directly, aims to have your clinic appear with accurate information both in classic search and in AI-powered health searches. Visibility is not a one-off campaign but an asset that well-maintained content accumulates over time."
+      }
+    },
+    "construction": {
+      "title": "Construction & Architecture Websites",
+      "metaTitle": "Construction & Architecture Website Design | Piton Studios",
+      "metaDescription": "We build websites for construction firms and architecture studios: project galleries, trust-focused pages and multilingual SEO. Portfolio includes EKH Yapı.",
+      "intro": "We design and build corporate websites for construction firms and architecture studios, centered on project galleries and trust. Our portfolio includes a corporate site with a project portfolio for EKH Yapı, a product-catalog construction company site for Velis LTD and a building-materials online store for Beton Store. In this industry your finished work wins the next contract — we build the site around it.",
+      "bullets": {
+        "1": "Project gallery and portfolio — completed and ongoing projects are presented with high-quality visuals, key facts and clear categories.",
+        "2": "Trust-building corporate pages — company history, team, certifications and references give the seriousness that big decisions demand at first glance.",
+        "3": "Multilingual structure — Turkish, English and Russian content reaches foreign investors and international partners in their own language.",
+        "4": "SEO and visibility — technical foundation and content structure built to rank for 'construction company', 'contractor' and location-based searches.",
+        "5": "Easy project management — your team adds a newly finished project to the gallery in minutes, without depending on us."
+      },
+      "painTitle": "The most common problems we see on construction websites",
+      "painPoints": {
+        "1": "Projects that took years to deliver are missing from the site or represented by a few phone snapshots; the company's strongest proof stays invisible.",
+        "2": "The site was built years ago and never updated; an investor or corporate client checking it before a meeting comes away with the impression of a dormant firm.",
+        "3": "Clients searching the company by name can't find the site, or land on a page that falls apart on mobile; the first impression drifts to competitors."
+      },
+      "ctaText": "Let your construction or architecture site show your projects the way they deserve — write to us.",
+      "detail": {
+        "1": "In construction and architecture, a good website turns your finished work into proof. Decisions in this industry are made on references: a family buying a home and an organization running a tender both look at completed projects first. A site that presents projects with high-quality visuals, key facts and a process narrative builds trust before the first meeting even happens.",
+        "2": "Our approach is to build the site around the project gallery. We choose the technology that fits the project so image-heavy pages load fast, optimize the visuals, and set up content management that keeps adding new projects in your team's hands. On the EKH Yapı and Velis LTD sites we combined this structure with corporate pages; on Beton Store, with building-materials e-commerce.",
+        "3": "What you should expect from a well-built construction website is that it does the pre-sales trust work for you. A client who calls after getting to know your projects has already moved past asking for a quote — the quality of incoming inquiries rises. In investor and tender meetings the site also serves as a permanent reference file you can bring to every conversation."
+      }
+    },
+    "education": {
+      "title": "Education & Course Websites",
+      "metaTitle": "Education & Training Website Design | Piton Studios",
+      "metaDescription": "We design registration-focused websites for schools, course centers and training providers — program pages, online application flows and easy content updates.",
+      "intro": "We design registration-focused websites for schools, course centers and training providers. In this sector a website is not a brochure but an enrollment channel: program pages, online application flows and content management are built as one system. Parents and students find the right program, get their questions answered and complete the application on the site.",
+      "bullets": {
+        "1": "Program and course pages — each program's content, duration, schedule and target audience is clearly explained on its own page.",
+        "2": "Online application and enrollment flow — short, mobile-friendly forms let applicants apply on the site; requests reach you in a structured format.",
+        "3": "Easy content management — your team updates announcements, term calendars and events without depending on us.",
+        "4": "SEO and visibility — page structure and technical foundation built to rank for program names and location-based course searches.",
+        "5": "Trust-building presentation — instructor profiles, institutional history and FAQs answer every question an applicant has before deciding."
+      },
+      "painTitle": "The most common problems we see on education websites",
+      "painPoints": {
+        "1": "Enrollment depends entirely on phone calls and messages; applicants who write after hours or can't get through turn to another institution.",
+        "2": "Program information on the site is outdated or buried in PDF files; applicants who can't find what they're looking for lose interest.",
+        "3": "The institution doesn't show up in searches; new enrollment relies entirely on word of mouth and enrollment-season ads."
+      },
+      "ctaText": "Let's move enrollment to the web — write to us about your education website.",
+      "detail": {
+        "1": "In education, a good website builds the flow that turns interest into enrollment. A parent or student finds the program, understands its content and schedule, and completes the application on the site without needing to call. When this flow is missing, interest gets lost in unanswered calls and message inboxes.",
+        "2": "Our approach is to design program pages and the application form as one enrollment flow. Using the technology that fits the project, we give each program its own page and keep the application form short and mobile-friendly. Frequently changing content like announcements and term calendars goes into a structure your team can update without depending on us.",
+        "3": "What you should expect from a well-built education website is that it shares the load of enrollment season. When applications arrive through one channel in a structured format, no request slips through; your team spends its time evaluating applications instead of repeating the same information on the phone. Being found in searches for your programs also frees your marketing from depending solely on enrollment-season ads."
+      }
+    },
+    "beauty": {
+      "title": "Beauty Salon & Hairdresser Websites",
+      "metaTitle": "Beauty Salon & Hairdresser Website Design | Piton Studios",
+      "metaDescription": "We design appointment-focused websites for beauty salons, hairdressers and spas — booking requests, Instagram integration and local SEO on one fast page.",
+      "intro": "We design appointment-focused websites for beauty salons, hairdressers and spas. The site's job is not to replace your Instagram but to complete it: your service menu, booking requests and local search visibility live at one address. Clients find you, see what you offer and request an appointment without digging through message threads.",
+      "bullets": {
+        "1": "Booking request flow — the client picks a service and a preferred time; the request reaches you instantly via form or WhatsApp.",
+        "2": "Instagram integration — a visual feed showcasing your work connects to the site; your profile stays the shop window, your site becomes the booking address.",
+        "3": "Service menu pages — the scope and duration of each service is clearly described; clients decide without having to ask.",
+        "4": "Local SEO — your Google Business profile and site content are built to reinforce each other; you show up for searches like 'hairdresser near me'.",
+        "5": "Mobile-first speed — nearly all your clients arrive by phone; the site opens in seconds and a booking request takes a few taps."
+      },
+      "painTitle": "The most common problems we see on salon websites",
+      "painPoints": {
+        "1": "Appointments are managed through DMs and phone calls; every message left unanswered during a busy day is a client walking to another salon.",
+        "2": "The business lives only on Instagram; visibility depends entirely on the algorithm, and the profile doesn't appear in Google service searches.",
+        "3": "Clients searching for a salon nearby can't find you on the map or in search results; new client acquisition is left to chance."
+      },
+      "ctaText": "Let's take bookings out of your message inbox — write to us about your salon website.",
+      "detail": {
+        "1": "In the beauty industry, a good website rescues bookings from message traffic. Clients see your service menu and send a booking request through a form or WhatsApp — you don't have to race to the phone while working on a client. Your Instagram profile remains the shop window; the site becomes the address where appointments are collected.",
+        "2": "Our approach is to combine the site with your Instagram, not compete with it. Using the technology that fits the project, we build a fast, mobile-first page, connect a visual feed of your work to the site, and mark up your service menu and salon details in a structure search engines understand. On the local SEO side, your map listing and site content are set up to reinforce each other.",
+        "3": "What you should expect from a well-built salon website is that clients searching nearby actually find you. Searches like 'hairdresser near me' come from people who want an appointment right now; a salon visible in those searches wins new clients without depending on a social media algorithm. The site also takes over recurring questions like service scope and duration, reducing your message load."
+      }
     }
   },
   "sectorsPage": {
@@ -3350,6 +3538,7 @@
     "projectCount": "{count} projects",
     "ctaTitle": "Tell us about your project",
     "ctaSub": "Describe your industry and your goal — we will come back within 24 hours with a concrete roadmap.",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "detailTitle": "Our take on the sector"
   }
 }

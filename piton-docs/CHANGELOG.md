@@ -2,6 +2,25 @@
 
 ## 2026-08-24 (20)
 
+### Changed (ayni gun revizyon)
+- **Referanslar sahnesi yeniden kuruldu: vaka sonuc kartlari** — taslak musteri
+  yorumu + onay kilidi yaklasimi terk edildi (uydurma alinti riski). Yerine bizim
+  agzimizdan, data.ts ile dogrulanabilir 6 sonuc karti: %30 satis buyumesi
+  (Ambalaj Cini), uctan uca ozel sistem (Nexos), komisyonsuz rezervasyon (Sammys),
+  tek panelden coklu portal (Emlak Sync), canli yayin entegrasyonu (Radyo Juke),
+  yerel arama gorunurlugu (Lefkosa Taksi). Sahne artik production'da gorunur;
+  `src/lib/testimonials.ts` CASE_RESULTS'a donustu, karusel yerine grid
+- **Surec sahnesi**: Gelistirme adiminda "Next.js veya WordPress" kaldirildi →
+  "projeye en uygun teknolojiyi seciyoruz" (3 dil); baslik fontu sitenin genel
+  baslik fontuna donduruldu (bilesene ozel serif tanimi kaldirildi)
+- **Sektorel landing 5 → 11 sayfa** — yeni: restoran & kafe, turizm & otel,
+  saglik, insaat, egitim, guzellik. Egitim + guzellik portfoyde proje olmadan
+  bilincli referanssiz kuruldu (workSlugs bos → proje grid'i render edilmez).
+  Tum 11 sayfaya opsiyonel "Sektore bakisimiz" bolumu (sektor basina 3 GEO-uyumlu
+  paragraf × 3 dil; `sectorItems.{slug}.detail.1..3`); mevcut 5 sektorun icerigi
+  bu bolumle derinlestirildi. Sitemap otomatik 36 sektor URL'i. Build: 553 statik
+  sayfa, typecheck/lint 0 hata, content:check temiz
+
 ### Added
 - **Referanslar sahnesi** (anasayfa, "Biz" sonrasi) — 6 musteri yorumu, otomatik dongu +
   ok/dot navigasyonu, projeye link. `src/lib/testimonials.ts`'te tum girdiler
