@@ -9,7 +9,7 @@ import { AREA_KEYS, isInArea, type AreaKey } from '@/lib/studio-stats';
 import PageShell from '@/components/page-shell';
 import DeliveryFlow from '@/components/delivery-flow';
 import SnakeBorder from '@/components/snake-border';
-import ContactScene from '@/components/scenes/contact';
+import SparkScene from '@/components/scenes/spark';
 
 // Yil yerine calisma alani: yil bir projenin ne oldugunu anlatmiyor, alan anlatiyor.
 // Alanlar ortusmeli — bir proje hem web hem otomasyon olabilir.
@@ -155,7 +155,9 @@ export default function ProjectsPageClient() {
         </div>
       </section>
 
-      <ContactScene />
+      <SnakeBorder radius={18}>
+        <SparkScene />
+      </SnakeBorder>
     </PageShell>
   );
 }

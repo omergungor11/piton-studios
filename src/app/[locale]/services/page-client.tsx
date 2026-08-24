@@ -8,7 +8,7 @@ import SERVICE_ICONS from '@/components/service-icons';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
 import SnakeBorder from '@/components/snake-border';
-import ContactScene from '@/components/scenes/contact';
+import SparkScene from '@/components/scenes/spark';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
@@ -96,7 +96,9 @@ export default function ServicesPageClient() {
         </section>
       </SnakeBorder>
 
-      <ContactScene />
+      <SnakeBorder radius={18}>
+        <SparkScene />
+      </SnakeBorder>
     </PageShell>
   );
 }

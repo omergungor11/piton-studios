@@ -9,7 +9,7 @@ import SnakeBorder from '@/components/snake-border';
 import StudioTimeline from '@/components/about/studio-timeline';
 import CapabilityMap from '@/components/about/capability-map';
 import TestimonialsScene from '@/components/scenes/testimonials';
-import ContactScene from '@/components/scenes/contact';
+import SparkScene from '@/components/scenes/spark';
 
 /**
  * Musteri adlari ozel isim — cevrilmiyor, kodda duruyor.
@@ -141,7 +141,9 @@ export default function AboutPageClient() {
         <TestimonialsScene />
       </Reveal>
 
-      <ContactScene />
+      <SnakeBorder radius={18}>
+        <SparkScene />
+      </SnakeBorder>
     </PageShell>
   );
 }
