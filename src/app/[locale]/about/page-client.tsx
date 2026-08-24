@@ -9,6 +9,7 @@ import StudioNumbers from '@/components/about/studio-numbers';
 import SnakeBorder from '@/components/snake-border';
 import StudioTimeline from '@/components/about/studio-timeline';
 import CapabilityMap from '@/components/about/capability-map';
+import TestimonialsScene from '@/components/scenes/testimonials';
 
 /**
  * Musteri adlari ozel isim — cevrilmiyor, kodda duruyor.
@@ -134,6 +135,10 @@ export default function AboutPageClient() {
             ))}
           </Stagger>
         </section>
+      </Reveal>
+
+      <Reveal variant="fadeUp" delay={0.1}>
+        <TestimonialsScene />
       </Reveal>
 
       <section className="sp-cta glass strong">

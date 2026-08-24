@@ -19,6 +19,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
   const n = FEATURED.length;
   const work = FEATURED[idx];
   const autoRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const heading = t.raw('heading') as string;
 
   const go = useCallback((dir: number) => {
     setIdx((i) => (i + dir + n) % n);
@@ -46,7 +47,7 @@ export default function WorksScene({ onPreview: _onPreview }: WorksSceneProps) {
     <div className="proj-glass glass">
       <div className="proj-head">
         <span className="proj-tag">{t('tag', { count: String(n).padStart(2, '0') })}</span>
-        <h3 dangerouslySetInnerHTML={{ __html: t('heading').replace('<em>', '<span class="em">').replace('</em>', '</span>') }} />
+        <h3 dangerouslySetInnerHTML={{ __html: heading.replace('<em>', '<span class="em">').replace('</em>', '</span>') }} />
       </div>
 
       <div className="proj-slider">
