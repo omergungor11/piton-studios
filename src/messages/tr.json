@@ -29,7 +29,7 @@
       "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
     },
     "pricing": {
-      "title": "Fiyatlandırma",
+      "title": "Fiyatlar",
       "description": "Web sitesi, e-ticaret, özel web uygulaması ve AI otomasyon için şeffaf başlangıç bantları: 10.000 TL'den başlayan paketler, her pakette neler dahil ve fiyatı etkileyen faktörler."
     }
   },
@@ -45,7 +45,7 @@
     "contactCta": "İletişime Geç",
     "blog": "Blog",
     "faq": "SSS",
-    "pricing": "Fiyatlandırma"
+    "pricing": "Fiyatlar"
   },
   "blog": {
     "metaTitle": "Blog",
@@ -581,7 +581,7 @@
     "about": "Hakkında",
     "blog": "Blog",
     "faq": "SSS",
-    "pricing": "Fiyatlandırma",
+    "pricing": "Fiyatlar",
     "sectors": "Sektörler"
   },
   "works": {
@@ -949,7 +949,7 @@
       "title": "Jack — 3D Creator",
       "summary": "Scroll animasyonlu, sürükleyici bir 3D creator portfolyo konsepti.",
       "body": [
-        "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlandırma bölümüyle kişisel marka anlatısı kurduk.",
+        "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlar bölümüyle kişisel marka anlatısı kurduk.",
         "Kendini geliştirme amaçlı bu çalışma; animasyon koreografisi ve kişisel marka portfolyosu tasarımındaki yaklaşımımızı gösteriyor."
       ]
     },
@@ -2277,7 +2277,7 @@
         "desc": "Hangi işleri alıyoruz, kapsam nerede başlayıp nerede bitiyor."
       },
       "pricing": {
-        "title": "Fiyatlandırma & Ödeme",
+        "title": "Fiyatlar & Ödeme",
         "desc": "Bütçe bantları, ödeme planı ve fiyata dahil olan her şey."
       },
       "process": {
@@ -2427,7 +2427,7 @@
       "a": "Evet, ajanslara white-label geliştirme ve tasarım desteği veriliyor — müşteriye karşı ajans marka adı görünür kalır, teknik uygulama Piton Studios tarafından yürütülür. Kapasite yetersiz kaldığında veya özel bir uzmanlık gerektiğinde tercih edilir.",
       "detail": [
         "Süreç gizlilik anlaşmasıyla korunur; iletişim doğrudan ajans üzerinden yürütülür, son müşteriyle temas ajansın tercihine bağlıdır.",
-        "Fiyatlandırma ve teslim süreleri standart proje akışıyla aynıdır; fark yalnızca marka görünürlüğü ve iletişim kanalıdır."
+        "Fiyatlar ve teslim süreleri standart proje akışıyla aynıdır; fark yalnızca marka görünürlüğü ve iletişim kanalıdır."
       ]
     },
     "industries": {
@@ -3067,7 +3067,7 @@
     "cta": "Projeni anlat"
   },
   "pricingPage": {
-    "title": "Fiyatlandırma",
+    "title": "Fiyatlar",
     "subtitle": "Net bantlar, sürprizsiz teklif",
     "lead": "Her proje farklı; yine de nereden başladığımızı saklamıyoruz. Aşağıdaki bantlar başlangıç aralıklarıdır — kesin fiyat, ihtiyaçlarınızı dinledikten sonra hazırladığımız teklifle netleşir.",
     "bandLabel": "başlangıç bandı",
@@ -3182,7 +3182,7 @@
       "lead": "Ödeme planı, kapsama neyin dahil olduğu ve maliyet ayrıntıları için SSS sayfamıza göz atın.",
       "links": {
         "website-cost": "Web sitesi ne kadar tutar?",
-        "pricing-model": "Fiyatlandırma modeliniz nasıl çalışır?",
+        "pricing-model": "Fiyat modeliniz nasıl çalışır?",
         "whats-included-in-price": "Fiyata neler dahil?",
         "payment-schedule": "Ödeme planı nasıl işler?",
         "ecommerce-cost": "E-ticaret sitesi maliyeti ne kadar?"

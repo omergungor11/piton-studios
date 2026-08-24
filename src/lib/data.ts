@@ -1014,7 +1014,7 @@ export const WORKS: Work[] = [
     image: "story-04.jpg",
     summary: "3D creator portfolio concept with scroll-driven text animations and immersive visuals.",
     body: [
-      "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlandırma bölümüyle kişisel marka anlatısı kurduk.",
+      "Jack, bir 3D içerik üreticisi için tasarladığımız portfolyo sitesi konsepti. Scroll ile harf harf açılan metin animasyonları, projeler galerisi ve fiyatlar bölümüyle kişisel marka anlatısı kurduk.",
       "Kendini geliştirme amaçlı bu çalışma; animasyon koreografisi ve kişisel marka portfolyosu tasarımındaki yaklaşımımızı gösteriyor.",
     ],
     scope: "Portfolio concept, 3D, animation",
