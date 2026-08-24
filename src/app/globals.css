@@ -2794,6 +2794,11 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
 }
 .sp-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px var(--accent-soft); }
 
+.subpage-spark {
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
 /* Projects page — Screenshot Showcase */
 .pp-showcase { margin-bottom: 48px; }
 .pp-showcase-head {

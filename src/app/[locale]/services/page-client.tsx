@@ -96,7 +96,9 @@ export default function ServicesPageClient() {
         </section>
       </SnakeBorder>
 
-      <SparkScene />
+      <div className="subpage-spark">
+        <SparkScene />
+      </div>
     </PageShell>
   );
 }

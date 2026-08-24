@@ -155,7 +155,9 @@ export default function ProjectsPageClient() {
         </div>
       </section>
 
-      <SparkScene />
+      <div className="subpage-spark">
+        <SparkScene />
+      </div>
     </PageShell>
   );
 }
