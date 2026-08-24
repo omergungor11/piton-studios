@@ -6,9 +6,9 @@ Bu carousel’de dört temel kararı anlatıyoruz:
 • Hangi işler önce otomasyona alınmalı?
 • Nerede AI desteği anlamlıdır?
 • Hangi kararlar insan onayında kalmalıdır?
-• Pilot çalışmanın başarısı nasıl ölçülür?
+• Küçük denemenin başarısı nasıl ölçülür?
 
-Sağlam bir sistem; girdi, kurallar, AI, insan onayı, aksiyon ve kayıt katmanlarını birlikte ele alır. Tek bir süreçte değer kanıtlandıktan sonra güvenle ölçeklenir.
+Sağlam bir sistem; girdi, kurallar, AI, insan onayı, işlem ve kayıt katmanlarını birlikte ele alır. Tek bir süreçte değer kanıtlandıktan sonra kapsam güvenle genişletilir.
 
 AI ve otomasyon keşfi için:
 pitonstudios.com
@@ -38,10 +38,10 @@ Bir web sitesi yalnızca görünmek için değil, iş sonucu üretmek için çal
 Etkili bir dijital yolculuk dört katmandan oluşur:
 • Görünürlük: Doğru kullanıcı sizi bulur.
 • Güven: Teklifiniz net biçimde anlaşılır.
-• Aksiyon: Kullanıcı bir sonraki adıma yönelir.
+• İletişim: Kullanıcı bir sonraki adımı kolayca bulur.
 • Ölçüm: Davranış verisiyle sistem geliştirilir.
 
-Responsive deneyim de bu sistemin parçasıdır. Mobil görünüm, masaüstünün küçültülmüş hali değil; içerik önceliği ve etkileşimlerin yeniden düzenlendiği ayrı bir kullanım bağlamıdır.
+Her ekrana uyum da bu sistemin parçasıdır. Mobil görünüm, masaüstünün küçültülmüş hali değil; içerik önceliği ve kullanım akışının küçük ekran için yeniden düzenlendiği ayrı bir deneyimdir.
 
 Web projenizi konuşalım:
 pitonstudios.com

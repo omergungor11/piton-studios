@@ -1,10 +1,9 @@
-# Piton Studios Rounded Ad Variants
+# Piton Studios Rounded Performance Ad
 
-Mevcut reklam kampanyasini degistirmeden karsilastirma icin uretilen border-radius varyasyonlari:
+Web sitesi teklifi icin hazirlanan eski Sammys ve Nexos varyasyonlari kaldirildi.
+Bu klasor yalnizca Google Ads + Meta Ads performans kreatifini icerir.
 
-1. Sammys Hotel - kontrollu, 14-18 px radius
-2. Nexos Investment - belirgin, 20-32 px radius ve katmanli kartlar
-3. Google Ads + Meta Ads - yuvarlatilmis performans paneli
+1. Google Ads + Meta Ads - yuvarlatilmis performans paneli
 
 Her varyasyon iki boyutta uretilir:
 

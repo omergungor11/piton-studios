@@ -2,15 +2,15 @@ UPLOAD 01 - ZİYARETÇİ NEDEN İLETİŞİME GEÇMİYOR? / CAROUSEL
 
 Web sitenize ziyaretçi geliyor ama yeterince talep oluşmuyorsa çözüm her zaman daha fazla trafik değildir.
 
-Önce mevcut ziyaretçinin karar yolculuğundaki kaçakları bulmak gerekir:
+Önce ziyaretçinin karar vermesini zorlaştıran noktaları bulmak gerekir:
 • Teklif ilk ekranda anlaşılmıyor olabilir.
 • İddiaları destekleyen kanıtlar görünmüyor olabilir.
-• Birden fazla aksiyon ziyaretçinin kararını zorlaştırabilir.
-• Form, mobil deneyim veya hız teması kesintiye uğratabilir.
+• Mobil deneyim veya yavaşlık kullanıcıyı zorlayabilir.
+• Birden fazla çağrı sonraki adımı belirsizleştirebilir.
 
 Carousel'in son sayfasındaki 30 saniyelik testi kendi sitenizde uygulayın. Bir cevap bile belirsizse iyileştirilecek bir dönüşüm noktası vardır.
 
-Site adresinizi WhatsApp'tan gönderin; ilk bakışta gördüğümüz üç dönüşüm kaçağını birlikte değerlendirelim.
+Site adresinizi WhatsApp'tan gönderin; ilk bakışta gördüğümüz dört dönüşüm kaybını birlikte değerlendirelim.
 
 pitonstudios.com
 +90 543 950 07 50
@@ -19,14 +19,15 @@ pitonstudios.com
 
 ---
 
-UPLOAD 02 - 3 DÖNÜŞÜM KAÇAĞI / MİNİ İNCELEME
+UPLOAD 02 - 4 NOKTADA MİNİ İNCELEME
 
 Siteniz güzel görünebilir ve yine de müşteri kaybedebilir.
 
-Site adresinizi gönderdiğinizde ilk temas öncesinde üç kritik noktaya bakarız:
+Site adresinizi gönderdiğinizde ilk görüşme öncesinde dört kritik noktaya bakarız:
 • Mesaj netliği: Ne sunduğunuz ve kimin için sunduğunuz anlaşılıyor mu?
 • Güven sinyalleri: Kararı kolaylaştıran proje, süreç veya uzmanlık kanıtı görünür mü?
-• Aksiyon akışı: Ziyaretçi bir sonraki adımı kolayca bulabiliyor mu?
+• Mobil deneyim: Metinler ve iletişim butonları rahat kullanılıyor mu?
+• Sonraki adım: Ziyaretçi ne yapacağını kolayca anlayabiliyor mu?
 
 Bu kısa ön inceleme, sorunun trafik mi yoksa mevcut kullanıcı yolculuğu mu olduğunu daha doğru konuşmamızı sağlar.
 
@@ -41,15 +42,15 @@ pitonstudios.com
 
 UPLOAD 03 - FORMUNUZ MÜŞTERİ KAYBETTİRİYOR MU? / CAROUSEL
 
-Kullanıcı teklif istemek üzereyken formu terk ediyorsa sorun çoğu zaman ilgisizlik değil, sürtünmedir.
+Kullanıcı teklif istemek üzereyken formu terk ediyorsa sorun çoğu zaman ilgisizlik değil, formdaki gereksiz engellerdir.
 
 En sık karşılaştığımız engeller:
-• İlk temas için gereksiz sayıda alan
+• İlk görüşme için gereksiz sayıda alan
 • Form gönderildikten sonra ne olacağının belirsiz olması
 • Telefonda zor kullanılan alanlar ve yanlış klavye türleri
 • Verinin neden istendiğini açıklamayan güven eksikliği
 
-İyi bir ilk temas formu tüm projeyi çözmeye çalışmaz. Doğru bilgiyi kısa, anlaşılır ve güven veren bir akışta alarak nitelikli görüşmeyi başlatır.
+İyi bir iletişim formu tüm projeyi çözmeye çalışmaz. Doğru bilgiyi kısa, anlaşılır ve güven veren bir akışta alarak nitelikli görüşmeyi başlatır.
 
 Son sayfadaki dört maddelik kontrol listesini kaydedin ve formunuzu gerçek bir telefonla test edin.
 

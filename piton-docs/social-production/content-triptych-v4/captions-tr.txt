@@ -1,14 +1,14 @@
 UPLOAD 01 - İŞ AKIŞI OTOMASYONU / CAROUSEL
 
-Tekrarlanan işler ekibin zamanını sessizce tüketir. Aynı bilgiyi farklı araçlara girmek, takip tarihlerini elle hatırlamak, düzenli raporları tekrar tekrar hazırlamak veya talepleri kişilere yönlendirmek süreç büyüdükçe daha fazla sürtünme yaratır.
+Tekrarlanan işler ekibin zamanını sessizce tüketir. Aynı bilgiyi farklı araçlara girmek, takip tarihlerini elle hatırlamak, düzenli raporları tekrar tekrar hazırlamak veya talepleri kişilere yönlendirmek süreç büyüdükçe daha fazla iş yükü yaratır.
 
-Otomasyona uygun bir iş genellikle dört sinyal verir:
+Otomasyona uygun bir iş genellikle dört işaret verir:
 • Belirli aralıklarla tekrar eder.
 • Araçlar arasında kopyala-yapıştır gerektirir.
 • Takip ve hatırlatma kişilerin hafızasına bağlıdır.
 • Sonucu görmek için farklı dosyalar birleştirilir.
 
-Güvenilir otomasyon yalnızca iki aracı bağlamaz. Tetikleyiciyi, iş kuralını, yapılacak aksiyonu, başarı doğrulamasını ve hata durumundaki uyarıyı birlikte tanımlar. Böylece süreç hızlı olduğu kadar izlenebilir de kalır.
+Güvenilir otomasyon yalnızca iki aracı bağlamaz. Başlangıç koşulunu, iş kuralını, yapılacak işlemi, başarı kontrolünü ve hata durumundaki uyarıyı birlikte tanımlar. Böylece süreç hızlı olduğu kadar izlenebilir de kalır.
 
 Form, e-posta, CRM, WhatsApp, ödeme, bildirim ve raporlama akışlarını ihtiyaca göre birbirine bağlayabiliriz.
 
@@ -39,7 +39,7 @@ UPLOAD 03 - CRM VE İÇ OPERASYON SİSTEMİ / CAROUSEL
 CRM yalnızca müşteri listesinden ibaret değildir. Doğru kapsamlandığında müşteri, teklif, sipariş, görev, onay, stok veya üretim ve raporlama süreçlerini aynı veri düzeninde buluşturabilir.
 
 Kurabileceğimiz modüler yapılar:
-• Müşteri ve lead takibi
+• Müşteri ve talep takibi
 • Teklif ve sipariş akışı
 • Görev, sorumlu ve onay adımları
 • Stok, üretim veya teslim takibi

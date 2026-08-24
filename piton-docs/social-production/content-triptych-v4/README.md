@@ -1,4 +1,4 @@
-# Business Systems / 01
+# Is Sistemleri / 01
 
 Profil satiri iki adet 4 sayfalik carousel ve bir surec haritasi teklifinden olusur.
 
@@ -20,6 +20,6 @@ Carousel sayfalari 01'den 04'e normal sirayla yuklenir.
 
 - 1080 x 1350 px Instagram ve Facebook teslim dosyalari
 - Space Grotesk + IBM Plex Mono tipografi sistemi
-- Yuvarlatilmis cerceve, panel, sema ve CTA kutulari
+- Yuvarlatilmis cerceve, panel, sema ve iletisim kutulari
 - Marka renkleri: #D33A3E, #00A0D0, #08090A ve #F2EFE9
 - FurCRM masaustu ve mobil ekranlari gercek proje kaniti olarak kullanilir

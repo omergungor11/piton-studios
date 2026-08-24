@@ -11,7 +11,7 @@ Profil satiri iki adet 4 sayfalik carousel ve bir mini inceleme teklifinden olus
 ## Yukleme sirasi
 
 1. Sag carousel: Ziyaretci neden iletisime gecmiyor?
-2. Orta: 3 donusum kacagi mini inceleme
+2. Orta: 4 noktada mini inceleme
 3. Sol carousel: Formunuz musteri kaybettiriyor mu?
 
-Carousel sayfalari 01'den 04'e normal sirayla yuklenir.
+Carousel sayfalari FORM 01/04 ve WEB 01/04 etiketleriyle normal sirayla yuklenir. Orta gorsel INCELEME 01/01 olarak etiketlenir.

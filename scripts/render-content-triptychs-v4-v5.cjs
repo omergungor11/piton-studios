@@ -208,6 +208,26 @@ async function renderBundle(page, config) {
   const page = await browser.newPage({ viewport: { width: 3240, height: 1440 } });
 
   await renderBundle(page, {
+    folder: "content-triptych-v1",
+    source: "piton-docs/social-production/content-triptych-v1/content-row.html",
+    columns: [
+      { x: 0, stem: "web-carousel", upload: "upload-03-web-carousel", pages: 4 },
+      { x: 1080, stem: "contact-single", upload: "upload-02-contact", pages: 1 },
+      { x: 2160, stem: "ai-carousel", upload: "upload-01-ai-carousel", pages: 4 },
+    ],
+  });
+
+  await renderBundle(page, {
+    folder: "content-triptych-v2",
+    source: "piton-docs/social-production/content-triptych-v2/conversion-row.html",
+    columns: [
+      { x: 0, stem: "form-carousel", upload: "upload-03-form-carousel", pages: 4 },
+      { x: 1080, stem: "mini-review-single", upload: "upload-02-mini-review", pages: 1 },
+      { x: 2160, stem: "conversion-carousel", upload: "upload-01-conversion-carousel", pages: 4 },
+    ],
+  });
+
+  await renderBundle(page, {
     folder: "content-triptych-v4",
     source: "piton-docs/social-production/content-triptych-v4/system-row.html",
     columns: [

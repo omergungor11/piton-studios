@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piton Studios - Web Sitesi Teklifi</title>
+  <style>
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/28868e710e86be81.p.0rx81dn62y51_.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400 700;font-display:block;src:url("../../../.next/static/media/0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/2e95a7d252b9825a.p.0dgq8lqrj3gc_.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 600;font-display:block;src:url("../../../.next/static/media/23b7a97ae3b5c134.p.0o14nraug8u5s.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+    :root{--ink:#07090b;--panel:#101417;--panel-2:#171c20;--white:#f6f4ee;--muted:#a9afb3;--red:#d33a3e;--red-dark:#9f272b;--cyan:#12a9d2;--line:rgba(246,244,238,.15)}
+    *{box-sizing:border-box}
+    html,body{margin:0;width:1080px;background:#24282b;font-family:"Space Grotesk",sans-serif;color:var(--white)}
+    body{display:grid;gap:40px;padding:40px 0}
+    .creative{position:relative;width:1080px;overflow:hidden;background:var(--ink);isolation:isolate}
+    .feed{height:1350px}.story{height:1920px}
+    .creative::before{content:"";position:absolute;inset:0;z-index:-5;background:linear-gradient(116deg,#07090b 0 54%,#0e1418 54% 100%)}
+    .grid{position:absolute;inset:0;z-index:-4;opacity:.52;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px}
+    .red-plane{position:absolute;z-index:-3;right:-160px;top:350px;width:690px;height:720px;background:var(--red);clip-path:polygon(38% 0,100% 12%,100% 100%,0 82%);opacity:.92}
+    .red-plane::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 48px,rgba(255,255,255,.09) 48px 50px)}
+    .cyan-rule{position:absolute;z-index:-2;left:0;top:420px;width:100%;height:3px;background:var(--cyan);box-shadow:0 0 26px rgba(18,169,210,.55)}
+
+    .topbar{position:absolute;z-index:10;top:50px;left:62px;right:62px;height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:62px;height:62px;object-fit:contain;border-radius:8px;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 12px 26px rgba(0,0,0,.38)}
+    .brand strong{display:block;font-family:"IBM Plex Mono",monospace;font-size:24px;letter-spacing:.04em}
+    .brand strong em{color:var(--red);font-style:normal}
+    .brand small{display:block;margin-top:5px;color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em}
+    .edition{text-align:right;font-family:"IBM Plex Mono",monospace;text-transform:uppercase}
+    .edition span{display:block;color:var(--cyan);font-size:13px;font-weight:600;letter-spacing:.14em}
+    .edition b{display:block;margin-top:7px;color:var(--muted);font-size:11px;letter-spacing:.12em}
+
+    .intro{position:absolute;z-index:6;top:158px;left:64px;right:64px}
+    .eyebrow{display:flex;align-items:center;gap:11px;color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:35px;height:5px;background:var(--red);box-shadow:39px 0 0 var(--cyan)}
+    h1{width:690px;margin:20px 0 0;font-size:72px;line-height:.96;font-weight:650;letter-spacing:0}
+    h1 span{display:block;color:var(--white)}
+    h1 strong{display:block;color:var(--red);font-weight:700}
+    .intro p{width:610px;margin:21px 0 0;color:#c7cbcd;font-size:19px;line-height:1.42}
+    .price-block{position:absolute;z-index:7;top:63px;right:0;width:285px;padding:19px 20px 17px;border-top:5px solid var(--cyan);background:var(--white);color:var(--ink);box-shadow:-14px 14px 0 var(--red-dark)}
+    .price-block span{display:block;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+    .price-block strong{display:block;margin-top:6px;color:var(--red);font-size:43px;line-height:1;white-space:nowrap}
+    .price-block strong small{color:var(--ink);font-size:.47em}
+    .price-block em{display:block;margin-top:9px;color:#606468;font-family:"IBM Plex Mono",monospace;font-size:10px;font-style:normal;text-transform:uppercase}
+
+    .showcase{position:absolute;z-index:4;top:440px;left:0;right:0;height:555px}
+    .showcase::before{content:"";position:absolute;left:48px;top:25px;width:780px;height:440px;border:1px solid rgba(18,169,210,.5);box-shadow:18px 18px 0 rgba(18,169,210,.08)}
+    .showcase::after{content:"";position:absolute;left:85px;right:85px;bottom:18px;height:58px;border-radius:50%;background:rgba(0,0,0,.64);filter:blur(18px)}
+    .project-tag{position:absolute;z-index:9;top:0;right:61px;width:225px;padding:13px 16px;border-left:4px solid var(--cyan);background:rgba(7,9,11,.88);box-shadow:0 12px 26px rgba(0,0,0,.28);backdrop-filter:blur(12px)}
+    .project-tag span{display:block;color:var(--cyan);font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;letter-spacing:.12em}
+    .project-tag strong{display:block;margin-top:4px;font-size:16px}
+
+    .desktop{position:absolute;z-index:3;left:76px;top:62px;width:720px;height:450px;filter:drop-shadow(0 30px 34px rgba(0,0,0,.48))}
+    .desktop-screen{position:absolute;left:0;top:0;width:720px;height:392px;padding:12px 12px 14px;border-radius:25px 25px 16px 16px;background:linear-gradient(145deg,#d9dcde,#72787d 46%,#b9bdc0);box-shadow:inset 0 1px 0 rgba(255,255,255,.82)}
+    .desktop-screen::before{content:"";position:absolute;z-index:4;left:50%;top:6px;width:6px;height:6px;border-radius:50%;transform:translateX(-50%);background:#282d30}
+    .browser{position:relative;width:100%;height:100%;overflow:hidden;border:7px solid #0b0e10;border-radius:15px 15px 9px 9px;background:#0b0e10}
+    .browser-bar{position:absolute;z-index:3;left:0;right:0;top:0;height:24px;display:flex;align-items:center;gap:6px;padding-left:11px;background:#111619;border-bottom:1px solid rgba(255,255,255,.12)}
+    .browser-bar i{width:6px;height:6px;border-radius:50%;background:var(--red)}.browser-bar i:nth-child(2){background:#e2b84d}.browser-bar i:nth-child(3){background:var(--cyan)}
+    .browser img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;padding-top:24px}
+    .desktop-chin{position:absolute;left:0;top:380px;width:720px;height:36px;border-radius:0 0 20px 20px;background:linear-gradient(180deg,#c9ccce,#969b9e);box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+    .desktop-stand{position:absolute;left:307px;top:412px;width:108px;height:34px;background:linear-gradient(90deg,#777d81,#c7cacb 50%,#777d81);clip-path:polygon(28% 0,72% 0,88% 78%,100% 100%,0 100%,12% 78%)}
+
+    .tablet{position:absolute;z-index:6;right:45px;top:153px;width:275px;height:360px;padding:10px;border:5px solid #aeb3b6;border-radius:29px;background:linear-gradient(145deg,#e5e7e8,#686e72);transform:rotate(2deg);box-shadow:0 28px 40px rgba(0,0,0,.48),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden}
+    .tablet::before{content:"";position:absolute;z-index:3;left:50%;top:8px;width:6px;height:6px;border-radius:50%;transform:translateX(-50%);background:#252a2d}
+    .tablet img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border:7px solid #090c0e;border-radius:18px}
+    .phone{position:absolute;z-index:7;left:28px;top:248px;width:160px;height:310px;padding:7px;border:4px solid #aeb3b6;border-radius:35px;background:linear-gradient(145deg,#edf0f1,#686e72);transform:rotate(-5deg);box-shadow:0 28px 40px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden}
+    .phone::before{content:"";position:absolute;z-index:4;left:50%;top:10px;width:52px;height:15px;border-radius:11px;transform:translateX(-50%);background:#080a0c}
+    .phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border:6px solid #090c0e;border-radius:26px}
+
+    .features{position:absolute;z-index:8;left:62px;right:62px;top:1010px;height:142px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);border:1px solid var(--line);background:rgba(16,20,23,.88);box-shadow:0 22px 42px rgba(0,0,0,.25)}
+    .feature{display:flex;align-items:center;gap:13px;padding:0 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .feature:nth-child(3n){border-right:0}.feature:nth-child(n+4){border-bottom:0}
+    .feature span{color:var(--cyan);font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600}
+    .feature strong{font-size:16px;font-weight:600}
+
+    .cta{position:absolute;z-index:9;left:62px;right:62px;bottom:44px;height:132px;display:flex;align-items:center;justify-content:space-between;padding:0 30px;background:var(--white);color:var(--ink);box-shadow:14px 14px 0 var(--red)}
+    .cta-label{font-family:"IBM Plex Mono",monospace;color:var(--red);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+    .cta strong{display:block;margin-top:6px;font-size:25px}
+    .cta-meta{display:block;margin-top:6px;color:#5a6064;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600}
+    .cta-action{display:flex;align-items:center;gap:14px}
+    .cta-action span{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;text-transform:uppercase}
+    .cta-arrow{width:60px;height:60px;display:grid;place-items:center;background:var(--ink);color:var(--white);font-size:31px;border-radius:50%;box-shadow:8px 0 0 var(--cyan)}
+
+    .story .red-plane{top:500px;width:820px;height:1040px}.story .cyan-rule{top:620px}
+    .story .topbar{top:74px;left:72px;right:72px;height:82px}.story .brand img{width:70px;height:70px}.story .brand strong{font-size:28px}.story .brand small{font-size:12px}
+    .story .intro{top:210px;left:72px;right:72px}.story h1{width:850px;margin-top:28px;font-size:95px;line-height:.95}.story .intro p{width:520px;margin-top:28px;font-size:23px}.story .eyebrow{font-size:15px}
+    .story .price-block{top:325px;right:0;width:350px;padding:24px 24px 21px;border-top-width:6px;box-shadow:-18px 18px 0 var(--red-dark)}.story .price-block span{font-size:14px}.story .price-block strong{font-size:53px}.story .price-block em{font-size:12px}
+    .story .showcase{top:700px;height:670px}.story .showcase::before{left:55px;top:28px;width:880px;height:540px}.story .showcase::after{left:90px;right:90px;bottom:26px;height:80px}.story .project-tag{top:0;right:72px;width:265px;padding:16px 19px}.story .project-tag span{font-size:12px}.story .project-tag strong{font-size:19px}
+    .story .desktop{left:82px;top:82px;width:835px;height:530px}.story .desktop-screen{width:835px;height:458px;padding:14px;border-radius:28px 28px 18px 18px}.story .desktop-chin{top:444px;width:835px;height:43px}.story .desktop-stand{left:354px;top:483px;width:127px;height:40px}
+    .story .tablet{right:42px;top:265px;width:335px;height:430px;border-radius:33px}.story .phone{left:28px;top:355px;width:190px;height:375px;border-radius:39px}
+    .story .features{left:72px;right:72px;top:1430px;height:218px;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr)}
+    .story .feature{padding:0 24px}.story .feature:nth-child(3n){border-right:1px solid var(--line)}.story .feature:nth-child(n+4){border-bottom:1px solid var(--line)}.story .feature:nth-child(2n){border-right:0}.story .feature:nth-child(n+5){border-bottom:0}.story .feature span{font-size:13px}.story .feature strong{font-size:20px}
+    .story .cta{left:72px;right:72px;bottom:78px;height:164px;padding:0 38px;box-shadow:18px 18px 0 var(--red)}.story .cta-label{font-size:13px}.story .cta strong{font-size:31px}.story .cta-meta{font-size:16px}.story .cta-action span{font-size:14px}.story .cta-arrow{width:72px;height:72px;font-size:37px;box-shadow:10px 0 0 var(--cyan)}
+  </style>
+</head>
+<body>
+  <section class="creative feed" data-output="piton-web-offer-feed">
+    <div class="grid"></div><div class="red-plane"></div><div class="cyan-rule"></div>
+    <header class="topbar">
+      <div class="brand"><img src="../../../public/assets/brand/piton-globe-python-brand-red-blue-v4.png" alt="" /><div><strong>PITON <em>STUDIOS</em></strong><small>DİJİTAL ÜRÜN STÜDYOSU</small></div></div>
+      <div class="edition"><span>WEB SİTESİ</span><b>01 / OFFER</b></div>
+    </header>
+    <div class="intro">
+      <div class="eyebrow">24/7 çalışan dijital vitrin</div>
+      <h1><span>Markanız görünür olsun.</span><strong>Siteniz iş getirsin.</strong></h1>
+      <p>Özel tasarım, mobil deneyim ve büyümeye hazır teknik altyapı tek projede.</p>
+      <div class="price-block"><span>Profesyonel web sitesi</span><strong>10.000 TL<small>'den</small></strong><em>Kapsama göre değişir</em></div>
+    </div>
+    <div class="showcase">
+      <div class="project-tag"><span>CANLI PROJE / NEXOS</span><strong>Gerçek arayüz, gerçek deneyim</strong></div>
+      <div class="desktop"><div class="desktop-screen"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment masaüstü web sitesi" /></div></div><div class="desktop-chin"></div><div class="desktop-stand"></div></div>
+      <div class="tablet"><img src="../../../public/assets/previews/tablet/nexos-investment-custom.png" alt="Nexos Investment tablet web sitesi" /></div>
+      <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil web sitesi" /></div>
+    </div>
+    <div class="features">
+      <div class="feature"><span>01</span><strong>Özel tasarım</strong></div><div class="feature"><span>02</span><strong>Mobil uyumlu</strong></div><div class="feature"><span>03</span><strong>Teknik SEO</strong></div>
+      <div class="feature"><span>04</span><strong>Çok dilli altyapı</strong></div><div class="feature"><span>05</span><strong>AI arama uyumu</strong></div><div class="feature"><span>06</span><strong>WhatsApp bağlantısı</strong></div>
+    </div>
+    <div class="cta"><div><span class="cta-label">Ücretsiz kapsam görüşmesi</span><strong>Projenizi birlikte planlayalım.</strong><span class="cta-meta">pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-action"><span>İletişime geç</span><div class="cta-arrow">→</div></div></div>
+  </section>
+
+  <section class="creative story" data-output="piton-web-offer-story">
+    <div class="grid"></div><div class="red-plane"></div><div class="cyan-rule"></div>
+    <header class="topbar">
+      <div class="brand"><img src="../../../public/assets/brand/piton-globe-python-brand-red-blue-v4.png" alt="" /><div><strong>PITON <em>STUDIOS</em></strong><small>DİJİTAL ÜRÜN STÜDYOSU</small></div></div>
+      <div class="edition"><span>WEB SİTESİ</span><b>01 / OFFER</b></div>
+    </header>
+    <div class="intro">
+      <div class="eyebrow">24/7 çalışan dijital vitrin</div>
+      <h1><span>Markanız görünür olsun.</span><strong>Siteniz iş getirsin.</strong></h1>
+      <p>Özel tasarım, mobil deneyim ve büyümeye hazır teknik altyapı tek projede.</p>
+      <div class="price-block"><span>Profesyonel web sitesi</span><strong>10.000 TL<small>'den</small></strong><em>Kapsama göre değişir</em></div>
+    </div>
+    <div class="showcase">
+      <div class="project-tag"><span>CANLI PROJE / NEXOS</span><strong>Gerçek arayüz, gerçek deneyim</strong></div>
+      <div class="desktop"><div class="desktop-screen"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment masaüstü web sitesi" /></div></div><div class="desktop-chin"></div><div class="desktop-stand"></div></div>
+      <div class="tablet"><img src="../../../public/assets/previews/tablet/nexos-investment-custom.png" alt="Nexos Investment tablet web sitesi" /></div>
+      <div class="phone"><img src="../../../public/assets/previews/mobile/nexos-investment.webp" alt="Nexos Investment mobil web sitesi" /></div>
+    </div>
+    <div class="features">
+      <div class="feature"><span>01</span><strong>Özel tasarım</strong></div><div class="feature"><span>02</span><strong>Mobil uyumlu</strong></div><div class="feature"><span>03</span><strong>Teknik SEO</strong></div>
+      <div class="feature"><span>04</span><strong>Çok dilli altyapı</strong></div><div class="feature"><span>05</span><strong>AI arama uyumu</strong></div><div class="feature"><span>06</span><strong>WhatsApp bağlantısı</strong></div>
+    </div>
+    <div class="cta"><div><span class="cta-label">Ücretsiz kapsam görüşmesi</span><strong>Projenizi birlikte planlayalım.</strong><span class="cta-meta">pitonstudios.com · +90 543 950 07 50</span></div><div class="cta-action"><span>İletişime geç</span><div class="cta-arrow">→</div></div></div>
+  </section>
+</body>
+</html>

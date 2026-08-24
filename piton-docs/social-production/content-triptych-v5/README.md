@@ -1,4 +1,4 @@
-# Growth Systems / 01
+# Buyume Sistemleri / 01
 
 Profil satiri iki adet 4 sayfalik carousel ve bir musteri kazanim sistemi kontrolu teklifinden olusur.
 
@@ -20,6 +20,6 @@ Carousel sayfalari 01'den 04'e normal sirayla yuklenir.
 
 - 1080 x 1350 px Instagram ve Facebook teslim dosyalari
 - Space Grotesk + IBM Plex Mono tipografi sistemi
-- Yuvarlatilmis dashboard, funnel, kontrol listesi ve CTA kutulari
+- Yuvarlatilmis yonetim paneli, huni, kontrol listesi ve iletisim kutulari
 - Marka renkleri: #D33A3E, #00A0D0, #08090A ve #F2EFE9
 - Meta icin resmi platform logosu kullanilir
