@@ -1,0 +1,17 @@
+UPLOAD 01 / AI VE OTOMASYON CAROUSEL
+
+01: “AI ve otomasyon nereden başlar?” başlığı altında önce otomasyon, AI destekli, şimdilik manuel ve insan onaylı seçeneklerini gösteren karar matrisi.
+02: Tekrar sıklığı ve karar karmaşıklığına göre süreçleri dört grupta değerlendiren büyük karar matrisi.
+03: Girdi, kurallar, AI, insan onayı, işlem ve kayıt katmanlarından oluşan altı adımlı sistem şeması ve örnek operasyon ekranı.
+04: Süreç seçimi, ölçüt belirleme, kontrollü deneme ve genişletme adımlarını; süre, hata ve insan onayı göstergeleriyle açıklayan plan.
+
+UPLOAD 02 / İLETİŞİM TEK GÖNDERİ
+
+Piton Studios logosu altında web sitesi, telefon ve WhatsApp iletişim bilgilerini sunan; “Bir fikriniz varsa konuşalım” çağrılı marka görseli.
+
+UPLOAD 03 / İŞ SONUCU ÜRETEN WEB CAROUSEL
+
+01: Görünürlük, güven, iletişim ve ölçüm katmanlarıyla “Web sitesi nasıl çalışır?” sorusunu açıklayan kapak.
+02: İlk ziyaretten talebe uzanan görünürlük, güven, iletişim ve ölçüm adımlarını gösteren kullanıcı yolculuğu.
+03: Piton Studios web sitesinin masaüstü ve mobil görünümlerini birlikte sunan, her ekranda içerik önceliğini vurgulayan karşılaştırma.
+04: Görünürlükten talebe ilerleyen örnek çizgi grafik; kaynak, etkileşim, dönüşüm ve kalite ölçütleri.

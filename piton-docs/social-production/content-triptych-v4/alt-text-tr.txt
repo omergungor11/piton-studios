@@ -1,8 +1,8 @@
 UPLOAD 01 / İŞ AKIŞI OTOMASYONU CAROUSEL
 
 01: “Tekrarlanan işi otomasyona bırakın” başlığı etrafında form, CRM, bildirim ve rapor panellerinin merkezi otomasyon düğümüne bağlandığı yuvarlatılmış sistem şeması.
-02: Tekrar, kopyala-yapıştır, geciken takip ve dağınık rapor başlıklarıyla otomasyona uygun dört iş sinyalini açıklayan dört büyük panel.
-03: Tetikleyici, kural, aksiyon, doğrulama ve uyarı-kayıt adımlarından oluşan beş aşamalı otomasyon akışı.
+02: Tekrar, kopyala-yapıştır, geciken takip ve dağınık rapor başlıklarıyla otomasyona uygun dört işareti açıklayan dört büyük panel.
+03: Başlangıç, kural, işlem, doğrulama ve uyarı-kayıt adımlarından oluşan beş aşamalı otomasyon akışı.
 04: Hız, doğruluk, izlenebilirlik ve ölçek başlıklarıyla otomasyonun iş sonuçlarını açıklayan dört yuvarlatılmış kart ve iletişim çağrısı.
 
 UPLOAD 02 / SÜREÇ HARİTASI TEK GÖNDERİ

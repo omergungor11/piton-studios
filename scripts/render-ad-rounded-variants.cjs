@@ -20,28 +20,12 @@ const output = path.join(
 
 const variants = [
   {
-    label: "01 / SOFT / SAMMYS",
-    className: "rounded-soft",
-    feedSource: "creative-04-website-package-feed",
-    storySource: "creative-04-website-package-story",
-    feedOutput: "rounded-01-web-sammys-feed",
-    storyOutput: "rounded-01-web-sammys-story",
-  },
-  {
-    label: "02 / LAYERED / NEXOS",
-    className: "rounded-layered",
-    feedSource: "creative-04b-website-package-nexos-feed",
-    storySource: "creative-04b-website-package-nexos-story",
-    feedOutput: "rounded-02-web-nexos-feed",
-    storyOutput: "rounded-02-web-nexos-story",
-  },
-  {
-    label: "03 / PERFORMANCE",
+    label: "PERFORMANCE",
     className: "rounded-performance",
-    feedSource: "creative-05-ads-management-feed",
-    storySource: "creative-05-ads-management-story",
-    feedOutput: "rounded-03-ads-feed",
-    storyOutput: "rounded-03-ads-story",
+    feedSource: "creative-04-ads-management-feed",
+    storySource: "creative-04-ads-management-story",
+    feedOutput: "rounded-ads-feed",
+    storyOutput: "rounded-ads-story",
   },
 ];
 

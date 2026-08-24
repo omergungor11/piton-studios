@@ -1,9 +1,9 @@
 UPLOAD 01 / REKLAMDAN MÜŞTERİYE KAZANIM SİSTEMİ CAROUSEL
 
-01: Google Ads ve resmi Meta logosu üzerinde doğru hedef kitle, ikna eden sayfa, ölçülen aksiyon ve satış görüşmesi katmanlarından oluşan huni; “Reklam değil, müşteri kazanım sistemi” başlığı.
-02: Kanal, landing page, güven, aksiyon, CRM ve takip adımlarından oluşan altı kartlı uçtan uca müşteri yolculuğu.
+01: Google Ads ve resmi Meta logosu üzerinde doğru hedef kitle, ikna eden sayfa, ölçülen iletişim ve satış görüşmesi katmanlarından oluşan huni; “Reklam değil, müşteri kazanım sistemi” başlığı.
+02: Kanal, açılış sayfası, güven, iletişim, CRM ve takip adımlarından oluşan altı kartlı uçtan uca müşteri yolculuğu.
 03: Mesaj kopukluğu, zayıf mobil sayfa, eksik ölçüm ve geciken takip başlıklarıyla reklam bütçesinin kaybolabileceği dört noktayı gösteren panel.
-04: Google-Meta Ads, landing page, GA4-olay takibi, CRM-bildirim, ortak dashboard ve düzenli optimizasyon katmanlarını açıklayan altı kart.
+04: Google-Meta Ads, açılış sayfası, GA4-olay takibi, CRM-bildirim, ortak yönetim paneli ve düzenli iyileştirme katmanlarını açıklayan altı kart.
 
 UPLOAD 02 / MÜŞTERİ KAZANIM SİSTEMİ KONTROLÜ TEK GÖNDERİ
 
@@ -11,7 +11,7 @@ Piton Studios logosu altında teklif, sayfa, ölçüm ve takip katmanlarını g�
 
 UPLOAD 03 / ÖLÇÜM VE YÖNETİM PANELİ CAROUSEL
 
-01: Web, Google Ads ve Meta Ads kaynaklarının yeni talep, nitelikli görüşme ve aktif teklif göstergeleriyle sunulduğu büyük yuvarlatılmış dashboard.
+01: Web, Google Ads ve Meta Ads kaynaklarının yeni talep, nitelikli görüşme ve aktif teklif göstergeleriyle sunulduğu büyük yuvarlatılmış yönetim paneli.
 02: İş sonucu, dönüşüm, kanal ve davranış katmanlarından oluşan dört seviyeli metrik hiyerarşisi.
 03: Talep kaynağı, talep kalitesi, dönüşüm oranı, kazanım maliyeti, takip süresi ve iş sonucu başlıklarını açıklayan altı büyük rapor kartı.
 04: Olay tanımı, kaynak takibi, CRM aktarımı, satış sonucu bağlantısı ve karar üreten rapor başlıklarından oluşan beş maddelik ölçüm kontrol listesi.

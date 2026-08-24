@@ -40,7 +40,7 @@
   --panel-2: #15191c;
   --ink: #f2efe9;
   --soft: #c9c7c1;
-  --muted: #85898a;
+  --muted: #a5a7a5;
   --red: #d33a3e;
   --cyan: #00a0d0;
   --blue: #0870a0;
@@ -861,3 +861,108 @@ body {
 .system-block span { display: block; margin-top: 13px; color: var(--soft); font-size: 16px; line-height: 1.42; }
 
 .quiet-page .brand-mark { position: absolute; left: 390px; top: 570px; width: 300px; height: 300px; opacity: 0.18; }
+
+/* Mobile-feed readability: supporting copy stays legible on a phone without zooming. */
+.topbar { font-size: 20px; }
+.footer { font-size: 18px; }
+.kicker { font-size: 20px; }
+.lede { font-size: 28px; line-height: 1.4; }
+.section-title .lede { font-size: 26px; line-height: 1.4; }
+
+.module-strip b { font-size: 18px; }
+.module-strip span { font-size: 21px; }
+
+.lead-panel > p { font-size: 28px; line-height: 1.4; }
+.lead-flow { margin-top: 30px; }
+.lead-flow div { min-height: 130px; padding: 20px 12px; }
+.lead-flow b { font-size: 18px; }
+.lead-flow span { font-size: 22px; line-height: 1.3; }
+.lead-cta { margin-top: 26px; }
+.lead-cta b { font-size: 28px; }
+.lead-cta span { font-size: 20px; }
+
+.automation-core span { font-size: 18px; }
+.automation-node { min-height: 160px; }
+.automation-node b { font-size: 19px; }
+.automation-node span { font-size: 24px; line-height: 1.35; }
+
+.content-card strong { font-size: 29px; }
+.content-card span { font-size: 24px; line-height: 1.38; }
+.arch-source div,
+.arch-output div { font-size: 22px; }
+.arch-core b { font-size: 19px; }
+.arch-core span { font-size: 24px; line-height: 1.38; }
+
+.decision-row,
+.signal-row {
+  grid-template-columns: 76px 240px 1fr;
+  min-height: 145px;
+}
+.decision-row strong,
+.signal-row strong { font-size: 25px; }
+.decision-row span,
+.signal-row span { font-size: 24px; line-height: 1.35; }
+.decision-list { grid-template-columns: 1fr; }
+.decision-list .section-cta { grid-column: 1; }
+
+.flow-track { top: 500px; }
+.flow-step {
+  grid-template-columns: 82px 225px 1fr;
+  min-height: 136px;
+}
+.flow-step strong { font-size: 25px; }
+.flow-step span { font-size: 24px; line-height: 1.35; }
+
+.outcome strong { font-size: 29px; }
+.outcome span { font-size: 24px; line-height: 1.38; }
+.section-cta { font-size: 24px; line-height: 1.4; }
+
+.dash-head { font-size: 18px; }
+.metric-card span { font-size: 20px; }
+.dash-row { grid-template-columns: 180px 1fr 76px; font-size: 21px; }
+.dash-row b { font-size: 20px; }
+.source-strip div { font-size: 18px; }
+
+.kpi-pyramid { top: 490px; }
+.kpi-layer { min-height: 150px; }
+.kpi-layer b { font-size: 18px; }
+.kpi-layer strong { font-size: 28px; }
+.kpi-layer span { font-size: 23px; }
+
+.report-tile { min-height: 250px; padding: 26px; }
+.report-tile b { font-size: 19px; }
+.report-tile strong { margin-top: 22px; font-size: 28px; }
+.report-tile span { font-size: 24px; line-height: 1.35; }
+.report-note { font-size: 23px; line-height: 1.4; }
+
+.tracking-check { top: 495px; }
+.tracking-row {
+  grid-template-columns: 64px 1fr 230px;
+  min-height: 140px;
+}
+.tracking-row strong { font-size: 25px; }
+.tracking-row span { font-size: 22px; line-height: 1.35; }
+
+.growth-stack { margin-top: 28px; }
+.growth-stack div { min-height: 142px; }
+.growth-stack b { font-size: 19px; }
+.growth-stack span { font-size: 23px; line-height: 1.35; }
+.channel-badge { font-size: 19px; }
+.funnel div { font-size: 22px; }
+
+.journey-node { min-height: 210px; }
+.journey-node strong { font-size: 28px; }
+.journey-node span { font-size: 24px; line-height: 1.35; }
+
+.loss-row {
+  grid-template-columns: 70px 245px 1fr;
+  min-height: 150px;
+}
+.loss-row strong { font-size: 25px; }
+.loss-row span { font-size: 24px; line-height: 1.35; }
+
+.system-stack { top: 485px; }
+.system-block { min-height: 245px; padding: 26px; }
+.system-block b { font-size: 18px; }
+.system-block strong { margin-top: 20px; font-size: 28px; }
+.system-block span { font-size: 24px; line-height: 1.35; }

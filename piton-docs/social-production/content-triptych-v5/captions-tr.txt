@@ -1,16 +1,16 @@
 UPLOAD 01 - REKLAMDAN MÜŞTERİYE KAZANIM SİSTEMİ / CAROUSEL
 
-Google Ads veya Meta Ads tek başına müşteri kazanım sistemi değildir. Reklam doğru kişiyi getirse bile landing page mesajı devam ettirmiyorsa, aksiyon ölçülmüyorsa veya talep satış ekibine doğru aktarılmıyorsa bütçe yolculuğun ortasında kaybolur.
+Google Ads veya Meta Ads tek başına müşteri kazanım sistemi değildir. Reklam doğru kişiyi getirse bile açılış sayfası mesajı devam ettirmiyorsa, iletişim adımı ölçülmüyorsa veya talep satış ekibine doğru aktarılmıyorsa bütçe yolculuğun ortasında kaybolur.
 
 Uçtan uca kazanım akışının temel katmanları:
 • Doğru niyet veya hedef kitle
-• Reklamla tutarlı landing page
+• Reklamla tutarlı açılış sayfası
 • Karar riskini azaltan güven kanıtları
 • Kolay form, WhatsApp veya rezervasyon akışı
 • Kaynak bilgisiyle birlikte CRM kaydı
 • Hızlı satış takibi ve sonuç geri bildirimi
 
-Kapsama göre Google Ads, Meta Ads, landing page, GA4 ve olay takibi, CRM-WhatsApp bağlantısı, ortak dashboard ve düzenli optimizasyon katmanlarını birlikte kurabiliriz.
+Kapsama göre Google Ads, Meta Ads, açılış sayfası, GA4 ve olay takibi, CRM-WhatsApp bağlantısı, ortak yönetim paneli ve düzenli iyileştirme katmanlarını birlikte kurabiliriz.
 
 Reklam bütçesini artırmadan önce kazanım altyapınızı değerlendirelim:
 pitonstudios.com
@@ -24,7 +24,7 @@ UPLOAD 02 - MÜŞTERİ KAZANIM SİSTEMİ KONTROLÜ / TEK GÖNDERİ
 
 Trafik var ama satış görüşmesi az mı? Sorun yalnızca kampanyada olmayabilir.
 
-Teklif ve hedef kitle uyumunu, landing page akışını, ölçüm altyapısını ve CRM-satış takibini birlikte kontrol edelim. Böylece bütçeyi büyütmeden önce hangi katmanın güçlendirilmesi gerektiği görünür hale gelir.
+Teklif ve hedef kitle uyumunu, açılış sayfası akışını, ölçüm altyapısını ve CRM-satış takibini birlikte kontrol edelim. Böylece bütçeyi büyütmeden önce hangi katmanın güçlendirilmesi gerektiği görünür hale gelir.
 
 Kazanım altyapısı görüşmesi:
 +90 543 950 07 50
@@ -36,7 +36,7 @@ pitonstudios.com
 
 UPLOAD 03 - ÖLÇÜM VE YÖNETİM PANELİ / CAROUSEL
 
-Web sitesi, reklam platformları, CRM ve operasyon araçları farklı rakamlar gösterdiğinde ortak bir karar vermek zorlaşır. İyi bir dashboard görünen her sayıyı toplamaz; iş sonucu ile kanal ve kullanıcı davranışı arasındaki ilişkiyi kurar.
+Web sitesi, reklam platformları, CRM ve operasyon araçları farklı rakamlar gösterdiğinde ortak bir karar vermek zorlaşır. İyi bir yönetim paneli görünen her sayıyı toplamaz; iş sonucu ile kanal ve kullanıcı davranışı arasındaki ilişkiyi kurar.
 
 Ölçüm hiyerarşisi:
 • İş sonucu: ciro, kârlılık veya nitelikli talep
@@ -46,7 +46,7 @@ Web sitesi, reklam platformları, CRM ve operasyon araçları farklı rakamlar g
 
 Ortak raporda talep kaynağı, talep kalitesi, dönüşüm oranı, kazanım maliyeti, takip süresi ve iş sonucu birlikte görülebilir.
 
-Dashboard'dan önce temel olayların, UTM ve kaynak bilgilerinin, CRM aktarımının ve satış sonucu geri bağlantısının doğru çalıştığını doğrulamak gerekir.
+Yönetim panelinden önce temel olayların, UTM ve kaynak bilgilerinin, CRM aktarımının ve satış sonucu geri bağlantısının doğru çalıştığını doğrulamak gerekir.
 
 Ölçüm ve raporlama altyapınızı birlikte planlayalım:
 pitonstudios.com
