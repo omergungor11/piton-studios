@@ -5047,6 +5047,7 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
   .ap-team-card { grid-template-columns: 1fr; gap: 20px; }
   .ap-clients { padding: 28px 20px; }
   .ap-clients-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-main .testimonials-glass { padding: 28px 20px; }
 }
 @media (max-width: 480px) {
   .ap-values-grid { grid-template-columns: 1fr; }
@@ -7088,6 +7089,11 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   max-width: 1080px;
   width: 100%;
 }
+.page-main .testimonials-glass {
+  max-width: none;
+  margin-bottom: 24px;
+  border-radius: 28px;
+}
 .testimonials-head { margin-bottom: clamp(20px, 3vw, 36px); }
 .testimonials-head .eyebrow {
   font-size: 11px;
@@ -7151,6 +7157,7 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
 @media (max-width: 900px) { .results-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) {
   .results-grid { grid-template-columns: 1fr; }
+  .page-main .testimonials-glass { padding: 28px 20px; }
   .result-desc { font-size: 12.5px; }
 }
 @media (prefers-reduced-motion: reduce) {
