@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import MatrixRain from '@/components/matrix-rain';
 import { Reveal, Stagger, StaggerItem } from '@/components/motion';
@@ -10,6 +9,7 @@ import SnakeBorder from '@/components/snake-border';
 import StudioTimeline from '@/components/about/studio-timeline';
 import CapabilityMap from '@/components/about/capability-map';
 import TestimonialsScene from '@/components/scenes/testimonials';
+import ContactScene from '@/components/scenes/contact';
 
 /**
  * Musteri adlari ozel isim — cevrilmiyor, kodda duruyor.
@@ -141,16 +141,7 @@ export default function AboutPageClient() {
         <TestimonialsScene />
       </Reveal>
 
-      <section className="sp-cta glass strong">
-        <div className="sp-cta-text">
-          <h3>{ts('cta.title')}</h3>
-          <p>{ts('cta.desc')}</p>
-        </div>
-        <Link href="/contact" className="sp-cta-btn" data-cursor="hover" data-cursor-label="↗">
-          <span>{ts('cta.btn')}</span>
-          <span>↗</span>
-        </Link>
-      </section>
+      <ContactScene />
     </PageShell>
   );
 }

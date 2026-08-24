@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link, getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
+import ContactScene from '@/components/scenes/contact';
 import type { Locale } from '@/lib/site';
 
 export interface PricingPostLink {
@@ -138,20 +139,7 @@ export default async function PricingContent({ locale, roiPost }: Props) {
         </div>
       </section>
 
-      <section className="sd-cta glass strong pricing-cta">
-        <span className="sd-cta-bg-accent" aria-hidden="true" />
-        <div className="sd-cta-inner">
-          <p className="sd-cta-eyebrow">{t('cta.eyebrow')}</p>
-          <h2 className="sd-cta-title">{t('cta.title')}</h2>
-          <p className="sd-cta-sub">{t('cta.desc')}</p>
-          <div className="sd-cta-btns">
-            <Link href="/contact" className="sd-cta-btn" data-cursor="hover">
-              <span>{t('cta.button')}</span>
-              <span className="sd-cta-arrow">↗</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ContactScene />
     </PageShell>
   );
 }
