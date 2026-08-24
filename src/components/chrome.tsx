@@ -54,6 +54,12 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
+          <Link href="/pricing" className="item" data-cursor="hover">
+            <span className="row">
+              <span>{t('pricing')}</span>
+              <span className="dup">{t('pricing')} ↗</span>
+            </span>
+          </Link>
           <Link href="/blog" className="item" data-cursor="hover">
             <span className="row">
               <span>{t('blog')}</span>
@@ -107,6 +113,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
             {([
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
+              { href: '/pricing',  label: t('pricing')  },
               { href: '/blog',     label: t('blog')     },
               { href: '/faq',      label: t('faq')      },
               { href: '/about',    label: t('about')    },

@@ -27,6 +27,10 @@
     "faq": {
       "title": "Sıkça Sorulan Sorular",
       "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
+    },
+    "pricing": {
+      "title": "Fiyatlandırma",
+      "description": "Web sitesi, e-ticaret, özel web uygulaması ve AI otomasyon için şeffaf başlangıç bantları: 10.000 TL'den başlayan paketler, her pakette neler dahil ve fiyatı etkileyen faktörler."
     }
   },
   "nav": {
@@ -40,7 +44,8 @@
     "home": "Ana Sayfa",
     "contactCta": "İletişime Geç",
     "blog": "Blog",
-    "faq": "SSS"
+    "faq": "SSS",
+    "pricing": "Fiyatlandırma"
   },
   "blog": {
     "metaTitle": "Blog",
@@ -79,7 +84,26 @@
       "SEO",
       "CLOUD",
       "AUTOMATION"
-    ]
+    ],
+    "statsLabel": "Rakamlarla Piton Studios",
+    "stats": {
+      "projects": {
+        "value": "49+",
+        "label": "Tamamlanan Proje"
+      },
+      "sectors": {
+        "value": "10+",
+        "label": "Sektör"
+      },
+      "services": {
+        "value": "12",
+        "label": "Hizmet Alanı"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Yayın Dili"
+      }
+    }
   },
   "manifesto": {
     "eyebrow": "§ 01 · Not",
@@ -556,7 +580,9 @@
     "contact": "İletişim",
     "about": "Hakkında",
     "blog": "Blog",
-    "faq": "SSS"
+    "faq": "SSS",
+    "pricing": "Fiyatlandırma",
+    "sectors": "Sektörler"
   },
   "works": {
     "velis-ltd": {
@@ -2974,5 +3000,305 @@
         "Para birimi seçimi genellikle müşterinin kendi muhasebe pratiğine göre birlikte belirleniyor; kesin vergi mükellefiyeti, KDV veya stopaj durumu gibi konularda ise kendi mali müşavirinizle ya da hukuk danışmanınızla ilerlemenizi önemle ve ısrarla öneririz, bu alan hiçbir zaman bizim uzmanlık alanımız olmadı."
       ]
     }
+  },
+  "testimonials": {
+    "eyebrow": "§ 06 · Referanslar",
+    "title": "Müşterilerimiz {accent}",
+    "titleAccent": "anlatıyor",
+    "subtitle": "Birlikte çalıştığımız markaların projeleri hakkında söyledikleri — her yorum gerçek bir işe bağlı.",
+    "viewProject": "Projeyi gör",
+    "prevLabel": "Önceki yorum",
+    "nextLabel": "Sonraki yorum",
+    "goTo": "Yorum {index}",
+    "draftBadge": "Taslak",
+    "quotes": {
+      "nexos": "Hazır temalar ihtiyacımızı karşılamıyordu; Piton Studios bize sıfırdan, harita destekli ve çok dilli bir ilan yönetim sistemi kurdu. İlan verisinden otomatik PDF ve sunum üretimi sayesinde teklif hazırlamak saatler yerine dakikalar alıyor.",
+      "ambalajCini": "E-ticaret altyapımızı ödeme entegrasyonu ve stok takibiyle birlikte kurdular. Site 2022'den beri kesintisiz çalışıyor ve online satışlarımızda %30 büyüme yakaladık.",
+      "sammys": "Otelimiz için misafiri ön plana çıkaran, sıcak bir site tasarladılar. Online rezervasyon ve çok dilli yapı sayesinde uluslararası misafirlere çok daha kolay ulaşıyoruz.",
+      "radyoJuke": "Canlı yayın akışımız için bize özel bir platform geliştirdiler. Mobilde ve masaüstünde kesintisiz dinleme deneyimi sunuyoruz; sosyal medya entegrasyonuyla dinleyici kitlemiz genişledi.",
+      "velis": "25 yıllık sektör deneyimimizi yansıtan, ürün kataloğu ve çok dilli yapıya sahip kurumsal bir site teslim ettiler. İçerik yönetimi o kadar kolay ki güncellemeleri kendi ekibimiz yapıyor.",
+      "btElevator": "Çok dilli kurumsal sitemizi teknik SEO çalışmasıyla birlikte hayata geçirdiler. Arama motorlarındaki görünürlüğümüz belirgin şekilde arttı ve site kurumsal kimliğimizi tam olarak yansıtıyor."
+    }
+  },
+  "processScene": {
+    "eyebrow": "Nasıl Çalışıyoruz",
+    "title": "Belirsizlik yok — <accent>altı adımda</accent> fikirden yayına.",
+    "sub": "Her projede aynı akışı izliyoruz. Hangi adımda olduğunuzu, sırada ne olduğunu ve sizden ne beklendiğini her an bilirsiniz.",
+    "steps": {
+      "1": {
+        "title": "Keşif & Analiz",
+        "desc": "İhtiyacınızı, hedeflerinizi ve rakiplerinizi birlikte netleştiriyoruz. Ne yapılacağı tahmine değil, konuşulmuş bir zemine oturur."
+      },
+      "2": {
+        "title": "Teklif & Kapsam",
+        "desc": "Net fiyat bandı ve takvimle yazılı teklif alırsınız. Kapsamda ne var, ne yok — imzadan önce ikimiz için de belli."
+      },
+      "3": {
+        "title": "Tasarım",
+        "desc": "Wireframe'den arayüze adım adım ilerliyoruz. Onay turlarıyla her ekranı kod yazılmadan görür, en ucuz anında değiştirirsiniz."
+      },
+      "4": {
+        "title": "Geliştirme",
+        "desc": "Projeye göre Next.js veya WordPress ile geliştiriyoruz. Her hafta çalışan bir sürüm görürsünüz; ilerleme söz değil, ekran."
+      },
+      "5": {
+        "title": "Yayın",
+        "desc": "SEO ve performans kontrollerinden geçmeden hiçbir site canlıya çıkmaz. Deploy sonrası her şeyin yerinde olduğunu birlikte doğrularız."
+      },
+      "6": {
+        "title": "Destek & Büyüme",
+        "desc": "Yayın bitiş değil, başlangıç. Bakım, içerik ve veriye dayalı iterasyonla site zamanla daha iyi çalışır hale gelir."
+      }
+    },
+    "footNote": "Çoğu proje ilk görüşmeden 1–2 hafta içinde tasarıma geçer. İlk adım bir saatlik bir sohbet — yükümlülük yok.",
+    "cta": "Projeni anlat"
+  },
+  "pricingPage": {
+    "title": "Fiyatlandırma",
+    "subtitle": "Net bantlar, sürprizsiz teklif",
+    "lead": "Her proje farklı; yine de nereden başladığımızı saklamıyoruz. Aşağıdaki bantlar başlangıç aralıklarıdır — kesin fiyat, ihtiyaçlarınızı dinledikten sonra hazırladığımız teklifle netleşir.",
+    "bandLabel": "başlangıç bandı",
+    "includesLabel": "Neler dahil",
+    "note": "Tüm rakamlar başlangıç bantlarıdır; kesin fiyat, kapsamı birlikte netleştirdiğimiz ön görüşmenin ardından hazırlanan teklifle belirlenir. Bant dışına çıkan bir ihtiyaç varsa bunu teklifte gerekçesiyle görürsünüz.",
+    "packages": {
+      "template": {
+        "name": "Şablon / WordPress tanıtım sitesi",
+        "price": "10.000–30.000 ₺",
+        "desc": "Hızla yayına çıkması gereken tanıtım siteleri için: kaliteli bir hazır temanın markanıza uyarlanması.",
+        "includes": [
+          "Tema seçimi ve markaya uyarlama",
+          "5–8 sayfalık içerik yerleşimi",
+          "Mobil uyumluluk ve temel hız optimizasyonu",
+          "SEO temeli: başlıklar, meta açıklamalar, sitemap",
+          "İletişim formu ve temel analitik kurulumu",
+          "Teslim: 2–4 hafta",
+          "Yayın sonrası 1 ay destek"
+        ]
+      },
+      "corporate": {
+        "name": "Özel tasarım kurumsal site",
+        "price": "35.000–120.000 ₺",
+        "desc": "Şablonsuz, markanıza özel tasarlanan ve sıfırdan kodlanan kurumsal web sitesi.",
+        "includes": [
+          "Özgün arayüz tasarımı (şablon yok)",
+          "Modern altyapıyla özel geliştirme (Next.js)",
+          "Kapsamlı SEO temeli + yapılandırılmış veri",
+          "Çok dillilik opsiyonu (ör. TR/EN/RU)",
+          "İçerik girişi ve görsel optimizasyonu",
+          "Teslim: 4–8 hafta",
+          "Yayın sonrası 2 ay destek"
+        ]
+      },
+      "ecommerce": {
+        "name": "E-ticaret sitesi",
+        "price": "40.000–200.000 ₺",
+        "desc": "Ürün yönetiminden ödemeye, uçtan uca satış altyapısı.",
+        "includes": [
+          "Satışa odaklı özel arayüz tasarımı",
+          "Ürün, sepet, ödeme ve kargo akışları",
+          "Ödeme altyapısı entegrasyonu (iyzico, Stripe vb.)",
+          "SEO temeli + ürün yapılandırılmış verisi",
+          "Çok dillilik ve çoklu para birimi opsiyonu",
+          "Teslim: 6–12 hafta",
+          "Yayın sonrası 2 ay destek"
+        ]
+      },
+      "webapp": {
+        "name": "Özel web uygulaması",
+        "price": "150.000 ₺+",
+        "desc": "SaaS, yönetim paneli, rezervasyon, CRM — işinize göre tasarlanan web uygulaması.",
+        "includes": [
+          "İhtiyaç analizi ve teknik mimari tasarımı",
+          "Özel arayüz ve veritabanı tasarımı",
+          "Rol/yetki yapısı, panel ve iş akışı geliştirme",
+          "Üçüncü parti API entegrasyonları",
+          "Test, güvenlik sertleştirme ve devreye alma",
+          "Teslim: kapsama göre 8 hafta ve üzeri",
+          "Sürekli bakım anlaşması opsiyonu"
+        ]
+      }
+    },
+    "ai": {
+      "eyebrow": "Ayrı hizmet",
+      "name": "AI Otomasyon",
+      "price": "~70.000 ₺",
+      "priceLabel": "kurulum",
+      "desc": "Tekrarlayan işleri — e-posta trafiği, raporlama, veri girişi, müşteri yanıtları — yapay zekâ destekli iş akışlarıyla otomatikleştiriyoruz.",
+      "points": [
+        "Süreç analizi ve otomasyon yol haritası",
+        "AI destekli iş akışları: e-posta, raporlama, müşteri yanıtları",
+        "Mevcut araçlarınızla entegrasyon (CRM, e-tablolar, e-posta)",
+        "Ekip eğitimi ve devreye alma",
+        "Kurulum sonrası izleme ve ince ayar"
+      ],
+      "roi": "ROI mantığı basit: 250 ₺/saat iş gücü maliyetiyle, haftada 20 saatlik tekrarlayan işi otomatikleştiren bir kurulum ayda yaklaşık 20.000 ₺ tasarruf üretir ve kendini 3–4 ayda amorti eder.",
+      "roiLinkLabel": "Hesabın ayrıntısı:"
+    },
+    "factors": {
+      "title": "Fiyatı ne etkiler?",
+      "lead": "İki projenin aynı banda düşüp farklı fiyat almasının nedenleri çoğunlukla şu altı kalemde toplanır.",
+      "items": [
+        {
+          "t": "Kapsam",
+          "d": "Sayfa, akış ve özellik sayısı — fiyatı en çok belirleyen kalem."
+        },
+        {
+          "t": "Tasarım derinliği",
+          "d": "Hazır bileşenler mi, özgün illüstrasyon ve animasyonlar mı? Motion arttıkça süre de artar."
+        },
+        {
+          "t": "İçerik",
+          "d": "Metin ve görselleri siz mi sağlıyorsunuz, biz mi üretiyoruz? İçerik üretimi ayrı bir iş kalemidir."
+        },
+        {
+          "t": "Çok dillilik",
+          "d": "Her ek dil çeviri, düzenleme ve test maliyeti getirir — SEO tarafında hreflang kurulumu dahil."
+        },
+        {
+          "t": "Entegrasyonlar",
+          "d": "Ödeme, CRM, ERP veya üçüncü parti API'ler kapsamı ve test yükünü büyütür."
+        },
+        {
+          "t": "Bakım",
+          "d": "Yayın sonrası destek modeli: içerik güncellemesi, güvenlik ve performans takibi."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Fiyatla ilgili sık sorulanlar",
+      "lead": "Ödeme planı, kapsama neyin dahil olduğu ve maliyet ayrıntıları için SSS sayfamıza göz atın.",
+      "links": {
+        "website-cost": "Web sitesi ne kadar tutar?",
+        "pricing-model": "Fiyatlandırma modeliniz nasıl çalışır?",
+        "whats-included-in-price": "Fiyata neler dahil?",
+        "payment-schedule": "Ödeme planı nasıl işler?",
+        "ecommerce-cost": "E-ticaret sitesi maliyeti ne kadar?"
+      }
+    },
+    "cta": {
+      "eyebrow": "Teklif alın",
+      "title": "Projenizi konuşalım",
+      "desc": "Kapsamı birlikte netleştirelim; genelde 24 saat içinde size özel bir teklifle dönüyoruz.",
+      "button": "İletişime geçin"
+    }
+  },
+  "sectorItems": {
+    "finance": {
+      "title": "Finans & Döviz Web Siteleri",
+      "metaTitle": "Finans ve Döviz Web Sitesi Tasarımı | Piton Studios",
+      "metaDescription": "Döviz büroları, kripto alım-satım merkezleri ve finans şirketleri için canlı kur entegrasyonlu, güven veren, çok dilli kurumsal web siteleri tasarlıyoruz.",
+      "intro": "Döviz büronuz, kripto alım-satım merkeziniz veya finans şirketiniz için güven veren kurumsal web siteleri tasarlıyor ve geliştiriyoruz. Portföyümüzde Halas Exchange için canlı kur bilgili döviz bürosu sitesi ve Arslan Coin Center için kripto alım-satım sitesi gibi KKTC merkezli finans projeleri var. Bu sektörde sitenin işi bilgi vermek kadar güven vermek; tasarımı da bu iki hedefe göre kuruyoruz.",
+      "bullets": {
+        "1": "Canlı kur ve piyasa verisi entegrasyonu — ziyaretçileriniz güncel döviz veya kripto kurlarını doğrudan sitenizde görür, telefonla sormak zorunda kalmaz.",
+        "2": "Güven veren kurumsal tasarım — şube lokasyonları, hizmet kapsamı ve şirket bilgileri şeffaf biçimde sunulur; ilk izlenim ciddiyet ve profesyonellik olur.",
+        "3": "Çok dilli yapı — Türkçe, İngilizce ve Rusça içerikle KKTC'deki yerli ve yabancı müşterilerinize kendi dillerinde ulaşırsınız.",
+        "4": "Hız ve SEO — finans aramalarında bulunabilmeniz için hızlı yüklenen, yerel aramalara optimize edilmiş sayfalar kurarız.",
+        "5": "Gerçek zamanlı veri deneyimi — kendi fintech ürün denememiz Holly Trader ile piyasa verisi toplama, işleme ve raporlama akışlarını uçtan uca kurduk; bu yetkinlik projenize taşınır."
+      },
+      "painTitle": "Finans sitelerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Kurlar sitede elle güncelleniyor ya da hiç yok; müşteri güncel fiyatı öğrenmek için yine telefona sarılıyor.",
+        "2": "Tasarım güven vermiyor — para emanet edilecek bir işletmede eskimiş veya derme çatma bir site, ziyaretçiyi daha kapıdan geri çeviriyor.",
+        "3": "Site tek dilli kalıyor; yabancı müşterinin yoğun olduğu bir pazarda İngilizce ve Rusça bilmeyen bir site potansiyel müşterilerin büyük kısmını dışarıda bırakıyor."
+      },
+      "ctaText": "Finans siteniz için bize yazın — projenizi birlikte planlayalım."
+    },
+    "e-commerce": {
+      "title": "E-Ticaret Web Siteleri",
+      "metaTitle": "E-Ticaret Sitesi Tasarımı ve Geliştirme | Piton Studios",
+      "metaDescription": "Ödeme entegrasyonu, ürün ve stok yönetimi, dönüşüm odaklı tasarım — ambalajdan gıdaya farklı sektörlerde satış yapan e-ticaret siteleri kuruyoruz.",
+      "intro": "Ürünlerinizi online satmanız için ödeme entegrasyonundan ürün ve stok yönetimine uçtan uca e-ticaret siteleri kuruyoruz. Ambalaj Cini için ödeme entegrasyonlu WooCommerce satış platformu, Boon Fresh için taze gıda teslimat sitesi ve Beton Store için yapı malzemeleri mağazası portföyümüzdeki örneklerden. Amacımız vitrin değil satış: sipariş akışı, arama görünürlüğü ve dönüşüm birlikte tasarlanır.",
+      "bullets": {
+        "1": "Güvenli ödeme entegrasyonu — sanal POS ve online ödeme altyapısını Ambalaj Cini'nde olduğu gibi baştan sona kurar, test eder ve devrederiz.",
+        "2": "Ürün, stok ve sipariş yönetimi — kataloğunuzu kendiniz güncelleyebileceğiniz, stok ve sipariş takibi yapan bir yönetim altyapısı kurarız.",
+        "3": "Dönüşüm odaklı tasarım — az adımlı sipariş akışı, mobil öncelikli arayüz ve net ürün sayfalarıyla ziyaretçinin alışverişi tamamlaması kolaylaşır.",
+        "4": "SEO ve organik trafik — ürün ve kategori sayfalarınız arama motorlarında bulunacak şekilde yapılandırılır; satış yalnızca reklama bağımlı kalmaz.",
+        "5": "İhtiyaca göre altyapı — hazır sistemin yettiği yerde WooCommerce, ölçek ve özel ihtiyaç büyüdüğünde Next.js ile özel geliştirme öneririz."
+      },
+      "painTitle": "E-ticarette en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Ziyaretçi geliyor ama sepette bırakıyor — karmaşık sipariş akışı ve yavaş yüklenen sayfalar satışı son adımda bitiriyor.",
+        "2": "Ödeme adımı güven vermiyor ya da seçenekler eksik; müşteri kart bilgisini girmekten vazgeçip alışverişi terk ediyor.",
+        "3": "Ürünler Google'da görünmüyor; satış tamamen reklam bütçesine ve sosyal medya paylaşımlarına bağımlı kalıyor."
+      },
+      "ctaText": "E-ticaret projenizi konuşalım — bize yazın."
+    },
+    "corporate": {
+      "title": "Kurumsal Web Sitesi",
+      "metaTitle": "Kurumsal Web Sitesi Tasarımı ve Geliştirme | Piton Studios",
+      "metaDescription": "Çok dilli, SEO uyumlu ve hızlı kurumsal web siteleri tasarlıyoruz. Asansörden sigortaya, holdingden sağlığa farklı sektörlerde teslim edilmiş projeler.",
+      "intro": "Kurumsal web sitesi, firmanızın dijitaldeki ilk izlenimi ve en görünür referansıdır. BT Elevator'dan Alp Sigorta'ya, Arslan Group holdinginden Dental Health kliniğine kadar farklı sektörlerde kurumsal siteler teslim ettik. Her projede tasarımı, içerik yapısını ve teknik SEO'yu birlikte kurguluyoruz; site yayına girdiğinde hem güven veriyor hem de aramalarda bulunuyor.",
+      "bullets": {
+        "1": "Çok dilli kurumsal kimlik: Türkçe, İngilizce ve Rusça dahil, hedef pazarınıza uygun dil yapısı kuruyoruz.",
+        "2": "Teknik SEO ve schema markup ile firmanızın adıyla ve hizmetleriyle aramalarda üst sıralarda yer almasını hedefliyoruz.",
+        "3": "Hizmet ve ürün kataloğu, teklif formu ve bilgilendirme sayfalarıyla siteyi satış sürecinize bağlıyoruz.",
+        "4": "Mobil uyumlu tasarım ve hızlı yüklenme süreleriyle her cihazda kusursuz bir deneyim sunuyoruz.",
+        "5": "Kolay içerik yönetimi: ekibiniz haberleri, projeleri ve referansları bize bağımlı kalmadan güncelleyebilir."
+      },
+      "painTitle": "Kurumsal sitelerin tıkandığı yerler",
+      "painPoints": {
+        "1": "Yıllar önce yapılmış ve güncellenmeyen bir site, potansiyel müşterinin gözünde firmanızı olduğundan küçük gösterir.",
+        "2": "Tek dilli bir site, yabancı müşterileri ve iş ortaklarını daha ilk adımda kaybettirir.",
+        "3": "Görselliği iyi ama teknik SEO'su zayıf bir site aramalarda çıkmaz; kimsenin bulamadığı vitrin satış getirmez."
+      },
+      "ctaText": "Kurumsal siteniz firmanızı gerçekten temsil etsin — projenizi konuşmak için bize yazın."
+    },
+    "real-estate": {
+      "title": "Emlak Web Sitesi",
+      "metaTitle": "Emlak Web Sitesi ve Portal Tasarımı | Piton Studios",
+      "metaDescription": "Emlak ofisleri için ilan yönetimi, harita entegrasyonu ve çok dilli yapı sunan web siteleri. Kuzey Kıbrıs ve Akdeniz pazarına beş emlak sitesi teslim ettik.",
+      "intro": "Emlak web sitesi, portföyünüzü ilan portallarına bağımlı kalmadan kendi vitrininizden satmanızı sağlar. Pampas Investment, Pinnacle Yatırım, Arslan Estates, Homes in Mediterranean ve Cyprokey ile Kuzey Kıbrıs ve Akdeniz pazarına beş emlak sitesi ve platformu teslim ettik. Kendi ürünümüz Emlak Sync ile de ilanların KKTC portallarıyla otomatik senkronizasyonunu kuruyoruz.",
+      "bullets": {
+        "1": "İlan yönetimi ve gelişmiş filtreleme: mülkler fiyata, bölgeye ve özelliklere göre saniyeler içinde bulunur.",
+        "2": "Harita entegrasyonu ile alıcı, mülkün konumunu ve çevresini sitenizden ayrılmadan inceler.",
+        "3": "Çok dilli yapı: uluslararası yatırımcıya İngilizce ve Rusça dahil kendi dilinde ulaşırsınız.",
+        "4": "Portal senkronizasyonu: Emlak Sync altyapımızla ilan tek yerden girilir, 101evler ve HangiEv gibi portallarda otomatik yayınlanır.",
+        "5": "Yerel ve uluslararası aramalara yönelik SEO ile 'satılık villa', 'Kıbrıs emlak' gibi sorgularda görünürlük kazanırsınız."
+      },
+      "painTitle": "Emlak sektörünün web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Portföyünüz yalnızca ilan portallarında yaşıyorsa marka portalın olur; her alıcı sizi rakip ilanların yanında bulur.",
+        "2": "Aynı ilanı birden fazla platformda elle güncellemek zaman kaybettirir; satılan mülkün ilanı yayında kalmaya devam eder.",
+        "3": "Tek dilli bir site, Kıbrıs pazarının en güçlü alıcı kitlesi olan yabancı yatırımcıyı daha arama aşamasında kaybettirir."
+      },
+      "ctaText": "Portföyünüzü kendi sitenizden satmaya başlayın — emlak projenizi konuşalım."
+    },
+    "transportation": {
+      "title": "Taşımacılık ve Transfer Web Sitesi",
+      "metaTitle": "Transfer ve Taksi Rezervasyon Sitesi | Piton Studios",
+      "metaDescription": "Transfer ve taksi firmaları için online rezervasyon, fiyat hesaplama ve WhatsApp entegrasyonlu web siteleri. Beş rezervasyon odaklı site teslim ettik.",
+      "intro": "Taşımacılık web sitesi, transfer ve taksi rezervasyonlarını telefon trafiğine sıkışmaktan kurtarır. Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi ve Welcome Pickups için beş rezervasyon odaklı site teslim ettik. Rezervasyon akışını, fiyat hesaplamayı ve iletişim kanallarını tek bir deneyimde topluyoruz.",
+      "bullets": {
+        "1": "Online rezervasyon akışı: yolcu güzergâhını ve tarihini seçer, talep saniyeler içinde size ulaşır.",
+        "2": "Rota ve fiyat hesaplama araçlarıyla müşteri aramadan önce net fiyatı görür; pazarlık ve belirsizlik ortadan kalkar.",
+        "3": "WhatsApp ve tek tuşla arama entegrasyonu: hareket halindeki kullanıcı size iki dokunuşla ulaşır.",
+        "4": "Yerel SEO: 'lefkoşa taksi', 'kıbrıs transfer' gibi aramalarda üst sıralar için içerik ve teknik altyapı kuruyoruz.",
+        "5": "Çok dilli ve mobil öncelikli tasarımla havalimanına inen turist, rezervasyonu kendi dilinde tamamlar."
+      },
+      "painTitle": "Taşımacılık sektörünün web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Rezervasyonun tamamen telefona bağlı olması, hattın meşgul olduğu veya talebin gece geldiği her durumda müşteri kaybı demektir.",
+        "2": "Web'de görünmeyen bir transfer firması, havalimanı aramalarındaki müşteriyi komisyonlu aracı platformlara kaptırır.",
+        "3": "Fiyatı ancak telefonla öğrenilebilen hizmet, net fiyat gösteren rakip karşısında güven kaybeder."
+      },
+      "ctaText": "Rezervasyonları telefon hattından web'e taşıyalım — transfer sitenizi konuşmak için bize yazın."
+    }
+  },
+  "sectorsPage": {
+    "eyebrow": "Sektörler",
+    "title": "Sektörünüzü tanıyan bir stüdyo",
+    "subtitle": "Kurumsaldan e-ticarete beş sektörde tekrar tekrar çalıştık; kalıpları, tuzakları ve neyin gerçekten dönüşüm getirdiğini biliyoruz. Sektörünüzü seçin, oradaki işlerimize bakın.",
+    "metaTitle": "Sektörel Web Çözümleri",
+    "metaDescription": "Kurumsal, emlak, ulaşım, finans ve e-ticaret için sektöre özel web tasarımı, uygulama ve otomasyon çözümleri. Sektörünüzdeki projelerimizi inceleyin.",
+    "whatWeDo": "Bu sektörde neler yapıyoruz",
+    "relatedProjects": "İlgili projeler",
+    "relatedServices": "Hizmetler",
+    "relatedFaq": "Sık sorulanlar",
+    "relatedPosts": "Blogdan",
+    "viewAll": "Tümünü gör",
+    "projectCount": "{count} proje",
+    "ctaTitle": "Projeni anlat",
+    "ctaSub": "Sektörünüzü ve hedefinizi yazın; 24 saat içinde somut bir yol haritasıyla dönelim.",
+    "ctaButton": "İletişime geç"
   }
 }

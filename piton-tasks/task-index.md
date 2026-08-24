@@ -9,10 +9,10 @@
 | 2 | Frontend / UI | 6 | 6 | 0 | 0 | 0 |
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
-| 5 | Icerik Uretimi | 21 | 21 | 0 | 0 | 0 |
-| **Total** | | **50** | **50** | **0** | **0** | **0** |
+| 5 | Icerik Uretimi | 22 | 22 | 0 | 0 | 0 |
+| **Total** | | **51** | **51** | **0** | **0** | **0** |
 
-**Progress**: 50/50 (100%) ✓
+**Progress**: 51/51 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -97,6 +97,7 @@
 | TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `a3faf7d` |
 | TASK-050 | Hizmet sayfalarindaki abartili rakamlar portfoye dayandirildi (15 hizmet x 4 rakam x 3 dil; site ici celiski 750+ vs 40+); 3 hizmet kaldirildi (ai-training, ai-chatbot, prompt-engineering) + 301 yonlendirme | L | COMPLETED | `4fa2651`, `00fb701` |
 | TASK-051 | SSS sayfasi: 12 kategori x 75 soru x 3 dil (225 soru-cevap), FAQPage + WebPage(speakable) JSON-LD, `/llms.txt`, 14 AI crawler izni, cevap-once GEO yazimi, native `<details>` (kapaliyken de DOM'da) | L | COMPLETED | — |
+| TASK-052 | Donusum bolumleri: referanslar sahnesi (approved:false onay kilidi, taslak yorumlar), 6 adimlik surec sahnesi, fiyatlandirma sayfasi (TL/euro, 3 dil), hero rakamlar seridi (49+/10+/12/3), 5 sektorel landing + indeks (3 dil), nav + routing + sitemap entegrasyonu | L | COMPLETED | — |
 
 ---
 

@@ -27,6 +27,10 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton Studios."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Transparent starting bands for websites, e-commerce, custom web apps and AI automation: packages from €200, what each includes, and the factors that drive the price."
     }
   },
   "nav": {
@@ -41,7 +45,8 @@
     "home": "Home",
     "contactCta": "Get in Touch",
     "blog": "Blog",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "pricing": "Pricing"
   },
   "blog": {
     "metaTitle": "Blog",
@@ -80,7 +85,26 @@
       "SEO",
       "CLOUD",
       "AUTOMATION"
-    ]
+    ],
+    "statsLabel": "Piton Studios in numbers",
+    "stats": {
+      "projects": {
+        "value": "49+",
+        "label": "Projects Delivered"
+      },
+      "sectors": {
+        "value": "10+",
+        "label": "Industries"
+      },
+      "services": {
+        "value": "12",
+        "label": "Service Areas"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Languages"
+      }
+    }
   },
   "manifesto": {
     "eyebrow": "§ 01 · Note",
@@ -557,7 +581,9 @@
     "contact": "Contact",
     "about": "About",
     "blog": "Blog",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "pricing": "Pricing",
+    "sectors": "Industries"
   },
   "works": {
     "velis-ltd": {
@@ -3025,5 +3051,305 @@
         "Currency is usually settled together based on the client's own accounting practice; for questions of exact tax liability, VAT, or withholding, we strongly and consistently recommend working with your own accountant or legal counsel — that's never been our area of expertise."
       ]
     }
+  },
+  "testimonials": {
+    "eyebrow": "§ 06 · Testimonials",
+    "title": "What our clients {accent}",
+    "titleAccent": "say",
+    "subtitle": "Words from the brands we've worked with — every quote is tied to a real project.",
+    "viewProject": "View project",
+    "prevLabel": "Previous testimonial",
+    "nextLabel": "Next testimonial",
+    "goTo": "Testimonial {index}",
+    "draftBadge": "Draft",
+    "quotes": {
+      "nexos": "Off-the-shelf themes couldn't meet our needs; Piton Studios built us a custom, map-driven, multilingual listing management system from scratch. With automatic PDF and presentation generation from listing data, preparing proposals now takes minutes instead of hours.",
+      "ambalajCini": "They built our e-commerce platform with payment integration and stock tracking included. The site has been running non-stop since 2022, and our online sales grew by 30%.",
+      "sammys": "They designed a warm, guest-first website for our hotel. Thanks to online booking and the multilingual setup, reaching international guests is now much easier.",
+      "radyoJuke": "They developed a custom platform for our live broadcast stream. We deliver an uninterrupted listening experience on mobile and desktop, and the social media integration has grown our audience.",
+      "velis": "They delivered a corporate site with a product catalog and multilingual structure that reflects our 25+ years in the industry. Content management is so easy that our own team handles the updates.",
+      "btElevator": "They launched our multilingual corporate site together with technical SEO work. Our visibility in search engines improved noticeably, and the site fully reflects our corporate identity."
+    }
+  },
+  "processScene": {
+    "eyebrow": "How We Work",
+    "title": "No guesswork — from idea to launch in <accent>six steps</accent>.",
+    "sub": "Every project follows the same flow. At any moment you know which step you're on, what comes next, and what we need from you.",
+    "steps": {
+      "1": {
+        "title": "Discovery & Analysis",
+        "desc": "We map out your needs, goals and competitors together. What gets built rests on a shared understanding, not assumptions."
+      },
+      "2": {
+        "title": "Proposal & Scope",
+        "desc": "You get a written proposal with a clear price range and timeline. What's in scope and what isn't — settled for both of us before signing."
+      },
+      "3": {
+        "title": "Design",
+        "desc": "We move from wireframes to UI step by step. Through approval rounds you see every screen before code is written, and change it while it's cheapest."
+      },
+      "4": {
+        "title": "Development",
+        "desc": "We build with Next.js or WordPress, whichever fits the project. You see a working version every week — progress you can click, not promises."
+      },
+      "5": {
+        "title": "Launch",
+        "desc": "No site goes live without passing SEO and performance checks. After deploy, we verify together that everything is in place."
+      },
+      "6": {
+        "title": "Support & Growth",
+        "desc": "Launch is the start, not the finish. With maintenance, content and data-driven iteration, the site keeps getting better over time."
+      }
+    },
+    "footNote": "Most projects move into design within 1–2 weeks of the first call. Step one is an hour-long conversation — no strings attached.",
+    "cta": "Tell us about your project"
+  },
+  "pricingPage": {
+    "title": "Pricing",
+    "subtitle": "Clear bands, no surprises",
+    "lead": "Every project is different, but we don't hide where we start. The bands below are starting ranges — the exact price is set in a proposal we prepare after learning your needs.",
+    "bandLabel": "starting band",
+    "includesLabel": "What's included",
+    "note": "All figures are starting bands; the exact price is fixed in a proposal prepared after a scoping call where we define the work together. If something falls outside a band, you'll see it in the proposal with the reasoning.",
+    "packages": {
+      "template": {
+        "name": "Template / WordPress site",
+        "price": "€200–€650",
+        "desc": "For brochure sites that need to launch fast: a quality theme adapted to your brand.",
+        "includes": [
+          "Theme selection and brand adaptation",
+          "Content layout for 5–8 pages",
+          "Mobile responsiveness and basic speed optimization",
+          "SEO foundation: titles, meta descriptions, sitemap",
+          "Contact form and basic analytics setup",
+          "Delivery: 2–4 weeks",
+          "1 month of post-launch support"
+        ]
+      },
+      "corporate": {
+        "name": "Custom corporate website",
+        "price": "€800–€2,650",
+        "desc": "A corporate website designed and built from scratch for your brand — no templates.",
+        "includes": [
+          "Original interface design (no templates)",
+          "Custom development on a modern stack (Next.js)",
+          "Comprehensive SEO foundation + structured data",
+          "Multilingual option (e.g. EN/TR/RU)",
+          "Content entry and image optimization",
+          "Delivery: 4–8 weeks",
+          "2 months of post-launch support"
+        ]
+      },
+      "ecommerce": {
+        "name": "E-commerce website",
+        "price": "€900–€4,450",
+        "desc": "End-to-end sales infrastructure, from product management to checkout.",
+        "includes": [
+          "Conversion-focused custom interface design",
+          "Product, cart, checkout and shipping flows",
+          "Payment gateway integration (Stripe, iyzico, etc.)",
+          "SEO foundation + product structured data",
+          "Multilingual and multi-currency options",
+          "Delivery: 6–12 weeks",
+          "2 months of post-launch support"
+        ]
+      },
+      "webapp": {
+        "name": "Custom web application",
+        "price": "€3,350+",
+        "desc": "SaaS, dashboards, booking, CRM — a web application built around your business.",
+        "includes": [
+          "Requirements analysis and technical architecture",
+          "Custom interface and database design",
+          "Roles and permissions, admin panels, workflows",
+          "Third-party API integrations",
+          "Testing, security hardening and deployment",
+          "Delivery: from 8 weeks, depending on scope",
+          "Ongoing maintenance agreement available"
+        ]
+      }
+    },
+    "ai": {
+      "eyebrow": "Separate service",
+      "name": "AI Automation",
+      "price": "~€1,550",
+      "priceLabel": "setup",
+      "desc": "We automate repetitive work — email traffic, reporting, data entry, customer replies — with AI-powered workflows.",
+      "points": [
+        "Process analysis and automation roadmap",
+        "AI-powered workflows: email, reporting, customer replies",
+        "Integration with your existing tools (CRM, spreadsheets, email)",
+        "Team training and rollout",
+        "Post-launch monitoring and fine-tuning"
+      ],
+      "roi": "The ROI logic is simple: at a labor cost of about €5.5/hour, a setup that automates 20 hours of repetitive work per week saves roughly €480 a month — and pays for itself in 3–4 months.",
+      "roiLinkLabel": "Full breakdown:"
+    },
+    "factors": {
+      "title": "What drives the price?",
+      "lead": "When two projects land in the same band but get different prices, the reasons usually come down to these six items.",
+      "items": [
+        {
+          "t": "Scope",
+          "d": "The number of pages, flows and features — the single biggest price driver."
+        },
+        {
+          "t": "Design depth",
+          "d": "Ready-made components, or original illustration and animation? More motion means more time."
+        },
+        {
+          "t": "Content",
+          "d": "Do you provide the copy and imagery, or do we produce it? Content production is a separate line item."
+        },
+        {
+          "t": "Languages",
+          "d": "Each extra language adds translation, editing and testing costs — including hreflang setup on the SEO side."
+        },
+        {
+          "t": "Integrations",
+          "d": "Payments, CRM, ERP or third-party APIs expand both the scope and the testing load."
+        },
+        {
+          "t": "Maintenance",
+          "d": "The post-launch support model: content updates, security and performance monitoring."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Common questions about pricing",
+      "lead": "For payment schedules, what's covered by the price and cost details, see our FAQ page.",
+      "links": {
+        "website-cost": "How much does a website cost?",
+        "pricing-model": "How does your pricing model work?",
+        "whats-included-in-price": "What's included in the price?",
+        "payment-schedule": "How is payment scheduled?",
+        "ecommerce-cost": "How much does an e-commerce site cost?"
+      }
+    },
+    "cta": {
+      "eyebrow": "Get a proposal",
+      "title": "Let's talk about your project",
+      "desc": "We'll scope it together and come back with a tailored proposal — usually within 24 hours.",
+      "button": "Contact us"
+    }
+  },
+  "sectorItems": {
+    "finance": {
+      "title": "Finance & Exchange Websites",
+      "metaTitle": "Finance & Currency Exchange Website Design | Piton Studios",
+      "metaDescription": "We design trustworthy, multilingual corporate websites with live rate integration for currency exchanges, crypto trading centers and finance companies.",
+      "intro": "We design and build trustworthy corporate websites for currency exchanges, crypto trading centers and finance companies. Our portfolio includes the Halas Exchange website with live currency rates and the Arslan Coin Center crypto trading site — both built for finance businesses based in North Cyprus. In this sector a website has to inform and reassure in equal measure, and we design for both.",
+      "bullets": {
+        "1": "Live rate and market data integration — your visitors see current currency or crypto rates directly on your site instead of having to call and ask.",
+        "2": "Corporate design that builds trust — branch locations, service scope and company details presented transparently, so the first impression is one of professionalism.",
+        "3": "Multilingual structure — Turkish, English and Russian content lets you reach both local and international customers in their own language.",
+        "4": "Speed and SEO — fast-loading pages optimized for local search, so your business shows up when people look for finance services.",
+        "5": "Real-time data experience — with our own fintech prototype Holly Trader we built end-to-end market data collection, processing and reporting flows; that expertise carries into your project."
+      },
+      "painTitle": "The problems we see most often on finance websites",
+      "painPoints": {
+        "1": "Rates are updated by hand or missing entirely, so customers still have to phone in to learn the current price.",
+        "2": "The design fails to inspire trust — for a business people entrust money to, a dated or makeshift website turns visitors away at the door.",
+        "3": "The site is single-language; in a market full of international customers, a website without English and Russian shuts out a large share of potential clients."
+      },
+      "ctaText": "Write to us about your finance website — let's plan the project together."
+    },
+    "e-commerce": {
+      "title": "E-commerce Websites",
+      "metaTitle": "E-commerce Website Design & Development | Piton Studios",
+      "metaDescription": "Payment integration, product and stock management, conversion-focused design — we build e-commerce websites for businesses from packaging to fresh food.",
+      "intro": "We build end-to-end e-commerce websites, from payment integration to product and stock management, so you can sell online. Our portfolio includes a WooCommerce store with payment integration for Ambalaj Cini, a fresh food delivery platform for Boon Fresh and a construction materials shop for Beton Store. The goal is not a showcase but sales: order flow, search visibility and conversion are designed together.",
+      "bullets": {
+        "1": "Secure payment integration — we set up, test and hand over the virtual POS and online payment infrastructure end to end, as we did for Ambalaj Cini.",
+        "2": "Product, stock and order management — an admin setup that lets you update your catalog yourself and track stock and orders.",
+        "3": "Conversion-focused design — a short checkout flow, mobile-first interface and clear product pages make it easy for visitors to complete a purchase.",
+        "4": "SEO and organic traffic — product and category pages structured to rank in search engines, so sales don't depend on ads alone.",
+        "5": "Infrastructure to fit the need — WooCommerce where an off-the-shelf system is enough, custom development with Next.js when scale and special requirements grow."
+      },
+      "painTitle": "The problems we see most often in e-commerce",
+      "painPoints": {
+        "1": "Visitors arrive but abandon their carts — a complicated checkout flow and slow pages kill the sale at the last step.",
+        "2": "The payment step feels untrustworthy or offers too few options, so customers give up rather than enter their card details.",
+        "3": "Products don't show up on Google, leaving sales entirely dependent on ad budgets and social media posts."
+      },
+      "ctaText": "Let's talk about your e-commerce project — write to us."
+    },
+    "corporate": {
+      "title": "Corporate Website",
+      "metaTitle": "Corporate Website Design & Development | Piton Studios",
+      "metaDescription": "We design fast, multilingual, SEO-ready corporate websites — with delivered projects across industries from elevators and insurance to holdings and healthcare.",
+      "intro": "A corporate website is your company's first impression online and its most visible reference. We have delivered corporate sites across industries — from BT Elevator and Alp Sigorta to the Arslan Group holding and the Dental Health clinic. In every project we shape design, content structure and technical SEO together, so the site both builds trust and gets found in search.",
+      "bullets": {
+        "1": "Multilingual corporate identity: we build a language structure that fits your target markets, including English, Turkish and Russian.",
+        "2": "Technical SEO and schema markup aimed at ranking high for your company name and services.",
+        "3": "Service and product catalogs, quote forms and information pages that connect the site to your sales process.",
+        "4": "Responsive design and fast load times for a flawless experience on every device.",
+        "5": "Easy content management: your team updates news, projects and references without depending on us."
+      },
+      "painTitle": "Where corporate websites get stuck",
+      "painPoints": {
+        "1": "A site built years ago and never updated makes your company look smaller than it is in a prospect's eyes.",
+        "2": "A single-language site loses international clients and partners at the very first step.",
+        "3": "A site that looks good but is technically weak in SEO never shows up in search — a showcase nobody finds brings no business."
+      },
+      "ctaText": "Make your corporate site truly represent your company — write to us to discuss your project."
+    },
+    "real-estate": {
+      "title": "Real Estate Website",
+      "metaTitle": "Real Estate Website & Portal Design | Piton Studios",
+      "metaDescription": "Real estate websites with listing management, map integration and multilingual structure. Five projects delivered for the North Cyprus and Mediterranean market.",
+      "intro": "A real estate website lets you sell your portfolio from your own showcase instead of depending on listing portals. We have delivered five real estate sites and platforms for the North Cyprus and Mediterranean market: Pampas Investment, Pinnacle Yatırım, Arslan Estates, Homes in Mediterranean and Cyprokey. With our own product, Emlak Sync, we also keep listings automatically synced with North Cyprus portals.",
+      "bullets": {
+        "1": "Listing management with advanced filtering: buyers find properties by price, area and features in seconds.",
+        "2": "Map integration lets buyers explore a property's location and surroundings without leaving your site.",
+        "3": "Multilingual structure: reach international investors in their own language, including English and Russian.",
+        "4": "Portal synchronization: with our Emlak Sync platform, a listing is entered once and published automatically to portals like 101evler and HangiEv.",
+        "5": "SEO for local and international searches, so you show up for queries like 'villa for sale' or 'Cyprus real estate'."
+      },
+      "painTitle": "Where real estate gets stuck online",
+      "painPoints": {
+        "1": "If your portfolio lives only on listing portals, the brand belongs to the portal — and every buyer finds you next to competing listings.",
+        "2": "Updating the same listing on several platforms by hand wastes time and leaves sold properties still advertised.",
+        "3": "A single-language site loses foreign investors — the strongest buyer group in the Cyprus market — before they even inquire."
+      },
+      "ctaText": "Start selling your portfolio from your own website — let's talk about your real estate project."
+    },
+    "transportation": {
+      "title": "Transportation & Transfer Website",
+      "metaTitle": "Transfer & Taxi Booking Website Design | Piton Studios",
+      "metaDescription": "Booking websites for transfer and taxi companies with online reservations, price calculation and WhatsApp integration. Five transportation sites delivered.",
+      "intro": "A transportation website frees your transfer and taxi bookings from the phone line. We have delivered five booking-focused sites for Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi and Welcome Pickups. We bring the booking flow, price calculation and contact channels together in a single experience.",
+      "bullets": {
+        "1": "Online booking flow: passengers pick a route and date, and the request reaches you in seconds.",
+        "2": "Route and price calculators show customers a clear price before they call — no haggling, no uncertainty.",
+        "3": "WhatsApp and one-tap call integration: users on the move reach you in two taps.",
+        "4": "Local SEO: content and technical groundwork to rank for searches like 'Nicosia taxi' or 'Cyprus airport transfer'.",
+        "5": "Multilingual, mobile-first design so a tourist landing at the airport completes the booking in their own language."
+      },
+      "painTitle": "Where transportation gets stuck online",
+      "painPoints": {
+        "1": "When bookings depend entirely on the phone, every call that comes at night or hits a busy line is a lost customer.",
+        "2": "A transfer company invisible on the web loses airport-search customers to commission-based middleman platforms.",
+        "3": "A service whose price can only be learned by phone loses trust against a competitor that shows clear prices."
+      },
+      "ctaText": "Move your bookings from the phone line to the web — write to us about your transfer website."
+    }
+  },
+  "sectorsPage": {
+    "eyebrow": "Industries",
+    "title": "A studio that knows your industry",
+    "subtitle": "From corporate to e-commerce, we have shipped in five industries again and again — we know the patterns, the traps, and what actually converts. Pick your industry and see our work there.",
+    "metaTitle": "Industry Web Solutions",
+    "metaDescription": "Industry-specific web design, application and automation solutions for corporate, real estate, transportation, finance and e-commerce. Explore our projects in your field.",
+    "whatWeDo": "What we do in this industry",
+    "relatedProjects": "Related projects",
+    "relatedServices": "Services",
+    "relatedFaq": "Frequently asked",
+    "relatedPosts": "From the blog",
+    "viewAll": "View all",
+    "projectCount": "{count} projects",
+    "ctaTitle": "Tell us about your project",
+    "ctaSub": "Describe your industry and your goal — we will come back within 24 hours with a concrete roadmap.",
+    "ctaButton": "Get in touch"
   }
 }

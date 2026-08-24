@@ -17,6 +17,8 @@ interface PageShellProps {
 const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
   '/projects': { tr: '/projeler', en: '/projects', ru: '/projects' },
   '/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
+  '/pricing':  { tr: '/fiyatlandirma', en: '/pricing', ru: '/pricing' },
+  '/sectors':  { tr: '/sektorler', en: '/sectors',  ru: '/sectors'  },
   '/blog':     { tr: '/blog',      en: '/blog',     ru: '/blog'     },
   '/faq':      { tr: '/sss',       en: '/faq',      ru: '/faq'      },
   '/about':    { tr: '/hakkinda',  en: '/about',    ru: '/about'    },
@@ -85,6 +87,12 @@ export default function PageShell({ children }: PageShellProps) {
               <span className="dup">{t('services')} ↗</span>
             </span>
           </Link>
+          <Link href="/pricing" className={`item ${isActive('/pricing') ? 'active' : ''}`} data-cursor="hover">
+            <span className="row">
+              <span>{t('pricing')}</span>
+              <span className="dup">{t('pricing')} ↗</span>
+            </span>
+          </Link>
           <Link href="/blog" className={`item ${isActive('/blog') ? 'active' : ''}`} data-cursor="hover">
             <span className="row">
               <span>{t('blog')}</span>
@@ -140,6 +148,7 @@ export default function PageShell({ children }: PageShellProps) {
             {([
               { href: '/projects', label: t('projects') },
               { href: '/services', label: t('services') },
+              { href: '/pricing', label: t('pricing') },
               { href: '/blog', label: t('blog') },
               { href: '/faq', label: t('faq') },
               { href: '/about', label: t('about') },
@@ -184,6 +193,8 @@ export default function PageShell({ children }: PageShellProps) {
           <Link href="/" className="page-footer-link" data-cursor="hover">{t('home')}</Link>
           <Link href="/projects" className="page-footer-link" data-cursor="hover">{t('projects')}</Link>
           <Link href="/services" className="page-footer-link" data-cursor="hover">{t('services')}</Link>
+          <Link href="/pricing" className="page-footer-link" data-cursor="hover">{t('pricing')}</Link>
+          <Link href="/sectors" className="page-footer-link" data-cursor="hover">{t('sectors')}</Link>
           <Link href="/blog" className="page-footer-link" data-cursor="hover">{t('blog')}</Link>
           <Link href="/faq" className="page-footer-link" data-cursor="hover">{t('faq')}</Link>
           <Link href="/about" className="page-footer-link" data-cursor="hover">{t('about')}</Link>

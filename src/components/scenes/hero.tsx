@@ -47,6 +47,16 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
           ))}
         </Stagger>
       </div>
+      <Reveal variant="fadeUp" delay={0.6}>
+        <div className="hero-stats glass" aria-label={t('statsLabel')}>
+          {(['projects', 'sectors', 'services', 'languages'] as const).map((key) => (
+            <div className="hero-stat" key={key}>
+              <span className="hero-stat-value">{t(`stats.${key}.value`)}</span>
+              <span className="hero-stat-label">{t(`stats.${key}.label`)}</span>
+            </div>
+          ))}
+        </div>
+      </Reveal>
     </div>
   );
 }

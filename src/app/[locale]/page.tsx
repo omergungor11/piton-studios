@@ -15,6 +15,8 @@ const NAMESPACES = [
   "servicesList",
   "servicesPage",
   "workScene",
+  "processScene",
+  "testimonials",
   "about",
   "contact",
   "nav",
