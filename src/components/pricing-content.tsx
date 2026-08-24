@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link, getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
-import SnakeBorder from '@/components/snake-border';
 import SparkScene from '@/components/scenes/spark';
 import type { Locale } from '@/lib/site';
 
@@ -140,9 +139,7 @@ export default async function PricingContent({ locale, roiPost }: Props) {
         </div>
       </section>
 
-      <SnakeBorder radius={18}>
-        <SparkScene />
-      </SnakeBorder>
+      <SparkScene />
     </PageShell>
   );
 }
