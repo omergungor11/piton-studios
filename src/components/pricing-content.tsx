@@ -140,7 +140,7 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       </section>
 
       <div className="subpage-spark">
-        <SparkScene />
+        <SparkScene hideStats sub={t('cta.desc')} />
       </div>
     </PageShell>
   );

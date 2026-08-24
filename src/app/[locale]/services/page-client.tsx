@@ -97,7 +97,7 @@ export default function ServicesPageClient() {
       </SnakeBorder>
 
       <div className="subpage-spark">
-        <SparkScene />
+        <SparkScene hideStats sub={t('ctaSub')} />
       </div>
     </PageShell>
   );

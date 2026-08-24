@@ -12,7 +12,12 @@ const STATS = [
   { value: '24h', label: 'Yanıt Süresi'    },
 ];
 
-export default function SparkScene() {
+type SparkSceneProps = {
+  hideStats?: boolean;
+  sub?: string;
+};
+
+export default function SparkScene({ hideStats = false, sub }: SparkSceneProps) {
   const t = useTranslations('spark');
 
   const wpMsg = encodeURIComponent('Merhaba, proje hakkında bilgi almak istiyorum.');
@@ -42,20 +47,21 @@ export default function SparkScene() {
             </h2>
           </Reveal>
           <Reveal variant="fadeUp" delay={0.12}>
-            <p className="spark-sub">{t('sub')}</p>
+            <p className="spark-sub">{sub ?? t('sub')}</p>
           </Reveal>
 
-          {/* Stats row */}
-          <Reveal variant="fadeUp" delay={0.18}>
-            <div className="spark-stats">
-              {STATS.map((s) => (
-                <div key={s.label} className="spark-stat">
-                  <span className="spark-stat-value">{s.value}</span>
-                  <span className="spark-stat-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
+          {!hideStats && (
+            <Reveal variant="fadeUp" delay={0.18}>
+              <div className="spark-stats">
+                {STATS.map((s) => (
+                  <div key={s.label} className="spark-stat">
+                    <span className="spark-stat-value">{s.value}</span>
+                    <span className="spark-stat-label">{s.label}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
         </div>
 
         {/* Right: CTA buttons */}
