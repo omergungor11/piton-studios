@@ -141,7 +141,9 @@ export default function AboutPageClient() {
         <TestimonialsScene />
       </Reveal>
 
-      <SparkScene />
+      <div className="subpage-spark">
+        <SparkScene />
+      </div>
     </PageShell>
   );
 }

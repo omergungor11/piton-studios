@@ -139,7 +139,9 @@ export default async function PricingContent({ locale, roiPost }: Props) {
         </div>
       </section>
 
-      <SparkScene />
+      <div className="subpage-spark">
+        <SparkScene />
+      </div>
     </PageShell>
   );
 }
