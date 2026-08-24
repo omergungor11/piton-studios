@@ -155,9 +155,7 @@ export default function ProjectsPageClient() {
         </div>
       </section>
 
-      <SnakeBorder radius={18}>
-        <SparkScene />
-      </SnakeBorder>
+      <SparkScene />
     </PageShell>
   );
 }

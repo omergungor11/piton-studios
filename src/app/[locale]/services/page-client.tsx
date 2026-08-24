@@ -96,9 +96,7 @@ export default function ServicesPageClient() {
         </section>
       </SnakeBorder>
 
-      <SnakeBorder radius={18}>
-        <SparkScene />
-      </SnakeBorder>
+      <SparkScene />
     </PageShell>
   );
 }

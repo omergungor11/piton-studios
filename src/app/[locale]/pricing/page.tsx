@@ -17,8 +17,8 @@ import PricingContent, { type PricingPostLink } from '@/components/pricing-conte
 /** Bantlar guncellendiginde bu tarihi de guncelleyin — WebPage.dateModified buradan okunur. */
 const PRICING_UPDATED = '2026-08-24';
 
-// PageShell yalnizca `common` namespace'ini kullaniyor; icerik sunucuda cevriliyor.
-const NAMESPACES = ['common'] as const;
+// PageShell `common`, alt CTA ise `spark` namespace'ini kullaniyor.
+const NAMESPACES = ['common', 'spark'] as const;
 
 type Props = { params: Promise<{ locale: string }> };
 

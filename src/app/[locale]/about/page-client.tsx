@@ -141,9 +141,7 @@ export default function AboutPageClient() {
         <TestimonialsScene />
       </Reveal>
 
-      <SnakeBorder radius={18}>
-        <SparkScene />
-      </SnakeBorder>
+      <SparkScene />
     </PageShell>
   );
 }
