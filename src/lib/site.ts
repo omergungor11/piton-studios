@@ -26,9 +26,9 @@ export const SITE = {
   logo: `${SITE_URL}/logo.webp`,
   social: [
     'https://instagram.com/pitonstudios',
-    'https://linkedin.com/company/pitonstudios',
-    'https://github.com/pitonstudios',
-    'https://facebook.com/pitonstudios',
+    'https://www.linkedin.com/company/piton-studios',
+    'https://github.com/omergungor11',
+    'https://www.facebook.com/profile.php?id=100089359021738',
   ],
 } as const;
 
