@@ -3,9 +3,13 @@
 ## 2026-09-05 (23)
 
 ### Changed
-- **Anasayfa proje bulutu 15 → 7 proje** (kullanici karari, performans): fur-crm,
-  pinnacle-yatirim (dikey), nexos-investment, sammys-hotel, radyo-juke (dikey),
-  gel-gez-gor, alp-sigorta. Scroll mesafesi anasayfada 300svh (mobil 400svh)
+- **Proje bulutu kaydirma modeli degisti** — sticky 430svh track kaldirildi; sahne
+  100svh ve sayfa kaydirmasini kilitlemiyor. Ilerleme: imlec kutu uzerindeyken
+  tekerlek (uclarda sayfaya devreder, 450 ms momentum tutma), dokunmatikte yatay
+  kaydirma + kutu gorunurken bosta ping-pong otomatik ilerleme, HUD ok dugmeleri.
+  15 proje geri geldi; kaydirma yalnizca ilk 7'sini one getiriyor (`scrollCount`),
+  kalan 8 helisin arka kollarinda hover/tiklama ile erisilebilir dekor
+- (Ara adim, geri alindi) 15 → 7 proje denemesi; kullanici 15'i tercih etti
 - **Anasayfa proje bulutu diger sahnelerle uyumlu hale getirildi** — sahne artik
   `.glass` kutu icinde (`variant="home"` → `.panel.glass`), ortak aurora/parcacik arka
   plani kutunun arkasindan gorunuyor. Opak stage, gradient backdrop, veil, yildiz alani

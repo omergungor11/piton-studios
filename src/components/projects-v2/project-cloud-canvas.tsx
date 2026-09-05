@@ -29,6 +29,8 @@ interface ProgressRef {
 
 interface ProjectCloudCanvasProps {
   projects: ProjectCloudItem[];
+  /** Kaydirmanin one getirdigi proje sayisi; kalanlar helisin arka kollarinda kalir. */
+  scrollCount?: number;
   activeSlug: string;
   progressRef: ProgressRef;
   onFocus: (slug: string | null) => void;
@@ -42,6 +44,7 @@ interface ProjectMockupProps {
   project: ProjectCloudItem;
   index: number;
   projectCount: number;
+  scrollCount: number;
   compact: boolean;
   isActive: boolean;
   isHovered: boolean;
@@ -63,6 +66,7 @@ function ProjectMockup({
   project,
   index,
   projectCount,
+  scrollCount,
   compact,
   isActive,
   isHovered,
@@ -107,7 +111,8 @@ function ProjectMockup({
 
     // Every card travels along the same two-sided corkscrew. Wrapping happens
     // at the farthest point, behind the visible cloud, so the loop feels endless.
-    const cursor = progressRef.current * Math.max(1, projectCount - 1);
+    // Cursor yalnizca ilk `scrollCount` kart uzerinde gezer; digerleri arka kollarda durur.
+    const cursor = progressRef.current * Math.max(1, scrollCount - 1);
     const halfCount = projectCount / 2;
     const relativeIndex = THREE.MathUtils.euclideanModulo(
       index - cursor + halfCount,
@@ -272,6 +277,7 @@ function ProjectMockup({
 
 function Cloud({
   projects,
+  scrollCount,
   activeSlug,
   progressRef,
   onFocus,
@@ -352,6 +358,7 @@ function Cloud({
           project={project}
           index={index}
           projectCount={projects.length}
+          scrollCount={Math.max(1, Math.min(scrollCount ?? projects.length, projects.length))}
           compact={compact}
           isActive={activeSlug === project.slug}
           isHovered={focusedSlug === project.slug}
@@ -464,6 +471,7 @@ export default function ProjectCloudCanvas(props: ProjectCloudCanvasProps) {
       <Suspense fallback={null}>
         <Cloud
           projects={props.projects}
+          scrollCount={props.scrollCount}
           activeSlug={props.activeSlug}
           progressRef={props.progressRef}
           onFocus={props.onFocus}

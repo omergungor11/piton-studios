@@ -161,7 +161,7 @@
     "intro": "Kaydırdıkça arşiv hareket eder. Bir projeyi yaklaştırmak için seç.",
     "allProjects": "Tüm projeleri gör",
     "interaction": "Kaydır · Üzerine gel · Seç",
-    "touchInteraction": "Kaydır · Dokunarak odakla · Yeniden dokun ve aç",
+    "touchInteraction": "Yana kaydır · Dokunarak odakla · Yeniden dokun ve aç",
     "openProject": "Projeyi aç",
     "loading": "Proje bulutu hazırlanıyor",
     "previousProject": "Önceki proje",
