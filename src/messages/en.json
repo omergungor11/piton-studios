@@ -158,8 +158,8 @@
   },
   "projectCloud": {
     "eyebrow": "§ 04 · Featured Projects",
-    "title": "Selected work, in orbit.",
-    "intro": "Scroll to move through the archive. Select a project to bring it closer.",
+    "title": "A selection of projects we designed and shipped.",
+    "intro": "Scroll over the box to browse the projects; select one for details.",
     "allProjects": "See all projects",
     "interaction": "Scroll · Hover · Select",
     "touchInteraction": "Swipe sideways · Tap to focus · Tap again to open",
