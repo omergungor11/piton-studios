@@ -157,8 +157,8 @@
   },
   "projectCloud": {
     "eyebrow": "§ 04 · Öne Çıkan Projeler",
-    "title": "Seçilmiş işler, yörüngede.",
-    "intro": "Kaydırdıkça arşiv hareket eder. Bir projeyi yaklaştırmak için seç.",
+    "title": "Tasarladığımız ve yayına aldığımız projelerden bir seçki.",
+    "intro": "Kutunun üzerinde kaydırarak projeler arasında gezin; detaylar için bir projeyi seçin.",
     "allProjects": "Tüm projeleri gör",
     "interaction": "Kaydır · Üzerine gel · Seç",
     "touchInteraction": "Yana kaydır · Dokunarak odakla · Yeniden dokun ve aç",
