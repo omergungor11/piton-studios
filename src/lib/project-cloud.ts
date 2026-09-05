@@ -5,24 +5,17 @@ import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-ca
 /**
  * 3B proje bulutunda gosterilen secili projeler. Sira helis uzerindeki sirayi belirler;
  * `format` hangi preview'in (desktop 1440x810 / mobile 430x928) texture olacagini secer.
+ * 2026-09-05: 15 → 7 proje (kullanici karari: daha az texture, daha akici sahne).
  * Tum WORKS'u yuklememek performans butcesinin parcasi (bkz. piton-plans/projects-v2-*).
  */
 export const PROJECT_CLOUD_SELECTION = [
   { slug: 'fur-crm', format: 'landscape' },
   { slug: 'pinnacle-yatirim', format: 'portrait' },
-  { slug: 'gel-gez-gor', format: 'landscape' },
-  { slug: 'sammys-hotel', format: 'portrait' },
   { slug: 'nexos-investment', format: 'landscape' },
-  { slug: 'alp-sigorta', format: 'landscape' },
+  { slug: 'sammys-hotel', format: 'landscape' },
   { slug: 'radyo-juke', format: 'portrait' },
-  { slug: 'velis-ltd', format: 'landscape' },
-  { slug: 'bt-elevator', format: 'landscape' },
-  { slug: 'beton-store', format: 'landscape' },
-  { slug: 'virginia-ice-cream', format: 'landscape' },
-  { slug: 'mindloop', format: 'landscape' },
-  { slug: 'securify', format: 'landscape' },
-  { slug: 'lithos', format: 'landscape' },
-  { slug: 'vanguard', format: 'landscape' },
+  { slug: 'gel-gez-gor', format: 'landscape' },
+  { slug: 'alp-sigorta', format: 'landscape' },
 ] as const;
 
 /** Server tarafinda calisir: secili projeleri locale'e gore cevrilmis bulut kayitlarina donusturur. */

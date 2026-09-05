@@ -121,7 +121,10 @@ function ProjectMockup({
       : 1;
     const verticalScale = compact ? 0.76 : 1;
     const radialBlend = THREE.MathUtils.smoothstep(depth, 0.04, 0.95);
-    const radius = (0.92 + depth * 0.69) * radialBlend;
+    // Az projede (or. 7) bulut seyrek ve kucuk kaliyor: yarıcap ve kart olcegini
+    // sayiya gore hafifce buyut (12+ projede 1.0, 7 projede 1.25).
+    const countBoost = THREE.MathUtils.clamp(1 + (12 - projectCount) * 0.05, 1, 1.3);
+    const radius = (0.92 + depth * 0.69) * radialBlend * countBoost;
     const organicOffset = Math.sin((index + 1) * 2.17) * 0.18 * radialBlend;
     const maxDepth = Math.max(1, halfCount);
     const frontness = Math.pow(THREE.MathUtils.clamp(1 - depth / maxDepth, 0, 1), 1.12);
@@ -143,7 +146,7 @@ function ProjectMockup({
     }
 
     const compactScale = compact ? (isPortrait ? 1.28 : 1.2) : 1;
-    const depthScale = (0.64 + frontness * 0.43) * compactScale;
+    const depthScale = (0.64 + frontness * 0.43) * compactScale * (compact ? 1 : countBoost);
     const focusScale = isHovered ? (compact ? 1.06 : 1.16) : isActive ? 1.035 : 1;
     const scaleTarget = depthScale * focusScale;
     const zTarget = isHovered ? (compact ? 0.22 : 0.52) : isActive ? 0.1 : 0;
