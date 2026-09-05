@@ -3,6 +3,9 @@
 ## 2026-09-05 (23)
 
 ### Changed
+- **Anasayfa proje bulutu 15 → 7 proje** (kullanici karari, performans): fur-crm,
+  pinnacle-yatirim (dikey), nexos-investment, sammys-hotel, radyo-juke (dikey),
+  gel-gez-gor, alp-sigorta. Scroll mesafesi anasayfada 300svh (mobil 400svh)
 - **Anasayfa proje bulutu diger sahnelerle uyumlu hale getirildi** — sahne artik
   `.glass` kutu icinde (`variant="home"` → `.panel.glass`), ortak aurora/parcacik arka
   plani kutunun arkasindan gorunuyor. Opak stage, gradient backdrop, veil, yildiz alani

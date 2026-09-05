@@ -13,7 +13,8 @@
   --cloud-hud-offset: 58px;
 }
 
-.trackFallback {
+.trackFallback,
+.trackHome.trackFallback {
   height: 100svh;
 }
 
@@ -574,6 +575,8 @@
 .trackHome {
   --cloud-hud-offset: 0px;
   --cloud-frame-top: 100px;
+  /* 7 proje: kart basina ~45svh scroll; 15'lik 430svh burada fazla uzun kaliyordu */
+  height: 300svh;
   --cloud-frame-bottom: 90px;
   --cloud-frame-x: 40px;
 }
@@ -725,6 +728,8 @@
 }
 
 @media (max-width: 767px), (max-height: 519px) {
+  .trackHome:not(.trackFallback) { height: 400svh; }
+
   .trackHome {
     --cloud-frame-top: 78px;
     --cloud-frame-bottom: calc(82px + env(safe-area-inset-bottom));
