@@ -44,11 +44,12 @@ html, body {
   transition: color 400ms ease;
   font-weight: 400;
 }
-body { min-height: 100vh; overflow-x: hidden; cursor: none; }
+body { min-height: 100vh; overflow-x: clip; cursor: none; }
 /* Ekran disina konumlanan mobil menu paneli (translateX(110%)) ve dekoratif aurora
    bloblari belge genisligini uzatiyor, mobilde yatay kaydirma aciliyordu.
-   `clip` — `hidden`in aksine kaydirma konteyneri olusturmaz; sitede sticky yok. */
-html { overflow-x: clip; }
+   `clip` — `hidden`in aksine kaydirma konteyneri olusturmaz ve tam ekran sticky
+   deneyimlerin body scroll'u boyunca sabit kalmasini saglar. */
+html { position: relative; overflow-x: clip; }
 @media (pointer: coarse) {
   body { cursor: auto; }
   .cursor-dot, .cursor-ring { display: none !important; }
@@ -753,6 +754,10 @@ html[data-theme="light"] .socials a:hover { background: rgba(0,0,0,0.06); }
 
 #stories .inner { width: min(1400px, 100%); }
 #services .inner { width: min(1400px, 100%); }
+
+/* Projeler sahnesi: tam genislik 3B proje bulutu (project-cloud-section). .inner
+   sarmalayicisi yok — reveal transform'u sticky sahneyi bozmasin, padding sifir. */
+.scene.scene--cloud { display: block; min-height: 0; padding: 0; }
 
 /* Scene 01 — Hero */
 .hero-stack {

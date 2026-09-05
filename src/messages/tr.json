@@ -155,6 +155,19 @@
     "role": "Rol",
     "cta": "Projeyi İncele"
   },
+  "projectCloud": {
+    "eyebrow": "§ 04 · Öne Çıkan Projeler",
+    "title": "Seçilmiş işler, yörüngede.",
+    "intro": "Kaydırdıkça arşiv hareket eder. Bir projeyi yaklaştırmak için seç.",
+    "allProjects": "Tüm projeleri gör",
+    "interaction": "Kaydır · Üzerine gel · Seç",
+    "touchInteraction": "Kaydır · Dokunarak odakla · Yeniden dokun ve aç",
+    "openProject": "Projeyi aç",
+    "loading": "Proje bulutu hazırlanıyor",
+    "previousProject": "Önceki proje",
+    "nextProject": "Sonraki proje",
+    "fallbackHint": "Projeleri yatay kaydırarak keşfet"
+  },
   "about": {
     "eyebrow": "§ 05 · Hakkında",
     "heading": "Dijital {accent} tasarlıyoruz ve geliştiriyoruz.",

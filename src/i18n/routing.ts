@@ -11,6 +11,11 @@ export const routing = defineRouting({
       en: '/projects',
       ru: '/projects',
     },
+    '/projects-v2': {
+      tr: '/projeler-v2',
+      en: '/projects-v2',
+      ru: '/projects-v2',
+    },
     '/projects/[slug]': {
       tr: '/projeler/[slug]',
       en: '/projects/[slug]',

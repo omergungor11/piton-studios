@@ -1,0 +1,18 @@
+/* Ic sayfa PageShell'inin ust/alt bosluklarindan tasip tam ekran sahneye yer acar. */
+.breakout {
+  position: relative;
+  width: 100vw;
+  margin-top: -120px;
+  margin-bottom: -60px;
+  margin-left: calc(50% - 50vw);
+}
+
+@media (max-width: 1000px) {
+  .breakout {
+    width: auto;
+    margin-top: -100px;
+    margin-right: -16px;
+    margin-bottom: -40px;
+    margin-left: -16px;
+  }
+}

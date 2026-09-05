@@ -12,6 +12,8 @@ import PartnerBadges from '@/components/partner-badges';
 
 interface PageShellProps {
   children: React.ReactNode;
+  /** Tam ekran deneyimlerde rekabet eden GPU efektlerini ve sabit aksiyonlari kapatir. */
+  immersive?: boolean;
 }
 
 const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
@@ -25,7 +27,7 @@ const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
   '/contact':  { tr: '/iletisim',  en: '/contact',  ru: '/contact'  },
 };
 
-export default function PageShell({ children }: PageShellProps) {
+export default function PageShell({ children, immersive = false }: PageShellProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -52,7 +54,9 @@ export default function PageShell({ children }: PageShellProps) {
     } else {
       document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [menuOpen]);
 
   const isActive = (canonical: string) => {
@@ -65,7 +69,7 @@ export default function PageShell({ children }: PageShellProps) {
       <div className="grain" />
       {/* Ic sayfalar da anasayfanin arka planini kullaniyor — duz renk yerine aurora */}
       <BgStage />
-      <FloatingGlass />
+      {!immersive ? <FloatingGlass /> : null}
       <Cursor />
 
       <header className="chrome">
@@ -201,7 +205,7 @@ export default function PageShell({ children }: PageShellProps) {
           <Link href="/contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
         </nav>
       </footer>
-      <FloatingActions />
+      {!immersive ? <FloatingActions /> : null}
     </>
   );
 }

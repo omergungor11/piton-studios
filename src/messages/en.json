@@ -156,6 +156,19 @@
     "role": "Role",
     "cta": "View Project"
   },
+  "projectCloud": {
+    "eyebrow": "§ 04 · Featured Projects",
+    "title": "Selected work, in orbit.",
+    "intro": "Scroll to move through the archive. Select a project to bring it closer.",
+    "allProjects": "See all projects",
+    "interaction": "Scroll · Hover · Select",
+    "touchInteraction": "Scroll · Tap to focus · Tap again to open",
+    "openProject": "Open project",
+    "loading": "Preparing the project cloud",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
+    "fallbackHint": "Swipe horizontally to explore the projects"
+  },
   "about": {
     "eyebrow": "§ 05 · About",
     "heading": "We design and develop digital {accent}.",

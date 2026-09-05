@@ -1,5 +1,61 @@
 # Changelog
 
+## 2026-09-04 (22)
+
+### Changed
+- **Anasayfa "Öne Çıkan Projeler" sahnesi 3B proje bulutuna gecti** — 6 projelik
+  slider (`scenes/works.tsx`) yerine Projects V2 deneyimi (`project-cloud-section.tsx`,
+  15 proje, scroll-driven helis, HUD, HTML fallback) anasayfada canli. Sahne `.inner`
+  sarmalayicisiz `.scene--cloud` olarak render ediliyor; HUD/ipucu alt chrome ile
+  cakismasin diye `--cloud-hud-offset` ile yukari alindi; "Tüm projeleri gör" baglantisi
+  (masaustu) eklendi
+- V2 sayfa bileseni ortak `ProjectCloudSection`'a ayrildi; secim listesi ve server veri
+  yardimcisi `src/lib/project-cloud.ts`, metinler `messages/*.json` → `projectCloud`
+  (3 dil). `/projeler-v2` dev-only tam sayfa prototip olarak kaldi
+- Anasayfa aktif sahne takibi: ekran ortasini kapsayan sahne oncelikli (430svh sticky
+  sahnede merkez-mesafe olcumu komsu sahneyi seciyordu)
+- `home-client.tsx`: kullanilmayan `PreviewCard`/`preview` state'i kaldirildi
+
+### Fixed
+- Anasayfa `.scene` icinde proje bulutu `section`'i 0px genislik aliyordu (stage/canvas
+  gorunmuyordu) — `.track { width: 100% }`
+
+## 2026-09-04 (21)
+
+### Added
+- **Projects V2 yerel 3B portfolyo prototipi** — `/tr/projeler-v2`. Gercek proje
+  preview'larindan secilen 15 mockup, scroll boyunca iki kollu bir helis uzerinde
+  donerek sirayla foreground/odaga geliyor; hover karti yaklastiriyor, diger katmanlari
+  sakinlestiriyor ve proje kunyesini guncelliyor
+- Teknik HTML HUD: aktif proje, disiplin, yil, 01/15 sayaci, onceki/sonraki odak
+  kontrolleri, proje detayina baglanti ve scroll ilerlemesi
+- WebGL2 destekli mobilde sabit `2x` DPR, antialias, yuksek hassasiyetli render, sade
+  atmosfer ve kompakt kamera/helis profiliyle net 3B spiral; ilk dokunusta proje
+  odagi, ayni projeye ikinci dokunusta detay sayfasina gecis
+- `prefers-reduced-motion`, Save-Data, WebGL2 yoklugu veya WebGL context kaybinda
+  15 kartlik erisilebilir yatay HTML/CSS fallback
+- Mevcut `public/assets/previews/` bankasindan 12 adet 1440x810 masaustu ve 3 adet
+  430x928 mobil WebP texture (toplam yaklasik 874 KiB transfer)
+- Detayli tasarim, performans, erisilebilirlik ve yayin plani:
+  `piton-plans/projects-v2-interactive-portfolio-plan.md`
+
+### Local-only guvenceler
+- Sayfa nav ve sitemap'e eklenmedi; `noindex, nofollow` metadata kullaniyor
+- `NODE_ENV !== development` durumunda 404. Production build ve HTTP smoke testinde
+  `/tr/projeler-v2` 404, mevcut `/tr/projeler` 200 dogrulandi
+- TypeScript ve production build temiz; ESLint 0 hata (repoda mevcut 18 uyari)
+- Masaustu spiral akisi %0/%30/%60 kesitlerinde, proje oklarinin scroll senkronu;
+  390x844 ve 430x932 portre mobil profilleri ile kisa-yatay telefon profili yerel
+  tarayicida dogrulandi
+
+### Changed
+- Mobil kalite geri bildirimi sonrasi dusuk cozunurluklu V2 kopyalari yerine mevcut
+  yuksek cozunurluklu preview'lar kullaniliyor; scroll sirasinda mobil DPR dusurme
+  kapatildi, antialias ve anisotropic filtering acildi
+- Global yatay tasma `overflow-x: hidden` yerine `clip` ile kesiliyor; boylece body
+  dikey scroll container'a donusmuyor ve tam ekran sticky sahne kaydirma boyunca sabit
+  kaliyor. Mobil menu acikkenki scroll kilidi aynen korunuyor
+
 ## 2026-08-24 (20)
 
 ### Changed (ayni gun revizyon)
