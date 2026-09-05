@@ -107,7 +107,7 @@
     }
   },
   "manifesto": {
-    "eyebrow": "§ 01 · Note",
+    "eyebrow": "§ 02 · Note",
     "title": "Why {accent}?",
     "titleAccent": "Piton Studios",
     "subtitle": "We're with you at every step — from idea to launch, design to code. Digital solutions that grow your business; one team, clear results.",
@@ -157,7 +157,7 @@
     "cta": "View Project"
   },
   "projectCloud": {
-    "eyebrow": "§ 04 · Featured Projects",
+    "eyebrow": "§ 01 · Featured Projects",
     "title": "A selection of projects we designed and shipped.",
     "intro": "Scroll over the box to browse the projects; select one for details.",
     "allProjects": "See all projects",

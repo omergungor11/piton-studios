@@ -106,7 +106,7 @@
     }
   },
   "manifesto": {
-    "eyebrow": "§ 01 · Not",
+    "eyebrow": "§ 02 · Not",
     "title": "Neden {accent}?",
     "titleAccent": "Piton Studios",
     "subtitle": "Projenizin her adımında yanınızdayız — fikirden yayına, tasarımdan koda kadar. İşinizi büyüten dijital çözümler; tek ekip, net sonuç.",
@@ -156,7 +156,7 @@
     "cta": "Projeyi İncele"
   },
   "projectCloud": {
-    "eyebrow": "§ 04 · Öne Çıkan Projeler",
+    "eyebrow": "§ 01 · Öne Çıkan Projeler",
     "title": "Tasarladığımız ve yayına aldığımız projelerden bir seçki.",
     "intro": "Kutunun üzerinde kaydırarak projeler arasında gezin; detaylar için bir projeyi seçin.",
     "allProjects": "Tüm projeleri gör",
