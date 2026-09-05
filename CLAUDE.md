@@ -36,7 +36,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Process → Projects → About → Contact (8 scene)
 - **Anasayfa Projeler sahnesi = 3B proje bulutu** (2026-09-04): `src/components/projects-v2/project-cloud-section.tsx`
-  (React Three Fiber, scroll-driven helis, 7 secili proje — 2026-09-05'te 15'ten indirildi). Secim listesi + server veri yardimcisi
+  (React Three Fiber, 15 proje, ilk 7'si tekerlek/yatay dokunma ile one gelir; sayfa kaydirmasini kilitlemez). Secim listesi + server veri yardimcisi
   `src/lib/project-cloud.ts`, metinler `messages/*.json` → `projectCloud`. Sahne `.scene--cloud`
   ile `.inner` sarmalayicisiz render edilir (sticky stage reveal transform'undan etkilenmesin).
   Eski slider `scenes/works.tsx` artik kullanilmiyor (yalnizca `PreviewCard` export'u duruyor).
