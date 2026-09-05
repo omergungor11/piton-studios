@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-05 (24)
+
+### Fixed
+- **Anasayfa proje bulutunda mobil dikey scroll tekrar projeleri degistiriyor** —
+  `ProjectCloudSection` anasayfa mobil varyantinda `320svh` track + sticky stage
+  kullaniyor; bolum scroll ilerlemesi ilk 7 proje indeksine baglandi. Mobilde wheel,
+  yatay swipe ve otomatik ilerleme bu akisa karismiyor; HUD ok dugmeleri ilgili scroll
+  konumuna gidiyor. Masaustu kutu-uzeri wheel modeli degismedi
+- **Hero Automation rozeti mobilde diger rozetlere binmiyor** — motion sarmalayicilari
+  gercek flex yuksekligi aliyor, rozetler `inline-flex` ve mobil satir araligi `12px`
+
+### Changed
+- Mobil "Fikrinizi & Projenizi Konusalim" sahnesinde `24h Yanit Suresi` gizlendi;
+  yalnizca `40+ Tamamlanan Proje` ve `5+ Yillik Deneyim` metrikleri kaldi
+- Proje bulutunun dokunmatik yardim metni yatay swipe yerine genel scroll davranisini
+  anlatiyor (TR/EN/RU)
+
 ## 2026-09-05 (23)
 
 ### Changed

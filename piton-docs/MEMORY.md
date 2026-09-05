@@ -24,10 +24,12 @@
   dokunulmadi (nav/sitemap'te yok).
 - Anasayfa `.scene` blok konteynerinde `section` 0px genislik olcuyordu — `.track`
   `width: 100%` zorunlu; kaldirmayin.
-- 2026-09-05 (2): sticky/uzun scroll track kaldirildi. Sahne 100svh; tekerlek yalnizca
-  kutu uzerindeyken ilerletir ve uclarda sayfaya devreder; dokunmatikte yatay kaydirma +
-  otomatik ilerleme. 15 kart gorunur, `scrollCount=7` one gelir. Kullanici 7 kartli
-  denemeyi begenmedi — 15 kalacak.
+- 2026-09-05 (2): masaustunde sticky/uzun scroll track kaldirildi. Sahne 100svh;
+  tekerlek yalnizca kutu uzerindeyken ilerletir ve uclarda sayfaya devreder. Mobil
+  anasayfa varyantinda sonraki duzeltmeyle `320svh` track + sticky stage geri geldi;
+  dikey sayfa scroll'u ilk 7 projenin odagini degistiriyor. Tam sayfa V2 dokunmatik
+  varyanti yatay kaydirma + otomatik ilerlemeyi koruyor. 15 kart gorunur,
+  `scrollCount=7` one gelir. Kullanici 7 kartli denemeyi begenmedi — 15 kalacak.
 - 2026-09-05: sahne `.glass` kutuya alindi (`.trackHome .panel`), stage padding'i
   (`--cloud-frame-top/bottom/x`) chrome'a yer birakiyor; HUD offset artik 0. Tam sayfa
   `/projeler-v2` varyanti eski full-bleed gorunumunu koruyor.

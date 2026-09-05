@@ -54,7 +54,7 @@ export default function SparkScene({ hideStats = false, sub }: SparkSceneProps) 
             <Reveal variant="fadeUp" delay={0.18}>
               <div className="spark-stats">
                 {STATS.map((s) => (
-                  <div key={s.label} className="spark-stat">
+                  <div key={s.label} className={`spark-stat ${s.value === '24h' ? 'spark-stat-response' : ''}`}>
                     <span className="spark-stat-value">{s.value}</span>
                     <span className="spark-stat-label">{s.label}</span>
                   </div>

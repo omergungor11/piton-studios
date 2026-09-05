@@ -6,8 +6,8 @@
   width: 100%;
 }
 
-/* Sahne sayfa kaydirmasini kilitlemez: ilerleme kutu uzerindeki tekerlek / yatay
-   dokunma / HUD dugmeleriyle surulur (bkz. project-cloud-section.tsx). */
+/* Masaustunde ilerleme kutu uzerindeki tekerlek ve HUD ile surulur. Anasayfa mobil
+   varyanti asagidaki media query'de sticky track kullanarak dikey scroll'a baglanir. */
 .stage {
   --v2-progress: 0;
   position: relative;
@@ -756,6 +756,17 @@
   .trackHome .fallbackRail {
     margin-left: 12px;
     margin-right: 12px;
+  }
+}
+
+@media (max-width: 767px), (max-height: 519px) and (pointer: coarse) {
+  .trackHome:not(.trackFallback) {
+    height: 320svh;
+  }
+
+  .trackHome .stage {
+    position: sticky;
+    top: 0;
   }
 }
 
