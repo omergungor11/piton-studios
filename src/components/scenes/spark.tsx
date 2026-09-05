@@ -7,10 +7,10 @@ const WP_NUMBER = '905439500750';
 const EMAIL     = 'hi@pitonstudios.com';
 
 const STATS = [
-  { value: '40+', label: 'Tamamlanan Proje' },
-  { value: '5+',  label: 'Yıllık Deneyim'  },
-  { value: '24h', label: 'Yanıt Süresi'    },
-];
+  { value: '40+', labelKey: 'completedProjects' },
+  { value: '5+',  labelKey: 'yearsExperience'  },
+  { value: '24h', labelKey: 'responseTime'     },
+] as const;
 
 type SparkSceneProps = {
   hideStats?: boolean;
@@ -54,9 +54,9 @@ export default function SparkScene({ hideStats = false, sub }: SparkSceneProps) 
             <Reveal variant="fadeUp" delay={0.18}>
               <div className="spark-stats">
                 {STATS.map((s) => (
-                  <div key={s.label} className={`spark-stat ${s.value === '24h' ? 'spark-stat-response' : ''}`}>
+                  <div key={s.labelKey} className={`spark-stat ${s.value === '24h' ? 'spark-stat-response' : ''}`}>
                     <span className="spark-stat-value">{s.value}</span>
-                    <span className="spark-stat-label">{s.label}</span>
+                    <span className="spark-stat-label">{t(`stats.${s.labelKey}`)}</span>
                   </div>
                 ))}
               </div>

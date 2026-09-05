@@ -83,7 +83,7 @@
       "AI",
       "SEO",
       "CLOUD",
-      "AUTOMATION"
+      "OTOMASYON"
     ],
     "statsLabel": "Rakamlarla Piton Studios",
     "stats": {
@@ -273,6 +273,11 @@
     "eyebrow": "Ücretsiz Danışma · Hızlı Yanıt",
     "title": "Fikrinizi & Projenizi <accent>Konuşalım</accent>",
     "sub": "AI destekli ürünler, akıllı otomasyon ve modern dijital deneyimler tasarlıyoruz — ne inşa etmek istediğinizi anlatın, birlikte hayata geçirelim.",
+    "stats": {
+      "completedProjects": "Tamamlanan Proje",
+      "yearsExperience": "Yıllık Deneyim",
+      "responseTime": "Yanıt Süresi"
+    },
     "wpBtn": "WhatsApp'tan Yazın",
     "emailBtn": "E-posta Gönderin",
     "note": "Mesajınız genellikle birkaç saat içinde yanıtlanır."
