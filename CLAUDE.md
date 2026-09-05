@@ -34,7 +34,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **49 proje** WORKS array'inde — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
-- **Anasayfa**: Hero → Spark CTA → Manifesto → Services → Process → Projects → About → Contact (8 scene)
+- **Anasayfa**: Hero → Spark CTA → Projects → Manifesto (Neden Piton Studios) → Services → Process → About → Contact (8 scene; 2026-09-05'te Projects one alindi)
 - **Anasayfa Projeler sahnesi = 3B proje bulutu** (2026-09-04): `src/components/projects-v2/project-cloud-section.tsx`
   (React Three Fiber, 15 proje, ilk 7'si tekerlek/yatay dokunma ile one gelir; sayfa kaydirmasini kilitlemez). Secim listesi + server veri yardimcisi
   `src/lib/project-cloud.ts`, metinler `messages/*.json` → `projectCloud`. Sahne `.scene--cloud`

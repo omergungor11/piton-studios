@@ -1565,10 +1565,10 @@ export const MANIFESTO =
 export const SCENES: Scene[] = [
   { id: "hero",  label: "Ana Sayfa",    hash: "hero"  },
   { id: "spark", label: "Hemen Başla",  hash: "spark" },
+  { id: "work", label: "Projeler", hash: "projects" },
   { id: "note",  label: "Hakkımızda",   hash: "note"  },
   { id: "services", label: "Hizmetler", hash: "services" },
   { id: "process", label: "Süreç", hash: "process" },
-  { id: "work", label: "Projeler", hash: "projects" },
   { id: "about", label: "Biz", hash: "about" },
   { id: "contact", label: "İletişim", hash: "contact" },
 ];
