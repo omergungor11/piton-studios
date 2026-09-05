@@ -162,7 +162,7 @@
     "intro": "Scroll over the box to browse the projects; select one for details.",
     "allProjects": "See all projects",
     "interaction": "Scroll · Hover · Select",
-    "touchInteraction": "Swipe sideways · Tap to focus · Tap again to open",
+    "touchInteraction": "Scroll · Tap to focus · Tap again to open",
     "openProject": "Open project",
     "loading": "Preparing the project cloud",
     "previousProject": "Previous project",

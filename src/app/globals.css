@@ -809,7 +809,11 @@ html[data-theme="light"] .socials a:hover { background: rgba(0,0,0,0.06); }
   display: flex; flex-wrap: wrap; gap: 10px;
   justify-content: center;
 }
+.hero-main .row-foot > * { display: flex; }
 .chip {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 12px;
@@ -2204,6 +2208,7 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   .spark-grid { grid-template-columns: 1fr; gap: 32px; }
   .spark-right { min-width: unset; }
   .spark-glass { padding: 44px 32px; }
+  .spark-stat-response { display: none; }
 }
 @media (max-width: 480px) {
   .spark-glass { padding: 36px 20px; gap: 28px; }
@@ -4694,7 +4699,7 @@ html[data-theme="light"] .mobile-menu-item:active {
   .hero-main { padding: 24px 20px; border-radius: 20px; }
   .hero-main h1 { font-size: clamp(36px, 10vw, 60px); line-height: 1.08; }
   .hero-main .sub { font-size: 13px; letter-spacing: 0; font-family: var(--font-sans); font-weight: 500; }
-  .hero-main .row-foot { gap: 8px; }
+  .hero-main .row-foot { column-gap: 8px; row-gap: 12px; }
   .hero-main .row-foot .chip { padding: 6px 10px; font-size: 11px; }
 
   /* Works */

@@ -10,7 +10,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { useMotionValue, useMotionValueEvent, useSpring } from 'framer-motion';
+import { useMotionValue, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';
@@ -33,6 +33,7 @@ const EDGE_HOLD_MS = 450;
 /** Dokunmatik: otomatik ilerleme araligi ve kullanici etkilesiminden sonra bekleme. */
 const AUTO_ADVANCE_MS = 3600;
 const AUTO_IDLE_MS = 6000;
+const MOBILE_SCROLL_QUERY = '(max-width: 767px), (max-height: 519px) and (pointer: coarse)';
 
 export interface ProjectCloudSectionProps {
   projects: ProjectCloudItem[];
@@ -140,8 +141,8 @@ function ProjectFallback({ hint, projects, onFocus }: ProjectFallbackProps) {
  * Sahne sayfa kaydirmasini kilitlemez. Ilerleme uc kaynaktan gelir:
  * - Masaustu: imlec kutunun uzerindeyken tekerlek; uclara (0/1) gelince olay sayfaya
  *   devredilir, boylece ziyaretci asagi/yukari inmeye devam eder.
- * - Dokunmatik: kutu uzerinde yatay kaydirma (dikey kaydirma sayfaya kalir) ve
- *   etkilesim yokken kutu gorunurken yavas otomatik ilerleme.
+ * - Anasayfa mobil: bolum sticky kalirken dikey sayfa kaydirmasi ilerlemeyi surer.
+ * - Tam sayfa dokunmatik: yatay kaydirma ve etkilesim yokken otomatik ilerleme.
  * - HUD onceki/sonraki dugmeleri (klavye dahil).
  */
 export default function ProjectCloudSection({
@@ -153,6 +154,7 @@ export default function ProjectCloudSection({
 }: ProjectCloudSectionProps) {
   const t = useTranslations('projectCloud');
   const router = useRouter();
+  const trackRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef(0);
@@ -164,6 +166,7 @@ export default function ProjectCloudSection({
   const [mode, setMode] = useState<ExperienceMode>('checking');
   const [activeSlug, setActiveSlug] = useState(projects[0]?.slug ?? '');
   const [scrollIndex, setScrollIndex] = useState(0);
+  const [mobileScrollEnabled, setMobileScrollEnabled] = useState(false);
 
   const scrollCount = Math.max(1, Math.min(scrollCountProp, projects.length));
   const scrollSteps = Math.max(1, scrollCount - 1);
@@ -176,6 +179,10 @@ export default function ProjectCloudSection({
     stiffness: 105,
     damping: 28,
     mass: 0.35,
+  });
+  const { scrollYProgress: sectionScrollProgress } = useScroll({
+    target: trackRef,
+    offset: ['start start', 'end end'],
   });
 
   useEffect(() => {
@@ -190,6 +197,26 @@ export default function ProjectCloudSection({
       reducedMotionQuery.removeEventListener('change', evaluate);
     };
   }, []);
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE_SCROLL_QUERY);
+    const sync = () => setMobileScrollEnabled(query.matches);
+    sync();
+    query.addEventListener('change', sync);
+    return () => query.removeEventListener('change', sync);
+  }, []);
+
+  useEffect(() => {
+    if (!isHome || !mobileScrollEnabled || mode !== 'webgl') return;
+    targetProgress.set(sectionScrollProgress.get());
+  }, [isHome, mobileScrollEnabled, mode, sectionScrollProgress, targetProgress]);
+
+  useMotionValueEvent(sectionScrollProgress, 'change', (latest) => {
+    if (!isHome || !mobileScrollEnabled || mode !== 'webgl') return;
+    isHoveringRef.current = false;
+    lastInteractionRef.current = Date.now();
+    targetProgress.set(latest);
+  });
 
   useMotionValueEvent(smoothProgress, 'change', (latest) => {
     progressRef.current = latest;
@@ -217,6 +244,7 @@ export default function ProjectCloudSection({
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel || mode !== 'webgl') return;
+    if (isHome && mobileScrollEnabled) return;
 
     const onWheel = (event: WheelEvent) => {
       const delta = event.deltaMode === 1 ? event.deltaY * 16 : event.deltaY;
@@ -240,12 +268,13 @@ export default function ProjectCloudSection({
 
     panel.addEventListener('wheel', onWheel, { passive: false });
     return () => panel.removeEventListener('wheel', onWheel);
-  }, [mode, scrollSteps, setProgress, targetProgress]);
+  }, [isHome, mobileScrollEnabled, mode, scrollSteps, setProgress, targetProgress]);
 
   // Dokunmatik: yatay kaydirma ilerletir (dikey kaydirma sayfaya kalir).
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel || mode !== 'webgl') return;
+    if (isHome && mobileScrollEnabled) return;
 
     let startX = 0;
     let startY = 0;
@@ -284,7 +313,7 @@ export default function ProjectCloudSection({
       panel.removeEventListener('touchstart', onTouchStart);
       panel.removeEventListener('touchmove', onTouchMove);
     };
-  }, [mode, scrollSteps, setProgress, targetProgress]);
+  }, [isHome, mobileScrollEnabled, mode, scrollSteps, setProgress, targetProgress]);
 
   // Dokunmatik cihazlarda kutu gorunurken ve kullanici bir sure dokunmadiysa
   // ping-pong otomatik ilerleme — kaydirma kilidi olmadan sahne canli kalir.
@@ -292,6 +321,7 @@ export default function ProjectCloudSection({
     const stage = stageRef.current;
     if (!stage || mode !== 'webgl' || scrollSteps < 1) return;
     if (!window.matchMedia('(pointer: coarse)').matches) return;
+    if (isHome && mobileScrollEnabled) return;
 
     let visible = false;
     let direction = 1;
@@ -314,7 +344,7 @@ export default function ProjectCloudSection({
       observer.disconnect();
       window.clearInterval(timer);
     };
-  }, [mode, scrollSteps, targetProgress]);
+  }, [isHome, mobileScrollEnabled, mode, scrollSteps, targetProgress]);
 
   const activeIndex = Math.max(0, projects.findIndex((project) => project.slug === activeSlug));
   const activeProject = projects[activeIndex] ?? projects[0];
@@ -335,6 +365,18 @@ export default function ProjectCloudSection({
     const nextIndex = (scrollIndexRef.current + direction + scrollCount) % scrollCount;
     isHoveringRef.current = false;
     setActiveSlug(projects[nextIndex].slug);
+
+    const track = trackRef.current;
+    if (isHome && mobileScrollEnabled && track) {
+      const trackTop = window.scrollY + track.getBoundingClientRect().top;
+      const scrollDistance = Math.max(0, track.offsetHeight - window.innerHeight);
+      window.scrollTo({
+        top: trackTop + scrollDistance * (nextIndex / scrollSteps),
+        behavior: 'smooth',
+      });
+      return;
+    }
+
     setProgress(nextIndex / scrollSteps);
   };
 
@@ -344,6 +386,7 @@ export default function ProjectCloudSection({
 
   return (
     <section
+      ref={trackRef}
       className={`${styles.track} ${mode === 'fallback' ? styles.trackFallback : ''} ${isHome ? styles.trackHome : ''}`}
       aria-labelledby={titleId}
     >
