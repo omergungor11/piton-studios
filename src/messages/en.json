@@ -98,7 +98,7 @@
       },
       "services": {
         "value": "12",
-        "label": "Service Areas"
+        "label": "Services"
       },
       "languages": {
         "value": "3",
@@ -274,6 +274,11 @@
     "eyebrow": "Free Consultation · Fast Response",
     "title": "Let's Talk About Your <accent>Idea & Project</accent>",
     "sub": "We build AI-powered products, intelligent automations, and modern digital experiences — tell us what you want to create, and let's make it happen.",
+    "stats": {
+      "completedProjects": "Completed Projects",
+      "yearsExperience": "Years of Experience",
+      "responseTime": "Response Time"
+    },
     "wpBtn": "Message on WhatsApp",
     "emailBtn": "Send an Email",
     "note": "We typically reply within a few hours."
