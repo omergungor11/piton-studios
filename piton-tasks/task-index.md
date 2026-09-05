@@ -10,9 +10,10 @@
 | 3 | Enhancements | 2 | 2 | 0 | 0 | 0 |
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
 | 5 | Icerik Uretimi | 22 | 22 | 0 | 0 | 0 |
-| **Total** | | **51** | **51** | **0** | **0** | **0** |
+| 6 | Interaktif Portfolyo R&D | 2 | 2 | 0 | 0 | 0 |
+| **Total** | | **53** | **53** | **0** | **0** | **0** |
 
-**Progress**: 51/51 (100%) ✓
+**Progress**: 53/53 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -98,6 +99,18 @@
 | TASK-050 | Hizmet sayfalarindaki abartili rakamlar portfoye dayandirildi (15 hizmet x 4 rakam x 3 dil; site ici celiski 750+ vs 40+); 3 hizmet kaldirildi (ai-training, ai-chatbot, prompt-engineering) + 301 yonlendirme | L | COMPLETED | `4fa2651`, `00fb701` |
 | TASK-051 | SSS sayfasi: 12 kategori x 75 soru x 3 dil (225 soru-cevap), FAQPage + WebPage(speakable) JSON-LD, `/llms.txt`, 14 AI crawler izni, cevap-once GEO yazimi, native `<details>` (kapaliyken de DOM'da) | L | COMPLETED | — |
 | TASK-052 | Donusum bolumleri: referanslar sahnesi (vaka sonuc kartlari — taslak yorum/karusel yerine dogrulanabilir 6 sonuc karti), 6 adimlik surec sahnesi (teknoloji adi gecmez), fiyatlandirma sayfasi (TL/euro, 3 dil), hero rakamlar seridi (49+/10+/12/3), 11 sektorel landing + indeks (3 dil; egitim + guzellik referanssiz, tum sayfalarda "Sektore bakisimiz" detail bolumu), nav + routing + sitemap entegrasyonu | L | COMPLETED | — |
+
+## Phase 6: Interaktif Portfolyo R&D (2026-09-04)
+
+| ID | Task | Complexity | Status | Commit |
+|----|------|-----------|--------|--------|
+| TASK-053 | Projects V2 yerel prototipi: 15 gercek proje mockup'i, scroll-driven 3B spiral/helis, hover/touch proje odagi, WebGL2 destekli mobil 3B profil, kosullu HTML fallback, production 404 korumasi | L | COMPLETED (LOCAL ONLY) | — |
+| TASK-054 | Proje bulutunu anasayfa "Öne Çıkan Projeler" sahnesine entegre et: ortak `ProjectCloudSection`, `src/lib/project-cloud.ts`, `projectCloud` cevirileri (3 dil), `.scene--cloud`, alt chrome offset'i, sahne takip duzeltmesi | M | COMPLETED | — |
+
+> `/projeler-v2` rotasi dev-only prototip olarak kaldi; canli deneyim anasayfa sahnesinde.
+> Mobil kabul profilleri: 390x844 ve 430x932 portre ile kisa-yatay telefon. Ilk
+> dokunus odaklar, ikinci dokunus detay sayfasini acar; reduced-motion, Save-Data,
+> WebGL2 veya context failure durumlarinda HTML fallback kullanilir.
 
 ---
 

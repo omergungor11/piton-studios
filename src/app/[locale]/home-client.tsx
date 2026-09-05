@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { SCENES, type PreviewData, type Work } from "@/lib/data";
+import { SCENES } from "@/lib/data";
+import type { ProjectCloudItem } from "@/components/projects-v2/project-cloud-canvas";
 import BgStage from "@/components/bg-stage";
 import Cursor from "@/components/cursor";
 import { TopChrome, BottomChrome } from "@/components/chrome";
 import Tweaks from "@/components/tweaks";
-import { PreviewCard } from "@/components/scenes/works";
 
 import dynamic from "next/dynamic";
 import FloatingGlass from "@/components/floating-glass";
@@ -20,14 +20,18 @@ import HeroScene from "@/components/scenes/hero";
 import SparkScene from "@/components/scenes/spark";
 import ManifestoScene from "@/components/scenes/manifesto";
 import ServicesScene from "@/components/scenes/services";
-import WorksScene from "@/components/scenes/works";
+import ProjectCloudSection from "@/components/projects-v2/project-cloud-section";
 import AboutScene from "@/components/scenes/about";
 import ProcessScene from "@/components/scenes/process";
 import ContactScene from "@/components/scenes/contact";
 
-export default function HomeClient() {
+interface HomeClientProps {
+  /** Projeler sahnesindeki 3B bulut icin server'da cevrilmis secili projeler. */
+  projectCloud: ProjectCloudItem[];
+}
+
+export default function HomeClient({ projectCloud }: HomeClientProps) {
   const [showThree, setShowThree] = useState(false);
-  const [preview, setPreviewState] = useState<PreviewData | null>(null);
   const [clock, setClock] = useState("");
   const [tweaksOpen, setTweaksOpen] = useState(false);
   const [theme, setThemeState] = useState("dark");
@@ -35,17 +39,6 @@ export default function HomeClient() {
   const [progress, setProgress] = useState(0);
   const [revealed, setRevealed] = useState<Set<number>>(() => new Set([0]));
   const sceneRefs = useRef<(HTMLElement | null)[]>([]);
-
-  const setPreview = useCallback(
-    (w: Work | null, x?: number, y?: number) => {
-      if (!w) {
-        setPreviewState(null);
-        return;
-      }
-      setPreviewState({ ...w, x, y });
-    },
-    []
-  );
 
   const setTheme = useCallback((t: string) => {
     setThemeState(t);
@@ -107,16 +100,20 @@ export default function HomeClient() {
       const vh = window.innerHeight;
       let bestIdx = 0;
       let bestDist = Infinity;
+      let containingIdx = -1;
       sceneRefs.current.forEach((el, i) => {
         if (!el) return;
         const r = el.getBoundingClientRect();
+        // Ekran ortasini kapsayan sahne oncelikli — projeler sahnesi (430svh, sticky)
+        // uzun oldugu icin merkez mesafesi olcumu komsu sahneleri secerdi.
+        if (containingIdx < 0 && r.top <= vh / 2 && r.bottom >= vh / 2) containingIdx = i;
         const dist = Math.abs(r.top + r.height / 2 - vh / 2);
         if (dist < bestDist) {
           bestDist = dist;
           bestIdx = i;
         }
       });
-      setActiveIdx(bestIdx);
+      setActiveIdx(containingIdx >= 0 ? containingIdx : bestIdx);
 
       const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -199,24 +196,27 @@ export default function HomeClient() {
               </SnakeBorder>
             );
           else if (s.id === "process") inner = <ProcessScene />;
-          else if (s.id === "work") inner = <WorksScene onPreview={setPreview} />;
+          else if (s.id === "work")
+            inner = <ProjectCloudSection projects={projectCloud} variant="home" titleAs="h2" />;
           else if (s.id === "about") inner = <AboutScene />;
           else if (s.id === "contact") inner = <ContactScene />;
+          // Proje bulutu tam genislik sticky sahne: .inner sarmalayicisi (reveal
+          // transform/blur) ve sahne padding'i olmadan dogrudan render edilir.
+          const isCloud = s.id === "work";
           return (
             <section
               key={s.id}
-              className={`scene ${state}`}
+              className={`scene ${isCloud ? "scene--cloud" : state}`}
               id={s.hash}
               ref={setRef(i)}
               data-screen-label={s.label}
             >
-              <div className="inner">{inner}</div>
+              {isCloud ? inner : <div className="inner">{inner}</div>}
             </section>
           );
         })}
       </main>
 
-      <PreviewCard data={preview} />
       <FloatingActions />
       <Tweaks open={tweaksOpen} theme={theme} setTheme={setTheme} />
     </>

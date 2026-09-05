@@ -18,6 +18,32 @@
 - **Overall**: 21/21 tasks (%100)
 - **Deploy**: Vercel aktif, Supabase Storage CDN uzerinden video servis
 
+## Projects V2 → Anasayfa entegrasyonu (2026-09-04, gece)
+- Proje bulutu anasayfadaki "Projeler" sahnesinde canli (`ProjectCloudSection variant="home"`).
+  Eski 6'li slider kullanilmiyor. `/projeler-v2` rotasi dev-only kaldi; oradaki guard'a
+  dokunulmadi (nav/sitemap'te yok).
+- Anasayfa `.scene` blok konteynerinde `section` 0px genislik olcuyordu — `.track`
+  `width: 100%` zorunlu; kaldirmayin.
+- Alt chrome (tag-avail + scene-indicator) ile cakisma `--cloud-hud-offset: 58px` ile
+  cozuldu; mobilde HUD alt cubugun 8px ustunde.
+- Bilinen, bu isle ilgisiz 404: `/models/logo.glb` (hero logo) — dosya repoda yok.
+
+## Projects V2 Yerel Prototip (2026-09-04)
+- Yerel rota: `/tr/projeler-v2` (`/en/projects-v2`, `/ru/projects-v2` esleri var).
+- 15 gercek proje preview'i React Three Fiber sahnesinde iki kollu 3B spiral/helis
+  uzerinde ilerliyor; scroll her projeyi sirayla foreground'a getiriyor.
+- WebGL2 destekli mobil/dokunmatik cihazlarda optimize 3B spiral aktif; kompakt
+  kamera/helis, sade atmosfer ve sabit `2x` Canvas render'i 390x844, 430x932 portre
+  ile kisa-yatay telefon profillerine uyarlaniyor.
+- Mobilde ilk dokunus projeyi odakliyor, ayni projeye ikinci dokunus detay sayfasini
+  aciyor. `prefers-reduced-motion`, Save-Data, WebGL2 yoklugu veya context failure
+  durumunda HTML/CSS yatay proje seridi kullaniliyor.
+- Rota nav/sitemap'te yok, `noindex, nofollow`; production'da bilerek 404. Kullanici
+  onayi gelmeden guard kaldirilmayacak, commit/push/deploy yapilmayacak.
+- Sahne, `public/assets/previews/desktop/` icindeki 1440x810 ve
+  `public/assets/previews/mobile/` icindeki 430x928 kaynaklari kullaniyor; plan
+  `piton-plans/projects-v2-interactive-portfolio-plan.md`.
+
 ## Key Technical Decisions
 - Supabase Storage for video hosting (CDN, no self-hosted media server)
 - Next.js App Router with Server Components default (performance)
