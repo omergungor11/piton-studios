@@ -24,8 +24,9 @@
   dokunulmadi (nav/sitemap'te yok).
 - Anasayfa `.scene` blok konteynerinde `section` 0px genislik olcuyordu — `.track`
   `width: 100%` zorunlu; kaldirmayin.
-- Alt chrome (tag-avail + scene-indicator) ile cakisma `--cloud-hud-offset: 58px` ile
-  cozuldu; mobilde HUD alt cubugun 8px ustunde.
+- 2026-09-05: sahne `.glass` kutuya alindi (`.trackHome .panel`), stage padding'i
+  (`--cloud-frame-top/bottom/x`) chrome'a yer birakiyor; HUD offset artik 0. Tam sayfa
+  `/projeler-v2` varyanti eski full-bleed gorunumunu koruyor.
 - Bilinen, bu isle ilgisiz 404: `/models/logo.glb` (hero logo) — dosya repoda yok.
 
 ## Projects V2 Yerel Prototip (2026-09-04)
