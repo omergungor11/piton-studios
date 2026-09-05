@@ -560,3 +560,220 @@
 
   .loading::after { animation: none; }
 }
+
+/* =====================================================================
+   Anasayfa varyanti — diger sahneler gibi .glass kutu icinde.
+   Ortak aurora/parcacik arka plani kutunun arkasindan gorunur; opak stage,
+   gradient backdrop, veil ve dev soluk baslik kapatilir.
+   ===================================================================== */
+.panel {
+  position: absolute;
+  inset: 0;
+}
+
+.trackHome {
+  --cloud-hud-offset: 0px;
+  --cloud-frame-top: 100px;
+  --cloud-frame-bottom: 90px;
+  --cloud-frame-x: 40px;
+}
+
+.trackHome .stage {
+  min-height: 0;
+  padding: var(--cloud-frame-top) var(--cloud-frame-x) var(--cloud-frame-bottom);
+  overflow: visible;
+  isolation: auto;
+  background: transparent;
+}
+
+.trackHome .panel {
+  position: relative;
+  inset: auto;
+  width: min(1400px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+.trackHome .backdrop,
+.trackHome .veil {
+  display: none;
+}
+
+.trackHome .loading {
+  background: transparent;
+}
+
+.trackHome .intro {
+  top: 32px;
+  left: 36px;
+  width: min(680px, calc(100% - 72px));
+  transform: none;
+}
+
+.trackHome .eyebrow {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.trackHome .eyebrow::before {
+  display: none;
+}
+
+.trackHome .title {
+  max-width: 640px;
+  color: var(--ink);
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.trackHome .lede {
+  width: min(440px, 70%);
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.trackHome .allLink {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+.trackHome .allLink:hover,
+.trackHome .allLink:focus-visible {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.trackHome .projectHud {
+  left: 24px;
+  bottom: 24px;
+  width: min(680px, calc(100% - 300px));
+  border-color: var(--glass-border);
+  border-radius: 14px;
+  background: var(--glass-bg-strong);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.trackHome .projectNumber { color: var(--accent); }
+.trackHome .projectTitle { color: var(--ink); }
+.trackHome .projectCopy p + p { color: var(--muted); }
+
+.trackHome .projectNav button,
+.trackHome .projectLink {
+  border-color: var(--glass-border);
+  color: var(--ink);
+}
+
+.trackHome .projectNav button:hover,
+.trackHome .projectNav button:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.trackHome .projectLink:hover,
+.trackHome .projectLink:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.trackHome .interactionHint {
+  right: 28px;
+  bottom: 30px;
+  color: var(--muted);
+}
+
+.trackHome .interactionHint i {
+  background: linear-gradient(90deg, var(--accent), #00c8ff);
+}
+
+.trackHome .fallback {
+  padding: 170px 0 24px;
+}
+
+.trackHome .fallbackHint,
+.trackHome .fallbackRail {
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.trackHome .fallbackCard {
+  border-color: var(--glass-border);
+  background: var(--glass-bg-strong);
+}
+
+@media (max-width: 1040px) {
+  .trackHome .projectHud {
+    width: min(650px, calc(100% - 48px));
+  }
+}
+
+@media (max-width: 1000px) {
+  .trackHome {
+    --cloud-frame-top: 84px;
+    --cloud-frame-bottom: 84px;
+    --cloud-frame-x: 14px;
+  }
+}
+
+@media (max-width: 767px), (max-height: 519px) {
+  .trackHome {
+    --cloud-frame-top: 78px;
+    --cloud-frame-bottom: calc(82px + env(safe-area-inset-bottom));
+    --cloud-frame-x: 10px;
+  }
+
+  .trackHome .panel {
+    border-radius: 16px;
+  }
+
+  .trackHome .intro {
+    top: 18px;
+    left: 18px;
+    width: calc(100% - 36px);
+  }
+
+  .trackHome .title {
+    max-width: 320px;
+    font-size: clamp(22px, 6vw, 30px);
+  }
+
+  .trackHome .lede {
+    width: min(300px, 88%);
+    font-size: 13px;
+  }
+
+  .trackHome .projectHud {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+  }
+
+  .trackHome .fallback {
+    padding-top: 150px;
+    padding-bottom: 14px;
+  }
+
+  .trackHome .fallbackHint,
+  .trackHome .fallbackRail {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-height: 519px) {
+  .trackHome .intro {
+    top: 14px;
+    left: 16px;
+    width: min(430px, 52vw);
+  }
+}

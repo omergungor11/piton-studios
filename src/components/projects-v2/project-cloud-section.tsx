@@ -222,6 +222,8 @@ export default function ProjectCloudSection({
       aria-labelledby={titleId}
     >
       <div ref={stageRef} className={styles.stage}>
+        {/* Anasayfada diger sahneler gibi .glass kutu; tam sayfa varyantinda gorunmez sarmalayici */}
+        <div className={isHome ? `${styles.panel} glass` : styles.panel}>
         <div className={styles.backdrop} aria-hidden="true" />
 
         <header className={styles.intro}>
@@ -251,6 +253,7 @@ export default function ProjectCloudSection({
                 onFocus={handleSceneFocus}
                 onSelect={openProject}
                 onContextLost={() => setMode('fallback')}
+                stars={!isHome}
               />
             </div>
           </ExperienceBoundary>
@@ -307,6 +310,7 @@ export default function ProjectCloudSection({
         ) : null}
 
         <div className={styles.veil} aria-hidden="true" />
+        </div>
       </div>
     </section>
   );

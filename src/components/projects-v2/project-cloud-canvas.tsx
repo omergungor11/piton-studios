@@ -34,6 +34,8 @@ interface ProjectCloudCanvasProps {
   onFocus: (slug: string | null) => void;
   onSelect: (slug: string) => void;
   onContextLost: () => void;
+  /** Yildiz alani. Anasayfada ortak arka plan zaten parcacikli oldugu icin kapatilir. */
+  stars?: boolean;
 }
 
 interface ProjectMockupProps {
@@ -272,7 +274,7 @@ function Cloud({
   onFocus,
   onSelect,
   compact,
-}: Omit<ProjectCloudCanvasProps, 'onContextLost'> & { compact: boolean }) {
+}: Omit<ProjectCloudCanvasProps, 'onContextLost' | 'stars'> & { compact: boolean }) {
   const cloudRef = useRef<THREE.Group>(null);
   const previousProgressRef = useRef(0);
   const [focusedSlug, setFocusedSlug] = useState<string | null>(null);
@@ -382,10 +384,10 @@ function OrbitLines() {
   );
 }
 
-function SceneDecor({ compact }: { compact: boolean }) {
+function SceneDecor({ compact, stars }: { compact: boolean; stars: boolean }) {
   return (
     <>
-      <Stars
+      {stars ? <Stars
         radius={compact ? 17 : 24}
         depth={compact ? 9 : 14}
         count={compact ? 180 : 480}
@@ -393,7 +395,7 @@ function SceneDecor({ compact }: { compact: boolean }) {
         saturation={0}
         fade
         speed={compact ? 0.06 : 0.12}
-      />
+      /> : null}
       {compact ? null : <OrbitLines />}
     </>
   );
@@ -455,7 +457,7 @@ export default function ProjectCloudCanvas(props: ProjectCloudCanvasProps) {
       <fog attach="fog" args={['#050506', 9, 20]} />
       {compact ? null : <AdaptiveDpr pixelated={false} />}
       <ContextGuard onContextLost={props.onContextLost} />
-      <SceneDecor compact={compact} />
+      <SceneDecor compact={compact} stars={props.stars ?? true} />
       <Suspense fallback={null}>
         <Cloud
           projects={props.projects}

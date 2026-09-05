@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-05 (23)
+
+### Changed
+- **Anasayfa proje bulutu diger sahnelerle uyumlu hale getirildi** — sahne artik
+  `.glass` kutu icinde (`variant="home"` → `.panel.glass`), ortak aurora/parcacik arka
+  plani kutunun arkasindan gorunuyor. Opak stage, gradient backdrop, veil, yildiz alani
+  (`stars={false}`) ve dev soluk baslik kaldirildi; baslik/eyebrow/HUD renkleri site
+  token'larina (`--ink`, `--muted`, `--accent`, `--glass-*`) baglandi. Kutu ust/alt
+  chrome'un icinde kaliyor (`--cloud-frame-*`), HUD offset'ine gerek kalmadi
+
 ## 2026-09-04 (22)
 
 ### Changed
