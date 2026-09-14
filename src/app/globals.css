@@ -2313,6 +2313,10 @@ html[data-theme="light"] .contact-social-btn { background: rgba(0,0,0,0.04); }
 }
 .contact-social-btn.linkedin:hover { background: #0A66C2; border-color: #0A66C2; }
 .contact-social-btn.github:hover    { background: #2b3137; border-color: #2b3137; }
+.contact-social-btn.upwork:hover    { background: #14A800; border-color: #14A800; }
+.contact-social-btn.behance:hover   { background: #1769FF; border-color: #1769FF; }
+.contact-social-btn.dribbble:hover  { background: #EA4C89; border-color: #EA4C89; }
+.contact-social-btn.fiverr:hover    { background: #1DBF73; border-color: #1DBF73; }
 
 /* Contact form */
 .contact-form {
@@ -2517,15 +2521,15 @@ html[data-theme="light"] .page-header-link:hover { background: rgba(0,0,0,0.06);
 }
 
 /* Page footer */
+/* Uc satir: menu → teknoloji ikonlari + hukuki linkler → copyright */
 .page-footer {
   position: relative; z-index: 10;
   max-width: 1200px;
   margin: 0 auto 40px;
-  padding: 20px 32px;
+  padding: 0 32px;
   border-radius: 18px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   font-size: 13px;
   letter-spacing: 0;
   text-transform: none;
@@ -2533,9 +2537,27 @@ html[data-theme="light"] .page-header-link:hover { background: rgba(0,0,0,0.06);
   font-family: var(--font-sans);
   font-weight: 500;
 }
-.page-footer-brand { white-space: nowrap; }
+/* Anasayfada sabit .bottom-chrome copyright satirini ortmesin */
+.page-footer--home { margin-top: 40px; margin-bottom: 96px; width: calc(100% - 44px); }
 .page-footer-nav {
-  display: flex; gap: 6px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.page-footer-meta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 12px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.page-footer-legal { display: flex; flex-wrap: wrap; gap: 4px; }
+.page-footer-legal .page-footer-link { font-size: 12px; color: var(--muted); }
+.page-footer-brand {
+  margin: 0;
+  padding: 14px 0 16px;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
 }
 .page-footer-link {
   padding: 6px 14px;
@@ -2636,8 +2658,8 @@ html[data-theme="light"] .pt-badge:hover { background: rgba(0,0,0,0.05); }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .page-footer { flex-wrap: wrap; gap: 16px; }
-  .pf-partners { order: 3; width: 100%; justify-content: center; }
+  .page-footer-meta { flex-direction: column; }
+  .pf-partners, .page-footer-legal { justify-content: center; }
   .pf-badge-name { display: inline; }
 }
 /* Narrow screens: named badges can't fit one line — fall back to a single
@@ -4777,8 +4799,9 @@ html[data-theme="light"] .mobile-menu-item:active {
   .pp-hide-mobile { display: none; }
   .sp-cta { flex-direction: column; text-align: center; padding: 32px 24px; }
   .page-main { padding: 100px 16px 40px; }
-  .page-footer { flex-direction: column; gap: 14px; text-align: center; border-radius: 18px; padding: 18px 20px; }
-  .page-footer-nav { flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .page-footer { padding: 0 20px; }
+  .page-footer--home { width: calc(100% - 24px); margin-bottom: 84px; }
+  .page-footer-nav { gap: 4px; }
   .page-footer-link { padding: 5px 10px; font-size: 12px; }
   .page-header-nav { gap: 2px; }
   .page-header-link { padding: 6px 10px; font-size: 12px; }
@@ -6108,16 +6131,6 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
   border-top: 1px solid var(--line);
 }
 .legal-nav-link { color: var(--accent); font-size: 15px; }
-/* Hukuki linkler footer'da ayri, tam genislikte ikinci satir. */
-.page-footer { flex-wrap: wrap; row-gap: 10px; }
-.page-footer-legal {
-  flex-basis: 100%;
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 4px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-}
-.page-footer-legal .page-footer-link { font-size: 12px; color: var(--muted); }
 .contact-form-legal {
   margin: 12px 0 0;
   font-size: 13px; line-height: 1.5;

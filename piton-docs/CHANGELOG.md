@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-15 — Ortak footer + platform ikonları (TASK-059)
+
+- Yeni `src/components/site-footer.tsx`: anasayfada footer yoktu, artık anasayfa ve iç sayfalar aynı bileşeni kullanıyor. Sıra: menü → teknoloji ikonları + Gizlilik/Çerezler/Kullanım Koşulları → "Piton Studios © 2026" (3 dil).
+- Anasayfa `page.tsx` client'a yalnızca seçili namespace'leri gönderiyor; footer için `common` eklendi. Anasayfada footer'a alt boşluk verildi, sabit `.bottom-chrome` üstüne binmiyor.
+- İletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr eklendi (simple-icons SVG, marka renkli hover). Upwork/Behance/Fiverr JSON-LD `sameAs`'e girdi; Dribbble hesabı "Limited account" olduğu için çıkış yapmış ziyaretçiye 404 veriyor, `sameAs`'e eklenmedi.
+
 ## 2026-09-14 — Hukuki sayfalar (TASK-058)
 
 - Üç dilde üç sayfa: Gizlilik Politikası ve KVKK Aydınlatma Metni, Çerez Politikası, Kullanım Koşulları. Metinler `content/legal/{tr,en,ru}/*.mdx`; en/ru metinlerde Türkçe metnin esas olduğu notu var.

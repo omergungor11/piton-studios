@@ -29,6 +29,11 @@ export const SITE = {
     'https://www.linkedin.com/company/piton-studios',
     'https://github.com/omergungor11',
     'https://www.facebook.com/profile.php?id=100089359021738',
+    'https://www.upwork.com/freelancers/~014180d98345b05f82',
+    'https://www.behance.net/pitonstudios',
+    'https://www.fiverr.com/users/pitonstudios/portfolio',
+    // Dribbble (omer-faruk-arlec) bilerek yok: hesap "Limited account", cikis yapmis
+    // ziyaretciye ve crawler'a 404 donuyor — sameAs'e 404 veren profil yazilmaz.
   ],
 } as const;
 

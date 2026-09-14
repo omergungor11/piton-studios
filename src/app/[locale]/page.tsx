@@ -21,6 +21,7 @@ const NAMESPACES = [
   "contact",
   "nav",
   "chrome",
+  "common",
 ] as const;
 
 type Props = {

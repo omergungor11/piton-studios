@@ -45,6 +45,9 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   icerikleri elle esitleniyor. Menuye link eklerken ikisini birden guncelleyin (masaustu nav +
   mobil menu dizisi). 2026-08-08: Blog linki yalnizca `page-shell.tsx`'te vardi, `chrome.tsx`'e
   eklendi
+- **Footer** (2026-09-15): nav'in aksine **tek component** — `src/components/site-footer.tsx`,
+  hem `page-shell.tsx` hem `home-client.tsx` kullanir. Anasayfa `page.tsx` `NAMESPACES` listesinde
+  `common` olmali (yoksa footer ham anahtar gosterir)
 - **Videolar**: YOK — `videos/` (289 MB) 2026-07-28'de silindi, kodda tek referansi yoktu
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
 - **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)

@@ -12,6 +12,7 @@ import dynamic from "next/dynamic";
 import FloatingGlass from "@/components/floating-glass";
 import SnakeBorder from "@/components/snake-border";
 import FloatingActions from "@/components/floating-actions";
+import SiteFooter from "@/components/site-footer";
 
 const ThreeScene = dynamic(() => import("@/components/three-scene"), {
   ssr: false,
@@ -217,6 +218,7 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
         })}
       </main>
 
+      <SiteFooter variant="home" />
       <FloatingActions />
       <Tweaks open={tweaksOpen} theme={theme} setTheme={setTheme} />
     </>
