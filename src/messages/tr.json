@@ -994,6 +994,14 @@
         "Şehirdeki dolmuş hatlarının zamanında çalışıp çalışmadığını denetleyen bir otomasyon sistemi geliştirdik. GPS takip programından alınan Excel verisi işlenerek hat bazında güzergah kontrol raporları üretiliyor.",
         "Flask tabanlı bu web uygulaması; elle yapılan saatlerce süren kontrolü dakikalara indiriyor — veri işleme ve süreç otomasyonu yetkinliğimizin sahadan bir örneği."
       ]
+    },
+    "velair-experience": {
+      "title": "VELAIR",
+      "summary": "Scroll ile ilerleyen sinematik 3D özel jet deneyimi — bulut geçişi, açılan kabin ve yatay uçuş.",
+      "body": [
+        "VELAIR, özel jet deneyimini scroll ile ilerleyen sinematik bir 3D anlatıya dönüştüren konsept çalışmamız. Tepeden jet görünümü, shader tabanlı bulut geçişi, açılan kabin ve panel arkasından yatay uçuş tek bir doğal scroll akışında birleşiyor; uçak, kodla üretilmiş özgün parametrik bir model.",
+        "Next.js, React Three Fiber, Drei ve GSAP ScrollTrigger ile kurulan deneyimde tek bir ilerleme değeri kamerayı, jeti ve bulutları yönetiyor; boşta sürekli render yok. Hareketi azalt tercihi, WebGL olmadığında aynı modelden üretilmiş statik görseller ve mobil kadraj uyarlamasıyla performans ve erişilebilirlik birlikte gözetildi."
+      ]
     }
   },
   "areas": {
@@ -2450,7 +2458,7 @@
     },
     "industries": {
       "q": "Hangi sektörlerde deneyiminiz var?",
-      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 49 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
+      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 50 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
       "detail": [
         "2021-2022 döneminde kurumsal site ve marka işleri, 2022-2023'te e-ticaret ve emlak/turizm, 2024'te finans ve taşımacılık, 2025'te AI/ML ve SaaS ağırlıklı projeler öne çıktı.",
         "Sektöre özel derin mevzuat bilgisi gerektiren regüle alanlarda (sağlık, hukuk gibi) proje öncesi ek araştırma yapılır; bu durum keşif süresini biraz uzatabilir."

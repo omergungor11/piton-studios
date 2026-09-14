@@ -1080,6 +1080,28 @@ export const WORKS: Work[] = [
     ],
     scope: "Automation, data processing, reporting",
   },
+  {
+    n: "50",
+    slug: "velair-experience",
+    title: "VELAIR",
+    client: "VELAIR",
+    kind: "Web Design · 3D Experience",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Three.js", "React Three Fiber", "GSAP", "Next.js"],
+    image: "story-05.jpg",
+    summary: "Scroll-driven cinematic 3D private-jet experience — clouds, opening cabin and a fly-by in one flow.",
+    body: [
+      "VELAIR, özel jet deneyimini scroll ile ilerleyen sinematik bir 3D anlatıya dönüştüren konsept çalışmamız. Tepeden jet görünümü, shader tabanlı bulut geçişi, açılan kabin ve panel arkasından yatay uçuş tek bir doğal scroll akışında birleşiyor; uçak, kodla üretilmiş özgün parametrik bir model.",
+      "Next.js, React Three Fiber, Drei ve GSAP ScrollTrigger ile kurulan deneyimde tek bir ilerleme değeri kamerayı, jeti ve bulutları yönetiyor; boşta sürekli render yok. Hareketi azalt tercihi, WebGL olmadığında aynı modelden üretilmiş statik görseller ve mobil kadraj uyarlamasıyla performans ve erişilebilirlik birlikte gözetildi.",
+    ],
+    scope: "3D web experience, scroll animation, WebGL",
+    url: "https://velair-experience.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/velair-experience.webp',
+      mobile: '/assets/previews/mobile/velair-experience.webp',
+    },
+  },
 ];
 
 export const SERVICES: Service[] = [
