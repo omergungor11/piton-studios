@@ -14,9 +14,10 @@
 | 7 | Blog Rehberleri | 2 | 2 | 0 | 0 | 0 |
 | 8 | Portfolyo Guncellemeleri | 1 | 1 | 0 | 0 | 0 |
 | 9 | Hukuki Uyum | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **57** | **57** | **0** | **0** | **0** |
+| 10 | Site Geneli UI | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **58** | **58** | **0** | **0** | **0** |
 
-**Progress**: 57/57 (100%) ✓
+**Progress**: 58/58 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -139,3 +140,9 @@
 |----|------|------------|--------|
 | TASK-058 | Hukuki sayfalar (tr/en/ru): Gizlilik + KVKK Aydınlatma, Çerez Politikası, Kullanım Koşulları; `src/lib/legal.ts` + `LEGAL_READY` kapısı, footer/form/sitemap entegrasyonu | M | COMPLETED |
 | TASK-056 | VELAIR portfolyoya eklendi: canlı siteden desktop (1440×810) + mobil (860×1856) önizleme, tr/en/ru çeviriler, SSS proje sayısı 49 → 50; projeler listesinde EKH Yapı'nın yerine #09'a alındı (EKH Yapı → #50) | S | COMPLETED |
+
+## Phase 10: Site geneli UI (2026-09-15)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): menü → teknoloji ikonları + hukuki linkler → "Piton Studios © 2026"; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |
