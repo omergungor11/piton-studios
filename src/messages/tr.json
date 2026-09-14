@@ -3101,7 +3101,7 @@
     "note": "Tüm rakamlar başlangıç bantlarıdır; kesin fiyat, kapsamı birlikte netleştirdiğimiz ön görüşmenin ardından hazırlanan teklifle belirlenir. Bant dışına çıkan bir ihtiyaç varsa bunu teklifte gerekçesiyle görürsünüz.",
     "packages": {
       "template": {
-        "name": "Şablon / WordPress tanıtım sitesi",
+        "name": "Şablon tanıtım sitesi",
         "price": "10.000–30.000 ₺",
         "desc": "Hızla yayına çıkması gereken tanıtım siteleri için: kaliteli bir hazır temanın markanıza uyarlanması.",
         "includes": [
