@@ -273,6 +273,57 @@ export function TrendChart({
   );
 }
 
+/* ----------------------------------------------------------- Flow diagram */
+
+type FlowStep = { label: string; ai: string; human: string };
+
+/**
+ * Sirali is akisi gorseli: her adimda yapay zekanin ve insanin rolu yan yana.
+ * Numarali liste olarak render edilir — ekran okuyucu sirayi korur, grafik
+ * kutusuyla ayni cerceveyi kullanir.
+ */
+export function FlowDiagram({
+  title,
+  caption,
+  steps,
+  aiLabel = 'Yapay zekâ',
+  humanLabel = 'İnsan',
+}: {
+  title: string;
+  caption?: string;
+  steps: FlowStep[];
+  aiLabel?: string;
+  humanLabel?: string;
+}) {
+  return (
+    <figure className="mdx-chart mdx-flow">
+      <figcaption className="mdx-chart-head">
+        <span className="mdx-chart-title">{title}</span>
+        {caption && <span className="mdx-chart-caption">{caption}</span>}
+      </figcaption>
+
+      <ol className="mdx-flow-list">
+        {steps.map((step, i) => (
+          <li className="mdx-flow-step" key={step.label}>
+            <span className="mdx-flow-n" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span className="mdx-flow-label">{step.label}</span>
+            <span className="mdx-flow-role is-ai">
+              <span className="mdx-flow-role-name">{aiLabel}</span>
+              {step.ai}
+            </span>
+            <span className="mdx-flow-role is-human">
+              <span className="mdx-flow-role-name">{humanLabel}</span>
+              {step.human}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </figure>
+  );
+}
+
 /* ----------------------------------------------------------------- Links */
 
 /**
@@ -304,4 +355,5 @@ export const mdxComponents = {
   StatGrid,
   BarChart,
   TrendChart,
+  FlowDiagram,
 };

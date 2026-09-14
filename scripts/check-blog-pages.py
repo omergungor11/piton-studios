@@ -13,6 +13,7 @@ SLUGS = [
     'web-sitesi-yenileme-seo-gecis-plani',
     'b2b-landing-page-teklif-toplama',
     'erisilebilir-web-tasarimi-form-rehberi',
+    'yapay-zekanin-web-tasarim-ve-kodlamaya-etkisi',
 ]
 BASE = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else 'http://localhost:3100'
 
@@ -88,4 +89,4 @@ print('Internal URLs:', len(links), 'all HTTP 200')
 for route in ['/sitemap.xml', '/tr/rss.xml', '/tr/blog']:
     html = read(route)
     assert all(slug in html for slug in SLUGS), route
-    print(route, 'all three posts present')
+    print(route, f'all {len(SLUGS)} posts present')

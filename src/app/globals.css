@@ -6023,10 +6023,54 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
 }
 .mdx-svg-serie.is-muted .mdx-svg-dot { fill: color-mix(in oklab, var(--ink) 45%, transparent); }
 
+/* MDX — is akisi diyagrami */
+.mdx-flow-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 10px;
+  counter-reset: none;
+}
+.mdx-flow-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(110px, 22%) 1fr 1fr;
+  align-items: start;
+  gap: 12px;
+  padding: 14px 14px 14px 0;
+  border-top: 1px solid var(--line);
+}
+.mdx-flow-step:first-child { border-top: 0; padding-top: 4px; }
+.mdx-flow-n {
+  font-family: var(--font-mono); font-size: 13px; line-height: 1.6;
+  color: var(--accent);
+  font-weight: 500;
+}
+.mdx-flow-label {
+  font-family: var(--font-sans); font-size: 15px; line-height: 1.5;
+  color: var(--ink);
+  font-weight: 500;
+}
+.mdx-flow-role {
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 15px; line-height: 1.5;
+  color: var(--ink-soft);
+  padding-left: 12px;
+  border-left: 2px solid color-mix(in oklab, var(--ink) 18%, transparent);
+}
+.mdx-flow-role.is-ai { border-left-color: var(--accent); }
+.mdx-flow-role-name {
+  font-family: var(--font-mono); font-size: 12px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.mdx-flow-role.is-ai .mdx-flow-role-name { color: var(--accent); }
+
 @media (max-width: 640px) {
   .mdx-bar-row { grid-template-columns: 1fr; gap: 4px; }
   .mdx-bar-value { text-align: left; }
   .mdx-chart { padding: 16px 14px 18px; }
+  .mdx-flow-step { grid-template-columns: 28px 1fr; gap: 8px 10px; padding-right: 0; }
+  .mdx-flow-role { grid-column: 2; }
 }
 
 /* SSS */
