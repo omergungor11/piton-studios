@@ -5951,6 +5951,11 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
   font-weight: 500;
 }
 .mdx-chart-caption { font-size: 15px; color: var(--muted); line-height: 1.5; }
+.mdx-chart-data { margin-top: 20px; font-size: 15px; }
+.mdx-chart-data summary { cursor: pointer; color: var(--accent); padding: 8px 0; }
+.mdx-chart-data summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.mdx-chart-data table { margin-top: 12px; }
+.mdx-chart-data caption { text-align: left; padding-bottom: 10px; }
 
 /* MDX — yatay cubuk grafik */
 .mdx-bars { display: flex; flex-direction: column; gap: 10px; }

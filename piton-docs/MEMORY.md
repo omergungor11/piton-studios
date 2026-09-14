@@ -1,5 +1,11 @@
 # Piton Studios - Project Memory
 
+## Blog içerik ve altyapı (2026-09-05)
+- Türkçe blog 11 yazı; İngilizce ve Rusça 8'er yazı. Yeni üç rehber yalnızca Türkçe; mevcut çeviri eşlemesi olmayan diller hreflang listesine eklenmiyor.
+- Yeni konular: SEO site geçişi, B2B landing page, erişilebilir formlar. Altı grafik verisi temsili senaryo olarak etiketli; müşteri performansı iddiası yok.
+- İsteğe bağlı frontmatter `sources: [{title, url}]`, görünür kaynakça + BlogPosting citation üretir. Grafiklerde `dataTableLabel` açılabilir tablo sağlar.
+- Production sunucusu üzerinde doğrulama: `python3 scripts/check-blog-pages.py http://localhost:3100`.
+
 ## Project Info
 - Piton Studios firmasinin video portfolyo websitesi. Video-agirlikli, hizli yuklenen modern portfolyo.
 

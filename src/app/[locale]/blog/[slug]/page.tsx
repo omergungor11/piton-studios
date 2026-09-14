@@ -103,6 +103,12 @@ export default async function BlogPostPage({ params }: Props) {
   const t = await getTranslations('blog');
   const messages = await getMessages();
   const url = absoluteUrl(locale as Locale, { pathname: '/blog/[slug]', params: { slug } });
+  const sourcesTitle = { tr: 'Kaynaklar ve ileri okuma', en: 'Sources and further reading', ru: 'Источники и дополнительные материалы' }[locale as Locale];
+  const headings = [
+    ...post.headings,
+    ...(post.sources?.length ? [{ depth: 2 as const, id: 'blog-sources', text: sourcesTitle }] : []),
+    ...(post.faq?.length ? [{ depth: 2 as const, id: 'sss', text: t('faqTitle') }] : []),
+  ];
 
   // Ilgili yazilar: ortak etiket sayisina gore, en fazla 3 tane.
   const related = getAllPosts(locale as Locale)
@@ -124,17 +130,19 @@ export default async function BlogPostPage({ params }: Props) {
             url,
             datePublished: post.date,
             dateModified: post.updated,
-            image: post.cover ? `${SITE_URL}${post.cover}` : undefined,
+            image: post.cover ? `${SITE_URL}${post.cover}` : `${url}/opengraph-image`,
             author: post.author,
             tags: post.tags,
             locale: locale as Locale,
+            readingMinutes: post.readingMinutes,
+            sources: post.sources,
           }),
           breadcrumbJsonLd([
             { name: 'Piton Studios', url: absoluteUrl(locale as Locale, '/') },
             { name: t('title'), url: absoluteUrl(locale as Locale, '/blog') },
             { name: post.title, url },
           ]),
-          ...(post.faq ? [faqJsonLd(post.faq)].filter((x) => x !== null) : []),
+          ...(post.faq ? [faqJsonLd(post.faq, { id: `${url}#sss`, inLanguage: locale as Locale })].filter((x) => x !== null) : []),
         ]}
       />
 
@@ -178,10 +186,22 @@ export default async function BlogPostPage({ params }: Props) {
             )}
           </header>
 
-          <BlogToc title={t('tableOfContents')} headings={post.headings} />
+          <BlogToc title={t('tableOfContents')} headings={headings} />
 
           <div className="blog-prose">
             <MDXRemote source={post.content} options={mdxOptions} components={mdxComponents} />
+            {post.sources && post.sources.length > 0 && (
+              <section aria-labelledby="blog-sources">
+                <h2 id="blog-sources">{sourcesTitle}</h2>
+                <ol>
+                  {post.sources.map((source) => (
+                    <li key={source.url}>
+                      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
           </div>
 
           {post.faq && post.faq.length > 0 && (
