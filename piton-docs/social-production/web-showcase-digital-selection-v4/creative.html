@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>Piton Studios — Dijital Seçki Mixed Projects</title>
+  <style>
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("../web-showcase-typography-v3/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+      src: url("../web-showcase-typography-v3/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f2efe9;
+      --soft: #d5d1c9;
+      --red: #d33a3e;
+      --cyan: #00a0d0;
+      --line: rgba(242, 239, 233, 0.2);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1080px;
+      height: 1350px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--black);
+      color: var(--white);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--black);
+    }
+
+    .art {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.62) saturate(0.78) contrast(1.08);
+    }
+
+    .top-erase {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 250px;
+      background: linear-gradient(180deg, var(--black) 0 72%, rgba(10, 10, 10, 0) 100%);
+    }
+
+    .grid-glow {
+      position: absolute;
+      z-index: 2;
+      inset: 180px 22px 300px;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(0, 160, 208, 0.11), transparent 46%),
+        radial-gradient(circle at 48% 68%, rgba(211, 58, 62, 0.09), transparent 48%);
+      pointer-events: none;
+    }
+
+    .projects {
+      position: absolute;
+      z-index: 7;
+      top: 248px;
+      left: 58px;
+      right: 58px;
+      height: 760px;
+      perspective: 1500px;
+    }
+
+    .project-card {
+      position: absolute;
+      width: 292px;
+      height: 205px;
+      overflow: hidden;
+      border: 1px solid rgba(242, 239, 233, 0.4);
+      border-radius: 5px;
+      background: #101214;
+      box-shadow:
+        0 28px 55px rgba(0, 0, 0, 0.78),
+        0 0 0 1px rgba(0, 160, 208, 0.08),
+        0 0 28px rgba(0, 160, 208, 0.12);
+      transform-style: preserve-3d;
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 3px solid var(--red);
+      pointer-events: none;
+    }
+
+    .project-card:nth-child(even)::after { border-top-color: var(--cyan); }
+
+    .project-card img {
+      display: block;
+      width: 100%;
+      height: 164px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .project-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 41px;
+      padding: 0 13px;
+      border-top: 1px solid rgba(242, 239, 233, 0.12);
+      background: rgba(10, 10, 10, 0.96);
+      text-transform: uppercase;
+    }
+
+    .project-info strong {
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-info span {
+      color: var(--cyan);
+      font-size: 9px;
+      font-weight: 400;
+    }
+
+    .p1 { left: 0; top: 34px; transform: rotateY(10deg) rotateX(2deg) rotateZ(-1.5deg); }
+    .p2 { left: 336px; top: 0; transform: rotateX(3deg); }
+    .p3 { right: 0; top: 38px; transform: rotateY(-10deg) rotateX(2deg) rotateZ(1.5deg); }
+    .p4 { left: 12px; top: 295px; transform: rotateY(8deg) rotateX(2deg) rotateZ(1deg); }
+    .p5 { left: 336px; top: 270px; transform: rotateX(2deg) rotateZ(-0.6deg); }
+    .p6 { right: 12px; top: 300px; transform: rotateY(-8deg) rotateX(2deg) rotateZ(-1deg); }
+    .p7 { left: 0; top: 558px; transform: rotateY(9deg) rotateX(2deg) rotateZ(-1.2deg); }
+    .p8 { left: 336px; top: 535px; transform: rotateX(3deg) rotateZ(0.5deg); }
+    .p9 { right: 0; top: 562px; transform: rotateY(-9deg) rotateX(2deg) rotateZ(1.2deg); }
+
+    .connection {
+      position: absolute;
+      z-index: 5;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red), var(--cyan));
+      box-shadow: 0 0 16px rgba(0, 160, 208, 0.4);
+      transform-origin: left center;
+      opacity: 0.68;
+    }
+
+    .c1 { left: 292px; top: 362px; width: 89px; transform: rotate(-18deg); }
+    .c2 { left: 627px; top: 343px; width: 88px; transform: rotate(18deg); }
+    .c3 { left: 292px; top: 646px; width: 91px; transform: rotate(16deg); }
+    .c4 { left: 626px; top: 642px; width: 91px; transform: rotate(-16deg); }
+
+    .topbar {
+      position: absolute;
+      z-index: 12;
+      top: 68px;
+      left: 72px;
+      right: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 22px; }
+
+    .brand img {
+      display: block;
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+    }
+
+    .brand-copy { display: grid; gap: 8px; text-transform: uppercase; }
+    .brand-copy strong { color: var(--white); font-size: 18px; font-weight: 700; line-height: 1; }
+    .brand-copy span { color: var(--red); font-size: 13px; line-height: 1; }
+
+    .count {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--cyan);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .count::before { content: ""; width: 64px; height: 1px; background: var(--line); }
+
+    .bottom-wash {
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 365px;
+      background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.96) 31%, var(--black) 52% 100%);
+    }
+
+    .title-block {
+      position: absolute;
+      z-index: 14;
+      left: 72px;
+      right: 72px;
+      bottom: 67px;
+    }
+
+    .title {
+      margin: 0;
+      padding-left: 30px;
+      border-left: 8px solid var(--red);
+      color: var(--white);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .meta strong { color: var(--red); }
+    .meta span:last-child { color: var(--cyan); }
+
+    .frame {
+      position: absolute;
+      inset: 32px;
+      z-index: 20;
+      border: 1px solid rgba(242, 239, 233, 0.12);
+      pointer-events: none;
+    }
+
+    .frame::before,
+    .frame::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      width: 72px;
+      height: 3px;
+    }
+
+    .frame::before { left: -1px; background: var(--red); }
+    .frame::after { right: -1px; background: var(--cyan); }
+  </style>
+</head>
+<body>
+  <main class="slide">
+    <img class="art" src="../../../public/assets/social/web-showcase-concepts-v2-branded/upload-08-isometric-website-city.jpg" alt="">
+    <div class="top-erase"></div>
+    <div class="grid-glow"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../../public/logo.webp" alt="Piton Studios">
+        <div class="brand-copy"><strong>Piton Studios</strong><span>Web Showcase</span></div>
+      </div>
+      <div class="count">08 / 09</div>
+    </header>
+
+    <section class="projects" aria-label="Piton Studios projeleri">
+      <article class="project-card p1">
+        <img src="../../../public/assets/previews/desktop/velis-ltd.webp" alt="Velis LTD">
+        <div class="project-info"><strong>Velis LTD</strong><span>Piton Project · 2024</span></div>
+      </article>
+      <article class="project-card p2">
+        <img src="../../../public/assets/previews/desktop/fur-crm.webp" alt="FurCRM">
+        <div class="project-info"><strong>FurCRM</strong><span>Piton Product · 2026</span></div>
+      </article>
+      <article class="project-card p3">
+        <img src="../../../public/assets/previews/desktop/bt-elevator.webp" alt="BT Elevator">
+        <div class="project-info"><strong>BT Elevator</strong><span>Piton Project · 2023</span></div>
+      </article>
+      <article class="project-card p4">
+        <img src="../../../public/assets/previews/desktop/gel-gez-gor.webp" alt="Gel Gez Gör">
+        <div class="project-info"><strong>Gel Gez Gör</strong><span>Piton Project · 2025</span></div>
+      </article>
+      <article class="project-card p5">
+        <img src="../../../public/assets/previews/desktop/nexos-investment.webp" alt="Nexos Investment">
+        <div class="project-info"><strong>Nexos Investment</strong><span>Piton Project · 2026</span></div>
+      </article>
+      <article class="project-card p6">
+        <img src="../../../public/assets/previews/desktop/alp-sigorta.webp" alt="Alp Sigorta">
+        <div class="project-info"><strong>Alp Sigorta</strong><span>Piton Project · 2026</span></div>
+      </article>
+      <article class="project-card p7">
+        <img src="../../../public/assets/previews/desktop/alert-muhendislik.webp" alt="Alert Mühendislik">
+        <div class="project-info"><strong>Alert Mühendislik</strong><span>Piton Project · 2022</span></div>
+      </article>
+      <article class="project-card p8">
+        <img src="../../../public/assets/previews/desktop/beton-store.webp" alt="Beton Store">
+        <div class="project-info"><strong>Beton Store</strong><span>Piton Project · 2024</span></div>
+      </article>
+      <article class="project-card p9">
+        <img src="../../../public/assets/previews/desktop/virginia-ice-cream.webp" alt="Virginia Ice Cream">
+        <div class="project-info"><strong>Virginia Ice Cream</strong><span>Piton Project · 2023</span></div>
+      </article>
+    </section>
+
+    <i class="connection c1"></i>
+    <i class="connection c2"></i>
+    <i class="connection c3"></i>
+    <i class="connection c4"></i>
+
+    <div class="bottom-wash"></div>
+    <section class="title-block">
+      <h1 class="title">Dijital Seçki</h1>
+      <div class="meta"><strong>Piton Projeleri + Konsept Seçki</strong><span>Design / Code / AI</span><span>pitonstudios.com</span></div>
+    </section>
+    <div class="frame"></div>
+  </main>
+</body>
+</html>

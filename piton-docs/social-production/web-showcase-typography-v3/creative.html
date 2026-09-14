@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>Piton Studios — Web Showcase Typography V3</title>
+  <style>
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("./fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+      src: url("./fonts/JetBrainsMono-Bold.ttf") format("truetype");
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f2efe9;
+      --soft: #d5d1c9;
+      --red: #d33a3e;
+      --cyan: #00a0d0;
+      --line: rgba(242, 239, 233, 0.2);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1080px;
+      margin: 0;
+      background: #000;
+      color: var(--white);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    body { height: 4050px; overflow: hidden; }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--black);
+    }
+
+    .art {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .frame {
+      position: absolute;
+      inset: 32px;
+      z-index: 20;
+      border: 1px solid rgba(242, 239, 233, 0.12);
+      pointer-events: none;
+    }
+
+    .frame::before,
+    .frame::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      width: 72px;
+      height: 3px;
+    }
+
+    .frame::before { left: -1px; background: var(--red); }
+    .frame::after { right: -1px; background: var(--cyan); }
+
+    .top-erase,
+    .side-erase,
+    .bottom-wash {
+      position: absolute;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .top-erase { display: none; }
+
+    .s08 .top-erase {
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 255px;
+      background: linear-gradient(180deg, var(--black) 0 72%, rgba(10, 10, 10, 0) 100%);
+    }
+
+    .side-erase { display: none; }
+
+    .s09 .side-erase {
+      display: block;
+      left: 0;
+      top: 485px;
+      width: 470px;
+      height: 510px;
+      background: linear-gradient(90deg, var(--black) 0 70%, rgba(10, 10, 10, 0) 100%);
+    }
+
+    .bottom-wash {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 350px;
+      background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.9) 31%, var(--black) 54% 100%);
+    }
+
+    .s07 .bottom-wash {
+      height: 440px;
+      background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, var(--black) 34% 100%);
+    }
+
+    .topbar {
+      position: absolute;
+      z-index: 12;
+      top: 68px;
+      left: 72px;
+      right: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .brand img {
+      display: block;
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 8px;
+      text-transform: uppercase;
+    }
+
+    .brand-copy strong {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .brand-copy span {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .count {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--cyan);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .count::before {
+      content: "";
+      width: 64px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .title-block {
+      position: absolute;
+      z-index: 14;
+      left: 72px;
+      right: 72px;
+      bottom: 67px;
+    }
+
+    .title {
+      max-width: 920px;
+      margin: 0;
+      padding-left: 30px;
+      border-left: 8px solid var(--red);
+      color: var(--white);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .meta strong { color: var(--red); font-weight: 700; }
+    .meta span:last-child { color: var(--cyan); }
+  </style>
+</head>
+<body>
+  <section class="slide s07">
+    <img class="art" src="../../../public/assets/social/web-showcase-concepts-v2-branded/upload-07-curved-web-gallery.jpg" alt="">
+    <div class="bottom-wash"></div>
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../../public/logo.webp" alt="Piton Studios">
+        <div class="brand-copy"><strong>Piton Studios</strong><span>Web Showcase</span></div>
+      </div>
+      <div class="count">07 / 09</div>
+    </header>
+    <div class="title-block">
+      <h1 class="title">Web Vitrini</h1>
+      <div class="meta"><strong>Selected Works</strong><span>Design / Code / AI</span><span>pitonstudios.com</span></div>
+    </div>
+    <div class="frame"></div>
+  </section>
+
+  <section class="slide s08">
+    <img class="art" src="../../../public/assets/social/web-showcase-concepts-v2-branded/upload-08-isometric-website-city.jpg" alt="">
+    <div class="top-erase"></div>
+    <div class="bottom-wash"></div>
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../../public/logo.webp" alt="Piton Studios">
+        <div class="brand-copy"><strong>Piton Studios</strong><span>Web Showcase</span></div>
+      </div>
+      <div class="count">08 / 09</div>
+    </header>
+    <div class="title-block">
+      <h1 class="title">Dijital Seçki</h1>
+      <div class="meta"><strong>Selected Works</strong><span>Design / Code / AI</span><span>pitonstudios.com</span></div>
+    </div>
+    <div class="frame"></div>
+  </section>
+
+  <section class="slide s09">
+    <img class="art" src="../../../public/assets/social/web-showcase-concepts-v2-branded/upload-09-infinite-scroll-tunnel.jpg" alt="">
+    <div class="side-erase"></div>
+    <div class="bottom-wash"></div>
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../../public/logo.webp" alt="Piton Studios">
+        <div class="brand-copy"><strong>Piton Studios</strong><span>Web Showcase</span></div>
+      </div>
+      <div class="count">09 / 09</div>
+    </header>
+    <div class="title-block">
+      <h1 class="title">Bir Stüdyo.<br>Çok Dünya.</h1>
+      <div class="meta"><strong>Selected Works</strong><span>Design / Code / AI</span><span>pitonstudios.com</span></div>
+    </div>
+    <div class="frame"></div>
+  </section>
+</body>
+</html>
