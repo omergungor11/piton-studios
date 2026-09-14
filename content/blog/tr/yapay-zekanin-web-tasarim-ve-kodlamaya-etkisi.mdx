@@ -1,0 +1,189 @@
+---
+title: "Yapay zekâ web tasarımını ve kodlamayı nasıl değiştiriyor? Verilerle rehber"
+description: "Yapay zekânın web tasarım ve yazılım geliştirmeye etkisi: hız kazancı, kod kalitesi, güvenlik, erişilebilirlik ve arama görünürlüğü üzerine kaynaklı veriler ve uygulama planı."
+date: 2026-09-14
+tags: ["yapay zeka", "web tasarım", "yazılım geliştirme"]
+author: "Piton Studios"
+draft: false
+translationKey: ai-impact-on-web-design-and-coding
+sources:
+  - title: "Stack Overflow — 2025 Developer Survey: AI"
+    url: "https://survey.stackoverflow.co/2025/ai"
+  - title: "Stack Overflow — 2024 Developer Survey: AI"
+    url: "https://survey.stackoverflow.co/2024/ai"
+  - title: "Peng vd. (2023) — The Impact of AI on Developer Productivity: Evidence from GitHub Copilot"
+    url: "https://arxiv.org/abs/2302.06590"
+  - title: "METR (2025) — Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+    url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+  - title: "Google Cloud — 2025 DORA State of AI-assisted Software Development"
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report"
+  - title: "Google — Alphabet 2024 3. çeyrek CEO konuşması"
+    url: "https://blog.google/inside-google/message-ceo/alphabet-earnings-q3-2024/"
+  - title: "GitClear — AI Copilot Code Quality: 2025 Research"
+    url: "https://www.gitclear.com/ai_assistant_code_quality_2025_research"
+  - title: "Veracode — 2025 GenAI Code Security Report"
+    url: "https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/"
+  - title: "Perry vd. — Do Users Write More Insecure Code with AI Assistants?"
+    url: "https://arxiv.org/abs/2211.03622"
+  - title: "Gartner — 2028'e kadar yazılım mühendislerinin %75'i AI kod asistanı kullanacak"
+    url: "https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028"
+  - title: "WebAIM — The WebAIM Million 2025"
+    url: "https://webaim.org/projects/million/2025"
+  - title: "Figma — 2025 AI Report"
+    url: "https://www.figma.com/blog/figma-2025-ai-report-perspectives/"
+  - title: "Pew Research Center — Google kullanıcıları AI özeti gördüğünde bağlantılara daha az tıklıyor"
+    url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+faq:
+  - q: "Yapay zekâ web tasarımcılarının ve yazılımcıların yerini alacak mı?"
+    a: "Mevcut veriler bir yer değiştirmeden çok iş tanımının değiştiğini gösteriyor. Yapay zekâ taslak, tekrar eden kod ve varyasyon üretimini hızlandırıyor; ihtiyaç analizi, mimari karar, güvenlik incelemesi, marka yargısı ve sonuçtan sorumluluk hâlâ insanda kalıyor. Değer, bu kararları iyi veren ekiplere kayıyor."
+  - q: "Yapay zekâ ile yapılan web sitesi daha ucuza mal olur mu?"
+    a: "Bazı kalemlerde evet. İlk taslak, içerik varyasyonları ve tekrar eden bileşenler daha kısa sürer. Buna karşın test, güvenlik kontrolü, erişilebilirlik ve içerik doğrulaması azalmaz; atlanırsa maliyet yayın sonrasına kayar. Bütçeyi belirleyen hâlâ kapsam, entegrasyonlar ve kalite beklentisidir."
+  - q: "Yapay zekânın yazdığı kod güvenli mi?"
+    a: "Kendiliğinden güvenli değildir. Veracode'un 2025 raporunda yapay zekâ üretimi kod, testlerin yüzde 45'inde riskli güvenlik açığı içerdi. Stanford araştırmacıları da asistan kullananların daha az güvenli kod yazıp kodlarını daha güvenli sandığını buldu. Kod incelemesi, bağımlılık taraması ve güvenlik testi zorunlu kalmalıdır."
+  - q: "Yapay zekâ araçları geliştiricileri gerçekten hızlandırıyor mu?"
+    a: "Göreve ve bağlama göre değişiyor. İyi tanımlı, izole bir görevde Copilot kullanan grup işi yüzde 55,8 daha hızlı bitirdi. Buna karşın METR'in 2025 deneyinde, kendi büyük projelerinde çalışan deneyimli geliştiriciler yapay zekâ ile yüzde 19 daha yavaş kaldı. Hız kazancı ölçülmeden varsayılmamalıdır."
+  - q: "Yapay zekâ ile üretilen içerik SEO açısından sorun yaratır mı?"
+    a: "Üretim yöntemi tek başına sorun değildir; sorun, özgün bilgi ve deneyim taşımayan, doğrulanmamış içeriktir. Arama sonuçlarında yapay zekâ özetleri yaygınlaştıkça yalnızca genel bilgiyi tekrar eden sayfalar tıklama kaybediyor. Kaynaklı veri, net cevap ve gerçek uzmanlık içeren sayfalar hem aramada hem yapay zekâ yanıtlarında daha görünür kalır."
+  - q: "Web projemde yapay zekâ kullanılıp kullanılmadığını sormalı mıyım?"
+    a: "Evet, ama asıl sorulması gereken kullanımın nasıl denetlendiğidir. Hangi işlerde yapay zekâ kullanıldığını, üretilen kodun kim tarafından incelendiğini, güvenlik ve erişilebilirlik testlerinin nasıl yapıldığını ve müşteri verisinin hangi araçlarla paylaşıldığını teklif aşamasında yazılı olarak isteyin."
+---
+
+Yapay zekâ, web tasarımı ve yazılım geliştirmeyi birkaç yıl içinde deneysel bir yardımcıdan günlük çalışma aracına dönüştürdü. Stack Overflow'un 2025 anketine göre geliştiricilerin **yüzde 84'ü** yapay zekâ araçlarını kullanıyor veya kullanmayı planlıyor. Ancak daha fazla kullanım, otomatik olarak daha iyi web sitesi anlamına gelmiyor. **Yapay zekâ üretimi ucuzlatıyor; doğrulamayı, güvenliği ve kararın sorumluluğunu ise ucuzlatmıyor.** Bir işletme için önemli olan, bu farkı gören bir ekiple çalışmaktır.
+
+Bu rehber, web sitesi yaptırmayı veya yenilemeyi planlayan işletme sahipleri ve pazarlama ekipleri için hazırlandı. Aşağıdaki bütün rakamlar bağımsız araştırmalardan alındı ve kaynakları metin içinde bağlantılıdır; Piton Studios müşteri verisi değildir. Doğrudan uygulamaya geçmek için [yapay zekâ destekli proje akışına](#yapay-zekâ-destekli-web-projesi-nasıl-yürütülmeli) veya [teklif alırken sorulacak sorulara](#teklif-alırken-sorulacak-sorular) ilerleyebilirsiniz.
+
+<KeyTakeaways title="Bu rehberden çıkarılacak kararlar" items={[
+  "Yapay zekâ kullanımı artık standart; fark yaratan, çıktının nasıl denetlendiği.",
+  "Hız kazancı göreve bağlıdır: izole görevlerde büyük, karmaşık mevcut projelerde sınırlı veya negatif olabilir.",
+  "Yapay zekâ üretimi kod güvenlik ve erişilebilirlik testinden muaf tutulmamalı.",
+  "Tasarımda yapay zekâ varyasyon üretir; marka, hiyerarşi ve kullanıcı yargısı insanda kalır.",
+  "Arama sonuçlarındaki yapay zekâ özetleri, özgün ve kaynaklı içeriğin değerini artırıyor."
+]} />
+
+## Rakamlarla tablo
+
+Yapay zekânın yazılım ekiplerine yayılma hızı, son yılların en belirgin teknoloji değişimlerinden biri. Stack Overflow'un [2024 anketinde](https://survey.stackoverflow.co/2024/ai) yapay zekâ araçlarını kullanan veya kullanmayı planlayan geliştiricilerin oranı yüzde 76'ydı; bir önceki yıl bu oran yüzde 70 seviyesindeydi. [2025 anketinde](https://survey.stackoverflow.co/2025/ai) oran yüzde 84'e çıktı ve profesyonel geliştiricilerin yüzde 51'i bu araçları her gün kullandığını söyledi.
+
+<TrendChart title="Yapay zekâ araçlarını kullanan veya kullanmayı planlayan geliştiriciler" caption="Stack Overflow Developer Survey 2023, 2024 ve 2025 sonuçları. Her yıl farklı katılımcı grubuyla yapılan anket verisidir." dataTableLabel="Grafik verilerini tablo olarak aç" unit="%" max={100} labels={["2023", "2024", "2025"]} series={[
+  { name: "Kullanıyor veya planlıyor", points: [70, 76, 84] }
+]} />
+
+Kurumsal tarafta da tablo benzer. Google'ın 2025 [DORA raporu](https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report), ankete katılan teknoloji profesyonellerinin yüzde 90'ının işinde yapay zekâ kullandığını bildiriyor. Gartner, 2023 başında yüzde 10'un altında olan kurumsal yazılım mühendisi kullanım oranının [2028'e kadar yüzde 75'e ulaşacağını](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028) öngörüyor. Google CEO'su Sundar Pichai ise Ekim 2024'te şirkette [yeni yazılan kodun dörtte birinden fazlasının yapay zekâ tarafından üretildiğini](https://blog.google/inside-google/message-ceo/alphabet-earnings-q3-2024/), ardından mühendislerce incelenip kabul edildiğini açıkladı.
+
+<StatGrid items={[
+  { value: "%84", label: "Yapay zekâ araçlarını kullanan veya planlayan geliştirici", note: "STACK OVERFLOW 2025" },
+  { value: "%90", label: "İşinde yapay zekâ kullanan DORA katılımcısı", note: "DORA 2025" },
+  { value: "%25+", label: "Google'da yapay zekânın ürettiği yeni kod payı", note: "GOOGLE · EKİM 2024" },
+  { value: "%45", label: "Riskli güvenlik açığı çıkan AI kod testi", note: "VERACODE 2025" }
+]} />
+
+Pichai'nin cümlesindeki ikinci yarı en az birincisi kadar önemlidir: kod, *mühendislerce incelenip kabul ediliyor.* Yapay zekânın ürettiği satır sayısı artarken bu satırları okuyup sorumluluğunu alan insan emeği ortadan kalkmıyor; işin ağırlığı üretimden incelemeye kayıyor.
+
+## Hız kazancı neden her projede aynı değil
+
+Yapay zekânın geliştirme hızına etkisi hakkındaki en çok alıntılanan çalışmalardan biri, GitHub Copilot ile yapılan [kontrollü deneydir](https://arxiv.org/abs/2302.06590). Deneyde geliştiricilerden JavaScript ile bir HTTP sunucusunu olabildiğince hızlı yazmaları istendi. Copilot kullanan grup görevi ortalama yüzde 55,8 daha hızlı tamamladı. Bu sonuç, iyi tanımlanmış, bağımsız ve sıfırdan başlanan işlerde yapay zekânın ciddi zaman kazandırabildiğini gösteriyor.
+
+Temmuz 2025'te yayımlanan [METR çalışması](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) ise farklı bir tabloyu ortaya koydu. Katkı verdikleri büyük açık kaynak projelerde yıllardır çalışan 16 deneyimli geliştirici, 246 gerçek görev üzerinde rastgele gruplara ayrıldı. Yapay zekâ araçlarına izin verilen görevlerde geliştiriciler **yüzde 19 daha yavaş** kaldı. Daha dikkat çekici olan, katılımcıların çalışmadan önce yüzde 24 hızlanma beklemesi ve çalışmadan sonra bile yüzde 20 hızlandıklarını düşünmesiydi.
+
+<Callout type="key" title="Algılanan hız ile ölçülen hız aynı değil">
+METR deneyinde geliştiriciler yavaşladıkları hâlde kendilerini hızlanmış hissetti. Bir ekibin "yapay zekâ ile iki kat hızlıyız" demesi, teslim süresinin gerçekten kısaldığını kanıtlamaz. Projede hız iddiası varsa bunu takvim, teslim edilen iş ve hata sayısıyla takip edin.
+</Callout>
+
+İki çalışma birbiriyle çelişmiyor; farklı işleri ölçüyor. Kurumsal bir web projesi genellikle iki tür işi birlikte içerir:
+
+| İş türü | Örnek | Yapay zekânın beklenen etkisi |
+|---|---|---|
+| İzole ve iyi tanımlı | Yeni bir bileşen iskeleti, form doğrulama kuralları, test verisi | Belirgin hızlanma |
+| Bağlama bağımlı | Mevcut CMS'e entegrasyon, eski URL yapısını koruma, ödeme akışı | Sınırlı; inceleme süresi kazancı yiyebilir |
+| Karar gerektiren | Bilgi mimarisi, marka dili, veri modeli, güvenlik sınırları | Taslak üretir, kararın yerini tutmaz |
+| Doğrulama | Erişilebilirlik testi, çapraz tarayıcı kontrolü, içerik doğruluğu | Yardımcı olabilir, sorumluluk devredilemez |
+
+Bir projenin ne kadarının ilk satıra, ne kadarının entegrasyon ve doğrulamaya ayrıldığı, yapay zekâdan beklenebilecek toplam zaman kazancını belirler. Bu nedenle bütçe konuşmalarında "yapay zekâ kullanıyoruz, o yüzden yarı fiyatına" gibi genellemelere temkinli yaklaşın. Kalemlerin nasıl oluştuğunu [kurumsal web sitesi maliyeti rehberimizde](/tr/blog/kurumsal-web-sitesi-maliyeti) ayrıntılı anlatıyoruz.
+
+## Tasarım tarafında değişen ne
+
+Web tasarımında yapay zekâ en çok hız ve çeşitlilik tarafında hissediliyor. Bir sayfa düzeni için çok sayıda alternatif üretmek, içerik yer tutucularını gerçekçi metinlerle doldurmak, görsel yönleri kısa sürede denemek veya bir tasarım sistemindeki bileşen varyasyonlarını çıkarmak eskisinden çok daha az zaman alıyor. Tasarımcı, ilk boş sayfayla daha az, seçim ve düzeltmeyle daha çok vakit geçiriyor.
+
+Figma'nın 2.500 kullanıcıyla yaptığı [2025 yapay zekâ raporu](https://www.figma.com/blog/figma-2025-ai-report-perspectives/) bu değişimin iki yüzünü de gösteriyor. Katılımcıların yüzde 78'i yapay zekânın işlerinin verimliliğini belirgin şekilde artırdığını söylerken, çıktıya güvenebildiğini söyleyenlerin oranı yalnızca yüzde 32'de kalıyor. Memnuniyet ve kalite algısında geliştiricilerle tasarımcılar arasında da açık bir fark var.
+
+<BarChart title="Figma 2025: yapay zekâ araçlarına bakış" caption="Figma 2025 AI Report, 2.500 Figma kullanıcısı. Değerler ilgili ifadeye katılan katılımcıların yüzdesidir." dataTableLabel="Grafik verilerini tablo olarak aç" unit="%" max={100} data={[
+  { label: "Geliştirici: araçlardan memnunum", value: 82 },
+  { label: "Tasarımcı: araçlardan memnunum", value: 69 },
+  { label: "Geliştirici: işimin kalitesi arttı", value: 68, highlight: true },
+  { label: "Tasarımcı: işimin kalitesi arttı", value: 54, highlight: true }
+]} />
+
+Tasarımcıların daha temkinli olması şaşırtıcı değil. Bir kod parçasının doğru çalışıp çalışmadığı test edilebilir; bir tasarımın markaya uygun, anlaşılır ve ikna edici olup olmadığı ise bağlama ve yargıya dayanır. Yapay zekâ ortalamaya yakın, "makul görünen" çözümler üretmekte başarılıdır. Rakiplerinden ayrışması gereken bir marka için bu ortalama, çoğu zaman başlangıç noktası olabilir ama sonuç olamaz.
+
+Uygulamada yapay zekâyı tasarım sürecinde şu işlerde verimli buluyoruz: içerik hiyerarşisi için alternatif taslaklar, mikro metin önerileri, farklı ekran genişliklerinde düzen denemeleri ve görsel keşif. Buna karşın bilgi mimarisi, tipografi sistemi, dönüşüm akışının kurgusu ve marka dili, gerçek kullanıcı ve iş hedefi bilgisiyle verilmesi gereken kararlar olarak kalıyor. [Web tasarım hizmetimizde](/tr/hizmetler/web-design) bu ayrımı iş planına baştan yazıyoruz.
+
+## Kod kalitesi ve güvenlik riskleri
+
+Yapay zekânın kod üretimini hızlandırması, bakım yükünü de hızla artırabilir. GitClear'ın 2020–2024 dönemine ait kod değişikliklerini inceleyen [2025 araştırması](https://www.gitclear.com/ai_assistant_code_quality_2025_research), kopyala-yapıştır niteliğindeki kod satırlarının payının 2021'de yüzde 8,3'ten 2024'te yüzde 12,3'e çıktığını buldu. Aynı dönemde mevcut kodu taşıyarak yeniden düzenleyen satırların payı yüzde 25'ten yüzde 10'un altına indi ve beş satırdan uzun tekrarlanan kod bloklarının sıklığı 2024'te sekiz kat arttı.
+
+Bu tablo, yapay zekânın mevcut kodu yeniden kullanmak yerine yeni kod eklemeye yatkın olmasıyla uyumlu. Kısa vadede özellik daha çabuk teslim edilir; uzun vadede aynı mantığın birkaç yerde farklı sürümleri oluşur. Bir hata düzeltmesi veya tasarım değişikliği tek yerden yapılamaz hâle gelir ve sitenin bakım maliyeti artar.
+
+Güvenlik tarafındaki bulgular daha ciddi. Veracode'un 100'den fazla dil modelini Java, JavaScript, Python ve C# görevlerinde test ettiği [2025 raporuna](https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/) göre yapay zekâ üretimi kod, testlerin yüzde 45'inde riskli güvenlik açığı içerdi. Stanford araştırmacılarının [kullanıcı çalışması](https://arxiv.org/abs/2211.03622) ise insan tarafındaki riski gösteriyor: yapay zekâ asistanı kullanan katılımcılar anlamlı ölçüde daha az güvenli kod yazdı ve buna rağmen kodlarının güvenli olduğuna daha fazla inandı.
+
+<Callout type="warn" title="İletişim formu da bir güvenlik yüzeyidir">
+Kurumsal bir sitede güvenlik yalnızca ödeme sayfasında önemli değildir. İletişim ve teklif formları, dosya yükleme alanları, yönetim paneli girişleri ve üçüncü taraf entegrasyonları; doğrulama, hız sınırı ve veri koruma gerektirir. Yapay zekânın "çalışan" bir form yazması, formun kötüye kullanıma karşı korunduğu anlamına gelmez.
+</Callout>
+
+Bu bulgular yapay zekâdan vazgeçmeyi değil, denetimi sistemli hâle getirmeyi gerektiriyor. Önerdiğimiz asgari kontroller şunlar:
+
+1. Yapay zekâ üretimi her değişiklik, bir insan tarafından okunarak birleştirilsin; "testler geçti" tek başına onay sayılmasın.
+2. Bağımlılık ve paket önerileri tek tek doğrulansın; var olmayan veya bakımı bırakılmış paket eklenmesin.
+3. Kullanıcı girdisi alan her uç noktada doğrulama, yetkilendirme ve hız sınırı ayrıca test edilsin.
+4. Tekrarlanan kod blokları düzenli olarak ortak bileşen veya yardımcı fonksiyona toplansın.
+5. API anahtarları, müşteri verileri ve gizli yapılandırmalar yapay zekâ araçlarına yapıştırılmasın.
+
+## Erişilebilirlik otomatik olarak düzelmiyor
+
+Yapay zekânın web'i kendiliğinden daha erişilebilir hâle getireceği beklentisi henüz verilerle desteklenmiyor. WebAIM'in en popüler bir milyon ana sayfayı taradığı [2025 raporuna](https://webaim.org/projects/million/2025) göre sayfaların yüzde 94,8'inde otomatik araçlarla tespit edilebilen WCAG hataları bulunuyor ve sayfa başına ortalama 51 hata var. Bir yıl önce bu oran yüzde 95,9'du; iyileşme var ama çok yavaş.
+
+Yapay zekâ modelleri, internetteki mevcut kodla eğitildiği için bu kodun alışkanlıklarını da taşıyabilir: etiketsiz form alanları, yetersiz renk kontrastı, alternatif metni olmayan görseller ve klavyeyle kullanılamayan etkileşimler. Doğru yönlendirildiğinde yapay zekâ erişilebilir kod yazabilir, ancak bunun kontrolü ekran okuyucu ve klavye testleriyle yapılmalıdır. Pratik bir kontrol listesi için [erişilebilir web tasarımı ve form rehberimize](/tr/blog/erisilebilir-web-tasarimi-form-rehberi) göz atabilirsiniz.
+
+## Arama ve görünürlük de değişiyor
+
+Yapay zekâ yalnızca siteyi üretme biçimini değil, sitenin bulunma biçimini de değiştiriyor. Pew Research Center'ın ABD'deki 900 yetişkinin Mart 2025 tarama verisine dayanan [analizine](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) göre Google'da yapay zekâ özeti görünen aramalarda kullanıcılar sonuç bağlantılarına ziyaretlerin yüzde 8'inde tıkladı; özet görünmeyen aramalarda bu oran yüzde 15'ti. Özetin içinde verilen kaynak bağlantısına tıklama ise ziyaretlerin yalnızca yüzde 1'inde gerçekleşti.
+
+Bu durum web tasarımını doğrudan etkiliyor. Genel bilgiyi tekrar eden sayfalar, cevabı arama sonucunda alan kullanıcıyı siteye getirmekte zorlanıyor. Buna karşın özgün veri, net tanımlar, yapılandırılmış soru-cevap bölümleri ve gerçek deneyim içeren sayfalar hem klasik aramada hem de yapay zekâ yanıtlarında kaynak olarak öne çıkma şansını koruyor. Bu yaklaşımı [yapay zekâ çağında arama görünürlüğü rehberimizde](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo) SEO'dan GEO'ya geçiş başlığıyla ele alıyoruz.
+
+Teknik taraf da bu görünürlüğün parçası. Hızlı açılan, anlamlı HTML yapısına sahip, içeriği JavaScript çalışmadan da okunabilen sayfalar hem arama motorları hem de yapay zekâ tarayıcıları için daha kolay işlenir. Performans temellerini [hızlı web sitesi nasıl yapılır](/tr/blog/hizli-web-sitesi-nasil-yapilir) yazımızda, platform seçiminin bu konudaki etkisini [Next.js mi WordPress mi](/tr/blog/nextjs-mi-wordpress-mi) karşılaştırmasında bulabilirsiniz.
+
+## Yapay zekâ destekli web projesi nasıl yürütülmeli
+
+Yapay zekânın faydasını alıp risklerini sınırlamanın yolu, her aşamada makinenin ve insanın rolünü baştan yazmaktır. Aşağıdaki akış, kurumsal bir web projesi için önerdiğimiz çalışma modelidir. Her proje için birebir kopyalanacak bir şablon değil, rol dağılımını konuşmaya başlamak için bir çerçevedir.
+
+<FlowDiagram title="Önerilen çalışma modeli: yapay zekâ ve insan rol dağılımı" caption="Her adımda yapay zekâ taslak ve hız sağlar; onay, sorumluluk ve son karar ekipte kalır." steps={[
+  { label: "Keşif ve kapsam", ai: "Rakip sitelerin yapısını özetler, soru listesi ve içerik envanteri taslağı çıkarır.", human: "İş hedefini, hedef kitleyi ve öncelikli dönüşümü belirler; kapsamı onaylar." },
+  { label: "Bilgi mimarisi ve içerik", ai: "Sayfa iskeleti, başlık önerileri ve metin varyasyonları üretir.", human: "Doğruluğu, marka dilini ve özgün uzmanlık bilgisini ekler; iddiaları kaynaklarla kontrol eder." },
+  { label: "Arayüz tasarımı", ai: "Düzen alternatifleri, bileşen varyasyonları ve görsel keşif sunar.", human: "Tasarım sistemini, hiyerarşiyi ve erişilebilir renk ve tipografi kararlarını verir." },
+  { label: "Geliştirme", ai: "Bileşen iskeletleri, tekrar eden kod, test ve dokümantasyon taslağı yazar.", human: "Mimariyi kurar, her değişikliği okur, tekrar eden kodu sadeleştirir ve entegrasyonları yönetir." },
+  { label: "Test ve güvenlik", ai: "Test senaryosu önerir, olası hata ve güvenlik açıklarını işaretler.", human: "Klavye, ekran okuyucu, form güvenliği ve gerçek cihaz testlerini yapar; yayına onay verir." },
+  { label: "Yayın ve büyüme", ai: "Meta açıklama, yapılandırılmış veri ve rapor özetleri için taslak üretir.", human: "Ölçüm kurulumunu doğrular, sonuçları yorumlar ve bir sonraki iyileştirmeyi seçer." }
+]} />
+
+Bu modelde yapay zekânın katkısı gerçektir ama görünmez değildir. Her aşamanın çıktısını kimin onayladığı yazılı olduğunda, sorun çıktığında hangi adımın gözden geçirileceği de bellidir. İş süreçlerinizde yapay zekâdan nasıl ölçülebilir getiri alınabileceğini merak ediyorsanız [KOBİ'ler için yapay zekâ otomasyonu ve ROI rehberimize](/tr/blog/kobiler-icin-yapay-zeka-otomasyonu-roi) bakabilirsiniz.
+
+## Teklif alırken sorulacak sorular
+
+Bir ajans veya serbest çalışanın yapay zekâ kullanması artık bir fark değil, sektörün olağan hâli. Değerlendirmeniz gereken, bu kullanımın projenize nasıl yansıdığıdır. Aşağıdaki soruları teklif aşamasında sormanızı ve cevapları yazılı almanızı öneriyoruz.
+
+| Soru | Neden önemli? | İyi bir cevapta ne olur? |
+|---|---|---|
+| Hangi işlerde yapay zekâ kullanıyorsunuz? | Beklenen hız ve maliyet etkisini anlamak | Aşama bazında somut kullanım alanları |
+| Üretilen kodu kim, nasıl inceliyor? | Kalite ve bakım yükü | Kod incelemesi, test ve sorumlu kişi |
+| Güvenlik testi nasıl yapılıyor? | Form, panel ve veri güvenliği | Girdi doğrulama, bağımlılık taraması, yetki testi |
+| Erişilebilirlik nasıl doğrulanıyor? | Yasal risk ve kullanıcı kaybı | Otomatik tarama artı klavye ve ekran okuyucu testi |
+| Müşteri verisi hangi araçlarla paylaşılıyor? | Gizlilik ve sözleşme yükümlülükleri | Kullanılan araçlar ve veri paylaşım sınırları |
+| İçerikteki bilgiler nasıl doğrulanıyor? | Hatalı iddia ve itibar riski | Kaynak kontrolü ve uzman onayı |
+| Yayın sonrası bakımı kim üstleniyor? | Yapay zekâ ile hızla büyüyen kod tabanı | Bakım kapsamı, güncelleme ve hata düzeltme süreci |
+
+Bu soruların cevabı net değilse düşük fiyat, maliyetin yayın sonrasına ertelenmesi anlamına gelebilir. Proje aşamalarının genel akışını [kurumsal web projesi süreci](/tr/blog/kurumsal-web-projesi-sureci) yazımızda, paket bazında başlangıç bantlarını [fiyatlandırma sayfamızda](/tr/fiyatlandirma) inceleyebilirsiniz. Yapay zekâ ile ilgili sık sorulan diğer sorular için [SSS sayfamızdaki yapay zekâ bölümüne](/tr/sss#faq-hallucination) göz atabilirsiniz.
+
+## İşletmeler için sonuç
+
+Yapay zekâ web tasarımı ve kodlamayı daha hızlı, daha deneysel ve bazı kalemlerde daha ekonomik hâle getiriyor. Aynı zamanda denetlenmeyen üretimin bedelini de büyütüyor: tekrar eden kod, güvenlik açıkları, erişilebilirlik hataları ve kimsenin sorumluluğunu almadığı içerik. Veriler, kazancın aracı kullanmaktan değil, aracı doğru işlerde kullanıp çıktısını sistemli biçimde doğrulamaktan geldiğini gösteriyor.
+
+Piton Studios olarak yapay zekâyı taslak, varyasyon ve tekrar eden işlerde hız kazandırmak için kullanıyor; mimari, güvenlik, erişilebilirlik ve içerik doğruluğu kararlarını ekip sorumluluğunda tutuyoruz. Web sitenizi veya ürününüzü bu yaklaşımla planlamak isterseniz [web uygulaması](/tr/hizmetler/web-app) ve [yapay zekâ entegrasyonu](/tr/hizmetler/ai-integration) hizmetlerimizi inceleyebilir, projenizi konuşmak için [iletişim sayfamızdan](/tr/iletisim) bize ulaşabilirsiniz.

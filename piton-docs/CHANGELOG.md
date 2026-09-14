@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-14 — Blog: yapay zekânın web tasarım ve kodlamaya etkisi (TASK-057)
+
+- Yeni Türkçe rehber: `content/blog/tr/yapay-zekanin-web-tasarim-ve-kodlamaya-etkisi.mdx`. Stack Overflow, METR, GitHub Copilot deneyi, GitClear, Veracode, Stanford, Gartner, WebAIM, Figma ve Pew verileri birincil kaynak linkleriyle; 2 grafik (açılır veri tablolu), sayı kartları, iş akışı diyagramı, SSS, kaynakça, iç linkler ve iletişim yönlendirmesi.
+- Yeni MDX bileşeni `FlowDiagram`: adım bazında yapay zekâ ve insan rolünü gösteren, tema uyumlu, numaralı liste tabanlı iş akışı görseli (`.mdx-flow-*` stilleri).
+- `scripts/check-blog-pages.py` yeni yazıyı da doğruluyor.
+
 ## 2026-09-14 — VELAIR portfolyoya eklendi (TASK-056)
 
 - WORKS #50: `velair-experience` — scroll ile ilerleyen sinematik 3B özel jet deneyimi (Next.js, React Three Fiber, Drei, GSAP ScrollTrigger). Canlı link: https://velair-experience.vercel.app/

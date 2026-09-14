@@ -11,11 +11,11 @@
 | 4 | SEO + Blog + Iletisim | 8 | 8 | 0 | 0 | 0 |
 | 5 | Icerik Uretimi | 22 | 22 | 0 | 0 | 0 |
 | 6 | Interaktif Portfolyo R&D | 2 | 2 | 0 | 0 | 0 |
-| 7 | Blog Rehberleri | 1 | 1 | 0 | 0 | 0 |
+| 7 | Blog Rehberleri | 2 | 2 | 0 | 0 | 0 |
 | 8 | Portfolyo Guncellemeleri | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **55** | **55** | **0** | **0** | **0** |
+| **Total** | | **56** | **56** | **0** | **0** | **0** |
 
-**Progress**: 55/55 (100%) ✓
+**Progress**: 56/56 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -130,6 +130,7 @@
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
 | TASK-055 | Üç detaylı Türkçe rehber; kaynakça, grafik veri tabloları, BlogPosting geliştirmeleri ve bağlantı doğrulaması | L | COMPLETED |
+| TASK-057 | Yapay zekânın web tasarım ve kodlamaya etkisi rehberi (tr): doğrulanmış birincil kaynaklı veriler, 2 grafik, sayı kartları, yeni `FlowDiagram` MDX bileşeni, SSS, kaynakça, iç linkler | L | COMPLETED |
 
 ## Phase 8: Portfolyo güncellemeleri (2026-09-14)
 

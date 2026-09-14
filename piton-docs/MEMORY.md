@@ -1,7 +1,8 @@
 # Piton Studios - Project Memory
 
 ## Blog içerik ve altyapı (2026-09-05)
-- Türkçe blog 11 yazı; İngilizce ve Rusça 8'er yazı. Yeni üç rehber yalnızca Türkçe; mevcut çeviri eşlemesi olmayan diller hreflang listesine eklenmiyor.
+- Türkçe blog 12 yazı; İngilizce ve Rusça 8'er yazı. 2026-09-14: `yapay-zekanin-web-tasarim-ve-kodlamaya-etkisi` (yalnızca tr) — rakamlar yalnızca birincil kaynaktan doğrulanmış verilerle; Gartner doğru rakamı %75 (2028) / %10'un altı (2023), %90 değil. Figma 2025 AI raporu: %78 verimlilik / %32 çıktıya güven (tüm katılımcı); memnuniyet geliştirici %82 – tasarımcı %69, kalite artışı %68 – %54 (araştırma ajanının verdiği %47/%40 yanlıştı — alt ajan rakamlarını birincil sayfadan tekrar kontrol et).
+- MDX `FlowDiagram` bileşeni: `steps: [{label, ai, human}]` — açılır veri tablosu üretmez, check-blog-pages.py'deki "tam 2 grafik tablosu" kuralını etkilemez. Yeni üç rehber yalnızca Türkçe; mevcut çeviri eşlemesi olmayan diller hreflang listesine eklenmiyor.
 - Yeni konular: SEO site geçişi, B2B landing page, erişilebilir formlar. Altı grafik verisi temsili senaryo olarak etiketli; müşteri performansı iddiası yok.
 - İsteğe bağlı frontmatter `sources: [{title, url}]`, görünür kaynakça + BlogPosting citation üretir. Grafiklerde `dataTableLabel` açılabilir tablo sağlar.
 - Production sunucusu üzerinde doğrulama: `python3 scripts/check-blog-pages.py http://localhost:3100`.
