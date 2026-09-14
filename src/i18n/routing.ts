@@ -76,5 +76,20 @@ export const routing = defineRouting({
       en: '/contact',
       ru: '/contact',
     },
+    '/privacy': {
+      tr: '/gizlilik-politikasi',
+      en: '/privacy',
+      ru: '/privacy',
+    },
+    '/cookies': {
+      tr: '/cerez-politikasi',
+      en: '/cookies',
+      ru: '/cookies',
+    },
+    '/terms': {
+      tr: '/kullanim-kosullari',
+      en: '/terms',
+      ru: '/terms',
+    },
   },
 });

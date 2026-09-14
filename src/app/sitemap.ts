@@ -4,6 +4,7 @@ import { absoluteUrl, type Href } from '@/lib/seo';
 import { getAllProjectSlugs, getAllServiceSlugs } from '@/lib/data';
 import { getAllSectorSlugs } from '@/lib/sectors';
 import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog';
+import { LEGAL_READY } from '@/lib/legal';
 
 type Entry = MetadataRoute.Sitemap[number];
 
@@ -42,6 +43,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries('/sectors', { changeFrequency: 'monthly', priority: 0.7 }),
     ...entries('/about', { changeFrequency: 'yearly', priority: 0.6 }),
     ...entries('/contact', { changeFrequency: 'yearly', priority: 0.7 }),
+    // Hukuki sayfalar yalnizca veri sorumlusu bilgisi tamamsa yayinda.
+    ...(LEGAL_READY
+      ? [
+          ...entries('/privacy', { changeFrequency: 'yearly', priority: 0.3 }),
+          ...entries('/cookies', { changeFrequency: 'yearly', priority: 0.3 }),
+          ...entries('/terms', { changeFrequency: 'yearly', priority: 0.3 }),
+        ]
+      : []),
   ];
 
   for (const slug of getAllProjectSlugs()) {

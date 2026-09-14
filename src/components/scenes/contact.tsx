@@ -4,6 +4,8 @@ import { useState, type FormEvent } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Reveal } from '@/components/motion';
 import type { ContactResponse } from '@/lib/contact';
+import { Link } from '@/i18n/navigation';
+import { LEGAL_READY } from '@/lib/legal';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -147,6 +149,18 @@ export default function ContactScene() {
           {status === 'sent' && <span>{t('sent')}</span>}
           {status === 'error' && <span>{t(errorKey)}</span>}
         </button>
+
+        {LEGAL_READY ? (
+          <p className="contact-form-legal">
+            {t.rich('formLegal', {
+              link: (chunks) => (
+                <Link href="/privacy" data-cursor="hover">
+                  {chunks}
+                </Link>
+              ),
+            })}
+          </p>
+        ) : null}
 
         <div className="contact-form-status" role="status" aria-live="polite">
           {status === 'sent' && <span className="is-ok">{t('sentDetail')}</span>}

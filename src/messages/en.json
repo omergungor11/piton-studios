@@ -313,7 +313,8 @@
     "sentDetail": "Your message reached us. We usually reply within 24 hours.",
     "errorSend": "Couldn't send — email us directly",
     "errorValidation": "Please check the fields",
-    "errorRateLimit": "Too many attempts — please try again later"
+    "errorRateLimit": "Too many attempts — please try again later",
+    "formLegal": "The information you submit is processed to respond to your request, as described in our <link>Privacy Policy and Personal Data Notice</link>."
   },
   "services": {
     "eyebrow": "§ 04",
@@ -601,7 +602,10 @@
     "blog": "Blog",
     "faq": "FAQ",
     "pricing": "Pricing",
-    "sectors": "Industries"
+    "sectors": "Industries",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms of Use"
   },
   "works": {
     "velis-ltd": {
@@ -3566,5 +3570,12 @@
     "ctaSub": "Describe your industry and your goal — we will come back within 24 hours with a concrete roadmap.",
     "ctaButton": "Get in touch",
     "detailTitle": "Our take on the sector"
+  },
+  "legal": {
+    "toc": "Contents",
+    "navLabel": "Legal documents",
+    "privacy": "Privacy Policy and Personal Data Notice",
+    "cookies": "Cookie Policy",
+    "terms": "Terms of Use"
   }
 }

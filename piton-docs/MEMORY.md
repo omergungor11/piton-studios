@@ -1,5 +1,10 @@
 # Piton Studios - Project Memory
 
+## Hukuki sayfalar (2026-09-14)
+- Veri sorumlusu: Ömer Faruk Güngör (kayıtlı şirket yok, "Piton Studios" ticari adı), adres 4 Eylül Mah. 889. Sk. Karaca Apt. A Blok, Bozüyük / Bilecik. Yetkili mahkeme Bozüyük. Form yazışmaları iş ilişkisine dönüşmezse 2 yıl saklanır.
+- Veri akışı: form → Resend (ABD) → Gmail (Google, ABD); barındırma + Analytics/Speed Insights → Vercel (ABD). Veritabanı yok. IP yalnızca bellek içi hız sınırı (10 dk).
+- Metinler avukat incelemesinden geçmedi — özellikle KVKK m.9 yurt dışı aktarım bölümü (standart sözleşme / bildirim yükümlülüğü) hukukçuya gösterilmeli.
+
 ## Blog içerik ve altyapı (2026-09-05)
 - Türkçe blog 12 yazı; İngilizce ve Rusça 8'er yazı. 2026-09-14: `yapay-zekanin-web-tasarim-ve-kodlamaya-etkisi` (yalnızca tr) — rakamlar yalnızca birincil kaynaktan doğrulanmış verilerle; Gartner doğru rakamı %75 (2028) / %10'un altı (2023), %90 değil. Figma 2025 AI raporu: %78 verimlilik / %32 çıktıya güven (tüm katılımcı); memnuniyet geliştirici %82 – tasarımcı %69, kalite artışı %68 – %54 (araştırma ajanının verdiği %47/%40 yanlıştı — alt ajan rakamlarını birincil sayfadan tekrar kontrol et).
 - MDX `FlowDiagram` bileşeni: `steps: [{label, ai, human}]` — açılır veri tablosu üretmez, check-blog-pages.py'deki "tam 2 grafik tablosu" kuralını etkilemez. Yeni üç rehber yalnızca Türkçe; mevcut çeviri eşlemesi olmayan diller hreflang listesine eklenmiyor.

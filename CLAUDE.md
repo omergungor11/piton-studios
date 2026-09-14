@@ -67,6 +67,17 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   >
   > JSON-LD: FAQPage + WebPage(`speakable`) + BreadcrumbList + Organization.
   > `/llms.txt` (llmstxt.org bicimi) ve `robots.ts`'teki 14 AI crawler izni de bu isin parcasi.
+- **Hukuki sayfalar** (2026-09-14): Gizlilik Politikası ve KVKK Aydınlatma Metni (`/gizlilik-politikasi`),
+  Çerez Politikası (`/cerez-politikasi`), Kullanım Koşulları (`/kullanim-kosullari`); en/ru: `/privacy`,
+  `/cookies`, `/terms`. Metinler `content/legal/{tr,en,ru}/*.mdx` — **Türkçe metin esastır**, en/ru çeviridir.
+  Veri sorumlusu, adres, e-posta, saklama süresi ve güncelleme tarihi yalnızca `src/lib/legal.ts`'te;
+  MDX'e `<ControllerCard />`, `<LegalEmail />` vb. component'lerle gelir.
+  > `LEGAL_READY` (ad + adres dolu) değilse sayfalar 404, footer linkleri / form notu / sitemap girdileri gizli.
+  >
+  > **Sitede tek çerez `NEXT_LOCALE`** (next-intl, oturum çerezi, yalnızca tarayıcı dilinden farklı dil
+  > açılınca). Analytics/Speed Insights çerezsiz. Yeni çerez, izleme pikseli, harici script veya
+  > üçüncü taraf servis eklenirse **çerez politikası + gizlilik metni (3 dil) + `LEGAL.updated`**
+  > birlikte güncellenmeli; zorunlu olmayan çerez eklenirse onay banner'ı gerekir.
 - **Ceviriler**: 429/429 eksiksiz (works 50, stories 6, servicesList 12, faqItems 75 × 3 dil).
   `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
 - **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.

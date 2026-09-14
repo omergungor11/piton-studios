@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-14 — Hukuki sayfalar (TASK-058)
+
+- Üç dilde üç sayfa: Gizlilik Politikası ve KVKK Aydınlatma Metni, Çerez Politikası, Kullanım Koşulları. Metinler `content/legal/{tr,en,ru}/*.mdx`; en/ru metinlerde Türkçe metnin esas olduğu notu var.
+- Veri sorumlusu bilgisi `src/lib/legal.ts`'te tek kaynak; `LEGAL_READY` kapısı eksik bilgiyle yayını engelliyor.
+- Ortak `LegalPageView` (WebPage + BreadcrumbList JSON-LD, içindekiler, diğer hukuki sayfalara bağlantı), MDX `ControllerCard` / `LegalEmail` / `LegalUpdated` bileşenleri.
+- İç sayfa footer'ına hukuki bağlantılar, iletişim formunun altına aydınlatma notu, sitemap'e 9 URL.
+- Çerez envanteri canlı yanıt başlıklarıyla doğrulandı: yalnızca `NEXT_LOCALE` oturum çerezi (tarayıcı dilinden farklı dil açılınca) + yükleme ekranı için `sessionStorage`.
+
 ## 2026-09-14 — Blog: yapay zekânın web tasarım ve kodlamaya etkisi (TASK-057)
 
 - Yeni Türkçe rehber: `content/blog/tr/yapay-zekanin-web-tasarim-ve-kodlamaya-etkisi.mdx`. Stack Overflow, METR, GitHub Copilot deneyi, GitClear, Veracode, Stanford, Gartner, WebAIM, Figma ve Pew verileri birincil kaynak linkleriyle; 2 grafik (açılır veri tablolu), sayı kartları, iş akışı diyagramı, SSS, kaynakça, iç linkler ve iletişim yönlendirmesi.
