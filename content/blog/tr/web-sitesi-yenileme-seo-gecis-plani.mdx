@@ -1,0 +1,142 @@
+---
+title: "Web sitesi yenileme: SEO geçiş planı ve yayın kontrol listesi"
+description: "Site yenilerken URL envanteri, 301 yönlendirmeleri, canonical, içerik taşıma ve yayın sonrası ölçümü birlikte planlayan ayrıntılı SEO geçiş rehberi."
+date: 2026-09-05
+tags: ["seo", "web tasarım", "site yenileme"]
+author: "Piton Studios"
+draft: false
+translationKey: website-redesign-seo-migration
+sources:
+  - title: "Google Search Central — URL değişiklikleriyle site taşıma"
+    url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+  - title: "Google Search Central — Canonical URL belirleme"
+    url: "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+  - title: "Google Search Central — Yapılandırılmış veri ilkeleri"
+    url: "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+faq:
+  - q: "Site tasarımını değiştirmek için URL'leri de değiştirmek gerekir mi?"
+    a: "Hayır. Sayfanın konusu ve amacı korunuyorsa mevcut URL'yi korumak geçişin kapsamını küçültür. URL değişikliği; bilgi mimarisi, içerik birleşimi veya alan adı değişimi gibi somut bir gerekçeye dayanmalıdır."
+  - q: "Her eski sayfa ana sayfaya yönlendirilebilir mi?"
+    a: "İlgisiz toplu yönlendirmeler doğru değildir. Eski sayfanın ihtiyacını karşılayan yeni sayfaya kalıcı yönlendirme yapılır. Uygun karşılığı bulunmayan ve kaldırılan içerik için 404 veya 410 yanıtı değerlendirilir."
+  - q: "Yenileme sonrası trafik kaybı olmayacağı garanti edilebilir mi?"
+    a: "Hayır. Arama motorlarının değişiklikleri yeniden işlemesi ve eşzamanlı pazar koşulları dalgalanma yaratabilir. Geçiş planının amacı önlenebilir teknik hataları azaltmak, kaybın yerini hızlı bulmak ve düzeltme süresini kısaltmaktır."
+  - q: "301 yönlendirmesi ile canonical aynı şey mi?"
+    a: "Hayır. Yönlendirme tarayıcıyı başka bir URL'ye götürür; canonical aynı veya çok benzer içerikler arasında tercih edilen URL'yi işaret eder. Canonical etiketi, kaldırılan sayfa için yönlendirmenin yerine kullanılamaz."
+  - q: "Yayın günü yalnızca ana sayfayı kontrol etmek yeterli mi?"
+    a: "Hayır. Organik giriş sayfaları, hizmet detayları, iletişim akışı, dil sürümleri ve eski URL örnekleri ayrıca denenmelidir. Ana sayfanın açılması, eski bağlantıların doğru sayfalara ulaştığını göstermez."
+---
+
+Web sitesi yenileme, yeni tasarımın devreye alınmasıyla bitmez. Arama sonuçlarından gelen ziyaretçinin eski bağlantıyla doğru içeriğe ulaşması, satış ekibinin talepleri almaya devam etmesi ve ölçüm sisteminin karşılaştırılabilir veri üretmesi gerekir. **SEO geçiş planı, eski sitedeki değerli giriş noktalarını yeni deneyime taşıyan bir teslim belgesidir.** Tasarım, içerik ve teknik ekip aynı belge üzerinden çalışmadığında güzel görünen bir site sessizce talep kaybedebilir.
+
+Bu rehber, kurumsal sitesini yenileyen işletmeler ve projeyi teslim alan pazarlama ekipleri için hazırlanmıştır. Aşağıdaki tablolar önerdiğimiz çalışma şablonlarıdır; grafiklerdeki sayılar müşteri performansı değildir. Doğrudan uygulamaya geçmek için [URL karar tablosuna](#url-karar-tablosu) veya [yayın kabul listesine](#yayın-kabul-listesi) ilerleyebilirsiniz.
+
+<KeyTakeaways title="Bu rehberden çıkarılacak kararlar" items={[
+  "Tasarım değişikliği ile URL değişikliğini ayrı kararlar olarak ele alın.",
+  "Sayfa envanterinde trafik kadar talep, dış bağlantı ve içerik amacı da bulunsun.",
+  "Her eski URL için koru, taşı, birleştir veya kaldır kararı verin.",
+  "Teknik kabulü ana sayfaya değil, gerçek ziyaretçi yolculuklarına göre yapın.",
+  "Yayın sonrası sorunları sayfa grubu ve kanal bazında izleyin."
+]} />
+
+## Yenilemenin kapsamını önce tanımlayın
+
+Aynı alan adında görsel düzenleme, içerik yönetim sisteminin değişmesi ve bütün URL ağacının yeniden kurulması farklı projelerdir. Tek bir “site yenileme” başlığı altında fiyatlandıklarında geçiş işi genellikle görünmez kalır. Teklifte kaç sayfanın taşınacağı, kaç dilin bulunduğu, dosya arşivinin kapsamı ve yönlendirme sorumlusu açıkça yazılmalıdır.
+
+Önerimiz, başlangıç toplantısında üç ayrı çıktı oluşturmaktır: korunacak işlevler, değişecek içerikler ve teknik olarak taşınacak varlıklar. Örneğin yeni hizmet anlatımı içerik işidir; eski teklif formunun CRM bağlantısı işlevsel bağımlılıktır; indirilebilir katalog ise taşınacak varlıktır. Bunları aynı görev listesinde tutmak, yalnızca tasarım ekranlarının tamamlanmasını proje bitişi sanmayı önler.
+
+Platform kararı henüz verilmediyse [Next.js ve WordPress karşılaştırmasını](/tr/blog/nextjs-mi-wordpress-mi), kapsam ve teslim aşamaları için [kurumsal web projesi sürecini](/tr/blog/kurumsal-web-projesi-sureci) okuyabilirsiniz. Teknoloji seçimi, mevcut içeriğin sahipliğini ve taşınma planını ortadan kaldırmaz.
+
+## Başlangıç ölçümü ve sayfa envanteri
+
+Eski site kapanmadan önce bir başlangıç kaydı alın. Bunu yalnızca toplam ziyaret sayısıyla sınırlandırmayın. Hangi hizmet sayfaları talep oluşturuyor, hangi blog yazıları ürün sayfalarına geçiş sağlıyor, hangi PDF satış görüşmelerinde paylaşılıyor? Bir sayfanın düşük trafiği onun değersiz olduğunu göstermez; çok az ziyaret edilen bir teknik doküman satın alma kararında önemli olabilir.
+
+Envanteri tek bir kaynaktan çıkarmak yerine CMS listesi, mevcut sitemap, analitik giriş sayfaları ve satış ekibinin kullandığı bağlantıları birleştirin. Her satıra bir sorumlu atayın. “Bunun yeni karşılığı neresi?” sorusunun cevabı geliştiricinin tahminine bırakılmamalıdır.
+
+| Envanter alanı | Ne yazılır? | Hangi kararı destekler? |
+|---|---|---|
+| Eski URL | Tam adres ve dil | Eşleme ve test |
+| İçerik amacı | Bilgilendirme, hizmet, doküman | Uygun yeni hedef |
+| İş değeri | Talep, satış desteği, referans | Öncelik |
+| Yeni URL | Onaylanmış son hedef | Taşıma uygulaması |
+| Karar sahibi | İçerik veya ürün sorumlusu | Belirsizliği kapatma |
+| Kabul durumu | Bekliyor, geçti, hata | Yayın hazırlığı |
+
+Başlangıç dönemini işletmenin ritmine göre seçin. Kampanya haftasını sıradan bir ayla karşılaştırmak yanlış alarm üretir. Yakın dönemi kaydetmenin yanında varsa önceki yılın benzer dönemini de ayırın. Ölçüm kurulumu değişecekse iki dönemin aynı tanımları kullanıp kullanmadığını rapora not edin.
+
+## URL karar tablosu
+
+Google'ın [site taşıma rehberi](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes), eski ve yeni URL'lerin eşlenmesini ve uygun hedeflere kalıcı yönlendirme kurulmasını önerir. İlgisiz sayfaları topluca ana sayfaya göndermek soft 404 olarak değerlendirilebilir. Aşağıdaki tablo bu ilkeleri proje iş akışına dönüştürmek için önerdiğimiz şablondur.
+
+| Karar | Örnek durum | Uygulama | Kabul sorusu |
+|---|---|---|---|
+| Koru | Hizmetin amacı değişmedi | Aynı URL'de yeni tasarım | Eski ihtiyacı hâlâ karşılıyor mu? |
+| Taşı | Sayfa yeni kategoriye geçti | Yeni karşılığa 301 veya 308 | Doğru içeriğe tek adımda gidiyor mu? |
+| Birleştir | İki zayıf rehber tek kapsamlı rehber oldu | İlgili ortak hedefe yönlendirme | Eski konular yeni metinde var mı? |
+| Kaldır | Artık sunulmayan, karşılıksız içerik | 404 veya 410 | Kullanıcıya devam yolu sunuluyor mu? |
+
+Buradaki örnek yollar proje şablonudur; bu sitenin canlı rotaları değildir: `/eski-hizmet` adresi `/hizmetler/ilgili-hizmet` sayfasına taşınabilir. Fakat eski sayfa bakım anlaşmasını anlatıyorsa yeni hedefin genel “hakkımızda” sayfası olması anlamlı değildir. URL eşlemesi bir kelime benzerliği işlemi değil, kullanıcı ihtiyacını koruma işidir.
+
+<BarChart title="Örnek envanter: 120 eski URL için karar dağılımı" caption="Temsili planlama verisi; gerçek site taraması veya sektör ortalaması değildir. Dört grubun toplamı 120 URL'dir." dataTableLabel="Grafik verilerini tablo olarak aç" unit=" URL" data={[
+  { label: "Aynı adreste korunacak", value: 72, highlight: true },
+  { label: "Yeni adrese taşınacak", value: 28 },
+  { label: "İlgili içerikte birleşecek", value: 14 },
+  { label: "Karşılıksız kaldırılacak", value: 6 }
+]} />
+
+Bu örnekte 72 sayfa için yönlendirme işi yoktur; yine de içerik ve form kontrolü gerekir. Diğer 48 URL'nin her biri için ayrı kabul kararı bulunur. Böyle bir dağılım, geliştirilecek yönlendirme adedi ile toplam test kapsamının aynı olmadığını görünür kılar.
+
+## İçerik taşıma ve arama niyetini koruma
+
+Yenileme sırasında dikkat edilmesi gereken bir risk, metinlerin yalnızca yeni kutulara sığacak biçimde kısaltılmasıdır. Hizmetin kapsamı, teslim edilenler ve kullanım senaryoları kaybolduğunda sayfa daha temiz görünse bile okuyucunun soruları cevapsız kalır. Bu nedenle her önemli sayfa için eski metinden korunacak bilgi listesi hazırlamayı öneriyoruz.
+
+Listeyi üç bölümde değerlendirin: karar vermek için gerekli bilgi, artık geçerli olmayan bilgi ve daha iyi anlatılabilecek bilgi. Eski müşterilerin soruları ilk grubu bulmaya yardım eder. Eski bir fiyatın yeni tasarıma taşınması ise içerik güncelliği hatasıdır. Hedef, bütün metni olduğu gibi kopyalamak değil, hâlâ geçerli cevabı yeni düzende kaybetmemektir.
+
+Birleşen yazılarda alt başlıkları tek tek kontrol edin. İki sayfanın yalnızca giriş paragrafını birleştirmek, kapsayıcı bir rehber oluşturmaz. Teknik açıklama, uygulama adımları ve uygun hizmet bağlantısı yeni metinde bulunmalıdır. [SEO ve GEO içerik yaklaşımımız](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo) bu konu bütünlüğünü içerik planıyla birlikte ele alır.
+
+## Canonical ve dil bağlantılarını birlikte kontrol edin
+
+Canonical, aynı veya çok benzer içerikler arasındaki tercih edilen adresi belirtir; arama motorunun seçimini mutlak biçimde zorlayan bir komut değildir. Yönlendirmeler, iç bağlantılar ve sitemap farklı adreslere işaret ederse sinyaller karışır. Ayrıntı için [Google'ın canonical dokümanına](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) bakabilirsiniz.
+
+Uygulamada her sayfa grubundan örnek seçip “bu sayfanın yayımlanmış asıl adresi nedir?” sorusuyla başlayın. Test ortamının alan adı kaynak kodda kalmış mı, son eğik çizgi kuralı tutarlı mı, filtreli sayfa yanlışlıkla bağımsız içerik gibi mi sunuluyor? Bu kontrollerin sonucunu yönlendirme tablosundan ayrı bir dosyaya dağıtmak yerine aynı kabul kaydına bağlayın.
+
+Çok dilli projelerde kontrol birimi yalnızca Türkçe sayfa değildir. Aynı içeriğin dil grubu birlikte taşınmalıdır. Gerçekte bulunmayan çeviriye işaret etmeyin; karşılığı olan sayfanın yeni adresini kullanın. Dil mimarisi için [hreflang ve i18n rehberimiz](/tr/blog/cok-dilli-web-sitesi-hreflang-i18n) başlangıç noktasıdır.
+
+## Yayın kabul listesi
+
+Yayın kabulü “site açılıyor” cümlesinden daha somut olmalıdır. Aşağıdaki kontrol listesini bir toplantıda sözlü geçmek yerine sonuç, tarih ve sorumlu alanlarıyla kaydedin. Başarısız testlerin ekran görüntüsünü veya HTTP yanıtını ekleyin. Böylece aynı hata içerik ekibiyle yazılım ekibi arasında tekrar tekrar tarif edilmez.
+
+1. Organik giriş alan önemli sayfaları mobil ve masaüstünde açın; başlık, ana içerik ve bağlantıları kontrol edin.
+2. Eski URL örneklerini ziyaret edin; yönlendirme sonrasında ilgili sayfanın açıldığını doğrulayın.
+3. İletişim talebini gerçek uçtan uca akışla deneyin; arayüz mesajı kadar arka uç kaydını da kontrol edin.
+4. Test ortamına ait indeksleme engellerinin yayın yapılandırmasına taşınmadığını doğrulayın.
+5. Yeni sitemap, canonical ve varsa dil bağlantılarının aynı yayımlanmış adresleri kullandığını inceleyin.
+6. Paylaşım görsellerini, taşınan dokümanları ve önemli görsel adreslerini kontrol edin.
+7. Analitik olayların beklenen anda ve bir kez üretildiğini test edin.
+8. Hata halinde kimin karar vereceğini ve hangi sürümün geri yükleneceğini yazılı belirleyin.
+
+Yapılandırılmış veriyi de aynı kabul sürecine ekleyin. Sayfada görünmeyen eski hizmetler veya eski yazar bilgileri JSON-LD içinde kalmamalıdır. Google, işaretlemenin sayfa içeriğini doğru temsil etmesini ister; geçerli sözdizimi tek başına arama özelliği garantisi değildir. [Yapılandırılmış veri ilkeleri](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) bu ayrımı açıklar.
+
+## Yayın sonrası izleme nasıl kurulmalı
+
+İzlemeyi teknik sağlık ve iş sonucu olarak iki ayrı görünümde ele almayı öneriyoruz. Teknik görünüm hata yanıtlarını, çalışmayan akışları ve yanlış hedefleri gösterir. İş görünümü ilgili sayfa grubunun ziyaret, nitelikli talep ve satış görüşmesi üretimini izler. Tek bir toplam trafik grafiği bu iki alanı açıklamakta yetersiz kalır.
+
+<TrendChart title="Temsili kabul takibi: açık geçiş bulguları" caption="Bir test planını anlatan örnek sayılar. Trafik veya sıralama tahmini değildir; sıfır açık bulgu SEO sonucu garantilemez." dataTableLabel="Grafik verilerini tablo olarak aç" labels={["T−7", "T−3", "Yayın", "T+3", "T+7"]} series={[
+  { name: "Açık bulgu", points: [24, 12, 5, 2, 0] },
+  { name: "Yayını engelleyen bulgu", points: [6, 3, 0, 0, 0], muted: true }
+]} />
+
+Grafikte yayını engelleyen sorunlar yayın anından önce kapanır, daha düşük önemdeki maddeler izlenmeye devam eder. Bu ayrım planlama örneğidir. Gerçek projede “engelleyici” tanımını önceden koyun: formun talep kaybetmesi, önemli sayfanın yanlış adrese gitmesi veya ana içeriğin erişilememesi gibi. Renk tonu farkı ile talep kaybını aynı öncelik seviyesinde tutmayın.
+
+Talep ölçümünün nasıl kurulacağını [B2B teklif toplama sayfası rehberinde](/tr/blog/b2b-landing-page-teklif-toplama) ayrıntılandırıyoruz. Yayın sonrasında sayı düşerse önce ölçümün çalışıp çalışmadığına, sonra trafik kaynağına, ardından sayfa deneyimine bakın. Bu sıra her düşüşün tasarımdan kaynaklandığını varsaymayı önler.
+
+## Sorun çıktığında geri dönüş kararı
+
+Geri dönüş planı eski dosyaları saklamaktan ibaret değildir. Yeni sistemde oluşan taleplerin nerede tutulduğu, DNS veya yönlendirme değişikliklerinin nasıl geri alınacağı ve eski sürümün yeni kayıtlarla nasıl uzlaştırılacağı belirlenmelidir. Özellikle form verisi iki sistem arasında bölünecekse operasyon sorumlusunun onayı gerekir.
+
+Her hata bütün siteyi geri almayı gerektirmez. Tek bir yönlendirme kuralını düzeltmek mümkünken geniş kapsamlı geri dönüş yeni sorunlar oluşturabilir. Önce etkilenen kullanıcı yolculuğunu, sorunun yaygınlığını ve düzeltmenin doğrulanabilirliğini değerlendirin. Buna karşılık talep kaybı sürüyorsa yalnızca görsel düzeltme beklemek doğru öncelik değildir.
+
+## Teslim dosyasında neler bulunmalı
+
+Proje kapanırken yeni site adresiyle birlikte URL eşleme tablosu, içerik kararları, test sonuçları, ölçüm tanımları ve açık bakım maddeleri de teslim edilmelidir. Bir ay sonra sorunu inceleyecek kişinin, yayın günü konuşulanları bilmeden çalışabilmesi gerekir. İşletme açısından gerçek sürdürülebilirlik bu belgelerde başlar.
+
+Piton Studios ile bir yenileme planlarken mevcut sitenizi, öncelikli hizmetlerinizi ve korunmasını istediğiniz akışları paylaşabilirsiniz. [SEO ve GEO hizmetimiz](/tr/hizmetler/seo-geo) kapsamında teknik görünürlüğü, [iletişim sayfamızdan](/tr/iletisim) başlayacağımız kapsam görüşmesinde ise taşıma ve teslim ihtiyaçlarını birlikte değerlendirebiliriz.

@@ -1,0 +1,171 @@
+---
+title: "Erişilebilir web tasarımı: teklif formları için uygulama rehberi"
+description: "Etiketler, klavye kullanımı, hata mesajları, mobil düzen ve veri grafikleriyle erişilebilir form tasarımı. Örnek kod ve ayrıntılı test matrisi."
+date: 2026-09-05
+tags: ["erişilebilirlik", "web tasarım", "dönüşüm"]
+author: "Piton Studios"
+draft: false
+translationKey: accessible-web-design-forms
+sources:
+  - title: "W3C WAI — Formlara genel bakış"
+    url: "https://www.w3.org/WAI/tutorials/forms/"
+  - title: "W3C WAI — Form kontrollerinin etiketlenmesi"
+    url: "https://www.w3.org/WAI/tutorials/forms/labels/"
+  - title: "W3C WAI — Hata ve başarı bildirimleri"
+    url: "https://www.w3.org/WAI/tutorials/forms/notifications/"
+  - title: "WCAG 2.2 — Hedef boyutu, minimum (2.5.8)"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+  - title: "WCAG — İçeriğin yeniden akışı (1.4.10)"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+faq:
+  - q: "Erişilebilir form için yalnızca aria-label eklemek yeterli mi?"
+    a: "Hayır. Alanın anlaşılır adı yanında klavyeyle kullanımı, görünür odak, hata açıklaması, başarı bildirimi ve mobil düzeni de değerlendirilmelidir. Görünür label bulunan standart bir HTML alanı çoğu durumda daha sağlam bir başlangıçtır."
+  - q: "Placeholder neden alan etiketi yerine kullanılmamalı?"
+    a: "Kullanıcı yazmaya başladığında placeholder kaybolur ve alanın amacı görünür kalmaz. Kalıcı etiket amacı açık tutar; placeholder gerekiyorsa kısa bir örnek için kullanılır. Yardım metni ayrıca alanla programatik olarak ilişkilendirilebilir."
+  - q: "Otomatik erişilebilirlik testinden geçmek yeterli mi?"
+    a: "Hayır. Otomatik araçlar bazı yapısal sorunları bulur; açıklamanın anlaşılır olup olmadığını veya gerçek görev akışının rahatça tamamlandığını tek başına doğrulayamaz. Klavye, ekran okuyucu ve mobil görev denemeleriyle tamamlanmalıdır."
+  - q: "Her tıklama alanı mutlaka 44 piksel mi olmalı?"
+    a: "WCAG 2.2 AA düzeyindeki 2.5.8 ölçütü 24 × 24 CSS piksel hedef boyutunu ve tanımlı istisnaları ele alır. Daha büyük hedefler bir tasarım tercihi olabilir; tek bir boyut değeri tüm arayüzün erişilebilirliğini kanıtlamaz."
+  - q: "Erişilebilirlik çalışması dönüşümü ne kadar artırır?"
+    a: "Her site için geçerli bir oran yoktur. Kullanım engellerini kaldırmak daha çok kişinin işlemi tamamlayabilmesini sağlar; ticari etkiyi kendi başlangıç veriniz ve testlerinizle ölçmeniz gerekir. Bu yazının grafiklerinde yalnızca temsili test planı verileri kullanılmıştır."
+  - q: "Bu kontrol listesi tam WCAG uygunluğu belgesi midir?"
+    a: "Hayır. Rehber teklif ve iletişim akışlarına odaklanan bir başlangıçtır. Tam uygunluk değerlendirmesi hedeflenen WCAG sürümünü, düzeyini, sayfa kapsamını ve ilgili bütün başarı ölçütlerini kapsayan ayrı bir inceleme gerektirir."
+---
+
+Erişilebilir web tasarımı, farklı görme, hareket ve algılama ihtiyaçları olan insanların aynı işi yapabilmesini hedefler. Bir teklif formunda bu iş basittir: alanları anlamak, bilgileri girmek, hatayı düzeltebilmek ve talebin ulaştığından emin olmak. **Formun görsel olarak tamamlanmış olması, bu yolculuğun herkes için çalıştığını göstermez.**
+
+Bu rehber, kurumsal web sitesi sahipleri, tasarımcılar ve geliştiriciler için teklif ve iletişim akışlarını ele alır. W3C kaynaklarına bağlı teknik notlar ile önerdiğimiz proje çalışma biçimini ayrı ayrı sunuyoruz. Grafiklerdeki rakamlar bir denetim planını açıklayan örneklerdir. Doğrudan uygulama için [alan etiketi örneğine](#etiket-yardım-metni-ve-alan-ilişkisi) veya [test matrisine](#uygulanabilir-test-matrisi) ilerleyebilirsiniz.
+
+<KeyTakeaways title="Öncelikli ilkeler" items={[
+  "Her alanın kalıcı, anlaşılır bir adı ve gerektiğinde kısa bir açıklaması olsun.",
+  "Formu fare olmadan tamamlayın; odak sırasını ve görünürlüğünü kontrol edin.",
+  "Hataları yalnızca renkle değil, düzeltme yolunu anlatan metinle gösterin.",
+  "Ağ hatası ile başarılı gönderimi farklı durumlar olarak tasarlayın.",
+  "Grafikler ve karmaşık bilgiler için okunabilir metin veya tablo sunun.",
+  "Otomatik kontrolü gerçek görev denemeleriyle tamamlayın."
+]} />
+
+## Erişilebilirliği görev üzerinden değerlendirin
+
+Bir sayfayı incelemeye renk paletinden veya araç puanından başlamak kolaydır. Ancak kullanıcı sonuç almak ister. Bu nedenle önce görev cümlesini yazmayı öneriyoruz: “Ziyaretçi hizmet seçip ihtiyacını anlatarak görüşme talebi gönderebilmeli.” Sonra görevin hangi adımlardan oluştuğunu çıkarın. Formu bulmak, zorunlu alanı ayırt etmek ve hata sonrasında devam etmek de bu görevin parçalarıdır.
+
+Örneğin açılır paneldeki form yalnızca imleçle açılıyorsa, alanların etiketlerinin doğru olması tek başına yeterli değildir. Kullanıcı henüz forma ulaşamamıştır. Benzer biçimde gönderim sonrası başarı mesajı ekranın başka yerinde beliriyorsa, işlemin tamamlandığı fark edilmeyebilir. Kabul senaryosu bütün yolculuğu kapsamalıdır.
+
+W3C'nin [form öğreticisi](https://www.w3.org/WAI/tutorials/forms/), etiketler, talimatlar ve kullanıcı geri bildirimini birlikte ele alır. Bu rehberin kapsamı tam site uygunluk denetimi değildir; form akışlarında işe başlamak için pratik bir çerçevedir. Ticari hedef ve talep tanımı için [B2B açılış sayfası rehberimiz](/tr/blog/b2b-landing-page-teklif-toplama) ile birlikte kullanılabilir.
+
+## Etiket, yardım metni ve alan ilişkisi
+
+Etiket, kullanıcının alana ne yazacağını söyler. Yardım metni ise neden istendiğini veya beklenen biçimi açıklar. Placeholder kalıcı bir etiketin yerini almamalıdır; yazı girildiğinde kaybolur. W3C, etiketin ilgili kontrolle ilişkilendirilmesini açıklar; standart yaklaşım `label` üzerindeki `for` değeriyle alanın `id` değerini eşleştirmektir. [Etiketleme rehberi](https://www.w3.org/WAI/tutorials/forms/labels/) ayrıntıları içerir.
+
+Aşağıdaki HTML, tek bir alanın yapısını gösterir. Çalışan bir formun tamamı değildir; gönderim, sunucu doğrulaması ve hata durumları ayrıca uygulanmalıdır.
+
+```html
+<label for="project-email">E-posta adresiniz (zorunlu)</label>
+<p id="project-email-help">
+  Projeniz hakkında size bu adresten dönüş yapacağız.
+</p>
+<input
+  id="project-email"
+  name="email"
+  type="email"
+  autocomplete="email"
+  aria-describedby="project-email-help"
+  required
+/>
+```
+
+İçerik açısından da alan adını gözden geçirin. “Bilgi” yerine “Projenizde çözmek istediğiniz sorun” yazmak yanıtı yönlendirir. Ancak etiket çok uzun bir açıklamaya dönüşüyorsa kısa başlığı koruyup örneği yardım metnine taşıyın. Kullanıcı, alanlar arasında ilerlerken bütün paragrafı tekrar okumak zorunda kalmamalıdır.
+
+İş telefonu, mevcut site ve bütçe gibi alanları otomatik olarak zorunlu yapmayın. Her birinin ilk görüşmede neden gerekli olduğunu değerlendirin. Alanın amacı belirli değilse hem tasarım hem veri kalitesi açısından sorun vardır. Daha az veri istemek her proje için doğru olmayabilir; fakat her alanın bir gerekçesi olmalıdır.
+
+## Klavye akışı ve görünür odak
+
+Basit bir manuel deneme yapın: fareyi bırakın, sayfanın başından başlayarak Tab ile forma ilerleyin, seçenekleri değiştirin ve gönderin. Ardından Shift+Tab ile geri dönün. Odak yerini takip etmekte zorlandığınız her anı not edin. Görsel sırayla klavye sırası birbirinden ayrılıyorsa düzeni yeniden değerlendirin.
+
+Önerimiz, standart düğme ve form kontrollerini başlangıç noktası olarak kullanmaktır. Tıklanabilir bir kutu görünümü için normal metin elemanına davranış eklemek, klavye etkileşimi ve durum bilgisini ayrıca kurmanızı gerektirir. Tasarımın istediği görünümü gerçek `button` veya `input` ile elde etmek çoğu durumda daha yönetilebilir bir çözümdür.
+
+Odak halkasını yalnızca tasarıma uymadığı için kaldırmayın. Bunun yerine tema üzerinde fark edilebilen bir gösterge tasarlayın. Sabit alt iletişim çubuğu veya üst navigasyon odaklanan alanı kapatıyor mu, modal açıldığında kullanıcı yanlışlıkla arka sayfaya mı geçiyor, form kapandığında önceki konuma dönebiliyor mu? Bunlar ekran görüntüsünden anlaşılmayan davranış kontrolleridir.
+
+## Hata mesajı bir düzeltme talimatıdır
+
+“Geçersiz değer” ifadesi kullanıcıya neyi değiştirmesi gerektiğini söylemez. “E-posta adresini ad@ornek.com biçiminde girin” daha uygulanabilir bir mesajdır. Yanlış alanı yalnızca kırmızı çerçeveyle belirtmek de yeterli iletişim kurmaz. W3C'nin [bildirim rehberi](https://www.w3.org/WAI/tutorials/forms/notifications/), hatanın açıklanmasını ve kullanıcının ilgili alana ulaşabilmesini ele alır.
+
+Birden fazla hata varsa formun üstünde kısa bir özet ve alanların yanında yerel mesajlar kullanılabilir. Özet bağlantılarının gerçekten ilgili alanlara götürdüğünü test edin. Hata durumu programatik olarak da anlaşılır olmalı; örneğin hatalı alan için `aria-invalid` ve açıklama ilişkisi kurulabilir. Bu öznitelikleri hata yokken kalıcı olarak açık bırakmayın.
+
+| Durum | Yetersiz mesaj | Daha uygulanabilir mesaj örneği |
+|---|---|---|
+| Zorunlu alan boş | Hata var | İletişim için e-posta adresinizi girin |
+| Biçim uygun değil | Geçersiz | E-posta adresinde kullanıcı adı ve alan adı bulunmalı |
+| Açıklama sınırı aşıldı | Çok uzun | Açıklamayı belirtilen karakter sınırına kısaltın |
+| Sunucuya ulaşılamıyor | İşlem başarısız | Talep kaydedilemedi; bilgileriniz korunuyor, yeniden deneyin |
+| Başarılı kabul | Tamam | Talebiniz alındı; sonraki adım hakkında sizinle iletişime geçeceğiz |
+
+Tablodaki ağ hatası mesajını yalnızca bilgiler gerçekten korunuyorsa kullanın. Arayüz metni, uygulamanın davranışını doğru anlatmalıdır. Kullanıcı bütün açıklamayı yeniden yazmak zorunda kalıyorsa “bilgileriniz korunuyor” yazmak güveni daha fazla zedeler.
+
+## Başarı ve ağ hatasını ayrı tasarlayın
+
+Tasarım teslimlerinde çoğu zaman boş form ekranı bulunur; yükleniyor, hata ve başarı durumları sonradan geliştirme sırasında doğaçlanır. Oysa kullanıcı açısından en önemli an gönderim sonrasıdır. Talep alındı mı, tekrar denemek gerekiyor mu, düğmeye ikinci kez basmak iki kayıt üretir mi?
+
+Önerdiğimiz durum listesi: başlangıç, doğrulama hatası, gönderiliyor, kabul edildi ve geçici sistem hatası. Her durum için gösterilecek metni, tekrar deneme davranışını ve odak yönetimini yazın. Gönderiliyor durumunda düğmenin davranışını düşünürken yardımcı teknoloji kullanan kişinin durum değişimini nasıl anlayacağını da test edin.
+
+Sunucu talebi kabul etmeden başarı ekranı göstermeyin. Arayüzde başarılı gibi görünen fakat e-posta veya CRM tarafına ulaşmayan talep, işletme için de kullanıcı için de kayıptır. Doğrulama sorumluluğunu yalnızca tarayıcıya bırakmayın; istemci denetimi kullanım kolaylığı sağlar, sunucu ise veriyi kendi kurallarına göre tekrar değerlendirmelidir.
+
+## Mobil düzen, yakınlaştırma ve hedef boyutu
+
+Formu yalnızca tek bir telefon ekranında kontrol etmek yeterli değildir. Ekran klavyesi açıkken son alan ve gönder düğmesi erişilebilir mi, uzun yardım metni kesiliyor mu, yatay kullanımda içerik kayboluyor mu? Küçük ekranda iki sütunlu düzeni tek sütuna indirmek bu sorunların bir kısmını azaltabilir; gerçek metinlerle denenmelidir.
+
+WCAG 2.2'nin [2.5.8 hedef boyutu ölçütü](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html), AA düzeyinde 24 × 24 CSS piksel boyutunu ve aralık, satır içi hedefler gibi istisnaları tanımlar. Bu değeri bütün arayüz için rahat kullanım hedefi gibi görmeyin. Bizim tasarım önerimiz, özellikle birincil gönderim düğmelerini ve sık kullanılan mobil kontrolleri daha geniş, çevresinden ayırt edilebilir hedefler olarak kurmaktır.
+
+[İçeriğin yeniden akışı ölçütü](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), dikey kaydırılan içerikte 320 CSS piksel genişliğe eşdeğer koşullarda bilgi ve işlev kaybı olmadan kullanım konusunu ele alır; iki boyutlu düzen gerektiren içerikler için istisnalar vardır. Form kontrolünde metin büyütmeyi ve tarayıcı yakınlaştırmasını ayrıca deneyin. Dar alanda okunamayan hata mesajı başarılı sayılmaz.
+
+## Grafikler ve bilgiyi tek kanala hapsetmemek
+
+Bir grafiğin yalnızca rengiyle iki grubu ayırması, o farkı göremeyen kişi için bilgi kaybı oluşturur. Etiketler, çizgi biçimleri ve metin açıklamaları birlikte kullanılabilir. Ayrıca karmaşık sayısal içeriğin tablo karşılığını sunmak hem ekran okuyucuyla hem de veriyi dikkatle karşılaştırmak isteyen okuyucuyla uyumludur.
+
+Bu yazıdaki grafiklerin altında açılır veri tabloları bulunur. Grafik, genel dağılımı hızlı okumaya; tablo, tekil değerleri incelemeye yarar. Açıklamada sayıların kaynağını belirtmek de gereklidir. Test planındaki örnek bir sayıyı sektör araştırması gibi sunmak okuyucunun yanlış sonuç çıkarmasına neden olur.
+
+<BarChart title="Örnek kabul planı: 24 kontrolün alanlara dağılımı" caption="Piton Studios'un bu rehber için oluşturduğu temsili plan; WCAG ölçüt sayısı veya bir sitenin denetim sonucu değildir." dataTableLabel="Grafik verilerini tablo olarak aç" unit=" kontrol" data={[
+  { label: "Etiket ve açıklamalar", value: 6 },
+  { label: "Klavye ve odak", value: 6, highlight: true },
+  { label: "Hata ve başarı durumları", value: 7 },
+  { label: "Mobil ve yakınlaştırma", value: 5 }
+]} />
+
+Bu dağılım bütçe veya denetim standardı değildir. Projenizde çok adımlı başvuru, dosya yükleme veya özel tarih seçici varsa plan genişler. Kontrolleri saymak başlangıçta kapsamı görünür kılar; asıl kabul ölçütü görevin engel olmadan tamamlanmasıdır.
+
+## Uygulanabilir test matrisi
+
+Test matrisini cihaz listesiyle sınırlamayın; kullanıcı görevi ve beklenen sonuç da bulunsun. Aynı cihazda farklı giriş yöntemleri başka sorunlar gösterebilir. Her bulguya tekrar adımları, etkilenen bölüm ve beklenen davranış eklemek, düzeltmenin geliştirici tarafından doğrulanmasını kolaylaştırır.
+
+| Deneme | Görev | Beklenen sonuç |
+|---|---|---|
+| Yalnızca klavye | Formu doldurup gönder | Mantıklı sıra, görünür odak, erişilebilir kontroller |
+| Ekran okuyucu | Alanları ve talimatları incele | Alan amacı, zorunluluk ve hata anlaşılır |
+| Dar görünüm | Uzun açıklamayla formu tamamla | İçerik kesilmeden ve kontrol kaybolmadan kullanım |
+| Yakınlaştırma | Alanlar arasında ilerle | Okunabilir metin ve erişilebilir gönderim |
+| Doğrulama hatası | Boş veya hatalı alan gönder | Sorun ve düzeltme yolu açıklanır |
+| Ağ hatası | Başarısız isteği yeniden dene | Yanlış başarı yok; tekrar deneme mümkün |
+| Başarılı gönderim | Geçerli talep oluştur | Kabul bilgisi ve sonraki adım anlaşılır |
+
+Ekran okuyucu denemesinde yalnızca metinlerin okunmasına bakmayın. Kullanıcı hangi alanın hatalı olduğunu bulabiliyor mu ve tekrar forma dönebiliyor mu? Test eden kişi uygulamayı ezbere biliyorsa bazı belirsizlikleri fark etmeyebilir. Mümkün olduğunda ilk kez kullanan bir kişinin gözlemini de ekleyin.
+
+Otomatik araçlar belirli yapısal kontroller için faydalıdır; ancak uygun mesajın ne olduğunu ve görevin anlaşılır olup olmadığını tek başına çözmez. Otomatik raporu manuel bulgularla tek bir listede birleştirin, yinelenenleri ayırın ve kullanıcıyı engelleyenlere öncelik verin.
+
+## Düzeltme önceliği ve tekrar test
+
+Önceliği yalnızca bulgu sayısına göre vermeyin. On küçük açıklama sorunu, bütün klavye kullanıcılarının gönderim yapmasını engelleyen tek bir sorundan daha düşük öncelikli olabilir. Etkilenen görev, sorunun yaygınlığı ve geçici bir alternatifin bulunup bulunmadığı birlikte değerlendirilmelidir.
+
+<TrendChart title="Temsili düzeltme takibi: açık bulgular" caption="Örnek iş takibi verisi. Düşen bulgu sayısı tek başına tam erişilebilirlik veya WCAG uygunluğu göstermez; kapanan maddeler yeniden test edilir." dataTableLabel="Grafik verilerini tablo olarak aç" labels={["İlk tarama", "Düzeltme 1", "Düzeltme 2", "Tekrar test"]} series={[
+  { name: "Toplam açık bulgu", points: [18, 11, 5, 2], muted: true },
+  { name: "Görevi engelleyen bulgu", points: [5, 2, 0, 0] }
+]} />
+
+Bu örnekte iki açık madde kalmasına rağmen görevi engelleyen bulgular kapanmıştır. Gerçek projede kalan maddeleri silmek yerine sorumlu ve hedef tarihle takip edin. Düzeltme sonrası aynı adımları tekrar uygulayın; özellikle ortak bir form bileşeni değiştiyse onu kullanan diğer sayfalardan da örnek seçin.
+
+## Bakım sürecine nasıl yerleşir
+
+Erişilebilirlik, ilk yayında yapılan tek seferlik kontrol olarak kalırsa yeni kampanya formunda veya dil sürümünde gerileyebilir. Tasarım sistemine etiket, hata, başarı ve odak örneklerini ekleyin. İçerik ekibine alan adlarını ve yardım metinlerini nasıl yazacağını gösterin. Geliştirme kabulüne de en kritik görevlerin kısa manuel tekrarını koyun.
+
+Yeni tasarıma geçiyorsanız [site yenileme kontrol listemiz](/tr/blog/web-sitesi-yenileme-seo-gecis-plani) ile bu matrisi aynı teslim dosyasında tutabilirsiniz. Performansla birlikte değerlendirmek için [hızlı web sitesi rehberimiz](/tr/blog/hizli-web-sitesi-nasil-yapilir) tamamlayıcı bir okumadır; hızlı açılmak ile kullanılabilir olmak farklı testler gerektirir.
+
+Piton Studios ile mevcut form akışınızı değerlendirmek için [iletişim sayfamızdan](/tr/iletisim) projenizi paylaşabilirsiniz. Öncelikle kullanıcının tamamlamasını istediğiniz görevi, bilinen sorunları ve kullanılan cihazları belirleyip uygulanabilir bir iyileştirme kapsamı çıkarabiliriz.

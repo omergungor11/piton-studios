@@ -251,10 +251,13 @@ export function blogPostingJsonLd(input: {
   author: string;
   tags?: string[];
   locale: Locale;
+  readingMinutes?: number;
+  sources?: { title: string; url: string }[];
 }): JsonLdObject {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${input.url}#article`,
     headline: input.title,
     description: input.description,
     url: input.url,
@@ -264,7 +267,13 @@ export function blogPostingJsonLd(input: {
     inLanguage: input.locale,
     ...(input.image ? { image: input.image } : {}),
     ...(input.tags?.length ? { keywords: input.tags.join(', ') } : {}),
-    author: { '@type': 'Person', name: input.author },
+    author: input.author === SITE.name
+      ? { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: input.author, url: SITE_URL }
+      : { '@type': 'Person', name: input.author },
+    ...(input.readingMinutes ? { timeRequired: `PT${input.readingMinutes}M` } : {}),
+    ...(input.sources?.length ? {
+      citation: input.sources.map((source) => ({ '@type': 'CreativeWork', name: source.title, url: source.url })),
+    } : {}),
     publisher: { '@id': `${SITE_URL}/#organization` },
   };
 }

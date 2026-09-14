@@ -85,7 +85,7 @@ type Bar = { label: string; value: number; note?: string; highlight?: boolean };
 
 /**
  * Yatay cubuk grafik. CSS genislikleriyle cizilir — ekran okuyucular icin
- * altta ayni veriyi tasiyan bir tablo da render edilir (gorsel olarak gizli).
+ * isteğe bağlı açılır veri tablosu aynı değerleri metin olarak sunar.
  */
 export function BarChart({
   title,
@@ -93,12 +93,14 @@ export function BarChart({
   unit = '',
   data,
   max,
+  dataTableLabel,
 }: {
   title: string;
   caption?: string;
   unit?: string;
   data: Bar[];
   max?: number;
+  dataTableLabel?: string;
 }) {
   // Verilen max, veriden kucukse cubuklar cerceveyi tasardi — tavan her zaman veriyi kapsar.
   const ceiling = Math.max(max ?? 0, ...data.map((d) => d.value));
@@ -128,6 +130,20 @@ export function BarChart({
           );
         })}
       </div>
+      {dataTableLabel && (
+        <details className="mdx-chart-data">
+          <summary>{dataTableLabel}</summary>
+          <table>
+            <caption>{title}{unit ? ` (${unit})` : ''}</caption>
+            <tbody>{data.map((d) => (
+              <tr key={d.label}>
+                <th scope="row">{d.label}</th>
+                <td>{d.value}{unit}{d.note ? ` — ${d.note}` : ''}</td>
+              </tr>
+            ))}</tbody>
+          </table>
+        </details>
+      )}
     </figure>
   );
 }
@@ -153,6 +169,7 @@ export function TrendChart({
   series,
   unit = '',
   max,
+  dataTableLabel,
 }: {
   title: string;
   caption?: string;
@@ -160,6 +177,7 @@ export function TrendChart({
   series: Series[];
   unit?: string;
   max?: number;
+  dataTableLabel?: string;
 }) {
   const all = series.flatMap((s) => s.points);
   // Verilen max, seriden kucukse cizgi grafigin disina tasardi — tavan her zaman veriyi kapsar.
@@ -171,7 +189,7 @@ export function TrendChart({
     PAD_X + (labels.length > 1 ? (i / (labels.length - 1)) * plotW : plotW / 2);
   const y = (v: number) => PAD_TOP + plotH - (ceiling > 0 ? (v / ceiling) * plotH : 0);
 
-  const gridValues = [0, 0.25, 0.5, 0.75, 1].map((r) => Math.round(ceiling * r));
+  const gridValues = [0, 0.25, 0.5, 0.75, 1].map((r) => Number((ceiling * r).toFixed(2)));
 
   return (
     <figure className="mdx-chart">
@@ -236,6 +254,21 @@ export function TrendChart({
           </g>
         ))}
       </svg>
+      {dataTableLabel && (
+        <details className="mdx-chart-data">
+          <summary>{dataTableLabel}</summary>
+          <table>
+            <caption>{title}{unit ? ` (${unit})` : ''}</caption>
+            <thead><tr><td />{series.map((s) => <th scope="col" key={s.name}>{s.name}</th>)}</tr></thead>
+            <tbody>{labels.map((label, i) => (
+              <tr key={`${label}-${i}`}>
+                <th scope="row">{label}</th>
+                {series.map((s) => <td key={s.name}>{s.points[i]}{unit}</td>)}
+              </tr>
+            ))}</tbody>
+          </table>
+        </details>
+      )}
     </figure>
   );
 }

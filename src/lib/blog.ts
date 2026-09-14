@@ -22,6 +22,8 @@ export interface PostFrontmatter {
   translationKey: string;
   /** Yazi sonunda render edilir + FAQPage JSON-LD uretir. */
   faq?: { q: string; a: string }[];
+  /** Yazı sonunda görünür kaynakça ve BlogPosting citation alanı. */
+  sources?: { title: string; url: string }[];
 }
 
 export interface Heading {
@@ -68,10 +70,23 @@ function readPostFile(locale: Locale, fileName: string): Post | null {
     draft: data.draft === true,
     translationKey: data.translationKey ? String(data.translationKey) : slug,
     faq: parseFaq(data.faq),
+    sources: parseSources(data.sources),
     content,
     readingMinutes: Math.max(1, Math.round(readingTime(content).minutes)),
     headings: extractHeadings(content),
   };
+}
+
+function parseSources(value: unknown): PostFrontmatter['sources'] {
+  if (!Array.isArray(value)) return undefined;
+  const sources = value
+    .filter((v): v is Record<string, unknown> => typeof v === 'object' && v !== null)
+    .filter((v) => typeof v.title === 'string' && typeof v.url === 'string')
+    .map((v) => ({ title: String(v.title), url: String(v.url) }));
+  for (const source of sources) {
+    if (!/^https:\/\//.test(source.url)) throw new Error(`[blog] Geçersiz kaynak URL: ${source.url}`);
+  }
+  return sources.length ? sources : undefined;
 }
 
 function parseFaq(value: unknown): { q: string; a: string }[] | undefined {

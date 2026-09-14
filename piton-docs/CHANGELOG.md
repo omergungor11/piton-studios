@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-05 — Blog rehberleri (TASK-055)
+
+- Üç yeni Türkçe uzun rehber: SEO geçiş planı, B2B teklif toplama ve erişilebilir form tasarımı. Toplam altı grafik, 16 SSS, kaynakça ve yazılar arası bağlantılar.
+- Blog frontmatter `sources` alanı; görünür kaynakça ve JSON-LD `citation` aynı kaynaktan üretiliyor.
+- BlogPosting yazar türü Piton Studios için Organization olarak düzeltildi; makale kimliği, okuma süresi ve mevcut dinamik OG görseli bağlandı.
+- İçindekilere kaynakça ve SSS eklendi. Yeni grafikler açılır HTML veri tablolarıyla desteklendi; çizgi grafik ekseninde ondalık değerlerin yuvarlama kaybı giderildi.
+- `scripts/check-blog-pages.py`: üç yazının HTML, anchor, JSON-LD, iç URL, OG, RSS ve sitemap doğrulaması.
+
+
 ## 2026-09-05 (24)
 
 ### Fixed
