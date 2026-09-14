@@ -9,6 +9,7 @@ import FloatingGlass from '@/components/floating-glass';
 import FloatingActions from '@/components/floating-actions';
 import LanguageSwitcher from '@/components/language-switcher';
 import PartnerBadges from '@/components/partner-badges';
+import { LEGAL_READY } from '@/lib/legal';
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -204,6 +205,13 @@ export default function PageShell({ children, immersive = false }: PageShellProp
           <Link href="/about" className="page-footer-link" data-cursor="hover">{t('about')}</Link>
           <Link href="/contact" className="page-footer-link" data-cursor="hover">{t('contact')}</Link>
         </nav>
+        {LEGAL_READY ? (
+          <nav className="page-footer-legal" aria-label="Legal">
+            <Link href="/privacy" className="page-footer-link" data-cursor="hover">{t('privacy')}</Link>
+            <Link href="/cookies" className="page-footer-link" data-cursor="hover">{t('cookies')}</Link>
+            <Link href="/terms" className="page-footer-link" data-cursor="hover">{t('terms')}</Link>
+          </nav>
+        ) : null}
       </footer>
       {!immersive ? <FloatingActions /> : null}
     </>

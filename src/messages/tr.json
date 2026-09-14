@@ -312,7 +312,8 @@
     "sentDetail": "Mesajınız ulaştı. Genellikle 24 saat içinde dönüş yapıyoruz.",
     "errorSend": "Gönderilemedi — doğrudan yazın",
     "errorValidation": "Bilgileri kontrol edin",
-    "errorRateLimit": "Çok fazla deneme — biraz sonra tekrar deneyin"
+    "errorRateLimit": "Çok fazla deneme — biraz sonra tekrar deneyin",
+    "formLegal": "Gönderdiğiniz bilgiler, talebinizi yanıtlamak amacıyla <link>Gizlilik Politikası ve KVKK Aydınlatma Metni</link> kapsamında işlenir."
   },
   "services": {
     "eyebrow": "§ 04",
@@ -600,7 +601,10 @@
     "blog": "Blog",
     "faq": "SSS",
     "pricing": "Fiyatlar",
-    "sectors": "Sektörler"
+    "sectors": "Sektörler",
+    "privacy": "Gizlilik",
+    "cookies": "Çerezler",
+    "terms": "Kullanım Koşulları"
   },
   "works": {
     "velis-ltd": {
@@ -3515,5 +3519,12 @@
     "ctaSub": "Sektörünüzü ve hedefinizi yazın; 24 saat içinde somut bir yol haritasıyla dönelim.",
     "ctaButton": "İletişime geç",
     "detailTitle": "Sektöre bakışımız"
+  },
+  "legal": {
+    "toc": "İçindekiler",
+    "navLabel": "Hukuki metinler",
+    "privacy": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+    "cookies": "Çerez Politikası",
+    "terms": "Kullanım Koşulları"
   }
 }
