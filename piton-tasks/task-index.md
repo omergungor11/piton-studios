@@ -12,9 +12,10 @@
 | 5 | Icerik Uretimi | 22 | 22 | 0 | 0 | 0 |
 | 6 | Interaktif Portfolyo R&D | 2 | 2 | 0 | 0 | 0 |
 | 7 | Blog Rehberleri | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **54** | **54** | **0** | **0** | **0** |
+| 8 | Portfolyo Guncellemeleri | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **55** | **55** | **0** | **0** | **0** |
 
-**Progress**: 54/54 (100%) ✓
+**Progress**: 55/55 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -129,3 +130,9 @@
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
 | TASK-055 | Üç detaylı Türkçe rehber; kaynakça, grafik veri tabloları, BlogPosting geliştirmeleri ve bağlantı doğrulaması | L | COMPLETED |
+
+## Phase 8: Portfolyo güncellemeleri (2026-09-14)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-056 | VELAIR (#50) portfolyoya eklendi: canlı siteden desktop (1440×810) + mobil (860×1856) önizleme, tr/en/ru çeviriler, SSS proje sayısı 49 → 50 | S | COMPLETED |

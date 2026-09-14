@@ -1045,6 +1045,14 @@
         "We built an automation system that checks whether a city's minibus (dolmuş) lines run on schedule. Excel data from a GPS tracking program is processed into per-line route control reports.",
         "This Flask-based web app turns hours of manual checking into minutes — a field-proven example of data processing and process automation."
       ]
+    },
+    "velair-experience": {
+      "title": "VELAIR",
+      "summary": "Scroll-driven cinematic 3D private-jet experience — cloud transition, opening cabin and fly-by.",
+      "body": [
+        "VELAIR is a concept that turns the private-jet experience into a cinematic, scroll-driven 3D story. A top-down jet view, a shader-based cloud transition, an opening cabin and a side fly-by behind a panel all unfold in one natural scroll flow; the aircraft is an original parametric model generated in code.",
+        "Built with Next.js, React Three Fiber, Drei and GSAP ScrollTrigger, a single progress value drives the camera, the jet and the clouds, with no continuous rendering while idle. A reduced-motion option, static images rendered from the same model when WebGL is unavailable, and mobile-specific framing keep performance and accessibility in balance."
+      ]
     }
   },
   "areas": {
@@ -2501,7 +2509,7 @@
     },
     "industries": {
       "q": "Which industries do you have experience in?",
-      "a": "The portfolio includes 49 projects across construction/engineering, real estate, tourism, finance, transportation, e-commerce, food/packaging, and SaaS/AI-ML. The leading sector shifts year to year with demand, but the way of working, process, and team have stayed the same since 2021.",
+      "a": "The portfolio includes 50 projects across construction/engineering, real estate, tourism, finance, transportation, e-commerce, food/packaging, and SaaS/AI-ML. The leading sector shifts year to year with demand, but the way of working, process, and team have stayed the same since 2021.",
       "detail": [
         "2021-2022 leaned toward corporate sites and branding, 2022-2023 toward e-commerce and real estate/tourism, 2024 toward finance and transportation, and 2025 toward AI/ML and SaaS projects.",
         "For regulated fields requiring deep sector-specific compliance knowledge, such as healthcare or legal, extra research is done before the project starts — this can extend the discovery timeline slightly."
