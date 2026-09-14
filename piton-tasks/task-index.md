@@ -145,4 +145,4 @@
 
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
-| TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): menü → teknoloji ikonları + hukuki linkler → "Piton Studios © 2026"; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |
+| TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): iki satır — menü / teknoloji ikonları · "Piton Studios © 2026" · hukuki linkler; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |

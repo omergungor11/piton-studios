@@ -24,7 +24,7 @@ const FOOTER_LINKS = [
 
 /**
  * Anasayfa ve ic sayfalarin ortak footer'i.
- * Siralama: ustte menu → ortada teknoloji ikonlari + hukuki linkler → en altta copyright.
+ * Iki satir: ustte menu; altta solda teknoloji ikonlari, ortada copyright, sagda hukuki linkler.
  */
 export default function SiteFooter({ variant = 'page' }: SiteFooterProps) {
   const t = useTranslations('common');
@@ -41,6 +41,7 @@ export default function SiteFooter({ variant = 'page' }: SiteFooterProps) {
 
       <div className="page-footer-meta">
         <PartnerBadges variant="footer" />
+        <p className="page-footer-brand">{t('copyright')}</p>
         {LEGAL_READY ? (
           <nav className="page-footer-legal" aria-label="Legal">
             <Link href="/privacy" className="page-footer-link" data-cursor="hover">{t('privacy')}</Link>
@@ -49,8 +50,6 @@ export default function SiteFooter({ variant = 'page' }: SiteFooterProps) {
           </nav>
         ) : null}
       </div>
-
-      <p className="page-footer-brand">{t('copyright')}</p>
     </footer>
   );
 }
