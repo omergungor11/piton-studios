@@ -5,6 +5,7 @@
 - WORKS #50: `velair-experience` — scroll ile ilerleyen sinematik 3B özel jet deneyimi (Next.js, React Three Fiber, Drei, GSAP ScrollTrigger). Canlı link: https://velair-experience.vercel.app/
 - Önizlemeler canlı siteden Playwright ile çekildi: `public/assets/previews/desktop/velair-experience.webp` (1440×810) ve `public/assets/previews/mobile/velair-experience.webp` (860×1856, 430×928 @2x).
 - tr/en/ru `works` çevirileri eklendi; SSS'deki portfolyo sayısı 49 → 50. `pnpm content:check` 50/50.
+- Sıra: VELAIR, projeler sayfasındaki "Seçilmiş Projeler" tablosunda ve ekran görüntüsü şeridinde EKH Yapı'nın yerine **#09**'a alındı; EKH Yapı silinmedi, **#50**'ye kaydı. Diğer numaralar değişmedi.
 
 ## 2026-09-05 — Blog rehberleri (TASK-055)
 

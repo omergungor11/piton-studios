@@ -135,4 +135,4 @@
 
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
-| TASK-056 | VELAIR (#50) portfolyoya eklendi: canlı siteden desktop (1440×810) + mobil (860×1856) önizleme, tr/en/ru çeviriler, SSS proje sayısı 49 → 50 | S | COMPLETED |
+| TASK-056 | VELAIR portfolyoya eklendi: canlı siteden desktop (1440×810) + mobil (860×1856) önizleme, tr/en/ru çeviriler, SSS proje sayısı 49 → 50; projeler listesinde EKH Yapı'nın yerine #09'a alındı (EKH Yapı → #50) | S | COMPLETED |
