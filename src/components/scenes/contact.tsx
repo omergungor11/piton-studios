@@ -187,7 +187,7 @@ export default function ContactScene() {
           {status === 'error' && (
             <span className="is-error">
               {t(errorKey)} —{' '}
-              <a href="mailto:pitonstudios@gmail.com">pitonstudios@gmail.com</a>
+              <a href="mailto:hi@pitonstudios.com">hi@pitonstudios.com</a>
             </span>
           )}
         </div>

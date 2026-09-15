@@ -12,7 +12,7 @@
 - **Validation**: `pnpm typecheck && pnpm lint`
 - **Commit Prefix**: `feat(api)`, `fix(api)`
 
-> Veritabani yok — Database Agent kapsami kaldirildi (Supabase hic baglanmadi).
+> Veritabani yok — Database Agent kapsami kaldirildi.
 
 ### DevOps Agent
 - **Scope**: Config files, `.env.example`, `next.config.ts`, `vercel.json`

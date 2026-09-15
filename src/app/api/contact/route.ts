@@ -7,11 +7,10 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 /**
- * Bildirimlerin gidecegi adres. Resend'te dogrulanmis bir alan adi yoksa
- * `onboarding@resend.dev` yalnizca Resend hesabinin sahibine gonderebilir —
- * bu yuzden Resend hesabi bu adresle acilmali.
+ * Bildirimlerin gidecegi adres (Zoho Mail, AB). pitonstudios.com Resend'te dogrulandi;
+ * dogrulanmis alan adi olmadan `onboarding@resend.dev` yalnizca Resend hesap sahibine gonderebilir.
  */
-const NOTIFY_TO = process.env.CONTACT_NOTIFY_EMAIL ?? 'pitonstudios@gmail.com';
+const NOTIFY_TO = process.env.CONTACT_NOTIFY_EMAIL ?? 'hi@pitonstudios.com';
 
 /** Dogrulanmis alan adi varsa oradan, yoksa Resend'in test gondericisinden. */
 const FROM = process.env.CONTACT_FROM_EMAIL ?? 'Piton Studios <onboarding@resend.dev>';

@@ -23,7 +23,7 @@
 ## Media
 - Site screenshot tabanli; video yok (2026-07-28'de kaldirildi)
 - Gorseller `public/assets/` altinda, `next/image` ile
-- Veritabani / harici depolama yok (Supabase hic baglanmadi, kaldirildi)
+- Veritabani / harici depolama yok
 
 ## Styling
 - Tailwind CSS utility-first

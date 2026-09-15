@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-15 — E-posta altyapısı ve Supabase temizliği
+
+- **Gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi)**: iletişim formu bildirimleri ve form hata mesajındaki adres buraya taşındı; `LEGAL.inbox` güncellendi. Gönderim Resend ile devam ediyor (`pitonstudios.com` Resend'te doğrulandı, `send.` alt alan adı).
+- **Gizlilik politikası (3 dil)**: aktarım tablosunda Google LLC / Gmail satırı Zoho Corporation (AB veri merkezi) / Zoho Mail olarak düzeltildi; `LEGAL.updated` 2026-09-15.
+- **Supabase kaldırıldı**: hizmet araç listelerinden, eğitim hizmeti metinlerinden, Hakkında teknoloji listesinden ve SSS cevaplarından çıkarıldı. Geçmiş müşteri projelerinde (Nexos, Ambalaj Cini, Gel Gez Gör) marka adı yerine altındaki teknoloji (PostgreSQL, kimlik doğrulama, dosya depolama) yazıldı. Güncel rehber dokümanları (AGENTS.md, CLAUDE.md, config, local-testing komutu, MEMORY) temizlendi; geçmiş kayıtlar (changelog, session notları, eski planlar) olduğu gibi bırakıldı.
+
 ## 2026-09-15 — Büyüme sayfaları (TASK-060..065)
 
 - **Şehir sayfaları** (10): KKTC, Lefkoşa, Bilecik, Eskişehir, Bursa, İstanbul, Kütahya, Antalya, İzmit, İzmir — `/bolgeler` ve `/web-tasarim/[slug]` (en/ru `/locations`, `/web-design/[slug]`). Projesi olmayan şehirlerde uzaktan hizmet açıkça belirtiliyor; başka şehirdeki projeler referans olarak çerçeveleniyor.

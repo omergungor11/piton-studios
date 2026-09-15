@@ -9,8 +9,8 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 - **Deploy**: Vercel
 - **Database**: Yok — site tamamen statik
 
-> Not: Hicbir veritabani veya harici depolama kullanilmiyor. Supabase hic baglanmadi,
-> Neon ve Vercel Blob degerlendirilip vazgecildi (gerekce: `piton-plans/`).
+> Not: Hicbir veritabani veya harici depolama kullanilmiyor. Neon ve Vercel Blob
+> degerlendirilip vazgecildi (gerekce: `piton-plans/`).
 
 ## Slash Commandlar
 
@@ -28,7 +28,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 **Progress**: 50/50 task (%100) — son is TASK-051 (SSS sayfasi), 2026-08-14.
 
 > `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
-> (Supabase kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
+> (veritabani kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
 > `NEVER_DONE` olarak duzeltildi. Yeniden yapilmasi planlanmiyor.
 
 - **50 proje** WORKS array'inde (2026-09-14: VELAIR — 3B özel jet deneyimi, canlı link + desktop/mobil önizleme — #09 sırasına EKH Yapı'nın yerine alındı, EKH Yapı #50'ye kaydı) — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
@@ -102,8 +102,10 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   > birlikte güncellenmeli; zorunlu olmayan çerez eklenirse onay banner'ı gerekir.
 - **Ceviriler**: 429/429 eksiksiz (works 50, stories 6, servicesList 12, faqItems 75 × 3 dil).
   `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
-- **Bekleyen (kullanici tarafinda)**: `NEXT_PUBLIC_SITE_URL` ve `RESEND_API_KEY` Vercel'e eklenmeli.
-  Resend hesabi `pitonstudios@gmail.com` ile acilmali. Ayrica proje tarihleri duzeltilecek.
+- **E-posta altyapisi (2026-09-15)**: gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi;
+  MX `mx.zoho.eu`). Form gonderimi Resend ile — `pitonstudios.com` Resend'te dogrulandi (`send.` alt alan adi).
+  Vercel env: `RESEND_API_KEY`, `CONTACT_NOTIFY_EMAIL` (hedef `hi@pitonstudios.com`), `CONTACT_FROM_EMAIL`.
+  `NEXT_PUBLIC_SITE_URL` gerekmiyor (canonical zaten www.pitonstudios.com). Bekleyen: proje tarihleri duzeltilecek.
 
 ### Sprint 1 tamamlandi (2026-07-28) — SEO + Blog + Analytics
 
@@ -193,13 +195,15 @@ Simdi `/api/contact` (nodejs runtime):
 - zod dogrulama, bal kupu (honeypot), IP basina 10 dk / 3 gonderim
 - Hiz siniri dogrulamadan SONRA sayilir — e-postasini yanlis yazan kullanici kilitlenmesin
 - Bal kupu dolu ise 200 ok:true doner ama e-posta gonderilmez (bota sinyal verilmez)
-- Bildirim `pitonstudios@gmail.com` adresine, `replyTo` gonderenin adresi
+- Bildirim `CONTACT_NOTIFY_EMAIL` adresine (varsayilan `hi@pitonstudios.com`), `replyTo` gonderenin adresi
 - `RESEND_API_KEY` yoksa **acik hata** doner ve kullaniciya dogrudan e-posta adresi
   gosterilir — sessizce yutulmaz
 
 **Ziyaretciye otomatik yanit** yalnizca `CONTACT_FROM_EMAIL` ayarliysa gonderilir.
 Resend'te dogrulanmis alan adi olmadan `onboarding@resend.dev` SADECE Resend hesabinin
-sahibine gonderebilir; bu yuzden Resend hesabi `pitonstudios@gmail.com` ile acilmali.
+sahibine gonderebilir — `pitonstudios.com` dogrulandigi icin `CONTACT_FROM_EMAIL` artik bu alan adindan olmali.
+> Gelen kutusu veya gonderim saglayicisi degisirse gizlilik metnindeki aktarim tablosu (3 dil) ve
+> `LEGAL.updated` birlikte guncellenmeli.
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
