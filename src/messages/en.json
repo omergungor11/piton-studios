@@ -183,7 +183,7 @@
     "expertiseList": "Web & Mobile Development · AI Integration · SEO & Growth · Cloud Infrastructure · Automation",
     "clients": "Clients",
     "technologies": "Technologies",
-    "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
+    "techList": "Next.js · React · TypeScript · Python · Google Cloud · Vercel · Claude AI"
   },
   "aboutSections": {
     "story": {
@@ -650,7 +650,7 @@
       "role": "Full-stack / Design",
       "caseStudy": {
         "challenge": "At Gel Gez Gor, manually tracking trending listings, reaching out to listing owners one by one, and preparing a separate social media graphic for every listing took time and produced inconsistent results. The platform itself had no API for trend detection. What was needed was an automation layer that could detect trending listings straight from the site's own HTML structure, notify listing owners over WhatsApp, and generate a ready-made Instagram/Facebook graphic and caption for each listing — one that wouldn't break easily if the site's structure changed, and that would run on its own several times a day.",
-        "solution": "The pipeline reads gelgezgor.com's static HTML with Cheerio to extract trending listing cards; results are saved locally to SQLite/Drizzle, or directly to Supabase in the Vercel environment, then enriched from the detail page. Listing owners get automatic notifications via the Twilio WhatsApp Business API, with a separate client already in place for migrating to Meta's own WhatsApp Cloud API. On the social side, a Sharp-based SVG-overlay-and-image-composite approach produces six graphic templates across three themes (Modern, Elegant, Bold) times two variants (dark/light); template choice auto-rotates based on the listing's title and category. Captions and hashtags are generated first with Gemini, with an automatic fallback to template-based text if the API call fails; an optional AI-generated background via Imagen 3 is also attempted, again falling back to the template. Generated graphics can be published directly to Instagram (single post and carousel) and Facebook through the Meta Graph API. All of this comes together in a single orchestrator triggered twice a day by node-cron; an Express-based panel provides manual triggering and status tracking, with a dry-run mode for testing without touching production.",
+        "solution": "The pipeline reads gelgezgor.com's static HTML with Cheerio to extract trending listing cards; results are saved locally to SQLite/Drizzle, or directly to a cloud PostgreSQL database in the Vercel environment, then enriched from the detail page. Listing owners get automatic notifications via the Twilio WhatsApp Business API, with a separate client already in place for migrating to Meta's own WhatsApp Cloud API. On the social side, a Sharp-based SVG-overlay-and-image-composite approach produces six graphic templates across three themes (Modern, Elegant, Bold) times two variants (dark/light); template choice auto-rotates based on the listing's title and category. Captions and hashtags are generated first with Gemini, with an automatic fallback to template-based text if the API call fails; an optional AI-generated background via Imagen 3 is also attempted, again falling back to the template. Generated graphics can be published directly to Instagram (single post and carousel) and Facebook through the Meta Graph API. All of this comes together in a single orchestrator triggered twice a day by node-cron; an Express-based panel provides manual triggering and status tracking, with a dry-run mode for testing without touching production.",
         "highlights": [
           "A Cheerio-based scraper with documented selectors reads trending listing cards straight from the site's static HTML — no headless browser required.",
           "Automatic listing-owner notifications via the Twilio WhatsApp Business API, with a separate client already in place for migrating to the Meta WhatsApp Cloud API.",
@@ -665,26 +665,26 @@
           "Cheerio",
           "Drizzle ORM",
           "SQLite",
-          "Supabase",
+          "PostgreSQL",
           "Twilio",
           "Sharp",
           "Google Gemini"
         ],
-        "outcome": "The result is a pipeline that unifies trend detection for Gel Gez Gor into a single automated flow, from scraping through WhatsApp notification to social media publishing. Manual control and a dry-run mode in the panel allow safe testing before going live. The system was built to be portable, running equally well on SQLite on a single machine or on Supabase on Vercel."
+        "outcome": "The result is a pipeline that unifies trend detection for Gel Gez Gor into a single automated flow, from scraping through WhatsApp notification to social media publishing. Manual control and a dry-run mode in the panel allow safe testing before going live. The system was built to be portable, running equally well on SQLite on a single machine or on cloud PostgreSQL on Vercel."
       }
     },
     "nexos-investment": {
       "title": "Nexos Investment",
       "summary": "Custom real estate listing & management system built from scratch — maps, i18n, automated PDF/PPT proposals.",
       "body": [
-        "Off-the-shelf themes couldn't meet Nexos Investment's needs (advanced listing management, map-based display, multi-language, automated proposal generation). We built a scalable listing management system from scratch with Next.js, Supabase and Vercel: an interactive Google Maps + Leaflet clustered map, multi-language via next-intl, and automated PDF/PowerPoint proposal generation from listing data.",
+        "Off-the-shelf themes couldn't meet Nexos Investment's needs (advanced listing management, map-based display, multi-language, automated proposal generation). We built a scalable listing management system from scratch with Next.js, PostgreSQL and Vercel: an interactive Google Maps + Leaflet clustered map, multi-language via next-intl, and automated PDF/PowerPoint proposal generation from listing data.",
         "An admin panel with TipTap editing and drag-and-drop, PWA/offline support, Zod validation, Upstash rate-limiting and Playwright E2E tests delivered a production-grade platform. The firm now runs maps, proposals and content from one fully-controlled system — the technical peak of our portfolio."
       ],
       "kind": "Web Design · Corporate",
       "role": "Design / Development",
       "caseStudy": {
         "challenge": "Nexos Investment, a real estate investment firm managing many projects and listings in North Cyprus, was working with off-the-shelf real estate themes. Those themes couldn't support map-based, location-driven presentation, multilingual content (most investors are foreign), or generating an instant proposal document from listing data. Consultants had to build a presentation by hand for every proposal and manage listings separately in each language. The firm wanted a single platform, shaped around its own workflow, that would bring all of these processes together in one system.",
-        "solution": "We built a real estate management system from scratch on Next.js 16 and Supabase. On the public side, it covers listing/project browsing, filtering, a clustered interactive map on Google Maps and Leaflet (react-leaflet-cluster), and a 5-language (tr/en/ru/de/fa) content structure via next-intl. For consultants, we built a full admin panel with a TipTap rich-text editor and a drag-and-drop interface, managing listings, projects, sub-listings and floor plans. The presentation module instantly turns selected listing/project data into a PDF or PowerPoint proposal file using jsPDF and pptxgenjs, via html2canvas image capture. The system also runs as a PWA, with service-worker caching and offline page support. Input validation runs on Zod, abuse protection on Upstash rate-limiting, and critical flows are covered by Playwright E2E tests.",
+        "solution": "We built a real estate management system from scratch on Next.js 16 and PostgreSQL. On the public side, it covers listing/project browsing, filtering, a clustered interactive map on Google Maps and Leaflet (react-leaflet-cluster), and a 5-language (tr/en/ru/de/fa) content structure via next-intl. For consultants, we built a full admin panel with a TipTap rich-text editor and a drag-and-drop interface, managing listings, projects, sub-listings and floor plans. The presentation module instantly turns selected listing/project data into a PDF or PowerPoint proposal file using jsPDF and pptxgenjs, via html2canvas image capture. The system also runs as a PWA, with service-worker caching and offline page support. Input validation runs on Zod, abuse protection on Upstash rate-limiting, and critical flows are covered by Playwright E2E tests.",
         "highlights": [
           "Interactive map: a clustered Leaflet map via react-leaflet-cluster plus Google Maps integration shows listing and project locations grouped on one screen.",
           "Automated proposal generation: the presentation module instantly builds a PDF or PowerPoint proposal from listing data using pptxgenjs and jsPDF.",
@@ -694,7 +694,7 @@
         ],
         "stack": [
           "Next.js",
-          "Supabase",
+          "PostgreSQL",
           "TypeScript",
           "next-intl",
           "Leaflet",
@@ -718,17 +718,17 @@
       "role": "Design / Development",
       "caseStudy": {
         "challenge": "Bilecik-based Ambalaj Cini needed a platform to sell packaging and cleaning products online while managing orders, stock, shipping and invoicing from one place. Its existing setup lacked the flexibility to handle a growing catalog and rising order volume; payment collection, shipment tracking and internal operations (stock, accounting, CRM) all ran separately. The company wanted a fast, secure shopping experience for customers on one side, and a back office to run the entire operation from a single panel on the other.",
-        "solution": "We built an e-commerce system on Next.js and Supabase (Postgres, Auth, Storage) that combines the customer storefront with a full back office in one platform. The storefront covers catalog, promotions, cart and order/shipment tracking; the admin panel handles product/stock, orders, shipping, invoicing, accounting, CRM and campaign management with role-based access (admin/staff). Payment collection is automated through the PayTR iFrame API and shipping through a DHL integration, with order status and shipment status synced in both directions. On security, admin logins require Supabase MFA (TOTP), Upstash-based rate limiting and a Content-Security-Policy are in place, and customers can manage their own data under Turkey's KVKK data-protection law. Pricing is always calculated server-side from the database; mutations run through Zod-validated Next.js Server Actions. Critical flows are covered by Vitest unit tests and Playwright E2E tests.",
+        "solution": "We built an e-commerce system on Next.js and PostgreSQL (database, authentication, file storage) that combines the customer storefront with a full back office in one platform. The storefront covers catalog, promotions, cart and order/shipment tracking; the admin panel handles product/stock, orders, shipping, invoicing, accounting, CRM and campaign management with role-based access (admin/staff). Payment collection is automated through the PayTR iFrame API and shipping through a DHL integration, with order status and shipment status synced in both directions. On security, admin logins require multi-factor authentication (TOTP), Upstash-based rate limiting and a Content-Security-Policy are in place, and customers can manage their own data under Turkey's KVKK data-protection law. Pricing is always calculated server-side from the database; mutations run through Zod-validated Next.js Server Actions. Critical flows are covered by Vitest unit tests and Playwright E2E tests.",
         "highlights": [
           "Card payment collection via the PayTR iFrame API and shipment tracking via a DHL integration stay synced in both directions with order status.",
-          "Supabase MFA (TOTP) is mandatory in the admin panel; an account-owner rule plus Upstash rate-limiting block unauthorized access and brute-force attempts.",
+          "multi-factor authentication (TOTP) is mandatory in the admin panel; an account-owner rule plus Upstash rate-limiting block unauthorized access and brute-force attempts.",
           "Price is always calculated server-side from the database; mutations run through Server Actions with Zod validation, so a client-submitted amount is never trusted.",
           "Web push notifications (VAPID) and Resend transactional emails deliver order, payment and stock status changes to customers and the team instantly.",
           "Vitest unit tests and Playwright E2E tests (covering auth, payment, shipping, search and other critical flows) validate every change on the CI pipeline."
         ],
         "stack": [
           "Next.js",
-          "Supabase",
+          "PostgreSQL",
           "TypeScript",
           "PayTR",
           "DHL API",
@@ -1950,7 +1950,7 @@
         },
         {
           "title": "Video Training Series",
-          "desc": "Step-by-step video courses — Next.js, React, Supabase, AI integration, SEO, and more."
+          "desc": "Step-by-step video courses — Next.js, React, PostgreSQL, AI integration, SEO, and more."
         },
         {
           "title": "Developing with AI",
@@ -1995,7 +1995,7 @@
       "faq": [
         {
           "q": "What topics do you offer training on?",
-          "a": "Web development (Next.js, React), AI tools (Claude Code, Cursor), databases (Supabase, PostgreSQL), SEO, automation, and digital marketing. We customize based on your needs."
+          "a": "Web development (Next.js, React), AI tools (Claude Code, Cursor), databases (PostgreSQL), SEO, automation, and digital marketing. We customize based on your needs."
         },
         {
           "q": "Do you offer online training?",
@@ -2817,7 +2817,7 @@
     },
     "tech-stack": {
       "q": "What technologies do you use?",
-      "a": "The core stack is Next.js, React, and TypeScript; Python and Node.js on the backend; Supabase and PostgreSQL for the database; Vercel and Google Cloud for deployment. Claude AI is used for AI integrations, and n8n is the platform of choice for automation projects.",
+      "a": "The core stack is Next.js, React, and TypeScript; Python and Node.js on the backend; PostgreSQL for the database; Vercel and Google Cloud for deployment. Claude AI is used for AI integrations, and n8n is the platform of choice for automation projects.",
       "detail": [
         "Technology choice follows the need, not habit — WordPress can be the right call for a static brochure site; Next.js and TypeScript are preferred for projects needing custom business logic, real-time features, or a complex data model.",
         "The Piton Studios site itself is built with Next.js, hosted on Vercel, fully static, and trilingual (tr/en/ru) — that choice also serves as an example of the studio's own output."
@@ -2825,7 +2825,7 @@
       "list": [
         "Next.js, React, TypeScript",
         "Python, Node.js",
-        "Supabase, PostgreSQL",
+        "PostgreSQL",
         "Google Cloud, Vercel",
         "Claude AI, n8n"
       ]
@@ -3125,7 +3125,7 @@
     },
     "backups-and-uptime": {
       "q": "What happens with backups and outages?",
-      "a": "We carefully choose hosting platforms (Vercel, Supabase, Google Cloud, and similar) that offer daily automated backups and managed infrastructure; recovery in an outage largely relies on those providers' own infrastructure guarantees. For critical projects, a disaster-recovery procedure is defined separately during the architecture phase, not added later.",
+      "a": "We carefully choose hosting platforms (Vercel, Google Cloud, and similar) that offer daily automated backups and managed infrastructure; recovery in an outage largely relies on those providers' own infrastructure guarantees. For critical projects, a disaster-recovery procedure is defined separately during the architecture phase, not added later.",
       "detail": [
         "RTO — acceptable downtime — and RPO — acceptable data-loss window — are set together with you while the architecture is built and come with tested recovery procedures; disaster recovery isn't an afterthought for us, it's an integral part of the design from the start.",
         "Piton Studios' own site is fully static and uses no database, so backups aren't relevant to our own site; on client projects it's set up carefully based on the infrastructure choice and how critical the data is — there's no single default."
@@ -3165,7 +3165,7 @@
     },
     "data-storage-location": {
       "q": "Where is our data stored?",
-      "a": "It depends on the project — we typically build infrastructure on Vercel and Supabase, in whichever geographic region fits your needs; the region is settled with you at project start based on your data privacy requirements. Piton Studios' own site uses no database at all; contact form data goes straight to email via Resend and isn't stored separately.",
+      "a": "It depends on the project — we typically build infrastructure on Vercel and managed PostgreSQL services, in whichever geographic region fits your needs; the region is settled with you at project start based on your data privacy requirements. Piton Studios' own site uses no database at all; contact form data goes straight to email via Resend and isn't stored separately.",
       "detail": [
         "We don't claim a fixed default region because the right answer varies significantly client to client — some projects prefer EU hosting, others need local hosting; this decision is made together with you during the architecture phase, based on your requirements, and is never imposed unilaterally.",
         "The same minimal approach applies to analytics: on our own site we use Vercel Analytics and Speed Insights, both cookie-free and collecting no personal data from visitors — only aggregate, fully anonymous statistics, with no identifying information ever processed."
@@ -3910,7 +3910,7 @@
       "intro": "We build corporate websites, e-commerce infrastructure or custom software for your business in Istanbul. Our office is in Bilecik, but the whole process runs online: kickoff call, design approval, revision rounds and delivery are all handled remotely -- so your project moves forward without a single site visit through Istanbul's heavy traffic, and the timeline never slips.",
       "bullets": {
         "1": "From corporate to SaaS: we've built holding company sites, CRM/ERP dashboards and e-commerce platforms across a wide range of scales.",
-        "2": "We build custom software from scratch with Next.js and Supabase whenever an off-the-shelf theme can't keep up.",
+        "2": "We build custom software from scratch with Next.js and PostgreSQL whenever an off-the-shelf theme can't keep up.",
         "3": "Meetings, revision rounds and delivery are entirely online -- your project moves forward without any travel within Istanbul.",
         "4": "SEO and GEO work aims to make you visible in Istanbul's highly competitive search volume.",
         "5": "Automation and integrations connect repetitive operational work -- stock, orders, account tracking -- into one system."
@@ -3922,7 +3922,7 @@
         "3": "Multi-branch or multi-product businesses see content updates become scattered and inconsistent without a central system."
       },
       "detail": {
-        "1": "Istanbul is Türkiye's most competitive digital market -- from corporate services to e-commerce, dozens of competitors show up in the same search results at the same time. What sets a business apart here isn't a template site, but a digital structure built around the brand's own voice, business model and scale. Where ready-made themes fell short for Nexos Investment, we built a map-integrated, multilingual real estate listing management system from scratch with Next.js and Supabase; for FurCRM we built an accounts, production and dealer-tracking dashboard for furniture manufacturers. These are concrete examples of that approach: the workflow is designed around real operational needs rather than a template, it can expand as the business grows, and it can bring an Istanbul-scale business's complex processes together in a single dashboard.",
+        "1": "Istanbul is Türkiye's most competitive digital market -- from corporate services to e-commerce, dozens of competitors show up in the same search results at the same time. What sets a business apart here isn't a template site, but a digital structure built around the brand's own voice, business model and scale. Where ready-made themes fell short for Nexos Investment, we built a map-integrated, multilingual real estate listing management system from scratch with Next.js and PostgreSQL; for FurCRM we built an accounts, production and dealer-tracking dashboard for furniture manufacturers. These are concrete examples of that approach: the workflow is designed around real operational needs rather than a template, it can expand as the business grows, and it can bring an Istanbul-scale business's complex processes together in a single dashboard.",
         "2": "Our way of working is especially practical for clients in Istanbul: our head office is in Bilecik, and the team works fully remotely. That means a fast-moving process that doesn't wait for site visits -- kickoff calls, design approval, revision rounds and final delivery all run through video calls and written updates. For multi-arm holding structures like Arslan Group, which brings real estate, finance and trade under one roof, and for corporate projects with a broad service catalogue like Alp Sigorta, this remote model works without losing time to Istanbul traffic, appointment coordination or on-site waiting; both sides use their time efficiently, and project progress can be tracked in writing at every stage.",
         "3": "For businesses in Istanbul, two things matter most on the results side: digital visibility and operational efficiency. SEO and GEO work to appear in high-volume searches and AI-powered search tools is one priority; automation that hands off repetitive work like stock, order or account tracking to a system is the other. The payment-integrated e-commerce infrastructure we built for Ambalaj Cini is a concrete example of how manual order tracking becomes systematic and traceable; we adapt a similar structure to your Istanbul business's scale, sector and growth goals, building it as a measurable, reportable system -- and we keep supporting it after delivery."
       },
@@ -4051,7 +4051,7 @@
       "ctaText": "Let's talk about the custom system to manage your portfolio -- tell us about your real estate software project.",
       "detail": {
         "1": "Real estate listing software is a different layer from a standard real estate website: the listing data model, admin panel, map integration and multilingual content management all come together in one system. An off-the-shelf theme won't cover most of these needs; as the listing count and team grow, requirements like filtering, permissions and reporting push past the limits of ready-made solutions. At that point what you're really looking for isn't a website anymore -- it's software that runs the office's daily work, carrying the whole process from a consultant entering a listing to presenting a proposal to an investor. The bigger the office grows, the more this system's value grows too, because manual workload doesn't scale linearly -- it compounds.",
-        "2": "For Nexos Investment we built a system from scratch with Next.js, Supabase and Vercel to meet advanced listing management, map display, multiple languages and automatic proposal generation needs that off-the-shelf themes couldn't cover. We delivered a production-grade platform with an interactive map using Google Maps and Leaflet clustering, a multilingual structure built with next-intl, an admin panel with a TipTap editor and drag-and-drop support, automatic PDF/PowerPoint proposal generation from listing data, PWA/offline support, Zod validation, Upstash rate limiting and Playwright end-to-end tests. The firm now runs maps, proposal generation and content management from a single system with full control; this project is considered the technical peak of our portfolio and stands as an example at a scale no off-the-shelf theme could carry.",
+        "2": "For Nexos Investment we built a system from scratch with Next.js, PostgreSQL and Vercel to meet advanced listing management, map display, multiple languages and automatic proposal generation needs that off-the-shelf themes couldn't cover. We delivered a production-grade platform with an interactive map using Google Maps and Leaflet clustering, a multilingual structure built with next-intl, an admin panel with a TipTap editor and drag-and-drop support, automatic PDF/PowerPoint proposal generation from listing data, PWA/offline support, Zod validation, Upstash rate limiting and Playwright end-to-end tests. The firm now runs maps, proposal generation and content management from a single system with full control; this project is considered the technical peak of our portfolio and stands as an example at a scale no off-the-shelf theme could carry.",
         "3": "Once listing management is in place, the next problem is usually the portals: updating the same listing by hand across multiple platforms. Our own product, Emlak Sync, solves this -- a listing is entered once, published automatically to North Cyprus portals (101evler, HangiEv) and kept in sync. This product, which eliminates duplicate data entry, is concrete proof of our capability in portal integrations and real-estate-specific automation. Together, the two systems let a real estate office manage its entire workflow -- from entering a listing to presenting a proposal to publishing on portals -- from one place, consistently; the consultant can spend time finding properties and talking to clients instead of repeating data entry. As your listing management software grows, you can also see from the same system which portal is driving more demand for which listing, and shape your marketing decisions accordingly."
       }
     },

@@ -13,12 +13,12 @@ export const LEGAL = {
   tradeName: SITE.name,
   address: '4 Eylül Mah. 889. Sk. Karaca Apt. A Blok, Bozüyük / Bilecik, Türkiye',
   email: SITE.email,
-  /** Iletisim formu bildirimlerinin dustugu kutu (Resend -> Gmail). */
-  inbox: 'pitonstudios@gmail.com',
+  /** Iletisim formu bildirimlerinin ve dogrudan e-postalarin dustugu kutu (Zoho Mail, AB veri merkezi). */
+  inbox: 'hi@pitonstudios.com',
   /** Is iliskisine donusmeyen form mesajlarinin saklanma suresi. */
   retentionYears: 2,
   /** Metinlerde "son guncelleme" olarak gosterilir; metin degisince guncelleyin. */
-  updated: '2026-09-14',
+  updated: '2026-09-15',
 } as const;
 
 export const LEGAL_READY = Boolean(LEGAL.controllerName.trim() && LEGAL.address.trim());

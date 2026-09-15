@@ -182,7 +182,7 @@
     "expertiseList": "Web & Mobile Development · AI Integration · SEO & Growth · Cloud Infrastructure · Automation",
     "clients": "Müşteriler",
     "technologies": "Teknolojiler",
-    "techList": "Next.js · React · TypeScript · Python · Supabase · Google Cloud · Vercel · Claude AI"
+    "techList": "Next.js · React · TypeScript · Python · Google Cloud · Vercel · Claude AI"
   },
   "aboutSections": {
     "story": {
@@ -643,7 +643,7 @@
       ],
       "caseStudy": {
         "challenge": "Gel Gez Gör'de öne çıkan ilanları elle takip edip ilan sahiplerine tek tek ulaşmak ve her ilan için ayrı sosyal medya görseli hazırlamak zaman alıyor, tutarsız sonuçlar veriyordu. Platformun kendisinde trend tespiti için bir API yoktu; ihtiyaç, sitenin kendi HTML yapısından trend ilanları otomatik tespit eden, ilan sahiplerine WhatsApp üzerinden bildirim gönderen ve her ilan için hazır Instagram/Facebook görseli ile başlık üreten, site yapısı değiştiğinde kolay kırılmayan, günde birden çok kez kendiliğinden çalışan bir otomasyon katmanıydı.",
-        "solution": "Pipeline, Cheerio ile gelgezgor.com'un statik HTML'ini okuyup trend ilan kartlarını çıkarıyor; sonuçlar yerelde SQLite/Drizzle'a, Vercel ortamında doğrudan Supabase'e kaydediliyor ve detay sayfasından zenginleştiriliyor. İlan sahiplerine Twilio WhatsApp Business API üzerinden otomatik bildirim gönderiliyor; Meta'nın kendi WhatsApp Cloud API'sine geçiş için ayrı bir istemci de hazır durumda. Sosyal medya tarafında Sharp ile SVG overlay + image composite yaklaşımıyla üç tema (Modern, Elegant, Bold) × iki varyanttan (koyu/açık) oluşan altı görsel şablon var; şablon seçimi ilan başlığına/kategorisine göre otomatik rotasyonla yapılıyor. Başlık ve hashtag metinleri önce Gemini ile üretiliyor, API başarısız olursa şablon tabanlı metne otomatik düşülüyor; Imagen 3 ile opsiyonel bir yapay zeka arka planı da denenip yine template'e geri dönülebiliyor. Üretilen görseller Meta Graph API ile Instagram (tekli gönderi + karusel) ve Facebook'a doğrudan yayınlanabiliyor. Tüm adımlar node-cron ile günde iki kez tetiklenen tek bir orchestrator'da birleşiyor; Express tabanlı panel manuel tetikleme ve durum takibi sağlıyor, dry-run modu üretime dokunmadan test imkânı veriyor.",
+        "solution": "Pipeline, Cheerio ile gelgezgor.com'un statik HTML'ini okuyup trend ilan kartlarını çıkarıyor; sonuçlar yerelde SQLite/Drizzle'a, Vercel ortamında doğrudan bulut PostgreSQL veritabanına kaydediliyor ve detay sayfasından zenginleştiriliyor. İlan sahiplerine Twilio WhatsApp Business API üzerinden otomatik bildirim gönderiliyor; Meta'nın kendi WhatsApp Cloud API'sine geçiş için ayrı bir istemci de hazır durumda. Sosyal medya tarafında Sharp ile SVG overlay + image composite yaklaşımıyla üç tema (Modern, Elegant, Bold) × iki varyanttan (koyu/açık) oluşan altı görsel şablon var; şablon seçimi ilan başlığına/kategorisine göre otomatik rotasyonla yapılıyor. Başlık ve hashtag metinleri önce Gemini ile üretiliyor, API başarısız olursa şablon tabanlı metne otomatik düşülüyor; Imagen 3 ile opsiyonel bir yapay zeka arka planı da denenip yine template'e geri dönülebiliyor. Üretilen görseller Meta Graph API ile Instagram (tekli gönderi + karusel) ve Facebook'a doğrudan yayınlanabiliyor. Tüm adımlar node-cron ile günde iki kez tetiklenen tek bir orchestrator'da birleşiyor; Express tabanlı panel manuel tetikleme ve durum takibi sağlıyor, dry-run modu üretime dokunmadan test imkânı veriyor.",
         "highlights": [
           "Cheerio ile sitenin statik HTML'inden trend ilan kartlarını okuyan, seçicileri dokümante edilmiş bir scraper — headless tarayıcıya gerek yok.",
           "Twilio WhatsApp Business API üzerinden ilan sahiplerine otomatik bildirim; Meta WhatsApp Cloud API'ye geçiş için ayrı bir istemci de hazır.",
@@ -658,24 +658,24 @@
           "Cheerio",
           "Drizzle ORM",
           "SQLite",
-          "Supabase",
+          "PostgreSQL",
           "Twilio",
           "Sharp",
           "Google Gemini"
         ],
-        "outcome": "Sonuç, Gel Gez Gör için trend ilanlarını scrape'ten WhatsApp bildirimine ve sosyal medya paylaşımına kadar tek bir otomatik akışta birleştiren bir pipeline. Panel üzerinden manuel kontrol ve dry-run modu, üretime geçmeden önce güvenle test imkânı sağlıyor. Sistem, hem SQLite ile tek makinede hem Supabase ile Vercel üzerinde çalışacak şekilde taşınabilir kuruldu."
+        "outcome": "Sonuç, Gel Gez Gör için trend ilanlarını scrape'ten WhatsApp bildirimine ve sosyal medya paylaşımına kadar tek bir otomatik akışta birleştiren bir pipeline. Panel üzerinden manuel kontrol ve dry-run modu, üretime geçmeden önce güvenle test imkânı sağlıyor. Sistem, hem SQLite ile tek makinede hem bulut PostgreSQL ile Vercel üzerinde çalışacak şekilde taşınabilir kuruldu."
       }
     },
     "nexos-investment": {
       "title": "Nexos Investment",
       "summary": "Sıfırdan özel emlak ilan & yönetim sistemi — harita, çok dil, otomatik PDF/PPT teklif.",
       "body": [
-        "Hazır temalar Nexos Investment'ın ihtiyaçlarını (gelişmiş ilan yönetimi, harita üzerinde gösterim, çoklu dil, otomatik teklif üretimi) karşılamıyordu. Next.js, Supabase ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik: Google Maps + Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi.",
+        "Hazır temalar Nexos Investment'ın ihtiyaçlarını (gelişmiş ilan yönetimi, harita üzerinde gösterim, çoklu dil, otomatik teklif üretimi) karşılamıyordu. Next.js, PostgreSQL ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik: Google Maps + Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi.",
         "TipTap editörlü ve sürükle-bırak destekli yönetim paneli, PWA/offline desteği, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor — portfolyomuzun teknik zirvesi."
       ],
       "caseStudy": {
         "challenge": "Nexos Investment, Kuzey Kıbrıs'ta çok sayıda proje ve ilanı yöneten bir gayrimenkul yatırım firması olarak hazır emlak temalarıyla çalışıyordu. Bu temalar interaktif harita üzerinde konum bazlı sunum, çok dilli içerik (yatırımcıların büyük kısmı yabancı) ve ilan verisinden anında teklif dokümanı üretme gibi ihtiyaçları karşılamıyordu. Danışmanlar her teklif için elle sunum hazırlıyor, ilanları farklı dillerde ayrı ayrı yönetmek zorunda kalıyordu. Firma, tüm bu süreçleri tek bir sistemde birleştirecek, kendi iş akışına göre şekillenen özel bir platform arıyordu.",
-        "solution": "Next.js 16 ve Supabase üzerine sıfırdan bir emlak yönetim sistemi kurduk. Genel ağ tarafında ilan/proje listeleme, filtreleme, Google Maps ve Leaflet tabanlı cluster'lı interaktif harita (react-leaflet-cluster) ve next-intl ile 5 dilli (tr/en/ru/de/fa) içerik yapısı yer alıyor. Danışmanlar için TipTap tabanlı zengin metin editörlü, sürükle-bırak arayüzlü kapsamlı bir admin paneli geliştirdik; burada ilanlar, projeler, alt ilanlar ve kat planları yönetiliyor. Sunum modülü, seçilen ilan/proje verisini jsPDF ve pptxgenjs ile anında PDF veya PowerPoint teklif dosyasına dönüştürüyor — html2canvas ile görsel yakalama üzerinden. Sistem PWA olarak da çalışıyor: service worker ile önbellekleme ve çevrimdışı sayfa desteği var. Girdi doğrulama Zod, kötüye kullanım koruması Upstash rate-limit ile sağlanıyor; kritik akışlar Playwright E2E testleriyle güvence altına alındı.",
+        "solution": "Next.js 16 ve PostgreSQL üzerine sıfırdan bir emlak yönetim sistemi kurduk. Genel ağ tarafında ilan/proje listeleme, filtreleme, Google Maps ve Leaflet tabanlı cluster'lı interaktif harita (react-leaflet-cluster) ve next-intl ile 5 dilli (tr/en/ru/de/fa) içerik yapısı yer alıyor. Danışmanlar için TipTap tabanlı zengin metin editörlü, sürükle-bırak arayüzlü kapsamlı bir admin paneli geliştirdik; burada ilanlar, projeler, alt ilanlar ve kat planları yönetiliyor. Sunum modülü, seçilen ilan/proje verisini jsPDF ve pptxgenjs ile anında PDF veya PowerPoint teklif dosyasına dönüştürüyor — html2canvas ile görsel yakalama üzerinden. Sistem PWA olarak da çalışıyor: service worker ile önbellekleme ve çevrimdışı sayfa desteği var. Girdi doğrulama Zod, kötüye kullanım koruması Upstash rate-limit ile sağlanıyor; kritik akışlar Playwright E2E testleriyle güvence altına alındı.",
         "highlights": [
           "İnteraktif harita: react-leaflet-cluster ile cluster'lı Leaflet haritası ve Google Maps entegrasyonu, ilan/proje konumlarını tek ekranda gruplu gösteriyor.",
           "Otomatik teklif üretimi: sunum modülü pptxgenjs ve jsPDF ile ilan verisinden anında PDF/PowerPoint teklif dosyası oluşturuyor.",
@@ -685,7 +685,7 @@
         ],
         "stack": [
           "Next.js",
-          "Supabase",
+          "PostgreSQL",
           "TypeScript",
           "next-intl",
           "Leaflet",
@@ -707,17 +707,17 @@
       ],
       "caseStudy": {
         "challenge": "Bilecik merkezli Ambalaj Cini, ambalaj ve temizlik ürünlerini online satabileceği, aynı zamanda sipariş, stok, kargo ve fatura süreçlerini tek yerden yönetebileceği bir platforma ihtiyaç duyuyordu. Var olan kurulum, büyüyen ürün kataloğunu ve artan sipariş hacmini karşılayacak esneklikte değildi; ödeme tahsilatı, kargo takibi ve iç operasyon (stok, muhasebe, CRM) ayrı ayrı yürütülüyordu. Firma, hem müşteri tarafında hızlı ve güvenli bir alışveriş deneyimi hem de arka planda tüm operasyonu tek panelden yürütebileceği bir back-office istiyordu.",
-        "solution": "Next.js ve Supabase (Postgres, Auth, Storage) üzerine, müşteri vitrini ile tam bir back-office'i tek platformda birleştiren bir e-ticaret sistemi kurduk. Vitrin tarafında katalog, kampanya, sepet ve sipariş/kargo takibi yer alıyor; yönetim panelinde ürün/stok, sipariş, kargo, fatura, muhasebe, CRM ve kampanya yönetimi rol bazlı erişimle (admin/staff) çalışıyor. Ödeme tahsilatı PayTR iFrame API entegrasyonuyla, kargo süreçleri DHL entegrasyonuyla otomatikleştirildi; sipariş durumu ile kargo durumu iki yönlü senkronize ediliyor. Güvenlik tarafında admin girişlerinde Supabase MFA (TOTP), Upstash tabanlı hız sınırlama, Content-Security-Policy ve KVKK kapsamında kullanıcı kendi verisini yönetebiliyor. Fiyat hesaplaması her zaman sunucu tarafında, veritabanından yapılıyor; mutasyonlar Zod ile doğrulanan Next.js Server Action'lar üzerinden yürütülüyor. Kritik akışlar Vitest birim testleri ve Playwright E2E testleriyle güvence altına alındı.",
+        "solution": "Next.js ve PostgreSQL (veritabanı, kimlik doğrulama, dosya depolama) üzerine, müşteri vitrini ile tam bir back-office'i tek platformda birleştiren bir e-ticaret sistemi kurduk. Vitrin tarafında katalog, kampanya, sepet ve sipariş/kargo takibi yer alıyor; yönetim panelinde ürün/stok, sipariş, kargo, fatura, muhasebe, CRM ve kampanya yönetimi rol bazlı erişimle (admin/staff) çalışıyor. Ödeme tahsilatı PayTR iFrame API entegrasyonuyla, kargo süreçleri DHL entegrasyonuyla otomatikleştirildi; sipariş durumu ile kargo durumu iki yönlü senkronize ediliyor. Güvenlik tarafında admin girişlerinde çok faktörlü kimlik doğrulama (TOTP), Upstash tabanlı hız sınırlama, Content-Security-Policy ve KVKK kapsamında kullanıcı kendi verisini yönetebiliyor. Fiyat hesaplaması her zaman sunucu tarafında, veritabanından yapılıyor; mutasyonlar Zod ile doğrulanan Next.js Server Action'lar üzerinden yürütülüyor. Kritik akışlar Vitest birim testleri ve Playwright E2E testleriyle güvence altına alındı.",
         "highlights": [
           "PayTR iFrame API ile kart ödeme tahsilatı ve DHL entegrasyonuyla kargo takibi, sipariş durumuyla iki yönlü senkronize çalışıyor.",
-          "Admin panelinde Supabase MFA (TOTP) zorunlu tutuluyor; hesap sahibi kuralı ve Upstash rate-limit ile yetkisiz erişim ve kaba kuvvet denemeleri engelleniyor.",
+          "Admin panelinde çok faktörlü kimlik doğrulama (TOTP) zorunlu tutuluyor; hesap sahibi kuralı ve Upstash rate-limit ile yetkisiz erişim ve kaba kuvvet denemeleri engelleniyor.",
           "Fiyat her zaman sunucu tarafında veritabanından hesaplanıyor; mutasyonlar Server Action + Zod doğrulamasıyla yürütülüyor, istemciden gelen tutara güvenilmiyor.",
           "Web push bildirimleri (VAPID) ve Resend üzerinden işlem e-postalarıyla sipariş, ödeme ve stok durumu değişiklikleri hem müşteriye hem yönetim ekibine anlık iletiliyor.",
           "Vitest birim testleri ve Playwright E2E testleriyle (auth, ödeme, kargo, arama gibi kritik akışlar) sürekli entegrasyon hattında doğrulama yapılıyor."
         ],
         "stack": [
           "Next.js",
-          "Supabase",
+          "PostgreSQL",
           "TypeScript",
           "PayTR",
           "DHL API",
@@ -1899,7 +1899,7 @@
         },
         {
           "title": "Video Eğitim Serisi",
-          "desc": "Adım adım video eğitimler — Next.js, React, Supabase, AI entegrasyonu, SEO ve daha fazlası."
+          "desc": "Adım adım video eğitimler — Next.js, React, PostgreSQL, AI entegrasyonu, SEO ve daha fazlası."
         },
         {
           "title": "AI ile Geliştirme",
@@ -1962,7 +1962,7 @@
       "faq": [
         {
           "q": "Hangi konularda eğitim veriyorsunuz?",
-          "a": "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (Supabase, PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz."
+          "a": "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz."
         },
         {
           "q": "Online eğitim veriyor musunuz?",
@@ -2766,7 +2766,7 @@
     },
     "tech-stack": {
       "q": "Hangi teknolojileri kullanıyorsunuz?",
-      "a": "Temel yığın Next.js, React ve TypeScript; backend tarafında Python ve Node.js, veritabanında Supabase ve PostgreSQL, dağıtımda Vercel ve Google Cloud kullanılır. AI entegrasyonlarında Claude AI, otomasyon projelerinde ise n8n tercih edilen ana platformdur.",
+      "a": "Temel yığın Next.js, React ve TypeScript; backend tarafında Python ve Node.js, veritabanında PostgreSQL, dağıtımda Vercel ve Google Cloud kullanılır. AI entegrasyonlarında Claude AI, otomasyon projelerinde ise n8n tercih edilen ana platformdur.",
       "detail": [
         "Teknoloji seçimi aşinalığa değil ihtiyaca göre yapılır — statik bir tanıtım sitesinde WordPress de doğru seçim olabilir; özel iş mantığı, gerçek zamanlı özellik veya karmaşık veri modeli gerektiren projelerde Next.js ve TypeScript tercih edilir.",
         "Sitenin kendisi de Next.js ile yapılmış, Vercel'de barındırılan, üç dilli (tr/en/ru), tamamen statik bir yapıdır — bu tercih projelerin sonuç ürünü olarak da örnek gösterilebilir."
@@ -2774,7 +2774,7 @@
       "list": [
         "Next.js, React, TypeScript",
         "Python, Node.js",
-        "Supabase, PostgreSQL",
+        "PostgreSQL",
         "Google Cloud, Vercel",
         "Claude AI, n8n"
       ]
@@ -3074,7 +3074,7 @@
     },
     "backups-and-uptime": {
       "q": "Yedekleme ve kesinti durumunda ne oluyor?",
-      "a": "Barındırma platformlarını (Vercel, Supabase, Google Cloud gibi) günlük otomatik yedekleme ve yönetilen altyapı sunanlar arasından özenle seçiyoruz; kesinti durumunda kurtarma büyük ölçüde bu sağlayıcıların kendi altyapı garantilerine dayanır. Kritik projelerde felaket kurtarma prosedürü mimari aşamasında ayrıca ve özel olarak tanımlanır, sonradan eklenmez.",
+      "a": "Barındırma platformlarını (Vercel, Google Cloud gibi) günlük otomatik yedekleme ve yönetilen altyapı sunanlar arasından özenle seçiyoruz; kesinti durumunda kurtarma büyük ölçüde bu sağlayıcıların kendi altyapı garantilerine dayanır. Kritik projelerde felaket kurtarma prosedürü mimari aşamasında ayrıca ve özel olarak tanımlanır, sonradan eklenmez.",
       "detail": [
         "RTO, yani kabul edilebilir kesinti süresi, ve RPO, yani kabul edilebilir veri kaybı penceresi, mimari kurulurken sizinle birlikte belirlenir ve test edilmiş kurtarma prosedürleriyle birlikte gelir; felaket kurtarma bizde sonradan akla gelen bir ekleme değil, en baştan tasarımın ayrılmaz bir parçasıdır.",
         "Piton Studios'un kendi sitesi tamamen statik ve hiçbir veritabanı kullanmıyor; bu yüzden kendi sitemiz özelinde yedekleme konusu geçerli değil, ama müşteri projelerinde altyapı seçimine ve verinin ne kadar kritik olduğuna göre ayrıca ve özenle kurulur, tek tip bir varsayılan uygulanmaz."
@@ -3114,7 +3114,7 @@
     },
     "data-storage-location": {
       "q": "Verilerimiz nerede saklanıyor?",
-      "a": "Projeye göre değişir — altyapıyı genellikle Vercel ve Supabase üzerinde, ihtiyacınıza en uygun coğrafi bölgede kuruyoruz; hangi bölgenin seçileceği veri gizliliği gereksinimlerinize göre proje başında sizinle birlikte netleştirilir. Piton Studios'un kendi sitesi ise veritabanı kullanmıyor; iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor, ayrıca saklanmıyor.",
+      "a": "Projeye göre değişir — altyapıyı genellikle Vercel ve yönetilen PostgreSQL servisleri üzerinde, ihtiyacınıza en uygun coğrafi bölgede kuruyoruz; hangi bölgenin seçileceği veri gizliliği gereksinimlerinize göre proje başında sizinle birlikte netleştirilir. Piton Studios'un kendi sitesi ise veritabanı kullanmıyor; iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor, ayrıca saklanmıyor.",
       "detail": [
         "Sabit bir varsayılan bölge iddia etmiyoruz çünkü doğru cevap müşteriden müşteriye önemli ölçüde değişir — bazı projelerde AB bölgesi tercih edilirken bazılarında yerel barındırma gerekebilir; bu karar mimari aşamasında sizinle birlikte, sizin gereksinimlerinize göre karşılıklı olarak verilir, tek taraflı olarak size hiçbir zaman dayatılmaz.",
         "Analytics tarafında da aynı minimal yaklaşım geçerli: kendi sitemizde Vercel Analytics ve Speed Insights kullanıyoruz, ikisi de çerezsiz çalışıyor ve ziyaretçiden hiçbir kişisel veri toplamıyor, yalnızca toplu ve tamamen anonim istatistik üretiyor, kimlik bilgisi hiç işlenmiyor."
@@ -3859,7 +3859,7 @@
       "intro": "İstanbul'daki işletmenize kurumsal web sitesi, e-ticaret altyapısı veya özel yazılım kurarız. Ofisimiz Bilecik'te olsa da tüm süreç online yürür: kickoff görüşmesi, tasarım onayı, revizyon turları ve teslim uzaktan tamamlanır — İstanbul'un yoğun trafiğinde saha ziyaretine gerek kalmadan proje ilerler ve takvim aksamaz.",
       "bullets": {
         "1": "Kurumsaldan SaaS ürününe kadar geniş yelpazede: holding siteleri, CRM/ERP panelleri ve e-ticaret platformları kurduk.",
-        "2": "Next.js ve Supabase ile hazır temanın yetmediği projelerde sıfırdan özel yazılım geliştiriyoruz.",
+        "2": "Next.js ve PostgreSQL ile hazır temanın yetmediği projelerde sıfırdan özel yazılım geliştiriyoruz.",
         "3": "Görüşmeler, revizyon turları ve teslim tamamen online — İstanbul içi seyahate gerek kalmadan proje ilerler.",
         "4": "SEO ve GEO çalışmasıyla İstanbul'un yüksek rekabetli arama hacminde görünürlük hedefleriz.",
         "5": "Otomasyon ve entegrasyonlarla tekrarlayan operasyonel işleri (stok, sipariş, cari takip) sisteme bağlarız."
@@ -3872,7 +3872,7 @@
       },
       "ctaText": "İstanbul'daki projenizi anlatın, 24 saat içinde somut bir yol haritasıyla dönelim.",
       "detail": {
-        "1": "İstanbul, Türkiye'nin en yoğun rekabetli dijital pazarı — kurumsal hizmetten e-ticarete hemen her sektörde onlarca rakip aynı aramada aynı anda yer alıyor. Bu ortamda fark yaratan şey şablon bir site değil, markanın kendi diline, iş modeline ve büyüklüğüne oturan bir dijital yapı kurmak. Nexos Investment için hazır temaların ihtiyacı karşılamadığı yerde Next.js ve Supabase ile sıfırdan geliştirdiğimiz, harita entegrasyonlu ve çok dilli emlak ilan yönetim sistemi; FurCRM ile mobilya üreticilerine kurduğumuz cari, üretim ve bayi takip paneli bu yaklaşımın somut örnekleri: iş süreci şablon üzerinden değil, gerçek operasyonel ihtiyaçtan tasarlanıyor, büyüdükçe genişleyebiliyor ve İstanbul ölçeğindeki bir işletmenin karmaşık süreçlerini tek panelde toplayabiliyor.",
+        "1": "İstanbul, Türkiye'nin en yoğun rekabetli dijital pazarı — kurumsal hizmetten e-ticarete hemen her sektörde onlarca rakip aynı aramada aynı anda yer alıyor. Bu ortamda fark yaratan şey şablon bir site değil, markanın kendi diline, iş modeline ve büyüklüğüne oturan bir dijital yapı kurmak. Nexos Investment için hazır temaların ihtiyacı karşılamadığı yerde Next.js ve PostgreSQL ile sıfırdan geliştirdiğimiz, harita entegrasyonlu ve çok dilli emlak ilan yönetim sistemi; FurCRM ile mobilya üreticilerine kurduğumuz cari, üretim ve bayi takip paneli bu yaklaşımın somut örnekleri: iş süreci şablon üzerinden değil, gerçek operasyonel ihtiyaçtan tasarlanıyor, büyüdükçe genişleyebiliyor ve İstanbul ölçeğindeki bir işletmenin karmaşık süreçlerini tek panelde toplayabiliyor.",
         "2": "Çalışma şeklimiz İstanbul'daki müşteriler için özellikle pratik: merkez ofisimiz Bilecik'te, ekip tamamen uzaktan çalışıyor. Bu, saha ziyareti beklemeden hızlı ilerleyen bir süreç anlamına geliyor — kickoff görüşmesi, tasarım onayı, revizyon turları ve nihai teslim video görüşme ve yazılı bilgilendirmeyle yürüyor. Arslan Group gibi emlak, finans ve ticareti tek çatıda toplayan çok kollu holding yapıları ve Alp Sigorta gibi hizmet kataloğu geniş kurumsal projelerde bu uzaktan çalışma modeli, İstanbul içi trafik kaybı, randevu koordinasyonu ve saha bekleme süresi olmadan işliyor; taraflar zamanı verimli kullanıyor ve proje ilerleyişi yazılı olarak her aşamada takip edilebiliyor.",
         "3": "Sonuç tarafında İstanbul'daki işletmeler için iki şey öne çıkıyor: dijital görünürlük ve operasyonel verim. SEO ve GEO çalışmasıyla yüksek hacimli aramalarda ve yapay zekâ destekli arama araçlarında yer almak bir öncelik; otomasyon ile de stok, sipariş veya cari takibi gibi tekrarlayan işleri sisteme devretmek diğer öncelik. Ambalaj Cini'nde kurduğumuz ödeme entegrasyonlu e-ticaret altyapısı, manuel sipariş takibinin nasıl sistematik ve izlenebilir hale geldiğinin somut bir örneği; benzer bir yapıyı İstanbul'daki işletmenizin ölçeğine, sektörüne ve büyüme hedefine göre uyarlayarak, ölçülebilir sonuçlar veren, raporlanabilir bir sistem olarak kuruyor ve teslim sonrası da destek veriyoruz."
       }
@@ -4000,7 +4000,7 @@
       "ctaText": "Portföyünüzü yönetecek özel sistemi konuşalım — emlak yazılım projenizi anlatın.",
       "detail": {
         "1": "Emlak ilan yönetim yazılımı, standart bir emlak web sitesinden farklı bir katmandır: ilan verisinin veri modeli, yönetim paneli, harita entegrasyonu ve çok dilli içerik yönetimi tek sistemde birleşir. Hazır bir tema bu ihtiyaçların çoğunu karşılamaz; ilan sayısı ve ekip büyüdükçe filtreleme, yetkilendirme ve raporlama gibi ihtiyaçlar hazır çözümlerin sınırlarını zorlar. Bu noktada aradığınız artık bir web sitesi değil, ofisin günlük işini yürüten bir yazılımdır — danışmanın ilan girmesinden yatırımcıya teklif sunmasına kadar geçen sürecin tamamını taşıyan bir sistem. Ofis büyüdükçe bu sistemin değeri de büyür, çünkü manuel iş yükü katlanarak artmaz.",
-        "2": "Nexos Investment için hazır temaların karşılayamadığı gelişmiş ilan yönetimi, harita üzerinde gösterim, çok dil ve otomatik teklif üretimi ihtiyaçlarına Next.js, Supabase ve Vercel ile sıfırdan bir sistem kurduk. Google Maps ve Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı, TipTap editörlü ve sürükle-bırak destekli yönetim paneli, ilan verisinden otomatik PDF/PowerPoint teklif üretimi, PWA/offline destek, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor; bu proje portfolyomuzun teknik zirvesi kabul ediliyor ve hazır bir temanın taşıyamayacağı ölçekte bir örnek oluşturuyor.",
+        "2": "Nexos Investment için hazır temaların karşılayamadığı gelişmiş ilan yönetimi, harita üzerinde gösterim, çok dil ve otomatik teklif üretimi ihtiyaçlarına Next.js, PostgreSQL ve Vercel ile sıfırdan bir sistem kurduk. Google Maps ve Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı, TipTap editörlü ve sürükle-bırak destekli yönetim paneli, ilan verisinden otomatik PDF/PowerPoint teklif üretimi, PWA/offline destek, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor; bu proje portfolyomuzun teknik zirvesi kabul ediliyor ve hazır bir temanın taşıyamayacağı ölçekte bir örnek oluşturuyor.",
         "3": "İlan yönetimini kurduktan sonra sıradaki sorun genelde portallardır: aynı ilanın birden fazla platformda elle güncellenmesi. Emlak Sync ürünümüz bunu çözüyor — ilan tek yerden girilir, KKTC portallarına (101evler, HangiEv) otomatik yayınlanır ve senkron tutulur. Mükerrer veri girişini ortadan kaldıran bu ürün, portal entegrasyonları ve emlak sektörüne özel otomasyon yetkinliğimizin somut kanıtı. İki sistem birlikte, emlak ofisinin ilan girişinden teklif sunumuna ve portal yayınına kadar tüm iş akışını tek yerden, tutarlı biçimde yönetmesini sağlar; danışman zamanını mülk aramaya ve müşteriyle konuşmaya ayırabilir, tekrar eden veri girişine değil. İlan yönetim yazılımınız büyüdükçe hangi portalın hangi ilana daha çok talep getirdiğini de aynı sistemden görebilir, pazarlama kararlarınızı buna göre şekillendirebilirsiniz."
       }
     },

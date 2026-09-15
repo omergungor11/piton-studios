@@ -186,11 +186,11 @@ export const WORKS: Work[] = [
     kind: "Web App · Full-Stack",
     year: "2026",
     role: "Design / Development / Deploy",
-    tags: ["Next.js", "Supabase", "Google Maps", "i18n"],
+    tags: ["Next.js", "PostgreSQL", "Google Maps", "i18n"],
     image: "story-04.jpg",
     summary: "Custom real estate listing & management system — maps, multi-language, automated PDF/PPT proposals.",
     body: [
-      "Hazır temalar Nexos Investment'ın ihtiyaçlarını karşılamıyordu; Next.js, Supabase ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik. Google Maps + Leaflet ile cluster'lı interaktif harita, çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi tek sistemde birleşti.",
+      "Hazır temalar Nexos Investment'ın ihtiyaçlarını karşılamıyordu; Next.js, PostgreSQL ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik. Google Maps + Leaflet ile cluster'lı interaktif harita, çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi tek sistemde birleşti.",
       "TipTap editörlü yönetim paneli, PWA/offline desteği, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik — portfolyomuzun teknik zirvesi.",
     ],
     scope: "Full-stack app, admin panel, PWA, E2E tests",
@@ -250,8 +250,8 @@ export const WORKS: Work[] = [
     kind: "E-commerce · Web",
     year: "2022",
     role: "Design / Development",
-    // 2022'de WordPress ile yayina girdi; 2026'da Next.js + Supabase ile yeniden gelistirildi.
-    tags: ["E-commerce", "Payment Integration", "Next.js", "Supabase"],
+    // 2022'de WordPress ile yayina girdi; 2026'da Next.js + PostgreSQL ile yeniden gelistirildi.
+    tags: ["E-commerce", "Payment Integration", "Next.js", "PostgreSQL"],
     image: "story-05.jpg",
     summary: "E-commerce packaging supplies store with payment integration.",
     body: [
@@ -1182,7 +1182,7 @@ export const SERVICES: Service[] = [
       { q: "Do you handle DevOps?", a: "We set up the infrastructure as part of the build — CI/CD, preview environments, and production on Vercel or Google Cloud. Long-term DevOps is a separate engagement." },
       { q: "How do you handle security?", a: "OWASP top-10 is baseline. We also do input validation, CSRF protection, rate limiting, and dependency audits as part of standard delivery." },
     ],
-    tools: ["Next.js", "React", "TypeScript", "JavaScript", "PostgreSQL", "Prisma", "Supabase", "Stripe", "Clerk", "Redis", "Python", "Flask", "Vercel", "Google Cloud"],
+    tools: ["Next.js", "React", "TypeScript", "JavaScript", "PostgreSQL", "Prisma", "Stripe", "Clerk", "Redis", "Python", "Flask", "Vercel", "Google Cloud"],
     relatedServices: ["web-design", "progressive-web-app", "cloud-ecosystem"],
   },
   {
@@ -1221,7 +1221,7 @@ export const SERVICES: Service[] = [
       { q: "Can users install it from the browser?", a: "Yes — both Chrome and Safari prompt users to 'Add to Home Screen'. The app appears alongside native apps with its own icon." },
       { q: "What about SEO?", a: "PWAs are just websites — fully indexable by Google. You get the SEO benefits of a website plus the engagement of an app." },
     ],
-    tools: ["Next.js", "React", "TypeScript", "JavaScript", "Service Workers", "Workbox", "Supabase", "Clerk", "Vercel", "Sentry"],
+    tools: ["Next.js", "React", "TypeScript", "JavaScript", "Service Workers", "Workbox", "PostgreSQL", "Clerk", "Vercel", "Sentry"],
     relatedServices: ["web-app", "web-design", "automation"],
   },
   {
@@ -1260,7 +1260,7 @@ export const SERVICES: Service[] = [
       { q: "Can you automate across multiple tools?", a: "Yes — multi-system automations are our specialty. CRM, ERP, Slack, email, databases, and custom APIs all connected." },
       { q: "Is n8n hard to manage?", a: "We handle the infrastructure setup and make it manageable. Most clients find it easier than expected after the initial setup." },
     ],
-    tools: ["n8n", "Zapier", "Make", "Node.js", "Python", "PostgreSQL", "Redis", "Docker", "Supabase", "Vercel"],
+    tools: ["n8n", "Zapier", "Make", "Node.js", "Python", "PostgreSQL", "Redis", "Docker", "Vercel"],
     relatedServices: ["ai-integration", "data-engineering", "cloud-ecosystem"],
   },
   {
@@ -1299,7 +1299,7 @@ export const SERVICES: Service[] = [
       { q: "What does an AI integration cost to run?", a: "We model inference costs as part of the design. Most integrations we build cost $0.01–$0.10 per user session at scale." },
       { q: "Can you improve an existing AI feature?", a: "Yes. We audit the current implementation, identify the failure modes, and improve the pipeline systematically." },
     ],
-    tools: ["Claude", "OpenAI", "Gemini", "LangChain", "Python", "TypeScript", "PostgreSQL", "pgvector", "Supabase", "Vercel", "Next.js"],
+    tools: ["Claude", "OpenAI", "Gemini", "LangChain", "Python", "TypeScript", "PostgreSQL", "pgvector", "Vercel", "Next.js"],
     relatedServices: ["web-app", "automation", "data-engineering"],
   },
   {
@@ -1392,7 +1392,7 @@ export const SERVICES: Service[] = [
     features: [
       { title: "Uygulamalı Workshoplar", desc: "Yarım gün veya tam gün formatında ekip workshopları. Gerçek projeler üzerinde, canlı kodlama ve tasarım ile ilerliyor." },
       { title: "1:1 Mentorluk", desc: "Bireysel gelişim için kişiye özel mentorluk. Kendi projeniz üzerinde, kendi sorunlarınızla çalışıyoruz." },
-      { title: "Video Eğitim Serisi", desc: "Adım adım video eğitimler — Next.js, React, Supabase, AI entegrasyonu, SEO ve daha fazlası." },
+      { title: "Video Eğitim Serisi", desc: "Adım adım video eğitimler — Next.js, React, PostgreSQL, AI entegrasyonu, SEO ve daha fazlası." },
       { title: "AI ile Geliştirme", desc: "Claude Code, Cursor ve AI araçlarıyla nasıl 5 kat hızlı geliştirme yapılır — ilk repo'dan production'a." },
       { title: "Ekip Playbook'ları", desc: "Ekibinizin teknolojilerine özel yazılmış dahili dokümantasyon, workflow kuralları ve best practice rehberleri." },
       { title: "Sürekli Danışmanlık", desc: "Aylık check-in'ler ile ekibin gelişimini takip ediyor, tıkanma noktalarını çözüyor, yeni pattern'ler öğretiyoruz." },
@@ -1411,12 +1411,12 @@ export const SERVICES: Service[] = [
       { value: "Recording + materials", label: "Deliverables" },
     ],
     faq: [
-      { q: "Hangi konularda eğitim veriyorsunuz?", a: "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (Supabase, PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz." },
+      { q: "Hangi konularda eğitim veriyorsunuz?", a: "Web geliştirme (Next.js, React), AI araçları (Claude Code, Cursor), veritabanı (PostgreSQL), SEO, otomasyon ve dijital pazarlama. İhtiyaca göre özelleştiriyoruz." },
       { q: "Online eğitim veriyor musunuz?", a: "Evet. Online workshoplar 12 kişiye kadar çok iyi çalışıyor. Daha büyük gruplar için yüz yüze eğitimi öneriyoruz." },
       { q: "Eğitim için minimum seviye gerekli mi?", a: "Konuya göre değişir. Teknik eğitimler için temel programlama bilgisi yeterli. Pazarlama eğitimleri herkes için açık." },
       { q: "ROI'yi nasıl ölçüyoruz?", a: "Eğitim öncesi ve sonrası sprint velocity, teslim kalitesi ve ekip memnuniyeti ölçüyoruz. Çoğu ekip 3-5× verimlilik artışı raporluyor." },
     ],
-    tools: ["Claude Code", "Claude", "Next.js", "React", "TypeScript", "Supabase", "Figma", "VS Code", "Cursor", "Python", "Vercel"],
+    tools: ["Claude Code", "Claude", "Next.js", "React", "TypeScript", "PostgreSQL", "Figma", "VS Code", "Cursor", "Python", "Vercel"],
     relatedServices: ["ai-integration", "web-app", "web-design"],
   },
   {
@@ -1455,7 +1455,7 @@ export const SERVICES: Service[] = [
       { q: "Do you train our team on dbt?", a: "Yes. Knowledge transfer is part of every engagement. We don't build black boxes." },
       { q: "How do you handle PII and data privacy?", a: "Column-level masking, role-based access, and data classification as standard. We can also help with GDPR/CCPA compliance requirements." },
     ],
-    tools: ["BigQuery", "PostgreSQL", "Python", "SQL", "dbt", "Airbyte", "Airflow", "Prefect", "Looker", "Metabase", "Supabase"],
+    tools: ["BigQuery", "PostgreSQL", "Python", "SQL", "dbt", "Airbyte", "Airflow", "Prefect", "Looker", "Metabase"],
     relatedServices: ["ai-integration", "automation", "cloud-ecosystem"],
   },
   {
@@ -1494,7 +1494,7 @@ export const SERVICES: Service[] = [
       { q: "How do you handle disaster recovery?", a: "RTO and RPO targets defined in the architecture phase, with tested recovery procedures. DR isn't an afterthought." },
       { q: "Do you work with Kubernetes?", a: "Yes. GKE on Google Cloud or self-managed. We'll recommend it when the complexity is justified — which is less often than people think." },
     ],
-    tools: ["Google Cloud", "Vercel", "Supabase", "Terraform", "GitHub Actions", "Docker", "Kubernetes", "PostgreSQL", "Python", "Next.js", "Clerk", "Datadog", "Grafana"],
+    tools: ["Google Cloud", "Vercel", "PostgreSQL", "Terraform", "GitHub Actions", "Docker", "Kubernetes", "Python", "Next.js", "Clerk", "Datadog", "Grafana"],
     relatedServices: ["web-app", "data-engineering", "automation"],
   },
   {
@@ -1532,7 +1532,7 @@ export const SERVICES: Service[] = [
       { q: "Which LLMs do you use?", a: "Claude, GPT-4, Gemini — we pick the best model for each use case and budget." },
       { q: "How long does implementation take?", a: "MVP agents typically ship in 2-4 weeks, with iterative improvements after launch." },
     ],
-    tools: ["Claude", "OpenAI", "LangChain", "Supabase", "Python", "TypeScript", "Vercel AI SDK"],
+    tools: ["Claude", "OpenAI", "LangChain", "PostgreSQL", "Python", "TypeScript", "Vercel AI SDK"],
     relatedServices: ["ai-integration", "automation", "ai-consulting"],
   },
   {

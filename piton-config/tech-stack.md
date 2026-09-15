@@ -1,7 +1,6 @@
 # Tech Stack — Piton Studios
 
 > Guncel durum (2026-09-15). Site tamamen statiktir; veritabani, auth ve harici depolama yoktur.
-> Supabase planlanmis ama hic baglanmamisti — kodda, bagimliliklarda ve dokumanlarda kaldirildi.
 
 ## Runtime
 - Node.js 20 LTS

@@ -6,7 +6,7 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 
 - **GitHub**: [repo URL]
 - **Deploy**: Vercel
-- **Database**: Supabase
+- **Database**: Yok — site tamamen statik (tek dinamik parca: iletisim formu → Resend)
 
 ## Slash Commandlar
 
@@ -26,7 +26,7 @@ Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari serg
 - **32 proje** WORKS array'inde, ilk 6'si anasayfa slider'da
 - **Anasayfa**: Hero → Note → Services → Projects → About → Contact
 - **Nav**: Unified chrome (anasayfa + ic sayfalar ayni nav)
-- **Videolar**: Local fallback aktif (Supabase CDN dev'de devre disi)
+- **Videolar**: Yok — site screenshot tabanli (videos/ 2026-07-28'de silindi)
 - **Bekleyen**: Proje tarihleri duzeltilecek, mockup gorselleri eklenecek
 
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
@@ -42,9 +42,7 @@ src/
 │   ├── ui/           → shadcn/ui + genel UI
 │   ├── video/        → Video player, grid, lightbox
 │   └── layout/       → Header, footer, navigation
-├── lib/              → Utility fonksiyonlar
-│   ├── supabase/     → Supabase client + helpers
-│   └── utils/        → Genel yardimcilar
+├── lib/              → Veri + yardimcilar (data, sectors, locations, solutions, seo, blog, faq, legal)
 ├── hooks/            → Custom React hooks
 ├── types/            → TypeScript type definitions
 └── styles/           → Global stiller
@@ -70,7 +68,6 @@ pnpm typecheck              # TypeScript check
 - **TypeScript**: strict, `any` yasak
 - **Dosya**: `kebab-case`, `.tsx` componentler, `.ts` utilities
 - **Component**: Server Components default, `'use client'` sadece gerekince
-- **Video**: Lazy loading, intersection observer, Supabase Storage CDN
 - **Commit**: `feat(TASK-XXX): aciklama` + `Co-Authored-By: Codex <noreply@anthropic.com>`
 
 Detaylar → `piton-config/conventions.md`
@@ -116,5 +113,5 @@ Detaylar → `piton-config/agent-instructions.md`
 ## Notlar
 
 - Hafiza dosyasi `piton-docs/MEMORY.md`'de — her session'da oku, gerektiginde guncelle
-- Videolar `videos/` klasorunde (local dev), production'da Supabase Storage
+- Gorseller `public/assets/` altinda (repoda); video veya harici depolama yok
 - Vercel deploy icin `next.config.ts` video optimizasyonlari kritik

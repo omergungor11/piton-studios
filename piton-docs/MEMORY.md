@@ -2,7 +2,7 @@
 
 ## Hukuki sayfalar (2026-09-14)
 - Veri sorumlusu: Ömer Faruk Güngör (kayıtlı şirket yok, "Piton Studios" ticari adı), adres 4 Eylül Mah. 889. Sk. Karaca Apt. A Blok, Bozüyük / Bilecik. Yetkili mahkeme Bozüyük. Form yazışmaları iş ilişkisine dönüşmezse 2 yıl saklanır.
-- Veri akışı: form → Resend (ABD) → Gmail (Google, ABD); barındırma + Analytics/Speed Insights → Vercel (ABD). Veritabanı yok. IP yalnızca bellek içi hız sınırı (10 dk).
+- Veri akışı: form → Resend (ABD) → hi@pitonstudios.com (Zoho Mail, AB veri merkezi; 2026-09-15'te Gmail'den geçildi); barındırma + Analytics/Speed Insights → Vercel (ABD). Veritabanı yok. IP yalnızca bellek içi hız sınırı (10 dk).
 - Metinler avukat incelemesinden geçmedi — özellikle KVKK m.9 yurt dışı aktarım bölümü (standart sözleşme / bildirim yükümlülüğü) hukukçuya gösterilmeli.
 
 ## Blog içerik ve altyapı (2026-09-05)
@@ -17,7 +17,7 @@
 
 ## Tech Stack
 - Next.js 15 (App Router) + TypeScript + Tailwind CSS
-- Supabase (DB + Storage + Auth)
+- Veritabani yok — site statik; tek dinamik parca iletisim formu (Resend → hi@pitonstudios.com, Zoho)
 - Vercel (hosting + CDN)
 - pnpm (package manager)
 - Framer Motion (scroll animations)
@@ -28,7 +28,7 @@
 - **Phase 1**: COMPLETED — Core infrastructure (8/8)
 - **Phase 2**: COMPLETED — Frontend / UI (6/6)
 - **Overall**: 21/21 tasks (%100)
-- **Deploy**: Vercel aktif, Supabase Storage CDN uzerinden video servis
+- **Deploy**: Vercel aktif (statik site, video yok)
 
 ## Projects V2 → Anasayfa entegrasyonu (2026-09-04, gece)
 - Proje bulutu anasayfadaki "Projeler" sahnesinde canli (`ProjectCloudSection variant="home"`).
@@ -64,10 +64,9 @@
   `piton-plans/projects-v2-interactive-portfolio-plan.md`.
 
 ## Key Technical Decisions
-- Supabase Storage for video hosting (CDN, no self-hosted media server)
+- Video yok (2026-07-28 kaldirildi); gorseller public/assets/ altinda, repoda
 - Next.js App Router with Server Components default (performance)
 - No monorepo — single Next.js package (portfolio site complexity doesn't warrant it)
-- Videos: Supabase Storage CDN (production), local dev icin public/videos/
 - Video optimization: ffmpeg pipeline (183MB → 13MB, %93 compression)
 - next-intl config: ./i18n/request.ts (Vercel uyumluluk icin tasinmis)
 
@@ -80,7 +79,7 @@
 - Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
 - **Kapsam teyitleri (2026-09-15, kullanici)**: Gel Gez Gor ilan platformunu BIZ YAPMADIK — site musteride vardi;
   bizim isimiz trend tespiti + WhatsApp bildirimi + sosyal medya icerik otomasyonu (repo `Work-Restored/gel-gez-gor`).
-  Ambalaj Cini: 2022 WordPress sitesi Next.js + Supabase ile yeniden gelistirildi. Metinlerde bu kapsamlar asilmaz.
+  Ambalaj Cini: 2022 WordPress sitesi Next.js ile yeniden gelistirildi. Metinlerde bu kapsamlar asilmaz.
 - Kulup/nightlife siteleri 2026-07-27'de KALDIRILDI (kullanici istegi — portfolyoda listelenmesinler): WORKS'ten 10 (night-club-katalog, kibris-gece-hayati, gece-kibris, prenses/miracle/misse/crazy-girl-night-club, kibris-nights-club, kibris-katalog, faraon-night-clubs), STORIES'ten 5 (kibris-night-club, miracle-night-club, fareon-night-club, ibo-seytan, kibris-gece-hayati). Ceviriler de silindi; preview webp'leri assets'te duruyor
 - Detay sayfasinda "Is Birligi" meta alani olarak gosteriliyor (`projectDetail.collab`)
 
@@ -94,7 +93,6 @@
 - Video lazy loading with Intersection Observer
 - Poster/thumbnail images for video previews (don't autoplay all)
 - `preload="none"` on videos below fold
-- `media.ts` helper ile videoUrl() — Supabase CDN URL olusturma
 
 ## Current State (Session 4 — 2026-05-24)
 - 32 proje (WORKS), ilk 6'si anasayfa slider'da
@@ -107,8 +105,6 @@
 ## Known Issues / Pending Work
 - Proje tarihleri duzeltilecek (kullanicidan bilgi bekleniyor)
 - Proje detay sayfalarina mockup gorselleri eklenecek
-- Admin panel auth yok (Supabase Auth ile korunmali)
-- Contact form backend entegrasyonu (Supabase insert)
 - SEO meta tags eksik (og:image, og:video, twitter cards)
 - Custom domain baglanmamis
 - Vercel env vars dogrulanmali
