@@ -132,6 +132,66 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
       <path d="M22 8l1.5 1.5L26 6" />
     </svg>
   ),
+  // ── 2026-09-15 eklenen hizmetler ──────────────────────────────
+  'custom-software': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="6" width="24" height="20" rx="2" />
+      <polyline points="11,13 8,16 11,19" />
+      <polyline points="21,13 24,16 21,19" />
+      <line x1="17.5" y1="11" x2="14.5" y2="21" />
+    </svg>
+  ),
+  'mobile-app': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="10" y="3" width="12" height="26" rx="2.5" />
+      <line x1="14" y1="6" x2="18" y2="6" />
+      <rect x="12.5" y="9" width="3" height="3" rx="0.6" />
+      <rect x="16.5" y="9" width="3" height="3" rx="0.6" />
+      <rect x="12.5" y="13.5" width="3" height="3" rx="0.6" />
+      <rect x="16.5" y="13.5" width="3" height="3" rx="0.6" />
+      <circle cx="16" cy="25" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  'ecommerce': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 6h3l3 14h14l3-10H9" />
+      <circle cx="12" cy="25" r="1.8" />
+      <circle cx="22" cy="25" r="1.8" />
+      <line x1="14" y1="14" x2="22" y2="14" />
+    </svg>
+  ),
+  'erp-crm': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="5" width="24" height="22" rx="2" />
+      <line x1="4" y1="11" x2="28" y2="11" />
+      <line x1="13" y1="11" x2="13" y2="27" />
+      <polyline points="16,23 19,18 22,20 25,15" />
+      <line x1="7" y1="15" x2="10" y2="15" />
+      <line x1="7" y1="19" x2="10" y2="19" />
+      <line x1="7" y1="23" x2="10" y2="23" />
+    </svg>
+  ),
+  'whatsapp-chatbot': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 7h20a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H14l-6 5v-5H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z" />
+      <circle cx="11" cy="14.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="16" cy="14.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="21" cy="14.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  'meta-ads': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 14v4a1 1 0 0 0 1 1h3l9 5V8l-9 5H6a1 1 0 0 0-1 1z" />
+      <line x1="9" y1="19" x2="11" y2="26" />
+      <path d="M22 12a5 5 0 0 1 0 8" />
+      <path d="M25 9a9 9 0 0 1 0 14" />
+    </svg>
+  ),
+  'maintenance-support': (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.5 5.5a6 6 0 0 0-7.3 7.8L5 21.5V27h5.5l8.2-8.2a6 6 0 0 0 7.8-7.3l-3.7 3.7-3.5-.5-.5-3.5z" />
+    </svg>
+  ),
 };
 
 export default SERVICE_ICONS;

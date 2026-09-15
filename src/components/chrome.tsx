@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SCENES } from '@/lib/data';
 import LanguageSwitcher from '@/components/language-switcher';
+import NavMegaMenu from '@/components/nav-mega-menu';
+import MobileMenuSections from '@/components/mobile-menu-sections';
 
 interface TopChromeProps {
   clock: string;
@@ -14,6 +16,8 @@ interface TopChromeProps {
 
 export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav }: TopChromeProps) {
   const t = useTranslations('nav');
+  // nav namespace'inde "Sektorler" yok; ortak etiket common'dan.
+  const tc = useTranslations('common');
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -33,6 +37,22 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
+  const mobileRow = (
+    item: { href: '/projects' | '/pricing' | '/sectors' | '/blog' | '/faq' | '/about'; label: string },
+    order: number
+  ) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      className="mm-nav-row"
+      style={{ '--delay': `${order * 40}ms` } as React.CSSProperties}
+      onClick={() => setMenuOpen(false)}
+    >
+      <span className="mm-nav-label">{item.label}</span>
+      <span className="mm-nav-arrow">→</span>
+    </Link>
+  );
+
   return (
     <>
       <header className="chrome">
@@ -48,12 +68,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
               <span className="dup">{t('projects')} ↗</span>
             </span>
           </Link>
-          <Link href="/services" className="item" data-cursor="hover">
-            <span className="row">
-              <span>{t('services')}</span>
-              <span className="dup">{t('services')} ↗</span>
-            </span>
-          </Link>
+          <NavMegaMenu label={t('services')} />
           <Link href="/pricing" className="item" data-cursor="hover">
             <span className="row">
               <span>{t('pricing')}</span>
@@ -109,26 +124,20 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>
 
+          {/* Sira: Hizmetler (grup) → Projeler → Fiyatlar → Cozumler (grup) → Sektorler → kalan sayfalar */}
           <nav className="mm-nav">
-            {([
-              { href: '/projects', label: t('projects') },
-              { href: '/services', label: t('services') },
-              { href: '/pricing',  label: t('pricing')  },
-              { href: '/blog',     label: t('blog')     },
-              { href: '/faq',      label: t('faq')      },
-              { href: '/about',    label: t('about')    },
-            ] as const).map((item, i) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="mm-nav-row"
-                style={{ '--delay': `${i * 40}ms` } as React.CSSProperties}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span className="mm-nav-label">{item.label}</span>
-                <span className="mm-nav-arrow">→</span>
-              </Link>
-            ))}
+            <MobileMenuSections keys={['services']} onNavigate={() => setMenuOpen(false)} />
+            {mobileRow({ href: '/projects', label: t('projects') }, 1)}
+            {mobileRow({ href: '/pricing', label: t('pricing') }, 2)}
+            <MobileMenuSections
+              keys={['solutions']}
+              delayStart={3}
+              onNavigate={() => setMenuOpen(false)}
+            />
+            {mobileRow({ href: '/sectors', label: tc('sectors') }, 4)}
+            {mobileRow({ href: '/blog', label: t('blog') }, 5)}
+            {mobileRow({ href: '/faq', label: t('faq') }, 6)}
+            {mobileRow({ href: '/about', label: t('about') }, 7)}
           </nav>
 
           <div className="mm-cta">

@@ -107,9 +107,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   // ── 07 ai ────────────────────────────────────────────────
   { id: 'ai-use-cases', cat: 'ai', featured: true, services: ['ai-integration', 'ai-consulting'], posts: ['ai-automation-roi'] },
   { id: 'chatbot-on-site', cat: 'ai', services: ['ai-integration'] },
-  { id: 'which-llm', cat: 'ai', services: ['ai-integration', 'agentic-ai'] },
+  { id: 'which-llm', cat: 'ai', services: ['ai-integration'] },
   { id: 'ai-data-privacy', cat: 'ai', services: ['ai-integration'] },
-  { id: 'hallucination', cat: 'ai', services: ['ai-integration', 'agentic-ai'] },
+  { id: 'hallucination', cat: 'ai', services: ['ai-integration'] },
   { id: 'automation-tools', cat: 'ai', services: ['automation'] },
   { id: 'ai-roi', cat: 'ai', services: ['ai-consulting'], posts: ['ai-automation-roi'] },
 

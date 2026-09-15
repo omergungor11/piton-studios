@@ -6,6 +6,7 @@ import { pickMessages } from "@/lib/pick-messages";
 import LandingView from "@/components/landing-view";
 import { LOCATIONS, getLocationBySlug, getAllLocationSlugs } from "@/lib/locations";
 import { landingText, landingRelations } from "@/lib/landing";
+import { localizeSlug, resolveSlug } from "@/lib/slugs";
 import { buildPageMetadata, absoluteUrl } from "@/lib/seo";
 import type { Locale } from "@/lib/site";
 
@@ -16,12 +17,14 @@ interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllLocationSlugs().map((slug) => ({ slug }));
+// URL parcasi dile gore degisir (src/lib/slugs.ts); sayfa icinde hep kanonik kimlik kullanilir.
+export function generateStaticParams({ params }: { params: { locale: string } }) {
+  return getAllLocationSlugs().map((id) => ({ slug: localizeSlug("locations", id, params.locale) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
+  const slug = resolveSlug("locations", urlSlug, locale) ?? "";
   if (!getLocationBySlug(slug)) return {};
   const messages = await getMessages({ locale });
   const text = landingText(messages, "locationItems", slug);
@@ -34,8 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function LocationPage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
   setRequestLocale(locale);
+  const slug = resolveSlug("locations", urlSlug, locale) ?? "";
 
   const location = getLocationBySlug(slug);
   if (!location) notFound();

@@ -1,6 +1,11 @@
 import { defineRouting } from 'next-intl/routing';
 import { locales, defaultLocale } from './config';
 
+/**
+ * Dil basina yol segmentleri. ru segmentleri 2026-09-15'te Latin harf cevirisine gecti
+ * (eski ingilizce ru adresleri next.config.ts'te kalici yonlendiriliyor).
+ * [slug] parametrelerinin dile gore cevirisi: src/lib/slugs.ts.
+ */
 export const routing = defineRouting({
   locales,
   defaultLocale,
@@ -9,62 +14,62 @@ export const routing = defineRouting({
     '/projects': {
       tr: '/projeler',
       en: '/projects',
-      ru: '/projects',
+      ru: '/proekty',
     },
     '/projects-v2': {
       tr: '/projeler-v2',
       en: '/projects-v2',
-      ru: '/projects-v2',
+      ru: '/proekty-v2',
     },
     '/projects/[slug]': {
       tr: '/projeler/[slug]',
       en: '/projects/[slug]',
-      ru: '/projects/[slug]',
+      ru: '/proekty/[slug]',
     },
     '/services': {
       tr: '/hizmetler',
       en: '/services',
-      ru: '/services',
+      ru: '/uslugi',
     },
     '/services/[slug]': {
       tr: '/hizmetler/[slug]',
       en: '/services/[slug]',
-      ru: '/services/[slug]',
+      ru: '/uslugi/[slug]',
     },
     '/pricing': {
       tr: '/fiyatlandirma',
       en: '/pricing',
-      ru: '/pricing',
+      ru: '/tseny',
     },
     '/sectors': {
       tr: '/sektorler',
       en: '/sectors',
-      ru: '/sectors',
+      ru: '/otrasli',
     },
     '/sectors/[slug]': {
       tr: '/sektorler/[slug]',
       en: '/sectors/[slug]',
-      ru: '/sectors/[slug]',
+      ru: '/otrasli/[slug]',
     },
     '/locations': {
       tr: '/bolgeler',
       en: '/locations',
-      ru: '/locations',
+      ru: '/regiony',
     },
     '/locations/[slug]': {
       tr: '/web-tasarim/[slug]',
       en: '/web-design/[slug]',
-      ru: '/web-design/[slug]',
+      ru: '/veb-dizayn/[slug]',
     },
     '/solutions': {
       tr: '/cozumler',
       en: '/solutions',
-      ru: '/solutions',
+      ru: '/resheniya',
     },
     '/solutions/[slug]': {
       tr: '/cozumler/[slug]',
       en: '/solutions/[slug]',
-      ru: '/solutions/[slug]',
+      ru: '/resheniya/[slug]',
     },
     '/blog': {
       tr: '/blog',
@@ -79,37 +84,37 @@ export const routing = defineRouting({
     '/blog/tag/[tag]': {
       tr: '/blog/etiket/[tag]',
       en: '/blog/tag/[tag]',
-      ru: '/blog/tag/[tag]',
+      ru: '/blog/teg/[tag]',
     },
     '/faq': {
       tr: '/sss',
       en: '/faq',
-      ru: '/faq',
+      ru: '/voprosy',
     },
     '/about': {
       tr: '/hakkinda',
       en: '/about',
-      ru: '/about',
+      ru: '/o-nas',
     },
     '/contact': {
       tr: '/iletisim',
       en: '/contact',
-      ru: '/contact',
+      ru: '/kontakty',
     },
     '/privacy': {
       tr: '/gizlilik-politikasi',
       en: '/privacy',
-      ru: '/privacy',
+      ru: '/konfidentsialnost',
     },
     '/cookies': {
       tr: '/cerez-politikasi',
       en: '/cookies',
-      ru: '/cookies',
+      ru: '/cookie-fayly',
     },
     '/terms': {
       tr: '/kullanim-kosullari',
       en: '/terms',
-      ru: '/terms',
+      ru: '/usloviya-ispolzovaniya',
     },
   },
 });

@@ -16,9 +16,10 @@
 | 9 | Hukuki Uyum | 1 | 1 | 0 | 0 | 0 |
 | 10 | Site Geneli UI | 1 | 1 | 0 | 0 | 0 |
 | 11 | Büyüme Sayfaları | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **64** | **64** | **0** | **0** | **0** |
+| 12 | Hizmet & URL Yeniden Yapılanması | 5 | 5 | 0 | 0 | 0 |
+| **Total** | | **69** | **69** | **0** | **0** | **0** |
 
-**Progress**: 64/64 (100%) ✓
+**Progress**: 69/69 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -146,6 +147,11 @@
 
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
+| TASK-066 | 7 yeni hizmet (özel yazılım, mobil, e-ticaret, ERP & CRM, WhatsApp & chatbot, Meta reklamları, bakım & destek), Agentic AI kaldırma + yönlendirme, Eğitim & Danışmanlık adı | L | COMPLETED |
+| TASK-067 | 13 sektör hub'ı (Mühendislik + Sanayi yeni), tüm ilgili hizmetler × 3 dil | L | COMPLETED |
+| TASK-068 | Çözümler: SEO ağırlıklı 3 çözüm kaldırıldı, yeni hizmetlere dayalı benzersiz çözümler × 3 dil | L | COMPLETED |
+| TASK-069 | Yerel URL mimarisi: slugs.ts, navigation sarmalayıcıları, ru segmentleri, otomatik yönlendirmeler, iç link dönüşümü | L | COMPLETED |
+| TASK-070 | Menü: Hizmetler paneli + öne çıkan çözümler, mobil akordeon ve sıra; iletişim başlığı çevirisi | M | COMPLETED |
 | TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
 | TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |
 | TASK-062 | 10 şehir sayfası (`/bolgeler`, `/web-tasarim/[slug]`), ortak `landing-view` | L | COMPLETED |

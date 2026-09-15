@@ -70,6 +70,26 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   >
   > JSON-LD: FAQPage + WebPage(`speakable`) + BreadcrumbList + Organization.
   > `/llms.txt` (llmstxt.org bicimi) ve `robots.ts`'teki 14 AI crawler izni de bu isin parcasi.
+- **Hizmet / sektör / çözüm yapısı ve yerel URL'ler** (2026-09-15, plan: `piton-plans/hub-restructure-plan.md`):
+  - **18 hizmet** (`SERVICES`, sıra önemli): Web Tasarım, Özel Yazılım, Web Uygulama, Mobil Uygulama, PWA, E-ticaret,
+    ERP & CRM, Otomasyon, WhatsApp & Chatbot, AI Entegrasyonu, AI Danışmanlık, Veri Müh., Cloud, Google Ads, Meta
+    Reklamları, SEO & GEO, Bakım & Destek, Eğitim & Danışmanlık (`how-to-do`). Agentic AI kaldırıldı.
+    Hizmet eklerken: `data.ts` + 3 dilde `servicesList` + `service-icons.tsx` + `nav-mega-menu.tsx` SERVICE_SLUGS
+    + `common.menu.services` + `src/lib/slugs.ts`. Kaldırılan hizmet → `next.config.ts` REMOVED_SERVICES.
+  - **Sektörler = hub** (13, Sanayi ve Mühendislik dahil): "<Sektör> web sitesi" değil, o sektör için tüm ilgili
+    hizmetler + çözümler. Menüde listelenmez; `/sektorler` ve footer/hub linklerinden erişilir.
+  - **Çözümler** (hizmet × sektör, birbirine benzemeyen sorunlar): SEO ağırlıklı 3 çözüm kaldırıldı → ilgili hub'a
+    yönlendirme (`REMOVED_SOLUTIONS`). Menüde yalnızca `FEATURED_SOLUTIONS` (6) + "Tüm çözümler".
+  - **Yerel URL'ler**: veri dosyalarındaki `slug` KANONİK KİMLİKTİR; kodda linkler hep kimlikle kurulur.
+    Dil başına URL `src/lib/slugs.ts`'te; dönüşüm yalnızca `@/i18n/navigation` (Link, getPathname, useRouter)
+    ve sayfaların `resolveSlug` çağrısında. ru yol segmentleri de çevrildi (`/ru/uslugi`, `/ru/proekty`, `/ru/otrasli`,
+    `/ru/resheniya`, `/ru/voprosy`...). Eski adresler `next.config.ts`'te bu haritadan otomatik 308.
+    > `next-intl` `usePathname` yerel yolu değil **iç şablonu** döndürür (`/services/[slug]`) — karşılaştırmalar
+    > kanonik yolla yapılır. Dil değiştirici URL slug'ını önce kimliğe çevirir.
+    > Yayındaki bir slug değişirse eski slug için `next.config.ts`'e ayrıca yönlendirme ekleyin.
+  - **İçerik içi linkler**: blog/hukuki MDX'te yeni yerel adresler yazılır (eski adresler yönlendirilir ama gereksiz 308).
+  - **Menü**: "Hizmetler" açılır paneli (18 hizmet + öne çıkan çözümler + Tüm çözümler / Sektörler). Mobil sıra:
+    Hizmetler ▸ → Projeler → Fiyatlar → Çözümler ▸ → Sektörler → Blog → SSS → Hakkında.
 - **Büyüme sayfaları** (2026-09-15, plan: `piton-plans/growth-pages-plan.md`):
   - **Şehir sayfaları** `/bolgeler` + `/web-tasarim/[slug]` (en/ru `/locations`, `/web-design/[slug]`) — 10 şehir,
     yapı `src/lib/locations.ts`, metin `messages → locationItems`. Projesi olmayan şehirde uzaktan hizmet

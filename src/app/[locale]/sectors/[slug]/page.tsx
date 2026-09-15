@@ -10,6 +10,7 @@ import ProjectPlaceholder from "@/components/project-placeholder";
 import RelatedSolutions from "@/components/related-solutions";
 import { getSolutionsBySector } from "@/lib/solutions";
 import { landingText } from "@/lib/landing";
+import { localizeSlug, resolveSlug } from "@/lib/slugs";
 import JsonLd from "@/components/json-ld";
 import { WORKS, SERVICES } from "@/lib/data";
 import { getAllPosts } from "@/lib/blog";
@@ -37,12 +38,14 @@ interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllSectorSlugs().map((slug) => ({ slug }));
+// URL parcasi dile gore degisir (src/lib/slugs.ts); sayfa icinde hep kanonik kimlik kullanilir.
+export function generateStaticParams({ params }: { params: { locale: string } }) {
+  return getAllSectorSlugs().map((id) => ({ slug: localizeSlug("sectors", id, params.locale) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
+  const slug = resolveSlug("sectors", urlSlug, locale) ?? "";
   const sector = getSectorBySlug(slug);
   if (!sector) return { title: "Sector Not Found" };
 
@@ -66,8 +69,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function SectorPage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
   setRequestLocale(locale);
+  const slug = resolveSlug("sectors", urlSlug, locale) ?? "";
 
   const sector = getSectorBySlug(slug);
   if (!sector) notFound();

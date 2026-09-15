@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-15 — Hizmet yeniden yapılanması, sektör hub'ları, yerel URL'ler (TASK-066..070)
+
+- **Hizmetler 12 → 18**: Özel Yazılım, Mobil Uygulama, E-ticaret Altyapısı, ERP & CRM, WhatsApp & Chatbot, Meta Reklamları, Bakım & Destek eklendi (3 dil, gerçek projelere dayalı; yayınlanmış native mobil uygulama iddiası yok). Agentic AI kaldırıldı (→ AI Entegrasyonu, kalıcı yönlendirme). "How To Do?" → Eğitim & Danışmanlık.
+- **Sektör hub'ları**: 13 sektör (Mühendislik ve Sanayi yeni) "web sitesi" yerine sektöre özel tüm hizmet çözümlerini anlatan sayfalara dönüştü.
+- **Çözümler**: SEO ağırlıklı 3 çözüm kaldırıldı (ilgili hub'a yönlendirme); yeni hizmetlere dayanan benzersiz çözümler eklendi (WhatsApp satış botu, klinik WhatsApp randevu, emlak Meta reklamları, mühendislik teklif portalı, finans müşteri portalı, otel bakım & destek, inşaat ERP, emlak CRM, üretim ERP, B2B bayi portalı, restoran QR sipariş, transfer sürücü uygulaması, e-ticaret Meta reklamları).
+- **Yerel URL'ler**: hizmet, sektör, çözüm ve şehir sayfaları her dilde kendi URL'sini aldı (`/tr/hizmetler/ozel-yazilim`, `/ru/uslugi/razrabotka-po-na-zakaz`); ru yol segmentleri Latin harf çevirisine geçti. Eski adresler `src/lib/slugs.ts`'ten üretilen kalıcı yönlendirmelerle yeni adreslere bağlandı; hreflang, canonical, sitemap ve dil değiştirici yerel URL üretiyor. Blog ve hukuki metinlerdeki 119 iç link yeni adreslere çevrildi.
+- **Menü**: "Hizmetler" paneli 18 hizmet + öne çıkan çözümler + Tüm çözümler / Sektörler; mobilde Hizmetler → Projeler → Fiyatlar sırası. Bölgeler menüden ve footer'dan kaldırıldı (sayfalar URL olarak duruyor).
+- Düzeltmeler: iç sayfa menüsündeki aktif link TR'de hiç eşleşmiyordu; Rusça/İngilizce iletişim sayfası başlığı Türkçe sabit yazılıydı.
+
 ## 2026-09-15 — E-posta altyapısı ve Supabase temizliği
 
 - **Gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi)**: iletişim formu bildirimleri ve form hata mesajındaki adres buraya taşındı; `LEGAL.inbox` güncellendi. Gönderim Resend ile devam ediyor (`pitonstudios.com` Resend'te doğrulandı, `send.` alt alan adı).
