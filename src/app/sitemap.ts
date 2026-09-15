@@ -3,6 +3,8 @@ import { locales, defaultLocale } from '@/i18n/config';
 import { absoluteUrl, type Href } from '@/lib/seo';
 import { getAllProjectSlugs, getAllServiceSlugs } from '@/lib/data';
 import { getAllSectorSlugs } from '@/lib/sectors';
+import { getAllLocationSlugs } from '@/lib/locations';
+import { getAllSolutionSlugs } from '@/lib/solutions';
 import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog';
 import { LEGAL_READY } from '@/lib/legal';
 
@@ -41,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries('/faq', { changeFrequency: 'monthly', priority: 0.8 }),
     ...entries('/pricing', { changeFrequency: 'monthly', priority: 0.8 }),
     ...entries('/sectors', { changeFrequency: 'monthly', priority: 0.7 }),
+    ...entries('/solutions', { changeFrequency: 'monthly', priority: 0.7 }),
+    ...entries('/locations', { changeFrequency: 'monthly', priority: 0.6 }),
     ...entries('/about', { changeFrequency: 'yearly', priority: 0.6 }),
     ...entries('/contact', { changeFrequency: 'yearly', priority: 0.7 }),
     // Hukuki sayfalar yalnizca veri sorumlusu bilgisi tamamsa yayinda.
@@ -62,6 +66,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const slug of getAllSectorSlugs()) {
     all.push(
       ...entries({ pathname: '/sectors/[slug]', params: { slug } }, { priority: 0.7 })
+    );
+  }
+
+  for (const slug of getAllSolutionSlugs()) {
+    all.push(
+      ...entries({ pathname: '/solutions/[slug]', params: { slug } }, { priority: 0.7 })
+    );
+  }
+
+  for (const slug of getAllLocationSlugs()) {
+    all.push(
+      ...entries({ pathname: '/locations/[slug]', params: { slug } }, { priority: 0.6 })
     );
   }
 

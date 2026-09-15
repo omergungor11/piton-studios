@@ -7,6 +7,8 @@ import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data";
 import ProjectDetail from "@/components/project-detail";
 import JsonLd from "@/components/json-ld";
 import { getLocalizedProject } from "@/lib/content-i18n";
+import { getSolutionsByWork } from "@/lib/solutions";
+import { landingText } from "@/lib/landing";
 import {
   buildPageMetadata,
   absoluteUrl,
@@ -75,7 +77,13 @@ export default async function ProjectPage({ params }: Props) {
           ]}
         />
       )}
-      <ProjectDetail project={project} />
+      <ProjectDetail
+        project={project}
+        relatedSolutions={getSolutionsByWork(slug).map((x) => ({
+          slug: x.slug,
+          title: landingText(messages, "solutionItems", x.slug).title,
+        }))}
+      />
     </NextIntlClientProvider>
   );
 }

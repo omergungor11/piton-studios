@@ -404,7 +404,12 @@
     "previewTablet": "Tablet",
     "previewMobile": "Mobile",
     "live": "Live Site",
-    "visit": "Visit site"
+    "visit": "Visit site",
+    "caseChallenge": "Challenge",
+    "caseSolution": "Solution",
+    "caseHighlights": "Key technical decisions",
+    "caseStack": "Tech stack",
+    "caseOutcome": "Outcome"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Stories",
@@ -569,24 +574,6 @@
       }
     }
   },
-  "caseStudy": {
-    "eyebrow": "§ 03 · Featured Case",
-    "title": "Gel Gez Gor — North Cyprus {accent} classifieds platform.",
-    "titleAccent": "comprehensive",
-    "labelClient": "Client",
-    "valueClient": "Gel Gez Gor",
-    "labelYear": "Year",
-    "valueYear": "2025",
-    "labelScope": "Scope",
-    "valueScope": "Web App, Platform, SEO",
-    "labelStack": "Stack",
-    "valueStack": "Next.js · SEO · Platform",
-    "body1": "We designed and built Northern Cyprus's comprehensive free classifieds platform from scratch.",
-    "body2": "See the full case study for details.",
-    "cta": "View Project",
-    "mediaTag": "[ PROJECT · DEMO ]",
-    "scale": "CASE · PLATFORM"
-  },
   "chrome": {
     "availability": "Open for new projects · Let's start"
   },
@@ -605,7 +592,31 @@
     "sectors": "Industries",
     "privacy": "Privacy",
     "cookies": "Cookies",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "relatedSolutions": "Related solutions",
+    "exploreLocations": "Locations",
+    "exploreSolutions": "Solutions",
+    "exploreAll": "All",
+    "cities": {
+      "kktc": "North Cyprus",
+      "lefkosa": "Nicosia",
+      "bilecik": "Bilecik",
+      "eskisehir": "Eskişehir",
+      "bursa": "Bursa",
+      "istanbul": "Istanbul",
+      "kutahya": "Kütahya",
+      "antalya": "Antalya",
+      "izmit": "Izmit",
+      "izmir": "Izmir"
+    },
+    "solutionsShort": {
+      "real-estate-listing-software": "Real estate software",
+      "transfer-booking-system": "Transfer booking",
+      "ecommerce-seo": "E-commerce SEO",
+      "clinic-seo": "Clinic SEO",
+      "finance-automation": "Finance automation",
+      "corporate-ai-assistant": "AI assistant"
+    }
   },
   "works": {
     "velis-ltd": {
@@ -630,13 +641,37 @@
     },
     "gel-gez-gor": {
       "title": "Gel Gez Gor",
-      "summary": "Free classifieds platform for North Cyprus with multiple categories.",
+      "summary": "Trend detection, WhatsApp notifications and social content automation for the Gel Gez Gor classifieds site.",
       "body": [
-        "We designed and developed Gel Gez Gor, a comprehensive free classifieds platform for North Cyprus. We built a dynamic platform hosting thousands of listings across real estate, vehicles, jobs, and food categories.",
-        "With a user-friendly interface, advanced filtering system, and SEO optimization, we helped it become one of the most visited classifieds sites in North Cyprus."
+        "We built an automation layer for Gel Gez Gor, a classifieds site in North Cyprus, that detects trending listings automatically. The platform itself belongs to the client; our work was the pipeline that reads featured listings from the site and notifies listing owners via WhatsApp.",
+        "The same system generates a ready-to-post social media visual and an AI-assisted caption for each listing and can publish them to Instagram and Facebook. The team now runs the monitoring and posting work it used to do by hand from a single panel."
       ],
       "kind": "Web App · Platform",
-      "role": "Full-stack / Design"
+      "role": "Full-stack / Design",
+      "caseStudy": {
+        "challenge": "At Gel Gez Gor, manually tracking trending listings, reaching out to listing owners one by one, and preparing a separate social media graphic for every listing took time and produced inconsistent results. The platform itself had no API for trend detection. What was needed was an automation layer that could detect trending listings straight from the site's own HTML structure, notify listing owners over WhatsApp, and generate a ready-made Instagram/Facebook graphic and caption for each listing — one that wouldn't break easily if the site's structure changed, and that would run on its own several times a day.",
+        "solution": "The pipeline reads gelgezgor.com's static HTML with Cheerio to extract trending listing cards; results are saved locally to SQLite/Drizzle, or directly to Supabase in the Vercel environment, then enriched from the detail page. Listing owners get automatic notifications via the Twilio WhatsApp Business API, with a separate client already in place for migrating to Meta's own WhatsApp Cloud API. On the social side, a Sharp-based SVG-overlay-and-image-composite approach produces six graphic templates across three themes (Modern, Elegant, Bold) times two variants (dark/light); template choice auto-rotates based on the listing's title and category. Captions and hashtags are generated first with Gemini, with an automatic fallback to template-based text if the API call fails; an optional AI-generated background via Imagen 3 is also attempted, again falling back to the template. Generated graphics can be published directly to Instagram (single post and carousel) and Facebook through the Meta Graph API. All of this comes together in a single orchestrator triggered twice a day by node-cron; an Express-based panel provides manual triggering and status tracking, with a dry-run mode for testing without touching production.",
+        "highlights": [
+          "A Cheerio-based scraper with documented selectors reads trending listing cards straight from the site's static HTML — no headless browser required.",
+          "Automatic listing-owner notifications via the Twilio WhatsApp Business API, with a separate client already in place for migrating to the Meta WhatsApp Cloud API.",
+          "A Sharp-based graphics engine auto-rotates between six templates (3 themes × 2 variants) based on listing category.",
+          "Caption and hashtag generation with Gemini, backed by an automatic fallback chain to template-based text on failure.",
+          "Generated graphics publish directly to Instagram (single post and carousel) and Facebook through the Meta Graph API, with a dry-run mode for safe testing before going live."
+        ],
+        "stack": [
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "Cheerio",
+          "Drizzle ORM",
+          "SQLite",
+          "Supabase",
+          "Twilio",
+          "Sharp",
+          "Google Gemini"
+        ],
+        "outcome": "The result is a pipeline that unifies trend detection for Gel Gez Gor into a single automated flow, from scraping through WhatsApp notification to social media publishing. Manual control and a dry-run mode in the panel allow safe testing before going live. The system was built to be portable, running equally well on SQLite on a single machine or on Supabase on Vercel."
+      }
     },
     "nexos-investment": {
       "title": "Nexos Investment",
@@ -646,7 +681,31 @@
         "An admin panel with TipTap editing and drag-and-drop, PWA/offline support, Zod validation, Upstash rate-limiting and Playwright E2E tests delivered a production-grade platform. The firm now runs maps, proposals and content from one fully-controlled system — the technical peak of our portfolio."
       ],
       "kind": "Web Design · Corporate",
-      "role": "Design / Development"
+      "role": "Design / Development",
+      "caseStudy": {
+        "challenge": "Nexos Investment, a real estate investment firm managing many projects and listings in North Cyprus, was working with off-the-shelf real estate themes. Those themes couldn't support map-based, location-driven presentation, multilingual content (most investors are foreign), or generating an instant proposal document from listing data. Consultants had to build a presentation by hand for every proposal and manage listings separately in each language. The firm wanted a single platform, shaped around its own workflow, that would bring all of these processes together in one system.",
+        "solution": "We built a real estate management system from scratch on Next.js 16 and Supabase. On the public side, it covers listing/project browsing, filtering, a clustered interactive map on Google Maps and Leaflet (react-leaflet-cluster), and a 5-language (tr/en/ru/de/fa) content structure via next-intl. For consultants, we built a full admin panel with a TipTap rich-text editor and a drag-and-drop interface, managing listings, projects, sub-listings and floor plans. The presentation module instantly turns selected listing/project data into a PDF or PowerPoint proposal file using jsPDF and pptxgenjs, via html2canvas image capture. The system also runs as a PWA, with service-worker caching and offline page support. Input validation runs on Zod, abuse protection on Upstash rate-limiting, and critical flows are covered by Playwright E2E tests.",
+        "highlights": [
+          "Interactive map: a clustered Leaflet map via react-leaflet-cluster plus Google Maps integration shows listing and project locations grouped on one screen.",
+          "Automated proposal generation: the presentation module instantly builds a PDF or PowerPoint proposal from listing data using pptxgenjs and jsPDF.",
+          "5-language structure: Turkish, English, Russian, German and Persian content managed via next-intl with per-language translation files.",
+          "A TipTap rich-text editor and dnd-kit drag-and-drop sorting speed up content and media management in the admin panel.",
+          "PWA support: a web app manifest and service worker enable caching and offline pages; production is hardened with Zod validation, Upstash rate-limiting and Playwright E2E tests."
+        ],
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "TypeScript",
+          "next-intl",
+          "Leaflet",
+          "Google Maps",
+          "TipTap",
+          "Zod",
+          "Upstash",
+          "Playwright"
+        ],
+        "outcome": "Nexos Investment now manages listing and project data, the map, multilingual content and investor proposals from one system, fully under the consultants' own control. Hand-built presentations have given way to automatically generated PDF/PowerPoint proposals, and listings are updated across every language from a single panel. The firm moved past the limits of off-the-shelf themes into a scalable technical foundation built around its own workflow."
+      }
     },
     "ambalaj-cini": {
       "title": "Ambalaj Cini",
@@ -656,7 +715,31 @@
         "Alongside development we set up and managed Google Ads and Facebook (Meta) campaigns — these digital growth efforts drove 30% company growth. Concrete, results-driven proof of our ad management service."
       ],
       "kind": "E-commerce · Web",
-      "role": "Design / Development"
+      "role": "Design / Development",
+      "caseStudy": {
+        "challenge": "Bilecik-based Ambalaj Cini needed a platform to sell packaging and cleaning products online while managing orders, stock, shipping and invoicing from one place. Its existing setup lacked the flexibility to handle a growing catalog and rising order volume; payment collection, shipment tracking and internal operations (stock, accounting, CRM) all ran separately. The company wanted a fast, secure shopping experience for customers on one side, and a back office to run the entire operation from a single panel on the other.",
+        "solution": "We built an e-commerce system on Next.js and Supabase (Postgres, Auth, Storage) that combines the customer storefront with a full back office in one platform. The storefront covers catalog, promotions, cart and order/shipment tracking; the admin panel handles product/stock, orders, shipping, invoicing, accounting, CRM and campaign management with role-based access (admin/staff). Payment collection is automated through the PayTR iFrame API and shipping through a DHL integration, with order status and shipment status synced in both directions. On security, admin logins require Supabase MFA (TOTP), Upstash-based rate limiting and a Content-Security-Policy are in place, and customers can manage their own data under Turkey's KVKK data-protection law. Pricing is always calculated server-side from the database; mutations run through Zod-validated Next.js Server Actions. Critical flows are covered by Vitest unit tests and Playwright E2E tests.",
+        "highlights": [
+          "Card payment collection via the PayTR iFrame API and shipment tracking via a DHL integration stay synced in both directions with order status.",
+          "Supabase MFA (TOTP) is mandatory in the admin panel; an account-owner rule plus Upstash rate-limiting block unauthorized access and brute-force attempts.",
+          "Price is always calculated server-side from the database; mutations run through Server Actions with Zod validation, so a client-submitted amount is never trusted.",
+          "Web push notifications (VAPID) and Resend transactional emails deliver order, payment and stock status changes to customers and the team instantly.",
+          "Vitest unit tests and Playwright E2E tests (covering auth, payment, shipping, search and other critical flows) validate every change on the CI pipeline."
+        ],
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "TypeScript",
+          "PayTR",
+          "DHL API",
+          "Zod",
+          "Upstash",
+          "Resend",
+          "Playwright",
+          "Vitest"
+        ],
+        "outcome": "Ambalaj Cini now runs catalog, order, payment, shipping and accounting workflows end to end from one system, with its own team. Card payments and shipment tracking are automated, admin access is secured with multi-factor authentication, and customer and team notifications go out instantly. Alongside development, the Google Ads and Meta campaigns we ran drove 30% growth for the company."
+      }
     },
     "alp-sigorta": {
       "title": "Alp Sigorta",
@@ -920,7 +1003,29 @@
       "body": [
         "We built a web app that monitors company payments (installments, cheques, cash and more) and sends automatic Telegram reminders as due dates approach — on a lightweight, reliable Node.js, Express and SQLite stack.",
         "Auto-generated installment schedules, dashboards for overdue and next-7-days payments, and financial-integrity safeguards for settled records make it a concrete example of automating business workflows."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "The company was tracking credit-card installments, cheques, cash payments and other payment types by hand; forgotten due dates created late-payment risk, and payments were kept in different notebooks or spreadsheets by different people. What it needed was a lightweight but reliable system that could run on a single server without a separate ops team or complex infrastructure, while automating due-date tracking and alerting the right people on time. It also had to keep settled records from being altered by accident during edits, and export period-end reports with Turkish characters intact.",
+        "solution": "We built a server-rendered web app with Node.js, Express and EJS, backed by a single-file SQLite database via better-sqlite3. For installment payments, a monthly schedule is generated automatically from the first due date, including correction for month-end overflow; amounts are balanced on the last installment so no fraction of a currency unit is lost. node-cron runs a due-date check every day at 09:00, a daily summary at 08:00, and a weekly plan message every Monday at 08:15, all delivered via the Telegram Bot API; a notification log table guarantees the same reminder is never sent twice for the same due date. Authentication hashes passwords with bcrypt and stores sessions in a file-based store (session-file-store), so sessions survive a server restart. The payments page offers a filter-aware CSV export with a UTF-8 BOM and semicolon separators. The interface is built with compiled Tailwind CSS, served with no CDN dependency.",
+        "highlights": [
+          "Installment-schedule automation: monthly installments generate automatically from the first due date, month-end overflow is corrected, and any rounding difference is balanced onto the last installment.",
+          "Three separate automations run through the Telegram Bot API: a single due-date reminder (lead time configurable), a daily summary (08:00) and a weekly plan (Monday 08:15) — all scheduled with node-cron.",
+          "A notification log table (a uniqueness constraint on installment_id + window_days) stops the same reminder from ever being sent more than once.",
+          "Editing a payment that already has a settled installment never regenerates the due-date schedule — payment history stays intact.",
+          "A UTF-8 BOM, semicolon-separated CSV export respects active filters and displays Turkish characters correctly straight in Excel."
+        ],
+        "stack": [
+          "Node.js",
+          "Express",
+          "EJS",
+          "better-sqlite3",
+          "node-cron",
+          "Telegram Bot API",
+          "Tailwind CSS",
+          "bcrypt"
+        ],
+        "outcome": "The company now tracks every payment type from a single panel and no longer has to remember due dates by hand; automatic Telegram reminders plus daily and weekly summaries have cut late-payment risk. Settled records stay protected during edits, so financial history remains trustworthy; period-end reporting is faster with a filter-aware CSV export, and sessions survive a server restart without interruption."
+      }
     },
     "deprem-erken-uyari": {
       "title": "Earthquake Early Warning",
@@ -992,7 +1097,31 @@
       "body": [
         "Holly Trader is a Node.js-based tool prototype that monitors market data and produces trading analyses. Data collection, signal generation and reporting flow through a single service.",
         "This fintech product experiment is a side project demonstrating real-time data processing and automation capability."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "Holly Trader is a fintech product experiment Piton Studios launched on its own — there is no real exchange client or live capital behind it. The goal was to build, inside a monorepo with clean backend/frontend/package boundaries, an end-to-end trading infrastructure that enforces leveraged-trading risk on the server side, brings multiple asset classes (crypto, equities, commodities) under one roof, and can run automated strategies against real-time market data. The real challenge was keeping market data streamed over WebSocket, order/position state and risk limits in a single, consistently synchronized state.",
+        "solution": "The backend was built on NestJS with REST, WebSocket and BullMQ-based queues; Prisma and PostgreSQL handle the data layer, Redis handles queuing and caching. The Binance integration groups spot, futures, wallet and user-stream services into separate modules, with separate market-data services covering equities, commodities and DEX data. Authentication supports classic JWT login alongside ethers-based wallet (MetaMask) signature login. A RiskService validates leverage, exposure and margin ratio server-side before every order; a dedicated stop-loss/take-profit monitor and trailing-stop service check open positions periodically, and a reconciliation service compares exchange state against local data. The strategy engine runs ready-made strategies — grid bot, DCA, RSI mean-reversion, MACD crossover, breakout and scalping — through a shared interface, backed by a separate BullMQ-queued backtesting service. The frontend is built on Next.js 14; live data arriving via socket.io-client feeds into Zustand and React Query state, with lightweight-charts and recharts powering the analysis interface.",
+        "highlights": [
+          "RiskService validates every order server-side against leverage, margin and exposure limits — the check is never left to the client.",
+          "The Binance integration groups spot, futures, wallet and WebSocket streaming into separate services, including funding and sync jobs.",
+          "BullMQ- and Redis-based queues process order execution, price alerts and analytics calculations in the background.",
+          "Eight ready-made strategies (grid bot, DCA, RSI mean-reversion, MACD crossover, breakout, scalping, multi-timeframe, custom) run through a shared strategy interface, backed by a dedicated backtesting engine.",
+          "Authentication works via JWT or an ethers-based wallet signature (MetaMask); a reconciliation service continuously compares exchange state against local data."
+        ],
+        "stack": [
+          "TypeScript",
+          "NestJS",
+          "Next.js",
+          "Prisma",
+          "PostgreSQL",
+          "Redis",
+          "BullMQ",
+          "Socket.IO",
+          "ethers.js",
+          "Turborepo"
+        ],
+        "outcome": "The result is a trading-infrastructure prototype that unifies crypto, equity and commodity markets in one interface while enforcing risk on the server side. Backend and frontend live in separate packages that share common types through a shared package. The project is a side venture demonstrating our technical capability in real-time data processing, queued job execution and multi-exchange integration — it makes no claim of live capital or trading performance."
+      }
     },
     "fur-crm": {
       "title": "FurCRM",
@@ -1056,7 +1185,29 @@
       "body": [
         "VELAIR is a concept that turns the private-jet experience into a cinematic, scroll-driven 3D story. A top-down jet view, a shader-based cloud transition, an opening cabin and a side fly-by behind a panel all unfold in one natural scroll flow; the aircraft is an original parametric model generated in code.",
         "Built with Next.js, React Three Fiber, Drei and GSAP ScrollTrigger, a single progress value drives the camera, the jet and the clouds, with no continuous rendering while idle. A reduced-motion option, static images rendered from the same model when WebGL is unavailable, and mobile-specific framing keep performance and accessibility in balance."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "VELAIR is a concept Piton Studios launched on its own initiative — there is no real client or aircraft manufacturer behind it. The goal was to build a private-jet-themed portfolio piece on original geometry generated in the browser, rather than purchased 3D models or video footage; to blend a top-down view, a cloud transition, a cabin reveal and a horizontal flight into one seamless, natural scroll flow; and to keep the experience readable on devices without WebGL support, under a reduced-motion preference, and on narrow mobile screens — all while holding performance steady with a single canvas and a single playhead.",
+        "solution": "In the Next.js App Router, content stays a server component while the Three.js scene lazy-loads only on the client. The aircraft is a parametric geometry built and assembled piece by piece in the browser — there is no downloaded 3D model file. A single GSAP ScrollTrigger produces one 0–1 progress value, which a pure function converts into camera, jet and cloud pose, while a separate helper adjusts zoom and mobile framing to viewport height. The scene renders on demand: frames are drawn only when the user scrolls, with no per-frame React state or DOM measurement. When WebGL2 isn't supported, on context loss, or under a reduced-motion preference, the experience falls back to static posters rendered from the same model; cabin-selection buttons are accessible to screen readers. Section boundaries, pose sampling and mobile framing are covered by automated tests run with the Node test runner.",
+        "highlights": [
+          "The aircraft isn't an imported GLB — it's an original geometry built and assembled parametrically in the browser.",
+          "A single GSAP ScrollTrigger progress value drives the camera, the jet and the cloud shader together; no per-frame React state is used.",
+          "On-demand rendering: the scene redraws only on scroll, so no GPU work is spent while idle, with device pixel ratio capped to a 1–1.5 range.",
+          "A seamless fallback to static posters rendered from the same model when WebGL2 is unsupported, on context loss, or under a reduced-motion preference.",
+          "Automated tests for section boundaries, pose sampling and mobile framing run with the Node test runner."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Three.js",
+          "React Three Fiber",
+          "Drei",
+          "GSAP",
+          "Vercel"
+        ],
+        "outcome": "The result is a live concept demo that carries visitors through six sections in one uninterrupted scroll flow. Staying readable without WebGL, under reduced motion, and on mobile, it stands as a reference showcasing our 3D storytelling and motion-design capability. As we note in our own documentation, a licensed artist model and device-level performance benchmarking are subjects for the next production round."
+      }
     }
   },
   "areas": {
@@ -3577,5 +3728,607 @@
     "privacy": "Privacy Policy and Personal Data Notice",
     "cookies": "Cookie Policy",
     "terms": "Terms of Use"
+  },
+  "notFound": {
+    "title": "We couldn’t find that page.",
+    "hint": "The link may be outdated or the address mistyped. You can continue with one of these:",
+    "suggest": "Suggested pages",
+    "home": "Back to home"
+  },
+  "locationsPage": {
+    "eyebrow": "Locations",
+    "title": "Cities we serve",
+    "subtitle": "Our team is based in Bozüyük, Türkiye and works remotely across North Cyprus and Türkiye. Pick your city to see our work there and how we can help.",
+    "metaTitle": "Web Design & Development by City | Piton Studios",
+    "metaDescription": "North Cyprus, Nicosia, Istanbul, Izmir, Antalya, Bursa and more: web design, software, SEO and advertising services for businesses in your city.",
+    "cyprus": "North Cyprus",
+    "turkey": "Türkiye",
+    "whatWeDo": "What we do in this city",
+    "detailTitle": "Our view of the region",
+    "relatedProjects": "Related projects",
+    "relatedServices": "Services",
+    "relatedFaq": "Frequently asked",
+    "relatedPosts": "From the blog",
+    "viewAll": "View all",
+    "otherLocations": "Other cities",
+    "projectCount": "{count} projects",
+    "remote": "Remote service",
+    "ctaTitle": "Tell us about your project",
+    "ctaSub": "Share your city and goal; we’ll reply within 24 hours with a concrete roadmap.",
+    "ctaButton": "Get in touch"
+  },
+  "solutionsPage": {
+    "eyebrow": "Solutions",
+    "eyebrowDetail": "Solution",
+    "title": "Solutions built for your industry",
+    "subtitle": "We package our services around what each industry actually needs: from real estate software to clinic SEO, from booking systems to AI assistants.",
+    "metaTitle": "Industry Web & Software Solutions | Piton Studios",
+    "metaDescription": "Real estate listing software, e-commerce SEO, transfer booking systems, clinic SEO and more: web and software solutions designed around your industry.",
+    "whatWeDo": "What this solution includes",
+    "detailTitle": "How we work",
+    "relatedProjects": "Related projects",
+    "relatedServices": "Service",
+    "relatedFaq": "Frequently asked",
+    "relatedPosts": "From the blog",
+    "viewAll": "View all",
+    "sector": "Industry and related solutions",
+    "allSolutions": "Other solutions",
+    "ctaTitle": "Tell us about your project",
+    "ctaSub": "Describe what you need; we’ll reply within 24 hours with a concrete roadmap.",
+    "ctaButton": "Get in touch"
+  },
+  "locationItems": {
+    "kktc": {
+      "title": "Web Design & Development in North Cyprus",
+      "metaTitle": "Web Design & Development in North Cyprus | Piton Studios",
+      "metaDescription": "We build corporate websites and automation for real estate, finance, tourism and trade businesses in North Cyprus — the whole process runs remotely.",
+      "intro": "Piton Studios is a digital agency based in Bilecik, Türkiye that works entirely remotely, building corporate websites, platforms and automation for businesses across North Cyprus. We've delivered projects in real estate investment, currency exchange, transfers and hospitality on the island, plus an automation layer for a classifieds site; the whole process, from discovery call to delivery, runs online, with no travel or local office required.",
+      "bullets": {
+        "1": "Corporate websites, platforms and automation — from reservation-focused sites like Sammys Hotel to the trend and social media automation we built for the Gel Gez Gor classifieds site.",
+        "2": "Multilingual structure (Turkish, English, Russian) — reach the island's mix of local residents, British and Russian investors and tourists in their own language on the same site.",
+        "3": "Trust-focused finance and real estate design — we've built investment sites like Pampas Investment and Pinnacle Yatırım, and live-rate currency platforms like Halas Exchange.",
+        "4": "Sector-specific automation — with our Emlak Sync product, we automate repetitive work like syncing listings to North Cyprus real estate portals (HangiEv, 101evler).",
+        "5": "Local search visibility — we set up SEO and GEO (AI-powered search) so your site gets found in 'North Cyprus' and district-level searches."
+      },
+      "painTitle": "The problems we see most often on North Cyprus business websites",
+      "painPoints": {
+        "1": "The site stays single-language, so a meaningful share of the island's local, British and Russian customers or investors can't get information in their own language.",
+        "2": "Communication and time-zone gaps make working with an overseas agency painful — a small text or price update can take days.",
+        "3": "In competitive sectors like real estate, tourism and finance, an outdated or makeshift site loses a visitor's trust before they even browse."
+      },
+      "ctaText": "Write to us to talk through the web project for your North Cyprus business — we'll run the whole process remotely, together.",
+      "detail": {
+        "1": "The North Cyprus market has a distinctive mix: local businesses, British and Russian investors and seasonal tourists all look at the same site. That's why the sites we build for the island are designed multilingual from the start — Turkish content serves local customers, while English and Russian content meets foreign investors and tourists in the same experience. Piton Studios keeps no physical office in North Cyprus — that's a deliberate choice; since the whole process runs online, you get the same speed of service no matter where on the island you are.",
+        "2": "Our completed projects on the island span several sectors: with Pampas Investment and Pinnacle Yatırım we designed corporate, trust-building sites for real estate investment firms; with Halas Exchange we built a live-rate currency platform, with Jet Transfer Cyprus an airport/VIP transfer booking site, and with Sammys Hotel a reservation experience for the hospitality sector. For Gel Gez Gor, an existing classifieds site, we built automation that detects trending listings, notifies their owners via WhatsApp and produces social media posts. That range means we know what different sectors on the island need.",
+        "3": "On the technical side, we treat site speed and search visibility as equally important. Classic SEO gets you found in 'North Cyprus' and district-level searches, while GEO work makes you visible in AI-powered search results too. We have direct experience building North Cyprus-specific portal integrations (HangiEv, 101evler) with our own Emlak Sync product; if you have a similar repetitive workload, we can automate that too."
+      }
+    },
+    "lefkosa": {
+      "title": "Web Design & Development in Nicosia",
+      "metaTitle": "Web Design & Development in Nicosia | Piton Studios",
+      "metaDescription": "We build corporate websites, local SEO and digital ads for businesses in Nicosia, including our Kıbrıs Lefkoşa Taksi project — the whole process runs remotely.",
+      "intro": "For Kıbrıs Lefkoşa Taksi, delivered directly in Nicosia, we built online booking, route calculation and an SEO setup that ranks it near the top for local searches like 'Nicosia taxi.' Combined with the holding, finance and service-sector projects we've completed across North Cyprus, we know what businesses in the capital need; the whole process runs online from start to finish.",
+      "bullets": {
+        "1": "Local-SEO-focused corporate sites — as with Kıbrıs Lefkoşa Taksi, we build page structures that get found in searches naming 'Nicosia' and your service.",
+        "2": "Corporate identity that fits capital-level competition — professional, trust-building design suited to multi-division companies like Arslan Group or service firms like All Pro Cyprus.",
+        "3": "Fast booking and contact flows — phone and WhatsApp integration, price and route calculators, and other components that move visitors straight to action.",
+        "4": "Multilingual structure — Turkish, English and Russian content on the same site to reach Nicosia's mix of locals, foreign investors and tourists.",
+        "5": "SEO and Google Ads set up together — so you're visible in both organic and paid search amid the capital's heavy competition."
+      },
+      "painTitle": "The problems we see most often on Nicosia business websites",
+      "painPoints": {
+        "1": "Competition in the capital is intense, so an outdated or slow-loading site sends visitors straight to a competitor.",
+        "2": "Booking, price inquiries or contact aren't clear on the site; when customers can't complete an action directly, they either call in or give up.",
+        "3": "The site is Turkish-only, missing the English/Russian content needed to reach Nicosia's foreign-investor and student population."
+      },
+      "ctaText": "Write to us to talk through the web project for your Nicosia business.",
+      "detail": {
+        "1": "As the capital of North Cyprus, Nicosia sees higher local business density and demand for corporate and professional services than other cities on the island. We saw this directly on the Kıbrıs Lefkoşa Taksi project: we built a site for online taxi booking, route calculation and fare information, then used local SEO to push it to the top of searches like 'Nicosia taxi' and 'Cyprus taxi.' A mobile-first design let people on the move use the site comfortably from their phones.",
+        "2": "Alongside that Nicosia-specific project, our island-wide work — Arslan Group (a holding site unifying real estate, finance and trading divisions under one roof), Arslan Coin Center (a crypto trading platform) and All Pro Cyprus (a multi-service corporate site) — shows how we meet the corporate needs of different sectors in the capital and across the island. What these projects share: trust-building design, a multilingual structure and a clear communication or booking flow.",
+        "3": "The whole process runs remotely — being based in Bilecik doesn't stop us from working with a Nicosia business; discovery calls, design approval and delivery all happen online. Once local SEO makes you visible in search, we can also route paid search traffic to the same pages with Google Ads to accelerate your visibility in the capital's competitive market."
+      }
+    },
+    "bilecik": {
+      "title": "Web Design & Development in Bilecik",
+      "metaTitle": "Web Design & Development in Bilecik | Piton Studios",
+      "metaDescription": "Based in Bozüyük, we build websites, e-commerce and automation for businesses in Bilecik — our Ambalaj Cini and Minibus Route Control projects started here.",
+      "intro": "Piton Studios is headquartered in Bozüyük, Bilecik — unlike the other cities on this page, we work with local businesses here in person. For Bilecik-based Ambalaj Cini we built a payment-integrated e-commerce site; for the Bozüyük Minibus Drivers' Association we built a route-tracking app, and the Minibus Route Control automation product grew out of that experience.",
+      "bullets": {
+        "1": "E-commerce infrastructure — online sales sites covering payment integration, product and stock management, as we built for Ambalaj Cini.",
+        "2": "Corporate websites — design that boosts visibility and trust for manufacturing, trade and service businesses in Bilecik and Bozüyük.",
+        "3": "Process automation — moving repetitive manual work like data processing and reporting into software, as we did with Minibus Route Control.",
+        "4": "Local SEO — we structure your pages and content for search engines so you're found in searches across the region.",
+        "5": "In-person meetings — because we're based here, we can meet on-site when needed, not only remotely."
+      },
+      "painTitle": "The problems we see most often on Bilecik business websites",
+      "painPoints": {
+        "1": "Most small and mid-sized businesses still have no website, or one that hasn't been updated in years; customers search online first and find nothing.",
+        "2": "Manufacturers and traders who want to sell online keep postponing the step because they don't know how to set up payment and stock management.",
+        "3": "Repetitive manual work — record-keeping, reporting, checks — wastes time, but isn't recognized as something software could solve."
+      },
+      "ctaText": "Let's meet and talk through the project for your Bilecik or Bozüyük business.",
+      "detail": {
+        "1": "The Bilecik page is different from the other cities on this list: Piton Studios is headquartered right here, in Bozüyük. That means working with a local business isn't about explaining remote work — we serve you directly from here, with in-person meetings available when needed. That makes the process more tangible, especially for a business building its first website or moving online sales for the first time.",
+        "2": "The Ambalaj Cini project is a clear example: for this Bilecik-based company we built an e-commerce platform covering payment integration, product management and stock tracking, active since 2022. The route-tracking app we built for the Bozüyük Minibus Drivers' Association shows a different kind of need: a web app where public-transport users can see routes and plan trips. From that experience we developed our own Minibus Route Control product, which turns GPS data into automatic reports on whether minibus lines are running on schedule.",
+        "3": "For a business in the region, our recommendation usually goes in this order: first a clear, fast-loading corporate site or e-commerce platform, then findability through local SEO, then automation of any repetitive operational work. Because we're based here, we can shape that process step by step, together, as needs come up."
+      }
+    },
+    "eskisehir": {
+      "title": "Web Design & Development in Eskişehir",
+      "metaTitle": "Web Design & Development in Eskişehir | Piton Studios",
+      "metaDescription": "We build multilingual corporate websites and SEO for businesses in Eskişehir. Our BT Elevator project is here, and we're a short trip away from Bilecik.",
+      "intro": "For Eskişehir-based BT Elevator we built a multilingual, SEO-optimized corporate website; technical SEO, schema markup and performance work boosted its search visibility. Since we're headquartered in the neighboring province of Bilecik, we can support Eskişehir businesses both remotely and, when needed, in person.",
+      "bullets": {
+        "1": "Multilingual corporate websites — as with BT Elevator, we help manufacturing and export-focused firms reach international customers too.",
+        "2": "Technical SEO and schema markup — we build the foundation from the ground up so search engines read your site correctly and rank it higher.",
+        "3": "Performance optimization — fast-loading pages improve both user experience and search ranking.",
+        "4": "Local visibility with Google Ads — alongside organic SEO, we help you reach your target customer in Eskişehir through paid search too.",
+        "5": "Easy reach — being in the neighboring province means an in-person meeting is possible when needed; the process doesn't have to stay fully remote."
+      },
+      "painTitle": "The problems we see most often on Eskişehir business websites",
+      "painPoints": {
+        "1": "Industrial and manufacturing firms' sites tend to be single-language and dated, failing to give foreign customers or suppliers a serious impression.",
+        "2": "Technical SEO is often never done; the site exists, but search engines can't read and rank the content correctly.",
+        "3": "Page load speed stays low, and mobile visitors especially close the site and move to a competitor."
+      },
+      "ctaText": "Write to us to talk through the web project for your Eskişehir business.",
+      "detail": {
+        "1": "Our completed BT Elevator project in Eskişehir shows what a multilingual corporate website can do in an industrial, manufacturing-heavy city. For this elevator company we combined a multilingual structure, technical SEO and modern design; technical SEO work, schema markup and performance optimization were aimed at ranking higher in search engines.",
+        "2": "Eskişehir is Bilecik's neighboring province, close to our headquarters — meaning fast communication and an in-person meeting when needed. The process still runs online by default: discovery calls, design approval and content delivery happen remotely, with an in-person meeting as an optional extra only when it's useful.",
+        "3": "For an Eskişehir business in industry, export or manufacturing, our recommendation is to first build a trust-building corporate site prepared in the right languages, then establish search visibility with technical SEO. In competitive sectors, the two together also boost the phone inquiries that come from being found."
+      }
+    },
+    "bursa": {
+      "title": "Web Design & Development in Bursa",
+      "metaTitle": "Web Design & Development in Bursa | Piton Studios",
+      "metaDescription": "We build corporate websites and e-commerce for businesses in Bursa. Based in neighboring Bilecik, our team delivers fast service, entirely remotely.",
+      "intro": "We haven't yet completed a portfolio project in Bursa; we serve businesses there entirely remotely, with the whole process running online from discovery call to delivery. The e-commerce platform for Ambalaj Cini in neighboring Bilecik and the multilingual corporate site for BT Elevator in Eskişehir show how we approach businesses similar to Bursa's industry- and trade-heavy structure.",
+      "bullets": {
+        "1": "Corporate websites — trust-building corporate design suited to Bursa's industrial, textile and automotive-supply-heavy business landscape.",
+        "2": "E-commerce infrastructure — online sales sites with payment integration, product and stock management, as we built for Ambalaj Cini.",
+        "3": "Local and technical SEO — we structure your pages and content for search engines so you're found in Bursa-area searches.",
+        "4": "A fast, fully remote process — working from a neighboring province keeps communication quick, and physical distance is never an obstacle.",
+        "5": "For exporters needing a multilingual structure, we build Turkish-English corporate sites, with other languages added where needed."
+      },
+      "painTitle": "The problems we see most often on Bursa business websites",
+      "painPoints": {
+        "1": "Industrial and manufacturing firms' sites often stay little more than a business card — missing product or service detail, references or a contact flow.",
+        "2": "Trading firms that want to move online postpone the step because they don't know how to set up payment and stock management.",
+        "3": "Most local competitors haven't invested in SEO at all, so even a modest SEO effort could stand out in search — but the opportunity goes untapped."
+      },
+      "ctaText": "Write to us to talk through the web project for your Bursa business — the whole process runs remotely.",
+      "detail": {
+        "1": "We don't yet have a direct reference project in Bursa, and we say that plainly — but it doesn't mean we can't serve you. Piton Studios already works remotely as an agency; being headquartered in neighboring Bilecik means working with a Bursa business is no different, in communication speed or process, from working with a business in a distant city.",
+        "2": "Our closest references to Bursa's industrial, textile and automotive-supply-heavy landscape come from neighboring provinces: the e-commerce site with payment integration and stock management we built for Ambalaj Cini in Bilecik, and the multilingual, technical-SEO-focused corporate site we built for BT Elevator in Eskişehir. Both are close analogues for manufacturing- and trade-heavy businesses.",
+        "3": "For a Bursa business, our recommendation usually goes in this order: first a clear, fast-loading corporate site or e-commerce platform, then findability through local SEO. All meetings happen online throughout — a way of working that keeps both cost and project timeline down."
+      }
+    },
+    "istanbul": {
+      "title": "Web Design & Development in Istanbul",
+      "metaTitle": "Web Design & Development in Istanbul | Piton Studios",
+      "metaDescription": "We build corporate websites, e-commerce platforms and custom software for businesses in Istanbul. Our team works remotely -- meetings, design and delivery all happen online.",
+      "intro": "We build corporate websites, e-commerce infrastructure or custom software for your business in Istanbul. Our office is in Bilecik, but the whole process runs online: kickoff call, design approval, revision rounds and delivery are all handled remotely -- so your project moves forward without a single site visit through Istanbul's heavy traffic, and the timeline never slips.",
+      "bullets": {
+        "1": "From corporate to SaaS: we've built holding company sites, CRM/ERP dashboards and e-commerce platforms across a wide range of scales.",
+        "2": "We build custom software from scratch with Next.js and Supabase whenever an off-the-shelf theme can't keep up.",
+        "3": "Meetings, revision rounds and delivery are entirely online -- your project moves forward without any travel within Istanbul.",
+        "4": "SEO and GEO work aims to make you visible in Istanbul's highly competitive search volume.",
+        "5": "Automation and integrations connect repetitive operational work -- stock, orders, account tracking -- into one system."
+      },
+      "painTitle": "Common problems Istanbul businesses run into online",
+      "painPoints": {
+        "1": "In such a competitive market, a template site can't stand out from dozens of similar competitors visually or content-wise.",
+        "2": "In growing teams, manually tracked orders, accounts or appointments lead to errors and wasted time.",
+        "3": "Multi-branch or multi-product businesses see content updates become scattered and inconsistent without a central system."
+      },
+      "detail": {
+        "1": "Istanbul is Türkiye's most competitive digital market -- from corporate services to e-commerce, dozens of competitors show up in the same search results at the same time. What sets a business apart here isn't a template site, but a digital structure built around the brand's own voice, business model and scale. Where ready-made themes fell short for Nexos Investment, we built a map-integrated, multilingual real estate listing management system from scratch with Next.js and Supabase; for FurCRM we built an accounts, production and dealer-tracking dashboard for furniture manufacturers. These are concrete examples of that approach: the workflow is designed around real operational needs rather than a template, it can expand as the business grows, and it can bring an Istanbul-scale business's complex processes together in a single dashboard.",
+        "2": "Our way of working is especially practical for clients in Istanbul: our head office is in Bilecik, and the team works fully remotely. That means a fast-moving process that doesn't wait for site visits -- kickoff calls, design approval, revision rounds and final delivery all run through video calls and written updates. For multi-arm holding structures like Arslan Group, which brings real estate, finance and trade under one roof, and for corporate projects with a broad service catalogue like Alp Sigorta, this remote model works without losing time to Istanbul traffic, appointment coordination or on-site waiting; both sides use their time efficiently, and project progress can be tracked in writing at every stage.",
+        "3": "For businesses in Istanbul, two things matter most on the results side: digital visibility and operational efficiency. SEO and GEO work to appear in high-volume searches and AI-powered search tools is one priority; automation that hands off repetitive work like stock, order or account tracking to a system is the other. The payment-integrated e-commerce infrastructure we built for Ambalaj Cini is a concrete example of how manual order tracking becomes systematic and traceable; we adapt a similar structure to your Istanbul business's scale, sector and growth goals, building it as a measurable, reportable system -- and we keep supporting it after delivery."
+      },
+      "ctaText": "Tell us about your Istanbul project -- we'll get back to you within 24 hours with a concrete roadmap."
+    },
+    "kutahya": {
+      "title": "Web Design & Development in Kütahya",
+      "metaTitle": "Web Design & Development in Kütahya | Piton Studios",
+      "metaDescription": "We build corporate websites and SEO for manufacturing, trade and craft businesses in Kütahya. Our team works fully remotely, and the whole process runs online.",
+      "intro": "We build corporate websites and SEO for manufacturing, trade and craft businesses in Kütahya. Our office is in Bilecik; the whole process runs online, with no site visit required. We aim to showcase the product catalogue that's tied to Kütahya's tile and porcelain heritage in a way that reflects years of genuine industry experience online.",
+      "bullets": {
+        "1": "Product catalogue and corporate identity sites: we've brought 25+ years of manufacturing and trade experience online.",
+        "2": "A multilingual structure gives exporters and manufacturers selling abroad reach to international customers.",
+        "3": "Local SEO builds visibility for searches that combine 'Kütahya' with your sector name.",
+        "4": "E-commerce infrastructure brings payment, stock and order management into one dashboard.",
+        "5": "Since the whole process runs remotely, working with a team outside Kütahya never extends your project timeline."
+      },
+      "painTitle": "Common problems Kütahya manufacturing and trade businesses run into online",
+      "painPoints": {
+        "1": "Years of industry experience don't come across convincingly on an outdated or non-mobile-friendly site.",
+        "2": "When a product catalogue is only shared as a brochure or over WhatsApp, potential customers can't find the business on search engines at all.",
+        "3": "A business invisible in local search loses buyers who search their province or sector for a supplier to a competitor."
+      },
+      "detail": {
+        "1": "Alongside the deep-rooted heritage of tile and porcelain production, manufacturing and trade firms form the backbone of Kütahya's economy; for many of these firms, a website still functions as a listing board they can't fill, not a catalogue. Yet as we did for Velis LTD, a corporate site that combines 25+ years of industry experience with a product catalogue, multilingual structure and SEO turns a firm from a local workshop into a findable, trustworthy supplier online. We apply the same approach for manufacturers and wholesalers in Kütahya: presenting products, production capacity and references in a clear, searchable and updatable structure, with protecting long-term brand value as our priority.",
+        "2": "In manufacturing and trade, buyers typically research online before ever requesting a quote; this is where digitalising the product catalogue and order process -- as we did with the payment-integrated e-commerce infrastructure we built for Bilecik-based Ambalaj Cini -- translates directly into sales and stock tracking. The multilingual corporate site and technical SEO work we did for Eskişehir-based BT Elevator is another geographically close example of how a regional manufacturer gains a corporate, searchable identity online; we work with the same discipline for manufacturers at a similar production scale, and for firms targeting exports we plan multilingual content and schema markup from the start of the project.",
+        "3": "The practical difference for a Kütahya business is this: because our office is in Bilecik, we understand the regional context and the budget and time constraints of SME-scale businesses -- but the service runs entirely remotely, with meetings, design approval, content collection and delivery all completed online. Building visibility for searches that combine the province name with a sector keyword sits at the centre of our projects; that means a measurable, lasting result even in a process that runs remotely without a single site visit. After delivery, content updates, new product additions and technical support requests continue with the same remote-work discipline."
+      },
+      "ctaText": "Tell us about your Kütahya business's project -- we'll get back to you within 24 hours with a roadmap."
+    },
+    "antalya": {
+      "title": "Web Design & Development in Antalya",
+      "metaTitle": "Web Design & Development in Antalya | Piton Studios",
+      "metaDescription": "We build multilingual websites and online booking solutions for hotels, transfer companies and tourism businesses in Antalya. Our team works remotely.",
+      "intro": "We build multilingual websites and online booking infrastructure for hotels, transfer companies and tourism businesses in Antalya. Our office is in Bilecik; the whole process runs remotely. In tourism, reaching foreign guests in their own language is the first requirement for not losing bookings during peak season, with demand arriving through the right channel at the right time.",
+      "bullets": {
+        "1": "A multilingual structure lets you reach international guests directly in English, Russian and other languages.",
+        "2": "Online booking and price-calculation tools let guests submit a request without ever picking up the phone.",
+        "3": "WhatsApp integration means fast responses to transfer and accommodation requests.",
+        "4": "Local, tourism-focused SEO builds visibility for searches like 'Antalya hotel' or 'airport transfer'.",
+        "5": "Mobile-first design lets a guest on the move book smoothly straight from their phone."
+      },
+      "painTitle": "Common problems Antalya tourism businesses run into online",
+      "painPoints": {
+        "1": "A single-language site loses Antalya's largest guest group -- foreign tourists -- right at the search stage.",
+        "2": "When booking requests only come by phone or social media, demand gets lost or answered late during peak season.",
+        "3": "A slow or non-mobile-friendly site pushes a guest on the move to leave before completing a booking."
+      },
+      "detail": {
+        "1": "As Türkiye's tourism hub, Antalya hosts domestic and, above all, foreign guests year-round; that guest profile fundamentally changes what's expected of a website. The booking-and-gallery-focused site we built for Sammys Hotel aimed to make the guest experience warm and inviting from first contact -- with a multilingual structure and online booking integration, we built something that reaches international guests directly, with no intermediary. We work with the same priorities for hotels and guesthouses in Antalya: gallery, room and service details, and the booking flow need to be clear and fast; a guest should trust the site within the first minute and never hesitate on the way to booking.",
+        "2": "On the transport side, the sites we built for Welcome Pickups, Aydın Transfer and Jet Transfer Cyprus directly meet the needs of guests looking for an airport transfer: an online booking system, route information, a price-calculation tool and WhatsApp integration all work together. Given Antalya's heavy airport traffic and seasonal guest volume, a system like this that moves demand off the phone and onto digital channels gives the business direct operational relief and fewer missed requests; the booking flow keeps running uninterrupted even off-season, and drivers or reception staff aren't stuck handling every request over the phone one by one -- they can put their time into the actual work.",
+        "3": "On visibility, competition in tourism is seasonal and intense, which makes clear, structured content -- suited to both classic SEO and AI-powered search (GEO) -- important. For a hotel or transfer company in Antalya, our goal is to be found wherever a guest searches -- Google, a map app or an AI assistant. Because the service runs entirely remotely, pre-season preparation moves quickly and on schedule without waiting for a site visit; the website and booking infrastructure are ready before peak season starts, so the team doesn't have to deal with digital work again during the summer rush and can give guests their full attention."
+      },
+      "ctaText": "Tell us about your Antalya hotel or transfer business -- we'll get back to you within 24 hours with a roadmap."
+    },
+    "izmit": {
+      "title": "Web Design & Development in Izmit",
+      "metaTitle": "Web Design & Development in Izmit | Piton Studios",
+      "metaDescription": "We build corporate websites and e-commerce for engineering, construction and trade firms in Izmit and Kocaeli. Our team works remotely; the process runs online.",
+      "intro": "We build corporate websites and e-commerce infrastructure for engineering, construction and trade firms in the Izmit and Kocaeli industrial region. Our office is in Bilecik; the whole process runs online. We design corporate sites suited to the region's B2B-heavy character -- sites that build trust by putting your references and project portfolio front and centre.",
+      "bullets": {
+        "1": "We design project-portfolio and reference-driven corporate sites for engineering and construction firms.",
+        "2": "We build e-commerce infrastructure for firms selling building materials and industrial products.",
+        "3": "A multilingual structure gives firms trading internationally reach to global customers.",
+        "4": "Local SEO builds visibility for searches that combine 'Izmit' or 'Kocaeli' with your sector name.",
+        "5": "Since the whole process runs remotely, we work around the industrial region's busy pace without interrupting it."
+      },
+      "painTitle": "Common problems Izmit industrial and trade firms run into online",
+      "painPoints": {
+        "1": "When a B2B firm's completed projects or references aren't clearly visible on the site, potential customers struggle to trust it.",
+        "2": "When the quote process only runs by phone or email, follow-up gets harder and some requests can slip through unnoticed entirely.",
+        "3": "For catalogue-heavy products like building materials, buyers go straight to a competitor when product and price information isn't easy to find on the site."
+      },
+      "detail": {
+        "1": "Izmit, and Kocaeli more broadly, is one of Türkiye's leading industrial regions; most firms here operate B2B, and the decision process rests as much on past track record and trust as on price. The project-portfolio and service-detail corporate site we built for Alert Mühendislik met exactly this need -- completed work and references give a potential customer concrete trust at first contact. Similarly at EKH Yapı, we built a structure that puts a gallery of ongoing and completed construction projects and contact forms front and centre; this approach applies directly to engineering and contracting firms across the industrial region.",
+        "2": "On the trade side, the import-export-focused corporate site we built for RNV Trading presents a professional image to global business partners through a multilingual structure and product catalogue; a similar multilingual structure can be built for foreign-trade firms in Izmit. For catalogue-heavy industrial products, as with Beton Store, moving product management and order flow onto an e-commerce infrastructure speeds up the quote process, cuts phone traffic and keeps stock information current; that lets the sales team spend its time on new customers and new tenders instead of tracking existing orders by phone, and removes the errors that come from manual data entry.",
+        "3": "For an engineering, construction or trade firm in Izmit, the goal is to reach a searching customer in both a local and a sector context -- being visible for searches that combine 'Izmit' or 'Kocaeli' with a sector name is the first step. Because the service runs entirely remotely, the industrial region's busy pace has no effect on the project timeline at all; meetings, revisions and approvals run entirely online while the firm keeps its focus on production or site work. After delivery, content updates, adding newly completed projects, updating references and technical support requests continue with the same remote-work discipline, tracked regularly and in writing."
+      },
+      "ctaText": "Tell us about your firm's project in Izmit or Kocaeli -- we'll get back to you within 24 hours with a roadmap."
+    },
+    "izmir": {
+      "title": "Web Design & Development in Izmir",
+      "metaTitle": "Web Design & Development in Izmir | Piton Studios",
+      "metaDescription": "We provide web design, e-commerce and SEO solutions for e-commerce, food and service businesses in Izmir. Our team works fully remotely, and the whole process runs online.",
+      "intro": "We provide web design, e-commerce infrastructure and SEO for e-commerce, food and service businesses in Izmir. Our office is in Bilecik; the whole process runs online, with no site visit required. Matching the city's diverse economy, we design sites that build your brand while also digitalising your order and appointment flow.",
+      "bullets": {
+        "1": "We build e-commerce infrastructure with order management for food and retail businesses.",
+        "2": "Sleek, mobile-first designs that put your brand identity front and centre strengthen the customer experience.",
+        "3": "We design appointment- and service-focused sites for healthcare and service-sector businesses.",
+        "4": "Local SEO builds visibility for searches that combine 'Izmir' with your sector name.",
+        "5": "We balance Google Ads for fast results against SEO for lasting organic visibility, based on your needs."
+      },
+      "painTitle": "Common problems Izmir e-commerce and service businesses run into online",
+      "painPoints": {
+        "1": "When product and order management run manually, a stock error or a delayed delivery directly hurts customer satisfaction.",
+        "2": "Even with a strong brand identity, a slow or outdated-looking site loses visitors within the first few seconds.",
+        "3": "A business invisible in local search loses a customer searching the same neighbourhood or district straight to a competitor."
+      },
+      "detail": {
+        "1": "Izmir's economy spans everything from e-commerce to food, from services to healthcare; that diversity means every business needs something different from its website. The fresh food and grocery delivery platform we built for Boon Fresh brings the product catalogue and order tracking together in a single structure -- a similar, mobile-friendly order flow that clearly shows delivery time can be built for food retailers in Izmir. For Virginia Ice Cream, we brought the brand's energetic, playful identity to life visually while putting branch information and the menu catalogue front and centre; we apply the same visual discipline and brand consistency across every page for F&B brands in Izmir.",
+        "2": "On the e-commerce side, the payment-integrated online sales platform we built for Ambalaj Cini moved stock tracking and product management onto a central system, cutting down manual-process errors significantly. In services, the appointment- and service-focused site we designed for Dental Health is an example of a clean, clear digital identity that builds patient trust; the same approach applies directly to clinics, studios or consultancies in Izmir -- the service description and contact step should be reachable in a single click, the appointment form should never be long or complicated, and a trust-building customer reference or genuine review section should never be missing.",
+        "3": "For a business in Izmir, the goal is to be visible both in local search and against competitors in its own sector. Local SEO builds lasting visibility for district- or neighbourhood-level searches, while Google Ads delivers instant visibility for moments that need fast results -- a season opening, a campaign, a new product launch. Because the service runs entirely remotely, we communicate with your Izmir business throughout the process through video calls and written updates; that means a project timeline that moves quickly without waiting for a site visit and that can be tracked in writing at every stage, with support requests after delivery continuing with the same careful, transparent discipline."
+      },
+      "ctaText": "Tell us about your Izmir business's project -- we'll get back to you within 24 hours with a roadmap."
+    }
+  },
+  "solutionItems": {
+    "real-estate-listing-software": {
+      "title": "Real Estate Listing Software",
+      "metaTitle": "Real Estate Listing Management Software | Piton Studios",
+      "metaDescription": "We build custom listing management software for real estate offices, with map display, multilingual admin panels and automatic proposal generation.",
+      "intro": "Real estate listing software is a custom system that lets you manage your portfolio beyond what a ready-made website can do: map-based listing display, a multilingual admin panel, and automatic proposal generation straight from listing data. We built this system from scratch for Nexos Investment; with our own product, Emlak Sync, we also automate syncing listings across portals.",
+      "bullets": {
+        "1": "Listings display grouped by location on an interactive map with Google Maps and Leaflet clustering.",
+        "2": "A multilingual admin panel built with next-intl, featuring a TipTap editor and drag-and-drop support.",
+        "3": "Automatic PDF and PowerPoint proposal generation straight from listing data -- no consultant builds one by hand.",
+        "4": "With Emlak Sync integration, a listing is entered once and published automatically to portals like 101evler and HangiEv.",
+        "5": "A production-grade system with PWA/offline support, Zod validation, rate limiting and Playwright end-to-end tests."
+      },
+      "painTitle": "Where real estate offices get stuck on the software side",
+      "painPoints": {
+        "1": "When off-the-shelf themes can't meet needs like advanced filtering, maps and multiple languages, the office keeps running on an incomplete system.",
+        "2": "When proposals are prepared by hand, the consultant's time goes into building PDFs and presentations instead of finding listings.",
+        "3": "When the same listing is entered into multiple portals by hand, updates get missed and a sold property's listing stays live."
+      },
+      "ctaText": "Let's talk about the custom system to manage your portfolio -- tell us about your real estate software project.",
+      "detail": {
+        "1": "Real estate listing software is a different layer from a standard real estate website: the listing data model, admin panel, map integration and multilingual content management all come together in one system. An off-the-shelf theme won't cover most of these needs; as the listing count and team grow, requirements like filtering, permissions and reporting push past the limits of ready-made solutions. At that point what you're really looking for isn't a website anymore -- it's software that runs the office's daily work, carrying the whole process from a consultant entering a listing to presenting a proposal to an investor. The bigger the office grows, the more this system's value grows too, because manual workload doesn't scale linearly -- it compounds.",
+        "2": "For Nexos Investment we built a system from scratch with Next.js, Supabase and Vercel to meet advanced listing management, map display, multiple languages and automatic proposal generation needs that off-the-shelf themes couldn't cover. We delivered a production-grade platform with an interactive map using Google Maps and Leaflet clustering, a multilingual structure built with next-intl, an admin panel with a TipTap editor and drag-and-drop support, automatic PDF/PowerPoint proposal generation from listing data, PWA/offline support, Zod validation, Upstash rate limiting and Playwright end-to-end tests. The firm now runs maps, proposal generation and content management from a single system with full control; this project is considered the technical peak of our portfolio and stands as an example at a scale no off-the-shelf theme could carry.",
+        "3": "Once listing management is in place, the next problem is usually the portals: updating the same listing by hand across multiple platforms. Our own product, Emlak Sync, solves this -- a listing is entered once, published automatically to North Cyprus portals (101evler, HangiEv) and kept in sync. This product, which eliminates duplicate data entry, is concrete proof of our capability in portal integrations and real-estate-specific automation. Together, the two systems let a real estate office manage its entire workflow -- from entering a listing to presenting a proposal to publishing on portals -- from one place, consistently; the consultant can spend time finding properties and talking to clients instead of repeating data entry. As your listing management software grows, you can also see from the same system which portal is driving more demand for which listing, and shape your marketing decisions accordingly."
+      }
+    },
+    "real-estate-seo": {
+      "title": "SEO for Real Estate Websites",
+      "metaTitle": "SEO for Real Estate Websites | Piton Studios",
+      "metaDescription": "SEO for real estate listing pages: custom schema markup, a multilingual hreflang structure, and visibility in classic and AI-powered search (GEO).",
+      "intro": "SEO for a real estate website is different from general corporate site SEO: listing pages, map data and multilingual content each need their own structure. On the Arslan Estates and Homes in Mediterranean projects we built technical SEO together with map integration and multilingual structure to reach local and foreign investors.",
+      "bullets": {
+        "1": "Custom schema markup on listing pages presents structured data to search engines.",
+        "2": "Technical and content SEO work targeting local searches like 'villa for sale' or 'Cyprus real estate'.",
+        "3": "A multilingual hreflang structure so the right-language page gets indexed for English and Russian searches too.",
+        "4": "A direct-answer position in AI-powered search (GEO) through clearly structured listing and area content.",
+        "5": "Core Web Vitals optimization keeps image-heavy listing pages fast."
+      },
+      "painTitle": "Where real estate sites most often miss the mark on SEO",
+      "painPoints": {
+        "1": "When listing pages are built without technical SEO, they either don't get indexed by Google or show up in the wrong language.",
+        "2": "When foreign investor searches are met with Turkish-only content, they're lost at the search stage itself.",
+        "3": "Sites absent from AI-powered search results (GEO) stay invisible in the next generation of search."
+      },
+      "ctaText": "Let your listings be found on Google and in AI search alike -- let's talk about your real estate SEO work.",
+      "detail": {
+        "1": "SEO for a real estate website targets the specific structure of listing and area pages. Where a standard corporate site needs just a handful of service pages, a real estate site has each listing as its own page and each area carrying its own search intent. Technical SEO here ensures crawlability and schema markup let listing data be read correctly; content SEO builds pages that match search intent by area and property type. In a multilingual portfolio, if this structure isn't also backed by hreflang, the same listing in different languages can end up competing with itself and confusing search engines. As the listing count grows, this structure has to be maintained through templates and automated meta generation rather than by hand -- it can no longer be tracked manually.",
+        "2": "For Arslan Estates we built real estate listing management and property detail pages together with SEO optimization, map integration and a multilingual structure; backed by social media links, this resulted in digital visibility that reached an international audience. For Homes in Mediterranean, we structured area guides and property details covering real estate opportunities across the Mediterranean region for international investors according to SEO, together with advanced search and filtering features; the target was a global customer base. On both projects, SEO wasn't a layer bolted on afterward -- it was part of how the listing structure itself was built; listing data was designed from the start to be readable by search engines. This approach makes it easier to add future new listing and area pages with the same technical discipline.",
+        "3": "On the results side, the goal is for a property seeker to find you no matter what language or channel they search in. A multilingual hreflang structure and schema markup build visibility for classic searches like 'villa for sale', while clearly structured content builds visibility in AI-powered search (GEO). When these two work together, a real estate site captures not just local but international search traffic; an investor lands on the right page whatever country or language they search from, which keeps marketing budget from depending on a single channel (ads) alone. Being able to track which listing generates demand in which language turns this work into something you can see through data rather than guesswork, and lets you make decisions on measurable signals; the same data also shows which category needs more work."
+      }
+    },
+    "transfer-booking-system": {
+      "title": "Transfer Booking System",
+      "metaTitle": "Transfer Booking System Development | Piton Studios",
+      "metaDescription": "We build online booking systems for transfer and taxi companies with route-based price calculation and WhatsApp integration; delivered on five projects.",
+      "intro": "A transfer booking system is a flow where the passenger picks their route and date and leaves a request directly. We built this flow -- with route/price calculation and WhatsApp integration -- for Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi and Welcome Pickups. It can scale into a full web application as needs grow.",
+      "bullets": {
+        "1": "An online booking form with route and date selection -- the request reaches the company instantly.",
+        "2": "Automatic price calculation by route and distance -- the customer sees a clear price before ever calling.",
+        "3": "WhatsApp and one-tap call integration for fast contact after booking.",
+        "4": "A multilingual booking flow -- a passenger landing at the airport leaves a request in their own language.",
+        "5": "An architecture that can scale, as needs grow, into a full-featured web application with vehicle/driver management and real-time tracking."
+      },
+      "painTitle": "Where transfer booking gets stuck on the web",
+      "painPoints": {
+        "1": "Without a booking form, every request falls to the phone; requests that come at night or while the line is busy get lost.",
+        "2": "A service whose price can only be learned by calling loses trust against a competitor that shows a clear price.",
+        "3": "If booking data lives in memory rather than a table, there's no way to track which channel a request came from."
+      },
+      "ctaText": "Let's move bookings from the phone line to the web -- write to us to talk about your transfer system.",
+      "detail": {
+        "1": "A transfer booking system can be built at two different scales: a request form covering route, date and price calculation, or a full booking platform with vehicle/driver assignment, real-time tracking and multiple user roles. We've delivered the first on five projects; for the second, we'd adapt the auth, admin panel and real-time-feature infrastructure we built for Nexos Investment and Emlak Sync to the transfer sector. Which scale you should start at depends on your daily booking volume and fleet size; we settle that question together in the first conversation, so you're not investing in unnecessary complexity from the outset. For most companies the right starting point is to build the request form first and move to a platform as booking volume grows.",
+        "2": "For Jet Transfer Cyprus and Aydın Transfer we combined online booking with route and price calculation tools; for Kıbrıs Lefkoşa Taksi and Kardeşler Taxi we wired one-tap calling and a WhatsApp flow into a mobile-first design; for Welcome Pickups we built a multilingual structure and customer reviews into a booking experience that builds trust with international travelers. Local SEO work accompanied the booking flow on all five projects, because a form that captures requests only pays off once the customer can find the site in the first place. These five projects are a real, working solution that doesn't go beyond a request form but takes real pressure off the phone line -- and setup time was kept short to match.",
+        "3": "Once the fleet grows, or needs like online payment, vehicle assignment and a driver panel emerge, this structure turns into a web application. We don't yet have a project at that scale in the transfer sector, and we say so plainly. But the auth, admin panel and real-time-feature architecture we built for Nexos Investment can be applied to transfer booking with the same approach: role-based access, live status updates and reporting are all built on the same foundation. We decide together, based on your needs, which scale to start at -- starting with a small request form and expanding into a platform over time is also a valid option. Because we build the data model correctly from the start, your existing booking history carries over into the new system without loss whenever that transition happens."
+      }
+    },
+    "hotel-booking-website": {
+      "title": "Hotel Website & Booking",
+      "metaTitle": "Hotel Website & Booking System | Piton Studios",
+      "metaDescription": "We design photo-gallery-driven hotel websites with a custom-coded booking flow and multilingual structure. Example: the Sammys Hotel boutique property site.",
+      "intro": "A hotel website is a showcase where the guest decides based on the photos and how easy booking is. For Sammys Hotel we built a booking system custom-coded to the hotel's own workflow instead of an off-the-shelf plugin: room selection, dates and requests all integrated into brand-specific design. We adapt the same approach to hospitality businesses of every size.",
+      "bullets": {
+        "1": "The photo gallery carries the site -- guests explore the room and the property before they ever arrive.",
+        "2": "A booking system that integrates room selection, dates and requests into brand-specific design.",
+        "3": "Multilingual presentation -- a guest reading a page in their own language trusts it more easily.",
+        "4": "Mobile-first speed -- travel research happens mostly on phones.",
+        "5": "SEO optimization increases the hotel's visibility in international searches."
+      },
+      "painTitle": "Where hotel sites get stuck on the web",
+      "painPoints": {
+        "1": "Sales run entirely through booking platforms; every stay pays a commission.",
+        "2": "Photos are outdated or thin; guests can't be sure they'll get what they see when they arrive at the site.",
+        "3": "An off-the-shelf booking plugin doesn't match the hotel's actual room types, seasons and request flow, so the guest ends up having to call anyway."
+      },
+      "ctaText": "Let guests see the room and book directly with you -- let's talk about your hotel website.",
+      "detail": {
+        "1": "A hotel website and booking solution has to carry two things at once: visual presentation that convinces the guest, and a booking flow that doesn't lose them. An off-the-shelf booking plugin often doesn't quite fit a hotel's actual room types, seasonal pricing or special requests, so designing the flow from scratch around the hotel's own workflow gives a more reliable result. In a photo-heavy site, performance is also critical, so the balance between gallery and speed has to be built in from the start -- a visitor won't wait for a slow-loading gallery on their phone before moving to another option. How many steps the booking flow takes is also determined by the hotel's actual operations -- number of room types, seasonal pricing, special requests.",
+        "2": "That's exactly what we did for Sammys Hotel: instead of an off-the-shelf plugin, we built a booking system custom-coded to the hotel's workflow -- room selection, dates and requests all integrated into brand-specific design. We made the photo gallery carry the site, and delivered a stylish digital showcase reaching international tourists through a multilingual structure and SEO optimization. This project is one of our strongest proofs of custom feature development capability; instead of squeezing the hotel's own operations into an off-the-shelf plugin's template, the system itself became the hotel's operation, and the guest experience benefited directly. The booking form and photo gallery were built in the same design language, as a single flow.",
+        "3": "The outcome is that guests book directly with you rather than through a platform -- no commission in between, and the guest relationship starts with you from the very first request. Today, Sammys Hotel is our only example in this exact mold in our portfolio, and we say so plainly. But we apply the same approach -- booking logic custom to real operations, gallery-driven design, multilingual structure and SEO -- to hotels, boutique stays and guesthouses of every size; we build the flow around your own room and season setup, rather than squeezing you into an off-the-shelf template. We start the first conversation by mapping your hotel's booking flow together; your room types, season calendar and guest profile become the starting point for the design, not a template."
+      }
+    },
+    "ecommerce-seo": {
+      "title": "E-commerce SEO",
+      "metaTitle": "E-commerce SEO Services | Piton Studios",
+      "metaDescription": "SEO for e-commerce product and category pages: schema markup, technical fixes, duplicate-content cleanup, and visibility in AI-powered search (GEO).",
+      "intro": "E-commerce SEO aims to get product and category pages found in both search engines and AI-powered search. For Beton Store and Boon Fresh we built the product catalog together with SEO optimization; the goal was for sales not to depend on ad budget alone. Technical SEO, schema markup and content structure are handled together.",
+      "bullets": {
+        "1": "Custom technical SEO for product and category pages -- crawlability, indexing and duplicate-content fixes.",
+        "2": "Product/Offer schema markup surfaces price and stock information in search results.",
+        "3": "Core Web Vitals optimization keeps image-heavy product pages fast.",
+        "4": "Visibility is built in AI-powered shopping searches (GEO) with accurate information.",
+        "5": "Category pages are structured around search intent, so sales don't depend on ads alone."
+      },
+      "painTitle": "The most common SEO problems we see in e-commerce",
+      "painPoints": {
+        "1": "Products don't show up on Google; sales end up entirely dependent on ad budget and social media posts.",
+        "2": "When category pages get duplicated through filter parameters, duplicate content confuses search engines.",
+        "3": "Newly added products stay unindexed for a long time, so seasonal sales opportunities never show up in search traffic."
+      },
+      "ctaText": "Let your products be found in search independent of ads -- let's talk about e-commerce SEO work.",
+      "detail": {
+        "1": "E-commerce SEO calls for a different structure than general corporate site SEO: the number of product and category pages grows fast, filter parameters carry duplicate-content risk, and stock status changes often. Technical SEO here ensures crawlability, correct indexing and schema markup make clear to search engines what a product is; content SEO structures category pages around search intent. Once product pages run into the hundreds, this structure becomes sustainable only through templates and automated meta generation, not manual work -- otherwise every new product turns into a separate manual task. Protecting Core Web Vitals on image-heavy product pages is an inseparable part of this structure too, since a slow-loading page falls behind in search as well.",
+        "2": "For Beton Store we built a catalog of construction materials and concrete products together with product catalog, order management and contact systems, and drove organic traffic growth through SEO optimization. For Boon Fresh we supported a fast ordering flow on a fresh food and grocery delivery platform with SEO optimization and grew organic traffic. On both projects the goal was for sales not to depend on a single channel (ads); as the catalog grew we kept SEO work current alongside it rather than leaving it as a one-time setup. As products were added, page structure and meta information adapted automatically to the new product with no extra manual intervention needed; neither store had to rebuild its SEO work as its catalog grew.",
+        "3": "On the results side, the goal is for product and category pages to show up with accurate information in both classic and AI-powered searches (GEO). Direct-answer product descriptions and structured data also help LLM-based shopping assistants recommend the right product. This gives the store a structure where traffic doesn't stop when ads stop -- organic traffic becomes a channel added on top of ad budget, reducing dependence on it even if it doesn't fully replace it. Being able to track which product page came from which search lets you update strategy with data instead of guesswork and move forward on measurable signals, prioritizing your budget accordingly; the same data also shows which category needs more work."
+      }
+    },
+    "ecommerce-automation": {
+      "title": "E-commerce Automation",
+      "metaTitle": "E-commerce Automation Services | Piton Studios",
+      "metaDescription": "We build n8n and webhook-based automation workflows that sync stock, orders and marketplace listings for e-commerce stores; scope is defined together with you.",
+      "intro": "E-commerce automation connects the order, payment, shipping and notification steps in your store instead of running them by hand. For Ambalaj Cini we built infrastructure that keeps payment collection, DHL shipment tracking and order status in sync and sends automatic notifications to customers and staff; we apply the same approach to stock and marketplace synchronisation.",
+      "bullets": {
+        "1": "Webhook flows that automatically update stock, shipping and accounting systems when an order comes in.",
+        "2": "Multi-marketplace listing and stock sync with n8n or Zapier.",
+        "3": "Automatic order and return notifications sent by email or WhatsApp.",
+        "4": "Scheduled jobs that automate stock reports, invoicing and recurring maintenance tasks.",
+        "5": "Failure-alert monitoring -- the team is notified instantly the moment a sync step breaks."
+      },
+      "painTitle": "The problems a lack of automation creates in e-commerce",
+      "painPoints": {
+        "1": "When stock is updated by hand across multiple systems, orders keep coming in even after a product has sold out.",
+        "2": "When order, invoice and shipping information sit in separate tables, there's no way to track which order is at which stage.",
+        "3": "Without marketplace integration, a store has to enter listings and update stock by hand on every platform."
+      },
+      "ctaText": "Let's put your repetitive manual work into automation -- let's talk about your e-commerce automation needs.",
+      "detail": {
+        "1": "E-commerce automation doesn't target the store itself (catalog, payment, order flow) -- it targets connecting those systems to the outside world: marketplaces, shipping, accounting, customer communication. In our automation service we start by mapping the process: who does the manual work, at which step, with which decision. Then we decide which tool fits the job -- n8n (on your own infrastructure, no per-execution fee, no vendor lock-in) or Zapier (fast setup with no infrastructure overhead); we usually move complex flows to n8n. The goal is to eliminate repetitive work that shouldn't require a person; error handling and edge cases are documented and designed before implementation, not patched on afterward. An automation built this way stays easy to update whenever a business rule changes.",
+        "2": "The clearest example of this approach is Ambalaj Cini: payment collection via PayTR and shipment tracking via the DHL integration stay in two-way sync with order status, and order, payment and stock changes are sent automatically to both customers and the management team through web push notifications and transactional emails. On the marketplace side we adapt the logic of our own product, Emlak Sync: a record is entered once, published automatically to several portals (101evler, HangiEv) and kept in sync, eliminating duplicate data entry. The same principle — enter once, distribute automatically to several systems — applies to stock and marketplace synchronisation. We adapt this experience to your store's own systems (stock, shipping, accounting), starting with the manual step that costs the most time and expanding scope step by step.",
+        "3": "After setup, we keep the process observable with failure alerts, execution logs and dashboards; if a sync step breaks, you see it before orders pile up. Scope depends on the store's size and the number of systems it connects to; in the first conversation we work out together which manual task is the best fit for automation. At handover we document the process and train your team to maintain it, and we offer support for ongoing changes -- updating the automation together as the system evolves. That way automation isn't a one-time project but infrastructure that grows with your store, connecting to any new system with the same logic when it's added; we settle scope, complexity and timeline together based on your store's actual needs."
+      }
+    },
+    "restaurant-google-ads": {
+      "title": "Google Ads for Restaurants",
+      "metaTitle": "Google Ads Management for Restaurants | Piton Studios",
+      "metaDescription": "Google Ads management that brings new customers to restaurants and cafes through search campaigns, with setup and tracking tied to your reservation page.",
+      "intro": "We build and manage Google Ads campaigns that put your restaurant in front of searches like 'restaurant near me' at the right moment. A campaign shouldn't just earn clicks -- it should turn them into filled tables by connecting to your menu page and reservation flow, ahead of local SEO taking hold.",
+      "bullets": {
+        "1": "Local-search-focused campaign structure -- we target high-intent searches like 'area + restaurant/cafe' instead of spending budget on broad, irrelevant impressions.",
+        "2": "Ad copy aligned with your menu and reservation page -- what the ad promises matches what visitors see on the site, so no click goes to waste.",
+        "3": "Time-of-day optimization -- budget increases around lunch and dinner hours and pulls back when you're closed.",
+        "4": "Conversion tracking -- concrete actions like reservation requests and directions clicks are measured, so you see which campaign actually brings customers to the table.",
+        "5": "Weekly reporting -- spend, clicks and incoming requests are shared in a plain report, no agency jargon needed to make a decision."
+      },
+      "painTitle": "Common mistakes restaurants make with Google Ads",
+      "painPoints": {
+        "1": "A campaign set up with broad match gets impressions from outside the area or from irrelevant searches; budget runs out fast but tables stay empty.",
+        "2": "The ad gets clicked, but the landing page shows an outdated menu or loads slowly; the visitor leaves before ever reaching the reservation step.",
+        "3": "With no conversion tracking in place, no one knows which campaign is actually bringing in customers, so budget gets allocated by guesswork."
+      },
+      "ctaText": "Let's talk about a Google Ads campaign for your restaurant -- write to us.",
+      "detail": {
+        "1": "For restaurants and cafes, the job of Google Ads is to move the person searching in the right area at the right time straight into your menu and reservation flow. Search intent in this sector is very clear -- the person is looking for somewhere to eat right now and decides within minutes; we build the campaign around that moment: keywords segmented by area and mealtime, a negative-keyword list that blocks irrelevant impressions, and ad copy that links straight to the menu page. Instead of spending budget on a generic 'restaurant' search, we focus on searches that already carry ordering or reservation intent -- and that difference means far more filled tables for the same budget.",
+        "2": "Before launching a campaign, we check whether the site itself is ready to receive it; the fast ordering flow we built for Boon Fresh and the clear menu presentation we designed for Virginia Ice Cream are examples of how a click turns into a decision. If your restaurant site is already with us, we connect the campaign directly to your existing menu and reservation page; if not, we get those pages ready first, because even a perfectly targeted ad falls flat when it hits a slow or outdated menu. Ad copy is written to mirror exactly what the site promises, so the person who clicks finds what they were looking for immediately and moves into the reservation or order step without friction. In the first two weeks after launch we hold off on major changes and let the data build, giving the algorithm room to learn.",
+        "3": "The outcome is a measured process, not a guess: the weekly report shows which keyword drives reservation requests and which hours convert best, and budget gradually shifts toward the campaigns that fill the most tables. As SEO and GEO work matures, organic visibility for searches like 'restaurant near me' grows too, and Google Ads' share can be reduced step by step -- but for as long as the campaign runs, the data it produces becomes lasting knowledge about which message and which time slot actually works. The report centers on incoming reservations and calls, not spend, so you can see whether the campaign is working by the numbers, not by impression."
+      }
+    },
+    "finance-automation": {
+      "title": "Finance Process Automation",
+      "metaTitle": "Finance Process Automation Services | Piton Studios",
+      "metaDescription": "We build software for currency exchanges, crypto businesses and finance companies that automates payment tracking, reminders and reporting workflows.",
+      "intro": "We build software for your finance company, currency exchange or crypto business that automates recurring processes like payment tracking, due-date reminders and reporting. With our own product, Payment Tracker Bot, we track due dates and send automatic reminders; Holly Trader collects and reports market data.",
+      "bullets": {
+        "1": "Due-date and reminder automation -- as a payment or installment date approaches, the right person gets an automatic notification via Telegram, email or WhatsApp.",
+        "2": "Data collection and reporting -- market, rate or transaction data is gathered on a schedule and turned into a readable summary dashboard.",
+        "3": "Custom internal tools -- a simple, reliable web panel your team can use daily replaces spreadsheets.",
+        "4": "Financial-integrity safeguards -- settled records and historical data can't be accidentally altered during automation; every step stays auditable.",
+        "5": "Phased rollout -- automation starts with the single process costing you the most time, then expands in scope once results are visible."
+      },
+      "painTitle": "The problems we see most often in finance processes",
+      "painPoints": {
+        "1": "Payment and due-date tracking is done by hand in spreadsheets; one skipped row means a late payment or a missed reminder.",
+        "2": "Market or rate data is compiled manually from different sources; putting a report together takes hours, and by the time it's ready the data is already stale.",
+        "3": "The whole process depends on one person's memory and attention; when that person is out or leaves, the system breaks down completely."
+      },
+      "ctaText": "Let's automate your finance process -- write to us.",
+      "detail": {
+        "1": "In finance, the value of automation shows up as much in eliminating errors as in speed; a miscalculated due date or a forgotten reminder means a direct financial loss. A well-built automation takes over the recurring work a person would otherwise do, freeing that person's attention for exceptions instead. As a manually maintained spreadsheet grows, so does the risk of error; automation keeps that risk flat by processing every row under the same rule. On time-sensitive work like due dates and amounts especially, that consistency doesn't slip even when the team is tired or on leave -- the system doesn't take holidays, doesn't forget, doesn't lose focus, and repeats every transaction with the same precision.",
+        "2": "We built this expertise into our own products: Payment Tracker Bot tracks company payments (credit card/installment, check, cash and other) and sends automatic reminders via Telegram as due dates approach; it generates due dates automatically for installment payments, gives a summary dashboard for overdue items and the next 7 days, and protects settled records from accidental changes. Holly Trader is a Node.js-based tool that collects, processes and reports market data -- data collection, signal generation and reporting all live in a single service. We adapt whichever model fits your finance company's process -- reminder-focused or data/reporting-focused -- to your project, and can combine both into one system if needed.",
+        "3": "When building automation, we never treat data security as separate from the process itself; where financial and personal data is stored and who can see it is settled at the design stage, and the system is built around that answer from the start. Rollout is phased, not all at once: we automate the single process costing the most time first, and expand scope as results become visible -- so your team sees the new system working at a small scale before trusting it fully. In the end, your team spends its time not updating a spreadsheet but reviewing the summary the automation produces and making decisions -- focused on growing the business rather than hunting for errors -- and workload doesn't scale up in lockstep with growth; the process scales before the team has to, and the system keeps working with the same discipline even as transaction volume rises."
+      }
+    },
+    "clinic-seo": {
+      "title": "SEO for Clinics & Dentists",
+      "metaTitle": "SEO for Clinics & Dental Practices | Piton Studios",
+      "metaDescription": "Technical SEO, structured data and GEO work for clinic and dental websites. Be found with accurate information the moment a patient searches.",
+      "intro": "We do technical SEO and GEO (visibility in AI-powered search) work for your clinic or dental practice website. The goal is for your site to appear with accurate, current information the moment a patient searches for a treatment. We keep the work within healthcare advertising rules, using informative content that makes no health claims.",
+      "bullets": {
+        "1": "Technical SEO audit -- we find crawling, indexing and page-speed issues so search engines read your clinic's site correctly.",
+        "2": "Treatment page structure -- each treatment gets its own page that directly answers the questions patients actually ask.",
+        "3": "Structured data (schema) -- clinic, practitioner and FAQ markup earns rich results in search listings.",
+        "4": "GEO work -- content is structured with the clarity that AI-powered search tools need to cite it accurately.",
+        "5": "Local SEO -- your Google Business profile and site content are built together, so you show up for searches like 'area + dentist'."
+      },
+      "painTitle": "The problems we see most often in clinic SEO",
+      "painPoints": {
+        "1": "Treatment information is missing or too shallow on the site; when a patient can't find their answer, they keep searching and end up at another clinic.",
+        "2": "The site is technically slow or doesn't render properly on mobile, so search engines rank it lower.",
+        "3": "Structured data was never set up; clinic information appears incomplete or inaccurate in search results and AI tools."
+      },
+      "ctaText": "Let's talk about SEO for your clinic's site -- write to us.",
+      "detail": {
+        "1": "In health-related searches, a patient typically searches by symptom or treatment name and forms a decision based on the first few results they see. SEO here isn't just about ranking -- it's about becoming the first source the patient trusts; the content has to be accurate, current and clear, written informatively rather than with exaggerated promises. In searches where the decision is about health -- a clinic or dental practice -- that clarity is a matter of trust that comes before ranking; the patient is first convinced by the clinic, then by the treatment. That's why we write content in language the patient understands, not marketing language, because a confused patient doesn't book an appointment.",
+        "2": "On the Dental Health project, we built a site showcasing treatments, equipment and the specialist team while also designing the content structure to be readable by search engines -- that experience is the foundation of our SEO work. We start with a technical audit, finding crawling, indexing and page-speed issues; then we rebuild treatment pages in the patient's language and use schema markup to make clinic and practitioner information clear to both search engines and AI tools. In advertising and content creation we follow the promotional rules specific to healthcare -- we never write copy that claims unproven results or makes comparisons, only content that describes the scope of treatment and what the clinic offers. This discipline keeps the clinic credible both in search engines and in the patient's eyes.",
+        "3": "The result is appearing with accurate information in searches for the clinic's name or a treatment name, and in AI-powered health queries. This visibility isn't a one-off campaign -- it's an asset that accumulates over time through content kept current and regular technical maintenance. By tracking which treatment pages get visited, we shape the content calendar around real patient interest, directing effort toward the topics patients care about most; over time the clinic becomes visible across a wider range of treatments, each new page building on the visibility already earned rather than starting from zero -- adding to the value of what comes after it, and over time the clinic becomes a reference source in its own field."
+      }
+    },
+    "corporate-ai-assistant": {
+      "title": "Corporate AI Assistant Development",
+      "metaTitle": "Corporate AI Assistant Development | Piton Studios",
+      "metaDescription": "We build AI assistants integrated into your corporate website or internal processes. Claude, OpenAI and Gemini, with guardrails and cost control built in.",
+      "intro": "We build AI assistants for your corporate website or internal processes that answer customer questions, search documents, or take over a repetitive task. We work with Claude, OpenAI and Gemini, choosing the model by use case rather than habit. Our own product experiment, ContentFlow AI, tested this integration experience firsthand.",
+      "bullets": {
+        "1": "Use-case definition -- what the assistant will answer, what data it can access, and what it should never do are defined upfront.",
+        "2": "RAG and document-based responses -- the assistant answers from your own organization's documents and content, not mixed with general internet knowledge.",
+        "3": "Guardrails and scope limits -- the assistant doesn't stray outside its defined topic; filters reduce the risk of incorrect or misleading answers.",
+        "4": "Cost control -- model selection and request management are designed so cost stays predictable as usage grows.",
+        "5": "Traceability -- what data each answer was generated from, and its cost, is logged; the assistant never operates as a black box."
+      },
+      "painTitle": "Common problems we see in corporate AI assistant projects",
+      "painPoints": {
+        "1": "The assistant launches as a generic model's default configuration; without scope defined around the organization's own process and content, answers end up off the mark.",
+        "2": "An assistant launched without guardrails tries to answer off-topic questions and can produce statements that create liability for the organization.",
+        "3": "Cost and usage weren't modeled upfront, so the bill becomes unpredictable as usage grows and the project loses its sustainability."
+      },
+      "ctaText": "Let's talk about the right AI assistant for your organization -- write to us.",
+      "detail": {
+        "1": "A corporate AI assistant's value doesn't come from answering every query -- it comes from giving the right answer from the right source to the right query. That's why we start from the use case, not the model: will the assistant answer customer questions, search internal team documents, or fill out a repetitive form -- each scenario calls for a different architecture, different data access and a different guardrail set. Without that clarity, an assistant either stays too narrow to be useful or keeps an undefined scope and loses reliability -- both carry reputational risk for the organization and are hard to walk back.",
+        "2": "You've seen how we build multilingual structure and corporate trust on projects like BT Elevator and Arslan Group; on the AI-integration side, we tested our experience with our own product, ContentFlow AI -- a prototype that speeds up the steps from content idea to draft to publishing with AI, demonstrating our capability in model selection, flow design and productization. On corporate assistant projects we combine both experiences: we build an AI layer on top of the organization's existing content and process infrastructure, with a security and guardrail layer added in; we choose between Claude, OpenAI and Gemini by use case rather than habit, so we're never locked into a single provider.",
+        "3": "In the end, the goal is for the assistant to stay measurable and predictable. We track which questions get answered, where the assistant steps back, and how cost trends; what data each answer was generated from is logged. Internal data privacy and which data goes to which model is a design decision settled at the start of the integration -- not a safeguard bolted on afterward -- and it's reviewed throughout the process. That lets the organization manage the assistant as a system with defined responsibility rather than an experiment, able to explain in hindsight what was said and why -- making legal and reputational risk visible upfront."
+      }
+    },
+    "education-platform": {
+      "title": "Education Platform Development",
+      "metaTitle": "Education Platform Development Services | Piton Studios",
+      "metaDescription": "We build custom education platforms with course, exam or student-tracking features. Enrollment flow, user panels and content management in one system.",
+      "intro": "When your course center or educational institution needs to go beyond a standard promotional site to features like student logins, progress tracking or exams, we build a custom web application. We don't yet have an education-sector project, but our listing-management portal for Nexos Investment and Social Pro's multi-account architecture prove the experience transfers.",
+      "bullets": {
+        "1": "Login-based structure -- a login and panel system runs with separate permissions for students, instructors and administrators.",
+        "2": "Content and program management -- course and program content is updated from the panel with no technical knowledge required.",
+        "3": "Progress and enrollment tracking -- which course a student is in, and at what stage, is visible from a single panel.",
+        "4": "Scalable architecture -- a foundation that can grow from a small user base into a large platform without a rewrite.",
+        "5": "Mobile-friendly interface -- students and parents get the same smooth experience when they access the platform from a phone."
+      },
+      "painTitle": "The pattern we see most often when institutions need an education platform",
+      "painPoints": {
+        "1": "The institution starts with an off-the-shelf LMS but ends up patching the parts that don't fit its own process by hand, in spreadsheets.",
+        "2": "Without separate permission levels for students and instructors, everyone sees the same panel, and who should see what gets solved manually every time.",
+        "3": "Updating course content stays dependent on a developer; even a small change can take days."
+      },
+      "ctaText": "Let's talk about your education platform needs -- write to us.",
+      "detail": {
+        "1": "Unlike a standard website, an education platform is a web application that requires user logins, permission levels and a proper data model. We start by answering whether the institution's need fits the mold of an off-the-shelf LMS or calls for a custom system built around its own process -- because every point where a ready-made system can't flex risks turning into a manually maintained spreadsheet later. The right answer depends on the institution's size, the variety of its programs and its team's technical capacity; that's why the first step is always a scoping conversation, not a pre-packaged solution -- we understand the institution's existing processes first, and the technology choice comes after.",
+        "2": "We haven't delivered an education-sector project yet, and we'd rather say so plainly than hide it -- and show the transferable experience we do have instead. For Nexos Investment we built a mapped, multilingual, permission-based portal spanning listing management all the way to automated PDF and presentation-format proposal generation; for our own product, Social Pro, we developed a multi-account architecture, content calendar and panel design from scratch. The student/instructor/administrator separation, content management and progress tracking an education platform needs rest on the same core principles as the architectures we built in these two projects: a correct data model, clear permissions, and content manageable from a panel. We choose the technology to match these principles and the scale of the project.",
+        "3": "The platform we deliver to an institution is built on a foundation that can grow without staying dependent on a developer -- a structure your content team can update itself, an architecture that doesn't need a rewrite as users grow. Throughout the process we scope things together and ship the first version in the narrowest form that still works, then build on top of it -- so the institution starts seeing results in its first enrollment period without waiting for the entire platform to be finished, and we shape the next step together based on feedback. This phased approach also keeps budget and scope from spiraling out of control -- you see clearly what you're paying for at each stage, and decide the next step based on real user feedback rather than a guess."
+      }
+    },
+    "beauty-appointment-system": {
+      "title": "Beauty Salon Booking System",
+      "metaTitle": "Beauty Salon Booking System Development | Piton Studios",
+      "metaDescription": "Custom booking systems for salons and hairdressers with staff- and service-based scheduling. Clients book online, the salon manages it all from one panel.",
+      "intro": "For salons and hairdressers that want a custom booking system beyond a standard appointment form -- one that shows availability by staff member and service duration -- we build a web application. We don't yet have a beauty-sector project in our portfolio, but our booking-flow work for Jet Transfer Cyprus and Welcome Pickups adapts directly to a salon's calendar.",
+      "bullets": {
+        "1": "Staff- and service-based calendar -- the client picks a service and, if they want, a staff member, and the system shows only genuinely available slots.",
+        "2": "Automatic reminders -- clients get an automatic SMS or WhatsApp reminder before their appointment, cutting the no-show rate.",
+        "3": "Salon panel -- the owner sees every appointment, staff availability and cancellation from one panel.",
+        "4": "Online payment or deposit integration -- when requested, taking a deposit at booking reduces the risk of an empty slot.",
+        "5": "Mobile-first flow -- a client completes a booking from their phone in a few taps, with no back-and-forth messaging."
+      },
+      "painTitle": "The pattern we see most often when salons move to a booking system",
+      "painPoints": {
+        "1": "Appointments come in through DMs and phone calls; which staff member is free at which hour lives only in the receptionist's memory.",
+        "2": "No reminder goes out for a no-show client, and that empty appointment slot can never be recovered.",
+        "3": "Off-the-shelf booking software doesn't quite fit the salon's own service and staff structure, so the business still ends up tracking part of it by hand."
+      },
+      "ctaText": "Let's talk about a custom booking system for your salon -- write to us.",
+      "detail": {
+        "1": "In a beauty salon, a booking system isn't a simple form -- it's a small operations tool that manages staff availability, service duration and client preference all at once. The need usually is a shift from manual tracking that depends on one person to a system where multiple staff calendars run without conflict; as a salon grows, that shift stops being a luxury and becomes necessary to maintain service quality. A poorly planned booking system means both dissatisfied clients and wasted chair time -- both losses hit revenue directly and compound over time; even a small hiccup can turn into reputational damage, because a client is only ever a message away from another salon.",
+        "2": "We haven't delivered a beauty-sector project yet, and we'd rather show its transferable side than hide that fact. At Jet Transfer Cyprus we built an online booking flow combined with route and price calculation tools; at Welcome Pickups we built a multilingual, review-backed, mobile-first booking system. The core problem we solved on those projects -- showing accurate availability, capturing requests in a structured format and presenting them to the business on a clear panel -- rests on the exact same logic as staff- and service-based scheduling for a salon; only the 'route' becomes 'service and staff', while the backbone of the flow stays the same.",
+        "3": "The system we build takes shape around the salon's day-to-day operation: how many staff there are, how long each service takes, whether a deposit will be taken, and which channel reminders go out on. The first version ships answering those questions in the narrowest scope, and layers like reminders, payment or reporting get added on as the salon uses it -- so the salon never pays upfront for a feature it doesn't need, and grows the system at its own pace. This approach lets both a small salon and a large chain get a system sized to their own scale; neither pays extra for the other's needs, and the system matures based on real usage rather than carrying unnecessary complexity from day one."
+      }
+    }
   }
 }

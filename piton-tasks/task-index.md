@@ -15,9 +15,10 @@
 | 8 | Portfolyo Guncellemeleri | 1 | 1 | 0 | 0 | 0 |
 | 9 | Hukuki Uyum | 1 | 1 | 0 | 0 | 0 |
 | 10 | Site Geneli UI | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **58** | **58** | **0** | **0** | **0** |
+| 11 | Büyüme Sayfaları | 6 | 6 | 0 | 0 | 0 |
+| **Total** | | **64** | **64** | **0** | **0** | **0** |
 
-**Progress**: 58/58 (100%) ✓
+**Progress**: 64/64 (100%) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -145,4 +146,10 @@
 
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
+| TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
+| TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |
+| TASK-062 | 10 şehir sayfası (`/bolgeler`, `/web-tasarim/[slug]`), ortak `landing-view` | L | COMPLETED |
+| TASK-063 | 12 hizmet × sektör çözüm sayfası (`/cozumler`, `/cozumler/[slug]`) | L | COMPLETED |
+| TASK-064 | 5 karşılaştırma yazısı × 3 dil (ajans/freelancer, site kurucu, Shopify, PWA, Google Ads/SEO) | L | COMPLETED |
+| TASK-065 | 6 rakamsız teknik vaka çalışması (`works.{slug}.caseStudy`) × 3 dil + Supabase izlerinin kaldırılması | M | COMPLETED |
 | TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): iki satır — menü / teknoloji ikonları · "Piton Studios © 2026" · hukuki linkler; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |

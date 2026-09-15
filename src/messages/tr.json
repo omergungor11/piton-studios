@@ -527,24 +527,6 @@
       }
     }
   },
-  "caseStudy": {
-    "eyebrow": "§ 03 · Öne Çıkan Proje",
-    "title": "Gel Gez Gör — KKTC'nin {accent} ilan platformu.",
-    "titleAccent": "kapsamlı",
-    "labelClient": "Müşteri",
-    "valueClient": "Gel Gez Gör",
-    "labelYear": "Yıl",
-    "valueYear": "2025",
-    "labelScope": "Kapsam",
-    "valueScope": "Web App, Platform, SEO",
-    "labelStack": "Teknoloji",
-    "valueStack": "Next.js · SEO · Platform",
-    "body1": "KKTC'nin kapsamlı ücretsiz ilan platformunu sıfırdan tasarladık ve geliştirdik.",
-    "body2": "Detaylar için projeyi inceleyin.",
-    "cta": "Projeyi İncele",
-    "mediaTag": "[ PROJE · DEMO ]",
-    "scale": "PROJE · PLATFORM"
-  },
   "projectsPage": {
     "title": "Projeler",
     "headline": "Seçilmiş <accent>çalışmalar</accent>.",
@@ -578,7 +560,12 @@
     "previewTablet": "Tablet",
     "previewMobile": "Mobil",
     "live": "Canlı Site",
-    "visit": "Siteyi ziyaret et"
+    "visit": "Siteyi ziyaret et",
+    "caseChallenge": "Problem",
+    "caseSolution": "Çözüm",
+    "caseHighlights": "Öne çıkan teknik kararlar",
+    "caseStack": "Kullanılan teknolojiler",
+    "caseOutcome": "Sonuç"
   },
   "storiesSection": {
     "eyebrow": "§ 02.5 · Hikayeler",
@@ -604,7 +591,31 @@
     "sectors": "Sektörler",
     "privacy": "Gizlilik",
     "cookies": "Çerezler",
-    "terms": "Kullanım Koşulları"
+    "terms": "Kullanım Koşulları",
+    "relatedSolutions": "İlgili çözümler",
+    "exploreLocations": "Bölgeler",
+    "exploreSolutions": "Çözümler",
+    "exploreAll": "Tümü",
+    "cities": {
+      "kktc": "KKTC",
+      "lefkosa": "Lefkoşa",
+      "bilecik": "Bilecik",
+      "eskisehir": "Eskişehir",
+      "bursa": "Bursa",
+      "istanbul": "İstanbul",
+      "kutahya": "Kütahya",
+      "antalya": "Antalya",
+      "izmit": "İzmit",
+      "izmir": "İzmir"
+    },
+    "solutionsShort": {
+      "real-estate-listing-software": "Emlak yazılımı",
+      "transfer-booking-system": "Transfer rezervasyon",
+      "ecommerce-seo": "E-ticaret SEO",
+      "clinic-seo": "Klinik SEO",
+      "finance-automation": "Finans otomasyonu",
+      "corporate-ai-assistant": "Yapay zekâ asistanı"
+    }
   },
   "works": {
     "velis-ltd": {
@@ -625,11 +636,35 @@
     },
     "gel-gez-gor": {
       "title": "Gel Gez Gör",
-      "summary": "KKTC ücretsiz ilan platformu — emlak, araç, iş ilanları.",
+      "summary": "İlan sitesi Gel Gez Gör için trend tespiti, WhatsApp bildirimi ve sosyal medya içerik otomasyonu.",
       "body": [
-        "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
-        "Kullanıcı dostu arayüz, gelişmiş filtreleme sistemi ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık."
-      ]
+        "KKTC'nin ilan sitesi Gel Gez Gör için trend ilanları otomatik tespit eden bir otomasyon katmanı geliştirdik. Platformun kendisi müşteriye ait; bizim işimiz, sitedeki öne çıkan ilanları okuyup ilan sahiplerine WhatsApp üzerinden bildirim gönderen akışı kurmaktı.",
+        "Aynı sistem her ilan için hazır sosyal medya görseli ve yapay zekâ destekli başlık üretiyor, bunları Instagram ve Facebook'ta yayınlayabiliyor. Ekip, daha önce elle yürüttüğü takip ve paylaşım işini artık tek bir panelden yönetiyor."
+      ],
+      "caseStudy": {
+        "challenge": "Gel Gez Gör'de öne çıkan ilanları elle takip edip ilan sahiplerine tek tek ulaşmak ve her ilan için ayrı sosyal medya görseli hazırlamak zaman alıyor, tutarsız sonuçlar veriyordu. Platformun kendisinde trend tespiti için bir API yoktu; ihtiyaç, sitenin kendi HTML yapısından trend ilanları otomatik tespit eden, ilan sahiplerine WhatsApp üzerinden bildirim gönderen ve her ilan için hazır Instagram/Facebook görseli ile başlık üreten, site yapısı değiştiğinde kolay kırılmayan, günde birden çok kez kendiliğinden çalışan bir otomasyon katmanıydı.",
+        "solution": "Pipeline, Cheerio ile gelgezgor.com'un statik HTML'ini okuyup trend ilan kartlarını çıkarıyor; sonuçlar yerelde SQLite/Drizzle'a, Vercel ortamında doğrudan Supabase'e kaydediliyor ve detay sayfasından zenginleştiriliyor. İlan sahiplerine Twilio WhatsApp Business API üzerinden otomatik bildirim gönderiliyor; Meta'nın kendi WhatsApp Cloud API'sine geçiş için ayrı bir istemci de hazır durumda. Sosyal medya tarafında Sharp ile SVG overlay + image composite yaklaşımıyla üç tema (Modern, Elegant, Bold) × iki varyanttan (koyu/açık) oluşan altı görsel şablon var; şablon seçimi ilan başlığına/kategorisine göre otomatik rotasyonla yapılıyor. Başlık ve hashtag metinleri önce Gemini ile üretiliyor, API başarısız olursa şablon tabanlı metne otomatik düşülüyor; Imagen 3 ile opsiyonel bir yapay zeka arka planı da denenip yine template'e geri dönülebiliyor. Üretilen görseller Meta Graph API ile Instagram (tekli gönderi + karusel) ve Facebook'a doğrudan yayınlanabiliyor. Tüm adımlar node-cron ile günde iki kez tetiklenen tek bir orchestrator'da birleşiyor; Express tabanlı panel manuel tetikleme ve durum takibi sağlıyor, dry-run modu üretime dokunmadan test imkânı veriyor.",
+        "highlights": [
+          "Cheerio ile sitenin statik HTML'inden trend ilan kartlarını okuyan, seçicileri dokümante edilmiş bir scraper — headless tarayıcıya gerek yok.",
+          "Twilio WhatsApp Business API üzerinden ilan sahiplerine otomatik bildirim; Meta WhatsApp Cloud API'ye geçiş için ayrı bir istemci de hazır.",
+          "Sharp tabanlı canvas motoru, 3 tema × 2 varyant altı görsel şablonu ilan kategorisine göre otomatik rotasyonla seçiyor.",
+          "Gemini ile başlık/hashtag üretimi, hata durumunda şablon tabanlı metne otomatik düşen bir fallback zinciriyle güvence altına alınmış.",
+          "Üretilen görseller Meta Graph API ile Instagram (tekli + karusel) ve Facebook'a doğrudan yayınlanabiliyor; dry-run modu üretime dokunmadan test sağlıyor."
+        ],
+        "stack": [
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "Cheerio",
+          "Drizzle ORM",
+          "SQLite",
+          "Supabase",
+          "Twilio",
+          "Sharp",
+          "Google Gemini"
+        ],
+        "outcome": "Sonuç, Gel Gez Gör için trend ilanlarını scrape'ten WhatsApp bildirimine ve sosyal medya paylaşımına kadar tek bir otomatik akışta birleştiren bir pipeline. Panel üzerinden manuel kontrol ve dry-run modu, üretime geçmeden önce güvenle test imkânı sağlıyor. Sistem, hem SQLite ile tek makinede hem Supabase ile Vercel üzerinde çalışacak şekilde taşınabilir kuruldu."
+      }
     },
     "nexos-investment": {
       "title": "Nexos Investment",
@@ -637,7 +672,31 @@
       "body": [
         "Hazır temalar Nexos Investment'ın ihtiyaçlarını (gelişmiş ilan yönetimi, harita üzerinde gösterim, çoklu dil, otomatik teklif üretimi) karşılamıyordu. Next.js, Supabase ve Vercel ile sıfırdan, ölçeklenebilir bir emlak ilan yönetim sistemi geliştirdik: Google Maps + Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı ve ilan verisinden otomatik PDF/PowerPoint teklif üretimi.",
         "TipTap editörlü ve sürükle-bırak destekli yönetim paneli, PWA/offline desteği, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor — portfolyomuzun teknik zirvesi."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "Nexos Investment, Kuzey Kıbrıs'ta çok sayıda proje ve ilanı yöneten bir gayrimenkul yatırım firması olarak hazır emlak temalarıyla çalışıyordu. Bu temalar interaktif harita üzerinde konum bazlı sunum, çok dilli içerik (yatırımcıların büyük kısmı yabancı) ve ilan verisinden anında teklif dokümanı üretme gibi ihtiyaçları karşılamıyordu. Danışmanlar her teklif için elle sunum hazırlıyor, ilanları farklı dillerde ayrı ayrı yönetmek zorunda kalıyordu. Firma, tüm bu süreçleri tek bir sistemde birleştirecek, kendi iş akışına göre şekillenen özel bir platform arıyordu.",
+        "solution": "Next.js 16 ve Supabase üzerine sıfırdan bir emlak yönetim sistemi kurduk. Genel ağ tarafında ilan/proje listeleme, filtreleme, Google Maps ve Leaflet tabanlı cluster'lı interaktif harita (react-leaflet-cluster) ve next-intl ile 5 dilli (tr/en/ru/de/fa) içerik yapısı yer alıyor. Danışmanlar için TipTap tabanlı zengin metin editörlü, sürükle-bırak arayüzlü kapsamlı bir admin paneli geliştirdik; burada ilanlar, projeler, alt ilanlar ve kat planları yönetiliyor. Sunum modülü, seçilen ilan/proje verisini jsPDF ve pptxgenjs ile anında PDF veya PowerPoint teklif dosyasına dönüştürüyor — html2canvas ile görsel yakalama üzerinden. Sistem PWA olarak da çalışıyor: service worker ile önbellekleme ve çevrimdışı sayfa desteği var. Girdi doğrulama Zod, kötüye kullanım koruması Upstash rate-limit ile sağlanıyor; kritik akışlar Playwright E2E testleriyle güvence altına alındı.",
+        "highlights": [
+          "İnteraktif harita: react-leaflet-cluster ile cluster'lı Leaflet haritası ve Google Maps entegrasyonu, ilan/proje konumlarını tek ekranda gruplu gösteriyor.",
+          "Otomatik teklif üretimi: sunum modülü pptxgenjs ve jsPDF ile ilan verisinden anında PDF/PowerPoint teklif dosyası oluşturuyor.",
+          "5 dilli yapı: next-intl ile Türkçe, İngilizce, Rusça, Almanca ve Farsça içerik, dil bazlı çeviri dosyalarıyla yönetiliyor.",
+          "TipTap tabanlı zengin metin editörü ve dnd-kit ile sürükle-bırak sıralama, admin panelindeki içerik ve medya yönetimini hızlandırıyor.",
+          "PWA desteği: web app manifest + service worker ile önbellekleme ve çevrimdışı sayfa; üretim güvenliği Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle destekleniyor."
+        ],
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "TypeScript",
+          "next-intl",
+          "Leaflet",
+          "Google Maps",
+          "TipTap",
+          "Zod",
+          "Upstash",
+          "Playwright"
+        ],
+        "outcome": "Nexos Investment artık ilan ve proje verisini, haritayı, çok dilli içeriği ve yatırımcı tekliflerini tek bir sistemden, danışmanların kendi kontrolünde yönetiyor. Elle hazırlanan sunumlar yerini otomatik üretilen PDF/PowerPoint tekliflere bıraktı; ilanlar tüm dillerde tek panelden güncelleniyor. Firma, hazır temaların sınırlarından çıkıp kendi iş akışına özel, ölçeklenebilir bir teknik altyapıya kavuştu."
+      }
     },
     "ambalaj-cini": {
       "title": "Ambalaj Cini",
@@ -645,7 +704,31 @@
       "body": [
         "Bilecik merkezli Ambalaj Cini için Next.js/React tabanlı online satış platformunun geliştirme sürecini yönettik: ödeme entegrasyonu, ürün yönetimi ve sipariş akışı tek sistemde.",
         "Geliştirmenin yanında Google Ads ve Facebook (Meta) reklam kampanyalarını kurgulayıp yönettik — dijital büyüme çalışmalarının sonucunda firma %30 büyüme elde etti. Reklam yönetimi hizmetimizin sonuç odaklı, somut kanıtı."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "Bilecik merkezli Ambalaj Cini, ambalaj ve temizlik ürünlerini online satabileceği, aynı zamanda sipariş, stok, kargo ve fatura süreçlerini tek yerden yönetebileceği bir platforma ihtiyaç duyuyordu. Var olan kurulum, büyüyen ürün kataloğunu ve artan sipariş hacmini karşılayacak esneklikte değildi; ödeme tahsilatı, kargo takibi ve iç operasyon (stok, muhasebe, CRM) ayrı ayrı yürütülüyordu. Firma, hem müşteri tarafında hızlı ve güvenli bir alışveriş deneyimi hem de arka planda tüm operasyonu tek panelden yürütebileceği bir back-office istiyordu.",
+        "solution": "Next.js ve Supabase (Postgres, Auth, Storage) üzerine, müşteri vitrini ile tam bir back-office'i tek platformda birleştiren bir e-ticaret sistemi kurduk. Vitrin tarafında katalog, kampanya, sepet ve sipariş/kargo takibi yer alıyor; yönetim panelinde ürün/stok, sipariş, kargo, fatura, muhasebe, CRM ve kampanya yönetimi rol bazlı erişimle (admin/staff) çalışıyor. Ödeme tahsilatı PayTR iFrame API entegrasyonuyla, kargo süreçleri DHL entegrasyonuyla otomatikleştirildi; sipariş durumu ile kargo durumu iki yönlü senkronize ediliyor. Güvenlik tarafında admin girişlerinde Supabase MFA (TOTP), Upstash tabanlı hız sınırlama, Content-Security-Policy ve KVKK kapsamında kullanıcı kendi verisini yönetebiliyor. Fiyat hesaplaması her zaman sunucu tarafında, veritabanından yapılıyor; mutasyonlar Zod ile doğrulanan Next.js Server Action'lar üzerinden yürütülüyor. Kritik akışlar Vitest birim testleri ve Playwright E2E testleriyle güvence altına alındı.",
+        "highlights": [
+          "PayTR iFrame API ile kart ödeme tahsilatı ve DHL entegrasyonuyla kargo takibi, sipariş durumuyla iki yönlü senkronize çalışıyor.",
+          "Admin panelinde Supabase MFA (TOTP) zorunlu tutuluyor; hesap sahibi kuralı ve Upstash rate-limit ile yetkisiz erişim ve kaba kuvvet denemeleri engelleniyor.",
+          "Fiyat her zaman sunucu tarafında veritabanından hesaplanıyor; mutasyonlar Server Action + Zod doğrulamasıyla yürütülüyor, istemciden gelen tutara güvenilmiyor.",
+          "Web push bildirimleri (VAPID) ve Resend üzerinden işlem e-postalarıyla sipariş, ödeme ve stok durumu değişiklikleri hem müşteriye hem yönetim ekibine anlık iletiliyor.",
+          "Vitest birim testleri ve Playwright E2E testleriyle (auth, ödeme, kargo, arama gibi kritik akışlar) sürekli entegrasyon hattında doğrulama yapılıyor."
+        ],
+        "stack": [
+          "Next.js",
+          "Supabase",
+          "TypeScript",
+          "PayTR",
+          "DHL API",
+          "Zod",
+          "Upstash",
+          "Resend",
+          "Playwright",
+          "Vitest"
+        ],
+        "outcome": "Ambalaj Cini artık katalog, sipariş, ödeme, kargo ve muhasebe süreçlerini tek bir sistemden, kendi ekibiyle uçtan uca yönetebiliyor. Kart ödemeleri ve kargo takibi otomatikleşti, admin erişimi çok faktörlü kimlik doğrulamayla güvence altına alındı, müşteri ve ekip bildirimleri anlık akıyor. Geliştirmenin yanında yürüttüğümüz Google Ads ve Meta reklam kampanyaları sonucunda firma %30 büyüme elde etti."
+      }
     },
     "alp-sigorta": {
       "title": "Alp Sigorta",
@@ -869,7 +952,29 @@
       "body": [
         "Şirket ödemelerini (kredi kartı/taksitli, çek, elden ve diğer) takip eden; vade tarihi yaklaşınca Telegram üzerinden otomatik hatırlatma gönderen bir web uygulaması geliştirdik. Node.js, Express ve SQLite üzerine kurulu hafif ama güvenilir bir altyapı kullandık.",
         "Taksitli ödemelerde otomatik vade üretimi, geciken ve önümüzdeki 7 gün için özet panel, ödenmiş kayıtlar için finansal bütünlük koruması gibi özelliklerle iş süreçlerini otomatikleştirmenin somut bir örneğini ortaya koyduk."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "Şirket, kredi kartı taksiti, çek, elden ödeme ve diğer ödeme türlerini elle takip ediyordu; vade tarihleri unutulduğunda gecikme riski doğuyordu, ödemeler farklı kişilerde farklı defter/tablo düzeninde tutuluyordu. İhtiyaç, tek bir sunucuda çalışabilecek, ayrı bir sunucu ekibi ya da karmaşık altyapı gerektirmeyen; buna karşılık vade takibini otomatikleştirip ilgilileri zamanında uyaracak hafif ama güvenilir bir sistemdi. Ayrıca ödenmiş kayıtların düzenleme sırasında yanlışlıkla bozulmaması ve dönem sonu raporlarının Türkçe karakterlerle sorunsuz şekilde dışa aktarılabilmesi gerekiyordu.",
+        "solution": "Node.js, Express ve EJS ile sunucu tarafında render edilen, better-sqlite3 üzerinde tek dosyalı bir SQLite veritabanı kullanan bir web uygulaması geliştirdik. Taksitli ödemelerde ilk vade tarihinden itibaren ay bazlı taksit planı otomatik hesaplanıyor (ay sonu taşmaları dahil); tutarlar kuruş farkı kalmayacak şekilde son taksitte dengeleniyor. node-cron ile her gün 09:00'da vade kontrolü, 08:00'de günlük özet ve Pazartesi 08:15'te haftalık plan mesajı Telegram Bot API üzerinden gönderiliyor; aynı vade için aynı hatırlatmanın tekrar gitmemesi bir bildirim log tablosuyla garanti ediliyor. Kimlik doğrulama bcrypt ile parola hash'leyip dosya tabanlı oturum deposunda (session-file-store) tutuluyor, böylece sunucu yeniden başlasa da oturumlar korunuyor. Ödemeler sayfasında filtrelerle uyumlu, UTF-8 BOM'lu noktalı virgülle ayrılmış CSV dışa aktarım var. Arayüz Tailwind CSS ile derlenip CDN bağımlılığı olmadan sunuluyor.",
+        "highlights": [
+          "Taksit planı otomasyonu: ilk vade tarihinden başlayarak ay bazlı taksitler otomatik üretiliyor, ay sonu taşmaları düzeltiliyor ve kuruş farkı son taksitte dengeleniyor.",
+          "Telegram Bot API üzerinden üç ayrı otomasyon: tekil vade hatırlatma (gün öncesi ayarlanabilir), günlük özet (08:00) ve haftalık plan (Pazartesi 08:15) — node-cron ile zamanlanıyor.",
+          "Bildirim log tablosu (installment_id + window_days üzerinde tekillik kısıtı) aynı hatırlatmanın birden fazla gönderilmesini engelliyor.",
+          "Ödeme düzenlenirken, kaydın ödenmiş taksidi varsa vade planı yeniden oluşturulmuyor — ödeme geçmişi korunuyor.",
+          "UTF-8 BOM'lu, noktalı virgülle ayrılmış CSV dışa aktarım, filtrelerle uyumlu ve Türkçe karakterleri doğrudan Excel'de gösteriyor."
+        ],
+        "stack": [
+          "Node.js",
+          "Express",
+          "EJS",
+          "better-sqlite3",
+          "node-cron",
+          "Telegram Bot API",
+          "Tailwind CSS",
+          "bcrypt"
+        ],
+        "outcome": "Şirket artık tüm ödeme türlerini tek panelden takip edebiliyor ve vade tarihlerini elle hatırlamak zorunda kalmıyor; Telegram üzerinden gelen otomatik hatırlatmalar ve günlük/haftalık özetlerle gecikme riski azaldı. Ödenmiş kayıtlar düzenleme sırasında korunduğu için finansal geçmiş güvenilir kalıyor, dönem sonu raporlama filtrelerle uyumlu CSV dışa aktarımla hızlanıyor ve oturumlar sunucu yeniden başlasa da kesintiye uğramıyor."
+      }
     },
     "deprem-erken-uyari": {
       "title": "Deprem Erken Uyarı",
@@ -941,7 +1046,31 @@
       "body": [
         "Holly Trader, piyasa verilerini izleyip alım-satım analizleri sunan Node.js tabanlı bir araç prototipi. Veri toplama, sinyal üretimi ve raporlama akışları tek serviste birleşiyor.",
         "Fintech alanındaki bu ürün denememiz; gerçek zamanlı veri işleme ve otomasyon yetkinliğimizi gösteren bir yan proje."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "Holly Trader, Piton Studios'un fintech alanında kendi başlattığı bir ürün denemesi; gerçek bir borsa müşterisi ya da canlı sermaye yok. Amaç, kaldıraçlı işlem riskini sunucu tarafında denetleyen, birden fazla varlık sınıfını (kripto, hisse, emtia) tek çatı altında toplayan ve otomatik stratejileri gerçek zamanlı piyasa verisiyle çalıştırabilen uçtan uca bir trading altyapısını, ayrı backend/frontend/paket sınırlarına sahip bir monorepo içinde kurmaktı. Asıl zorluk, WebSocket üzerinden akan piyasa verisini, emir/pozisyon durumunu ve risk limitlerini tek tutarlı bir state'te senkron tutmaktı.",
+        "solution": "Backend NestJS üzerine REST, WebSocket ve BullMQ tabanlı kuyruklarla kuruldu; Prisma/PostgreSQL veri katmanını, Redis ise kuyruk ve önbellek işlerini karşılıyor. Binance entegrasyonu spot, futures, cüzdan ve kullanıcı stream servislerini ayrı modüllerde topluyor; hisse, emtia ve DEX verisi için ayrı market-data servisleri var. Kimlik doğrulama JWT ile klasik girişin yanında ethers tabanlı cüzdan (MetaMask) imzasıyla da yapılabiliyor. RiskService her emirden önce kaldıraç, maruziyet ve marj oranını sunucu tarafında doğruluyor; ayrı bir stop-loss/take-profit monitörü ve trailing-stop servisi açık pozisyonları periyodik kontrol ediyor, bir reconciliation servisi borsadaki durumu yerel veriyle karşılaştırıyor. Strateji motoru grid bot, DCA, RSI mean-reversion, MACD crossover, breakout ve scalping gibi hazır stratejileri ortak bir arayüz üzerinden çalıştırıyor; BullMQ kuyruklu ayrı bir backtest servisi de bulunuyor. Frontend Next.js 14 üzerine kuruldu; socket.io-client ile gelen canlı veri Zustand ve React Query state'ine bağlanıyor, lightweight-charts ve recharts ile analiz arayüzü oluşturuluyor.",
+        "highlights": [
+          "RiskService her emri sunucu tarafında kaldıraç/marj/maruziyet limitlerine karşı doğruluyor; kontrol istemciye bırakılmıyor.",
+          "Binance entegrasyonu spot, futures, cüzdan ve WebSocket stream'ini ayrı servislerde topluyor; funding ve senkronizasyon işleri de dahil.",
+          "BullMQ + Redis tabanlı kuyruklar emir yürütme, fiyat alarmı ve analitik hesaplamalarını arka planda işliyor.",
+          "Sekiz hazır strateji (grid bot, DCA, RSI mean-reversion, MACD crossover, breakout, scalping, multi-timeframe, custom) ortak bir strategy arayüzü üzerinden çalışıyor; ayrı bir backtest motoru var.",
+          "Kimlik doğrulama JWT'nin yanında ethers tabanlı cüzdan imzası (MetaMask) ile de yapılabiliyor; reconciliation servisi borsa durumunu yerel veriyle sürekli karşılaştırıyor."
+        ],
+        "stack": [
+          "TypeScript",
+          "NestJS",
+          "Next.js",
+          "Prisma",
+          "PostgreSQL",
+          "Redis",
+          "BullMQ",
+          "Socket.IO",
+          "ethers.js",
+          "Turborepo"
+        ],
+        "outcome": "Sonuç, kripto, hisse ve emtia piyasalarını tek arayüzde birleştiren, riski sunucu tarafında denetleyen bir trading altyapısı prototipi. Backend ve frontend ayrı paketlerde, ortak tipler paylaşılan bir paket üzerinden kullanılacak şekilde kuruldu. Proje, gerçek zamanlı veri işleme, kuyruklu iş yürütme ve çoklu borsa entegrasyonu konusundaki teknik yetkinliğimizi gösteren bir yan çalışma; canlı sermaye veya işlem performansı iddiası taşımıyor."
+      }
     },
     "fur-crm": {
       "title": "FurCRM",
@@ -1005,7 +1134,29 @@
       "body": [
         "VELAIR, özel jet deneyimini scroll ile ilerleyen sinematik bir 3D anlatıya dönüştüren konsept çalışmamız. Tepeden jet görünümü, shader tabanlı bulut geçişi, açılan kabin ve panel arkasından yatay uçuş tek bir doğal scroll akışında birleşiyor; uçak, kodla üretilmiş özgün parametrik bir model.",
         "Next.js, React Three Fiber, Drei ve GSAP ScrollTrigger ile kurulan deneyimde tek bir ilerleme değeri kamerayı, jeti ve bulutları yönetiyor; boşta sürekli render yok. Hareketi azalt tercihi, WebGL olmadığında aynı modelden üretilmiş statik görseller ve mobil kadraj uyarlamasıyla performans ve erişilebilirlik birlikte gözetildi."
-      ]
+      ],
+      "caseStudy": {
+        "challenge": "VELAIR, Piton Studios'un kendi inisiyatifiyle başlattığı bir konsept çalışma; gerçek bir müşteri ya da uçak üreticisi yok. Hedef, özel jet temalı bir portfolyo parçasını satın alınmış 3D modellere ya da video kesitlere dayandırmadan, tarayıcıda üretilen özgün bir geometriyle kurmak; tepeden görünüm, bulut geçişi, kabin açılımı ve yatay uçuşu tek bir doğal scroll akışında kesintisiz birleştirmekti. Aynı zamanda WebGL desteklemeyen cihazlarda, hareketi azalt tercihinde ve dar mobil ekranlarda deneyimin okunabilir kalması, tek canvas ve tek playhead ile performansın korunması gerekiyordu.",
+        "solution": "Next.js App Router'da içerik server component olarak kalıyor; Three.js sahnesi yalnızca istemci tarafında lazy yükleniyor. Uçak, tarayıcıda üretilip parça parça birleştirilen parametrik bir geometri — indirilen bir 3B model dosyası yok. GSAP ScrollTrigger tek bir 0–1 ilerleme değeri üretiyor; saf bir fonksiyon bu değeri kamera, jet ve bulut pozuna dönüştürüyor, ayrı bir yardımcı da viewport yüksekliğine göre zoom ve mobil kadrajı ayarlıyor. Sahne talep üzerine render ediliyor: kare yalnızca scroll olduğunda çiziliyor, kare başına React state veya DOM ölçümü yok. WebGL2 desteklenmediğinde, context kaybında ya da hareketi azalt tercihinde aynı modelden üretilmiş statik posterlere geçiliyor; kabin seçim butonları ekran okuyucularla erişilebilir. Bölüm sınırları, poz örneklemesi ve mobil kadraj Node test runner ile otomatik test ediliyor.",
+        "highlights": [
+          "Uçak dışarıdan içe aktarılan bir GLB değil, tarayıcıda parametrik olarak üretilip birleştirilen özgün bir geometri.",
+          "Tek bir GSAP ScrollTrigger ilerleme değeri kamerayı, jeti ve bulut shader'ını aynı anda besliyor; kare başına React state kullanılmıyor.",
+          "Talep üzerine render: sahne yalnızca scroll olduğunda yeniden çiziliyor, boştayken GPU harcanmıyor; piksel yoğunluğu 1–1.5 aralığında sınırlı.",
+          "WebGL2 desteklenmediğinde, context loss'ta veya hareketi azalt tercihinde aynı modelden üretilmiş statik posterlere sorunsuz geçiş.",
+          "Bölüm sınırları, poz örneklemesi ve mobil kadraj için otomatik testler Node test runner ile çalışıyor."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Three.js",
+          "React Three Fiber",
+          "Drei",
+          "GSAP",
+          "Vercel"
+        ],
+        "outcome": "Sonuç, canlıda yayınlanan ve altı bölümü tek scroll akışında kesintisiz gezdiren bir konsept demo. WebGL yokluğunda, azaltılmış harekette ve mobilde okunabilir kalan yapısıyla üç boyutlu anlatım ve motion tasarımı yetkinliğimizi gösteren bir referans niteliğinde. Kendi dokümantasyonumuzda not ettiğimiz gibi, lisanslı sanatçı modeli ve cihaz bazlı performans ölçümleri sonraki üretim turunun konusu."
+      }
     }
   },
   "areas": {
@@ -3526,5 +3677,607 @@
     "privacy": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
     "cookies": "Çerez Politikası",
     "terms": "Kullanım Koşulları"
+  },
+  "notFound": {
+    "title": "Aradığınız sayfa bulunamadı.",
+    "hint": "Bağlantı eskimiş ya da adres yanlış yazılmış olabilir. Şunlardan biriyle devam edebilirsiniz:",
+    "suggest": "Önerilen sayfalar",
+    "home": "Ana sayfaya dön"
+  },
+  "locationsPage": {
+    "eyebrow": "Bölgeler",
+    "title": "Hizmet verdiğimiz şehirler",
+    "subtitle": "Bozüyük merkezli ekibimizle KKTC ve Türkiye genelinde uzaktan çalışıyoruz. Şehrinizi seçin; oradaki işlerimizi ve size nasıl yardımcı olabileceğimizi görün.",
+    "metaTitle": "Şehirlere Göre Web Tasarım ve Yazılım | Piton Studios",
+    "metaDescription": "KKTC, Lefkoşa, İstanbul, İzmir, Antalya, Bursa ve daha fazlası: şehrinizdeki işletmeler için web tasarım, yazılım, SEO ve reklam hizmetlerimizi inceleyin.",
+    "cyprus": "Kuzey Kıbrıs",
+    "turkey": "Türkiye",
+    "whatWeDo": "Bu şehirde neler yapıyoruz",
+    "detailTitle": "Bölgeye bakışımız",
+    "relatedProjects": "İlgili projeler",
+    "relatedServices": "Hizmetler",
+    "relatedFaq": "Sık sorulanlar",
+    "relatedPosts": "Blogdan",
+    "viewAll": "Tümünü gör",
+    "otherLocations": "Diğer şehirler",
+    "projectCount": "{count} proje",
+    "remote": "Uzaktan hizmet",
+    "ctaTitle": "Projeni anlat",
+    "ctaSub": "Şehrinizi ve hedefinizi yazın; 24 saat içinde somut bir yol haritasıyla dönelim.",
+    "ctaButton": "İletişime geç"
+  },
+  "solutionsPage": {
+    "eyebrow": "Çözümler",
+    "eyebrowDetail": "Çözüm",
+    "title": "Sektörünüze özel çözümler",
+    "subtitle": "Hizmetlerimizi sektörün gerçek ihtiyacına göre paketledik: emlak yazılımından klinik SEO çalışmasına, rezervasyon sistemlerinden yapay zekâ asistanlarına.",
+    "metaTitle": "Sektöre Özel Web ve Yazılım Çözümleri | Piton Studios",
+    "metaDescription": "Emlak ilan yazılımı, e-ticaret SEO, transfer rezervasyon sistemi, klinik SEO ve daha fazlası: sektörünüze göre tasarlanmış web ve yazılım çözümleri.",
+    "whatWeDo": "Bu çözümde neler var",
+    "detailTitle": "Nasıl çalışıyoruz",
+    "relatedProjects": "İlgili projeler",
+    "relatedServices": "Hizmet",
+    "relatedFaq": "Sık sorulanlar",
+    "relatedPosts": "Blogdan",
+    "viewAll": "Tümünü gör",
+    "sector": "Sektör ve ilgili çözümler",
+    "allSolutions": "Diğer çözümler",
+    "ctaTitle": "Projeni anlat",
+    "ctaSub": "İhtiyacınızı kısaca yazın; 24 saat içinde somut bir yol haritasıyla dönelim.",
+    "ctaButton": "İletişime geç"
+  },
+  "locationItems": {
+    "kktc": {
+      "title": "KKTC Web Tasarım ve Yazılım",
+      "metaTitle": "KKTC Web Tasarım ve Yazılım Hizmetleri | Piton Studios",
+      "metaDescription": "Kuzey Kıbrıs'taki emlak, finans, turizm ve ticaret işletmeleri için kurumsal web sitesi ve otomasyon çözümleri geliştiriyoruz; tüm süreç uzaktan yürür.",
+      "intro": "Piton Studios, Bilecik merkezli ama tamamen uzaktan çalışan bir dijital ajans olarak KKTC'deki işletmelere kurumsal web sitesi, platform ve otomasyon çözümleri sunuyor. Kuzey Kıbrıs'ta emlak yatırımı, döviz, transfer ve otelcilik sektörlerinde tamamlanmış projelerimiz ve bir ilan sitesi için kurduğumuz otomasyon var; keşif görüşmesinden teslime kadar tüm süreç online yürütülür, seyahat veya yerel ofis gerekmez.",
+      "bullets": {
+        "1": "Kurumsal web sitesi, platform ve otomasyon — Sammys Hotel'de olduğu gibi rezervasyon odaklı sitelerden, Gel Gez Gör ilan sitesi için kurduğumuz trend ve sosyal medya otomasyonuna kadar.",
+        "2": "Çok dilli yapı (Türkçe, İngilizce, Rusça) — adadaki yerli halk, İngiliz ve Rus yatırımcı/turist karışımına aynı sitede kendi dillerinde hitap etmenizi sağlıyoruz.",
+        "3": "Güven odaklı finans ve emlak tasarımı — Pampas Investment ve Pinnacle Yatırım gibi yatırım siteleri, Halas Exchange gibi canlı kurlu döviz platformları kurduk.",
+        "4": "Sektöre özel otomasyon — Emlak Sync ürünümüzle KKTC'deki emlak portallarına (HangiEv, 101evler) ilan senkronizasyonu gibi tekrarlayan iş yükünü otomatikleştiriyoruz.",
+        "5": "Yerel arama görünürlüğü — sitenizin 'KKTC' ve ilçe bazlı aramalarda bulunabilmesi için SEO ve GEO (yapay zekâ destekli arama) kurulumu yapıyoruz."
+      },
+      "painTitle": "KKTC'deki işletmelerin web sitelerinde sık karşılaştığımız sorunlar",
+      "painPoints": {
+        "1": "Site tek dilli kalıyor; adadaki yerli, İngiliz ve Rus müşteri veya yatırımcı karışımının önemli bir kısmı sitede kendi dilinde bilgiye ulaşamıyor.",
+        "2": "Yurt dışından hizmet alınan ajanslarla iletişim ve zaman farkı sorun oluyor; küçük bir metin veya fiyat güncellemesi için günlerce beklenebiliyor.",
+        "3": "Emlak, turizm ve finans gibi rekabetin yoğun olduğu sektörlerde eskimiş veya derme çatma bir site, ziyaretçiyi güven duymadan sayfadan çıkarıyor."
+      },
+      "ctaText": "KKTC'deki işletmeniz için web projesini konuşmak üzere bize yazın; tüm süreci uzaktan birlikte yürütelim.",
+      "detail": {
+        "1": "KKTC pazarı kendine has bir karışıma sahip: yerli işletmeler, İngiliz ve Rus yatırımcılar, sezonluk turistler aynı anda aynı siteye bakıyor. Bu yüzden ada için kurduğumuz siteler baştan çok dilli tasarlanıyor; Türkçe içerik yerli müşteriyi, İngilizce ve Rusça içerik ise yabancı yatırımcı ve turisti aynı deneyimde karşılıyor. Piton Studios KKTC'de fiziksel bir ofis bulundurmuyor — bu bilinçli bir tercih; süreç tamamen online yürüdüğü için adada nerede olursanız olun aynı hızda hizmet alıyorsunuz.",
+        "2": "Adadaki tamamlanmış projelerimiz farklı sektörlere yayılıyor: Pampas Investment ve Pinnacle Yatırım ile gayrimenkul yatırım şirketlerine kurumsal ve güven veren siteler tasarladık; Halas Exchange ile canlı kur bilgili bir döviz platformu, Jet Transfer Cyprus ile havalimanı/VIP transfer rezervasyon sitesi, Sammys Hotel ile otelcilik sektöründe bir rezervasyon deneyimi geliştirdik. Mevcut bir ilan sitesi olan Gel Gez Gör için ise trend ilanları tespit edip ilan sahiplerine WhatsApp'tan bildiren ve sosyal medya paylaşımlarını üreten bir otomasyon kurduk. Bu çeşitlilik, adadaki farklı sektörlerin ihtiyacını bildiğimiz anlamına geliyor.",
+        "3": "Teknik tarafta site hızını ve arama görünürlüğünü aynı önemde tutuyoruz. Klasik SEO ile 'KKTC' ve ilçe bazlı aramalarda bulunabilirken, GEO çalışmasıyla yapay zekâ destekli arama sonuçlarında da görünür oluyorsunuz. Emlak Sync gibi kendi ürünümüzle KKTC'ye özgü portal entegrasyonları (HangiEv, 101evler) kurma deneyimimiz var; benzer bir tekrarlayan iş yükünüz varsa bunu da otomasyonla çözebiliyoruz."
+      }
+    },
+    "lefkosa": {
+      "title": "Lefkoşa Web Tasarım ve Yazılım",
+      "metaTitle": "Lefkoşa Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Lefkoşa'daki işletmeler için kurumsal web sitesi, yerel SEO ve dijital reklam çözümleri kuruyoruz. Kıbrıs Lefkoşa Taksi projemiz dahil, tüm süreç uzaktan yürür.",
+      "intro": "Lefkoşa'da doğrudan tamamladığımız Kıbrıs Lefkoşa Taksi projesinde online rezervasyon, rota hesaplama ve 'lefkoşa taksi' gibi yerel aramalarda üst sıralarda yer almayı sağlayan bir SEO kurulumu yaptık. KKTC genelinde tamamladığımız holding, finans ve hizmet sektörü projeleriyle birlikte, başkentteki işletmelerin ihtiyacını tanıyoruz; süreç baştan sona online yürür.",
+      "bullets": {
+        "1": "Yerel SEO odaklı kurumsal site — Kıbrıs Lefkoşa Taksi'de yaptığımız gibi 'lefkoşa' ve hizmet adı geçen aramalarda bulunabilir sayfa yapıları kuruyoruz.",
+        "2": "Başkentteki rekabete uygun kurumsal kimlik — Arslan Group gibi çok kollu şirketlere veya All Pro Cyprus gibi hizmet firmalarına yakışan profesyonel, güven veren tasarım.",
+        "3": "Hızlı rezervasyon ve iletişim akışları — telefon, WhatsApp entegrasyonu ve fiyat/rota hesaplama gibi ziyaretçiyi doğrudan aksiyona yönlendiren bileşenler kuruyoruz.",
+        "4": "Çok dilli yapı — Lefkoşa'nın yerli, yabancı yatırımcı ve turist karışımına Türkçe, İngilizce ve Rusça içerikle aynı sitede hitap ediyoruz.",
+        "5": "Google Ads ve SEO'yu birlikte kurma — başkentteki yoğun rekabette hem organik hem ücretli aramada görünür olmanızı sağlıyoruz."
+      },
+      "painTitle": "Lefkoşa'daki işletmelerin web sitelerinde sık karşılaştığımız sorunlar",
+      "painPoints": {
+        "1": "Başkentte rekabet yoğun olduğundan, güncel olmayan veya yavaş açılan bir site ziyaretçiyi rakip firmanın sitesine yönlendiriyor.",
+        "2": "Rezervasyon, fiyat sorma veya iletişim adımı sitede net değil; müşteri aramak yerine doğrudan siteden işlem tamamlayamayınca telefonla aranıyor ya da vazgeçiyor.",
+        "3": "Site yalnızca Türkçe hazırlanıyor; Lefkoşa'daki yabancı yatırımcı ve öğrenci nüfusuna ulaşacak İngilizce/Rusça içerik eksik kalıyor."
+      },
+      "ctaText": "Lefkoşa'daki işletmeniz için web projesini konuşmak üzere bize yazın.",
+      "detail": {
+        "1": "Lefkoşa, KKTC'nin başkenti olduğu için hem yerel işletme yoğunluğu hem de kurumsal/profesyonel hizmet talebi diğer şehirlere göre daha yüksek. Kıbrıs Lefkoşa Taksi projesinde bunu doğrudan yaşadık: online taksi çağırma, rota hesaplama ve fiyat bilgisi veren bir site kurup, yerel SEO çalışmasıyla 'lefkoşa taksi' ve 'kıbrıs taksi' gibi aramalarda üst sıralara çıkardık. Mobil öncelikli tasarım, hareket halindeki kullanıcının siteyi telefonundan rahatça kullanabilmesini sağladı.",
+        "2": "Lefkoşa'ya özgü bu projenin yanında, KKTC genelinde tamamladığımız Arslan Group (emlak, finans ve ticaret kollarını tek çatıda toplayan holding sitesi), Arslan Coin Center (kripto alım-satım platformu) ve All Pro Cyprus (çok hizmetli kurumsal site) gibi projeler başkentteki ve adadaki farklı sektörlerin kurumsal ihtiyacını nasıl karşıladığımızı gösteriyor. Bu projelerin ortak noktası: güven veren tasarım, çok dilli yapı ve net bir iletişim/rezervasyon akışı.",
+        "3": "Süreç tamamen uzaktan yürütülüyor — Bilecik merkezli olmamız Lefkoşa'daki bir işletmeyle çalışmamıza engel değil, keşif görüşmesi, tasarım onayı ve teslim online yapılıyor. Yerel SEO ile aramalarda görünür olduktan sonra, isterseniz Google Ads ile ücretli arama trafiğini de aynı sayfalara yönlendirerek başkentteki rekabette görünürlüğünüzü hızlandırabiliriz."
+      }
+    },
+    "bilecik": {
+      "title": "Bilecik Web Tasarım ve Yazılım",
+      "metaTitle": "Bilecik Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Bozüyük merkezli ajans olarak Bilecik'teki işletmelere web sitesi, e-ticaret ve otomasyon kuruyoruz — Ambalaj Cini ve Dolmuş projelerimiz buradan çıktı.",
+      "intro": "Piton Studios'un merkezi Bozüyük, Bilecik'te — bu sayfadaki diğer şehirlerin aksine buradaki işletmelerle uzaktan değil, bölgeyi bilerek çalışıyoruz. Bilecik merkezli Ambalaj Cini için ödeme entegrasyonlu bir e-ticaret sitesi kurduk; Bozüyük Dolmuşçular Derneği için güzergah takip uygulaması ve bu deneyimden doğan Dolmuş Güzergah Kontrol otomasyon ürünümüz de yine buradan çıktı.",
+      "bullets": {
+        "1": "E-ticaret altyapısı — Ambalaj Cini'nde kurduğumuz gibi ödeme entegrasyonu, ürün ve stok yönetimini kapsayan online satış siteleri.",
+        "2": "Kurumsal web sitesi — Bilecik ve Bozüyük'teki üretim, ticaret ve hizmet işletmeleri için görünürlüğü ve güveni artıran tasarım.",
+        "3": "Süreç otomasyonu — Dolmuş Güzergah Kontrol'de yaptığımız gibi elle yapılan tekrarlayan işleri (veri işleme, raporlama) yazılıma taşıyoruz.",
+        "4": "Yerel SEO — bölgedeki aramalarda bulunabilmeniz için sayfa yapısını ve içeriği arama motorlarına göre kuruyoruz.",
+        "5": "Yüz yüze görüşme imkânı — merkezimiz burada olduğu için gerektiğinde uzaktan değil, yerinde de bir araya gelebiliyoruz."
+      },
+      "painTitle": "Bilecik'teki işletmelerin web sitelerinde sık karşılaştığımız sorunlar",
+      "painPoints": {
+        "1": "Küçük ve orta ölçekli işletmelerin çoğunda hâlâ web sitesi yok ya da yıllardır güncellenmemiş; müşteri önce internetten arıyor ama bir şey bulamıyor.",
+        "2": "Online satışa geçmek isteyen üretici/ticaret firmaları, ödeme ve stok yönetimini nasıl kuracaklarını bilmediği için adımı hep erteliyor.",
+        "3": "Elle yürütülen tekrarlayan işler (kayıt tutma, raporlama, kontrol) zaman kaybettiriyor ama bunu bir yazılımın çözebileceği fark edilmiyor."
+      },
+      "ctaText": "Bilecik ve Bozüyük'teki işletmeniz için buluşup projeyi konuşalım.",
+      "detail": {
+        "1": "Bilecik sayfası, listedeki diğer şehirlerden farklı bir yerde duruyor: Piton Studios'un adresi burada, Bozüyük'te. Yani bölgedeki bir işletmeyle çalışırken uzaktan çalışma anlatmıyoruz, doğrudan buradan hizmet veriyoruz — gerektiğinde yerinde görüşme de mümkün. Bu, özellikle ilk kez web sitesi yaptıracak veya online satışa geçecek işletmeler için süreci daha somut hale getiriyor.",
+        "2": "Ambalaj Cini projesi bunun net bir örneği: Bilecik merkezli bu firma için ödeme entegrasyonu, ürün yönetimi ve stok takibini kapsayan bir e-ticaret altyapısı kurduk, 2022'den bu yana aktif olarak hizmet veriyor. Bozüyük Dolmuşçular Derneği için geliştirdiğimiz güzergah takip uygulaması ise farklı bir ihtiyacı gösteriyor: toplu taşımada kullanıcıların güzergahı görüp seyahat planlaması yapabildiği bir web uygulaması. Bu projeden edindiğimiz deneyimle, dolmuş hatlarının zamanında çalışıp çalışmadığını GPS verisinden otomatik rapora döken Dolmuş Güzergah Kontrol ürününü kendi bünyemizde geliştirdik.",
+        "3": "Bölgedeki bir işletme için önerimiz genellikle şu sırayla ilerliyor: önce net ve hızlı yüklenen bir kurumsal site veya e-ticaret altyapısı, ardından yerel SEO ile aranabilirlik, sonra da varsa tekrarlayan operasyonel işlerin otomasyonu. Merkezimiz burada olduğu için bu süreci adım adım, ihtiyaç çıktıkça birlikte şekillendirebiliyoruz."
+      }
+    },
+    "eskisehir": {
+      "title": "Eskişehir Web Tasarım ve Yazılım",
+      "metaTitle": "Eskişehir Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Eskişehir'deki işletmeler için çok dilli kurumsal web sitesi ve SEO çözümleri geliştiriyoruz. BT Elevator projemiz burada; komşu Bilecik'ten kolay ulaşırız.",
+      "intro": "Eskişehir merkezli BT Elevator için çok dilli, SEO optimizasyonlu bir kurumsal web sitesi geliştirdik — teknik SEO, schema markup ve performans çalışmasıyla arama motorlarında görünürlüğü artırdık. Merkezimiz komşu il Bilecik'te olduğu için Eskişehir'deki işletmelere hem uzaktan hem gerektiğinde yerinde destek verebiliyoruz.",
+      "bullets": {
+        "1": "Çok dilli kurumsal web sitesi — BT Elevator'da yaptığımız gibi, sanayi ve ihracat odaklı firmaların yurt dışı müşteriye de hitap etmesini sağlıyoruz.",
+        "2": "Teknik SEO ve schema markup — arama motorlarının sitenizi doğru okuyup üst sıralara taşıması için altyapıyı baştan kuruyoruz.",
+        "3": "Performans optimizasyonu — hızlı yüklenen sayfalarla hem kullanıcı deneyimini hem arama sıralamasını iyileştiriyoruz.",
+        "4": "Google Ads ile yerel görünürlük — organik SEO'nun yanında ücretli aramada da Eskişehir'deki hedef müşteriye ulaşmanızı sağlıyoruz.",
+        "5": "Kolay ulaşılabilirlik — komşu ilde olmamız sayesinde gerektiğinde yüz yüze görüşme de mümkün, süreç tamamen uzaktan çalışmak zorunda kalmıyor."
+      },
+      "painTitle": "Eskişehir'deki işletmelerin web sitelerinde sık karşılaştığımız sorunlar",
+      "painPoints": {
+        "1": "Sanayi ve üretim firmalarının siteleri genelde tek dilli ve eski kalıyor; yurt dışı müşteri veya tedarikçi firmayı ciddiye alacağı bir izlenim bulamıyor.",
+        "2": "Teknik SEO hiç yapılmamış oluyor; site var ama arama motorları içeriği doğru okuyup sıralayamıyor.",
+        "3": "Sayfa yükleme hızı düşük kalıyor, özellikle mobilde ziyaretçi siteyi kapatıp rakibe geçiyor."
+      },
+      "ctaText": "Eskişehir'deki işletmeniz için web projesini konuşmak üzere bize yazın.",
+      "detail": {
+        "1": "Eskişehir'de tamamladığımız BT Elevator projesi, sanayi/üretim ağırlıklı bir şehirde çok dilli kurumsal web sitesinin nasıl fark yarattığını gösteriyor. Asansör firması için kurduğumuz sitede çok dilli yapı, teknik SEO ve modern tasarımı bir araya getirdik; teknik SEO çalışmaları, schema markup ve performans optimizasyonuyla arama motorlarında üst sıralarda yer almayı hedefledik.",
+        "2": "Eskişehir, Bilecik'in komşu ili olduğu için merkezimize yakın; bu da hem hızlı iletişim hem gerektiğinde yerinde bir görüşme imkânı demek. Süreç yine de varsayılan olarak online yürüyor — keşif görüşmesi, tasarım onayı ve içerik teslimi uzaktan yapılıyor, yerinde görüşme yalnızca ihtiyaç duyulduğunda ek bir seçenek.",
+        "3": "Sanayi, ihracat veya üretim odaklı bir Eskişehir işletmesi için önerimiz, önce güven veren ve doğru dillerde hazırlanmış bir kurumsal site, ardından teknik SEO ile arama görünürlüğü kurmak. Rekabetin yoğun olduğu sektörlerde bu ikisi birlikte, telefonla gelen talebi de artıran bir bulunabilirlik sağlıyor."
+      }
+    },
+    "bursa": {
+      "title": "Bursa Web Tasarım ve Yazılım",
+      "metaTitle": "Bursa Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Bursa'daki işletmeler için kurumsal web sitesi ve e-ticaret çözümleri geliştiriyoruz. Bilecik merkezli ekibimiz, komşu ile tamamen uzaktan hızlı hizmet veriyor.",
+      "intro": "Bursa'da henüz tamamladığımız bir portföy projesi yok; işletmelere tamamen uzaktan hizmet veriyoruz — keşif görüşmesinden teslime kadar süreç online yürür. Komşu il Bilecik'teki Ambalaj Cini için kurduğumuz e-ticaret altyapısı ve Eskişehir'deki BT Elevator için yaptığımız çok dilli kurumsal site, Bursa'nın sanayi ve ticaret ağırlıklı yapısına benzer işletmelere nasıl yaklaştığımızı gösteren referanslarımız.",
+      "bullets": {
+        "1": "Kurumsal web sitesi — Bursa'nın sanayi, tekstil ve otomotiv yan sanayi ağırlıklı işletme yapısına uygun, güven veren kurumsal tasarım.",
+        "2": "E-ticaret altyapısı — Ambalaj Cini'nde kurduğumuz gibi ödeme entegrasyonu, ürün ve stok yönetimi içeren online satış siteleri.",
+        "3": "Yerel ve teknik SEO — Bursa'daki aramalarda bulunabilmeniz için sayfa yapısını ve içeriği arama motorlarına göre kuruyoruz.",
+        "4": "Hızlı ve uzaktan işleyen süreç — komşu ilden çalıştığımız için hem iletişim hızlı hem de fiziksel mesafe bir engel oluşturmuyor.",
+        "5": "Çok dilli yapı ihtiyacı olan ihracatçı firmalara Türkçe-İngilizce (gerekirse başka dillerle) kurumsal site kuruyoruz."
+      },
+      "painTitle": "Bursa'daki işletmelerin web sitelerinde sık karşılaştığımız sorunlar",
+      "painPoints": {
+        "1": "Sanayi ve üretim firmalarının sitesi genelde bir kartvizit gibi kalıyor; ürün/hizmet detayı, referanslar veya iletişim akışı eksik oluyor.",
+        "2": "Online satışa geçmek isteyen ticaret firmaları ödeme ve stok yönetimini nasıl kuracağını bilmediği için adımı erteliyor.",
+        "3": "Yerel rakiplerin çoğu SEO'ya hiç yatırım yapmadığından, küçük bir SEO çalışması bile aramalarda öne çıkmak için yeterli olabiliyorken bu fırsat değerlendirilmiyor."
+      },
+      "ctaText": "Bursa'daki işletmeniz için web projesini konuşmak üzere bize yazın; süreç tamamen uzaktan işler.",
+      "detail": {
+        "1": "Bursa için elimizde henüz doğrudan bir referans projesi yok ve bunu olduğu gibi söylüyoruz — ama bu, hizmet veremeyeceğimiz anlamına gelmiyor. Piton Studios zaten uzaktan çalışan bir ajans; merkezimiz komşu il Bilecik'te olduğu için Bursa'daki bir işletmeyle çalışmak, iletişim hızı ve süreç açısından uzak bir şehirle çalışmaktan farklı değil.",
+        "2": "Bursa'nın sanayi, tekstil ve otomotiv yan sanayi ağırlıklı yapısına en yakın referanslarımız komşu illerden geliyor: Bilecik'teki Ambalaj Cini için kurduğumuz, ödeme entegrasyonu ve stok yönetimi içeren e-ticaret sitesi; Eskişehir'deki BT Elevator için geliştirdiğimiz çok dilli, teknik SEO odaklı kurumsal site. İkisi de üretim/ticaret ağırlıklı işletmelerin ihtiyacına yakın örnekler.",
+        "3": "Bursa'daki bir işletme için önerimiz genelde şu sırayla ilerliyor: önce net ve hızlı yüklenen bir kurumsal site veya e-ticaret altyapısı, ardından yerel SEO ile aranabilirlik. Süreç boyunca tüm görüşmeler online yapılır; bu hem maliyeti hem de proje süresini kısaltan bir çalışma şekli."
+      }
+    },
+    "istanbul": {
+      "title": "İstanbul Web Tasarım ve Yazılım",
+      "metaTitle": "İstanbul Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "İstanbul'daki işletmeler için kurumsal web sitesi, e-ticaret ve özel yazılım geliştiriyoruz. Ekip uzaktan çalışır; görüşme, tasarım ve teslim online yürür.",
+      "intro": "İstanbul'daki işletmenize kurumsal web sitesi, e-ticaret altyapısı veya özel yazılım kurarız. Ofisimiz Bilecik'te olsa da tüm süreç online yürür: kickoff görüşmesi, tasarım onayı, revizyon turları ve teslim uzaktan tamamlanır — İstanbul'un yoğun trafiğinde saha ziyaretine gerek kalmadan proje ilerler ve takvim aksamaz.",
+      "bullets": {
+        "1": "Kurumsaldan SaaS ürününe kadar geniş yelpazede: holding siteleri, CRM/ERP panelleri ve e-ticaret platformları kurduk.",
+        "2": "Next.js ve Supabase ile hazır temanın yetmediği projelerde sıfırdan özel yazılım geliştiriyoruz.",
+        "3": "Görüşmeler, revizyon turları ve teslim tamamen online — İstanbul içi seyahate gerek kalmadan proje ilerler.",
+        "4": "SEO ve GEO çalışmasıyla İstanbul'un yüksek rekabetli arama hacminde görünürlük hedefleriz.",
+        "5": "Otomasyon ve entegrasyonlarla tekrarlayan operasyonel işleri (stok, sipariş, cari takip) sisteme bağlarız."
+      },
+      "painTitle": "İstanbul'daki işletmelerin web'de sık karşılaştığı sorunlar",
+      "painPoints": {
+        "1": "Yoğun rekabet ortamında şablon bir site, benzer onlarca rakipten görsel ve içerik olarak ayrışamıyor.",
+        "2": "Büyüyen ekiplerde manuel takip edilen sipariş, cari veya randevu süreçleri hataya ve zaman kaybına yol açıyor.",
+        "3": "Çok şubeli veya çok ürünlü işletmelerde içerik güncelleme, merkezi bir sistem olmadan dağınık ve tutarsız ilerliyor."
+      },
+      "ctaText": "İstanbul'daki projenizi anlatın, 24 saat içinde somut bir yol haritasıyla dönelim.",
+      "detail": {
+        "1": "İstanbul, Türkiye'nin en yoğun rekabetli dijital pazarı — kurumsal hizmetten e-ticarete hemen her sektörde onlarca rakip aynı aramada aynı anda yer alıyor. Bu ortamda fark yaratan şey şablon bir site değil, markanın kendi diline, iş modeline ve büyüklüğüne oturan bir dijital yapı kurmak. Nexos Investment için hazır temaların ihtiyacı karşılamadığı yerde Next.js ve Supabase ile sıfırdan geliştirdiğimiz, harita entegrasyonlu ve çok dilli emlak ilan yönetim sistemi; FurCRM ile mobilya üreticilerine kurduğumuz cari, üretim ve bayi takip paneli bu yaklaşımın somut örnekleri: iş süreci şablon üzerinden değil, gerçek operasyonel ihtiyaçtan tasarlanıyor, büyüdükçe genişleyebiliyor ve İstanbul ölçeğindeki bir işletmenin karmaşık süreçlerini tek panelde toplayabiliyor.",
+        "2": "Çalışma şeklimiz İstanbul'daki müşteriler için özellikle pratik: merkez ofisimiz Bilecik'te, ekip tamamen uzaktan çalışıyor. Bu, saha ziyareti beklemeden hızlı ilerleyen bir süreç anlamına geliyor — kickoff görüşmesi, tasarım onayı, revizyon turları ve nihai teslim video görüşme ve yazılı bilgilendirmeyle yürüyor. Arslan Group gibi emlak, finans ve ticareti tek çatıda toplayan çok kollu holding yapıları ve Alp Sigorta gibi hizmet kataloğu geniş kurumsal projelerde bu uzaktan çalışma modeli, İstanbul içi trafik kaybı, randevu koordinasyonu ve saha bekleme süresi olmadan işliyor; taraflar zamanı verimli kullanıyor ve proje ilerleyişi yazılı olarak her aşamada takip edilebiliyor.",
+        "3": "Sonuç tarafında İstanbul'daki işletmeler için iki şey öne çıkıyor: dijital görünürlük ve operasyonel verim. SEO ve GEO çalışmasıyla yüksek hacimli aramalarda ve yapay zekâ destekli arama araçlarında yer almak bir öncelik; otomasyon ile de stok, sipariş veya cari takibi gibi tekrarlayan işleri sisteme devretmek diğer öncelik. Ambalaj Cini'nde kurduğumuz ödeme entegrasyonlu e-ticaret altyapısı, manuel sipariş takibinin nasıl sistematik ve izlenebilir hale geldiğinin somut bir örneği; benzer bir yapıyı İstanbul'daki işletmenizin ölçeğine, sektörüne ve büyüme hedefine göre uyarlayarak, ölçülebilir sonuçlar veren, raporlanabilir bir sistem olarak kuruyor ve teslim sonrası da destek veriyoruz."
+      }
+    },
+    "kutahya": {
+      "title": "Kütahya Web Tasarım ve Yazılım",
+      "metaTitle": "Kütahya Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Kütahya'daki imalat, ticaret ve zanaat işletmeleri için kurumsal web sitesi ve SEO hizmeti sunuyoruz. Ekip tamamen uzaktan çalışır, tüm süreç online yürür.",
+      "intro": "Kütahya'daki imalat, ticaret ve zanaat işletmelerine kurumsal web sitesi ve SEO hizmeti sunuyoruz. Ofisimiz Bilecik'te; tüm süreç online yürür, saha ziyareti gerekmez. Kütahya'nın çini ve porselen mirasıyla özdeşleşen ürün kataloğunu, yıllara dayanan sektör tecrübesini yansıtacak şekilde dijitalde doğru sergilemeyi hedefleriz.",
+      "bullets": {
+        "1": "Ürün kataloğu ve kurumsal kimlik odaklı web siteleri: imalat ve ticaret firmalarının 25+ yıllık deneyimini dijitale taşıdık.",
+        "2": "Çok dilli yapı ile yurt dışına satış yapan üretici ve ihracatçı firmalara uluslararası müşteriye ulaşma imkanı sunarız.",
+        "3": "Yerel SEO ile 'Kütahya' ve sektör adını birlikte içeren aramalarda görünürlük kazandırırız.",
+        "4": "E-ticaret altyapısıyla ödeme, stok ve sipariş yönetimini tek panelde topluyoruz.",
+        "5": "Tüm süreç uzaktan yürüdüğü için Kütahya dışından hizmet almak proje takvimini uzatmaz."
+      },
+      "painTitle": "Kütahya'daki imalat ve ticaret işletmelerinin web'de sık karşılaştığı sorunlar",
+      "painPoints": {
+        "1": "Yıllara dayanan sektör tecrübesi, güncel olmayan veya mobil uyumsuz bir sitede yeterince ve güven verici şekilde yansımıyor.",
+        "2": "Ürün kataloğu yalnızca broşür veya WhatsApp üzerinden paylaşılınca potansiyel müşteri arama motorunda firmayı hiç bulamıyor.",
+        "3": "Yerel aramalarda görünmeyen firma, ilini veya sektörünü arayarak tedarikçi bulmaya çalışan alıcıyı rakibe kaptırıyor."
+      },
+      "ctaText": "Kütahya'daki işletmenizin projesini anlatın, 24 saat içinde bir yol haritasıyla dönelim.",
+      "detail": {
+        "1": "Kütahya ekonomisinin belkemiğini çini ve porselen üretiminin köklü mirasının yanı sıra bölgedeki imalat ve ticaret firmaları oluşturuyor; bu firmaların çoğu için web sitesi hâlâ bir katalog değil, dolduramadığı bir ilan panosu işlevi görüyor. Oysa Velis LTD için yaptığımız gibi, 25 yılı aşkın sektör tecrübesini ürün kataloğu, çok dilli yapı ve SEO ile birleştiren bir kurumsal site, firmayı yerel bir atölyeden dijitalde bulunabilir, güven veren bir tedarikçiye dönüştürüyor. Kütahya'daki üretici ve toptancı firmalar için de aynı yaklaşımı uyguluyoruz: ürün, üretim kapasitesi ve referansları net, aranabilir ve güncellenebilir bir yapıda sunmak, uzun vadede marka değerini korumak önceliğimiz.",
+        "2": "İmalat ve ticaret sektöründe alıcı kararını genellikle fiyat teklifi almadan önce dijitalde araştırarak veriyor; bu noktada Bilecik'teki Ambalaj Cini için kurduğumuz ödeme entegrasyonlu e-ticaret altyapısı örneğinde olduğu gibi, ürün kataloğunu ve sipariş sürecini dijitalleştirmek doğrudan satışa ve stok takibine dönüşüyor. Eskişehir merkezli BT Elevator için yaptığımız çok dilli kurumsal site ve teknik SEO çalışması da bölgesel bir üreticinin dijitalde nasıl kurumsal, aranabilir bir kimlik kazandığının Kütahya'ya coğrafi olarak yakın başka bir örneği; benzer üretim ölçeğindeki firmalar için aynı disiplinle çalışıyor, ihracat hedefleyen firmalarda çok dilli içeriği ve schema işaretlemesini proje başında planlıyoruz.",
+        "3": "Kütahya'daki bir işletme için pratik fark şurada: ofisimiz Bilecik'te olduğu için bölgesel bağlamı ve KOBİ ölçeğindeki işletmelerin bütçe ve zaman kısıtlarını biliyoruz, ama hizmetin tamamı uzaktan yürüyor — görüşme, tasarım onayı, içerik toplama ve teslim online tamamlanır. Yerel SEO çalışmasıyla il adı ve sektör kelimesini birlikte içeren aramalarda görünürlük kazandırmak, projelerimizin merkezinde yer alır; bu, saha ziyareti gerektirmeden, uzaktan yürüyen bir süreçte de ölçülebilir ve kalıcı bir sonuç anlamına gelir. Proje teslim edildikten sonra da içerik güncelleme, yeni ürün ekleme ve teknik destek talepleri aynı uzaktan çalışma disipliniyle devam eder."
+      }
+    },
+    "antalya": {
+      "title": "Antalya Web Tasarım ve Yazılım",
+      "metaTitle": "Antalya Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "Antalya'daki otel, transfer ve turizm işletmeleri için çok dilli web sitesi ve online rezervasyon çözümleri geliştiriyoruz. Ekip uzaktan çalışır.",
+      "intro": "Antalya'daki otel, transfer ve turizm işletmelerine çok dilli web sitesi ve online rezervasyon altyapısı kuruyoruz. Ofisimiz Bilecik'te; süreç tamamen uzaktan yürür. Turizm sektöründe yabancı misafire kendi dilinde ulaşmak, sezon yoğunluğunda rezervasyonun kaçırılmamasının ve talebin doğru kanaldan, doğru zamanda gelmesinin ilk şartıdır.",
+      "bullets": {
+        "1": "Çok dilli yapı ile İngilizce, Rusça ve diğer dillerde uluslararası misafire doğrudan ulaşırsınız.",
+        "2": "Online rezervasyon ve fiyat hesaplama araçlarıyla misafir telefon etmeden talebini iletebilir.",
+        "3": "WhatsApp entegrasyonu ile transfer ve konaklama taleplerine hızlı dönüş sağlarsınız.",
+        "4": "Yerel ve turizm odaklı SEO ile 'Antalya otel', 'havalimanı transfer' gibi sorgularda görünürlük kazanırsınız.",
+        "5": "Mobil öncelikli tasarım, seyahat halindeki misafirin telefonundan sorunsuz rezervasyon yapmasını sağlar."
+      },
+      "painTitle": "Antalya'daki turizm işletmelerinin web'de sık karşılaştığı sorunlar",
+      "painPoints": {
+        "1": "Tek dilli bir site, Antalya'nın en büyük misafir kitlesi olan yabancı turisti daha arama aşamasında tamamen kaybettiriyor.",
+        "2": "Rezervasyon talebi yalnızca telefon veya sosyal medya üzerinden alınınca sezon yoğunluğunda talepler kayboluyor veya geç dönülüyor.",
+        "3": "Mobil uyumsuz veya yavaş açılan bir site, seyahat halindeki misafiri rezervasyon tamamlamadan siteden ayrılmaya itiyor."
+      },
+      "ctaText": "Antalya'daki otel veya transfer işletmenizin projesini anlatın, 24 saat içinde bir yol haritasıyla dönelim.",
+      "detail": {
+        "1": "Antalya, Türkiye'nin turizm merkezi olarak yıl boyu yerli ve özellikle yabancı misafir ağırlıyor; bu misafir profili web sitesinden beklentiyi de kökten değiştiriyor. Sammys Hotel için kurduğumuz oda rezervasyonu ve fotoğraf galerisi odaklı site, misafir deneyimini ilk temastan itibaren sıcak ve davetkâr kılmayı hedefliyordu — çok dilli yapı ve online rezervasyon entegrasyonu ile uluslararası misafire doğrudan, aracısız ulaşan bir yapı kurduk. Antalya'daki otel ve pansiyon işletmeleri için de aynı önceliklerle çalışıyoruz: galeri, oda ve hizmet detayı, rezervasyon akışı net ve hızlı olmalı; misafir siteye girdiği ilk dakikada güven duymalı ve rezervasyona kadar tereddüt etmemeli.",
+        "2": "Transfer ve ulaşım tarafında Welcome Pickups, Aydın Transfer ve Jet Transfer Cyprus için geliştirdiğimiz siteler, havalimanı transferi arayan misafirin ihtiyacını doğrudan karşılıyor: online rezervasyon sistemi, rota bilgisi, fiyat hesaplama aracı ve WhatsApp entegrasyonu bir arada çalışıyor. Antalya'nın yoğun havalimanı trafiği ve sezonluk misafir yoğunluğu düşünüldüğünde, bu tür bir sistemin telefon trafiğini azaltıp talebi dijitale taşıması, işletmeye doğrudan operasyonel rahatlık ve daha az kaçan talep sağlıyor; sezon dışında da rezervasyon akışı kesintisiz sürüyor ve şoför ya da resepsiyon ekibi her taleple tek tek telefonda uğraşmak zorunda kalmıyor, zamanını asıl işine ayırabiliyor.",
+        "3": "Görünürlük tarafında turizm sektöründe rekabet mevsimsel ve yoğun; bu yüzden hem klasik SEO hem de yapay zekâ destekli aramalara (GEO) uygun net, yapılandırılmış içerik önemli hale geliyor. Antalya'daki bir otel veya transfer firması için hedefimiz, misafirin arama yaptığı her kanalda — Google, harita uygulaması veya bir AI asistanı — bulunabilir olmak. Hizmet tamamen uzaktan yürüdüğü için sezon öncesi hazırlık süreci, saha ziyareti beklemeden hızlıca ve zamanında ilerliyor; yoğun sezon başlamadan önce site ve rezervasyon altyapısı hazır oluyor, ekip yaz ayı yoğunluğunda tekrar dijital işlerle uğraşmak zorunda kalmıyor ve tüm dikkatini misafir ağırlamaya verebiliyor."
+      }
+    },
+    "izmit": {
+      "title": "İzmit Web Tasarım ve Yazılım",
+      "metaTitle": "İzmit Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "İzmit ve Kocaeli'deki mühendislik, inşaat ve ticaret firmaları için kurumsal web sitesi ve e-ticaret geliştiriyoruz. Ekip uzaktan çalışır, süreç online yürür.",
+      "intro": "İzmit ve Kocaeli sanayi bölgesindeki mühendislik, inşaat ve ticaret firmalarına kurumsal web sitesi ve e-ticaret altyapısı kuruyoruz. Ofisimiz Bilecik'te; süreç tamamen online yürür. Sanayi bölgesinin B2B ağırlıklı yapısına uygun, referans ve proje portföyünü öne çıkaran, güven veren kurumsal siteler tasarlarız.",
+      "bullets": {
+        "1": "Mühendislik ve inşaat firmaları için proje portföyü ve referans odaklı kurumsal siteler tasarlarız.",
+        "2": "Yapı malzemesi ve sanayi ürünleri satan firmalar için e-ticaret altyapısı kurarız.",
+        "3": "Uluslararası ticaret yapan firmalara çok dilli yapı ile global müşteriye ulaşma imkanı sunarız.",
+        "4": "Yerel SEO ile 'İzmit' veya 'Kocaeli' ve sektör adını birlikte içeren aramalarda görünürlük kazandırırız.",
+        "5": "Tüm süreç uzaktan yürüdüğü için sanayi bölgesindeki yoğun iş temposunu bölmeden ilerleriz."
+      },
+      "painTitle": "İzmit'teki sanayi ve ticaret firmalarının web'de sık karşılaştığı sorunlar",
+      "painPoints": {
+        "1": "B2B odaklı bir firmanın tamamlanan projeleri veya referansları sitede net görünmeyince potansiyel müşteri güven duymakta zorlanıyor.",
+        "2": "Teklif alma süreci yalnızca telefon veya e-posta üzerinden yürüyünce takip zorlaşıyor ve bazı talepler tamamen gözden kaçabiliyor.",
+        "3": "Yapı malzemesi gibi katalog ağırlıklı ürünlerde, ürün ve fiyat bilgisine sitede kolay ulaşılamaması alıcıyı doğrudan rakibe yönlendiriyor."
+      },
+      "ctaText": "İzmit veya Kocaeli'deki firmanızın projesini anlatın, 24 saat içinde bir yol haritasıyla dönelim.",
+      "detail": {
+        "1": "İzmit ve genel olarak Kocaeli, Türkiye'nin önde gelen sanayi bölgelerinden biri; buradaki firmaların büyük kısmı B2B çalışıyor ve karar süreci fiyat kadar geçmiş iş deneyimine ve güvene de dayanıyor. Alert Mühendislik için kurduğumuz proje portföyü ve hizmet detaylı kurumsal site, bu tür bir ihtiyacı nasıl karşıladığımızın bir örneği — tamamlanan işler ve referanslar potansiyel müşteriye ilk temasta somut güven veriyor. EKH Yapı örneğinde olduğu gibi, devam eden ve tamamlanan inşaat projelerinin galerisini ve iletişim formlarını öne çıkaran bir yapı da kurduk; bu yaklaşım sanayi bölgesindeki mühendislik ve müteahhitlik firmaları için doğrudan uygulanabilir bir modeldir.",
+        "2": "Ticaret tarafında RNV Trading için geliştirdiğimiz ithalat-ihracat odaklı kurumsal site, çok dilli yapı ve ürün kataloğuyla global iş ortaklarına profesyonel bir imaj sunuyor; İzmit'teki dış ticaret yapan firmalar için de benzer bir çok dilli yapı kurulabilir. Katalog ağırlıklı sanayi ürünlerinde ise Beton Store örneğinde olduğu gibi, ürün yönetimi ve sipariş akışını e-ticaret altyapısına taşımak, teklif sürecini hızlandırıyor, telefon trafiğini azaltıyor ve stok bilgisini güncel tutmayı kolaylaştırıyor; bu da satış ekibinin zamanını mevcut siparişi telefonda takip etmek yerine yeni müşteriye ve yeni ihaleye ayırmasını sağlıyor, elle veri girişinden kaynaklı hataya yer bırakmıyor.",
+        "3": "İzmit'teki bir mühendislik, inşaat veya ticaret firması için hedef, arama yapan potansiyel müşteriye hem yerel hem de sektörel bağlamda ulaşmak — 'İzmit' veya 'Kocaeli' ile sektör adını birlikte içeren aramalarda görünür olmak bunun ilk adımı. Hizmet tamamen uzaktan yürüdüğü için sanayi bölgesindeki yoğun iş temposu proje takvimini hiç etkilemiyor; görüşme, revizyon ve onaylar tamamen online ilerliyor ve firma üretim veya saha işine odaklanmaya devam edebiliyor. Teslim sonrası içerik güncellemesi, yeni tamamlanan proje ekleme, referans güncelleme ve teknik destek talepleri de aynı uzaktan çalışma disipliniyle, düzenli ve yazılı bir takip üzerinden sürdürülüyor."
+      }
+    },
+    "izmir": {
+      "title": "İzmir Web Tasarım ve Yazılım",
+      "metaTitle": "İzmir Web Tasarım ve Yazılım | Piton Studios",
+      "metaDescription": "İzmir'deki e-ticaret, gıda ve hizmet işletmeleri için web tasarım, e-ticaret ve SEO çözümleri sunuyoruz. Ekip tamamen uzaktan çalışır, tüm süreç online yürür.",
+      "intro": "İzmir'deki e-ticaret, gıda ve hizmet işletmelerine web tasarım, e-ticaret altyapısı ve SEO hizmeti sunuyoruz. Ofisimiz Bilecik'te; tüm süreç online yürür, saha ziyareti gerekmez. Şehrin çeşitli ekonomik yapısına uygun olarak hem markalaşmayı hem de sipariş ve randevu akışını dijitalleştiren siteler tasarlarız.",
+      "bullets": {
+        "1": "Gıda ve perakende işletmeleri için sipariş yönetimi içeren e-ticaret altyapısı kurarız.",
+        "2": "Marka kimliğini öne çıkaran şık, mobil öncelikli tasarımlarla müşteri deneyimini güçlendiririz.",
+        "3": "Sağlık ve hizmet sektöründeki işletmeler için randevu ve hizmet tanıtımı odaklı siteler tasarlarız.",
+        "4": "Yerel SEO ile 'İzmir' ve sektör adını birlikte içeren aramalarda görünürlük kazandırırız.",
+        "5": "Google Ads ile hızlı sonuç, SEO ile kalıcı organik görünürlük arasında dengeyi ihtiyaca göre kurarız."
+      },
+      "painTitle": "İzmir'deki e-ticaret ve hizmet işletmelerinin web'de sık karşılaştığı sorunlar",
+      "painPoints": {
+        "1": "Ürün ve sipariş yönetimi manuel yürüyünce stok hatası veya gecikmiş teslimat müşteri memnuniyetini doğrudan düşürüyor.",
+        "2": "Marka kimliği güçlü olsa da yavaş açılan veya eski tasarımlı bir site, ziyaretçiyi ilk saniyelerde tamamen kaybettiriyor.",
+        "3": "Yerel aramalarda görünmeyen bir işletme, aynı mahallede veya ilçede arama yapan müşteriyi doğrudan rakibe kaptırıyor."
+      },
+      "ctaText": "İzmir'deki işletmenizin projesini anlatın, 24 saat içinde bir yol haritasıyla dönelim.",
+      "detail": {
+        "1": "İzmir'in ekonomik yapısı e-ticaretten gıdaya, hizmet sektöründen sağlığa kadar geniş bir yelpazeye yayılıyor; bu çeşitlilik web sitesi ihtiyacını da işletmeden işletmeye farklılaştırıyor. Boon Fresh için kurduğumuz taze gıda ve market teslimat platformu, ürün kataloğu ve sipariş takibini tek yapıda birleştiriyor — İzmir'deki gıda perakendecileri için de benzer, mobil uyumlu ve teslimat süresini net gösteren bir sipariş akışı kurulabilir. Virginia Ice Cream'de ise markanın enerjik ve eğlenceli kimliğini yansıtan görsel bir tasarımla şube bilgisi ve menü kataloğunu öne çıkardık; İzmir'deki F&B markaları için de aynı görsel disiplini ve marka tutarlılığını sitenin her sayfasında uyguluyoruz.",
+        "2": "E-ticaret tarafında Ambalaj Cini için geliştirdiğimiz ödeme entegrasyonlu online satış platformu, stok takibi ve ürün yönetimini merkezi bir sisteme taşıyarak manuel süreç kaynaklı hataları büyük ölçüde azaltıyor. Hizmet sektöründe ise Dental Health için tasarladığımız randevu ve hizmet tanıtımı odaklı site, hasta güvenini oluşturan temiz ve net bir dijital kimlik örneği; İzmir'deki klinik, stüdyo veya danışmanlık işletmeleri için de aynı yaklaşım doğrudan geçerli; hizmet açıklaması ve iletişim adımı sitede tek tıkla ulaşılabilir olmalı, randevu formu karmaşık ve uzun olmamalı, güven veren müşteri referansı ve gerçek yorum alanı da hiçbir zaman eksik kalmamalı.",
+        "3": "İzmir'deki bir işletme için hedef, hem yerel aramada hem de kendi sektöründeki rekabette görünür olmak. Yerel SEO ile ilçe veya mahalle bazlı aramalarda kalıcı görünürlük, Google Ads ile de hızlı sonuç gereken dönemlerde — sezon açılışı, kampanya, yeni ürün lansmanı — anlık görünürlük sağlıyoruz. Hizmet tamamen uzaktan yürüdüğü için İzmir'deki işletmenizle süreç boyunca video görüşme ve yazılı bilgilendirmeyle iletişim kuruyoruz; bu, saha ziyareti beklemeden hızlı ilerleyen ve her aşaması yazılı olarak takip edilebilen bir proje takvimi anlamına geliyor, teslim sonrasında da destek talepleri her zaman aynı özenli ve şeffaf disiplinle sürüyor."
+      }
+    }
+  },
+  "solutionItems": {
+    "real-estate-listing-software": {
+      "title": "Emlak İlan Yönetim Yazılımı",
+      "metaTitle": "Emlak İlan Yönetim Yazılımı | Piton Studios",
+      "metaDescription": "Emlak ofisleri için harita, çok dilli yapı ve otomatik teklif üretimi olan özel ilan yönetim yazılımları geliştiriyoruz; portal senkronizasyonu dahil.",
+      "intro": "Emlak ilan yönetim yazılımı, portföyünüzü hazır bir web sitesinin ötesinde yönetmenizi sağlayan özel bir sistemdir: harita üzerinde ilan gösterimi, çok dilli yönetim paneli ve ilan verisinden otomatik teklif üretimi. Nexos Investment için bu sistemi sıfırdan kurduk; Emlak Sync ürünümüzle de ilanların portallarla senkronizasyonunu otomatikleştiriyoruz.",
+      "bullets": {
+        "1": "Google Maps ve Leaflet cluster'lı interaktif harita ile ilanlar konuma göre gruplanarak gösterilir.",
+        "2": "next-intl ile çok dilli, TipTap editörlü ve sürükle-bırak destekli yönetim paneli.",
+        "3": "İlan verisinden otomatik PDF ve PowerPoint formatında teklif üretimi — danışman elle hazırlamaz.",
+        "4": "Emlak Sync entegrasyonuyla ilan tek yerden girilir, 101evler ve HangiEv gibi portallarda otomatik yayınlanır.",
+        "5": "PWA/offline destek, Zod doğrulama, rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir sistem."
+      },
+      "painTitle": "Emlak ofislerinin yazılım tarafında tıkandığı yerler",
+      "painPoints": {
+        "1": "Hazır temalar gelişmiş filtreleme, harita ve çoklu dil gibi ihtiyaçları karşılamayınca ofis eksik bir sistemle çalışmaya devam eder.",
+        "2": "Teklif hazırlama elle yapıldığında danışmanın zamanı ilan aramak yerine PDF ve sunum hazırlamaya gider.",
+        "3": "Aynı ilan birden fazla portala elle girilince güncelleme unutulur, satılan mülkün ilanı yayında kalmaya devam eder."
+      },
+      "ctaText": "Portföyünüzü yönetecek özel sistemi konuşalım — emlak yazılım projenizi anlatın.",
+      "detail": {
+        "1": "Emlak ilan yönetim yazılımı, standart bir emlak web sitesinden farklı bir katmandır: ilan verisinin veri modeli, yönetim paneli, harita entegrasyonu ve çok dilli içerik yönetimi tek sistemde birleşir. Hazır bir tema bu ihtiyaçların çoğunu karşılamaz; ilan sayısı ve ekip büyüdükçe filtreleme, yetkilendirme ve raporlama gibi ihtiyaçlar hazır çözümlerin sınırlarını zorlar. Bu noktada aradığınız artık bir web sitesi değil, ofisin günlük işini yürüten bir yazılımdır — danışmanın ilan girmesinden yatırımcıya teklif sunmasına kadar geçen sürecin tamamını taşıyan bir sistem. Ofis büyüdükçe bu sistemin değeri de büyür, çünkü manuel iş yükü katlanarak artmaz.",
+        "2": "Nexos Investment için hazır temaların karşılayamadığı gelişmiş ilan yönetimi, harita üzerinde gösterim, çok dil ve otomatik teklif üretimi ihtiyaçlarına Next.js, Supabase ve Vercel ile sıfırdan bir sistem kurduk. Google Maps ve Leaflet cluster'lı interaktif harita, next-intl ile çok dilli yapı, TipTap editörlü ve sürükle-bırak destekli yönetim paneli, ilan verisinden otomatik PDF/PowerPoint teklif üretimi, PWA/offline destek, Zod doğrulama, Upstash rate-limit ve Playwright E2E testleriyle üretim kalitesinde bir platform teslim ettik. Firma artık harita, teklif üretimi ve içerik yönetimini tek sistemden, tam kontrolle yürütüyor; bu proje portfolyomuzun teknik zirvesi kabul ediliyor ve hazır bir temanın taşıyamayacağı ölçekte bir örnek oluşturuyor.",
+        "3": "İlan yönetimini kurduktan sonra sıradaki sorun genelde portallardır: aynı ilanın birden fazla platformda elle güncellenmesi. Emlak Sync ürünümüz bunu çözüyor — ilan tek yerden girilir, KKTC portallarına (101evler, HangiEv) otomatik yayınlanır ve senkron tutulur. Mükerrer veri girişini ortadan kaldıran bu ürün, portal entegrasyonları ve emlak sektörüne özel otomasyon yetkinliğimizin somut kanıtı. İki sistem birlikte, emlak ofisinin ilan girişinden teklif sunumuna ve portal yayınına kadar tüm iş akışını tek yerden, tutarlı biçimde yönetmesini sağlar; danışman zamanını mülk aramaya ve müşteriyle konuşmaya ayırabilir, tekrar eden veri girişine değil. İlan yönetim yazılımınız büyüdükçe hangi portalın hangi ilana daha çok talep getirdiğini de aynı sistemden görebilir, pazarlama kararlarınızı buna göre şekillendirebilirsiniz."
+      }
+    },
+    "real-estate-seo": {
+      "title": "Emlak Sitesi için SEO",
+      "metaTitle": "Emlak Sitesi için SEO | Piton Studios",
+      "metaDescription": "Emlak ve gayrimenkul siteleri için ilan sayfası SEO'su: schema markup, çok dilli hreflang yapısı ve yapay zekâ destekli aramalarda görünürlük (GEO).",
+      "intro": "Emlak sitesi için SEO, genel bir kurumsal site SEO'sundan farklıdır: ilan sayfaları, harita verisi ve çok dilli içerik ayrı ayrı yapılandırılmalıdır. Arslan Estates ve Homes in Mediterranean projelerinde teknik SEO'yu harita entegrasyonu ve çok dilli yapıyla birlikte kurduk; hedef, yerli ve yabancı yatırımcının aramasına doğru sayfayla çıkmaktır.",
+      "bullets": {
+        "1": "İlan sayfalarına özel schema markup ile arama motorlarına yapılandırılmış veri sunulur.",
+        "2": "'Satılık villa', 'Kıbrıs emlak' gibi yerel aramalara yönelik teknik ve içerik SEO çalışması.",
+        "3": "Çok dilli hreflang yapısı ile İngilizce ve Rusça aramalarda da doğru dildeki sayfa indekslenir.",
+        "4": "Net yapılandırılmış ilan ve bölge içerikleriyle yapay zekâ destekli aramalarda (GEO) doğrudan yanıt konumu.",
+        "5": "Görsel ağırlıklı ilan sayfalarında Core Web Vitals optimizasyonu ile hız korunur."
+      },
+      "painTitle": "Emlak sitelerinin SEO'da sık kaçırdığı noktalar",
+      "painPoints": {
+        "1": "İlan sayfaları teknik SEO'suz kurulduğunda Google'da indekslenmiyor ya da yanlış dilde görünüyor.",
+        "2": "Yabancı yatırımcı aramaları yalnızca Türkçe içerikle karşılanınca daha arama aşamasında kayboluyor.",
+        "3": "Yapay zekâ destekli arama sonuçlarında (GEO) yer almayan siteler yeni nesil aramalarda görünmez kalıyor."
+      },
+      "ctaText": "İlanlarınız hem Google'da hem yapay zekâ aramalarında bulunsun — emlak SEO çalışmasını konuşalım.",
+      "detail": {
+        "1": "Emlak sitesi için SEO, ilan ve bölge sayfalarının kendine özgü yapısını hedef alır. Standart bir kurumsal sitede birkaç hizmet sayfası yeterliyken, emlak sitesinde her ilan ayrı bir sayfa, her bölge ayrı bir arama niyeti taşır. Teknik SEO burada taranabilirlik ve schema markup ile ilan verisinin doğru okunmasını sağlar; içerik SEO ise bölge ve mülk tipine göre arama niyetini karşılayan sayfalar kurar. Çok dilli bir portföyde bu yapı ayrıca hreflang ile desteklenmezse, aynı ilan farklı dillerde birbirinin rakibi haline gelip arama motorunu yanıltabilir. İlan sayısı arttıkça bu yapının şablon ve otomatik meta üretimiyle sürdürülmesi gerekir, elle takip edilebilir olmaktan çıkar.",
+        "2": "Arslan Estates'te emlak ilan yönetimi ve mülk detay sayfalarını SEO optimizasyonu, harita entegrasyonu ve çok dilli yapıyla birlikte kurduk; sosyal medya bağlantılarıyla desteklenen bu yapı sonucunda uluslararası müşteriye ulaşan bir dijital görünürlük oluştu. Homes in Mediterranean'da ise Akdeniz bölgesindeki gayrimenkul fırsatlarını uluslararası yatırımcıya taşıyan bölge rehberleri ve mülk detaylarını, gelişmiş arama ve filtreleme özellikleriyle birlikte SEO'ya göre yapılandırdık; hedef global müşteri kitlesiydi. İki projede de SEO, sitenin sonradan eklenen bir katmanı değil, ilan yapısının kurulma biçiminin bir parçasıydı; ilan verisi baştan arama motorunun okuyabileceği biçimde tasarlandı. Bu yaklaşım, sitenin ilerideki yeni ilan ve bölge sayfalarına da aynı teknik disiplinle eklenmesini kolaylaştırır.",
+        "3": "Sonuç tarafında hedef, mülk arayan kişinin hangi dilde ve hangi kanalda arama yaparsa yapsın sizi bulmasıdır. Çok dilli hreflang yapısı ve schema markup 'satılık villa' gibi klasik aramalarda, net yapılandırılmış içerik ise yapay zekâ destekli aramalarda (GEO) görünürlük kurar. Bu ikisi birlikte çalıştığında emlak sitesi yalnızca yerel değil uluslararası arama trafiğinden de pay alır; yatırımcı hangi ülkeden ve hangi dilde arama yaparsa yapsın doğru sayfayla karşılaşır, bu da pazarlama bütçesinin tek kanala (reklam) bağımlı kalmamasını sağlar. Hangi ilandan hangi dilde talep geldiğini izleyebildiğinizde de bu çalışmanın karşılığını veriyle görürsünüz, tahminle değil ölçülebilir sinyallerle karar verirsiniz."
+      }
+    },
+    "transfer-booking-system": {
+      "title": "Transfer Rezervasyon Sistemi",
+      "metaTitle": "Transfer Rezervasyon Sistemi | Piton Studios",
+      "metaDescription": "Transfer ve taksi firmaları için online rezervasyon, rota bazlı fiyat hesaplama ve WhatsApp entegrasyonlu sistemler kuruyoruz; beş projede uyguladık.",
+      "intro": "Transfer rezervasyon sistemi, yolcunun güzergâhını ve tarihini seçip talebini doğrudan bıraktığı bir akıştır. Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi ve Welcome Pickups'ta bu akışı rota/fiyat hesaplama ve WhatsApp entegrasyonuyla kurduk. İhtiyaç büyüdükçe aynı yapıyı araç ve şoför yönetimi olan tam bir web uygulamasına genişletebiliriz.",
+      "bullets": {
+        "1": "Güzergâh ve tarih seçimli online rezervasyon formu; talep anında firmaya ulaşır.",
+        "2": "Rota ve mesafeye göre otomatik fiyat hesaplama — müşteri aramadan önce net fiyatı görür.",
+        "3": "WhatsApp ve tek tuşla arama entegrasyonu ile rezervasyon sonrası hızlı iletişim.",
+        "4": "Çok dilli rezervasyon akışı — havalimanına inen yolcu kendi dilinde talep bırakır.",
+        "5": "İhtiyaç büyüdükçe araç/şoför yönetimi ve gerçek zamanlı takip olan tam kapsamlı bir web uygulamasına ölçeklenebilir mimari."
+      },
+      "painTitle": "Transfer rezervasyonunun web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Rezervasyon formu olmayan sitede her talep telefona düşer; gece gelen ya da hat meşgulken düşen talepler kaçar.",
+        "2": "Fiyatı yalnızca telefonla öğrenilebilen hizmet, net fiyat gösteren rakip karşısında güven kaybeder.",
+        "3": "Rezervasyon verisi bir tabloya değil hafızaya bağlıysa, talebin hangi kanaldan geldiği izlenemez."
+      },
+      "ctaText": "Rezervasyonları telefon hattından web'e taşıyalım — transfer sisteminizi konuşmak için yazın.",
+      "detail": {
+        "1": "Transfer rezervasyon sistemi iki farklı ölçekte kurulabilir: güzergâh, tarih ve fiyat hesaplamayı içeren bir talep formu, ya da araç/şoför ataması, gerçek zamanlı takip ve çoklu kullanıcı rolü olan tam bir rezervasyon platformu. İlkini beş projede teslim ettik; ikincisi için Nexos Investment ve Emlak Sync'te kurduğumuz auth, admin panel ve gerçek zamanlı özellik altyapısını transfer sektörüne uyarlarız. Hangi ölçekte başlamanız gerektiği, günlük rezervasyon hacmine ve filonuzun büyüklüğüne göre değişir; bu kararı ilk görüşmede birlikte netleştiririz, gereksiz karmaşıklığa baştan yatırım yapmazsınız. Çoğu firma için doğru başlangıç noktası, önce talep formunu kurup rezervasyon hacmi arttıkça platforma geçmektir.",
+        "2": "Jet Transfer Cyprus ve Aydın Transfer'de online rezervasyonu rota ve fiyat hesaplama araçlarıyla birleştirdik; Kıbrıs Lefkoşa Taksi ve Kardeşler Taxi'de tek dokunuşla arama ve WhatsApp akışını mobil öncelikli tasarıma bağladık; Welcome Pickups'ta çok dilli yapı ve müşteri yorumlarıyla uluslararası yolcuya güven veren bir rezervasyon deneyimi kurduk. Her beş projede yerel SEO çalışması da rezervasyon akışına eşlik etti, çünkü talep alan bir form ancak müşteri siteyi bulduğunda işe yarar. Bu beş proje, talep formundan öteye geçmeyen ama telefon hattını rahatlatan gerçek ve çalışan bir çözüm; kurulum süresi de buna göre kısa tutuldu.",
+        "3": "Filo büyüdüğünde ya da online ödeme, araç atama ve şoför paneli gibi ihtiyaçlar doğduğunda bu yapı bir web uygulamasına dönüşür. Bu ölçekte henüz transfer sektöründe bir projemiz yok; bunu açıkça söylüyoruz. Ama Nexos Investment'ta kurduğumuz auth, admin panel ve gerçek zamanlı özellik mimarisi aynı yaklaşımla transfer rezervasyonuna uygulanabilir: rol bazlı erişim, canlı durum güncellemesi ve raporlama aynı temel üzerine kurulur. Hangi ölçekte başlamanız gerektiğine ihtiyacınıza göre birlikte karar veririz; küçük bir talep formuyla başlayıp zamanla platforma genişlemek de bir seçenektir. Bu geçişte veri modelini baştan doğru kurduğumuz için mevcut rezervasyon geçmişiniz kaybolmadan yeni sisteme taşınır."
+      }
+    },
+    "hotel-booking-website": {
+      "title": "Otel Web Sitesi ve Rezervasyon",
+      "metaTitle": "Otel Web Sitesi ve Rezervasyon | Piton Studios",
+      "metaDescription": "Oteller için fotoğraf galerisi odaklı, özel kodlanmış rezervasyon akışlı ve çok dilli web siteleri tasarlıyoruz. Örnek: Sammys Hotel butik otel sitesi.",
+      "intro": "Otel web sitesi, misafirin kararını fotoğraflara ve rezervasyonun kolaylığına bakarak verdiği bir vitrindir. Sammys Hotel için hazır eklenti yerine otelin iş akışına özel kodlanmış bir rezervasyon sistemi kurduk: oda seçimi, tarih ve talep akışı markaya özel tasarımla bütünleşik. Aynı yaklaşımı her ölçekteki konaklama işletmesine uyarlıyoruz.",
+      "bullets": {
+        "1": "Fotoğraf galerisi sitenin taşıyıcısı — misafir odayı ve mekânı gelmeden önce gezer.",
+        "2": "Oda seçimi, tarih ve talep akışını markaya özel tasarımla bütünleştiren rezervasyon sistemi.",
+        "3": "Çok dilli tanıtım — misafir kendi dilinde okuduğu sayfaya daha kolay güvenir.",
+        "4": "Mobil öncelikli hız — seyahat araştırması çoğunlukla telefonda yapılır.",
+        "5": "SEO optimizasyonu ile uluslararası aramalarda otelin bulunurluğu artırılır."
+      },
+      "painTitle": "Otel sitelerinin web'de tıkandığı yerler",
+      "painPoints": {
+        "1": "Satış tamamen rezervasyon platformlarından dönüyor; her konaklamadan komisyon gidiyor.",
+        "2": "Fotoğraflar eski ya da yetersiz; misafir siteye geldiğinde gördüğüyle karşılaşacağından emin olamıyor.",
+        "3": "Hazır bir rezervasyon eklentisi otelin gerçek oda tipi, sezon ve talep akışına uymayınca misafir yine telefonla aramak zorunda kalıyor."
+      },
+      "ctaText": "Misafirleriniz odayı görüp doğrudan sizden rezervasyon yapsın — otel sitenizi konuşalım.",
+      "detail": {
+        "1": "Otel web sitesi ve rezervasyon çözümü, iki şeyi aynı anda taşımak zorundadır: misafiri ikna eden görsel bir tanıtım ve misafiri kaybetmeyen bir rezervasyon akışı. Hazır bir rezervasyon eklentisi çoğu zaman otelin gerçek oda tiplerine, sezonluk fiyatlandırmasına veya özel taleplerine tam uymaz; bu yüzden akışı sıfırdan, otelin iş akışına göre tasarlamak daha güvenilir sonuç verir. Fotoğraf ağırlıklı bir sitede performans da kritik olduğundan galeri ile hız arasındaki dengeyi baştan kurmak gerekir; ziyaretçi telefonda yavaş açılan bir galeriyi beklemeden başka bir seçeneğe geçer. Rezervasyon akışının kaç adımdan oluşacağı da otelin gerçek çalışma düzenine — oda tipi sayısı, sezonluk fiyatlandırma, özel talepler — göre belirlenir.",
+        "2": "Sammys Hotel için tam bunu yaptık: hazır eklenti yerine otelin iş akışına göre özel kodlanmış bir rezervasyon sistemi geliştirdik — oda seçimi, tarih ve talep akışı markaya özel tasarımla bütünleşik. Fotoğraf galerisini sitenin taşıyıcısı yaptık, çok dilli yapı ve SEO optimizasyonuyla uluslararası turiste ulaşan şık bir dijital vitrin teslim ettik. Bu proje, özel fonksiyon geliştirme yetkinliğimizin en güçlü kanıtlarından biri; otelin kendi çalışma düzeni, hazır bir eklentinin şablonuna sıkıştırılmak yerine sistemin kendisi haline geldi, misafir deneyimi bundan doğrudan yararlandı. Rezervasyon formu ile fotoğraf galerisi aynı tasarım dilinde, tek bir akış olarak kurgulandı.",
+        "3": "Sonuç, misafirin platformdan değil doğrudan sizden rezervasyon yapmasıdır — araya komisyon girmez ve misafir ilişkisi ilk talepten itibaren sizde başlar. Bugün portföyümüzde bu kalıptaki tek örneğimiz Sammys Hotel; bunu açıkça söylüyoruz. Ama aynı yaklaşımı — gerçek iş akışına özel rezervasyon mantığı, galeri ağırlıklı tasarım, çok dilli yapı ve SEO — her ölçekteki otel, butik konaklama ve pansiyona uyguluyoruz; akışı sizin oda ve sezon düzeninize göre kurarız, hazır bir kalıba sizi sıkıştırmayız. İlk görüşmede otelinizin rezervasyon akışını birlikte haritalayarak başlarız; oda tipiniz, sezon takviminiz ve misafir profiliniz tasarımın çıkış noktası olur, şablon değil."
+      }
+    },
+    "ecommerce-seo": {
+      "title": "E-Ticaret SEO",
+      "metaTitle": "E-Ticaret SEO | Piton Studios",
+      "metaDescription": "E-ticaret siteleri için ürün ve kategori sayfası SEO'su: schema markup, teknik düzeltmeler ve yapay zekâ destekli aramalarda görünürlük (GEO) kuruyoruz.",
+      "intro": "E-ticaret SEO'su, ürün ve kategori sayfalarının arama motorlarında ve yapay zekâ destekli aramalarda bulunmasını hedefler. Beton Store ve Boon Fresh'te ürün kataloğunu SEO optimizasyonuyla birlikte kurduk; hedef, satışın yalnızca reklam bütçesine bağımlı kalmamasıydı. Teknik SEO, schema markup ve içerik yapısı birlikte ele alınır.",
+      "bullets": {
+        "1": "Ürün ve kategori sayfalarına özel teknik SEO — taranabilirlik, indeksleme ve yinelenen içerik düzeltmeleri.",
+        "2": "Product/Offer schema markup ile arama sonuçlarında fiyat ve stok bilgisi öne çıkar.",
+        "3": "Görsel ağırlıklı ürün sayfalarında Core Web Vitals optimizasyonu ile hız korunur.",
+        "4": "Yapay zekâ destekli alışveriş aramalarında (GEO) doğru bilgiyle görünürlük kurulur.",
+        "5": "Kategori sayfaları arama niyetine göre yapılandırılır; satış yalnızca reklama bağımlı kalmaz."
+      },
+      "painTitle": "E-ticarette SEO tarafında en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Ürünler Google'da görünmüyor; satış tamamen reklam bütçesine ve sosyal medya paylaşımlarına bağımlı kalıyor.",
+        "2": "Kategori sayfaları filtre parametreleriyle çoğaltılınca yinelenen içerik arama motorunu yanıltıyor.",
+        "3": "Yeni eklenen ürünler uzun süre indekslenmiyor, sezonluk satış fırsatı arama trafiğine yansımıyor."
+      },
+      "ctaText": "Ürünleriniz aramada reklamdan bağımsız da bulunsun — e-ticaret SEO çalışmasını konuşalım.",
+      "detail": {
+        "1": "E-ticaret SEO'su, genel bir kurumsal site SEO'sundan farklı bir yapı ister: ürün ve kategori sayfası sayısı hızla büyür, filtreleme parametreleri yinelenen içerik riski taşır, stok durumu sık değişir. Teknik SEO burada taranabilirlik, doğru indeksleme ve schema markup ile arama motoruna ürünün ne olduğunu net anlatır; içerik SEO ise kategori sayfalarını arama niyetine göre yapılandırır. Ürün sayfası sayısı yüzlerle ifade edildiğinde bu yapı elle değil, şablon ve otomatik meta üretimiyle sürdürülebilir hale gelir; aksi halde her yeni ürün ayrı bir manuel iş yüküne dönüşür. Görsel ağırlıklı ürün sayfalarında Core Web Vitals'ı korumak da bu yapının ayrılmaz bir parçasıdır, çünkü yavaş açılan bir sayfa arama motorunda da geride kalır.",
+        "2": "Beton Store'da yapı malzemeleri ve beton ürünleri kataloğunu ürün kataloğu, sipariş yönetimi ve iletişim sistemiyle birlikte kurup SEO optimizasyonuyla organik trafik artışı sağladık. Boon Fresh'te taze gıda ve market ürünleri teslimat platformunda hızlı sipariş akışını SEO optimizasyonuyla destekleyerek organik trafiği büyüttük. Her iki projede de hedef, satışın tek kanala (reklam) bağımlı kalmamasıydı; katalog büyüdükçe SEO çalışmasını da katalogla birlikte güncel tuttuk, tek seferlik bir kurulum olarak bırakmadık. Ürün eklendikçe sayfa yapısı ve meta bilgiler otomatik olarak yeni ürüne uyarlandı, ekstra elle müdahale gerekmedi; iki mağaza da kataloglarını büyütürken SEO çalışmasını yeniden kurmak zorunda kalmadı.",
+        "3": "Sonuç tarafında hedef, ürün ve kategori sayfalarının hem klasik aramalarda hem yapay zekâ destekli aramalarda (GEO) doğru bilgiyle görünmesidir. Doğrudan yanıt veren ürün açıklamaları ve yapılandırılmış veri, LLM tabanlı alışveriş asistanlarının da doğru ürünü önermesini sağlar. Bu sayede mağaza, reklam durduğunda trafiği de durmayan bir yapıya kavuşur; organik trafik reklam bütçesinin üstüne eklenen bir kanal olur, onun yerine geçmese de bağımlılığı azaltır. Hangi ürün sayfasının hangi aramadan geldiğini izleyebildiğinizde stratejiyi veriyle güncellersiniz, tahminle değil ölçülebilir sinyallerle ilerlersiniz ve bütçenizi buna göre önceliklendirirsiniz; hangi kategorinin daha fazla çalışma gerektirdiğini de aynı veriden görürsünüz."
+      }
+    },
+    "ecommerce-automation": {
+      "title": "E-Ticaret Otomasyonu",
+      "metaTitle": "E-Ticaret Otomasyonu | Piton Studios",
+      "metaDescription": "E-ticaret mağazaları için stok, sipariş ve pazaryeri senkronizasyonunu otomatikleştiren n8n ve webhook tabanlı akışlar kuruyoruz; kapsamı birlikte belirleriz.",
+      "intro": "E-ticaret otomasyonu, mağazanızdaki sipariş, ödeme, kargo ve bildirim adımlarını elle yürütmek yerine birbirine bağlayan akışlardır. Ambalaj Cini'de ödeme tahsilatını, DHL kargo takibini ve sipariş durumunu birbirine senkronize eden, müşteriye ve ekibe otomatik bildirim gönderen bir altyapı kurduk; aynı yaklaşımı stok ve pazaryeri senkronizasyonuna da uyguluyoruz.",
+      "bullets": {
+        "1": "Sipariş geldiğinde stok, kargo ve muhasebe sistemlerini otomatik güncelleyen webhook akışları.",
+        "2": "n8n veya Zapier ile çoklu pazaryeri ilan ve stok senkronizasyonu.",
+        "3": "Sipariş ve iade bildirimlerinin e-posta veya WhatsApp üzerinden otomatik gönderimi.",
+        "4": "Zamanlanmış işlerle stok raporu, fatura kesimi ve tekrarlayan bakım görevlerinin otomatikleştirilmesi.",
+        "5": "Hata uyarılı izleme — bir senkronizasyon adımı bozulduğunda ekip anında haberdar olur."
+      },
+      "painTitle": "E-ticarette otomasyon eksikliğinin yarattığı sorunlar",
+      "painPoints": {
+        "1": "Stok bilgisi birden fazla sistemde elle güncellenince ürün tükendiğinde sipariş almaya devam edilir.",
+        "2": "Sipariş, fatura ve kargo bilgisi ayrı tablolarda tutulunca hangi siparişin hangi aşamada olduğu takip edilemez.",
+        "3": "Pazaryeri entegrasyonu olmayan mağaza her platforma elle ilan girip stok güncellemek zorunda kalır."
+      },
+      "ctaText": "Elle yaptığınız tekrarlayan işi otomasyona bırakalım — e-ticaret otomasyon ihtiyacınızı konuşalım.",
+      "detail": {
+        "1": "E-ticaret otomasyonu, mağazanın kendisini (katalog, ödeme, sipariş akışı) değil bu sistemlerin dışarıyla — pazaryeri, kargo, muhasebe, müşteri iletişimi — bağlantısını hedefler. Otomasyon hizmetimizde süreci önce haritalıyoruz: manuel işi kim, hangi adımda, hangi kararla yapıyor. Sonra n8n (kendi altyapınızda, çalıştırma başına ücret yok, vendor bağımlılığı yok) veya Zapier (altyapı yükü olmadan hızlı kurulum) ile hangi aracın işe uyduğuna karar veriyoruz; karmaşık akışları genellikle n8n'e taşıyoruz. Amaç, insan gerektirmemesi gereken tekrarlayan işi ortadan kaldırmaktır; hata yönetimi ve uç durumlar uygulamadan önce belgelenerek tasarlanır, sonradan yama olarak eklenmez. Böyle kurulan bir otomasyon, iş kuralı değiştiğinde de kolayca güncellenebilir kalır.",
+        "2": "Bu yaklaşımın en somut örneği Ambalaj Cini: PayTR ile ödeme tahsilatı ve DHL entegrasyonuyla kargo takibi, sipariş durumuyla iki yönlü senkronize çalışıyor; sipariş, ödeme ve stok değişiklikleri web push bildirimleri ve işlem e-postalarıyla hem müşteriye hem yönetim ekibine otomatik iletiliyor. Pazaryeri tarafında ise kendi ürünümüz Emlak Sync'teki mantığı uyarlıyoruz: kayıt tek yerden girilir, birden fazla portala (101evler, HangiEv) otomatik yayınlanır ve senkron tutulur, mükerrer veri girişi ortadan kalkar. Aynı prensip — tek kaynaktan gir, birden fazla sisteme otomatik yay — stok ve pazaryeri senkronizasyonu için de geçerlidir. Bu deneyimi mağazanızın kendi sistemlerine (stok, kargo, muhasebe) uyarlarız; önce en çok zaman kaybettiren manuel adımdan başlar, kapsamı adım adım genişletiriz.",
+        "3": "Kurulumdan sonra hata uyarıları, çalıştırma logları ve dashboard'larla süreci izlenebilir tutuyoruz; bir senkronizasyon adımı bozulduğunda bunu siparişler birikmeden önce görürsünüz. Kapsam mağazanın büyüklüğüne ve bağlanacak sistem sayısına göre değişir; ilk görüşmede hangi manuel işin otomasyona en uygun olduğunu birlikte belirleriz. Devir teslimde süreci belgeliyoruz ve ekibiniz bakımını yapabilsin diye eğitim veriyoruz; devam eden değişiklikler için de destek sunuyoruz, sistem değiştikçe otomasyonu birlikte güncelleriz. Böylece otomasyon tek seferlik bir proje değil, mağazanızla birlikte büyüyen bir altyapı olur ve yeni bir sistem eklendiğinde aynı mantıkla ona da bağlanır; kapsamı, karmaşıklığı ve süreyi mağazanızın gerçek ihtiyacına göre birlikte belirleriz."
+      }
+    },
+    "restaurant-google-ads": {
+      "title": "Restoranlar için Google Ads",
+      "metaTitle": "Restoranlar için Google Ads Yönetimi | Piton Studios",
+      "metaDescription": "Restoran ve kafeler için arama kampanyalarıyla yeni müşteri getiren Google Ads yönetimi. Rezervasyon ve sipariş sayfanıza uyumlu kampanya kurulumu ve takibi.",
+      "intro": "Restoranınız için 'yakınımda restoran', 'bölge adı restoran' gibi aramalarda doğru anda karşınıza çıkan Google Ads kampanyaları kuruyor ve yönetiyoruz. Kampanya yalnızca tıklama getirmez; menü sayfanıza ve rezervasyon akışınıza bağlanarak tıklamayı masaya çevirir. Yerel SEO'yu beklerken hemen görünürlük isteyen mekânlar için doğru araç budur.",
+      "bullets": {
+        "1": "Yerel arama odaklı kampanya kurgusu — 'bölge + restoran/kafe' gibi niyeti yüksek aramalar hedeflenir, geniş ve alakasız gösterimlere bütçe harcanmaz.",
+        "2": "Menü ve rezervasyon sayfasıyla uyumlu reklam metni — reklamda vaat edilenle sitede görülen aynı olur, tıklama boşa çıkmaz.",
+        "3": "Arama saatine göre optimizasyon — öğle ve akşam yemeği saatlerinde bütçe artırılır, kapalı saatlerde harcama kısılır.",
+        "4": "Dönüşüm takibi — rezervasyon talebi ve yol tarifi tıklaması gibi somut aksiyonlar ölçülür; hangi kampanyanın masaya müşteri getirdiği görülür.",
+        "5": "Haftalık raporlama — harcama, tıklama ve gelen talep sayısı sade bir raporla paylaşılır, karar vermek için ajans jargonuna gerek kalmaz."
+      },
+      "painTitle": "Restoranların Google Ads'te sık düştüğü hatalar",
+      "painPoints": {
+        "1": "Kampanya geniş eşlemeyle kurulup bölge dışından veya alakasız aramalardan gösterim alıyor; bütçe hızla tükeniyor ama masa dolmuyor.",
+        "2": "Reklam tıklanıyor ama açılan sayfa güncel olmayan bir menü veya yavaş yüklenen bir site; ziyaretçi rezervasyona geçmeden çıkıyor.",
+        "3": "Hiçbir dönüşüm takibi kurulmadığı için hangi kampanyanın gerçekten müşteri getirdiği bilinmiyor, bütçe tahminle dağıtılıyor."
+      },
+      "detail": {
+        "1": "Restoran ve kafelerde Google Ads'in işi, doğru saatte doğru bölgede arayan kişiyi menünüze ve rezervasyon akışınıza taşımaktır. Bu sektörde arama niyeti çok nettir — kişi o an yemek yiyecek bir yer arıyordur ve kararını dakikalar içinde verir; kampanyayı da bu ana göre kurarız: bölge ve öğün saatine göre segmentlenmiş anahtar kelimeler, alakasız gösterimi engelleyen negatif kelime listesi ve menü sayfasına doğrudan yönlendiren reklam metinleri. Genel bir 'restoran' aramasıyla harcanan bütçe yerine, o an sipariş veya rezervasyon niyeti taşıyan aramaya odaklanılır; bu fark, aynı bütçeyle çok daha fazla dolu masa anlamına gelir.",
+        "2": "Kampanyayı kurmadan önce sitenin reklamı karşılayacak durumda olup olmadığına bakarız; Boon Fresh'te kurduğumuz hızlı sipariş akışı ve Virginia Ice Cream'de tasarladığımız net menü sunumu, bir reklam tıklamasının nasıl karara dönüştüğünü gösteren örneklerimiz. Restoran sitesi zaten bizde ise kampanyayı doğrudan mevcut menü ve rezervasyon sayfanıza bağlarız; değilse önce o sayfaları kampanyayı karşılayacak hale getiririz, çünkü iyi hedeflenmiş bir reklam bile yavaş açılan veya güncel olmayan bir menüye çarptığında boşa gider. Kampanya metinleri de sitenin verdiği vaadi birebir yansıtacak şekilde yazılır; tıklayan kişi sitede aradığını hemen bulur ve rezervasyon veya sipariş adımına sürtünmesiz geçer. Kurulumdan sonraki ilk iki haftada büyük değişiklik yapmadan veri toplarız, algoritmanın öğrenmesine alan tanırız.",
+        "3": "Sonuç, tahmin değil ölçülen bir akıştır: hangi anahtar kelimenin rezervasyon talebi getirdiği, hangi saatin daha çok dönüşüm verdiği haftalık raporda görünür ve bütçe zamanla en çok masa dolduran kampanyalara kayar. SEO ve GEO çalışması olgunlaştıkça 'yakınımda restoran' gibi organik aramalarda da görünürlük artar, Google Ads'in payı kademeli olarak azaltılabilir; ama kampanya sürdüğü sürece elde tutulan veri, hangi mesajın ve hangi saatin gerçekten işe yaradığını gösteren kalıcı bir bilgiye dönüşür. Rapor, harcanan bütçeyi değil gelen rezervasyon ve arama sayısını merkeze koyar; böylece kampanyanın gerçekten işe yarayıp yaramadığını yorumla değil sayıyla görürsünüz."
+      },
+      "ctaText": "Restoranınız için Google Ads kampanyasını konuşalım — bize yazın."
+    },
+    "finance-automation": {
+      "title": "Finans Süreç Otomasyonu",
+      "metaTitle": "Finans Süreç Otomasyonu Hizmeti | Piton Studios",
+      "metaDescription": "Döviz büroları, kripto işletmeleri ve finans şirketleri için ödeme takibi, hatırlatma ve raporlama süreçlerini otomatikleştiren yazılım geliştiriyoruz.",
+      "intro": "Finans şirketiniz, döviz büronuz veya kripto işletmeniz için ödeme takibi, vade hatırlatma ve raporlama gibi tekrar eden süreçleri otomatikleştiren yazılımlar geliştiriyoruz. Kendi ürünümüz Ödeme Takip Botu ile ödeme vadelerini izleyip otomatik hatırlatma gönderen, Holly Trader ile piyasa verisi toplayıp raporlayan sistemler kurduk. Amaç, elle takip edilen tabloların yerine kendi kendine çalışan bir sistem koymak.",
+      "bullets": {
+        "1": "Vade ve hatırlatma otomasyonu — ödeme veya taksit tarihi yaklaşınca ilgili kişiye Telegram, e-posta veya WhatsApp üzerinden otomatik bildirim gider.",
+        "2": "Veri toplama ve raporlama — piyasa, kur veya işlem verisi düzenli aralıklarla toplanır, özet panelde anlaşılır hale getirilir.",
+        "3": "Özel iç araçlar — Excel tablolarının yerini, ekibinizin günlük kullanabileceği basit ve güvenilir bir web paneli alır.",
+        "4": "Finansal bütünlük koruması — ödenmiş kayıtlar ve geçmiş veri otomasyon sırasında yanlışlıkla değiştirilmez; her adım denetlenebilir kalır.",
+        "5": "Kademeli devreye alma — otomasyon önce en çok zaman kaybettiren tek bir süreçte kurulur, sonuç görüldükçe kapsam genişletilir."
+      },
+      "painTitle": "Finans süreçlerinde en sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Ödeme ve vade takibi Excel tablolarında elle yapılıyor; bir satırın atlanması gecikmiş ödeme veya kaçırılmış hatırlatma anlamına geliyor.",
+        "2": "Piyasa veya kur verisi farklı kaynaklardan elle derleniyor; rapor hazırlamak saatler alıyor ve veri hazır olduğunda güncelliğini yitirmiş oluyor.",
+        "3": "Süreç tamamen bir kişinin hafızasına ve dikkatine bağlı; o kişi izinli olduğunda ya da işten ayrıldığında sistem tamamen aksıyor."
+      },
+      "detail": {
+        "1": "Finans sektöründe otomasyonun değeri, hız kadar hata payını sıfıra indirmesinde ortaya çıkar; yanlış hesaplanan bir vade ya da unutulan bir hatırlatma doğrudan para kaybı demektir. İyi kurulmuş bir otomasyon, insanın yapması gereken tekrar eden işi devralır ve insanın enerjisini istisna durumları değerlendirmeye bırakır. Elle tutulan bir tablo büyüdükçe hata riski de büyür; otomasyon bu riski, sistemin her satırı aynı kuralla işlemesiyle sabit tutar. Özellikle vade ve tutar gibi geciktirilemeyen işlerde bu tutarlılık, ekip yorulsa veya izinli olsa bile bozulmaz; sistem tatil yapmaz, unutmaz, dikkati dağılmaz ve her işlemi aynı titizlikle tekrarlar.",
+        "2": "Bu alandaki deneyimimizi kendi ürünlerimizde kurduk: Ödeme Takip Botu, şirket ödemelerini (kredi kartı/taksitli, çek, elden ve diğer) izleyip vade tarihi yaklaşınca Telegram üzerinden otomatik hatırlatma gönderiyor; taksitli ödemelerde vade otomatik üretiliyor, geciken ve önümüzdeki 7 gün için özet panel sunuyor, ödenmiş kayıtlar da yanlışlıkla değiştirilmeye karşı korunuyor. Holly Trader ise piyasa verisini toplayıp işleyen ve raporlayan Node.js tabanlı bir araç; veri toplama, sinyal üretimi ve raporlama tek serviste birleşiyor. Finans şirketinizin sürecine göre bu iki modeli — hatırlatma odaklı veya veri/raporlama odaklı — projenize uyarlar, gerekirse ikisini tek sistemde birleştiririz.",
+        "3": "Otomasyonu kurarken veri güvenliğini süreçten ayrı düşünmeyiz; finansal ve kişisel veri hangi sistemde saklanıyor, kime görünüyor sorusu tasarımın başında netleşir ve sistem buna göre kurulur. Devreye alma da tek seferde değil kademeli yapılır: önce en çok zaman kaybettiren tek süreç otomatikleştirilir, sonuç görüldükçe kapsam genişletilir; böylece ekip yeni sisteme güvenmeden önce onu küçük ölçekte görmüş olur. Sonuçta ekibiniz zamanını tabloyu güncellemeye değil, otomasyonun ürettiği özete bakıp karar vermeye ayırır; hata avcılığı yerine iş geliştirmeye odaklanır ve büyüme dönemlerinde iş yükü aynı oranda artmaz; ekip büyümeden önce süreç ölçeklenir, işlem hacmi artsa da sistem aynı disiplinle çalışmaya devam eder."
+      },
+      "ctaText": "Finans sürecinizi otomatikleştirelim — bize yazın."
+    },
+    "clinic-seo": {
+      "title": "Klinik ve Diş Hekimi SEO",
+      "metaTitle": "Klinik ve Diş Hekimi SEO Hizmeti | Piton Studios",
+      "metaDescription": "Klinik ve diş hekimliği web siteleri için teknik SEO, yapılandırılmış veri ve GEO çalışması. Hastanın arama yaptığı anda doğru bilgiyle bulunun.",
+      "intro": "Klinik veya diş hekimliği web siteniz için teknik SEO ve GEO (yapay zekâ destekli arama görünürlüğü) çalışması yapıyoruz. Hedef, hastanın tedavi veya semptom aradığı anda sitenizin doğru ve güncel bilgiyle karşısına çıkmasıdır. Sağlık alanında reklam ve tanıtım içeriğinin ilgili mevzuata uygun kalması gerektiğini biliyoruz; çalışmayı buna dikkat ederek, sağlık iddiası içermeyen, bilgilendirici içerik üzerinden kurarız.",
+      "bullets": {
+        "1": "Teknik SEO denetimi — tarama, indeksleme ve sayfa hızı sorunları tespit edilir; klinik sitesinin arama motorları tarafından doğru okunması sağlanır.",
+        "2": "Tedavi sayfası yapısı — her tedavi kendi sayfasında, hastanın sorduğu soruları doğrudan yanıtlayan bir içerikle anlatılır.",
+        "3": "Yapılandırılmış veri (schema) — klinik, hekim ve sık sorulan soru işaretlemeleri arama sonuçlarında zengin görünüm kazandırır.",
+        "4": "GEO çalışması — içerik, yapay zekâ destekli arama araçlarının doğru alıntılayabileceği netlikte yapılandırılır.",
+        "5": "Yerel SEO — Google Business profili ve site içeriği birlikte kurgulanır; 'bölge + diş hekimi' gibi aramalarda görünürsünüz."
+      },
+      "painTitle": "Klinik sitelerinde SEO tarafında sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Tedavi bilgileri sitede yok ya da çok yüzeysel; hasta aradığı cevabı bulamayınca aramaya devam edip başka kliniğe yöneliyor.",
+        "2": "Site teknik olarak yavaş veya mobilde düzgün açılmıyor; arama motorları sayfayı düşük öncelikli değerlendiriyor.",
+        "3": "Yapılandırılmış veri hiç kurulmamış; klinik bilgileri arama sonuçlarında ve yapay zekâ araçlarında eksik veya hatalı görünüyor."
+      },
+      "detail": {
+        "1": "Sağlık aramalarında hasta genellikle bir semptomla ya da tedavi adıyla arama yapar ve kararını gördüğü ilk birkaç sonuçtan etkilenerek verir. SEO burada yalnızca sıralamayı değil, hastanın güven duyduğu ilk kaynak olmayı hedefler; bu yüzden içerik doğru, güncel ve anlaşılır olmak zorundadır — abartılı vaat içeren değil, bilgilendirici bir dille yazılır. Klinik veya diş hekimliği gibi kararın sağlıkla ilgili olduğu aramalarda bu netlik, sıralamadan önce gelen bir güven meselesidir; hasta önce kliniğe, sonra tedaviye ikna olur. Bu yüzden içerik üretimini pazarlama diliyle değil hastanın anlayacağı açıklıkla kurarız, çünkü kafası karışan hasta randevu almaz.",
+        "2": "Dental Health projesinde tedavileri, ekipmanı ve uzman kadroyu sergileyen bir site kurarken içerik yapısını da arama motorları okuyabilecek şekilde tasarladık; bu deneyimi SEO çalışmasının temeline koyarız. Teknik denetimle başlar — tarama, indeksleme ve sayfa hızı sorunlarını tespit ederiz; ardından tedavi sayfalarını hastanın diliyle yeniden kurar, schema işaretlemesiyle klinik ve hekim bilgisini arama motorlarına ve yapay zekâ araçlarına netleştiririz. Reklam ve içerik üretiminde sağlık sektörüne özgü tanıtım kurallarına dikkat ederiz; kanıtlanmamış sonuç veya karşılaştırma iddiası içeren metin yazmayız, yalnızca tedavi kapsamını ve kliniğin sunduğu bilgiyi anlatırız. Bu disiplin, kliniğin hem arama motorlarında hem hasta gözünde güvenilir kalmasını sağlar.",
+        "3": "Çalışmanın sonucu, klinik adıyla veya tedavi adıyla yapılan aramalarda ve yapay zekâ destekli sağlık sorgularında doğru bilgiyle görünmektir. Bu görünürlük tek seferlik bir kampanya değil; güncel tutulan içerik ve düzenli teknik bakımla zamanla biriken bir varlıktır. Hangi tedavi sayfasının ziyaret edildiği izlenerek, içerik takvimi de gerçek hasta ilgisine göre şekillendirilir; böylece kaynak, hastanın en çok merak ettiği konulara yönlendirilir ve zamanla klinik daha geniş bir tedavi yelpazesinde görünür olur; her yeni sayfa mevcut görünürlüğün üzerine eklenir ve önceki emek kaybolmaz, aksine sonraki içeriğin değerini de artırır ve klinik zaman içinde kendi alanında bir referans kaynağına dönüşür."
+      },
+      "ctaText": "Klinik sitenizin SEO'sunu konuşalım — bize yazın."
+    },
+    "corporate-ai-assistant": {
+      "title": "Kurumsal Yapay Zekâ Asistanı",
+      "metaTitle": "Kurumsal Yapay Zekâ Asistanı Geliştirme | Piton Studios",
+      "metaDescription": "Kurumsal web sitenize veya iç süreçlerinize entegre yapay zekâ asistanı geliştiriyoruz. Claude, OpenAI ve Gemini ile guardrail ve maliyet kontrollü kurulum.",
+      "intro": "Kurumsal web siteniz veya iç süreçleriniz için müşteri sorularını yanıtlayan, doküman arayan ya da tekrar eden bir görevi devralan yapay zekâ asistanları geliştiriyoruz. Claude, OpenAI ve Gemini modelleriyle çalışıyor, modeli alışkanlıkla değil kullanım senaryosuna göre seçiyoruz. Kendi ürün denememiz ContentFlow AI'da içerik üretim akışını yapay zekâ ile hızlandıran bir sistem kurarak bu alandaki entegrasyon deneyimimizi kendi tarafımızda test ettik.",
+      "bullets": {
+        "1": "Kullanım senaryosu netleştirme — asistanın hangi soruları yanıtlayacağı, hangi verilere erişeceği ve neyi yapmayacağı en başta tanımlanır.",
+        "2": "RAG ve doküman tabanlı yanıt — asistan kurumunuzun kendi dokümanlarından ve içeriğinden yanıt üretir, genel internet bilgisiyle karışmaz.",
+        "3": "Guardrail ve kapsam sınırlama — asistan tanımlanan konunun dışına çıkmaz; hatalı veya yanıltıcı yanıt riskini azaltan filtreler kurulur.",
+        "4": "Maliyet kontrolü — model seçimi ve istek yönetimi, kullanım arttıkça maliyetin öngörülebilir kalmasını sağlayacak şekilde tasarlanır.",
+        "5": "İzlenebilirlik — her yanıtın hangi veriden üretildiği ve maliyeti kayıt altına alınır; asistan bir kara kutu olarak çalışmaz."
+      },
+      "painTitle": "Kurumsal AI asistanı projelerinde sık gördüğümüz sorunlar",
+      "painPoints": {
+        "1": "Asistan genel bir modelin varsayılan haliyle devreye alınıyor; kurumun kendi süreç ve içeriğine göre kapsam belirlenmediği için yanıtlar isabetsiz kalıyor.",
+        "2": "Guardrail kurulmadan yayına alınan asistan, konu dışı sorulara da yanıt vermeye çalışıyor ve kurumu bağlayacak ifadeler üretebiliyor.",
+        "3": "Maliyet ve kullanım baştan modellenmediği için kullanım arttıkça fatura öngörülemez hale geliyor, proje sürdürülebilirliğini kaybediyor."
+      },
+      "detail": {
+        "1": "Kurumsal bir yapay zekâ asistanının değeri, her sorguya yanıt üretmesinde değil, doğru sorguya doğru kaynaktan doğru yanıtı vermesinde ortaya çıkar. Bu yüzden işe modelden değil kullanım senaryosundan başlarız: asistan müşteri sorularını mı yanıtlayacak, iç ekibin dokümanlarında mı arama yapacak, yoksa tekrar eden bir formu mu dolduracak — her senaryo farklı bir mimari, farklı bir veri erişimi ve farklı bir guardrail seti gerektirir. Bu netlik olmadan kurulan bir asistan, ya çok dar kalıp işe yaramaz ya da kapsamı belirsiz kalıp güvenilirliğini kaybeder; ikisi de kurum için itibar riski taşır ve geri dönüşü zor olur.",
+        "2": "Kurumsal projelerde çok dilli yapıyı ve kurumsal güveni nasıl kurduğumuzu BT Elevator ve Arslan Group gibi projelerde gördünüz; AI entegrasyonu tarafındaki deneyimimizi ise kendi ürünümüz ContentFlow AI'da test ettik — içerik fikrinden taslağa ve yayın akışına uzanan adımları yapay zekâ ile hızlandıran bu prototip, model seçimi, akış tasarımı ve ürünleştirme adımlarındaki yetkinliğimizi gösteriyor. Kurumsal asistan projelerinde bu iki deneyimi birleştiririz: kurumun mevcut içerik ve süreç altyapısına, güvenlik ve guardrail katmanı eklenmiş bir AI katmanı kurarız; Claude, OpenAI ve Gemini arasında seçimi alışkanlıkla değil kullanım senaryosuna göre yaparız, tek bir sağlayıcıya bağımlı kalmayız.",
+        "3": "Sonuçta hedef, asistanın ölçülebilir ve öngörülebilir kalmasıdır. Hangi soruların yanıtlandığı, hangi sorularda asistanın devre dışı kaldığı ve maliyetin nasıl seyrettiği izlenir; her yanıtın hangi veriden üretildiği kayıt altına alınır. Kurum içi veri gizliliği ve hangi verinin hangi modele gönderildiği sorusu, entegrasyonun başında netleştirilen bir tasarım kararıdır — sonradan eklenen bir önlem değil, mimarinin bir parçasıdır ve süreç boyunca gözden geçirilir. Kurum böylece asistanı bir deney değil, sorumluluğu tanımlı bir sistem olarak yönetir ve gerektiğinde geriye dönük olarak neyin neden söylendiğini açıklayabilir; bu da hukuki ve itibari riski önceden görünür kılar."
+      },
+      "ctaText": "Kurumunuza uygun AI asistanını konuşalım — bize yazın."
+    },
+    "education-platform": {
+      "title": "Eğitim Platformu Geliştirme",
+      "metaTitle": "Eğitim Platformu Geliştirme Hizmeti | Piton Studios",
+      "metaDescription": "Kurs, sınav veya öğrenci takip özellikli özel eğitim platformları geliştiriyoruz. Kayıt akışı, kullanıcı paneli ve içerik yönetimi tek yapıda kurulur.",
+      "intro": "Kurs merkeziniz veya eğitim kurumunuz standart bir tanıtım sitesinin ötesine geçip öğrenci girişi, ilerleme takibi veya sınav gibi özellikler istediğinde özel bir web uygulaması geliştiriyoruz. Portföyümüzde eğitim sektörüne özel bir proje henüz yok; ancak panel, portal ve kullanıcı girişli sistem kurma deneyimimizi Nexos Investment'taki ilan yönetim portalı ve kendi ürünümüz Social Pro'daki çoklu hesap mimarisiyle kanıtlıyoruz.",
+      "bullets": {
+        "1": "Kullanıcı girişli yapı — öğrenci, eğitmen ve yönetici için ayrı yetkilerle çalışan bir giriş ve panel sistemi kurulur.",
+        "2": "İçerik ve program yönetimi — kurs ve program içerikleri, teknik bilgi gerektirmeden panelden güncellenir.",
+        "3": "İlerleme ve kayıt takibi — öğrencinin hangi kursta, hangi aşamada olduğu tek panelden izlenir.",
+        "4": "Ölçeklenebilir mimari — az kullanıcıyla başlayıp büyüyen bir platforma, yeniden yazmaya gerek kalmadan büyüyebilecek bir temel kurulur.",
+        "5": "Mobil uyumlu arayüz — öğrenci ve veli platforma telefondan girdiğinde de aynı akıcılıkta kullanır."
+      },
+      "painTitle": "Eğitim platformu ihtiyacında sık gördüğümüz durum",
+      "painPoints": {
+        "1": "Kurum hazır bir LMS ile başlıyor ama kendi sürecine uymayan kısımları elle, tabloyla telafi etmeye çalışıyor.",
+        "2": "Öğrenci ve eğitmen için ayrı yetki yapısı olmadığından herkes aynı paneli görüyor, kim neyi görmeli sorusu her seferinde manuel çözülüyor.",
+        "3": "Kurs içeriğini güncellemek geliştiriciye bağımlı kalıyor; küçük bir değişiklik bile günler sürebiliyor."
+      },
+      "detail": {
+        "1": "Eğitim platformu, standart bir web sitesinden farklı olarak kullanıcı girişi, yetkilendirme ve veri modeli gerektiren bir web uygulamasıdır. Kurumun ihtiyacı hazır bir LMS'in kalıbına mı yoksa kendi sürecine göre kurulmuş özel bir sisteme mi uygun, işe bu sorunun cevabıyla başlarız; çünkü hazır sistemin esnetilemediği her nokta, sonradan elle tutulan bir tabloya dönüşme riski taşır. Doğru cevap kurumun büyüklüğüne, program çeşitliliğine ve ekibin teknik kapasitesine göre değişir; bu yüzden ilk adım her zaman bir kapsam görüşmesidir, hazır çözümü dayatmayız ve kurumun mevcut süreçlerini önce anlarız; teknoloji seçimi bu anlayıştan sonra gelir.",
+        "2": "Sektörde henüz bir eğitim projesi teslim etmedik; bunu saklamak yerine transfer edilebilir deneyimimizi göstermeyi tercih ederiz. Nexos Investment'ta ilan yönetiminden otomatik PDF ve sunum formatında teklif üretimine uzanan, haritalı, çok dilli ve yetkilendirmeli bir portal kurduk; kendi ürünümüz Social Pro'da ise çoklu hesap mimarisi, içerik takvimi ve panel tasarımını sıfırdan geliştirdik. Bir eğitim platformunda ihtiyaç duyulan öğrenci/eğitmen/yönetici ayrımı, içerik yönetimi ve ilerleme takibi, bu iki projede kurduğumuz mimarilerle aynı temel prensiplere dayanır: doğru veri modeli, net yetkilendirme ve panelden yönetilebilir içerik. Teknolojiyi de bu prensiplere göre, projenin ölçeğine uygun seçeriz.",
+        "3": "Kuruma teslim ettiğimiz platform, geliştiriciye bağımlı kalmadan büyüyebilecek bir temel üzerine kurulur: içerik ekibinizin kendisinin güncelleyebileceği bir yapı, kullanıcı arttıkça yeniden yazmaya gerek kalmayan bir mimari. Süreç boyunca kapsamı birlikte netleştirir, ilk sürümü mümkün olan en dar ama çalışan haliyle çıkarıp üzerine ekleriz; böylece kurum, tüm platformun bitmesini beklemeden ilk kayıt döneminde sonuç almaya başlar ve geri bildirime göre sonraki adımı birlikte şekillendiririz. Bu kademeli yaklaşım, bütçenin ve kapsamın kontrolden çıkmasını da önler; her aşamada ne için ödeme yaptığınızı net görürsünüz ve bir sonraki adıma tahminle değil, gerçek kullanıcı geri bildirimiyle karar verirsiniz."
+      },
+      "ctaText": "Eğitim platformu ihtiyacınızı konuşalım — bize yazın."
+    },
+    "beauty-appointment-system": {
+      "title": "Güzellik Salonu Randevu Sistemi",
+      "metaTitle": "Güzellik Salonu Randevu Sistemi Geliştirme | Piton Studios",
+      "metaDescription": "Salon ve kuaförler için takvim, personel ve hizmet bazlı özel randevu sistemi geliştiriyoruz. Müşteri online randevu alır, salon panelden yönetir.",
+      "intro": "Standart bir randevu formunun ötesinde, personel bazlı takvim ve hizmet süresine göre müsaitlik gösteren özel bir randevu sistemi isteyen salon ve kuaförler için web uygulaması geliştiriyoruz. Portföyümüzde güzellik sektörüne özel bir proje henüz yok; ancak online rezervasyon akışı kurma deneyimimizi Jet Transfer Cyprus ve Welcome Pickups'taki booking sistemleriyle kanıtlıyoruz — aynı mantık salon takvimine uyarlanabilir.",
+      "bullets": {
+        "1": "Personel ve hizmet bazlı takvim — müşteri istediği hizmeti ve tercihen personeli seçer, sistem yalnızca gerçekten müsait saatleri gösterir.",
+        "2": "Otomatik hatırlatma — randevu öncesi müşteriye SMS veya WhatsApp üzerinden otomatik hatırlatma gider, gelmeme oranı düşer.",
+        "3": "Salon paneli — işletme sahibi tüm randevuları, personel doluluğunu ve iptalleri tek panelden görür.",
+        "4": "Online ödeme veya kapora entegrasyonu — talep edilirse randevu sırasında kapora alınarak boş kalan randevu riski azaltılır.",
+        "5": "Mobil öncelikli akış — müşteri randevuyu telefonundan birkaç dokunuşla, mesaj trafiğine girmeden tamamlar."
+      },
+      "painTitle": "Salon randevu sistemine geçerken sık gördüğümüz durum",
+      "painPoints": {
+        "1": "Randevular DM ve telefonla alınıyor; hangi personelin hangi saatte müsait olduğu yalnızca resepsiyondaki kişinin hafızasında.",
+        "2": "Gelmeyen müşteri için hatırlatma yapılmıyor, boş kalan randevu saati geri kazanılamıyor.",
+        "3": "Hazır randevu yazılımları salonun kendi hizmet ve personel yapısına tam oturmuyor, işletme yine de bir kısmını elle takip etmek zorunda kalıyor."
+      },
+      "detail": {
+        "1": "Bir güzellik salonunda randevu sistemi, basit bir form değil personel müsaitliği, hizmet süresi ve müşteri tercihini aynı anda yöneten küçük bir operasyon aracıdır. İhtiyaç genellikle tek bir kişiye bağlı elle takipten, birden fazla personelin takviminin çakışmadan yönetildiği bir sisteme geçiştir; salon büyüdükçe bu geçiş bir lüks değil, hizmet kalitesini korumak için gereklilik haline gelir. Yanlış planlanan bir randevu sistemi, hem müşteri memnuniyetsizliği hem de boşa giden koltuk saati anlamına gelir; her iki kayıp da doğrudan gelire yansır ve zamanla büyür; küçük bir aksama bile itibar kaybına dönüşebilir, çünkü müşteri başka bir salonu bir mesaj kadar uzaktadır.",
+        "2": "Sektörde henüz bir güzellik projesi teslim etmedik; bu deneyimi saklamak yerine transfer edilebilir yönünü göstermeyi tercih ederiz. Jet Transfer Cyprus'ta rota ve fiyat hesaplama araçlarıyla birleşen bir online rezervasyon akışı, Welcome Pickups'ta ise çok dilli, müşteri yorumlu ve mobil öncelikli bir booking sistemi kurduk. Bu projelerde çözdüğümüz temel problem — müsaitliği doğru göstermek, talebi yapılandırılmış biçimde almak ve işletmeye net bir panelde sunmak — bir salon randevu sistemindeki personel ve hizmet bazlı takvimle aynı mantığa dayanır; değişen yalnızca 'güzergâh'ın yerini 'hizmet ve personel'in almasıdır, akışın omurgası aynı kalır.",
+        "3": "Kurulan sistem, salonun günlük operasyonuna göre şekillenir: kaç personel var, hangi hizmetler ne kadar sürüyor, kapora alınacak mı, hatırlatma hangi kanaldan gidecek. İlk sürüm bu sorulara net cevap veren en dar kapsamla çıkar, salon kullandıkça hatırlatma, ödeme veya raporlama gibi katmanlar üzerine eklenir; böylece salon, ihtiyacı olmayan bir özellik için baştan ödeme yapmaz ve sistemi kendi temposunda büyütür. Bu yaklaşım, küçük bir salonun da büyük bir zincirin de kendi ölçeğine uygun bir sistem edinmesini sağlar; hiçbiri diğerinin ihtiyacı için fazladan ödeme yapmaz ve sistem gerçek kullanıma göre olgunlaşır, ilk günden itibaren gereksiz karmaşıklık taşımaz."
+      },
+      "ctaText": "Salonunuza özel randevu sistemini konuşalım — bize yazın."
+    }
   }
 }

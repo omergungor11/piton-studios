@@ -1,0 +1,258 @@
+---
+title: "PWA or native mobile app? A decision guide"
+description: "The real difference between a Progressive Web App and a native mobile app isn't platform quality — it's which hardware access you actually need and how much of the store approval process you're willing to accept. A decision matrix, publishing paths and App Store rules."
+date: 2026-09-15
+tags: ["pwa", "mobile app", "web app", "performance"]
+author: "Piton Studios"
+draft: false
+translationKey: pwa-vs-native-app
+sources:
+  - title: "web.dev — What does it take to be installable?"
+    url: "https://web.dev/articles/install-criteria"
+  - title: "WebKit — Web Push for Web Apps on iOS and iPadOS"
+    url: "https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/"
+  - title: "Chrome for Developers — Trusted Web Activity: Quick Start"
+    url: "https://developer.chrome.com/docs/android/trusted-web-activity/quick-start"
+  - title: "Apple — App Store Review Guidelines, 4.2 Minimum Functionality"
+    url: "https://developer.apple.com/app-store/review/guidelines/#minimum-functionality"
+faq:
+  - q: "Can I put my PWA on the Google Play Store?"
+    a: "Yes. Using Trusted Web Activity (TWA), a PWA can be packaged as a real Android app on top of Chrome Custom Tabs and uploaded to the Play Store. Your site needs HTTPS, a valid manifest, a service worker and the required icon sizes, and you also need to publish a Digital Asset Links file that links your domain to the app."
+  - q: "Can a PWA get into Apple's App Store?"
+    a: "Technically it can be packaged and submitted with tools like PWABuilder, but unlike Google, Apple has no official 'move your web app to the store' path. Review follows section 4.2 of the App Store Review Guidelines: if the app just wraps a website with no extra functionality, it risks rejection."
+  - q: "Can iPhone users get push notifications from a PWA?"
+    a: "Yes, but only since a specific date. As of iOS and iPadOS 16.4 (March 2023), web apps added to the home screen can send notifications through the same Apple Push Notification service used by native apps. It isn't possible on older iOS versions."
+  - q: "When is a native app genuinely required?"
+    a: "Native is required for scenarios like Bluetooth device pairing, NFC payments, continuous background location tracking, advanced camera/AR features, or deep access to the device's operating system. Most content, dashboard and e-commerce apps outside those cases are well served by a PWA."
+  - q: "Can you start with a PWA and move to native later?"
+    a: "Yes, and it's a common strategy. Launching cheaply with a PWA and seeing from real usage data which native feature is actually in demand significantly lowers the risk of the native investment. The two aren't rivals — they can also be sequenced as successive steps."
+---
+
+The "PWA or native" question is usually asked the wrong way. The right question isn't which one is
+"better" — it's **which hardware access your project genuinely needs** and how dependent you're
+willing to be on a store approval process. In this article we ground the decision in concrete
+criteria and official platform rules.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "The difference comes from hardware access and distribution model, not platform quality.",
+    "A PWA can be officially published to the Google Play Store via Trusted Web Activity.",
+    "Apple has no official store path for PWAs; wrappers that make it into the App Store fall under rule 4.2.",
+    "Push notifications on iOS only work from 16.4 onward (March 2023).",
+    "Starting with a PWA and moving to native once real demand appears is a reasonable, risk-lowering sequence.",
+  ]}
+/>
+
+## What the two approaches mean
+
+A **PWA (Progressive Web App)** is a website that runs in the browser but, thanks to a web app
+manifest and a service worker, can be added to the home screen, work offline and send push
+notifications. It's a single codebase that runs on desktop, Android and iOS at once.
+
+A **native app** is written in platform-specific languages — Swift/SwiftUI for iOS, Kotlin for
+Android — with direct access to all of the device's APIs, and is distributed through the App Store
+and Google Play. Two platforms generally mean two separate codebases (or a shared layer like React
+Native or Flutter).
+
+The difference often gets reduced to "which one looks more professional," but that's the wrong axis.
+Users typically don't notice whether an app is a PWA or native — what they notice is whether it
+opens fast, whether the feature works, and whether it meets their need. The decision is a technical
+question about which hardware APIs and which distribution model your product actually needs, far
+more than it is a question of user perception.
+
+<Callout type="info" title="This isn't a piece taking sides">
+  On our [Nexos Investment](/en/projects/nexos-investment) project, we delivered a PWA with offline
+  support alongside an admin panel. The choice is made based on the project's hardware needs, not on
+  technology trends.
+</Callout>
+
+## Decision matrix
+
+Read each row against your own project. Whichever column holds the majority is your answer.
+
+| Criterion | Favours PWA | Favours native |
+|---|---|---|
+| Hardware access | Camera, location, notifications are enough | Bluetooth, NFC, background location, advanced sensors |
+| Distribution | Single codebase, instant updates | Store approval, version management |
+| Budget | Low upfront cost | Separate development for two platforms |
+| Store presence | Possible on Play Store, uncertain on App Store | Guaranteed on both stores |
+| Offline use | Broad support via the service worker | Full control, no limits |
+| Performance ceiling | Bound by the web platform | Can be optimised at the OS level |
+| Corporate perception/trust | "Just a website" perception in some sectors | "A real app" perception |
+| Maintenance | Single release, single test cycle | Two platforms, two test cycles |
+
+## PWA's technical requirements: a checklist, not a claim
+
+A PWA being "installable" isn't a marketing claim — it's a concrete checklist enforced by browsers.
+According to [web.dev's installability criteria](https://web.dev/articles/install-criteria), for a
+web app to show an install prompt in Chrome it needs:
+
+- to be served over HTTPS,
+- a valid web app manifest with `name`/`short_name`, `start_url` and `display`
+  (fullscreen/standalone/minimal-ui/window-controls-overlay) fields,
+- **192px and 512px** icon sizes defined in the manifest,
+- the user to have interacted with the page at least once and spent at least 30 seconds on it.
+
+These are technical thresholds checked by the browser itself — this is where the difference between
+"we built a PWA" and "we built an installable PWA" actually shows up.
+
+<StatGrid
+  items={[
+    { value: "192 / 512", label: "Required manifest icon sizes (px)", note: "WEB.DEV" },
+    { value: "30 sec", label: "Minimum interaction time for the install prompt", note: "WEB.DEV" },
+    { value: "16.4", label: "iOS version that brought Web Push support", note: "WEBKIT · MARCH 2023" },
+  ]}
+/>
+
+## The real limit on iOS: the push notification timeline
+
+The most common objection raised against PWAs used to be "it doesn't work properly on iPhone" — and
+up to a point, that was fair. According to
+[WebKit's announcement](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/), Web
+Push support for web apps added to the home screen only arrived with **iOS and iPadOS 16.4** (March
+2023), and notifications use the same Apple Push Notification service as native apps, appearing on
+the lock screen and on Apple Watch.
+
+<Callout type="warn" title="Check your user base's iOS version">
+  A visitor on an iOS version older than 16.4 can't receive push notifications. If most of your
+  users are on current iOS versions — Apple's own data shows a high update rate — this is now a
+  minor limit in practice; it's still worth watching in enterprise scenarios with an older device
+  fleet.
+</Callout>
+
+## Designing the offline experience
+
+The most misunderstood part of a PWA is offline behaviour. "We added a service worker, so it now
+works offline" is an incomplete statement — deciding which data is accessible offline is a
+deliberate architectural choice, not an automatic side effect. In practice, three layers need to be
+handled separately:
+
+1. **The app shell** — navigation, core UI, static assets. Caching this is relatively
+   straightforward and is done in almost every PWA.
+2. **Previously viewed content** — a product page, an article, a list. This becomes accessible
+   offline through the service worker's caching strategy (such as stale-while-revalidate).
+3. **Real-time or transactional flows** — payment, stock checks, live pricing. These shouldn't be
+   faked offline; they need to be designed separately to sync in the background once the connection
+   returns, otherwise you risk showing the user incorrect information.
+
+The same distinction applies on the native side too — the difference is that native has more direct
+access to a local database and background task APIs. But the assumption that "it's native, so it
+automatically handles offline better" is also wrong; in both cases, the offline experience is a
+scope item that has to be designed.
+
+## Getting into the store: two platforms, two different realities
+
+### Google Play: an official, documented path
+
+On Android, the way to bring a PWA into the store is called **Trusted Web Activity (TWA)**. According
+to [Chrome for Developers' official guide](https://developer.chrome.com/docs/android/trusted-web-activity/quick-start),
+this is the supported method for packaging a PWA as a real Android app via Chrome Custom Tabs and
+uploading it to the Play Store. The required steps:
+
+1. The site meets PWA standards (HTTPS, manifest, service worker, required icon sizes).
+2. The Android package (AAB) is generated with Bubblewrap or PWABuilder.
+3. An `assetlinks.json` file linking the domain to the app is published under `/.well-known/`
+   (Digital Asset Links verification).
+4. Standard Android app review and publishing through the Play Console.
+
+### App Store: no official path, and 4.2 risk
+
+Apple has no official mechanism equivalent to Google's TWA for bringing a PWA directly into its
+store. It's possible to produce and submit a WebView wrapper with tools like PWABuilder, but that
+package falls under **App Store Review Guidelines section 4.2 (Minimum Functionality)**. Apple's own
+wording is direct:
+
+> "Your app should include features, content, and UI that elevate it beyond a repackaged website."
+
+Sub-clause 4.2.2 explicitly targets apps that amount to "web clipping." In practice, this means
+submitting your site as-is inside a WebView carries a high rejection risk, and it's hard to get
+through review without adding native navigation, offline state handling and a platform-appropriate
+user experience.
+
+<Callout type="key" title="Want Play Store access as well as App Store presence">
+  On Android, you can put a PWA directly in the store; on iOS, reaching the same goal means either
+  directing users to the "Add to Home Screen" flow from the browser, or building a native shell with
+  real functionality that satisfies 4.2. Expecting both on the same budget and timeline isn't
+  realistic.
+</Callout>
+
+## Steps to launch (schematic)
+
+The chart below isn't a measurement from a real project — it compares the **typical number of
+steps** for three paths. The real time varies with scope, team experience and how busy platform
+review is at that moment.
+
+<BarChart
+  title="Typical number of steps to launch (schematic)"
+  caption="PWA is a direct web release; Android TWA and iOS native include store processes. This is a step count, not a measurement."
+  max={8}
+  data={[
+    { label: "PWA (direct web release)", value: 2, note: "Deploy + add to home screen", highlight: true },
+    { label: "Android (TWA + Play Store)", value: 5, note: "Packaging, asset links, review" },
+    { label: "iOS (native + App Store)", value: 7, note: "Build, TestFlight, 4.2 review" },
+  ]}
+/>
+
+## When a PWA is enough
+
+1. **Content, dashboards, catalogues or e-commerce** — most products outside camera and
+   notifications don't need special hardware access, and fall into this category.
+2. **Speed to market matters.** A single codebase means instant updates without waiting on store
+   review.
+3. **The budget doesn't stretch to two separate platform builds.** A PWA is built with technology
+   your web team already knows.
+4. **SEO and web-sourced traffic matter too.** A PWA is also an indexable website — we cover this
+   approach in our [fast website guide](/en/blog/how-to-build-a-fast-website) as well.
+
+## When to move to native
+
+1. **You need hardware APIs the web platform doesn't cover** — Bluetooth, NFC, or advanced
+   camera/AR.
+2. **You need OS-level permissions** such as continuous background location tracking.
+3. **An enterprise buyer wants to see a "real app" in the store**, and that perception isn't up for
+   negotiation.
+4. **The performance ceiling has to exceed what the web offers** — scenarios like heavy graphics
+   processing or a game engine.
+
+## A hybrid approach: supporting a PWA with a native shell
+
+You don't have to make a sharp either/or choice. A common middle ground is building the core product
+as a PWA and adding only a thin native shell for the one hardware feature that's genuinely needed —
+for example, the whole app runs on web technology except a Bluetooth pairing screen written as a
+native module. This approach also makes it easier to satisfy App Store rule 4.2, because the app is
+no longer "a wrapped website" but a real product with an actual native function.
+
+The risk in this model is taking on the maintenance of two worlds at once. So the hybrid shell
+decision should be made only after a genuine hardware need has been confirmed — a native layer built
+upfront on a "we might need it eventually" assumption often turns into maintenance overhead that
+never gets used.
+
+## Cost logic
+
+Exact figures vary widely with scope; the general structure looks like this:
+
+| Approach | Codebase | Store process | Updates |
+|---|---|---|---|
+| PWA | Single | None (Play Store optional) | Instant, no user action needed |
+| PWA + Android TWA | Single + packaging | Play Console review | Web side instant, package rarely updated |
+| Native (iOS + Android) | Two separate (or a shared framework) | Review on both | Release-based, requires a user update |
+
+To see clearly which column your project falls into, take a look at our
+[progressive web app service](/en/services/progressive-web-app), or our
+[web app service](/en/services/web-app) if you're planning something broader in scope; starting
+bands are on the [pricing page](/en/pricing).
+
+## Conclusion
+
+There's no single right answer to "PWA or native" — the right answer changes with which hardware
+APIs you genuinely need and how dependent you want to be on the store process. Most content,
+dashboard and e-commerce projects can start with a PWA and defer the decision to move to native
+until real usage data is in. If the hardware requirement is clear from the start, going straight to
+native doesn't waste any time.
+
+If you're not sure which side your project falls on, write to us via the
+[contact page](/en/contact) — we'll work through the needs assessment together. We've also covered
+this in our FAQ: [the difference between PWA and native](/en/faq#faq-native-vs-pwa),
+[the store publishing process](/en/faq#faq-app-store-publishing) and
+[offline support](/en/faq#faq-offline-support).

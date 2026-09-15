@@ -45,15 +45,6 @@ function VercelIcon() {
   );
 }
 
-function SupabaseIcon() {
-  return (
-    <svg width="16" height="18" viewBox="0 0 109 113" aria-hidden="true">
-      <path d="M63.7 110.2c-2.4 3-7.4 1.4-7.6-2.4L54 65H97c3.6 0 5.5 4.2 3.3 6.9L63.7 110.2z" fill="#3ECF8E"/>
-      <path d="M45.3 2.8c2.4-3 7.4-1.4 7.6 2.4L55 48H12c-3.6 0-5.5-4.2-3.3-6.9L45.3 2.8z" fill="currentColor" opacity=".9"/>
-    </svg>
-  );
-}
-
 function AnthropicIcon() {
   return (
     <svg width="18" height="14" viewBox="0 0 80 60" aria-hidden="true" fill="currentColor">
@@ -68,7 +59,6 @@ export const PARTNERS = [
   { id: 'google',    name: 'Google Partner',   group: 'certified', icon: <GoogleIcon /> },
   { id: 'meta',      name: 'Meta Partner',      group: 'certified', icon: <MetaIcon /> },
   { id: 'vercel',    name: 'Vercel',            group: 'tech',      icon: <VercelIcon /> },
-  { id: 'supabase',  name: 'Supabase',          group: 'tech',      icon: <SupabaseIcon /> },
   { id: 'anthropic', name: 'Anthropic',         group: 'tech',      icon: <AnthropicIcon /> },
 ] as const;
 

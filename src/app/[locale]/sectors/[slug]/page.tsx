@@ -7,6 +7,9 @@ import { pickMessages } from "@/lib/pick-messages";
 import { Link, getPathname } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import ProjectPlaceholder from "@/components/project-placeholder";
+import RelatedSolutions from "@/components/related-solutions";
+import { getSolutionsBySector } from "@/lib/solutions";
+import { landingText } from "@/lib/landing";
 import JsonLd from "@/components/json-ld";
 import { WORKS, SERVICES } from "@/lib/data";
 import { getAllPosts } from "@/lib/blog";
@@ -320,6 +323,14 @@ export default async function SectorPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* Bu sektore ozel cozum sayfalari (hizmet x sektor) */}
+        <RelatedSolutions
+          items={getSolutionsBySector(slug).map((x) => ({
+            slug: x.slug,
+            title: landingText(messages, "solutionItems", x.slug).title,
+          }))}
+        />
 
         {/* Ilgili SSS + blog */}
         {(faqLinks.length > 0 || blogLinks.length > 0) && (

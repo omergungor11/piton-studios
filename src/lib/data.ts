@@ -161,17 +161,18 @@ export const WORKS: Work[] = [
     slug: "gel-gez-gor",
     title: "Gel Gez Gör",
     client: "Gel Gez Gör",
-    kind: "Web App · Platform",
-    year: "2025",
-    role: "Full-stack / Design",
-    tags: ["Next.js", "Platform", "Classifieds", "SEO"],
+    // Ilan platformu musteriye ait (bizim degil); biz yalnizca trend + icerik otomasyonunu yaptik.
+    kind: "Automation · Content Pipeline",
+    year: "2026",
+    role: "Automation / Development",
+    tags: ["Automation", "WhatsApp", "Social Media", "AI"],
     image: "story-03.jpg",
-    summary: "Free classifieds platform for North Cyprus with multiple categories.",
+    summary: "Trend detection, WhatsApp notification and social content automation for the Gel Gez Gör classifieds site.",
     body: [
-      "KKTC'nin kapsamlı ücretsiz ilan platformu Gel Gez Gör'ü tasarladık ve geliştirdik. Emlak, araç, iş ilanları ve yemek kategorilerinde binlerce ilan barındıran dinamik bir platform kurduk.",
-      "Kullanıcı dostu arayüz, gelişmiş filtreleme sistemi ve SEO optimizasyonu ile KKTC'nin en çok ziyaret edilen ilan sitelerinden biri haline gelmesini sağladık.",
+      "KKTC'nin ilan sitesi Gel Gez Gör için trend ilanları otomatik tespit eden bir otomasyon katmanı geliştirdik. Sistem öne çıkan ilanları siteden okuyor, ilan sahiplerine WhatsApp üzerinden bildirim gönderiyor.",
+      "Her ilan için hazır sosyal medya görseli ve yapay zekâ destekli başlık üretip Instagram ve Facebook'ta yayınlayabiliyor; ekip bu işleri artık elle yapmıyor.",
     ],
-    scope: "Web app, platform, SEO",
+    scope: "Automation, WhatsApp, social media content",
     previews: {
       desktop: '/assets/previews/desktop/gel-gez-gor.webp',
       mobile: '/assets/previews/mobile/gel-gez-gor.webp',
@@ -249,7 +250,8 @@ export const WORKS: Work[] = [
     kind: "E-commerce · Web",
     year: "2022",
     role: "Design / Development",
-    tags: ["E-commerce", "Payment Integration", "WordPress", "WooCommerce"],
+    // 2022'de WordPress ile yayina girdi; 2026'da Next.js + Supabase ile yeniden gelistirildi.
+    tags: ["E-commerce", "Payment Integration", "Next.js", "Supabase"],
     image: "story-05.jpg",
     summary: "E-commerce packaging supplies store with payment integration.",
     body: [

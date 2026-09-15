@@ -46,6 +46,26 @@ export const routing = defineRouting({
       en: '/sectors/[slug]',
       ru: '/sectors/[slug]',
     },
+    '/locations': {
+      tr: '/bolgeler',
+      en: '/locations',
+      ru: '/locations',
+    },
+    '/locations/[slug]': {
+      tr: '/web-tasarim/[slug]',
+      en: '/web-design/[slug]',
+      ru: '/web-design/[slug]',
+    },
+    '/solutions': {
+      tr: '/cozumler',
+      en: '/solutions',
+      ru: '/solutions',
+    },
+    '/solutions/[slug]': {
+      tr: '/cozumler/[slug]',
+      en: '/solutions/[slug]',
+      ru: '/solutions/[slug]',
+    },
     '/blog': {
       tr: '/blog',
       en: '/blog',

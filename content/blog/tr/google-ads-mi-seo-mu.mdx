@@ -1,0 +1,236 @@
+---
+title: "Google Ads mı, SEO mu? Hangisine bütçe ayırmalı?"
+description: "Google Ads hızlı ama reklam durunca duran trafik getirir, SEO yavaş başlar ama bileşik büyür. Öğrenme evresi eşikleri, gerçek zaman çizelgesi ve bütçeyi ikisi arasında nasıl bölmeniz gerektiği."
+date: 2026-09-15
+tags: ["google ads", "seo", "dijital pazarlama", "büyüme"]
+author: "Piton Studios"
+draft: false
+translationKey: google-ads-vs-seo
+sources:
+  - title: "Google Ads Help — About Target CPA bidding"
+    url: "https://support.google.com/google-ads/answer/6268632?hl=en"
+  - title: "Google Ads Help — About Target ROAS bidding"
+    url: "https://support.google.com/google-ads/answer/6268637?hl=en"
+  - title: "Google Search Central — SEO Starter Guide: The Basics"
+    url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+faq:
+  - q: "Google Ads'in otomatik teklif stratejileri neden ilk hafta kötü çalışıyor?"
+    a: "Target CPA ve Target ROAS gibi Smart Bidding stratejileri geçmiş dönüşüm verisiyle öğreniyor. Google Ads Help'e göre güvenilir bir değerlendirme için son 30 günde en az 30 dönüşüm birikmiş olması öneriliyor; bu eşiğe ulaşmadan yapılan sık değişiklikler algoritmanın öğrenmesini sıfırlıyor."
+  - q: "SEO'da sonuç görmek gerçekten ne kadar sürüyor?"
+    a: "Google'ın kendi SEO Starter Guide'ına göre bazı değişiklikler birkaç saatte etkili olabilirken bazıları birkaç ay sürebiliyor; genel öneri, bir çalışmanın faydalı olup olmadığını değerlendirmeden önce birkaç hafta beklemek. Rekabetli kelimelerde bu süre daha da uzuyor."
+  - q: "Reklamı durdurduğumda ne olur, SEO'da aynı şey olur mu?"
+    a: "Google Ads'te reklam bütçesi durunca trafik anında durur — kalıcı bir varlık biriktirmezsiniz. SEO'da ise sıralamalar içerik ve teknik yapı korundukça kademeli olarak düşer, anlık kesilme olmaz. Bu, iki kanalın risk profilinin temel farkı."
+  - q: "Küçük bütçeyle hangisine başlamalıyım?"
+    a: "Kısıtlı bütçede genelde SEO'nun temel teknik ve içerik çalışmasına öncelik vermek daha sürdürülebilir, çünkü harcama durunca kazanım sıfırlanmıyor. Ancak hızlı doğrulama gereken yeni bir teklif veya sınırlı süreli kampanya için küçük ölçekli bir Google Ads testi daha hızlı geri bildirim verir."
+  - q: "İkisini birlikte yürütmek gerçekten daha mı verimli?"
+    a: "Evet — Ads erken aşamada talebi doğrulayıp hızlı veri sağlarken SEO arka planda büyür; SEO olgunlaştıkça aynı anahtar kelimeler için reklam bağımlılığı azalır ve toplam edinme maliyeti düşer. Detaylar [SSS'deki kısa cevapta](/tr/sss#faq-google-ads-vs-seo)."
+---
+
+Bu soru genelde "hangisi daha iyi" diye soruluyor; oysa ikisi farklı fiziksel kurallarla çalışıyor.
+Google Ads bir **kiralama modeli** — ödedikçe görünürsünüz, durunca kaybolursunuz. SEO bir **biriken
+varlık** — yavaş başlar ama kazanım kalıcıdır. Kısa cevabı zaten
+[SSS sayfamızda](/tr/sss#faq-google-ads-vs-seo) verdik; bu yazı iki kanalın nasıl çalıştığını,
+resmî eşiklerini ve bütçenin nasıl bölüneceğini derinlemesine ele alıyor.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Google Ads'in otomatik teklif stratejileri, güvenilir çalışmak için belirli bir dönüşüm hacmine ihtiyaç duyar.",
+    "SEO'da sonuçlar Google'ın kendi ifadesiyle saatler değil, genelde haftalar-aylar içinde görülür.",
+    "Reklam durunca trafik anında durur; SEO kademeli düşer, kalıcı bir varlık gibi davranır.",
+    "Küçük ve sabit bütçede SEO'nun temel işleri daha sürdürülebilir bir yatırım.",
+    "En sağlıklı model ikisini birlikte, farklı zaman ufuklarında yürütmek.",
+  ]}
+/>
+
+## Google Ads nasıl çalışıyor: veri açlığı olan bir sistem
+
+Google Ads'in Smart Bidding stratejileri (Target CPA, Target ROAS, Maximize Conversions) geçmiş
+dönüşüm verisiyle öğrenen otomatik sistemlerdir. [Google Ads Help'in Target CPA
+sayfasına göre](https://support.google.com/google-ads/answer/6268632?hl=en) güvenilir bir
+performans değerlendirmesi için **son 30 günde en az 30 dönüşüm** birikmiş olması öneriliyor.
+[Target ROAS sayfası](https://support.google.com/google-ads/answer/6268637?hl=en) ise strateji
+etkinleştirme eşiğini kampanya türüne göre ayırıyor:
+
+| Kampanya türü | Etkinleştirme eşiği (Google Ads Help) |
+|---|---|
+| Arama / Alışveriş | Son 30 günde en az 15 dönüşüm |
+| Display | Tüm kampanyalarda birlikte en az 15 dönüşüm (geçerli değerle) |
+| Demand Gen | Son 35 günde en az 50 dönüşüm |
+| Otel | Kampanya başına haftada en az 50 dönüşüm |
+
+<StatGrid
+  items={[
+    { value: "15", label: "Arama/Alışveriş'te Target ROAS etkinleştirme eşiği", note: "GOOGLE ADS HELP" },
+    { value: "30", label: "Target CPA'da güvenilir değerlendirme için önerilen dönüşüm/30 gün", note: "GOOGLE ADS HELP" },
+    { value: "50", label: "Demand Gen'de gereken dönüşüm/35 gün", note: "GOOGLE ADS HELP" },
+  ]}
+/>
+
+<Callout type="warn" title="Az trafikli sitelerde otomatik teklif erken devreye sokulmamalı">
+  Aylık 10-15 dönüşümün altında kalan bir hesapta Target CPA/ROAS'a geçmek, algoritmanın yetersiz
+  veriyle karar vermesine ve maliyetlerin dalgalanmasına yol açar. Bu eşiklere ulaşana kadar manuel
+  veya Maximize Clicks gibi daha basit stratejilerle veri biriktirmek daha güvenli.
+</Callout>
+
+## Bu eşik neden bütçe kararını doğrudan etkiliyor
+
+Öğrenme evresini tamamlamak için gereken tıklama sayısı, dönüşüm oranınıza göre büyük ölçüde
+değişir. Aşağıdaki grafik gerçek bir hesap verisi değil; **30 dönüşüme ulaşmak için farklı dönüşüm
+oranlarında kaç tıklama gerektiğinin basit aritmetik senaryosu.**
+
+<BarChart
+  title="30 dönüşüme ulaşmak için gereken tıklama sayısı (senaryo)"
+  caption="Tıklama = 30 ÷ dönüşüm oranı. Gerçek bir kampanya ölçümü değildir, yalnızca eşiğin bütçeye etkisini göstermek içindir."
+  data={[
+    { label: "%1 dönüşüm oranı", value: 3000, note: "Zayıf hedefli sayfa" },
+    { label: "%2 dönüşüm oranı", value: 1500, note: "Ortalama" },
+    { label: "%4 dönüşüm oranı", value: 750, note: "İyi hedeflenmiş", highlight: true },
+    { label: "%6 dönüşüm oranı", value: 500, note: "Güçlü teklif + sayfa" },
+  ]}
+/>
+
+Buradaki pratik sonuç şu: düşük dönüşüm oranlı bir açılış sayfasıyla kampanyaya başlarsanız, sadece
+"öğrenme evresini bitirmek" için gereken bütçe bile ciddi büyüyebilir. Landing page'in dönüşüm
+kalitesi, reklam bütçesi kadar belirleyici bir kalem.
+
+## Maliyet yapısı: ikisi de "bedava" değil
+
+Google Ads'in maliyeti görünür: tıklama başına ödersiniz, bütçe tükenince gösterim durur. SEO'nun
+maliyeti daha az görünür ama gerçektir — içerik üretimi, teknik altyapı çalışması ve düzenli
+güncelleme zaman ve emek gerektirir; "SEO ücretsizdir" cümlesi yalnızca tıklama başına ödeme
+olmadığı anlamına gelir, çalışma bedava değildir. Aradaki fark, harcamanın nereye gittiği:
+
+- **Google Ads'te** bütçenin büyük kısmı platforma (tıklama maliyeti) gider, kalan kısım yönetim
+  ve kreatif üretimine.
+- **SEO'da** bütçenin büyük kısmı içerik üretimi, teknik düzeltme ve editoryal sürece gider;
+  platforma doğrudan bir ödeme yoktur.
+
+Bu, iki kanalın nakit akışı riskini de farklılaştırıyor: Ads'te kötü giden bir ay hemen fark edilir
+ve bütçe kısılabilir; SEO'da kötü giden bir çeyrek, aylar sonra ancak trafik verisinde görünür —
+bu da SEO çalışmasının düzenli ölçümle takip edilmesini daha kritik hâle getirir.
+
+## SEO nasıl çalışıyor: yavaş başlayan, bileşik büyüyen sistem
+
+SEO'da eşik yok, ama zaman çizelgesi belirsiz görünüyor. [Google'ın kendi SEO Starter
+Guide'ına göre](https://developers.google.com/search/docs/fundamentals/seo-starter-guide):
+
+> "Some changes might take effect in a few hours, others could take several months. In general,
+> you likely want to wait a few weeks to assess whether your work had beneficial effects in
+> Google Search results."
+
+Bu net bir tarih vermiyor çünkü veremiyor — sonuç, mevcut sitenin durumuna, rekabetin yoğunluğuna
+ve içeriğin kalitesine bağlı. Ama şu ayrım kesin: **Google Ads'te sonuç kampanya açılır açılmaz
+başlar; SEO'da sonuç, içerik ve teknik değişikliklerin indekslenip değerlendirilmesini bekler.**
+
+<Callout type="key" title="Bileşik etki nedir">
+  SEO'da bugün yayınladığınız bir sayfa, bir yıl sonra hâlâ trafik getirebilir — hatta yaş ve
+  bağlantı biriktikçe daha fazla. Google Ads'te ise geçen ayın reklamı bu ayın trafiğine hiçbir
+  katkı yapmaz. Bu, iki kanalın uzun vadeli getirisini kıyaslarken gözden kaçan temel fark.
+</Callout>
+
+## Karar matrisi
+
+| Kriter | Google Ads lehine | SEO & GEO lehine |
+|---|---|---|
+| Hız | Kampanya açılır açılmaz trafik | Haftalar-aylar içinde etki |
+| Durdurulunca | Trafik anında sıfırlanır | Kazanım kademeli azalır |
+| Ölçülebilirlik | Anlık, ayrıntılı | Gecikmeli, çok değişkenli |
+| Test etme | Yeni teklif/kampanya hızlı doğrulanır | Yeni bir konumlama, sonucu geç görülür |
+| Bütçe riski | Harcama durunca risk sıfırlanır ama kazanım da sıfırlanır | Baştan yapılan yatırım daha uzun süre geri döner |
+| Rekabetçi kelimeler | Tıklama başına maliyetle rekabet edilir | Zaman ve içerik kalitesiyle rekabet edilir |
+| Marka güveni | "Reklam" etiketi bazı kullanıcıda güven azaltır | Organik sonuç daha güvenilir algılanır |
+
+## Ne zaman Google Ads'e ağırlık verin
+
+1. **Yeni bir teklifi veya pazarı hızlı doğrulamanız gerekiyorsa.** Kampanya kurulup birkaç günde
+   ilk veriyi verir.
+2. **Sezonluk veya sınırlı süreli bir kampanyanız varsa.** SEO'nun zaman çizelgesi buna uymaz.
+3. **Zaten en az 15-30 dönüşüm/ay üretebilecek trafik hacminiz varsa.** Aksi halde öğrenme evresi
+   verimsiz kalır ve bütçe kampanyanın kendi kendini optimize etmesini beklerken erir.
+4. **Rakip markaların isim aramalarında görünmek istiyorsanız.** Bu, organik olarak neredeyse hiç
+   elde edilemeyen bir konumdur.
+
+## Ne zaman SEO & GEO'ya ağırlık verin
+
+1. **Bütçe sabit ve sürdürülebilir olmalıysa.** Harcama durduğunda sıfırlanmayan bir varlık
+   istiyorsanız doğru kanal budur.
+2. **Uzun vadeli, tekrar arama hacmi yüksek kelimeler hedefliyorsanız.** Getiri zamanla artan
+   kelimelerde SEO'nun bileşik etkisi devreye girer.
+3. **Yapay zekâ destekli arama sonuçlarında da görünmek istiyorsanız.** Bu konuyu
+   [yapay zekâ çağında arama görünürlüğü yazımızda](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo)
+   SEO'dan GEO'ya geçiş başlığıyla ayrıntılı ele aldık.
+4. **Marka güvenilirliği önemliyse.** Organik sonuç, reklam etiketi taşımadığı için bazı
+   kategorilerde daha güvenilir algılanıyor.
+
+## Ölçüm ve veri sahipliği farkı
+
+Google Ads'te ölçüm anlık ve ayrıntılıdır — hangi anahtar kelimenin, hangi reklam metninin, hangi
+saatin dönüşüm getirdiğini gün içinde görürsünüz. Bu veri değerlidir ama platforma bağımlıdır:
+hesabınızı kapatırsanız geçmiş öğrenme birikimi de sıfırlanır.
+
+SEO'da ölçüm daha gecikmeli ve çok değişkenlidir — bir sıralama değişikliğinin hangi içerik
+güncellemesinden mi, bir rakibin hamlesinden mi, yoksa Google'ın algoritma güncellemesinden mi
+kaynaklandığını ayırmak zaman alır. Buna karşılık ürettiğiniz içerik ve kurduğunuz teknik yapı
+sizde kalır; ajansı veya aracı değiştirseniz de biriken varlık sitenizde durmaya devam eder.
+
+## Yaygın hatalar
+
+1. **Google Ads'i açıp bir hafta sonra "çalışmıyor" diye kapatmak.** Öğrenme evresi tamamlanmadan
+   verilen kararlar, sistemin hiç öğrenmesine fırsat vermez.
+2. **SEO'ya başlayıp bir ay sonra sonuç beklemek.** Google'ın kendi ifadesiyle bu süre gerçekçi
+   değil; birkaç haftadan önce değerlendirme yapmak yanıltıcı sonuçlar verir.
+3. **İkisini aynı anahtar kelimede rekabet ettirmek.** Zaten organik olarak 1. sırada olduğunuz bir
+   kelimeye reklam vermek, çoğu zaman aynı tıklamayı iki kere satın almaktır — bütçe, organik
+   göremediğiniz kelimelere yönlendirilmeli.
+4. **SEO'yu "bir kere yapılır, biter" sanmak.** İçerik ve teknik yapı bakım gerektirir; bırakılan
+   bir SEO çalışması zamanla rakiplere alan açar.
+
+## Hangi iş modeli hangisine daha yatkın
+
+Sektör tek başına belirleyici değil ama bazı iş modellerinde eğilim netleşiyor:
+
+| İş modeli | Eğilim | Neden |
+|---|---|---|
+| Acil hizmet (çilingir, su tesisatçısı, çekici) | Google Ads ağırlıklı | Arama anı = ihtiyaç anı; kullanıcı beklemez, ilk gördüğünü arar |
+| Yüksek bilinçli B2B (yazılım, danışmanlık) | SEO & GEO ağırlıklı | Karar süreci uzun, içerik ve otorite güven inşa eder |
+| Mevsimsel kampanya (tatil, indirim dönemi) | Google Ads ağırlıklı | SEO'nun zaman çizelgesi kampanya süresine sığmaz |
+| Yerel işletme (restoran, klinik) | İkisi birlikte | Google Ads hızlı görünürlük, SEO & Haritalar kalıcı yerel trafik sağlar |
+| İçerik/medya siteleri | SEO & GEO ağırlıklı | Gelir modeli zaten organik trafiğe dayanır, reklam maliyeti marjı eritir |
+
+Bu tablo bir kural değil, başlangıç noktası. Nihai karar; rekabetin yoğunluğu, mevcut marka
+bilinirliği ve dönüşüm hunisinin ne kadar hazır olduğuna göre değişir — bu yüzden [SEO ve GEO
+hizmetimizde](/tr/hizmetler/seo-geo) kapsam görüşmesini gerçek verinizle başlatıyoruz, hazır bir
+şablon üzerinden değil.
+
+## İkisini birlikte yürütmek: önerilen model
+
+En sağlıklı yaklaşım genelde "ya o ya bu" değil, zaman ufkuna göre bölüşüm:
+
+| Aşama | Google Ads'in rolü | SEO & GEO'nun rolü |
+|---|---|---|
+| 0-3. ay | Talebi hızlı doğrular, ilk veriyi üretir | Teknik temel ve içerik altyapısı kurulur |
+| 3-9. ay | Kanıtlanmış kampanyalar ölçeklenir | İlk sıralamalar ve trafik görülmeye başlar |
+| 9+. ay | Reklam bütçesi, SEO'nun büyüdüğü kelimelerden çekilip yeni alanlara kaydırılır | Organik trafik payı büyür, edinme maliyeti düşer |
+
+Bu modelde Google Ads'in erken verdiği talep sinyali, SEO'nun hangi kelimelere öncelik vereceğini
+de bilgilendirir — hangi arama teriminin gerçekten dönüşüme yol açtığını kampanya verisinden
+görürsünüz.
+
+## Sonuç
+
+Google Ads ve SEO rakip değil, farklı zaman ufkunda çalışan iki kanal. Hızlı ve ölçülebilir sonuç
+istiyorsanız, dönüşüm hacminiz Google'ın önerdiği eşiklere (Arama/Alışveriş'te 15, güvenilir
+değerlendirme için 30 dönüşüm/ay) ulaşabiliyorsa Ads doğru başlangıç. Sabit bütçeyle kalıcı bir
+varlık biriktirmek istiyorsanız SEO & GEO'ya öncelik verin. Çoğu işletme için doğru cevap, ikisini
+farklı zaman dilimlerinde birlikte yürütmek.
+
+Kararı verirken sorulacak asıl soru "hangisi daha iyi" değil: dönüşüm hacminiz Google'ın öğrenme
+eşiklerini karşılayabiliyor mu, ne kadar sabırlı bir bütçe ayırabiliyorsunuz ve reklam durunca
+sıfırlanan bir trafiğe mi yoksa kademeli büyüyen bir varlığa mı ihtiyacınız var. Çoğu işletme için
+cevap ikisini birden, farklı zaman ufuklarında yürütmek.
+
+Bütçenizi bu iki kanal arasında nasıl bölmeniz gerektiğinden emin değilseniz
+[Google Ads](/tr/hizmetler/google-ads) ve [SEO & GEO](/tr/hizmetler/seo-geo) hizmet sayfalarımıza
+bakabilir, başlangıç bantları için [fiyatlandırma sayfasını](/tr/fiyatlandirma) inceleyebilir ya da
+doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

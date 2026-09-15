@@ -1,0 +1,251 @@
+---
+title: "Shopify or a custom e-commerce build?"
+description: "The difference between Shopify and a custom-built e-commerce platform from scratch: subscription and transaction fees, flexibility, integrations and the growth ceiling. Which store should choose which."
+date: 2026-09-15
+tags: ["e-commerce", "budget", "web design"]
+author: "Piton Studios"
+draft: false
+translationKey: shopify-vs-custom-ecommerce
+sources:
+  - title: "Shopify — Pricing"
+    url: "https://www.shopify.com/pricing"
+  - title: "W3Techs — Usage statistics of content management systems"
+    url: "https://w3techs.com/technologies/overview/content_management"
+faq:
+  - q: "How does Shopify's transaction fee work?"
+    a: "If you use a payment provider other than Shopify Payments, an extra transaction fee applies that varies by plan — as of September 2026, per the official pricing page, that's 2% on the entry plan, dropping to as low as 0.6% on higher plans. If you use Shopify Payments, that extra fee doesn't apply, but standard card processing costs still do. Check the [official pricing page](https://www.shopify.com/pricing) for current rates."
+  - q: "Does a custom e-commerce build eliminate transaction fees entirely?"
+    a: "The platform's fee goes away, but your payment provider's own processing commission (iyzico, Stripe, PayPal and similar) still applies regardless. What you save is the extra percentage the platform adds on top, not the payment infrastructure's commission."
+  - q: "For a small store, Shopify, WooCommerce, or custom?"
+    a: "For a store with few products that wants to launch fast, Shopify or WooCommerce (WordPress-based) are reasonable starting points. A custom build becomes worthwhile once product count and integration complexity grow, or once the cumulative subscription plus transaction fees exceed the cost of custom development."
+  - q: "Does moving from Shopify to a custom build hurt SEO?"
+    a: "Yes, if it isn't planned — product and category URL structure changes, and metadata can get lost. A 301 redirect map and rebuilding structured data (schema) are essential; plan the detailed checklist alongside the funnel logic in [ecommerce conversion rate optimization](/en/blog/ecommerce-conversion-rate-optimization)."
+  - q: "Why do Shopify apps sometimes slow a store down?"
+    a: "Every third-party app adds its own script to the page; once enough apps pile up, the page gets heavy. This isn't Shopify-specific — the same pattern shows up on every platform, WordPress plugins included. The fix isn't switching platforms, it's keeping the number of apps you actually use limited."
+---
+
+The difference between Shopify and a custom-built e-commerce platform resembles the
+WordPress-vs-Next.js debate, with one twist: in e-commerce, **the flow of money** is tied directly to
+the platform. Shopify gives you a ready store engine, payment infrastructure and app ecosystem; in
+exchange it takes a monthly subscription plus, on most plans, a transaction percentage. A custom build
+removes that percentage but requires building the store engine, inventory/order logic and integrations
+from scratch.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Shopify charges a subscription plus (depending on the plan) a transaction percentage; on a custom build the platform cut disappears and development cost comes to the fore.",
+    "As of September 2026, Shopify's official pricing runs $19-299/month on annual billing, with an enterprise Plus plan above that.",
+    "The transaction percentage grows in absolute terms as revenue grows — calculate the break-even point against your own revenue, don't assume it.",
+    "For a store with few products that wants to launch fast, Shopify is reasonable; for high revenue, custom integrations or an ERP connection, a custom build pays off.",
+    "What protects SEO in a platform switch is the URL plan and 301 redirects — not the technology change itself.",
+  ]}
+/>
+
+## What the two models sell
+
+### Shopify: a managed store engine
+
+Shopify offers product catalogue, cart, checkout, inventory and order management as a ready system.
+Setup takes days, security and infrastructure maintenance are Shopify's responsibility, and thousands
+of ready-made apps let you add shipping, accounting and marketing integrations. The cost is that your
+store stays dependent on Shopify's data model and app ecosystem.
+
+### Custom build: store logic built from scratch
+
+A custom-built e-commerce site tailors your product model, checkout flow and integrations exactly to
+your business. If you have an ERP or a custom pricing logic, you can implement it without being
+limited to whatever the platform allows. The cost is that the store engine (cart, inventory, payment
+security) has to be built from scratch and maintained — a need we cover in our
+[web application service](/en/services/web-app).
+
+## Pricing: subscription plus a transaction percentage
+
+Per [Shopify's official pricing page](https://www.shopify.com/pricing) (as of September 2026, in US
+dollars, excluding current promotions), the plan structure looks like this:
+
+| Plan | Monthly, on annual billing | Third-party payment provider transaction fee |
+|---|---|---|
+| Basic | $19 | 2% |
+| Grow | $54 | 1% |
+| Advanced | $299 | 0.6% |
+| Plus | $2,300 and up | 0.2% |
+
+<Callout type="info" title="The transaction fee only applies with a third-party payment provider">
+  Stores using Shopify Payments don't pay this extra fee, though standard card processing costs always
+  apply. Stores in Türkiye using a local payment provider (iyzico, PayTR and similar) mostly fall into
+  the third-party category — read the table against your own payment setup accordingly.
+</Callout>
+
+This is the core thing that sets Shopify apart from other platform decisions: with WordPress or Wix
+you pay a fixed subscription, but on Shopify (for stores using a third-party payment provider), cost
+grows together with your revenue. As revenue grows, that percentage can turn into a significant
+absolute line item; the only way to see the break-even point is to run the numbers against your own
+revenue projection.
+
+## Platform share
+
+<BarChart
+  title="How Shopify's transaction fee drops by plan"
+  caption="Shopify's official pricing page, September 2026 — the rate applies only to stores using a third-party payment provider."
+  dataTableLabel="Open the chart data as a table"
+  unit="%"
+  max={2}
+  data={[
+    { label: "Basic", value: 2, highlight: true },
+    { label: "Grow", value: 1 },
+    { label: "Advanced", value: 0.6 },
+    { label: "Plus", value: 0.2 },
+  ]}
+/>
+
+Per [W3Techs' September 2026 data](https://w3techs.com/technologies/overview/content_management),
+Shopify runs 5.4% of all websites and 7.8% of the tracked CMS market — small next to WordPress (40.3%
+of all sites), but a serious share for a platform dedicated specifically to e-commerce.
+
+<StatGrid
+  items={[
+    { value: "5.4%", label: "Shopify's share of all websites", note: "W3Techs, September 2026" },
+    { value: "$19-299/mo", label: "Shopify Basic-Advanced plan band", note: "Annual billing, September 2026" },
+    { value: "€900-4,400", label: "Custom/agency e-commerce site band", note: "Piton Studios indicative band" },
+  ]}
+/>
+
+## The app ecosystem: a hidden subscription layer
+
+Shopify's biggest strength is its app store — for most needs like shipping calculation, loyalty
+programmes, email marketing and accounting integration, a ready-made app exists. That speeds things
+up, but it usually brings its own subscription too: on top of the platform subscription, a store adds
+several more app subscriptions as it grows. This is the equivalent of plugin overhead on WordPress —
+in [Next.js or WordPress](/en/blog/nextjs-vs-wordpress) we showed that plugin maintenance is the
+deciding line item in a three-year total; on Shopify that line item isn't plugin maintenance, it's
+accumulated app subscriptions.
+
+On a custom build, the same functions (shipping calculation, email integration) are built once and
+don't create a recurring subscription fee — the cost is a longer development and initial setup time.
+
+## A middle path: headless/hybrid architecture
+
+You don't have to make a sharp either/or choice. A growing third model keeps Shopify purely as the
+product, inventory and payment engine in the background, and builds the storefront (the part customers
+see and shop on) as a custom frontend — this is called headless or hybrid e-commerce. This approach
+keeps Shopify's transaction security and inventory management while giving full performance and design
+control on the frontend. The cost is the added architectural complexity of running two systems
+(Shopify backend plus custom frontend) together. This model can be a meaningful middle ground,
+especially for brands with high traffic that want a non-standard shopping experience.
+
+## How to think about the three-year cost
+
+The comparison below isn't a measured case, it's a **scenario projection** — built around a mid-sized
+store with €11,110 in monthly revenue and an assumed 20% annual growth rate. Real numbers vary widely
+with your own revenue, payment provider and plan choice.
+
+<TrendChart
+  title="Three-year cumulative cost (scenario)"
+  caption="Cumulative euros. Shopify: Grow plan + 1% transaction fee, on €11,110/month revenue with 20% annual growth assumed. Custom build: €1,780 upfront cost plus low annual maintenance. This is a scenario projection, not measured data."
+  unit=" €"
+  max={5600}
+  labels={["Launch", "Year 1", "Year 2", "Year 3"]}
+  series={[
+    { name: "Custom build (one-off + maintenance)", points: [1780, 2040, 2310, 2580] },
+    { name: "Shopify (subscription + transaction fee)", points: [490, 1910, 3510, 5400], muted: true },
+  ]}
+/>
+
+<Callout type="warn" title="This is a scenario, not a firm forecast">
+  The gap in the chart comes from the transaction percentage growing in absolute terms as revenue
+  grows. At lower revenue, or on a store using Shopify Payments, the gap is much narrower, and can even
+  reverse. Don't declare one platform superior without running the same numbers against your own
+  revenue.
+</Callout>
+
+## Don't reduce the evaluation to a single metric
+
+The most common mistake people arguing against Shopify make is deciding purely on the transaction
+percentage. That fee matters, but on its own it's an incomplete picture — weigh these four cost items
+together:
+
+1. **Platform subscription** — fixed, predictable.
+2. **Transaction fee** (if using a third-party payment provider) — grows with revenue.
+3. **App subscriptions** — accumulate as the store grows, and often go unnoticed.
+4. **Development and maintenance** — upfront on a custom build; on Shopify it shows up when theme/app
+   customisation is needed.
+
+Whether a store says "Shopify is cheaper" or "custom is cheaper" depends on how these four items are
+weighted for it. A store running a standard catalogue with few apps and low-to-medium revenue keeps
+Shopify's total cost low. Once many apps, custom integrations and high revenue come together, the
+picture changes quickly.
+
+## Decision matrix
+
+| Criterion | Favours Shopify | Favours custom build |
+|---|---|---|
+| Product count | Low-medium, standard category structure | High, custom variant/pricing logic |
+| Revenue size | Low-medium (transaction fee stays small) | High (fee grows in absolute terms) |
+| Integrations | Ready-made app exists (shipping, accounting) | Custom ERP, CRM, B2B pricing |
+| Technical capacity | Not required, platform manages it | Needs a developer or agency |
+| Launch speed | Live within days | Takes weeks |
+| Long-term control | Platform-bound data model | Full control, portable |
+| SEO/performance customisation | Within theme and app limits | Unlimited, managed via a performance budget |
+
+## When Shopify is the right choice
+
+1. **Launching fast is the priority** — the catalogue is ready and you need to start selling within
+   days.
+2. **Revenue is still low-to-medium.** The transaction fee isn't a meaningful cost item at small
+   amounts.
+3. **Needs are standard** — shipping, accounting and marketing integrations can be met with ready-made
+   apps.
+4. **There's no technical maintenance capacity** — if you don't want to deal with security and
+   infrastructure management.
+
+## When to move to a custom build
+
+1. **The transaction fee turns into a meaningful absolute line item as revenue grows.** Calculate the
+   break-even point with your own projection — the chart above is only a scenario.
+2. **You need an ERP, custom B2B pricing, or complex variant logic.** Needs like these get fragile
+   when forced onto ready-made apps.
+3. **Full control over data and infrastructure matters** — if platform portability is part of your
+   long-term strategy.
+4. **Performance and SEO are a target that will be written into a contract.** If you want a measured
+   performance budget without theme and app limits, a custom build is more predictable.
+
+## Which size store falls on which side
+
+Giving a hard product-count threshold would be misleading, because what decides this isn't catalogue
+size, it's business-model complexity. Still, the pattern we see in practice: a store with hundreds of
+standard products, one currency, selling into one market runs comfortably on Shopify. A store with
+multiple currencies, dealer-specific pricing, inventory sync across a physical store network, or a B2B
+wholesale flow finds its maintenance getting complicated quickly when it forces those needs onto apps.
+At that point the question stops being "Shopify or custom" and becomes "which infrastructure carries
+this business logic with less friction."
+
+If your store is already live and the real problem is conversion, not traffic, look at the funnel
+analysis in [ecommerce conversion rate optimization](/en/blog/ecommerce-conversion-rate-optimization)
+before switching platforms — most of the time the real point of loss is friction in checkout, not the
+platform.
+
+## Data portability and lock-in
+
+On Shopify, product, order and customer data is stored according to the platform's data model. Standard
+export tools exist, but the data model doesn't map one-to-one between platforms — custom fields,
+discount rules and loyalty data in particular can be lost or need rebuilding in a migration. That's not
+a malicious restriction, it's the natural result of any managed platform; the same happens moving from
+WooCommerce to Shopify too.
+
+On a custom build, you define the data model yourself, so portability is in your hands from the start
+— but the cost of that control is designing the data model, backups and security from scratch. We
+cover how we make that responsibility manageable in our
+[cloud ecosystem service](/en/services/cloud-ecosystem).
+
+## Conclusion
+
+The difference between Shopify and a custom build isn't a quality ranking, it's a question of **how
+cost grows**: on Shopify, cost grows with your revenue; on a custom build, development cost is upfront
+and maintenance stays low after. For a store with few products, wanting to launch fast, with revenue
+still at a low-to-medium level, Shopify is an honest choice. As revenue grows, integrations get more
+complex, or full control is required, a custom build pays off from the start.
+
+If you'd like to talk through which side your store falls on, write to us via the
+[contact page](/en/contact); the scope conversation is free. All our price bands are on the
+[pricing page](/en/pricing).

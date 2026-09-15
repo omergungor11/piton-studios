@@ -78,6 +78,9 @@
   (lider-emlak ve avie-global 2026-07-29'da portfolyodan tamamen kaldirildi — avie-global'in Saiber atifi hic teyit edilmedi)
 - Lefke Belediyesi HIC YAPILMADI — freelancer dokumaninda listelense de siteye EKLENMEYECEK (kullanici 2026-07-16'da kaldirtti)
 - Bagimsiz (collaborator YOK): nexos-investment, bt-elevator, gel-gez-gor, alp-sigorta, beton-store, ambalaj-cini, taksi & transfer siteleri (jet-transfer haric), tum AI/SaaS isleri
+- **Kapsam teyitleri (2026-09-15, kullanici)**: Gel Gez Gor ilan platformunu BIZ YAPMADIK — site musteride vardi;
+  bizim isimiz trend tespiti + WhatsApp bildirimi + sosyal medya icerik otomasyonu (repo `Work-Restored/gel-gez-gor`).
+  Ambalaj Cini: 2022 WordPress sitesi Next.js + Supabase ile yeniden gelistirildi. Metinlerde bu kapsamlar asilmaz.
 - Kulup/nightlife siteleri 2026-07-27'de KALDIRILDI (kullanici istegi — portfolyoda listelenmesinler): WORKS'ten 10 (night-club-katalog, kibris-gece-hayati, gece-kibris, prenses/miracle/misse/crazy-girl-night-club, kibris-nights-club, kibris-katalog, faraon-night-clubs), STORIES'ten 5 (kibris-night-club, miracle-night-club, fareon-night-club, ibo-seytan, kibris-gece-hayati). Ceviriler de silindi; preview webp'leri assets'te duruyor
 - Detay sayfasinda "Is Birligi" meta alani olarak gosteriliyor (`projectDetail.collab`)
 

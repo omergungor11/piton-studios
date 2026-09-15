@@ -7,9 +7,19 @@ import { Link } from '@/i18n/navigation';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 import ProjectPlaceholder from '@/components/project-placeholder';
+import RelatedSolutions, { type RelatedSolution } from '@/components/related-solutions';
 
 interface Props {
   project: Project;
+  relatedSolutions?: RelatedSolution[];
+}
+
+interface CaseStudy {
+  challenge: string;
+  solution: string;
+  highlights: string[];
+  stack: string[];
+  outcome: string;
 }
 
 function IconDesktop() {
@@ -28,7 +38,7 @@ function IconMobile() {
   );
 }
 
-export default function ProjectDetail({ project }: Props) {
+export default function ProjectDetail({ project, relatedSolutions = [] }: Props) {
   const td = useTranslations('projectDetail');
   const tw = useTranslations('works');
   const ts = useTranslations('stories');
@@ -66,6 +76,11 @@ export default function ProjectDetail({ project }: Props) {
   const body: string[] = translationNs.has(`${slug}.body`)
     ? (translationNs.raw(`${slug}.body`) as string[])
     : (project.type === 'work' ? project.body : project.body);
+
+  // Opsiyonel teknik vaka calismasi: works.{slug}.caseStudy (rakamsiz, repodan dogrulanmis).
+  const caseStudy = project.type === 'work' && tw.has(`${slug}.caseStudy.challenge`)
+    ? (tw.raw(`${slug}.caseStudy`) as CaseStudy)
+    : null;
 
   return (
     <PageShell>
@@ -180,6 +195,42 @@ export default function ProjectDetail({ project }: Props) {
           </div>
         )}
       </section>
+
+      {caseStudy && (
+        <section className="pd-case" aria-label={td('caseStudy')}>
+          <div className="pd-case-grid">
+            <div className="pd-case-block glass">
+              <h3 className="pd-case-k">{td('caseChallenge')}</h3>
+              <p>{caseStudy.challenge}</p>
+            </div>
+            <div className="pd-case-block glass">
+              <h3 className="pd-case-k">{td('caseSolution')}</h3>
+              <p>{caseStudy.solution}</p>
+            </div>
+          </div>
+          <div className="pd-case-block glass">
+            <h3 className="pd-case-k">{td('caseHighlights')}</h3>
+            <ul className="pd-case-list">
+              {caseStudy.highlights.map((h, i) => (
+                <li key={i}>{h}</li>
+              ))}
+            </ul>
+            <h3 className="pd-case-k">{td('caseStack')}</h3>
+            <div className="pd-tags">
+              {/* lang="en": uppercase donusumunde Turkce "İ" (TYPESCRİPT) olusmasin */}
+              {caseStudy.stack.map((s) => (
+                <span key={s} className="pd-tag" lang="en">{s}</span>
+              ))}
+            </div>
+          </div>
+          <div className="pd-case-block pd-case-outcome glass">
+            <h3 className="pd-case-k">{td('caseOutcome')}</h3>
+            <p>{caseStudy.outcome}</p>
+          </div>
+        </section>
+      )}
+
+      <RelatedSolutions items={relatedSolutions} />
 
       {/* Navigation */}
       <section className="pd-nav">

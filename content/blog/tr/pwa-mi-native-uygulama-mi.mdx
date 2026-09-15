@@ -1,0 +1,252 @@
+---
+title: "PWA mı, native mobil uygulama mı? Karar rehberi"
+description: "Progressive Web App ile native mobil uygulama arasındaki fark platform kalitesi değil, ihtiyaç duyduğunuz donanım erişimi ve mağaza sürecine razı olup olmadığınız. Karar matrisi, yayınlama yolları ve App Store kuralları."
+date: 2026-09-15
+tags: ["pwa", "mobil uygulama", "web app", "performans"]
+author: "Piton Studios"
+draft: false
+translationKey: pwa-vs-native-app
+sources:
+  - title: "web.dev — What does it take to be installable?"
+    url: "https://web.dev/articles/install-criteria"
+  - title: "WebKit — Web Push for Web Apps on iOS and iPadOS"
+    url: "https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/"
+  - title: "Chrome for Developers — Trusted Web Activity: Quick Start"
+    url: "https://developer.chrome.com/docs/android/trusted-web-activity/quick-start"
+  - title: "Apple — App Store Review Guidelines, 4.2 Minimum Functionality"
+    url: "https://developer.apple.com/app-store/review/guidelines/#minimum-functionality"
+faq:
+  - q: "PWA'mı Google Play Store'a koyabilir miyim?"
+    a: "Evet. Trusted Web Activity (TWA) yöntemiyle PWA, Chrome Custom Tabs üzerinden gerçek bir Android uygulaması gibi paketlenip Play Store'a yüklenebilir. Sitenizin HTTPS, geçerli bir manifest, servis çalışanı ve gerekli ikon boyutlarına sahip olması, ayrıca alan adınızı uygulamaya bağlayan bir Digital Asset Links dosyası yayınlamanız gerekir."
+  - q: "PWA, Apple'ın App Store'una girebilir mi?"
+    a: "Teknik olarak PWABuilder gibi araçlarla paketlenip gönderilebilir, ama Google'ın aksine Apple'ın resmî bir 'web uygulamasını mağazaya taşı' yolu yoktur. İnceleme, App Store Rehberi'nin 4.2 maddesine göre yapılır: uygulama yalnızca bir web sitesini sarmalıyorsa ve ekstra bir işlev sunmuyorsa reddedilme riski taşır."
+  - q: "iPhone kullanıcıları PWA'dan push bildirim alabilir mi?"
+    a: "Evet, ama sınırlı bir tarihten beri. iOS ve iPadOS 16.4 (Mart 2023) ile ana ekrana eklenmiş web uygulamaları, native uygulamalarla aynı Apple Push Notification servisini kullanarak bildirim gönderebiliyor. Daha eski iOS sürümlerinde bu mümkün değil."
+  - q: "Hangi durumda native uygulama gerçekten şart?"
+    a: "Bluetooth cihaz eşleştirme, NFC ödeme, arka planda sürekli konum takibi, gelişmiş kamera/AR işlevleri veya cihazın işletim sistemine derin erişim gerektiren senaryolarda native gerekir. Bunların dışındaki çoğu içerik, dashboard ve e-ticaret uygulaması PWA ile karşılanır."
+  - q: "PWA ile başlayıp sonra native'e geçmek mümkün mü?"
+    a: "Evet ve yaygın bir strateji. PWA ile düşük maliyetle pazara çıkıp gerçek kullanım verisiyle hangi native özelliğin talep edildiğini görmek, native yatırımını riskini önemli ölçüde azaltıyor. İkisi rakip değil, sıralı adımlar olarak da kurgulanabilir."
+---
+
+"PWA mı native mi" sorusu genelde yanlış soruluyor. Doğru soru hangisinin "daha iyi" olduğu değil,
+projenizin **hangi donanım erişimine gerçekten ihtiyacı olduğu** ve mağaza onay sürecine ne kadar
+bağımlı kalmak istediğiniz. Bu yazıda kararı somut kriterlere ve resmî platform kurallarına
+dayandırıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Fark platform kalitesinden değil, donanım erişimi ve dağıtım modelinden gelir.",
+    "PWA, Trusted Web Activity ile resmî olarak Google Play Store'a yayınlanabilir.",
+    "Apple'ın PWA için resmî bir mağaza yolu yok; App Store'a giren sarmalayıcılar 4.2 kuralına tabidir.",
+    "iOS'ta push bildirim yalnızca 16.4 ve sonrasında (Mart 2023) çalışıyor.",
+    "PWA ile başlayıp gerçek talep görülünce native'e geçmek, riski azaltan makul bir sıralama.",
+  ]}
+/>
+
+## İki yaklaşım ne anlama geliyor
+
+**PWA (Progressive Web App)**, tarayıcıda çalışan ama bir web app manifest ve servis çalışanı
+(service worker) sayesinde ana ekrana eklenebilen, çevrimdışı çalışabilen ve push bildirim
+gönderebilen bir web sitesidir. Tek bir kod tabanı; masaüstü, Android ve iOS'ta aynı anda çalışır.
+
+**Native uygulama**, iOS için Swift/SwiftUI, Android için Kotlin gibi platforma özgü dillerle
+yazılır, cihazın tüm API'lerine doğrudan erişir ve App Store ile Google Play üzerinden dağıtılır.
+İki platform için genelde iki ayrı kod tabanı (ya da React Native/Flutter gibi paylaşımlı bir
+katman) gerekir.
+
+Aradaki fark çoğu zaman "hangisi daha profesyonel görünür" tartışmasına indirgeniyor, ama bu yanlış
+eksen. Kullanıcı bir uygulamanın PWA mı native mi olduğunu genelde fark etmez — fark ettiği şey
+uygulamanın hızlı açılıp açılmadığı, işlevin çalışıp çalışmadığı ve ihtiyacına cevap verip
+vermediğidir. Karar, kullanıcı algısından çok, ürününüzün hangi donanım API'lerine ve hangi dağıtım
+modeline gerçekten ihtiyaç duyduğuyla ilgili teknik bir sorudur.
+
+<Callout type="info" title="Bu bir taraf tutma yazısı değil">
+  [Nexos Investment](/tr/projeler/nexos-investment) projemizde PWA ve offline desteği, admin
+  panel ile birlikte teslim ettik. Seçim projenin donanım ihtiyacına göre yapılır, teknoloji
+  modasına göre değil.
+</Callout>
+
+## Karar matrisi
+
+| Kriter | PWA lehine | Native lehine |
+|---|---|---|
+| Donanım erişimi | Kamera, konum, bildirim yeterli | Bluetooth, NFC, arka plan konum, gelişmiş sensörler |
+| Dağıtım | Tek kod tabanı, anında güncelleme | Mağaza onayı, sürüm yönetimi |
+| Bütçe | Düşük başlangıç | İki platform için ayrı geliştirme |
+| Mağazada bulunurluk | Play Store'da mümkün, App Store'da belirsiz | Her iki mağazada garanti |
+| Çevrimdışı kullanım | Servis çalışanıyla kapsamlı destek | Tam kontrol, sınırsız |
+| Performans tavanı | Web platformunun sınırları içinde | İşletim sistemi seviyesinde optimize edilebilir |
+| Kurumsal itibar/güven | Bazı sektörlerde "sadece web sitesi" algısı | "Gerçek uygulama" algısı |
+| Bakım | Tek dağıtım, tek test döngüsü | İki platform, iki test döngüsü |
+
+## PWA'nın teknik gereksinimleri — iddia değil, kriter
+
+PWA'nın "yüklenebilir" sayılması gösteriş değil, tarayıcıların uyguladığı somut bir kontrol
+listesidir. [web.dev'in installability kriterlerine](https://web.dev/articles/install-criteria)
+göre bir web uygulamasının Chrome'da yükleme istemi göstermesi için:
+
+- HTTPS üzerinden servis edilmesi,
+- `name`/`short_name`, `start_url`, `display` (fullscreen/standalone/minimal-ui/window-controls-overlay)
+  alanlarını içeren geçerli bir web app manifest'i olması,
+- **192px ve 512px** ikon boyutlarının manifest'te tanımlı olması,
+- kullanıcının sayfada en az bir kez etkileşime girmiş ve en az 30 saniye geçirmiş olması
+
+gerekiyor. Bunlar tarayıcı tarafından denetlenen teknik eşikler; "PWA yaptık" demekle "yüklenebilir
+PWA yaptık" arasındaki fark burada ortaya çıkıyor.
+
+<StatGrid
+  items={[
+    { value: "192 / 512", label: "Zorunlu manifest ikon boyutları (px)", note: "WEB.DEV" },
+    { value: "30 sn", label: "Yükleme istemi için minimum etkileşim süresi", note: "WEB.DEV" },
+    { value: "16.4", label: "Web Push desteği getiren iOS sürümü", note: "WEBKIT · MART 2023" },
+  ]}
+/>
+
+## iOS tarafındaki gerçek sınır: push bildirim tarihi
+
+PWA'ya karşı en sık tekrarlanan itiraz "iPhone'da düzgün çalışmaz" oluyordu — ve bir noktaya kadar
+haklıydı. [WebKit'in duyurusuna göre](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/)
+ana ekrana eklenmiş web uygulamaları için Web Push desteği ancak **iOS ve iPadOS 16.4** ile geldi
+(Mart 2023) ve bildirimler native uygulamalarla aynı Apple Push Notification servisini kullanıyor,
+kilit ekranında ve Apple Watch'ta görünüyor.
+
+<Callout type="warn" title="Kullanıcı tabanınızın iOS sürümünü kontrol edin">
+  16.4 öncesi bir iOS kullanan ziyaretçi push bildirim alamaz. Kullanıcılarınızın büyük kısmı
+  güncel iOS sürümlerindeyse (Apple'ın kendi verilerine göre güncelleme oranı yüksektir) bu artık
+  pratikte küçük bir sınır; eski cihaz filosu olan kurumsal senaryolarda hâlâ dikkat edilmesi
+  gereken bir nokta.
+</Callout>
+
+## Çevrimdışı deneyim nasıl kurgulanır
+
+PWA'nın en çok yanlış anlaşılan tarafı çevrimdışı çalışma. "Servis çalışanı ekledik, artık
+çevrimdışı çalışıyor" cümlesi eksik — hangi verinin çevrimdışı erişilebilir olacağı bilinçli bir
+mimari kararı, otomatik bir yan etki değil. Pratikte üç katman ayrı ele alınır:
+
+1. **Uygulama kabuğu (app shell)** — navigasyon, temel arayüz, statik varlıklar. Bunun
+   önbelleğe alınması nispeten kolay ve neredeyse her PWA'da yapılır.
+2. **Daha önce görüntülenmiş içerik** — bir ürün sayfası, bir makale, bir liste. Servis
+   çalışanının önbellek stratejisiyle (stale-while-revalidate gibi) çevrimdışı erişilebilir
+   hâle gelir.
+3. **Gerçek zamanlı veya işlem gerektiren akışlar** — ödeme, stok kontrolü, canlı fiyat. Bunlar
+   çevrimdışı taklit edilmemeli; bağlantı geri geldiğinde arka planda senkronize edilecek şekilde
+   ayrıca tasarlanır, aksi hâlde kullanıcıya yanlış bilgi gösterme riski doğar.
+
+Native tarafında da aynı ayrım geçerli — farkı, native'in yerel veritabanı ve arka plan görev
+API'lerine daha doğrudan erişmesi. Ama "native olduğu için otomatik olarak daha iyi çevrimdışı
+çalışır" varsayımı da yanlış; ikisinde de çevrimdışı deneyim, tasarlanması gereken bir kapsam
+kalemidir.
+
+## Mağazaya girmek: iki platform, iki farklı gerçek
+
+### Google Play: resmî ve belgelenmiş bir yol var
+
+Android tarafında PWA'yı mağazaya taşımanın adı **Trusted Web Activity (TWA)**. [Chrome for
+Developers'ın resmî kılavuzuna göre](https://developer.chrome.com/docs/android/trusted-web-activity/quick-start)
+bu, PWA'yı Chrome Custom Tabs üzerinden gerçek bir Android uygulaması gibi paketleyip Play Store'a
+yüklemenin desteklenen yöntemi. Gereken adımlar:
+
+1. Sitenin PWA standartlarını karşılaması (HTTPS, manifest, servis çalışanı, gerekli ikon boyutları).
+2. Bubblewrap veya PWABuilder ile Android paketinin (AAB) üretilmesi.
+3. Alan adını uygulamaya bağlayan bir `assetlinks.json` dosyasının `/.well-known/` altında
+   yayınlanması (Digital Asset Links doğrulaması).
+4. Play Console üzerinden normal bir Android uygulaması gibi inceleme ve yayın süreci.
+
+### App Store: resmî yol yok, 4.2 riski var
+
+Apple'da PWA'yı doğrudan mağazaya taşıyan Google'ın TWA'sına denk resmî bir mekanizma bulunmuyor.
+PWABuilder gibi araçlarla bir WebView sarmalayıcısı üretip göndermek mümkün, ama bu paket **App
+Store Review Guidelines'ın 4.2 (Minimum Functionality)** maddesine tabi. Apple'ın kendi metni net:
+
+> "Your app should include features, content, and UI that elevate it beyond a repackaged website."
+
+Alt madde 4.2.2 ise "web clipping" niteliğindeki uygulamaları açıkça hedefliyor. Pratikte bu,
+sitenizi olduğu gibi bir WebView'e koyup gönderdiğinizde reddedilme riskinin yüksek olduğu, native
+navigasyon, çevrimdışı durum yönetimi ve platforma özgü bir kullanıcı deneyimi eklemeden geçmenin
+zor olduğu anlamına geliyor.
+
+<Callout type="key" title="Play Store'a girmek isteyip App Store'u da istiyorsanız">
+  Android'de PWA'yı doğrudan mağazaya koyabilirsiniz; iOS'ta aynı hedefe ulaşmak için ya
+  kullanıcıyı tarayıcıdan "Ana Ekrana Ekle" akışına yönlendirir ya da native bir kabuk (shell)
+  yazıp 4.2'yi karşılayacak gerçek işlevler eklersiniz. İkisini aynı bütçeyle aynı sürede beklemek
+  gerçekçi değil.
+</Callout>
+
+## Yayına giden adım sayısı (şematik)
+
+Aşağıdaki grafik gerçek bir proje ölçümü değil, üç yolun **tipik adım sayısını** karşılaştırıyor.
+Gerçek süre kapsam, ekip deneyimi ve platform incelemesinin o anki yoğunluğuna göre değişir.
+
+<BarChart
+  title="Yayına kadar tipik adım sayısı (şematik)"
+  caption="PWA doğrudan yayın; Android TWA ve iOS native, mağaza süreçlerini içerir. Ölçüm değil, süreç adımlarının sayısıdır."
+  max={8}
+  data={[
+    { label: "PWA (doğrudan web yayını)", value: 2, note: "Deploy + ana ekrana ekleme", highlight: true },
+    { label: "Android (TWA + Play Store)", value: 5, note: "Paketleme, asset links, inceleme" },
+    { label: "iOS (native + App Store)", value: 7, note: "Build, TestFlight, 4.2 incelemesi" },
+  ]}
+/>
+
+## Ne zaman PWA yeterli
+
+1. **İçerik, dashboard, katalog veya e-ticaret** — kamera ve bildirim dışında özel donanım erişimi
+   gerekmeyen çoğu ürün bu kategoriye girer.
+2. **Hızlı pazara çıkış önemliyse.** Tek kod tabanı, mağaza incelemesi beklemeden anında güncelleme
+   anlamına gelir.
+3. **Bütçe iki ayrı platform geliştirmesine yetmiyorsa.** PWA, web ekibinizin zaten bildiği
+   teknolojilerle kurulur.
+4. **SEO ve web'den gelen trafik de önemliyse.** PWA aynı zamanda indekslenebilir bir web sitesidir;
+   bu yaklaşımı [hızlı web sitesi rehberimizde](/tr/blog/hizli-web-sitesi-nasil-yapilir) de ele aldık.
+
+## Ne zaman native'e geçin
+
+1. **Bluetooth, NFC veya gelişmiş kamera/AR** gibi web platformunun karşılamadığı donanım API'leri
+   gerekiyorsa.
+2. **Arka planda sürekli konum takibi** gibi işletim sistemi seviyesinde izin gerektiren
+   senaryolarda.
+3. **Kurumsal alıcı, mağazada "gerçek uygulama" görmek istiyorsa** ve bu itibar açısından
+   pazarlığa kapalıysa.
+4. **Performans tavanı web'in sunduğundan daha yüksek olmalıysa** — ağır grafik işleme, oyun
+   motoru gibi senaryolar.
+
+## Hibrit yaklaşım: PWA'yı native kabukla desteklemek
+
+İkisi arasında keskin bir seçim yapmak zorunda değilsiniz. Yaygın bir orta yol, çekirdek ürünü PWA
+olarak geliştirip yalnızca gerçekten gereken donanım özelliği için ince bir native kabuk eklemek —
+örneğin uygulamanın tamamı web teknolojileriyle çalışırken, yalnızca Bluetooth eşleştirme ekranı
+native bir modülle yazılır. Bu yaklaşım App Store'un 4.2 maddesini de karşılamayı kolaylaştırır,
+çünkü uygulama artık "sarmalanmış bir web sitesi" değil, gerçek bir native işlevi olan bir üründür.
+
+Bu modelin riski, iki dünyanın bakımını aynı anda üstlenmek. Bu yüzden hibrit kabuk kararı, gerçek
+bir donanım ihtiyacı doğrulandıktan sonra alınmalı — "belki ileride lazım olur" varsayımıyla baştan
+inşa edilen bir native katman, çoğu zaman hiç kullanılmayan bir bakım yüküne dönüşür.
+
+## Maliyet mantığı
+
+Kesin rakamlar kapsama göre büyük ölçüde değişir; genel yapı şöyle:
+
+| Yaklaşım | Kod tabanı | Mağaza süreci | Güncelleme |
+|---|---|---|---|
+| PWA | Tek | Yok (Play Store isteğe bağlı) | Anında, kullanıcı müdahalesi gerekmez |
+| PWA + Android TWA | Tek + paketleme | Play Console incelemesi | Web tarafı anında, paket nadiren güncellenir |
+| Native (iOS + Android) | İki ayrı (veya paylaşımlı çerçeve) | Her ikisinde de inceleme | Sürüm bazlı, kullanıcı güncellemesi gerekir |
+
+Projenizin hangi sütuna düştüğünü net şekilde görmek için [PWA hizmetimize](/tr/hizmetler/progressive-web-app)
+ya da daha geniş kapsamlı bir ürün planlıyorsanız [web uygulaması hizmetimize](/tr/hizmetler/web-app)
+bakabilirsiniz; başlangıç bantları [fiyatlandırma sayfasında](/tr/fiyatlandirma).
+
+## Sonuç
+
+"PWA mı native mi" sorusunun tek doğru cevabı yok — doğru cevap, hangi donanım API'lerine gerçekten
+ihtiyaç duyduğunuz ve mağaza sürecine ne kadar bağımlı kalmak istediğinizle değişiyor. Çoğu içerik,
+dashboard ve e-ticaret projesi PWA ile başlayıp gerçek kullanım verisiyle native'e geçme kararını
+sonraya bırakabilir. Donanım gereksinimi baştan netse, native'e doğrudan başlamak zaman
+kaybettirmez.
+
+Projenizin hangi tarafa düştüğünden emin değilseniz [iletişim sayfamızdan](/tr/iletisim) yazın —
+ihtiyaç analizini birlikte yapalım. SSS'de de bu konuyu ele aldık:
+[PWA ile native arasındaki fark](/tr/sss#faq-native-vs-pwa),
+[mağaza yayınlama süreci](/tr/sss#faq-app-store-publishing) ve
+[çevrimdışı çalışma](/tr/sss#faq-offline-support).
