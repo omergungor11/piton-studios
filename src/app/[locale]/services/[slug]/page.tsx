@@ -7,6 +7,8 @@ import { getServiceBySlug, getAllServiceSlugs } from "@/lib/data";
 import ServiceDetail from "@/components/service-detail";
 import JsonLd from "@/components/json-ld";
 import { getLocalizedService } from "@/lib/content-i18n";
+import { getSolutionsByService } from "@/lib/solutions";
+import { landingText } from "@/lib/landing";
 import {
   buildPageMetadata,
   absoluteUrl,
@@ -82,7 +84,13 @@ export default async function ServicePage({ params }: Props) {
           ]}
         />
       )}
-      <ServiceDetail service={service} />
+      <ServiceDetail
+        service={service}
+        relatedSolutions={getSolutionsByService(slug).map((x) => ({
+          slug: x.slug,
+          title: landingText(messages, "solutionItems", x.slug).title,
+        }))}
+      />
     </NextIntlClientProvider>
   );
 }

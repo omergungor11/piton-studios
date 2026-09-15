@@ -1,0 +1,148 @@
+---
+title: "B2B landing page guide: how to collect qualified enquiries"
+description: "Build a B2B landing page around the offer, proof, form, CRM and measurement plan. A detailed guide with a sample conversion funnel, an event glossary and an experiment checklist."
+date: 2026-09-05
+tags: ["conversion", "web design", "analytics"]
+author: "Piton Studios"
+draft: false
+translationKey: b2b-landing-page-lead-generation
+sources:
+  - title: "Google Analytics — generate_lead and recommended events"
+    url: "https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead"
+  - title: "W3C WAI — Accessible form design"
+    url: "https://www.w3.org/WAI/tutorials/forms/"
+  - title: "Google Search Central — Structured data guidelines"
+    url: "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+faq:
+  - q: "What's the difference between a B2B landing page and the homepage?"
+    a: "The homepage directs traffic across a business's different services. A B2B landing page instead focuses on a specific audience, need and next step. Instead of promoting every software service, for example, it collects scoping-call requests from businesses that want to improve their dealer ordering process."
+  - q: "How many fields should an enquiry form have?"
+    a: "There's no universal ideal number. Start with the fields you need to send a first response and route the request to the right person. Don't push details that can be learned during the call into the first form, and measure the effect of trimming fields on qualified-lead volume separately."
+  - q: "Does a WhatsApp click count as a lead?"
+    a: "A click shows contact intent; it doesn't prove the message was sent or that the request is qualified. Track the click as its own event, and record the actual conversation and qualification information in the CRM wherever possible."
+  - q: "Can you run A/B tests on low-traffic B2B sites?"
+    a: "Technically yes, but a small number of results makes it hard to pick a reliable winner. First fix tracking errors, run user interviews and resolve obvious usability issues. Set the sample size and stopping rule for the experiment up front."
+  - q: "Is more form submissions always better?"
+    a: "No. Spam and out-of-fit requests can rise while qualified opportunities shrink. Alongside submission volume, you should also evaluate the qualified-lead rate, conversion to a call, and the processing load it places on the sales team."
+---
+
+A B2B landing page's job isn't limited to getting a visitor to press a button. **It's to help the right customer understand their need, judge whether the service fits them, and leave a request the sales team can respond to.** If only five out of a hundred form submissions are meaningful, you can't say that beats a flow where ten out of fifteen submissions are the right customer.
+
+This guide proposes a working model for businesses offering corporate services, custom software, automation and consulting. The examples are fictional scenarios; they are not conversion data belonging to Piton Studios clients. We'll cover the content architecture first, then the [measurement glossary](#write-the-measurement-glossary-before-launch) and the [experiment plan](#experiment-plan-for-low-traffic-sites).
+
+<KeyTakeaways title="Before you design the page" items={[
+  "Pick one audience, one core need, and one clear next step.",
+  "Measure form volume and qualified-lead volume separately.",
+  "Build proof from verifiable scope of work, not generic praise.",
+  "Fire the success event when the request is accepted, not on the click.",
+  "Design the sales team's response process as a continuation of the page."
+]} />
+
+## Define the boundary of the offer
+
+"We digitalise your business" can cover many services, but it doesn't tell the visitor which problem to come to you for. The first job is to describe the target customer by their current situation, not by industry name. For example, "manufacturers tracking orders across separate files whose dealer network is growing" gives a far more concrete starting point than simply saying "software for the manufacturing sector."
+
+Next, define the outcome of the first conversation. A free discovery call, a needs assessment and a price quote aren't the same thing. If the team can't give a price on the first call, using a firm-quote promise on the button sets the wrong expectation. A phrase like "let's talk through the project scope" can be more accurate — what matters is that the call matches the operation.
+
+| Decision | Weak starting point | More concrete phrasing example |
+|---|---|---|
+| Audience | All businesses | Teams managing dealer orders in separate spreadsheets |
+| Problem | Inefficiency | Order status getting lost between sales and the warehouse |
+| Service | Digital solution | A single order, role and status pipeline in one dashboard |
+| First step | Buy now | Let's review your current workflow together |
+| Expectation | Instant results | Scope and next steps shared after the call |
+
+This example isn't a product promise, it's an exercise in making the message concrete. Use the outcomes your own service genuinely delivers. Moving into design before the scope is clear leads to every section picking up a new target audience further down the line.
+
+## Build the page flow around decision questions
+
+A B2B visitor usually doesn't carry purchasing authority and the job of reading about the service at the same time. The technical team may want to know feasibility, a manager the scope, and procurement the process. The page's job isn't to explain the whole contract — it's to provide enough information for these people to make an initial assessment.
+
+Our recommended flow: problem and offer, suitable use cases, delivery scope, proof, working process, FAQ, and the form. This order isn't a mandatory template. If the visitor doesn't know the brand, bringing proof forward may make more sense; if they're looking for a specific application of a known product, showing scope first may work better. Test the order against the questions that come up most often in sales calls.
+
+The call to action at the top of the page and the form at the bottom should describe the same action. Writing "request a demo" at the top and offering a generic contact form at the bottom leaves the user unsure what to expect. Alongside the single primary action, you can offer a lower-commitment link, like browsing a sample project. Offering three different calls to action that pull in different directions in every block can add to decision load.
+
+## Show proof at the right level of detail
+
+A result like "300% growth" is only valuable if the source, the period and what was measured are known. If you don't have data like that, show the scope of the project instead of inventing a result. What problem was addressed, which screens were built, which roles were supported, what can the user now do? A functional description is proof supporting the buying decision too.
+
+Piton Studios' [project archive](/en/projects) can be used to browse concrete work examples. When placing a reference on your own landing page, tie it to the relevant need; rather than listing every project at the same length, describe two or three well-fitted examples. On work carried out with another agency, keep the contribution and collaboration information intact.
+
+If you're going to use a customer testimonial, verify the actual wording and the permission to publish it. Publishing a drafted quote, a fictional person or an unverified rating doesn't build trust. Also, don't add reviews that don't appear on the page to structured data. [Google's data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) require markup to accurately represent visible content.
+
+## Make the form the start of the sales conversation
+
+Ask this question for every field: "If this information doesn't come in, can we still give a first response?" Contact details and a short description of the need are usually enough of a starting point for initial routing. Technical architecture, a detailed budget breakdown and a long company profile can be learned during the call. But if the type of offer genuinely requires certain extra fields, removing them can make it harder to tell the right customer apart.
+
+Don't treat cutting the field count as a win on its own. Removing current-system information, for example, speeds up the form, but it can lead the sales team to ask the same question again on every request. In that case, consider making the field optional or offering a few clear options instead. The decision should be shaped by form completion rate and first-response quality together.
+
+W3C's [forms guide](https://www.w3.org/WAI/tutorials/forms/) treats field labelling, clear instructions and feedback as part of accessible use. You can find implementation details in our [accessible form design article](/en/blog/accessible-web-design-forms). A form that's technically submittable and a form people can comfortably complete don't share the same acceptance criterion.
+
+## Write the measurement glossary before launch
+
+Adding the measurement plan after design is finished can lead to clicks you already had being reported as success. Define what events mean first. Seeing a form, starting to type, the server accepting the request, and the sales team judging the request suitable are different stages. Don't fold them all under a single "conversion" heading.
+
+| Stage | Recommended event | Trigger point | What it doesn't prove |
+|---|---|---|---|
+| Page visit | Page view | On page load | That the offer was read |
+| Form intent | Form start | On the first meaningful interaction | That the form was submitted |
+| Request | `generate_lead` | When the request is successfully accepted | Sales suitability |
+| Qualification | CRM status field | On team review | That a deal was made |
+| Conversation | CRM call log | When a call is confirmed | That the work was won |
+
+Google Analytics offers a [`generate_lead` definition among its recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead). Our implementation recommendation is to fire this event only after the request is successfully accepted, and to tell resubmissions of the same request apart. If you fire the event on a button click instead, you may end up counting users who hit a validation or network error as leads too.
+
+Don't carry raw form text, email addresses or phone numbers into analytics event parameters. Keep the event glossary limited to fields needed for reporting, such as category, form ID or page type. Explain to whoever reads the report that analytics and CRM numbers may not always match one-to-one, due to user preferences and browser restrictions.
+
+## Sample funnel calculation
+
+In the scenario below we assume the same period saw 2,000 relevant sessions, 120 accepted requests, 48 qualified requests and 24 completed calls. In real measurement you first need to write the "relevant session" filter and a rule for handling duplicate requests. Otherwise the same person or spam records can inflate the ratio.
+
+<BarChart title="Illustrative B2B funnel: from request to conversation" caption="A fictional scenario over 2,000 sessions. Not real customer data, an industry average or a promise of results. Session count was left off the chart because of the scale difference." dataTableLabel="Open the chart data as a table" data={[
+  { label: "Accepted requests", value: 120 },
+  { label: "Qualified requests", value: 48, highlight: true },
+  { label: "Completed calls", value: 24 }
+]} />
+
+In this scenario, the request rate is 120 / 2,000 = 6%, the qualified-request rate is 48 / 120 = 40%, and the session-to-qualified-request rate is 48 / 2,000 = 2.4%. Conversion to a call is 24 / 48 = 50% within qualified requests. The same data answers four different questions; the denominator needs to be stated in the report.
+
+<StatGrid items={[
+  { value: "6%", label: "Session to request", note: "120 / 2,000; illustrative calculation" },
+  { value: "40%", label: "Share of requests that are qualified", note: "48 / 120; illustrative calculation" },
+  { value: "2.4%", label: "Session to qualified request", note: "48 / 2,000; illustrative calculation" }
+]} />
+
+If the next period brings 160 forms and again 48 qualified requests, form volume has grown but the number of qualified opportunities hasn't. The team has simply reviewed more submissions. So instead of celebrating only the top-line increase, evaluate what the extra load actually delivered.
+
+## Design the handover to sales
+
+What happens after the form should be clear on the page. Who will get back to them, what will be covered in the first call, will extra documents be requested from the user? Don't publish a response time you can't actually meet in practice. Describing the process the business can genuinely support builds a sturdier expectation than an ambitious but unkept speed promise.
+
+Internally, the request's owner, status and next action need to be visible. Requests that just land in a shared inbox can sit unclaimed. If you use a CRM, set a rule for assigning ownership and updating status on new records. Without a CRM, a regularly maintained tracking sheet can be a starting point for a small team — the point isn't the software's name, it's that records don't get left without an owner.
+
+Our [automation service](/en/services/automation) can cover designing this kind of repeated handover step. Before automating, write down your definition of a qualified lead: choose criteria that suit your business, such as the need matching the service on offer, the decision process being known, and real contact being possible.
+
+## Experiment plan for low-traffic sites
+
+On low-traffic pages, a handful of extra submissions creates large percentage swings. So making a firm call about headline, form or page length off a single week's result is risky. First confirm that measurement is working correctly; then gather qualitative findings from sales calls, user sessions and short task tests.
+
+You can write an experiment proposal in four sentences: the observed problem, the likely cause, the change, and the success criterion. For example: "Users are asking whether the call is paid; the first step may be unclear; we'll add a process explanation before the form; we'll track the request rate together with the qualified-request rate." That's a far more explainable decision than randomly changing a button colour.
+
+<TrendChart title="The percentage swing the same difference produces at a small sample size" caption="1,000 sessions assumed at each point. The second series contains just two more requests than the first; the lines don't represent growth over time." dataTableLabel="Open the chart data as a table" labels={["Scenario A", "Scenario B", "Scenario C", "Scenario D"]} unit="%" series={[
+  { name: "Baseline rate", points: [0.4, 0.8, 1.2, 2], muted: true },
+  { name: "Rate with two extra requests", points: [0.6, 1, 1.4, 2.2] }
+]} />
+
+In the first scenario, when four requests become six, the relative increase is 50%. In the last scenario, when twenty requests become twenty-two, it's 10%. In both cases the absolute difference is two requests. This chart isn't a statistical significance test; it shows that large percentages can be produced from small numbers. Experiment duration and the required sample size still need to be planned separately, based on the expected effect and current volume.
+
+## Think about SEO and the campaign page together
+
+A permanent page you want found in organic search shouldn't consist of just an ad slogan. Who it suits, service scope, process, examples and questions need to be readable as text. If you're creating multiple similar pages for the same offer, define in your content plan which page serves which need.
+
+The title and description should describe the offer the page actually delivers. Place internal links according to the visitor's likely next question too. It makes sense to route someone curious about scope to [services](/en/services), someone curious about how you work to [the project process](/en/blog/corporate-web-project-process), and someone researching budget to [the pricing page](/en/pricing). You don't need to link the same keyword to the same service in every paragraph.
+
+## Launch readiness and initial review
+
+At minimum, pre-launch acceptance should check mobile form completion, retrying after an error, the successful request being logged, reaching the owner, and the analytics event firing exactly once. Then, at the first review meeting, look not just at the charts but at the content of the requests coming in. A point the sales team keeps having to explain over and over might be missing information on the page.
+
+If you're rebuilding your existing page, our [SEO migration plan guide](/en/blog/website-redesign-seo-migration) helps preserve old addresses and measurement continuity. To plan a new B2B flow together, [write to Piton Studios](/en/contact) — let's evaluate the target customer, the offer, and the path the request will follow within the team, all in the same scope.

@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-15 — Büyüme sayfaları (TASK-060..065)
+
+- **Şehir sayfaları** (10): KKTC, Lefkoşa, Bilecik, Eskişehir, Bursa, İstanbul, Kütahya, Antalya, İzmit, İzmir — `/bolgeler` ve `/web-tasarim/[slug]` (en/ru `/locations`, `/web-design/[slug]`). Projesi olmayan şehirlerde uzaktan hizmet açıkça belirtiliyor; başka şehirdeki projeler referans olarak çerçeveleniyor.
+- **Çözüm sayfaları** (12 hizmet × sektör): emlak ilan yazılımı, emlak SEO, transfer rezervasyon, otel rezervasyon sitesi, e-ticaret SEO/otomasyon, restoran Google Ads, finans otomasyonu, klinik SEO, kurumsal yapay zekâ asistanı, eğitim platformu, güzellik salonu randevu sistemi — `/cozumler`. Sektör sayfalarıyla aynı niyeti hedeflemeyecek şekilde yazıldı; eğitim/güzellik gibi projesi olmayan sektörlerde bu durum açıkça yazılı.
+- Ortak `src/components/landing-view.tsx` + `src/lib/landing.ts`; sitemap ve `pnpm content:check` yeni sayfaları kapsıyor.
+- **Vaka çalışmaları** (6): Nexos, Ödeme Takip Botu, Ambalaj Cini, VELAIR, Gel Gez Gör, Holly Trader — proje repolarından doğrulanmış problem/çözüm/teknik kararlar/teknoloji/sonuç, rakamsız, 3 dil.
+- **Blog**: 5 yeni karşılaştırma yazısı × 3 dil + 4 mevcut yazının en/ru çevirisi (tr 17, en 15, ru 15).
+- **Dile özel 404**: öneri linkleriyle 3 dilde.
+- Tüm Türkçe landing metinleri kaynaklara karşı ayrıca doğrulandı (10 düzeltme: proje adı yazımı, desteklenmeyen iki özellik iddiası, bir yerel çağrışım).
+- Supabase izleri kaldırıldı: footer rozeti, dokümanlardaki eski mimari notları (kodda/bağımlılıkta zaten yoktu).
+- **İç linkleme**: footer'a "Keşfet" satırı (Bölgeler: 10 şehir, Çözümler: 6 öne çıkan + tümü) ve sektör / hizmet / proje detay sayfalarına "İlgili çözümler" bloğu (`src/components/related-solutions.tsx`). Yeni sayfalar artık yalnızca sitemap'ten değil, site içinden de erişilebilir.
+- **Portfolyo düzeltmeleri** (repo incelemesi + kullanıcı teyidi):
+  - Gel Gez Gör: ilan platformu müşteriye ait; bizim işimiz trend tespiti + WhatsApp bildirimi + sosyal medya içerik otomasyonu. Proje kaydı (kind, yıl 2026, etiketler, özet, metin) 3 dilde ve KKTC şehir sayfasında buna göre düzeltildi; "platformu geliştirdik" iddiası kaldırıldı. Kullanılmayan üst düzey `caseStudy` mesaj bloğu da (aynı iddiayı taşıyordu) silindi.
+  - Ambalaj Cini: 2022'deki WordPress sitesi Next.js + Supabase ile yeniden geliştirildi; etiketler güncellendi.
+
 ## 2026-09-15 — Ortak footer + platform ikonları (TASK-059)
 
 - Yeni `src/components/site-footer.tsx`: anasayfada footer yoktu, artık anasayfa ve iç sayfalar aynı bileşeni kullanıyor. İki satır: üstte menü; altta solda teknoloji ikonları, ortada "Piton Studios © 2026" (3 dil), sağda Gizlilik/Çerezler/Kullanım Koşulları. Mobilde ikonlar → yasal linkler → copyright alt alta ortalı.

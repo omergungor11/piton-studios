@@ -1,41 +1,33 @@
 # Tech Stack — Piton Studios
 
+> Guncel durum (2026-09-15). Site tamamen statiktir; veritabani, auth ve harici depolama yoktur.
+> Supabase planlanmis ama hic baglanmamisti — kodda, bagimliliklarda ve dokumanlarda kaldirildi.
+
 ## Runtime
 - Node.js 20 LTS
-- Package manager: pnpm 9.x
+- Package manager: pnpm
 
-## Frontend / Full-Stack
-- Framework: Next.js 15 (App Router)
-- Language: TypeScript 5.x (strict)
-- Styling: Tailwind CSS 4.x
-- UI Components: shadcn/ui (Radix primitives)
-- Animation: Framer Motion 11.x (video transitions, scroll effects)
-- State: React hooks (minimal state — mostly server-rendered)
+## Frontend
+- Framework: Next.js (App Router, Turbopack)
+- Language: TypeScript (strict)
+- i18n: next-intl (tr / en / ru)
+- Stil: `src/app/globals.css` (ozel CSS, tema degiskenleri)
+- 3B: React Three Fiber (anasayfa proje bulutu)
+- Blog / hukuki metinler: MDX (`next-mdx-remote`)
 
-## Backend / Data
-- Database: Supabase (PostgreSQL managed)
-- Storage: Supabase Storage (video files + thumbnails)
-- Auth: Supabase Auth (admin panel icin, opsiyonel)
-- ORM: Supabase JS client (type-safe queries)
+## Icerik
+- Projeler, hizmetler: `src/lib/data.ts` + `src/messages/*.json`
+- Sektor / sehir / cozum sayfalari: `src/lib/{sectors,locations,solutions}.ts` + mesajlar
+- Gorseller: `public/assets/` (repoda)
 
-## Video
-- Format: MP4 (H.264)
-- Thumbnails: Generated from video frames
-- Delivery: Supabase Storage CDN
-- Player: Custom React component (native <video>)
+## Dinamik parca
+- Iletisim formu: `/api/contact` → Resend (e-posta)
 
-## Infrastructure
-- Hosting: Vercel (auto-deploy from main)
-- CDN: Vercel Edge Network + Supabase Storage CDN
-- Domain: [TBD]
-- Analytics: Vercel Analytics (opsiyonel)
+## Altyapi
+- Hosting: Vercel (main'den otomatik deploy)
+- Domain: www.pitonstudios.com
+- Analytics: Vercel Analytics + Speed Insights (cerezsiz)
 
-## Development Tools
-- Linter: ESLint (Next.js config)
-- Formatter: Prettier
-- Type checking: TypeScript strict
-- Version control: Git + GitHub
-
-## Testing (Phase 2+)
-- Unit: Vitest
-- E2E: Playwright (opsiyonel)
+## Gelistirme
+- ESLint, TypeScript strict
+- `pnpm content:check` — ceviri butunlugu

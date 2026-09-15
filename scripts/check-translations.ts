@@ -17,6 +17,8 @@ import path from 'node:path';
 
 import { WORKS, SERVICES, STORIES } from '../src/lib/data';
 import { FAQ_ITEMS } from '../src/lib/faq';
+import { LOCATIONS } from '../src/lib/locations';
+import { SOLUTIONS } from '../src/lib/solutions';
 
 const LOCALES = ['tr', 'en', 'ru'] as const;
 type Locale = (typeof LOCALES)[number];
@@ -53,6 +55,7 @@ interface Row {
 
 function collect(): Row[] {
   const rows: Row[] = [];
+  const tr = messages('tr');
 
   for (const locale of LOCALES) {
     const m = messages(locale);
@@ -90,6 +93,40 @@ function collect(): Row[] {
         status: statusOf(m.faqItems?.[item.id], ['q', 'a']),
       });
     }
+    // Sehir ve cozum landing sayfalari: meta + intro olmadan sayfa ince kalir.
+    const landingKeys = ['title', 'metaTitle', 'metaDescription', 'intro', 'ctaText'];
+    for (const location of LOCATIONS) {
+      rows.push({
+        locale,
+        namespace: 'locationItems',
+        slug: location.slug,
+        status: statusOf(m.locationItems?.[location.slug], landingKeys),
+      });
+    }
+    for (const solution of SOLUTIONS) {
+      rows.push({
+        locale,
+        namespace: 'solutionItems',
+        slug: solution.slug,
+        status: statusOf(m.solutionItems?.[solution.slug], landingKeys),
+      });
+    }
+    // Vaka calismasi opsiyonel; ama tr'de varsa diger dillerde de olmali.
+    for (const work of WORKS) {
+      if (!tr.works?.[work.slug]?.caseStudy) continue;
+      rows.push({
+        locale,
+        namespace: 'caseStudy',
+        slug: work.slug,
+        status: statusOf(m.works?.[work.slug]?.caseStudy, [
+          'challenge',
+          'solution',
+          'highlights',
+          'stack',
+          'outcome',
+        ]),
+      });
+    }
   }
 
   return rows;
@@ -112,7 +149,8 @@ function main() {
     };
 
     console.log(
-      `${locale}: ${byNs('works')}, ${byNs('stories')}, ${byNs('servicesList')}, ${byNs('faqItems')}` +
+      `${locale}: ${byNs('works')}, ${byNs('stories')}, ${byNs('servicesList')}, ${byNs('faqItems')}, ` +
+        `${byNs('locationItems')}, ${byNs('solutionItems')}, ${byNs('caseStudy')}` +
         (bad.length ? `  → ${bad.length} SORUNLU` : '  ✓')
     );
 

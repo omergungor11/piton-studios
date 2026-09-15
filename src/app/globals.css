@@ -2557,6 +2557,20 @@ html[data-theme="light"] .page-header-link:hover { background: rgba(0,0,0,0.06);
   font-size: 12px;
   white-space: nowrap;
 }
+/* Kesfet satiri: sehir + cozum linkleri (kucuk, soluk — menunun altinda ikincil) */
+.page-footer-explore {
+  display: grid; gap: 6px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pfe-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2px; }
+.pfe-row .page-footer-link { padding: 4px 10px; font-size: 12px; color: var(--muted); }
+.pfe-row .pfe-all { color: var(--ink-soft); }
+.pfe-label {
+  margin-right: 6px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+}
 .page-footer-legal { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; }
 .page-footer-legal .page-footer-link { font-size: 12px; color: var(--muted); }
 .page-footer-link {
@@ -3604,6 +3618,39 @@ html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 /* ── TYPOGRAPHY & COLOURS ───────────────────────── */
 /* Related navigation */
 .pd-nav { margin-bottom: 20px; }
+
+/* Ilgili cozumler (hizmet, proje, sektor sayfalarindan cozum sayfalarina) */
+.rel-solutions { margin: 0 0 64px; }
+.rel-solutions-title {
+  margin: 0 0 16px;
+  font-size: clamp(20px, 2.4vw, 28px); font-weight: 600; letter-spacing: -0.01em;
+}
+.rel-solutions-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.rel-solutions-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 18px; border-radius: 999px;
+  color: var(--ink); font-size: 15px;
+  transition: color 200ms ease;
+}
+.rel-solutions-link:hover { color: var(--accent); }
+
+/* Teknik vaka calismasi (works.{slug}.caseStudy) */
+.pd-case { display: grid; gap: 16px; margin: 0 0 64px; }
+.pd-case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pd-case-block { padding: 28px 32px; border-radius: 20px; }
+.pd-case-block p { margin: 0; color: var(--ink-soft); line-height: 1.7; }
+.pd-case-k {
+  margin: 0 0 14px;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+}
+.pd-case-k:not(:first-child) { margin-top: 24px; }
+.pd-case-list { margin: 0; padding-left: 18px; display: grid; gap: 10px; color: var(--ink-soft); line-height: 1.6; }
+.pd-case-outcome p { color: var(--ink); }
+@media (max-width: 800px) {
+  .pd-case-grid { grid-template-columns: 1fr; }
+  .pd-case-block { padding: 22px 20px; }
+}
 .pd-nav-bar {
   display: grid; grid-template-columns: 1fr auto 1fr;
   align-items: center; gap: 16px;
@@ -5599,6 +5646,24 @@ html[data-theme="light"] .cp-info-card:hover { background: rgba(0,0,0,0.04); }
   color: var(--accent, oklch(0.58 0.19 24));
   background: var(--accent-soft, oklch(0.58 0.19 24 / 0.22));
 }
+/* Dile ozel 404: kisa aciklama + onerilen sayfa cipleri */
+h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
+.not-found-hint {
+  margin: -8px 0 0; max-width: 46ch;
+  font-size: 15px; line-height: 1.6;
+  color: var(--muted, rgba(242,239,233,0.55));
+}
+.not-found-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.not-found-chip {
+  padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--line, rgba(255,255,255,0.12));
+  color: var(--ink-soft, rgba(242,239,233,0.8));
+  font-size: 14px; text-decoration: none;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.not-found-chip:hover { border-color: var(--accent, oklch(0.58 0.19 24)); color: var(--ink, #F2EFE9); }
+/* Sehir/cozum sayfalari: sektor sayfasindaki inline paragraf stili sinifa tasindi */
+.sec-detail p { max-width: 68ch; color: var(--muted); line-height: 1.7; margin: 0 0 16px; }
 
 /* ============================================================
    BLOG — liste, etiket, yazi

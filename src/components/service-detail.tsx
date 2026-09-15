@@ -7,12 +7,14 @@ import { type Service, SERVICES } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 import SERVICE_ICONS from '@/components/service-icons';
 import PartnerBadges from '@/components/partner-badges';
+import RelatedSolutions, { type RelatedSolution } from '@/components/related-solutions';
 
 interface Props {
   service: Service;
+  relatedSolutions?: RelatedSolution[];
 }
 
-export default function ServiceDetail({ service }: Props) {
+export default function ServiceDetail({ service, relatedSolutions = [] }: Props) {
   const t = useTranslations('serviceDetail');
   const ts = useTranslations('servicesList');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -269,6 +271,9 @@ export default function ServiceDetail({ service }: Props) {
           </div>
         </section>
       )}
+
+      {/* ── G2. SEKTORE OZEL COZUMLER ──────────────────────── */}
+      <RelatedSolutions items={relatedSolutions} className="sd-section-fade" />
 
       {/* ── H. CTA ──────────────────────────────────────────── */}
       <section className="sd-cta sd-section-fade">

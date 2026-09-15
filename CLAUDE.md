@@ -70,6 +70,25 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   >
   > JSON-LD: FAQPage + WebPage(`speakable`) + BreadcrumbList + Organization.
   > `/llms.txt` (llmstxt.org bicimi) ve `robots.ts`'teki 14 AI crawler izni de bu isin parcasi.
+- **Büyüme sayfaları** (2026-09-15, plan: `piton-plans/growth-pages-plan.md`):
+  - **Şehir sayfaları** `/bolgeler` + `/web-tasarim/[slug]` (en/ru `/locations`, `/web-design/[slug]`) — 10 şehir,
+    yapı `src/lib/locations.ts`, metin `messages → locationItems`. Projesi olmayan şehirde uzaktan hizmet
+    dürüstçe yazılır; **yerel ofis/müşteri/rakam uydurulmaz**, başka şehirdeki proje "referans" diye çerçevelenir.
+  - **Çözüm sayfaları** (hizmet × sektör) `/cozumler` + `/cozumler/[slug]` — 12 kombinasyon, `src/lib/solutions.ts`,
+    `messages → solutionItems`. Sektör sayfası "<sektör> web sitesi" niyetini hedefler; çözüm sayfası aynı metni tekrar etmez.
+  - İkisi de ortak `src/components/landing-view.tsx` + `src/lib/landing.ts` kullanır (anahtar sözleşmesi `sectorItems` ile aynı).
+  - **Vaka çalışmaları**: `works.{slug}.caseStudy` {challenge, solution, highlights[], stack[], outcome} — 6 proje,
+    repolardan doğrulanmış, **rakamsız**; metinde dosya yolu / fonksiyon adı gibi kod ifadesi olmaz.
+  - **Dile özel 404**: `[locale]/not-found.tsx` + `[locale]/[...rest]/page.tsx`. `Link` istemci bileşeni olduğu için
+    404 `NextIntlClientProvider` ile sarılı olmalı.
+  - `pnpm content:check` artık locationItems, solutionItems ve (tr'de varsa) caseStudy'yi de denetler.
+  - **İç linkleme**: footer'da "Keşfet" satırı (10 şehir + `FOOTER_SOLUTIONS`; kısa adlar `common.cities` /
+    `common.solutionsShort`). Sektör, hizmet ve proje detay sayfalarında ortak `RelatedSolutions` bloğu —
+    `getSolutionsBySector/ByService/ByWork` (`src/lib/solutions.ts`), başlıklar sunucuda çözülür.
+    Yeni şehir veya çözüm eklenirse footer kısa adı 3 dilde `common` altına da eklenmeli.
+  > **Paralel ajan kuralı**: içerik ajanları repoda yalnızca kendi çıktı dosyasına yazar, **git komutu çalıştırmaz**.
+  > 2026-09-15'te bir ajan başka ajanların değişikliklerini "izinsiz" sanıp `git stash` + dosya taşıma yaptı;
+  > ayrıca dev server stash sırasında derlediği CSS'i `.next` önbelleğinde tuttu (çözüm: `.next` silip yeniden başlat).
 - **Hukuki sayfalar** (2026-09-14): Gizlilik Politikası ve KVKK Aydınlatma Metni (`/gizlilik-politikasi`),
   Çerez Politikası (`/cerez-politikasi`), Kullanım Koşulları (`/kullanim-kosullari`); en/ru: `/privacy`,
   `/cookies`, `/terms`. Metinler `content/legal/{tr,en,ru}/*.mdx` — **Türkçe metin esastır**, en/ru çeviridir.
@@ -191,19 +210,12 @@ sahibine gonderebilir; bu yuzden Resend hesabi `pitonstudios@gmail.com` ile acil
 ```
 src/
 ├── app/              → Next.js App Router (pages, layouts, API routes)
-├── components/       → React componentleri
-│   ├── ui/           → shadcn/ui + genel UI
-│   ├── video/        → Video player, grid, lightbox
-│   └── layout/       → Header, footer, navigation
-├── lib/              → Utility fonksiyonlar
-│   ├── supabase/     → Supabase client + helpers
-│   └── utils/        → Genel yardimcilar
-├── hooks/            → Custom React hooks
-├── types/            → TypeScript type definitions
-└── styles/           → Global stiller
-public/
-├── videos/           → Video dosyalari (dev)
-└── images/           → Statik gorseller
+├── components/       → React componentleri (scenes/, mdx/, projects-v2/ ...)
+├── lib/              → Veri + yardimcilar (data, sectors, locations, solutions, landing, seo, blog, faq, legal)
+├── messages/         → tr/en/ru ceviri JSON'lari
+└── i18n/             → next-intl routing (lokalize path'ler)
+content/              → blog + hukuki MDX (tr/en/ru)
+public/assets/        → Gorseller (repoda)
 ```
 
 ## Temel Komutlar
@@ -223,8 +235,7 @@ pnpm typecheck              # TypeScript check
 - **TypeScript**: strict, `any` yasak
 - **Dosya**: `kebab-case`, `.tsx` componentler, `.ts` utilities
 - **Component**: Server Components default, `'use client'` sadece gerekince
-- **Video**: Lazy loading, intersection observer, Supabase Storage CDN
-- **Commit**: `feat(TASK-XXX): aciklama` + `Co-Authored-By: Claude <noreply@anthropic.com>`
+- **Commit**: `feat(TASK-XXX): aciklama` (Claude attribution satiri eklenmez)
 
 Detaylar → `piton-config/conventions.md`
 

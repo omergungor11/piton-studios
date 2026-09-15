@@ -1,0 +1,189 @@
+---
+title: "How is AI changing web design and coding? A data-driven guide"
+description: "AI's impact on web design and software development: sourced data and a working plan covering speed gains, code quality, security, accessibility and search visibility."
+date: 2026-09-14
+tags: ["ai", "web design", "software development"]
+author: "Piton Studios"
+draft: false
+translationKey: ai-impact-on-web-design-and-coding
+sources:
+  - title: "Stack Overflow — 2025 Developer Survey: AI"
+    url: "https://survey.stackoverflow.co/2025/ai"
+  - title: "Stack Overflow — 2024 Developer Survey: AI"
+    url: "https://survey.stackoverflow.co/2024/ai"
+  - title: "Peng et al. (2023) — The Impact of AI on Developer Productivity: Evidence from GitHub Copilot"
+    url: "https://arxiv.org/abs/2302.06590"
+  - title: "METR (2025) — Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+    url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+  - title: "Google Cloud — 2025 DORA State of AI-assisted Software Development"
+    url: "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report"
+  - title: "Google — Alphabet Q3 2024 CEO remarks"
+    url: "https://blog.google/inside-google/message-ceo/alphabet-earnings-q3-2024/"
+  - title: "GitClear — AI Copilot Code Quality: 2025 Research"
+    url: "https://www.gitclear.com/ai_assistant_code_quality_2025_research"
+  - title: "Veracode — 2025 GenAI Code Security Report"
+    url: "https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/"
+  - title: "Perry et al. — Do Users Write More Insecure Code with AI Assistants?"
+    url: "https://arxiv.org/abs/2211.03622"
+  - title: "Gartner — By 2028, 75% of enterprise software engineers will use AI code assistants"
+    url: "https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028"
+  - title: "WebAIM — The WebAIM Million 2025"
+    url: "https://webaim.org/projects/million/2025"
+  - title: "Figma — 2025 AI Report"
+    url: "https://www.figma.com/blog/figma-2025-ai-report-perspectives/"
+  - title: "Pew Research Center — Google users are less likely to click links when an AI summary appears in results"
+    url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+faq:
+  - q: "Will AI replace web designers and developers?"
+    a: "Current data points to a change in job description rather than a replacement. AI speeds up drafting, repetitive code and producing variations; needs analysis, architectural decisions, security review, brand judgement and accountability for the outcome still sit with people. Value is shifting toward teams that make those calls well."
+  - q: "Does an AI-built website cost less?"
+    a: "On some line items, yes. The first draft, content variations and repetitive components take less time. But testing, security review, accessibility and content verification don't shrink — skip them and the cost just shifts to after launch. Scope, integrations and quality expectations still set the budget."
+  - q: "Is AI-written code secure?"
+    a: "Not on its own. In Veracode's 2025 report, AI-generated code contained a risky vulnerability in 45% of tests. Stanford researchers also found that assistant users wrote less secure code while believing it was more secure. Code review, dependency scanning and security testing have to stay mandatory."
+  - q: "Do AI tools actually make developers faster?"
+    a: "It depends on the task and the context. On a well-defined, isolated task, the group using Copilot finished 55.8% faster. But in METR's 2025 experiment, experienced developers working on their own large projects were 19% slower with AI. Speed gains shouldn't be assumed without measuring them."
+  - q: "Does AI-generated content cause SEO problems?"
+    a: "The production method alone isn't the problem; the problem is unverified content that carries no original information or experience. As AI summaries become more common in search results, pages that just repeat general knowledge are losing clicks. Pages with sourced data, clear answers and genuine expertise stay more visible in both search and AI answers."
+  - q: "Should I ask whether AI was used on my web project?"
+    a: "Yes, but the real question to ask is how its use is overseen. Ask in writing at the proposal stage which tasks used AI, who reviews the resulting code, how security and accessibility testing is done, and which tools customer data is shared with."
+---
+
+AI has turned web design and software development from an experimental aid into a daily working tool within a few years. According to Stack Overflow's 2025 survey, **84% of developers** are using AI tools or plan to. But more usage doesn't automatically mean a better website. **AI makes production cheaper; it doesn't make verification, security or accountability for the decision cheaper.** What matters for a business is working with a team that sees that difference.
+
+This guide is written for business owners and marketing teams planning to build or redesign a website. Every figure below comes from independent research, and the sources are linked in the text; none of it is Piton Studios client data. You can jump straight to [how an AI-assisted web project should run](#how-an-ai-assisted-web-project-should-run) or [questions to ask when getting a quote](#questions-to-ask-when-getting-a-quote) for direct implementation.
+
+<KeyTakeaways title="Decisions to take away from this guide" items={[
+  "AI use is now standard; what makes the difference is how the output is overseen.",
+  "Speed gains depend on the task: large on isolated work, limited or negative on complex existing projects.",
+  "AI-generated code shouldn't be exempted from security and accessibility testing.",
+  "In design, AI produces variation; brand, hierarchy and user judgement stay with people.",
+  "AI summaries in search results are increasing the value of original, sourced content."
+]} />
+
+## The numbers, at a glance
+
+How fast AI has spread across software teams is one of the clearest technology shifts of recent years. In Stack Overflow's [2024 survey](https://survey.stackoverflow.co/2024/ai), the share of developers using or planning to use AI tools was 76%; the year before it stood at around 70%. In the [2025 survey](https://survey.stackoverflow.co/2025/ai) that figure rose to 84%, and 51% of professional developers said they use these tools every day.
+
+<TrendChart title="Developers using or planning to use AI tools" caption="Stack Overflow Developer Survey results for 2023, 2024 and 2025. Survey data from a different respondent group each year." dataTableLabel="Open the chart data as a table" unit="%" max={100} labels={["2023", "2024", "2025"]} series={[
+  { name: "Using or planning to", points: [70, 76, 84] }
+]} />
+
+The picture is similar on the enterprise side. Google's 2025 [DORA report](https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report) finds that 90% of surveyed technology professionals use AI in their work. Gartner projects that enterprise software-engineer usage, which sat below 10% in early 2023, will [reach 75% by 2028](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028). Google CEO Sundar Pichai said in October 2024 that [more than a quarter of newly written code at the company was being generated by AI](https://blog.google/inside-google/message-ceo/alphabet-earnings-q3-2024/), then reviewed and accepted by engineers.
+
+<StatGrid items={[
+  { value: "84%", label: "Developers using or planning to use AI tools", note: "STACK OVERFLOW 2025" },
+  { value: "90%", label: "DORA respondents using AI at work", note: "DORA 2025" },
+  { value: "25%+", label: "Share of new code AI generates at Google", note: "GOOGLE · OCTOBER 2024" },
+  { value: "45%", label: "AI code tests with a risky vulnerability", note: "VERACODE 2025" }
+]} />
+
+The second half of Pichai's sentence matters at least as much as the first: the code is *reviewed and accepted by engineers.* As the volume of AI-generated lines grows, the human effort of reading those lines and taking responsibility for them doesn't disappear; the weight of the work shifts from production to review.
+
+## Why the speed gain isn't the same on every project
+
+One of the most-cited studies on AI's effect on development speed is the [controlled experiment](https://arxiv.org/abs/2302.06590) run with GitHub Copilot. In it, developers were asked to write an HTTP server in JavaScript as fast as possible. The group using Copilot finished the task 55.8% faster on average. This result shows AI can deliver serious time savings on well-defined, self-contained work started from scratch.
+
+The [METR study](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) published in July 2025 tells a different story. Sixteen experienced developers who had spent years working on the large open-source projects they contribute to were randomly assigned across 246 real tasks. On tasks where AI tools were allowed, developers were **19% slower**. More striking still, participants expected a 24% speed-up before the study and, even after finishing, believed they had been 20% faster.
+
+<Callout type="key" title="Perceived speed and measured speed aren't the same">
+In the METR experiment, developers felt faster even though they had slowed down. A team saying "we're twice as fast with AI" doesn't prove delivery time actually shrank. If a project claims a speed gain, track it against the calendar, the work delivered and the bug count.
+</Callout>
+
+The two studies don't contradict each other; they're measuring different kinds of work. A corporate web project typically bundles two kinds of work together:
+
+| Type of work | Example | Expected AI effect |
+|---|---|---|
+| Isolated and well-defined | A new component skeleton, form validation rules, test data | Clear speed-up |
+| Context-dependent | Integrating with an existing CMS, preserving an old URL structure, a payment flow | Limited; review time can eat the gain |
+| Decision-requiring | Information architecture, brand language, data model, security boundaries | Produces a draft, doesn't replace the decision |
+| Verification | Accessibility testing, cross-browser checks, content accuracy | Can help, but accountability can't be delegated |
+
+How much of a project falls into first-line work versus integration and verification sets the total time saving you can realistically expect from AI. So treat generalisations like "we use AI, so it's half the price" with caution in budget conversations. We go through how these line items actually form in our [corporate website cost guide](/en/blog/corporate-website-cost).
+
+## What's changing on the design side
+
+In web design, AI is felt most on the speed and variety side. Producing a large number of alternatives for a page layout, filling content placeholders with realistic copy, trying visual directions quickly, or pulling out component variations within a design system takes far less time than it used to. Designers spend less time facing the first blank page, and more time choosing and refining.
+
+Figma's [2025 AI report](https://www.figma.com/blog/figma-2025-ai-report-perspectives/), run with 2,500 users, shows both sides of that shift. While 78% of respondents said AI noticeably improved their productivity, only 32% said they could trust the output. There's also a clear gap in satisfaction and perceived quality between developers and designers.
+
+<BarChart title="Figma 2025: perspectives on AI tools" caption="Figma 2025 AI Report, 2,500 Figma users. Values are the percentage of respondents agreeing with the statement." dataTableLabel="Open the chart data as a table" unit="%" max={100} data={[
+  { label: "Developer: satisfied with the tools", value: 82 },
+  { label: "Designer: satisfied with the tools", value: 69 },
+  { label: "Developer: my work's quality improved", value: 68, highlight: true },
+  { label: "Designer: my work's quality improved", value: 54, highlight: true }
+]} />
+
+Designers being more cautious isn't surprising. Whether a piece of code works can be tested; whether a design is on-brand, clear and persuasive rests on context and judgement. AI is good at producing average, "plausible-looking" solutions. For a brand that needs to stand apart from its competitors, that average is often a starting point, not the result.
+
+In practice we find AI productive in design work for things like: alternative drafts for content hierarchy, microcopy suggestions, layout trials across different screen widths, and visual exploration. Information architecture, the typography system, the shape of the conversion flow, and brand language, on the other hand, remain decisions that need real user and business-goal knowledge. Our [web design service](/en/services/web-design) writes that split into the plan from day one.
+
+## Code quality and security risk
+
+AI speeding up code production can just as quickly increase maintenance load. GitClear's [2025 research](https://www.gitclear.com/ai_assistant_code_quality_2025_research), examining code changes from 2020-2024, found that the share of copy-pasted-looking lines rose from 8.3% in 2021 to 12.3% in 2024. Over the same period, the share of lines that refactored existing code by moving it fell from 25% to under 10%, and the frequency of duplicated code blocks longer than five lines rose eightfold in 2024.
+
+This lines up with AI leaning toward adding new code rather than reusing what already exists. In the short term a feature ships faster; over the long term, several different versions of the same logic pile up. A bug fix or a design change stops being something you can make in one place, and the site's maintenance cost climbs.
+
+The security findings are more serious. Veracode's [2025 report](https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/), which tested over 100 language models on Java, JavaScript, Python and C# tasks, found AI-generated code contained a risky vulnerability in 45% of tests. A [Stanford user study](https://arxiv.org/abs/2211.03622) shows the human side of that risk: participants using an AI assistant wrote significantly less secure code, and still believed their code was secure at a higher rate.
+
+<Callout type="warn" title="A contact form is a security surface too">
+On a corporate site, security doesn't only matter on the payment page. Contact and enquiry forms, file upload fields, admin panel logins and third-party integrations all need validation, rate limiting and data protection. AI writing a form that "works" doesn't mean the form is protected against abuse.
+</Callout>
+
+These findings call for making oversight systematic, not for giving up on AI. Our recommended minimum controls:
+
+1. Have every AI-generated change read and merged by a person; don't treat "tests passed" alone as approval.
+2. Verify dependency and package suggestions one by one; don't add a package that doesn't exist or is unmaintained.
+3. Test validation, authorisation and rate limiting separately on every endpoint that accepts user input.
+4. Regularly consolidate duplicated code blocks into a shared component or helper function.
+5. Never paste API keys, customer data or secret configuration into AI tools.
+
+## Accessibility doesn't fix itself automatically
+
+The expectation that AI will make the web more accessible on its own isn't backed by data yet. WebAIM's [2025 report](https://webaim.org/projects/million/2025), which scanned the top one million home pages, found automatically detectable WCAG errors on 94.8% of pages, averaging 51 errors per page. A year earlier that figure was 95.9% — there's improvement, but it's very slow.
+
+Because AI models are trained on existing code across the internet, they can carry that code's habits along with it: unlabelled form fields, insufficient colour contrast, images with no alt text, and interactions that can't be used with a keyboard. Guided correctly, AI can write accessible code, but that needs to be verified with screen reader and keyboard testing. For a practical checklist, see our [accessible web design and forms guide](/en/blog/accessible-web-design-forms).
+
+## Search and visibility are changing too
+
+AI isn't just changing how sites get built; it's changing how they get found. Pew Research Center's [analysis](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/), based on March 2025 browsing data from 900 US adults, found that in Google searches showing an AI summary, users clicked a result link in 8% of visits; without a summary, that figure was 15%. Clicking through to the source link inside the summary itself happened in just 1% of visits.
+
+This has a direct effect on web design. Pages that just repeat general knowledge struggle to bring in a user who already got the answer in the search result. Pages with original data, clear definitions, structured Q&A sections and genuine experience, on the other hand, keep their chance of standing out as a cited source in both classic search and AI answers. We cover this shift from SEO to GEO in our [search visibility in the AI era guide](/en/blog/search-visibility-in-the-ai-era-seo-to-geo).
+
+The technical side is part of that visibility too. Fast-loading pages with meaningful HTML structure, whose content can be read without JavaScript running, are easier for both search engines and AI crawlers to process. You'll find the performance fundamentals in [how to build a fast website](/en/blog/how-to-build-a-fast-website), and the effect of platform choice on this in [Next.js vs WordPress](/en/blog/nextjs-vs-wordpress).
+
+## How an AI-assisted web project should run
+
+The way to capture AI's benefit while limiting its risk is to write out the machine's role and the human's role at every stage from the start. The flow below is the working model we recommend for a corporate web project. It's not a template to copy exactly for every project, but a framework for starting the conversation about how roles get split.
+
+<FlowDiagram title="Recommended working model: splitting roles between AI and humans" caption="At every step AI provides draft and speed; approval, accountability and the final call stay with the team." steps={[
+  { label: "Discovery and scope", ai: "Summarises competitor site structures, drafts a question list and a content inventory.", human: "Defines the business goal, target audience and priority conversion; approves scope." },
+  { label: "Information architecture and content", ai: "Produces page skeletons, heading suggestions and copy variations.", human: "Adds accuracy, brand language and genuine expertise; checks claims against sources." },
+  { label: "Interface design", ai: "Offers layout alternatives, component variations and visual exploration.", human: "Sets the design system, hierarchy, and accessible colour and typography decisions." },
+  { label: "Development", ai: "Writes component skeletons, repetitive code, tests and a documentation draft.", human: "Builds the architecture, reads every change, simplifies duplicated code and manages integrations." },
+  { label: "Testing and security", ai: "Suggests test scenarios, flags likely bugs and security gaps.", human: "Runs keyboard, screen reader, form-security and real-device tests; signs off on launch." },
+  { label: "Launch and growth", ai: "Drafts meta descriptions, structured data and report summaries.", human: "Verifies the measurement setup, interprets results and picks the next improvement." }
+]} />
+
+In this model AI's contribution is real, but not invisible. When it's written down who approves the output of every stage, it's also clear which step gets reviewed if something goes wrong. If you're wondering how to get a measurable return from AI in your own processes, see our [AI automation and ROI guide for SMBs](/en/blog/ai-automation-roi-for-smbs).
+
+## Questions to ask when getting a quote
+
+An agency or freelancer using AI is no longer a differentiator — it's now the industry norm. What you need to assess is how that use shows up in your project. We recommend asking the questions below at the proposal stage and getting the answers in writing.
+
+| Question | Why it matters | What a good answer looks like |
+|---|---|---|
+| Which tasks do you use AI for? | Understanding the expected speed and cost effect | Concrete uses per stage |
+| Who reviews the generated code, and how? | Quality and maintenance load | Code review, testing and a named owner |
+| How is security tested? | Form, panel and data security | Input validation, dependency scanning, authorisation testing |
+| How is accessibility verified? | Legal risk and lost users | Automated scanning plus keyboard and screen reader testing |
+| Which tools is customer data shared with? | Privacy and contractual obligations | Named tools and data-sharing limits |
+| How is the information in the content verified? | Wrong claims and reputational risk | Source checking and expert sign-off |
+| Who handles maintenance after launch? | A codebase growing fast with AI | Maintenance scope, updates and bug-fix process |
+
+If the answers to these questions aren't clear, a low price can mean the cost has just been deferred to after launch. You can find the general project stage flow in [how a corporate web project actually runs](/en/blog/corporate-web-project-process), and starting price bands by package on [our pricing page](/en/pricing). For other frequently asked AI questions, see [the AI section of our FAQ page](/en/faq#faq-hallucination).
+
+## Conclusion for businesses
+
+AI is making web design and coding faster, more experimental, and cheaper on some line items. At the same time it's raising the cost of unchecked output: duplicated code, security vulnerabilities, accessibility errors, and content nobody takes responsibility for. The data shows the gain doesn't come from using the tool — it comes from using it on the right tasks and systematically verifying the output.
+
+At Piton Studios we use AI to speed up drafts, variations and repetitive work; we keep architecture, security, accessibility and content-accuracy decisions under the team's responsibility. If you'd like to plan your website or product with this approach, take a look at our [web application](/en/services/web-app) and [AI integration](/en/services/ai-integration) services, and reach us through the [contact page](/en/contact) to talk through your project.

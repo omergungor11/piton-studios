@@ -1,0 +1,142 @@
+---
+title: "Website redesign: an SEO migration plan and launch checklist"
+description: "A detailed SEO migration guide for a site redesign, covering URL inventory, 301 redirects, canonical tags, content migration and post-launch measurement together."
+date: 2026-09-05
+tags: ["seo", "web design", "website redesign"]
+author: "Piton Studios"
+draft: false
+translationKey: website-redesign-seo-migration
+sources:
+  - title: "Google Search Central — Site moves with URL changes"
+    url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+  - title: "Google Search Central — Consolidating duplicate URLs"
+    url: "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+  - title: "Google Search Central — Structured data guidelines"
+    url: "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+faq:
+  - q: "Do I need to change URLs when I redesign a site?"
+    a: "No. If a page's topic and purpose stay the same, keeping the existing URL shrinks the scope of the migration. A URL change should rest on a concrete reason, such as information architecture, content consolidation, or a domain change."
+  - q: "Can every old page just redirect to the homepage?"
+    a: "Unrelated bulk redirects are the wrong approach. A permanent redirect should go from the old page to the new page that serves its need. Content with no proper match that's being removed should be evaluated for a 404 or 410 response."
+  - q: "Can you guarantee there'll be no traffic loss after a redesign?"
+    a: "No. Search engines reprocessing the changes and concurrent market conditions can create fluctuation. The migration plan's aim is to reduce avoidable technical errors, spot any loss quickly and shorten the time to fix it."
+  - q: "Is a 301 redirect the same as a canonical tag?"
+    a: "No. A redirect sends the browser to a different URL; a canonical tag points to the preferred URL among identical or very similar pieces of content. A canonical tag can't substitute for a redirect on a page that's being removed."
+  - q: "Is checking just the homepage enough on launch day?"
+    a: "No. Organic landing pages, service detail pages, the contact flow, language versions and sample old URLs also need to be tried separately. The homepage loading doesn't show that old links reach the right pages."
+---
+
+A website redesign isn't finished when the new design goes live. The visitor arriving from search results needs to reach the right content through the old link, the sales team needs to keep receiving requests, and the measurement system needs to keep producing comparable data. **An SEO migration plan is a delivery document that carries the old site's valuable entry points over into the new experience.** When design, content and the technical team aren't working from the same document, a site that looks great can quietly lose requests.
+
+This guide is written for businesses redesigning their corporate site and the marketing teams taking delivery of the project. The tables below are the working templates we recommend; the numbers in the charts aren't client performance. You can jump straight to the [URL decision table](#url-decision-table) or the [launch acceptance list](#launch-acceptance-list) for direct implementation.
+
+<KeyTakeaways title="Decisions to take away from this guide" items={[
+  "Treat design changes and URL changes as separate decisions.",
+  "In the page inventory, capture requests and inbound links, not just traffic and content purpose.",
+  "Decide keep, move, merge or remove for every old URL.",
+  "Base technical acceptance on real visitor journeys, not just the homepage.",
+  "Track post-launch issues by page group and by channel."
+]} />
+
+## Define the scope of the redesign first
+
+A visual refresh on the same domain, changing the content management system, and rebuilding the entire URL tree are different projects. When they're priced under a single "website redesign" heading, the migration work often stays invisible. The proposal needs to spell out how many pages are moving, how many languages exist, the scope of the file archive, and who owns redirects.
+
+Our recommendation is to produce three separate outputs at the kickoff meeting: functions to keep, content that will change, and assets to be technically migrated. For example, a new service description is a content job; the old enquiry form's CRM connection is a functional dependency; a downloadable catalogue is an asset to migrate. Keeping these on the same task list prevents mistaking finished design screens for a finished project.
+
+If the platform decision hasn't been made yet, you can read the [Next.js vs WordPress comparison](/en/blog/nextjs-vs-wordpress), and [how a corporate web project actually runs](/en/blog/corporate-web-project-process) for scope and delivery stages. A technology choice doesn't remove the need to own existing content and plan its move.
+
+## Baseline measurement and page inventory
+
+Take a baseline reading before the old site comes down. Don't limit it to total visit count alone. Which service pages generate requests, which blog posts drive traffic to product pages, which PDF gets shared in sales calls? A page's low traffic doesn't show it's worthless — a rarely visited technical document can matter in the buying decision.
+
+Rather than pulling the inventory from a single source, combine the CMS listing, the current sitemap, analytics landing pages and the links the sales team actually uses. Assign an owner to every row. The answer to "where does this go now?" shouldn't be left to a developer's guess.
+
+| Inventory field | What to record | What decision it supports |
+|---|---|---|
+| Old URL | Full address and language | Mapping and testing |
+| Content purpose | Informational, service, document | The right new target |
+| Business value | Requests, sales support, references | Priority |
+| New URL | Confirmed final target | Migration implementation |
+| Decision owner | Content or product owner | Closing ambiguity |
+| Acceptance status | Pending, passed, failed | Launch readiness |
+
+Pick the baseline period to match the business's own rhythm. Comparing a campaign week against an ordinary month produces a false alarm. Besides recording the recent period, set aside the same period from the previous year too, if available. If the measurement setup is going to change, note in the report whether the two periods use the same definitions.
+
+## URL decision table
+
+Google's [site move guide](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) recommends mapping old and new URLs and setting up permanent redirects to the right targets. Sending unrelated pages to the homepage in bulk can be treated as a soft 404. The table below is the template we recommend for turning these principles into project workflow.
+
+| Decision | Example situation | Implementation | Acceptance question |
+|---|---|---|---|
+| Keep | The service's purpose hasn't changed | New design, same URL | Does it still serve the old need? |
+| Move | The page moved to a new category | A 301 or 308 to the new equivalent | Does it get to the right content in one step? |
+| Merge | Two thin guides became one comprehensive guide | Redirect to the shared new target | Are the old topics present in the new copy? |
+| Remove | Content no longer offered, with no equivalent | 404 or 410 | Is a path forward offered to the user? |
+
+The example paths here are a project template, not this site's live routes: `/old-service` might move to `/services/related-service`. But if the old page describes a maintenance agreement, sending it to a general "about us" page doesn't make sense. URL mapping isn't a word-similarity exercise — it's about preserving the user's need.
+
+<BarChart title="Sample inventory: decision split across 120 old URLs" caption="Illustrative planning data; not a real site crawl or an industry average. The four groups total 120 URLs." dataTableLabel="Open the chart data as a table" unit=" URLs" data={[
+  { label: "To keep at the same address", value: 72, highlight: true },
+  { label: "To move to a new address", value: 28 },
+  { label: "To merge into related content", value: 14 },
+  { label: "To remove with no equivalent", value: 6 }
+]} />
+
+In this example, 72 pages need no redirect work; they still need content and form checks, though. Each of the other 48 URLs carries its own separate acceptance decision. A split like this makes clear that the number of redirects to build and the total test scope aren't the same thing.
+
+## Content migration and preserving search intent
+
+One risk to watch during a redesign is copy getting trimmed just to fit into new boxes. When the service's scope, deliverables and use cases get lost, the page can look cleaner while leaving the reader's questions unanswered. That's why we recommend preparing a list of what to preserve from the old copy for every important page.
+
+Assess the list in three parts: information needed to make a decision, information that's no longer valid, and information that could be told better. Past customers' questions help you find the first group. Carrying an old price over into the new design, on the other hand, is a content-freshness error. The goal isn't to copy the whole text as-is, but not to lose the still-valid answer in the new layout.
+
+In merged articles, check the subheadings one by one. Merging just the intro paragraphs of two pages doesn't create a comprehensive guide. The technical explanation, the implementation steps and the relevant service link need to be present in the new copy. Our [SEO and GEO content approach](/en/blog/search-visibility-in-the-ai-era-seo-to-geo) covers this topical completeness alongside the content plan.
+
+## Check canonical tags and language links together
+
+A canonical tag states the preferred address among identical or very similar content; it isn't an absolute command that forces the search engine's choice. If redirects, internal links and the sitemap point to different addresses, the signals get mixed up. See [Google's canonical documentation](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) for more detail.
+
+In practice, pick a sample from each page group and start with the question "what is this page's published, canonical address?" Has the staging domain been left in the source code, is the trailing-slash rule consistent, is a filtered page accidentally presented as standalone content? Route the results of these checks into the same acceptance record rather than scattering them into a separate file from the redirect table.
+
+On multilingual projects, the unit of review isn't only one language's page. The whole language group of a piece of content needs to move together. Don't point to a translation that doesn't actually exist; use the new address of the page that does have an equivalent. Our [hreflang and i18n guide](/en/blog/multilingual-website-hreflang-i18n) is the starting point for language architecture.
+
+## Launch acceptance list
+
+Launch acceptance needs to be more concrete than the sentence "the site is live." Record the checklist below with an outcome, a date and an owner rather than walking through it verbally in a meeting. Attach a screenshot or the HTTP response for any failed test. That way, the same issue doesn't get re-described back and forth between the content team and the development team.
+
+1. Open the important organic-landing pages on mobile and desktop; check the title, main content and links.
+2. Visit sample old URLs; confirm the right page opens after the redirect.
+3. Try the contact request through the real end-to-end flow; check the back-end record as well as the interface message.
+4. Confirm the staging environment's indexing blocks haven't carried over into the live configuration.
+5. Check that the new sitemap, canonical tags and any language links use the same published addresses.
+6. Check share images, migrated documents and important image addresses.
+7. Test that analytics events fire at the expected moment, exactly once.
+8. Decide in writing who makes the call in case of an error, and which version gets restored.
+
+Bring structured data into the same acceptance process too. Old services that no longer appear on the page, or outdated author information, shouldn't remain inside the JSON-LD. Google wants markup to accurately represent page content; valid syntax alone isn't a guarantee of a search feature. [Structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) explain this distinction.
+
+## How post-launch monitoring should be set up
+
+We recommend treating monitoring as two separate views: technical health and business outcome. The technical view shows error responses, broken flows and wrong targets. The business view tracks visits, qualified requests and sales calls generated by the relevant page group. A single total-traffic chart falls short of explaining both areas.
+
+<TrendChart title="Illustrative acceptance tracking: open migration findings" caption="Sample numbers describing a test plan. Not a traffic or ranking forecast; zero open findings doesn't guarantee an SEO outcome." dataTableLabel="Open the chart data as a table" labels={["T−7", "T−3", "Launch", "T+3", "T+7"]} series={[
+  { name: "Open findings", points: [24, 12, 5, 2, 0] },
+  { name: "Launch-blocking findings", points: [6, 3, 0, 0, 0], muted: true }
+]} />
+
+In the chart, launch-blocking issues close before launch, while lower-priority items keep being tracked afterwards. This split is a planning example. On a real project, set the definition of "blocking" in advance: things like the form losing requests, an important page going to the wrong address, or the main content becoming unreachable. Don't put a shade-of-colour difference on the same priority level as a lost request.
+
+We go into how to set up request measurement in [the B2B enquiry-collection page guide](/en/blog/b2b-landing-page-lead-generation). If numbers drop after launch, first look at whether measurement is working, then at the traffic source, then at page experience. That order prevents assuming every drop comes from design.
+
+## The rollback decision when something goes wrong
+
+A rollback plan isn't just about keeping old files around. You need to decide where requests created on the new system are being kept, how DNS or redirect changes will be reversed, and how the old version will be reconciled with the new records. If form data is going to be split across two systems in particular, it needs the operations owner's sign-off.
+
+Not every error requires rolling back the whole site. While fixing a single redirect rule is possible, a broad rollback can create new problems. First assess the affected user journey, how widespread the issue is, and whether the fix can be verified. On the other hand, if request loss is ongoing, waiting for a purely visual fix isn't the right priority.
+
+## What the delivery file should contain
+
+As the project closes, hand over the URL mapping table, content decisions, test results, measurement definitions and open maintenance items alongside the new site address. Whoever looks into an issue a month later should be able to work without knowing what was discussed on launch day. Real sustainability, from the business's perspective, starts in these documents.
+
+When planning a redesign with Piton Studios, you can share your current site, priority services and the flows you want preserved. Under our [SEO and GEO service](/en/services/seo-geo) we can handle technical visibility, and in the scoping conversation we'll start from [our contact page](/en/contact) to evaluate migration and delivery needs together.

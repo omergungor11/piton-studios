@@ -8,14 +8,11 @@
 - **Commit Prefix**: `feat(web)`, `fix(web)`, `refactor(web)`
 
 ### Backend Agent
-- **Scope**: `src/app/api/`, `src/lib/supabase/`
+- **Scope**: `src/app/api/` (yalnizca iletisim formu), `src/lib/contact.ts`
 - **Validation**: `pnpm typecheck && pnpm lint`
 - **Commit Prefix**: `feat(api)`, `fix(api)`
 
-### Database Agent
-- **Scope**: `supabase/`, Supabase dashboard migrations
-- **Validation**: Supabase client type generation
-- **Commit Prefix**: `feat(db)`, `fix(db)`
+> Veritabani yok — Database Agent kapsami kaldirildi (Supabase hic baglanmadi).
 
 ### DevOps Agent
 - **Scope**: Config files, `.env.example`, `next.config.ts`, `vercel.json`

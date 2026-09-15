@@ -20,19 +20,10 @@
 - Use `next/image` for images, custom component for video
 - Metadata API for SEO (generateMetadata)
 
-## Video Handling
-- Lazy load videos with Intersection Observer
-- Use `<video>` with `preload="none"` or `preload="metadata"`
-- Poster images (thumbnails) for initial display
-- Supabase Storage CDN for production video serving
-- Local `videos/` folder for development only
-- Consider HLS/adaptive streaming for large files
-
-## Supabase
-- Client initialized in `src/lib/supabase/client.ts` (browser)
-- Server client in `src/lib/supabase/server.ts` (server components/API)
-- Type-safe queries with generated types
-- Storage bucket: `videos` (public), `thumbnails` (public)
+## Media
+- Site screenshot tabanli; video yok (2026-07-28'de kaldirildi)
+- Gorseller `public/assets/` altinda, `next/image` ile
+- Veritabani / harici depolama yok (Supabase hic baglanmadi, kaldirildi)
 
 ## Styling
 - Tailwind CSS utility-first
@@ -44,10 +35,8 @@
 - Static generation (SSG) where possible
 - Dynamic imports for heavy components
 - Image optimization with next/image
-- Video: lazy load + poster image + intersection observer
 - Bundle analysis before deploy
 
 ## API Design
-- Response format: `{ data, meta? }`
-- Error format: `{ error: { statusCode, code, message } }`
-- Use Supabase client directly where possible (skip API routes)
+- Tek API rotasi: `/api/contact` (zod dogrulama + Resend)
+- Response format: `{ ok: true }` / `{ ok: false, error }`

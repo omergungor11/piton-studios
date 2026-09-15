@@ -1,0 +1,246 @@
+---
+title: "Shopify mı, özel e-ticaret altyapısı mı?"
+description: "Shopify ile sıfırdan kurulan özel bir e-ticaret altyapısı arasındaki fark: abonelik ve işlem ücretleri, esneklik, entegrasyon ve büyüme sınırı. Hangi mağaza hangisini seçmeli."
+date: 2026-09-15
+tags: ["e-ticaret", "bütçe", "web tasarım"]
+author: "Piton Studios"
+draft: false
+translationKey: shopify-vs-custom-ecommerce
+sources:
+  - title: "Shopify — Fiyatlandırma"
+    url: "https://www.shopify.com/pricing"
+  - title: "W3Techs — Content Management Systems kullanım istatistikleri"
+    url: "https://w3techs.com/technologies/overview/content_management"
+faq:
+  - q: "Shopify'da işlem ücreti nasıl işliyor?"
+    a: "Shopify Payments dışında bir ödeme sağlayıcısı kullanırsanız plana göre değişen bir ek işlem ücreti alınır — Eylül 2026 itibarıyla resmi fiyatlandırma sayfasına göre bu oran giriş planında %2, üst planlarda %0,6'ya kadar düşüyor. Shopify Payments kullanılırsa bu ek ücret alınmaz ama standart kart işlem masrafları yine de geçerlidir. Güncel oranlar için [resmi fiyatlandırma sayfasını](https://www.shopify.com/pricing) kontrol edin."
+  - q: "Özel e-ticaret altyapısında işlem ücreti tamamen ortadan kalkar mı?"
+    a: "Platform işlem ücreti kalkar ama ödeme sağlayıcısının (iyzico, Stripe, PayPal gibi) kendi işlem komisyonu her durumda geçerlidir. Kazanılan şey platformun üzerine koyduğu ek yüzdedir, ödeme altyapısının komisyonu değil."
+  - q: "Küçük bir mağaza için Shopify mı, WooCommerce mı, özel mi?"
+    a: "Az sayıda ürünü olan, hızlı başlamak isteyen bir mağaza için Shopify veya WooCommerce (WordPress tabanlı) makul başlangıç noktalarıdır. Özel altyapı, ürün sayısı ve entegrasyon karmaşıklığı arttıkça ya da abonelik + işlem ücreti kümülatif olarak özel geliştirmenin bedelini geçtiğinde anlamlı hale gelir."
+  - q: "Shopify'dan özel bir altyapıya geçiş SEO'yu bozar mı?"
+    a: "Planlanmadan yapılırsa evet — ürün ve kategori URL yapısı değişir, meta veri kaybolabilir. 301 yönlendirme haritası ve yapılandırılmış veri (schema) yeniden kurulumu şart; detaylı kontrol listesi [e-ticaret dönüşüm oranı optimizasyonu](/tr/blog/e-ticaret-donusum-orani-optimizasyonu) yazımızdaki huni mantığıyla birlikte planlanmalı."
+  - q: "Shopify uygulamaları (app) neden bazı mağazalarda yavaşlık yaratıyor?"
+    a: "Her üçüncü taraf uygulama sayfaya ek script ekler; çok sayıda uygulama birikince sayfa ağırlaşır. Bu, Shopify'a özgü değil her platformda (WordPress eklentileri dahil) görülen bir örüntüdür — çözüm platformu değiştirmek değil, gerçekten kullanılan uygulama sayısını sınırlı tutmaktır."
+---
+
+Shopify ile özel bir e-ticaret altyapısı arasındaki fark, WordPress-Next.js tartışmasına benziyor
+ama bir farkla: e-ticarette **para akışı** doğrudan platforma bağlı. Shopify size hazır bir mağaza
+motoru, ödeme altyapısı ve uygulama ekosistemi verir; bunun karşılığında aylık abonelik artı çoğu
+planda bir işlem yüzdesi alır. Özel altyapı bu yüzdeyi ortadan kaldırır ama mağaza motorunu,
+stok/sipariş mantığını ve entegrasyonları sıfırdan kurmayı gerektirir.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Shopify abonelik + (plana göre) işlem yüzdesi alır; özel altyapıda platform yüzdesi kalkar, geliştirme bedeli öne çıkar.",
+    "Eylül 2026 itibarıyla Shopify'ın resmi fiyatlandırmasında planlar yıllık faturalandırmada 19-299 $/ay bandında, üstünde kurumsal Plus planı var.",
+    "İşlem yüzdesi ciro büyüdükçe mutlak tutarda büyür — kırılma noktasını cironuza göre hesaplayın, varsayıma dayanmayın.",
+    "Az ürünlü, hızlı başlamak isteyen mağaza için Shopify makul; yüksek ciro, özel entegrasyon veya ERP bağlantısı olan mağaza için özel altyapı ucuza gelir.",
+    "Platform değişikliğinde SEO'yu koruyan şey URL planı ve 301 yönlendirme — teknoloji değişimi değil.",
+  ]}
+/>
+
+## İki model ne satıyor
+
+### Shopify: yönetilen mağaza motoru
+
+Shopify ürün kataloğu, sepet, ödeme, stok ve sipariş yönetimini hazır bir sistem olarak sunar.
+Kurulum günler içinde tamamlanır, güvenlik ve altyapı bakımı Shopify'ın sorumluluğundadır, binlerce
+hazır uygulama ile kargo, muhasebe, pazarlama entegrasyonu eklenebilir. Bedeli, mağazanın Shopify'ın
+veri modeline ve uygulama ekosistemine bağımlı kalmasıdır.
+
+### Özel altyapı: sıfırdan kurulan mağaza mantığı
+
+Özel geliştirilen bir e-ticaret sitesi, ürün modelini, ödeme akışını ve entegrasyonları işinize özel
+kurar. Bir ERP veya özel fiyatlandırma mantığınız varsa bunu platformun izin verdiği kadarla sınırlı
+kalmadan uygulayabilirsiniz. Bedeli, mağaza motorunun (sepet, stok, ödeme güvenliği) sıfırdan
+kurulması ve bakımının üstlenilmesi gereğidir — bu ihtiyacı [web uygulaması hizmetimizde](/tr/hizmetler/web-app)
+karşılıyoruz.
+
+## Fiyatlandırma: abonelik + işlem yüzdesi
+
+[Shopify'ın resmi fiyatlandırma sayfasına](https://www.shopify.com/pricing) göre (Eylül 2026
+itibarıyla, ABD doları, güncel kampanyalar hariç) plan yapısı şöyle:
+
+| Plan | Yıllık faturalandırmada aylık | 3. parti ödeme sağlayıcısı işlem yüzdesi |
+|---|---|---|
+| Basic | 19 $ | %2 |
+| Grow | 54 $ | %1 |
+| Advanced | 299 $ | %0,6 |
+| Plus | 2.300 $ ve üzeri | %0,2 |
+
+<Callout type="info" title="İşlem yüzdesi yalnızca 3. parti ödeme sağlayıcısında geçerli">
+  Shopify Payments kullanan mağazalarda bu ek yüzde alınmıyor, ama standart kart işlem masrafları
+  her durumda geçerli. Türkiye'de yerel ödeme sağlayıcısı (iyzico, PayTR gibi) kullanan mağazalar
+  çoğunlukla 3. parti sağlayıcı kategorisine girer — bu yüzden tabloyu kendi ödeme altyapınıza göre
+  okuyun.
+</Callout>
+
+Bu, Shopify'ı diğer platform kararlarından ayıran temel fark: WordPress veya Wix'te ödediğiniz ücret
+sabit bir abonelik iken, Shopify'da (3. parti ödeme kullanan mağazalarda) maliyet cironuzla birlikte
+büyür. Ciro arttıkça bu yüzde mutlak tutarda büyük bir kaleme dönüşebilir; kırılma noktasını
+görmenin tek yolu kendi ciro projeksiyonunuzla hesaplamaktır.
+
+## Platform payları
+
+<BarChart
+  title="Shopify'ın işlem ücreti plana göre nasıl düşüyor"
+  caption="Shopify resmi fiyatlandırma sayfası, Eylül 2026 — yalnızca 3. parti ödeme sağlayıcısı kullanan mağazalar için geçerli oran."
+  dataTableLabel="Grafik verilerini tablo olarak aç"
+  unit="%"
+  max={2}
+  data={[
+    { label: "Basic", value: 2, highlight: true },
+    { label: "Grow", value: 1 },
+    { label: "Advanced", value: 0.6 },
+    { label: "Plus", value: 0.2 },
+  ]}
+/>
+
+W3Techs'in [Eylül 2026 verisine](https://w3techs.com/technologies/overview/content_management) göre
+Shopify tüm web sitelerinin %5,4'ünde, izlenen CMS pazarının ise %7,8'inde kullanılıyor — WordPress'in
+(tüm sitelerin %40,3'ü) yanında küçük ama e-ticarete özel bir platform için ciddi bir paydır.
+
+<StatGrid
+  items={[
+    { value: "%5,4", label: "Shopify'ın tüm web sitelerindeki payı", note: "W3Techs, Eylül 2026" },
+    { value: "19-299 $/ay", label: "Shopify Basic-Advanced plan bandı", note: "Yıllık faturalandırma, Eylül 2026" },
+    { value: "40.000-200.000 ₺", label: "Özel/ajans e-ticaret sitesi bandı", note: "Piton Studios gösterge bandı" },
+  ]}
+/>
+
+## Uygulama ekosistemi: gizli abonelik katmanı
+
+Shopify'ın en güçlü yanı uygulama mağazasıdır — kargo hesaplama, sadakat programı, e-posta
+pazarlama, muhasebe entegrasyonu gibi ihtiyaçların çoğu için hazır bir uygulama vardır. Bu hız
+kazandırır ama genelde kendi abonelik ücretini de getirir: platform aboneliğinin üzerine, mağazanın
+büyüklüğüne göre birden fazla uygulama aboneliği daha eklenir. Bu, WordPress'te eklenti yükünün
+karşılığıdır — [Next.js mi WordPress mi](/tr/blog/nextjs-mi-wordpress-mi) yazımızda eklenti
+bakımının üç yıllık maliyette belirleyici kalem olduğunu göstermiştik; Shopify'da bu kalem eklenti
+bakımı değil, biriken uygulama abonelikleridir.
+
+Özel altyapıda aynı işlevler (kargo hesaplama, e-posta entegrasyonu) bir kere geliştirilir ve
+tekrarlayan bir abonelik ücreti oluşturmaz — bedeli, geliştirme süresinin ve ilk kurulumun daha
+uzun olmasıdır.
+
+## Ara bir yol: headless / hibrit mimari
+
+İkisi arasında keskin bir seçim yapmak zorunda değilsiniz. Yaygınlaşan bir üçüncü model, Shopify'ı
+yalnızca ürün, stok ve ödeme motoru olarak arka planda tutup önyüzü (mağazanın göründüğü ve
+alışveriş deneyiminin yaşandığı kısmı) özel geliştirmektir — buna headless veya hibrit e-ticaret
+denir. Bu yaklaşım Shopify'ın işlem güvenliğini ve stok yönetimini korurken, önyüzde tam performans
+ve tasarım kontrolü sağlar. Bedeli, iki sistemi (Shopify backend + özel önyüz) birlikte yönetmenin
+getirdiği ek mimari karmaşıklıktır. Bu model, özellikle yüksek trafikli ama standart olmayan bir
+alışveriş deneyimi tasarlamak isteyen markalar için anlamlı bir orta nokta olabilir.
+
+## Üç yıllık maliyeti nasıl düşünmeli
+
+Aşağıdaki karşılaştırma ölçülmüş bir vaka değil, **senaryo projeksiyonudur** — orta ölçekli bir
+mağaza için aylık 500.000 ₺ ciro ve yıllık %20 büyüme varsayımıyla kurulmuştur. Gerçek rakamlar
+kendi cironuza, kullandığınız ödeme sağlayıcısına ve plan seçiminize göre büyük ölçüde değişir.
+
+<TrendChart
+  title="Üç yıllık kümülatif maliyet (senaryo)"
+  caption="Bin TL cinsinden kümülatif. Shopify: Grow planı + %1 işlem yüzdesi, aylık 500.000 ₺ ciro üzerinden, yıllık %20 büyüme varsayımıyla. Özel altyapı: 80.000 ₺ başlangıç bedeli + düşük yıllık bakım. Senaryo projeksiyonudur, ölçülmüş veri değildir."
+  unit="k ₺"
+  max={280}
+  labels={["Lansman", "1. yıl", "2. yıl", "3. yıl"]}
+  series={[
+    { name: "Özel altyapı (tek seferlik + bakım)", points: [80, 92, 104, 116] },
+    { name: "Shopify (abonelik + işlem yüzdesi)", points: [22, 86, 158, 243], muted: true },
+  ]}
+/>
+
+<Callout type="warn" title="Bu bir senaryo, kesin bir tahmin değil">
+  Grafikteki fark, ciro büyüdükçe işlem yüzdesinin mutlak tutarda büyümesinden kaynaklanır. Düşük
+  ciro veya Shopify Payments kullanan bir mağazada makas çok daha dar, hatta tersine dönebilir.
+  Kendi cironuzla aynı hesabı yapmadan bir platformu diğerine üstün ilan etmeyin.
+</Callout>
+
+## Değerlendirmeyi tek bir metriğe indirmeyin
+
+Shopify'a karşı çıkanların en sık yaptığı hata, kararı yalnızca işlem yüzdesi üzerinden vermektir.
+İşlem yüzdesi önemlidir ama tek başına eksik bir tablo çizer — aşağıdaki dört maliyet kalemini
+birlikte değerlendirin:
+
+1. **Platform aboneliği** — sabit, öngörülebilir.
+2. **İşlem yüzdesi** (3. parti ödeme kullanılıyorsa) — ciroyla birlikte büyür.
+3. **Uygulama abonelikleri** — mağaza büyüdükçe birikir, çoğu zaman gözden kaçar.
+4. **Geliştirme ve bakım** — özel altyapıda baştadır; Shopify'da tema/uygulama özelleştirmesi
+   gerektiğinde ortaya çıkar.
+
+Bir mağazanın "Shopify ucuz" ya da "özel altyapı ucuz" demesi, bu dört kalemin hangi ağırlıkta
+olduğuna bağlıdır. Az uygulamayla, standart bir katalog ve düşük-orta ciroyla çalışan bir mağaza için
+Shopify'ın toplam maliyeti düşük kalır. Çok sayıda uygulama, özel entegrasyon ve yüksek ciro bir
+araya geldiğinde tablo hızla değişir.
+
+## Karar matrisi
+
+| Kriter | Shopify lehine | Özel altyapı lehine |
+|---|---|---|
+| Ürün sayısı | Az-orta, standart kategori yapısı | Çok, özel varyant/fiyatlandırma mantığı |
+| Ciro büyüklüğü | Düşük-orta (işlem yüzdesi küçük kalır) | Yüksek (yüzde mutlak tutarda büyür) |
+| Entegrasyon | Hazır uygulama var (kargo, muhasebe) | Özel ERP, CRM, B2B fiyatlandırma |
+| Teknik kapasite | Gerekmez, platform yönetiyor | Geliştirici veya ajans gerekir |
+| Başlangıç hızı | Günler içinde yayına çıkar | Haftalar sürer |
+| Uzun vadeli kontrol | Platforma bağımlı veri modeli | Tam kontrol, taşınabilir |
+| SEO/performans özelleştirme | Tema ve app sınırları içinde | Sınırsız, performans bütçesiyle yönetilir |
+
+## Ne zaman Shopify doğru seçim
+
+1. **Hızlı başlamak öncelikliyse** — ürün kataloğu hazır, günler içinde satışa geçmek gerekiyorsa.
+2. **Ciro henüz düşük-ortaysa.** İşlem yüzdesi küçük tutarlarda anlamlı bir maliyet kalemi değildir.
+3. **İhtiyaçlar standartsa** — kargo, muhasebe, pazarlama entegrasyonları hazır uygulamalarla
+   karşılanabiliyorsa.
+4. **Teknik bakım kapasitesi yoksa** — güvenlik ve altyapı yönetimiyle uğraşmak istemiyorsanız.
+
+## Ne zaman özel altyapıya geçin
+
+1. **Ciro büyüdükçe işlem yüzdesi mutlak tutarda anlamlı bir kaleme dönüşüyorsa.** Kendi
+   projeksiyonunuzla kırılma noktasını hesaplayın — yukarıdaki grafik yalnızca bir senaryodur.
+2. **ERP, özel B2B fiyatlandırma veya karmaşık varyant mantığı gerekiyorsa.** Bu ihtiyaçlar hazır
+   uygulamalarla zorlanarak karşılanmaya çalışıldığında sistemin bakımı kırılganlaşır.
+3. **Veri ve altyapı üzerinde tam kontrol önemliyse** — platform değişikliği veya taşınabilirlik
+   uzun vadeli stratejinizin parçasıysa.
+4. **Performans ve SEO sözleşmeye yazılacak bir hedefse.** Tema ve uygulama sınırları olmadan
+   ölçülen bir performans bütçesi kurmak isterseniz özel altyapı daha öngörülebilir.
+
+## Hangi büyüklükteki mağaza hangi tarafa düşer
+
+Kesin bir ürün sayısı eşiği vermek yanıltıcı olur çünkü belirleyici olan katalog büyüklüğü değil,
+iş modelinin karmaşıklığıdır. Yine de pratikte gözlemlediğimiz örüntü şöyle: yüzlerce standart ürünü
+olan, tek para birimiyle, tek pazara satan bir mağaza Shopify'da rahat çalışır. Buna karşın çoklu
+para birimi, bayi bazlı özel fiyatlandırma, stok senkronizasyonu gereken fiziksel mağaza ağı veya
+B2B toptan satış akışı olan bir mağaza, bu ihtiyaçları uygulamalarla zorlayarak karşılamaya
+çalıştığında sistemin bakımı hızla karmaşıklaşır. Bu noktada soru "Shopify mı özel mi" olmaktan
+çıkıp "bu iş mantığını hangi altyapı daha az sürtünmeyle taşır" sorusuna dönüşür.
+
+Mağazanız zaten yayında ve asıl sorun trafik değil dönüşümse, platform değiştirmeden önce
+[e-ticaret dönüşüm oranı optimizasyonu](/tr/blog/e-ticaret-donusum-orani-optimizasyonu) yazımızdaki
+huni analizine bakın — çoğu zaman platform değil, sepet ve ödeme akışındaki sürtünme asıl kayıp
+noktasıdır.
+
+## Veri taşınabilirliği ve bağımlılık
+
+Shopify'da ürün, sipariş ve müşteri verisi platformun veri modeline göre tutulur. Standart dışa
+aktarma araçları vardır ama bir platformdan diğerine geçişte veri modeli birebir örtüşmez — özellikle
+özel alanlar, indirim kuralları ve sadakat verisi taşınırken kayıp veya yeniden yapılandırma
+gerektirir. Bu, kötü niyetli bir kısıtlama değil, her yönetilen platformun doğal sonucudur; aynı
+durum WooCommerce'den Shopify'a geçişte de yaşanır.
+
+Özel altyapıda veri modelini siz tanımladığınız için taşınabilirlik en baştan sizin elinizdedir —
+ama bu kontrolü kurmanın bedeli, veri modelini, yedeklemeyi ve güvenliği sıfırdan tasarlamaktır. Bu
+sorumluluğu nasıl yönetilebilir hale getirdiğimizi [bulut ekosistemi hizmetimizde](/tr/hizmetler/cloud-ecosystem)
+anlatıyoruz.
+
+## Sonuç
+
+Shopify ile özel altyapı arasındaki fark bir kalite sıralaması değil, **maliyetin nasıl büyüdüğü**
+sorusudur: Shopify'da maliyet cironuzla birlikte büyür, özel altyapıda geliştirme bedeli baştadır ve
+sonrası düşük bakımdır. Az ürünlü, hızlı başlamak isteyen ve ciro henüz düşük-orta seviyede olan bir
+mağaza için Shopify dürüst bir seçimdir. Ciro büyüdükçe, entegrasyon karmaşıklaştıkça veya tam
+kontrol gerektiğinde özel altyapı baştan daha ucuza gelir.
+
+Mağazanızın hangi tarafa düştüğünü konuşmak isterseniz [iletişim sayfasından](/tr/iletisim) yazın;
+kapsam görüşmesi ücretsizdir. Fiyat bantlarının tamamı [fiyatlandırma sayfamızda](/tr/fiyatlandirma).

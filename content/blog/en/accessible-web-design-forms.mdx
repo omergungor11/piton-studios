@@ -1,0 +1,171 @@
+---
+title: "Accessible web design: an implementation guide for enquiry forms"
+description: "Accessible form design covering labels, keyboard use, error messages, mobile layout and data charts. Includes sample code and a detailed test matrix."
+date: 2026-09-05
+tags: ["accessibility", "web design", "conversion"]
+author: "Piton Studios"
+draft: false
+translationKey: accessible-web-design-forms
+sources:
+  - title: "W3C WAI — Forms overview"
+    url: "https://www.w3.org/WAI/tutorials/forms/"
+  - title: "W3C WAI — Labelling form controls"
+    url: "https://www.w3.org/WAI/tutorials/forms/labels/"
+  - title: "W3C WAI — Error and success notifications"
+    url: "https://www.w3.org/WAI/tutorials/forms/notifications/"
+  - title: "WCAG 2.2 — Target Size, Minimum (2.5.8)"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+  - title: "WCAG — Reflow (1.4.10)"
+    url: "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+faq:
+  - q: "Is adding aria-label alone enough for an accessible form?"
+    a: "No. Beyond a clear field name, you also need to consider keyboard operability, visible focus, error explanation, success notification and mobile layout. A standard HTML field with a visible label is usually the sturdier starting point in most cases."
+  - q: "Why shouldn't a placeholder replace the field label?"
+    a: "The placeholder disappears once the user starts typing, so the field's purpose stops being visible. A persistent label keeps the purpose clear; if a placeholder is needed, use it for a short example only. Help text can also be linked to the field programmatically."
+  - q: "Is passing an automated accessibility test enough?"
+    a: "No. Automated tools catch certain structural issues, but on their own they can't confirm whether the copy is clear or whether the real task can actually be completed comfortably. It needs to be backed up with keyboard, screen reader and mobile task trials."
+  - q: "Does every clickable area have to be 44 pixels?"
+    a: "WCAG 2.2's Level AA criterion 2.5.8 addresses a 24 × 24 CSS pixel target size along with defined exceptions. Larger targets can be a design choice; a single size figure doesn't by itself prove the accessibility of an entire interface."
+  - q: "How much does accessibility work increase conversion?"
+    a: "There's no figure that holds for every site. Removing barriers to use lets more people complete the task; you need to measure the commercial impact with your own baseline data and testing. The numbers in this article's charts are illustrative test-plan data only."
+  - q: "Is this checklist a full WCAG conformance document?"
+    a: "No. The guide is a starting point focused on enquiry and contact flows. A full conformance assessment requires a separate review covering the targeted WCAG version, level, page scope and every relevant success criterion."
+---
+
+Accessible web design aims to let people with different vision, mobility and perception needs complete the same task. On an enquiry form that task is simple: understand the fields, enter the information, be able to correct a mistake, and be sure the request went through. **A form looking visually finished doesn't show that this journey works for everyone.**
+
+This guide covers enquiry and contact flows for corporate website owners, designers and developers. We keep the technical notes tied to W3C resources separate from the working approach we recommend. The figures in the charts are examples illustrating an audit plan. You can jump straight to the [field label example](#label-help-text-and-field-relationship) or the [actionable test matrix](#actionable-test-matrix) for direct implementation.
+
+<KeyTakeaways title="Priority principles" items={[
+  "Give every field a persistent, understandable name and a short description where needed.",
+  "Complete the form without a mouse; check the focus order and its visibility.",
+  "Show errors with text that explains the fix, not just with colour.",
+  "Design a network error and a successful submission as distinct states.",
+  "Provide readable text or a table alongside charts and complex information.",
+  "Back up automated checks with real task trials."
+]} />
+
+## Evaluate accessibility through the task
+
+It's tempting to start reviewing a page from its colour palette or a tool score. But the user wants a result. So we recommend writing the task sentence first: "A visitor should be able to pick a service, describe their need, and send a meeting request." Then break down what steps that task consists of. Finding the form, telling a required field apart, and continuing after an error are all part of that task.
+
+For example, if the form in a dropdown panel only opens with the cursor, having correctly labelled fields alone isn't enough — the user hasn't reached the form yet. Similarly, if the success message after submission appears somewhere else on the screen, completion might go unnoticed. The acceptance scenario has to cover the whole journey.
+
+W3C's [forms tutorial](https://www.w3.org/WAI/tutorials/forms/) covers labels, instructions and user feedback together. This guide's scope isn't a full site conformance audit; it's a practical framework for getting started on form flows. It can be used alongside our [B2B landing page guide](/en/blog/b2b-landing-page-lead-generation) for defining the commercial goal and the request itself.
+
+## Label, help text and field relationship
+
+The label tells the user what to type into the field. Help text explains why it's asked for, or the expected format. A placeholder shouldn't replace a persistent label — it disappears once text is entered. W3C explains that the label must be associated with its control; the standard approach is to match the `for` value on the `label` with the field's `id`. The [labelling guide](https://www.w3.org/WAI/tutorials/forms/labels/) has the details.
+
+The HTML below shows the structure of a single field. It isn't a complete working form — submission, server-side validation and error states still need to be implemented separately.
+
+```html
+<label for="project-email">Your email address (required)</label>
+<p id="project-email-help">
+  We'll use this address to follow up about your project.
+</p>
+<input
+  id="project-email"
+  name="email"
+  type="email"
+  autocomplete="email"
+  aria-describedby="project-email-help"
+  required
+/>
+```
+
+Also review the field name from a content standpoint. Writing "What problem are you trying to solve in your project?" instead of "Details" steers the response. But if the label turns into too long a description, keep the short heading and move the example into the help text. The user shouldn't have to re-read an entire paragraph while moving between fields.
+
+Don't automatically make fields like work phone, current site and budget required. Weigh why each one is genuinely needed at the first conversation. If a field's purpose isn't clear, that's a problem for design and data quality alike. Asking for less data isn't always right for every project — but every field must have a reason.
+
+## Keyboard flow and visible focus
+
+Run a simple manual trial: let go of the mouse, start from the top of the page, Tab your way to the form, change the options and submit. Then go back with Shift+Tab. Note every moment you struggle to track where focus is. If keyboard order diverges from visual order, reconsider the layout.
+
+Our recommendation is to use standard buttons and form controls as your starting point. Giving a plain text element click behaviour so it looks like a clickable box means you have to build keyboard interaction and state information separately. Getting the look the design wants from a real `button` or `input` is a more manageable solution in most cases.
+
+Don't remove the focus ring just because it doesn't fit the design. Instead, design a visible indicator that stands out against the theme. Does a sticky bottom contact bar or the top navigation cover the focused field? When a modal opens, does the user accidentally land back on the page behind it? Can they return to their previous position once the form closes? These are behaviour checks a screenshot can't reveal.
+
+## An error message is a fix instruction
+
+"Invalid value" doesn't tell the user what to change. "Enter the email address in the format name@example.com" is a more actionable message. Marking the wrong field with just a red outline doesn't communicate enough either. W3C's [notifications guide](https://www.w3.org/WAI/tutorials/forms/notifications/) covers explaining the error and letting the user reach the relevant field.
+
+If there's more than one error, you can pair a short summary above the form with local messages next to the fields. Test that the summary links actually take you to the relevant fields. The error state should also be understandable programmatically — for example, you can set `aria-invalid` and an explanation relationship on the failing field. Don't leave these attributes permanently switched on when there's no error.
+
+| State | Insufficient message | More actionable message example |
+|---|---|---|
+| Required field empty | There's an error | Enter your email address so we can get back to you |
+| Wrong format | Invalid | An email address needs a username and a domain |
+| Description limit exceeded | Too long | Shorten the description to the stated character limit |
+| Server unreachable | Operation failed | The request couldn't be saved; your information is kept, please try again |
+| Successful acceptance | OK | Your request has been received; we'll be in touch about the next step |
+
+Only use the network error message from the table if the information is genuinely kept. Interface copy has to accurately describe how the application behaves. If the user has to retype the whole description, saying "your information is kept" damages trust even more.
+
+## Design success and network failure as separate states
+
+Design deliverables often contain just an empty form screen; loading, error and success states get improvised later during development. Yet from the user's perspective the most important moment is right after submission. Was the request received? Do they need to try again? Does pressing the button a second time create two records?
+
+Our recommended state list: initial, validation error, submitting, accepted, and temporary system error. Write down the copy, the retry behaviour and focus management for each state. While deciding how the button behaves during submission, also test how someone using assistive technology will understand the state change.
+
+Don't show a success screen before the server has accepted the request. A request that looks successful in the interface but never reaches email or the CRM is a loss for both the business and the user. Don't leave validation responsibility to the browser alone; client-side checks improve usability, but the server has to re-evaluate the data against its own rules.
+
+## Mobile layout, zoom and target size
+
+Checking the form on a single phone screen isn't enough. With the on-screen keyboard open, can you still reach the last field and the submit button? Does long help text get cut off? Does content disappear in landscape use? Collapsing a two-column layout to a single column on small screens can reduce some of these problems, but it needs to be tried with real copy.
+
+WCAG 2.2's [Target Size, Minimum criterion 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) defines a 24 × 24 CSS pixel size at Level AA, along with exceptions such as spacing and inline targets. Don't treat that figure as a comfortable-use target for the whole interface. Our design recommendation is to build primary submit buttons and frequently used mobile controls in particular as wider targets that are clearly set apart from what surrounds them.
+
+The [Reflow criterion](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) covers using content without loss of information or function under conditions equivalent to a 320 CSS pixel width for vertically scrolling content, with exceptions for content that genuinely needs a two-dimensional layout. Also try enlarging text and browser zoom on the form control. An error message that's unreadable in a narrow space doesn't count as successful.
+
+## Charts, and not trapping information in a single channel
+
+If a chart separates two groups by colour alone, that's a loss of information for anyone who can't perceive the difference. Labels, line styles and text descriptions can be used together. Offering a table equivalent of complex numeric content also works for both screen reader users and readers who want to compare the data carefully.
+
+The charts in this article have expandable data tables underneath them. The chart is for a quick read of the overall distribution; the table is for examining individual values. It's also necessary to state the source of the numbers in the caption. Presenting a sample-plan figure as if it were industry research leads readers to draw the wrong conclusion.
+
+<BarChart title="Sample acceptance plan: distribution of 24 checks across areas" caption="An illustrative plan Piton Studios built for this guide; it is not a WCAG criterion count or a site's audit result." dataTableLabel="Open the chart data as a table" unit=" checks" data={[
+  { label: "Labels and descriptions", value: 6 },
+  { label: "Keyboard and focus", value: 6, highlight: true },
+  { label: "Error and success states", value: 7 },
+  { label: "Mobile and zoom", value: 5 }
+]} />
+
+This distribution isn't a budget or an audit standard. If your project has a multi-step application, file upload or a custom date picker, the plan grows. Counting checks makes the scope visible at the start; the real acceptance criterion is the task being completed without a barrier.
+
+## Actionable test matrix
+
+Don't limit the test matrix to a device list; include the user task and the expected outcome too. Different input methods on the same device can surface different problems. Adding repro steps, the affected area and the expected behaviour to every finding makes it easier for the developer to verify the fix.
+
+| Trial | Task | Expected outcome |
+|---|---|---|
+| Keyboard only | Fill in and submit the form | Logical order, visible focus, accessible controls |
+| Screen reader | Review the fields and instructions | Field purpose, requirement and errors are understandable |
+| Narrow viewport | Complete the form with a long description | Usable without content being cut off or a control disappearing |
+| Zoom | Move between fields | Readable text and accessible submission |
+| Validation error | Submit an empty or invalid field | The problem and the fix are explained |
+| Network error | Retry a failed request | No false success; retry is possible |
+| Successful submission | Create a valid request | Acceptance information and the next step are understood |
+
+In the screen reader trial, don't just check whether the text is read out. Can the user find which field failed and get back to the form? A tester who already knows the application by heart may miss some ambiguities. Include a first-time user's observation whenever possible.
+
+Automated tools are useful for certain structural checks, but on their own they can't resolve what the right message is or whether the task is understandable. Merge the automated report with the manual findings into a single list, split out duplicates, and prioritise whatever blocks the user.
+
+## Fix priority and retesting
+
+Don't set priority by finding count alone. Ten small labelling issues can rank lower than a single issue that blocks every keyboard user from submitting. The affected task, how widespread the problem is, and whether a temporary workaround exists should all be weighed together.
+
+<TrendChart title="Illustrative fix tracking: open findings" caption="Sample work-tracking data. A falling finding count alone doesn't show full accessibility or WCAG conformance; closed items get retested." dataTableLabel="Open the chart data as a table" labels={["Initial scan", "Fix 1", "Fix 2", "Retest"]} series={[
+  { name: "Total open findings", points: [18, 11, 5, 2], muted: true },
+  { name: "Task-blocking findings", points: [5, 2, 0, 0] }
+]} />
+
+In this example two open items remain, but the task-blocking findings are closed. On a real project, track the remaining items with an owner and a target date rather than deleting them. Repeat the same steps after a fix — especially if a shared form component changed, sample other pages that use it too.
+
+## How this fits into ongoing maintenance
+
+If accessibility stays a one-off check done at launch, it can regress in a new campaign form or language version. Add label, error, success and focus examples to the design system. Show the content team how to write field names and help text. Put a short manual repeat of the most critical tasks into the development acceptance step too.
+
+If you're moving to a new design, our [site redesign checklist](/en/blog/website-redesign-seo-migration) lets you keep this matrix in the same delivery file. Our [fast website guide](/en/blog/how-to-build-a-fast-website) is complementary reading for evaluating this alongside performance — loading fast and being usable require different tests.
+
+You can share your project with Piton Studios through our [contact page](/en/contact) to have your current form flow assessed. We can start by identifying the task you want the user to complete, known issues and the devices used, then put together an actionable scope of improvements.

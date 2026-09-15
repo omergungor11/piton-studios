@@ -1,0 +1,251 @@
+---
+title: "Website builder or professional website?"
+description: "The real difference between a website builder like Wix or Squarespace and a custom-built site: price, performance, flexibility and the growth ceiling. Which kind of business should choose which."
+date: 2026-09-15
+tags: ["web design", "budget", "performance"]
+author: "Piton Studios"
+draft: false
+translationKey: site-builder-vs-professional-website
+sources:
+  - title: "Wix — Premium plan pricing"
+    url: "https://www.wix.com/pricing"
+  - title: "Squarespace — Pricing"
+    url: "https://www.squarespace.com/pricing"
+  - title: "W3Techs — Usage statistics of content management systems"
+    url: "https://w3techs.com/technologies/overview/content_management"
+  - title: "HTTP Archive — Web Almanac 2025, CMS chapter"
+    url: "https://almanac.httparchive.org/en/2025/cms"
+faq:
+  - q: "Can you do SEO on Wix or Squarespace?"
+    a: "Yes, basic SEO (title, meta description, sitemap, basic structured data) is available on both platforms. The limit shows up with very specific technical needs: detailed URL structure control, custom redirect rules, fine-tuning page speed, or full control over hreflang in a multilingual setup — the platform limits you to whatever it allows."
+  - q: "Can a site built on a website builder later move to a custom site?"
+    a: "Content can move, but the URL structure is usually platform-specific, and the biggest risk in a migration is broken search rankings. Migrations done without a 301 redirect plan and URL mapping can lose traffic permanently — we cover how to manage that risk in [our FAQ on migrating without breaking SEO](/en/faq#faq-migration-seo)."
+  - q: "Why does a website builder sometimes come out faster than a custom-built site?"
+    a: "According to HTTP Archive's 2025 Web Almanac data, 74% of Wix sites pass Core Web Vitals thresholds on mobile, versus 45% for WordPress. That's because the platform provides a tightly controlled, uniform infrastructure — a custom-built site can match or beat that, but it's not automatic; it requires sticking to a performance budget."
+  - q: "After how many pages does a website builder stop being enough?"
+    a: "It's functional complexity that decides this, not page count. A standard catalogue site with dozens of pages can run fine on a website builder; a five-page site that needs custom calculations, role-based access or a third-party API integration will struggle on one."
+  - q: "If my budget is very limited, should I start with an agency or a website builder?"
+    a: "If your need is a standard brochure site and your budget is genuinely tight, starting with a website builder is a reasonable strategy. As your business grows and specific needs accumulate, moving to a custom site ends up cheaper than sizing the system wrong from the start. We compared the budget bands in [corporate website cost](/en/blog/corporate-website-cost)."
+---
+
+"Wix or a real website" is usually the wrong framing — Wix produces a real website too. The right
+question is **whether your needs stay inside the platform's limits.** A website builder gives you a
+ready-made editor, ready-made hosting and a ready-made template library; a custom-built site gives you
+unlimited flexibility, and in exchange, a responsibility you build from scratch.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Website builders sell a ready editor + hosting + template package; a custom site sells unlimited flexibility plus responsibility you have to build.",
+    "Performance isn't automatically better on a custom site — per the 2025 Web Almanac, Wix sites pass Core Web Vitals at a higher rate than WordPress.",
+    "What sets the limit isn't page count, it's custom business logic, integrations and a growth plan.",
+    "The biggest risk when switching platforms is SEO loss — don't migrate without a 301 redirect plan and a URL map.",
+    "For a standard, fixed-content, low-budget site a builder is a legitimate starting point; moving to a custom site as your business grows pays off.",
+  ]}
+/>
+
+## What a website builder sells
+
+Platforms like Wix and Squarespace bundle three things: a drag-and-drop editor, managed hosting, and a
+ready template/component library. Setup takes minutes, no technical knowledge is required, and
+security updates aren't your responsibility — the platform handles them. In exchange, you can only
+customise as far as the template and editor allow; for a feature the platform doesn't support, you're
+dependent on a third-party app marketplace or the platform's own development tool (e.g. Wix's Velo).
+
+## What a custom-built site sells
+
+A site built from scratch lets you implement any function you want, with no editor or template
+constraint — custom calculations, role-based access, third-party API integration, a performance
+budget. The cost is that hosting, security updates and technical maintenance now sit with you (or the
+team maintaining it). A statically generated site on a modern stack like Next.js reduces most of that
+responsibility too — we covered the details in
+[Next.js or WordPress](/en/blog/nextjs-vs-wordpress).
+
+## Who uses how much
+
+<BarChart
+  title="Share of content management platforms across the web"
+  caption="W3Techs, September 2026 — as a percentage of all websites. The 'no detected CMS' category mostly covers custom-built sites or ones whose codebase isn't detectable."
+  dataTableLabel="Open the chart data as a table"
+  unit="%"
+  max={45}
+  data={[
+    { label: "WordPress", value: 40.3, highlight: true },
+    { label: "No detected CMS (custom/other)", value: 31.5 },
+    { label: "Wix", value: 4.2 },
+    { label: "Squarespace", value: 2.4 },
+  ]}
+/>
+
+This chart isn't a quality ranking, it's a prevalence measure. Wix and Squarespace look small next to
+WordPress, but that still means millions of active sites — both are a serious reality in the small
+business segment.
+
+## Performance: the intuition isn't always right
+
+The common assumption is "website builder = slow, custom code = fast." HTTP Archive's
+[2025 Web Almanac CMS chapter](https://almanac.httparchive.org/en/2025/cms) doesn't fully back that
+up:
+
+<BarChart
+  title="Share of sites passing Core Web Vitals thresholds on mobile"
+  caption="HTTP Archive, Web Almanac 2025 (published January 2026). Platform-wide averages across all measured sites — quality varies widely site by site."
+  dataTableLabel="Open the chart data as a table"
+  unit="%"
+  max={100}
+  data={[
+    { label: "Wix", value: 74, note: "Was 55% in 2024", highlight: true },
+    { label: "Squarespace", value: 70, note: "+8 points year over year" },
+    { label: "WordPress", value: 45 },
+  ]}
+/>
+
+<Callout type="key" title="Platform decides probability, not a guarantee">
+  Wix's high rate comes from the platform offering a tightly controlled, uniform infrastructure —
+  most users simply don't have the chance to write bad code. WordPress's low rate is the cost of
+  unlimited plugin and theme freedom. A custom-built site, if built right, can beat either — but that
+  doesn't happen automatically, it requires sticking to a performance budget. Detail:
+  [how to build a fast website](/en/blog/how-to-build-a-fast-website).
+</Callout>
+
+## Where a website builder's technical limits come from
+
+A website builder is the sum of decisions the editor and infrastructure make on your behalf. For most
+users that's an advantage — you don't deal with servers, caching or SSL. But it turns into a limit in
+three places:
+
+1. **Code access is restricted.** Wix's own development environment (Velo) or similar tools let you
+   write custom code, but that code runs inside the platform's own runtime and constraints — you can't
+   choose the server, the database or the deploy process.
+2. **Portability is limited.** When you want to leave the platform you built your site on, the design
+   or some functionality generally can't be carried over one to one; it has to be rebuilt.
+3. **Fine-tuning performance sits with the platform.** Which script loads, the caching strategy and
+   page weight are decided by the platform, not you. Most of the time that gives a good default (the
+   Core Web Vitals data above shows that), but you can't fine-tune it for your project.
+
+These three limits go entirely unnoticed by most businesses in day-to-day use. The problem starts once
+your business grows and a need the platform didn't anticipate shows up.
+
+## How deep content and SEO control goes
+
+Both website builders offer basic SEO tools (title/description editing, sitemap, basic structured
+data), and that's enough for most small businesses. The difference shows up where things get deeper:
+setting up a custom URL structure, writing detailed redirect rules, adding custom HTTP headers per
+page, or having full control over hreflang in a multilingual architecture — needs like these are
+limited by whatever interface the platform provides. The structured data and technical SEO depth we
+described in [search visibility in the AI era](/en/blog/search-visibility-in-the-ai-era-seo-to-geo)
+is where custom development pulls ahead.
+
+<Callout type="tip" title="Most businesses never need this depth">
+  For a standard service site, the basic SEO tools a platform provides are more than enough. Only
+  weigh this section if you're in a highly competitive sector where search visibility ties directly
+  to revenue.
+</Callout>
+
+## Price comparison
+
+<StatGrid
+  items={[
+    { value: "$17-159/mo", label: "Wix Premium plan band", note: "Annual billing, September 2026" },
+    { value: "€220-670", label: "Template-based agency site", note: "Piton Studios band" },
+    { value: "€780-2,700", label: "Custom-designed corporate site", note: "Piton Studios band" },
+  ]}
+/>
+
+Per [Wix's official pricing page](https://www.wix.com/pricing) (as of September 2026), plans are split
+into Light, Core, Business and Business Elite; prices range from $17.77 to $159.77 a month on annual
+billing, and can vary by location. [Squarespace's official pricing page](https://www.squarespace.com/pricing)
+has a similarly tiered structure; check the page directly for current figures, since prices change
+dynamically by location and promotion.
+
+These bands aren't mutually comparable at face value — comparing a website builder's monthly
+subscription directly against an agency job's one-off price is misleading. The right comparison is the
+[three-year total cost of ownership](/en/blog/corporate-website-cost#hidden-costs-year-one-and-beyond):
+on a website builder that's an ongoing subscription fee; on a custom site it's a one-off price plus low
+maintenance.
+
+## Decision matrix
+
+| Criterion | Favours website builder | Favours custom site |
+|---|---|---|
+| Page structure | Standard brochure, catalogue, portfolio | Custom flows, calculations, business logic |
+| Budget | Low monthly subscription | One-off, medium/high upfront |
+| Technical knowledge | Not required | Needs a developer or agency |
+| Integration needs | Available ready-made in the app store | Custom API, CRM, ERP |
+| Performance target | "Fast enough" | Measured budget, Core Web Vitals target |
+| Brand distinctiveness | Within template limits | Unlimited |
+| Multilingual support | Basic support, limited routing control | Full control — see [building a multilingual site](/en/blog/multilingual-website-hreflang-i18n) |
+| Growth plan | Site stays as it is | Panel, new modules, productisation |
+
+## When a website builder is the right choice
+
+1. **The need is standard** — a business-card-style brochure site, a fixed-content portfolio.
+2. **The budget is genuinely tight** and a low monthly subscription suits you better than a one-off
+   investment.
+3. **There's no technical maintenance capacity** — if you don't want to deal with security updates or
+   hosting management, the platform does it for you.
+4. **There's time pressure** — if you need to launch within a few days.
+
+## When to move to a custom-built site
+
+1. **You need custom business logic** — a calculation engine, role-based access, automated quote
+   generation. Needs like these get fragile when forced into an app-marketplace workaround.
+2. **Performance is a target that will be written into the contract.** If you're going to track Core
+   Web Vitals as a real metric, an infrastructure that gives you full control is more predictable.
+3. **You're building a multilingual structure that needs hreflang.**
+4. **The site will grow into a product over time** — if user accounts, a panel or APIs are on the
+   roadmap, laying the right foundation from the start is cheaper than switching platforms later. We
+   cover this need in our [web application service](/en/services/web-app).
+5. **Brand distinctiveness is critical.** For a corporate identity that needs to stand out from
+   competitors, template limits tend to bite early — our
+   [web design service](/en/services/web-design) is built around exactly that distinction.
+
+## A common mistake: the "try it now, migrate later" plan
+
+Many businesses start their site on Wix or Squarespace thinking "we'll move to a custom site later if
+we grow." That strategy is reasonable on its own, but it gets expensive when two things get missed:
+
+- **URL structure is platform-specific.** Pages and blog posts that accumulate over time build up a
+  body of URLs indexed by search engines. If that structure isn't preserved in a migration, the SEO
+  value built up gets wiped out.
+- **Content migration isn't automatic.** Text can be copied, but page structure, links and media
+  organisation usually have to be rebuilt by hand — which eats into some of the "fast start"
+  advantage.
+
+This strategy can still be a valid path — what matters is treating the migration as a plan from day
+one, not a surprise necessity later. In [corporate website cost](/en/blog/corporate-website-cost) we
+explained that splitting scope into stages is a legitimate way to lower the budget — starting on a
+website builder and later moving to a custom site is one version of that, but the SEO migration cost
+needs to be budgeted for from the start.
+
+## Protecting SEO when you migrate
+
+<Callout type="warn" title="Traffic is what's most often lost in a platform switch">
+  When moving from a website builder to a custom site, the URL structure almost always changes.
+  Migrating without a 301 redirect plan and metadata carryover can permanently damage search rankings.
+  Detailed checklist: [our FAQ on migrating without breaking SEO](/en/faq#faq-migration-seo) and
+  [Next.js or WordPress](/en/blog/nextjs-vs-wordpress#migrating-without-breaking-seo).
+</Callout>
+
+## Four questions to ask before deciding
+
+1. **Is today's need met by the template's available components, or does it require a custom flow?**
+   If the answer is "yes, it's met," a website builder is enough.
+2. **What new functionality will get added over the next 12 months?** If your roadmap includes a
+   panel, multiple languages or a custom integration, meeting that with a custom site from the start
+   ends up cheaper than migrating later.
+3. **Do I have a measured performance or SEO target?** If "fast enough" is good enough, the platform
+   limit isn't a problem; if the target will go into a contract, you need full control.
+4. **Who's going to handle technical maintenance?** If no one will, a managed platform is a realistic
+   choice; if a team or agency will own maintenance, a custom site doesn't hold you back.
+
+## Conclusion
+
+The difference between a website builder and a custom-built site isn't a quality ranking, it's a
+question of limits: does your need stay inside what the platform allows, or does it want more than
+that. For a standard, fixed-content project on a tight budget, a website builder is an honest and
+reasonable choice. For a project with custom business logic, a measured performance target or a growth
+plan, custom development pays off from the start.
+
+If you're not sure which side you're on, write to us via the [contact page](/en/contact); the scope
+conversation is free. You can find all our price bands on the [pricing page](/en/pricing).
