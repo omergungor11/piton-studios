@@ -17,16 +17,14 @@ export default function ContactPageClient() {
           <div className="sp-hero-eyebrow">{t('eyebrow')}</div>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.1}>
+          {/* Onceden Turkce sabit yaziliydi; en/ru sayfalarda da Turkce gorunuyordu. */}
           <h1 className="sp-hero-title">
-            Projenizi<br />
-            <span className="em">konuşalım.</span>
+            {t('pageTitle')}<br />
+            <span className="em">{t('pageTitleEm')}</span>
           </h1>
         </Reveal>
         <Reveal variant="fadeUp" delay={0.2}>
-          <p className="sp-hero-sub">
-            Fikir aşamasından lansmana — her adımda yanınızdayız.
-            Formu doldurun, en kısa sürede dönüş yapalım.
-          </p>
+          <p className="sp-hero-sub">{t('pageSub')}</p>
         </Reveal>
       </section>
 

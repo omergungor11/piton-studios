@@ -9,6 +9,7 @@ import JsonLd from "@/components/json-ld";
 import { getLocalizedService } from "@/lib/content-i18n";
 import { getSolutionsByService } from "@/lib/solutions";
 import { landingText } from "@/lib/landing";
+import { localizeSlug, resolveSlug } from "@/lib/slugs";
 import {
   buildPageMetadata,
   absoluteUrl,
@@ -25,16 +26,17 @@ interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const slugs = getAllServiceSlugs();
-  return slugs.map((slug) => ({ slug }));
+// URL parcasi dile gore degisir (src/lib/slugs.ts); sayfa icinde hep kanonik kimlik kullanilir.
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  return getAllServiceSlugs().map((id) => ({ slug: localizeSlug("services", id, params.locale) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params;
-  const localized = await getLocalizedService(locale as Locale, slug);
+  const { locale, slug: urlSlug } = await params;
+  const slug = resolveSlug("services", urlSlug, locale);
+  const localized = slug ? await getLocalizedService(locale as Locale, slug) : null;
 
-  if (!localized) {
+  if (!slug || !localized) {
     return { title: "Service Not Found" };
   }
 
@@ -47,11 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
   setRequestLocale(locale);
-  const service = getServiceBySlug(slug);
+  const slug = resolveSlug("services", urlSlug, locale);
+  const service = slug ? getServiceBySlug(slug) : undefined;
 
-  if (!service) {
+  if (!slug || !service) {
     notFound();
   }
 

@@ -11,6 +11,7 @@ import {
 } from "@/lib/solutions";
 import { landingText, landingRelations } from "@/lib/landing";
 import { sectorText, sectorFallbackTitle } from "@/lib/sectors";
+import { localizeSlug, resolveSlug } from "@/lib/slugs";
 import { buildPageMetadata, absoluteUrl } from "@/lib/seo";
 import type { Locale } from "@/lib/site";
 
@@ -20,12 +21,14 @@ interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getAllSolutionSlugs().map((slug) => ({ slug }));
+// URL parcasi dile gore degisir (src/lib/slugs.ts); sayfa icinde hep kanonik kimlik kullanilir.
+export function generateStaticParams({ params }: { params: { locale: string } }) {
+  return getAllSolutionSlugs().map((id) => ({ slug: localizeSlug("solutions", id, params.locale) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
+  const slug = resolveSlug("solutions", urlSlug, locale) ?? "";
   if (!getSolutionBySlug(slug)) return {};
   const messages = await getMessages({ locale });
   const text = landingText(messages, "solutionItems", slug);
@@ -38,8 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function SolutionPage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale, slug: urlSlug } = await params;
   setRequestLocale(locale);
+  const slug = resolveSlug("solutions", urlSlug, locale) ?? "";
 
   const solution = getSolutionBySlug(slug);
   if (!solution) notFound();

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import Cursor from '@/components/cursor';
 import BgStage from '@/components/bg-stage';
@@ -9,6 +9,8 @@ import FloatingGlass from '@/components/floating-glass';
 import FloatingActions from '@/components/floating-actions';
 import LanguageSwitcher from '@/components/language-switcher';
 import SiteFooter from '@/components/site-footer';
+import NavMegaMenu from '@/components/nav-mega-menu';
+import MobileMenuSections from '@/components/mobile-menu-sections';
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -16,22 +18,10 @@ interface PageShellProps {
   immersive?: boolean;
 }
 
-const LOCALIZED_PATHS: Record<string, Record<string, string>> = {
-  '/projects': { tr: '/projeler', en: '/projects', ru: '/projects' },
-  '/services': { tr: '/hizmetler', en: '/services', ru: '/services' },
-  '/pricing':  { tr: '/fiyatlandirma', en: '/pricing', ru: '/pricing' },
-  '/sectors':  { tr: '/sektorler', en: '/sectors',  ru: '/sectors'  },
-  '/blog':     { tr: '/blog',      en: '/blog',     ru: '/blog'     },
-  '/faq':      { tr: '/sss',       en: '/faq',      ru: '/faq'      },
-  '/about':    { tr: '/hakkinda',  en: '/about',    ru: '/about'    },
-  '/contact':  { tr: '/iletisim',  en: '/contact',  ru: '/contact'  },
-};
-
 export default function PageShell({ children, immersive = false }: PageShellProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const locale = useLocale();
   const t = useTranslations('common');
 
   useEffect(() => {
@@ -59,10 +49,26 @@ export default function PageShell({ children, immersive = false }: PageShellProp
     };
   }, [menuOpen]);
 
-  const isActive = (canonical: string) => {
-    const lp = LOCALIZED_PATHS[canonical]?.[locale] ?? canonical;
-    return pathname === lp || pathname.startsWith(lp + '/');
-  };
+  // next-intl usePathname dile gore degil, ic rota sablonunu dondurur (/projects/[slug]);
+  // bu yuzden kanonik yolla karsilastirilir. (Onceki yerel-yol esleme TR'de hic eslesmiyordu.)
+  const isActive = (canonical: string) =>
+    pathname === canonical || pathname.startsWith(canonical + '/');
+
+  const mobileRow = (
+    item: { href: '/projects' | '/pricing' | '/sectors' | '/blog' | '/faq' | '/about'; label: string },
+    order: number
+  ) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      className={`mm-nav-row ${isActive(item.href) ? 'is-active' : ''}`}
+      style={{ '--delay': `${order * 40}ms` } as React.CSSProperties}
+      onClick={() => setMenuOpen(false)}
+    >
+      <span className="mm-nav-label">{item.label}</span>
+      <span className="mm-nav-arrow">→</span>
+    </Link>
+  );
 
   return (
     <>
@@ -85,12 +91,10 @@ export default function PageShell({ children, immersive = false }: PageShellProp
               <span className="dup">{t('projects')} ↗</span>
             </span>
           </Link>
-          <Link href="/services" className={`item ${isActive('/services') ? 'active' : ''}`} data-cursor="hover">
-            <span className="row">
-              <span>{t('services')}</span>
-              <span className="dup">{t('services')} ↗</span>
-            </span>
-          </Link>
+          <NavMegaMenu
+            label={t('services')}
+            active={['/services', '/sectors', '/solutions'].some(isActive)}
+          />
           <Link href="/pricing" className={`item ${isActive('/pricing') ? 'active' : ''}`} data-cursor="hover">
             <span className="row">
               <span>{t('pricing')}</span>
@@ -148,26 +152,20 @@ export default function PageShell({ children, immersive = false }: PageShellProp
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>
 
+          {/* Sira: Hizmetler (grup) → Projeler → Fiyatlar → Cozumler (grup) → Sektorler → kalan sayfalar */}
           <nav className="mm-nav">
-            {([
-              { href: '/projects', label: t('projects') },
-              { href: '/services', label: t('services') },
-              { href: '/pricing', label: t('pricing') },
-              { href: '/blog', label: t('blog') },
-              { href: '/faq', label: t('faq') },
-              { href: '/about', label: t('about') },
-            ] as const).map((item, i) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`mm-nav-row ${isActive(item.href) ? 'is-active' : ''}`}
-                style={{ '--delay': `${i * 40}ms` } as React.CSSProperties}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span className="mm-nav-label">{item.label}</span>
-                <span className="mm-nav-arrow">→</span>
-              </Link>
-            ))}
+            <MobileMenuSections keys={['services']} onNavigate={() => setMenuOpen(false)} />
+            {mobileRow({ href: '/projects', label: t('projects') }, 1)}
+            {mobileRow({ href: '/pricing', label: t('pricing') }, 2)}
+            <MobileMenuSections
+              keys={['solutions']}
+              delayStart={3}
+              onNavigate={() => setMenuOpen(false)}
+            />
+            {mobileRow({ href: '/sectors', label: t('sectors') }, 4)}
+            {mobileRow({ href: '/blog', label: t('blog') }, 5)}
+            {mobileRow({ href: '/faq', label: t('faq') }, 6)}
+            {mobileRow({ href: '/about', label: t('about') }, 7)}
           </nav>
 
           <div className="mm-cta">
