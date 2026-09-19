@@ -41,10 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return buildPageMetadata({
+    ownOgImage: true,
     locale: locale as Locale,
     href: { pathname: "/services/[slug]", params: { slug } },
     title: localized.title,
-    description: localized.description,
+    // Bazi kisa kart aciklamalari (ornegin AI Consulting) tek basina 60 karakterin altinda.
+    description:
+      localized.description.length < 90 && localized.longDescription
+        ? `${localized.description} ${localized.longDescription}`
+        : localized.description,
   });
 }
 

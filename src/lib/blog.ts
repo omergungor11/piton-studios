@@ -211,10 +211,18 @@ const TR_MAP: Record<string, string> = {
   Ç: 'c', Ğ: 'g', İ: 'i', Ö: 'o', Ş: 's', Ü: 'u',
 };
 
+/** Kiril → Latin (src/lib/slugs.ts ile ayni stil). Olmadan ru etiketleri bos slug'a dusup 404 veriyordu. */
+const RU_MAP: Record<string, string> = {
+  а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y',
+  к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f',
+  х: 'kh', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'shch', ъ: '', ы: 'y', ь: '', э: 'e', ю: 'yu', я: 'ya',
+};
+
 export function slugifyTag(tag: string): string {
   return tag
     .replace(/[çğıöşüÇĞİÖŞÜ]/g, (c) => TR_MAP[c] ?? c)
     .toLowerCase()
+    .replace(/[а-яё]/g, (c) => RU_MAP[c] ?? c)
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-')

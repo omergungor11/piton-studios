@@ -40,6 +40,8 @@ interface RevealProps {
   duration?: number;
   className?: string;
   once?: boolean;
+  /** Liste icinde kullanilirken 'li' — ol/ul'nin dogrudan cocugu div olamaz. */
+  as?: 'div' | 'li';
 }
 
 export function Reveal({
@@ -49,9 +51,11 @@ export function Reveal({
   duration = 0.9,
   className,
   once = true,
+  as = 'div',
 }: RevealProps) {
+  const Component = (as === 'li' ? motion.li : motion.div) as typeof motion.div;
   return (
-    <motion.div
+    <Component
       variants={VARIANTS[variant]}
       initial="hidden"
       whileInView="visible"
@@ -60,7 +64,7 @@ export function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </Component>
   );
 }
 

@@ -32,12 +32,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const localized = await getLocalizedProject(locale as Locale, slug);
   if (!localized) return { title: "Not Found" };
+  const t = await getTranslations({ locale, namespace: "pageMeta" });
 
   return buildPageMetadata({
+    ownOgImage: true,
     locale: locale as Locale,
     href: { pathname: "/projects/[slug]", params: { slug } },
-    title: localized.title,
-    description: localized.description,
+    // Proje adlari uc dilde ayni; sablon basligi dile ozgu kilar.
+    title: t("projectTitle", { title: localized.title }),
+    // Kart ozetleri 40-70 karakter; arama sonucu icin tek basina fazla kisa.
+    description:
+      localized.description.length + t("projectDescSuffix").length < 160
+        ? `${localized.description} ${t("projectDescSuffix")}`
+        : localized.description,
   });
 }
 

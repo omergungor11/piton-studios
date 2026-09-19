@@ -47,7 +47,25 @@ type PageMetaInput = {
   modifiedTime?: string;
   tags?: string[];
   noIndex?: boolean;
+  /** Diger dillerde karsiligi olmayan sayfalar (blog etiketleri): hreflang yerine yalnizca canonical. */
+  selfOnlyAlternates?: boolean;
+  /**
+   * Rotanin kendi opengraph-image dosyasi var (proje, hizmet, blog, SSS). Config'teki gorsel dosya
+   * tabanli gorseli ezdigi icin bu rotalarda varsayilan gorsel yazilmaz.
+   */
+  ownOgImage?: boolean;
 };
+
+const BRAND_SUFFIX = ` — ${SITE.name}`;
+const MAX_TITLE = 60;
+const MAX_DESCRIPTION = 160;
+
+/** Metni kelime sinirindan keser; arama sonucunda yarim kelimeyle bitmesin. */
+export function clampText(text: string, max = MAX_DESCRIPTION): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[\s,;:·—-]+$/, '')}…`;
+}
 
 /** Tum sayfalarda ortak metadata iskeleti — baslik, aciklama, hreflang, OG, Twitter. */
 export function buildPageMetadata({
@@ -61,25 +79,38 @@ export function buildPageMetadata({
   modifiedTime,
   tags,
   noIndex,
+  selfOnlyAlternates,
+  ownOgImage,
 }: PageMetaInput): Metadata {
   const url = absoluteUrl(locale, href);
-  const fullTitle = title.includes(SITE.name) ? title : `${title} — ${SITE.name}`;
+  // Marka eki yalnizca baslik 60 karakteri asmayacaksa: uzun basliklarda Google'in kestigi kisim
+  // sayfanin konusu degil marka olsun.
+  const fullTitle =
+    title.includes(SITE.name) || title.length + BRAND_SUFFIX.length > MAX_TITLE
+      ? title
+      : `${title}${BRAND_SUFFIX}`;
+
+  const metaDescription = clampText(description);
+  // [locale]/opengraph-image alt rotalara miras gecmiyor (sayfanin openGraph nesnesi ustunu ezer);
+  // bu yuzden acikca verilir. Config gorseli dosya tabanli gorseli de ezdigi icin kendi
+  // opengraph-image dosyasi olan rotalar `ownOgImage` ile varsayilani atlar.
+  const ogImage = image ?? (ownOgImage ? undefined : `${SITE_URL}/${locale}/opengraph-image`);
 
   return {
     metadataBase: new URL(SITE_URL),
     title: fullTitle,
-    description,
-    alternates: buildAlternates(locale, href),
+    description: metaDescription,
+    alternates: selfOnlyAlternates ? { canonical: url } : buildAlternates(locale, href),
     robots: noIndex ? { index: false, follow: false } : undefined,
     openGraph: {
       type,
       url,
       title: fullTitle,
-      description,
+      description: metaDescription,
       siteName: SITE.name,
       locale: OG_LOCALE[locale],
       alternateLocale: locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]),
-      ...(image ? { images: [{ url: image, width: 1200, height: 630, alt: title }] } : {}),
+      ...(ogImage ? { images: [{ url: ogImage, width: 1200, height: 630, alt: title }] } : {}),
       ...(type === 'article'
         ? { publishedTime, modifiedTime, tags, authors: [SITE.name] }
         : {}),
@@ -87,8 +118,8 @@ export function buildPageMetadata({
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
-      description,
-      ...(image ? { images: [image] } : {}),
+      description: metaDescription,
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
   };
 }
@@ -138,6 +169,50 @@ export function breadcrumbJsonLd(
       item: item.url,
     })),
   };
+}
+
+/**
+ * Liste/kurumsal sayfa grafi: Organization + WebPage (CollectionPage, AboutPage, ContactPage)
+ * + BreadcrumbList; `items` verilirse sayfanin ana varligi ItemList olur.
+ */
+export function listingPageJsonLd(input: {
+  url: string;
+  name: string;
+  description: string;
+  locale: Locale;
+  crumbs: { name: string; url: string }[];
+  items?: { name: string; url: string }[];
+  type?: 'CollectionPage' | 'AboutPage' | 'ContactPage';
+}): JsonLdObject[] {
+  const { url, items } = input;
+  return [
+    organizationJsonLd(),
+    {
+      ...webPageJsonLd({
+        url,
+        name: input.name,
+        description: input.description,
+        locale: input.locale,
+        breadcrumbUrl: `${url}#breadcrumb`,
+      }),
+      '@type': input.type ?? 'CollectionPage',
+      ...(items?.length
+        ? {
+            mainEntity: {
+              '@type': 'ItemList',
+              numberOfItems: items.length,
+              itemListElement: items.map((item, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                name: item.name,
+                url: item.url,
+              })),
+            },
+          }
+        : {}),
+    },
+    { ...breadcrumbJsonLd(input.crumbs), '@id': `${url}#breadcrumb` },
+  ];
 }
 
 export function creativeWorkJsonLd(input: {

@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-15 — SEO denetimi düzeltmeleri ve e-posta tasarımı (TASK-071..072)
+
+Canlı sitede 515 URL'lik tarama + anasayfa Lighthouse. Önce/sonra: sitemap'te 404 10 → 0, yanlış hreflang 74 → 0 (etiket sayfaları artık yalnızca canonical), og:image eksik 229 → 0, dilsiz iç link 3 → 0, yetim proje sayfası 15 → 0 (bölge listesi bilerek menüde yok).
+
+- **Rusça blog etiketleri**: `slugifyTag` Kiril harfleri siliyordu, 10 etiket `/ru/blog/teg` boş slug'ında 404 veriyordu → Latin harf çevirisi.
+- **Etiket sayfaları**: diğer dillerde karşılığı olmayan hreflang'ler kaldırıldı; açıklama etiketli yazı başlıklarından üretiliyor.
+- **Varsayılan OG görseli** `[locale]/opengraph-image.tsx`: `buildPageMetadata` açıkça yazar (dosya alt rotalara miras geçmiyor); kendi görseli olan rotalar `ownOgImage: true`.
+- **JSON-LD**: /hizmetler ve /projeler CollectionPage + ItemList, /hakkinda AboutPage, /iletisim ContactPage (`listingPageJsonLd`).
+- **Başlık/açıklama**: marka eki yalnızca 60 karakteri aşmıyorsa; açıklamalar 160'ta kelime sınırından kesiliyor; liste sayfası başlıkları açıklayıcı hale geldi; proje başlıkları dile özgü ("X: Proje İncelemesi"), kısa proje açıklamalarına ek cümle; 25 blog + 9 hukuki açıklama 130-160 karaktere indirildi.
+- Aydın Transfer (WORKS + STORIES) sitemap'te çift girdiydi; hikayeler önceki/sonraki proje döngüsüne katıldı; 3 blog yazısında dilsiz `/blog/...` linki düzeltildi.
+- Anasayfa: olmayan `/models/logo.glb` için her ziyarette atılan 404 HEAD isteği kaldırıldı; h2 → h4 atlaması h3 oldu; süreç listesi geçerli `ol > li` yapısına geçti (`Reveal as="li"`).
+- `llms.txt` markdown link biçimine geçti, sektör ve çözüm listeleri eklendi.
+- **E-posta tasarımı** (`src/lib/email/`): marka iskeleti (koyu şerit, kırmızı vurgu, tablo tabanlı 600px, düz metin sürümü). İletişim bildirimi (detay tablosu, mesaj alıntısı, yanıtla/WhatsApp butonları) ve 3 dilde otomatik yanıt (sonraki adımlar, `replyTo` gelen kutusu) canlıya bağlandı. Kampanya şablonu (`renderCampaign`, Resend Broadcasts abonelikten çıkma yer tutucusu) hazır. Önizleme: `/api/email-preview` (yalnızca dev).
+
 ## 2026-09-15 — Hizmet yeniden yapılanması, sektör hub'ları, yerel URL'ler (TASK-066..070)
 
 - **Hizmetler 12 → 18**: Özel Yazılım, Mobil Uygulama, E-ticaret Altyapısı, ERP & CRM, WhatsApp & Chatbot, Meta Reklamları, Bakım & Destek eklendi (3 dil, gerçek projelere dayalı; yayınlanmış native mobil uygulama iddiası yok). Agentic AI kaldırıldı (→ AI Entegrasyonu, kalıcı yönlendirme). "How To Do?" → Eğitim & Danışmanlık.

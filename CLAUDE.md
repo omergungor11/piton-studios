@@ -225,6 +225,32 @@ sahibine gonderebilir — `pitonstudios.com` dogrulandigi icin `CONTACT_FROM_EMA
 > Gelen kutusu veya gonderim saglayicisi degisirse gizlilik metnindeki aktarim tablosu (3 dil) ve
 > `LEGAL.updated` birlikte guncellenmeli.
 
+### E-posta sablonlari (2026-09-15)
+
+`src/lib/email/layout.ts` ortak iskelet ve parcalar (tablo tabanli, satir ici stil, 600px;
+marka: koyu serit + `#B71727` vurgu). `contact.ts`: ekibe bildirim (TR) + ziyaretciye otomatik
+yanit (tr/en/ru, `replyTo` gelen kutusu). `campaign.ts`: firmalara kampanya/bulten sablonu.
+Her sablon `{ subject, html, text }` doner — duz metin surumunu birakmayin (teslim edilebilirlik).
+Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/email/logo.png`
+(e-posta istemcileri webp gostermez).
+
+> **Kampanya gonderirken**: 6563 sayili Kanun geregi abonelikten cikma linki ve gonderen kimligi
+> zorunlu; tacir/esnafa gonderimde de IYS kaydi gerekir. Ret linki sablondan kaldirilmaz
+> (varsayilan Resend Broadcasts yer tutucusu `{{{RESEND_UNSUBSCRIBE_URL}}}`). Icerikte uydurma
+> rakam/musteri yok — kurallar hizmet metinleriyle ayni.
+
+### SEO kurallari (2026-09-15 denetimi)
+
+- `buildPageMetadata` baslik ekini (" — Piton Studios") yalnizca 60 karakteri asmiyorsa ekler,
+  aciklamayi 160'ta keser ve varsayilan OG gorselini (`[locale]/opengraph-image`) acikca yazar.
+  Kendi `opengraph-image.tsx` dosyasi olan rotada **`ownOgImage: true` zorunlu** — config gorseli
+  dosya tabanli gorseli ezer.
+- Dile ozgu, diger dillerde karsiligi olmayan sayfalar (blog etiketleri) `selfOnlyAlternates: true`.
+- Blog MDX ic linkleri dil onekli yazilir (`/tr/blog/...`); oneksiz link 307 ile yanlis dile duser.
+- Denetim scriptleri oturum scratchpad'indeydi (sitemap tarama + rapor); tekrar gerekirse
+  sitemap'teki tum URL'lerde durum, canonical, hreflang karsiliklilik, baslik/aciklama uzunlugu,
+  H1, og:image, JSON-LD ve ic link kontrolu yapin.
+
 > Her yeni session'da `piton-tasks/task-index.md` oku veya `/cold-start` calistir.
 
 ---

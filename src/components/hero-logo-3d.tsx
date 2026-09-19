@@ -6,6 +6,11 @@ import { Center, Float, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 const MODEL_URL = '/models/logo.glb';
+/**
+ * public/models/logo.glb henuz yok. Yoklama her anasayfa ziyaretinde 404 veren bir HEAD istegi
+ * atiyor ve konsola hata basiyordu (Lighthouse "errors-in-console"). Model eklenince true yapin.
+ */
+const MODEL_READY = false;
 
 function LogoModel({ onLoaded }: { onLoaded: () => void }) {
   const { scene } = useGLTF(MODEL_URL);
@@ -58,6 +63,7 @@ export default function HeroLogo3D() {
 
   // GLB henuz uretilmediyse webp fallback'te kal
   useEffect(() => {
+    if (!MODEL_READY) return;
     let alive = true;
     fetch(MODEL_URL, { method: 'HEAD' })
       .then((res) => {
