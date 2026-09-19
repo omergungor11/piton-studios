@@ -496,3 +496,31 @@ Session'da baslanip bitirilmemis is yok.
   her iki namespace'e de etiket gerekebiliyor
 - Sosyal medya uretim dosyalari (`piton-docs/social-production/`, `render-*.cjs`)
   bu oturumun isi degildi; karismasin diye **ayri commit'e** alindi (`1b7f299`)
+
+
+## 2026-09-15 / 2026-09-20 — SEO, dönüşüm ve görsel deneyim
+
+### Tamamlananlar
+- [x] TASK-071 SEO denetimi (515 URL tarama + Lighthouse) ve düzeltmeler: ru etiket 404, etiket hreflang, varsayılan OG görseli, liste JSON-LD, başlık/açıklama uzunlukları, yetim sayfalar, anasayfa a11y, llms.txt
+- [x] TASK-072 E-posta tasarım sistemi (`src/lib/email`): bildirim + 3 dilde otomatik yanıt canlıda, kampanya şablonu, dev önizleme
+- [x] TASK-073 Ambalaj Cini referans kartı tutarlılığı, tekrar eden 4 proje özeti
+- [x] TASK-074 Dönüşüm takibi (Vercel Analytics özel olayları; Pro plan gerekir), gizlilik metni
+- [x] TASK-075 Teklif sihirbazı → kullanıcı kararıyla **kaldırıldı**
+- [x] TASK-076 3 blog yazısı × 3 dil (ERP mi Excel mi, WhatsApp Business API, web sitesi bakımı)
+- [x] TASK-077 18 hizmet sayfasına kodla üretilmiş SVG hero sahnesi + "Nasıl çalışır" akış diyagramı
+- [x] TASK-078 Lenis yumuşak kaydırma + başlık/açıklama/kart reveal animasyonları, paralaks
+
+### Yarım kalan
+- Yok.
+
+### Sıradaki (öneri listesinden kalanlar)
+- Gerçek müşteri yorumları (kullanıcıdan isim + izinle 3–5 yorum gelecek)
+- Daha fazla vaka çalışması (Sammys Hotel, Emlak Sync, FurCRM, Radyo Juke) — rakamsız, repodan doğrulanmış
+- Mobil performans: anasayfa 3B sahne ve 450 KB SSS HTML'i
+- Kullanıcı tarafı: Google İşletme Profili, İYS kaydı (kampanya öncesi), Search Console'a sitemap, Vercel Pro (özel olay raporu)
+
+### Dikkat
+- Yerel test sunucusunda port varsayma: kullanıcı başka projeleri (ör. 3000'de realestate) çalıştırıyor — boş port seç, yalnızca kendi PID'ini kapat.
+- Turbopack dev CSS'i bazen bayat tutuyor: `.next` silip yeniden başlat.
+- Lenis: tekerleği tüketen bileşen `stopPropagation` çağırmalı; programatik kaydırma `useLenis()?.scrollTo`.
+- Hizmet sahnelerinde kelime/rakam yok; yeni hizmette sahne + flows.ts + 3 dil `serviceVisuals`.
