@@ -17,9 +17,10 @@
 | 10 | Site Geneli UI | 1 | 1 | 0 | 0 | 0 |
 | 11 | Büyüme Sayfaları | 6 | 6 | 0 | 0 | 0 |
 | 12 | Hizmet & URL Yeniden Yapılanması | 5 | 5 | 0 | 0 | 0 |
-| **Total** | | **69** | **69** | **0** | **0** | **0** |
+| 13 | SEO, Dönüşüm & Görsel Deneyim (TASK-071..078) | 8 | 7 | 0 | 0 | 0 |
+| **Total** | | **77** | **76** | **0** | **0** | **0** |
 
-**Progress**: 69/69 (100%) ✓
+**Progress**: 76/77 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis

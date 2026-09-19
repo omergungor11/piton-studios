@@ -25,7 +25,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 ## Mevcut Durum
 
-**Progress**: 50/50 task (%100) — son is TASK-051 (SSS sayfasi), 2026-08-14.
+**Progress**: 76/77 task — son is TASK-078 (Lenis + reveal animasyonlari), 2026-09-20. TASK-075 (teklif sihirbazi) kullanici karariyla geri alindi.
 
 > `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
 > (veritabani kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
