@@ -1,7 +1,9 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import SplitWords from '@/components/motion/split-words';
 
 export interface RelatedSolution {
   slug: string;
@@ -21,14 +23,16 @@ export default function RelatedSolutions({ items, className = '' }: Props) {
 
   return (
     <section className={`rel-solutions ${className}`}>
-      <h2 className="rel-solutions-title">{t('relatedSolutions')}</h2>
+      <SplitWords as="h2" className="rel-solutions-title" text={t('relatedSolutions')} />
       <div className="rel-solutions-list">
-        {items.map((s) => (
+        {items.map((s, i) => (
           <Link
             key={s.slug}
             href={{ pathname: '/solutions/[slug]', params: { slug: s.slug } }}
             className="rel-solutions-link glass"
             data-cursor="hover"
+            data-reveal="rise"
+            style={{ '--i': i } as CSSProperties}
           >
             <span>{s.title}</span>
             <span aria-hidden="true">↗</span>

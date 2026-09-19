@@ -11,6 +11,7 @@ import LanguageSwitcher from '@/components/language-switcher';
 import SiteFooter from '@/components/site-footer';
 import NavMegaMenu from '@/components/nav-mega-menu';
 import MobileMenuSections from '@/components/mobile-menu-sections';
+import { useScrollLock } from '@/components/motion/smooth-scroll';
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -21,6 +22,8 @@ interface PageShellProps {
 export default function PageShell({ children, immersive = false }: PageShellProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  // Lenis body overflow'unu dinlemez: menu acikken sayfa kaydirmasi ayrica durdurulur.
+  useScrollLock(menuOpen);
   const pathname = usePathname();
   const t = useTranslations('common');
 
@@ -143,7 +146,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
 
       {/* Mobile fullscreen menu */}
       <div className={`mobile-menu-overlay ${menuOpen ? 'is-open' : ''}`}>
-        <div className="mobile-menu-panel glass strong">
+        <div className="mobile-menu-panel glass strong" data-lenis-prevent>
           <div className="mobile-menu-header">
             <div className="mm-brand">
               <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />

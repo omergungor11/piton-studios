@@ -8,11 +8,14 @@ import {
   useEffect,
   useRef,
   useState,
+  type CSSProperties,
   type ReactNode,
 } from 'react';
 import { useMotionValue, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
+import { useLenis } from 'lenis/react';
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
+import SplitWords from '@/components/motion/split-words';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';
 import styles from './project-cloud-section.module.css';
 
@@ -170,9 +173,9 @@ export default function ProjectCloudSection({
 
   const scrollCount = Math.max(1, Math.min(scrollCountProp, projects.length));
   const scrollSteps = Math.max(1, scrollCount - 1);
-  const Title = titleAs;
   const titleId = `project-cloud-title-${variant}`;
   const isHome = variant === 'home';
+  const isHeroTitle = titleAs === 'h1';
 
   const targetProgress = useMotionValue(0);
   const smoothProgress = useSpring(targetProgress, {
@@ -256,11 +259,16 @@ export default function ProjectCloudSection({
 
       if (atEdge) {
         // Uca yeni gelindiyse momentumu kisa sure yut, sonra sayfaya birak.
-        if (Date.now() - edgeHitAtRef.current < EDGE_HOLD_MS) event.preventDefault();
+        if (Date.now() - edgeHitAtRef.current < EDGE_HOLD_MS) {
+          event.preventDefault();
+          // Lenis defaultPrevented'a bakmaz — olay pencereye ulasirsa sayfa da kayar.
+          event.stopPropagation();
+        }
         return;
       }
 
       event.preventDefault();
+      event.stopPropagation();
       const next = clamp01(current + delta / (WHEEL_PX_PER_CARD * scrollSteps));
       if (next === 0 || next === 1) edgeHitAtRef.current = Date.now();
       setProgress(next);
@@ -360,6 +368,7 @@ export default function ProjectCloudSection({
     if (nextSlug) setActiveSlug(nextSlug);
   }, [projects]);
 
+  const lenis = useLenis();
   const moveProject = (direction: -1 | 1) => {
     if (projects.length === 0) return;
     const nextIndex = (scrollIndexRef.current + direction + scrollCount) % scrollCount;
@@ -370,10 +379,9 @@ export default function ProjectCloudSection({
     if (isHome && mobileScrollEnabled && track) {
       const trackTop = window.scrollY + track.getBoundingClientRect().top;
       const scrollDistance = Math.max(0, track.offsetHeight - window.innerHeight);
-      window.scrollTo({
-        top: trackTop + scrollDistance * (nextIndex / scrollSteps),
-        behavior: 'smooth',
-      });
+      const top = trackTop + scrollDistance * (nextIndex / scrollSteps);
+      if (lenis) lenis.scrollTo(top);
+      else window.scrollTo({ top, behavior: 'smooth' });
       return;
     }
 
@@ -396,9 +404,21 @@ export default function ProjectCloudSection({
         <div className={styles.backdrop} aria-hidden="true" />
 
         <header className={styles.intro}>
-          <p className={styles.eyebrow}>{eyebrow ?? t('eyebrow')}</p>
-          <Title id={titleId} className={styles.title}>{t('title')}</Title>
-          <p className={styles.lede}>{t('intro')}</p>
+          <p className={styles.eyebrow} data-reveal={isHeroTitle ? 'fade-hero' : 'fade'}>{eyebrow ?? t('eyebrow')}</p>
+          <SplitWords
+            as={titleAs}
+            id={titleId}
+            className={styles.title}
+            text={t('title')}
+            hero={isHeroTitle}
+          />
+          <p
+            className={styles.lede}
+            data-reveal={isHeroTitle ? 'fade-hero' : 'fade'}
+            style={{ '--reveal-delay': isHeroTitle ? '300ms' : '150ms' } as CSSProperties}
+          >
+            {t('intro')}
+          </p>
           <p className={styles.touchNote}>{t('touchInteraction')}</p>
           {isHome ? (
             <Link href="/projects" className={styles.allLink} data-cursor="hover">

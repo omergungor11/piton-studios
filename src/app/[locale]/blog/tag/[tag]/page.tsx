@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { pickMessages } from '@/lib/pick-messages';
 import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
+import SplitWords from '@/components/motion/split-words';
 import {
   getPostsByTag,
   getAllTagParams,
@@ -77,9 +79,11 @@ export default async function BlogTagPage({ params }: Props) {
 
       <PageShell>
         <section className="sp-hero">
-          <div className="sp-hero-eyebrow">{t('tags')}</div>
-          <h1 className="sp-hero-title">{label}</h1>
-          <p className="sp-hero-sub">{t('postCount', { count: posts.length })}</p>
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero">{t('tags')}</div>
+          <SplitWords as="h1" hero className="sp-hero-title" text={label} />
+          <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+            {t('postCount', { count: posts.length })}
+          </p>
           <Link href="/blog" className="blog-back" data-cursor="hover">
             ← {t('allPosts')}
           </Link>
@@ -88,8 +92,8 @@ export default async function BlogTagPage({ params }: Props) {
         <section className="blog-list">
           {posts.length === 0 && <p className="blog-empty">{t('emptyTag')}</p>}
 
-          {posts.map((post) => (
-            <article key={post.slug} className="blog-card">
+          {posts.map((post, i) => (
+            <article key={post.slug} className="blog-card" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
               <Link
                 href={{ pathname: '/blog/[slug]', params: { slug: post.slug } }}
                 className="blog-card-link"

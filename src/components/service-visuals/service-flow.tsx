@@ -1,6 +1,7 @@
 'use client';
 
 import type { ServiceFlowDef } from './flows';
+import SplitWords from '@/components/motion/split-words';
 
 /**
  * "Nasil calisir" akis diyagrami. HTML liste olarak isaretlenir (ekran okuyucu sirayi okur);
@@ -22,13 +23,13 @@ export default function ServiceFlow({
   return (
     <section className="sd-flow sd-section-fade">
       <div className="sd-section-header">
-        <span className="sd-section-label">{label}</span>
-        <h2 className="sd-section-title">{title}</h2>
-        <p className="sd-flow-caption">{caption}</p>
+        <span className="sd-section-label" data-reveal="fade">{label}</span>
+        <SplitWords as="h2" className="sd-section-title" text={title} />
+        <p className="sd-flow-caption" data-reveal="fade" style={{ '--i': 1 } as React.CSSProperties}>{caption}</p>
       </div>
       <ol className="sv-flow-track" style={{ '--sv-stages': def.stages.length } as React.CSSProperties}>
         {def.stages.map((stage, i) => (
-          <li key={i} className="sv-flow-stage">
+          <li key={i} className="sv-flow-stage" data-reveal="rise" style={{ '--i': i } as React.CSSProperties}>
             <span className="sv-flow-index" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
             </span>

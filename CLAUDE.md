@@ -254,6 +254,18 @@ Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/
   (CSS transform ezer). Gorseller yalnizca hizmet detayinda — menude/listelerde yok (kullanici karari).
 - Yeni hizmet eklenirse: sahne + `flows.ts` girdisi + 3 dilde `serviceVisuals` + `index.tsx` haritasi.
 
+### Kaydirma ve animasyon sistemi (2026-09-20, plan: piton-plans/motion-plan.md)
+
+- **Lenis** `src/components/motion/smooth-scroll.tsx` (layout'ta tum sayfayi sarar). Kendi icinde kayan alana
+  `data-lenis-prevent`; overlay/menu acikken `useScrollLock(open)` (body overflow Lenis'i durdurmaz).
+  Tekerlegi kendisi tuketen bilesen `stopPropagation` cagirmali — Lenis `defaultPrevented`'a bakmaz.
+  Programatik kaydirma `useLenis()?.scrollTo(...)` ile (dogrudan `window.scrollTo` yumusak hedefi bozar).
+- **Reveal**: basliklar `<SplitWords as="h2" text=… />` (vurgu icin `segments`), diger ogeler `data-reveal`
+  (`fade`, `rise` + `style={{'--i': i}}`, `mask`, `line`). Ekranin ustu icin `hero` / `fade-hero` (saf CSS,
+  LCP'yi beklemez). Animasyonlu ogeye ayrica framer `<Reveal>` sarilmaz. Form, SSS cevabi, blog govdesi, tablo
+  animasyonsuz kalir. `mask` kirpmasi cocuga uygulanir (IntersectionObserver clip-path'i hesaba katiyor).
+- `data-parallax="0.08"`: sarmalayicinin ilk cocugu kayar; sarmalayici olculur.
+
 ### SEO kurallari (2026-09-15 denetimi)
 
 - `buildPageMetadata` baslik ekini (" — Piton Studios") yalnizca 60 karakteri asmiyorsa ekler,

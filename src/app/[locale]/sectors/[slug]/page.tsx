@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -8,6 +9,7 @@ import { Link, getPathname } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import ProjectPlaceholder from "@/components/project-placeholder";
 import RelatedSolutions from "@/components/related-solutions";
+import SplitWords from "@/components/motion/split-words";
 import { getSolutionsBySector } from "@/lib/solutions";
 import { landingText } from "@/lib/landing";
 import { localizeSlug, resolveSlug } from "@/lib/slugs";
@@ -180,9 +182,13 @@ export default async function SectorPage({ params }: Props) {
       <PageShell>
         {/* Hero */}
         <section className="sp-hero sec-hero">
-          <div className="sp-hero-eyebrow">{t("eyebrow")}</div>
-          <h1 className="sp-hero-title">{title}</h1>
-          {intro && <p className="sp-hero-sub sec-intro">{intro}</p>}
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{t("eyebrow")}</div>
+          <SplitWords as="h1" className="sp-hero-title" text={title} hero />
+          {intro && (
+            <p className="sp-hero-sub sec-intro" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>
+              {intro}
+            </p>
+          )}
         </section>
 
         {/* Sektorun dertleri */}
@@ -193,12 +199,12 @@ export default async function SectorPage({ params }: Props) {
                 <span className="sec-head-n" aria-hidden="true">
                   ◦
                 </span>
-                <h2 className="sec-head-title">{painTitle}</h2>
+                <SplitWords as="h2" className="sec-head-title" text={painTitle} />
               </div>
             )}
             <div className="sec-pain-grid">
               {painPoints.map((point, i) => (
-                <div key={i} className="sec-pain-card glass">
+                <div key={i} className="sec-pain-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
                   <span className="sec-pain-n">{String(i + 1).padStart(2, "0")}</span>
                   <p>{point}</p>
                 </div>
@@ -215,7 +221,7 @@ export default async function SectorPage({ params }: Props) {
                 <span className="sec-head-n" aria-hidden="true">
                   ◦
                 </span>
-                <h2 className="sec-head-title">{detailTitle}</h2>
+                <SplitWords as="h2" className="sec-head-title" text={detailTitle} />
               </div>
             )}
             <div className="sec-detail">
@@ -243,7 +249,7 @@ export default async function SectorPage({ params }: Props) {
               <span className="sec-head-n" aria-hidden="true">
                 ◦
               </span>
-              <h2 className="sec-head-title">{t("whatWeDo")}</h2>
+              <SplitWords as="h2" className="sec-head-title" text={t("whatWeDo")} />
             </div>
             <ul className="sec-bullets">
               {bullets.map((bullet, i) => (
@@ -260,19 +266,21 @@ export default async function SectorPage({ params }: Props) {
               <span className="sec-head-n" aria-hidden="true">
                 ◦
               </span>
-              <h2 className="sec-head-title">{t("relatedProjects")}</h2>
+              <SplitWords as="h2" className="sec-head-title" text={t("relatedProjects")} />
               <Link href="/projects" className="sec-head-link" data-cursor="hover">
                 {t("viewAll")} <span aria-hidden="true">↗</span>
               </Link>
             </div>
             <div className="sec-projects">
-              {works.map((w) => (
+              {works.map((w, i) => (
                 <Link
                   key={w.slug}
                   href={{ pathname: "/projects/[slug]", params: { slug: w.slug } }}
                   className="sec-project-card glass"
                   data-cursor="hover"
                   data-cursor-label="View ↗"
+                  data-reveal="rise"
+                  style={{ '--i': i } as CSSProperties}
                 >
                   <div className="sec-project-shot">
                     {w.previews?.desktop ? (
@@ -306,15 +314,17 @@ export default async function SectorPage({ params }: Props) {
               <span className="sec-head-n" aria-hidden="true">
                 ◦
               </span>
-              <h2 className="sec-head-title">{t("relatedServices")}</h2>
+              <SplitWords as="h2" className="sec-head-title" text={t("relatedServices")} />
             </div>
             <div className="sec-services">
-              {services.map((s) => (
+              {services.map((s, i) => (
                 <Link
                   key={s.slug}
                   href={{ pathname: "/services/[slug]", params: { slug: s.slug } }}
                   className="sec-service-card glass"
                   data-cursor="hover"
+                  data-reveal="rise"
+                  style={{ '--i': i } as CSSProperties}
                 >
                   <span className="sec-service-n">{s.n}</span>
                   <span className="sec-service-title">{serviceTitle(s)}</span>
@@ -343,7 +353,7 @@ export default async function SectorPage({ params }: Props) {
               <span className="sec-head-n" aria-hidden="true">
                 ◦
               </span>
-              <h2 className="sec-head-title">{t("relatedFaq")}</h2>
+              <SplitWords as="h2" className="sec-head-title" text={t("relatedFaq")} />
             </div>
             {faqLinks.length > 0 && (
               <ul className="sec-faq">
@@ -383,7 +393,7 @@ export default async function SectorPage({ params }: Props) {
 
         {/* CTA */}
         <section className="sp-cta glass">
-          <div>
+          <div data-reveal="fade">
             <h3>{ctaText ?? t("ctaTitle")}</h3>
             <p>{t("ctaSub")}</p>
           </div>

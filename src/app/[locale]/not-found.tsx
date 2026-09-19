@@ -1,7 +1,9 @@
+import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import FuzzyText from '@/components/fuzzy-text';
+import SplitWords from '@/components/motion/split-words';
 import { pickMessages } from '@/lib/pick-messages';
 
 /**
@@ -41,8 +43,10 @@ export default async function LocaleNotFound() {
           glitchDuration={200}
           className="not-found-canvas"
         />
-        <h1 className="not-found-sub">{t('title')}</h1>
-        <p className="not-found-hint">{t('hint')}</p>
+        <SplitWords as="h1" hero className="not-found-sub" text={t('title')} />
+        <p className="not-found-hint" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+          {t('hint')}
+        </p>
         <nav className="not-found-links" aria-label={t('suggest')}>
           {links.map((l) => (
             <Link key={l.href} href={l.href} className="not-found-chip">

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
 import { Link } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import JsonLd from "@/components/json-ld";
+import SplitWords from "@/components/motion/split-words";
 import { LOCATIONS, type Location } from "@/lib/locations";
 import { landingText } from "@/lib/landing";
 import {
@@ -72,9 +74,9 @@ export default async function LocationsPage({ params }: Props) {
 
       <PageShell>
         <section className="sp-hero sec-hero">
-          <div className="sp-hero-eyebrow">{t("eyebrow")}</div>
-          <h1 className="sp-hero-title">{t("title")}</h1>
-          <p className="sp-hero-sub">{t("subtitle")}</p>
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{t("eyebrow")}</div>
+          <SplitWords as="h1" className="sp-hero-title" text={t("title")} hero />
+          <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>{t("subtitle")}</p>
         </section>
 
         {groups.map((group) => (
@@ -83,10 +85,10 @@ export default async function LocationsPage({ params }: Props) {
               <span className="sec-head-n" aria-hidden="true">
                 ◦
               </span>
-              <h2 className="sec-head-title">{t(group.region)}</h2>
+              <SplitWords as="h2" className="sec-head-title" text={t(group.region)} />
             </div>
             <div className="sec-grid">
-              {group.items.map((l) => {
+              {group.items.map((l, i) => {
                 const text = landingText(messages, "locationItems", l.slug);
                 return (
                   <Link
@@ -95,6 +97,8 @@ export default async function LocationsPage({ params }: Props) {
                     className="sec-card glass"
                     data-cursor="hover"
                     data-cursor-label="View ↗"
+                    data-reveal="rise"
+                    style={{ '--i': i } as CSSProperties}
                   >
                     <h3 className="sec-card-title">{text.title}</h3>
                     {text.intro && <p className="sec-card-desc">{text.intro}</p>}
@@ -114,7 +118,7 @@ export default async function LocationsPage({ params }: Props) {
         ))}
 
         <section className="sp-cta glass">
-          <div>
+          <div data-reveal="fade">
             <h3>{t("ctaTitle")}</h3>
             <p>{t("ctaSub")}</p>
           </div>

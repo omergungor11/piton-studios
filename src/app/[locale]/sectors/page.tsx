@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
 import { Link } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import JsonLd from "@/components/json-ld";
+import SplitWords from "@/components/motion/split-words";
 import { SECTORS, sectorText, sectorFallbackTitle } from "@/lib/sectors";
 import {
   buildPageMetadata,
@@ -66,9 +68,9 @@ export default async function SectorsPage({ params }: Props) {
 
       <PageShell>
         <section className="sp-hero sec-hero">
-          <div className="sp-hero-eyebrow">{t("eyebrow")}</div>
-          <h1 className="sp-hero-title">{t("title")}</h1>
-          <p className="sp-hero-sub">{t("subtitle")}</p>
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{t("eyebrow")}</div>
+          <SplitWords as="h1" className="sp-hero-title" text={t("title")} hero />
+          <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>{t("subtitle")}</p>
         </section>
 
         <div className="sec-grid">
@@ -84,6 +86,8 @@ export default async function SectorsPage({ params }: Props) {
                 className="sec-card glass"
                 data-cursor="hover"
                 data-cursor-label="View ↗"
+                data-reveal="rise"
+                style={{ '--i': i } as CSSProperties}
               >
                 <div className="sec-card-top">
                   <span className="sec-card-n">
@@ -111,7 +115,7 @@ export default async function SectorsPage({ params }: Props) {
         </div>
 
         <section className="sp-cta glass">
-          <div>
+          <div data-reveal="fade">
             <h3>{t("ctaTitle")}</h3>
             <p>{t("ctaSub")}</p>
           </div>

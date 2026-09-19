@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing';
 import Preloader from '@/components/preloader';
 import SnakeScroll from '@/components/snake-scroll';
 import ConversionTracker from '@/components/conversion-tracker';
+import SmoothScroll from '@/components/motion/smooth-scroll';
+import RevealObserver, { REVEAL_BOOT_SCRIPT } from '@/components/motion/reveal-observer';
 import { spaceGrotesk, ibmPlexMono } from '@/lib/fonts';
 import { SITE_URL } from '@/lib/site';
 
@@ -31,10 +33,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-theme="dark"
+      // reveal-ready (satir ici script) ve lenis siniflari hidrasyondan once/sonra html'e eklenir.
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <meta charSet="utf-8" />
+        <script dangerouslySetInnerHTML={{ __html: REVEAL_BOOT_SCRIPT }} />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -43,9 +48,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body>
-        <Preloader />
-        <SnakeScroll />
-        {children}
+        <SmoothScroll>
+          <Preloader />
+          <SnakeScroll />
+          {children}
+        </SmoothScroll>
+        <RevealObserver />
         <Analytics />
         <ConversionTracker />
         <SpeedInsights />

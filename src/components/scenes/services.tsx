@@ -1,11 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
-import { Reveal } from '@/components/motion';
 
 const FEATURED = ['web-design', 'web-app', 'automation', 'ai-integration', 'google-ads', 'cloud-ecosystem'];
 
@@ -31,13 +30,11 @@ export default function ServicesScene() {
 
   return (
     <div className="svc-glass glass">
-      <Reveal variant="fadeUp">
-        <div className="head">
-          <span className="n">{t('eyebrow')}</span>
-          <span className="t">{t('title')}</span>
-          <span>[{SERVICES.length} {t('count', { count: SERVICES.length }).replace(String(SERVICES.length), '').trim()}]</span>
-        </div>
-      </Reveal>
+      <div className="head" data-reveal="fade">
+        <span className="n">{t('eyebrow')}</span>
+        <span className="t">{t('title')}</span>
+        <span>[{SERVICES.length} {t('count', { count: SERVICES.length }).replace(String(SERVICES.length), '').trim()}]</span>
+      </div>
       <div className="svc-grid" ref={gridRef}>
         {SERVICES.filter((s) => FEATURED.includes(s.slug)).map((s, i) => {
           // Anasayfada 6 one cikan hizmet gosteriliyor; numaralar data.ts'teki global
@@ -49,7 +46,15 @@ export default function ServicesScene() {
           const items = hasTranslation ? (ts.raw(`${s.slug}.items`) as string[]) : s.items;
 
           return (
-            <Link key={s.slug} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
+            <Link
+              key={s.slug}
+              href={{ pathname: '/services/[slug]', params: { slug: s.slug } }}
+              className="svc"
+              data-cursor="hover"
+              data-cursor-label="+"
+              data-reveal="rise"
+              style={{ '--i': i } as CSSProperties}
+            >
               <div className="svc-top">
                 <span className="n">{n}</span>
                 <span className="cat">{tp(`filterCat.${s.cat}`)}</span>

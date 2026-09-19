@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { pickMessages } from '@/lib/pick-messages';
 import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
+import SplitWords from '@/components/motion/split-words';
 import { getAllPosts, getAllTags, slugifyTag, formatPostDate } from '@/lib/blog';
 import { buildPageMetadata, absoluteUrl, breadcrumbJsonLd, organizationJsonLd } from '@/lib/seo';
 import { SITE_URL, type Locale } from '@/lib/site';
@@ -57,9 +59,11 @@ export default async function BlogIndexPage({ params }: Props) {
 
       <PageShell>
         <section className="sp-hero">
-          <div className="sp-hero-eyebrow">{t('title')}</div>
-          <h1 className="sp-hero-title">{t('subtitle')}</h1>
-          <p className="sp-hero-sub">{t('postCount', { count: posts.length })}</p>
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero">{t('title')}</div>
+          <SplitWords as="h1" hero className="sp-hero-title" text={t('subtitle')} />
+          <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+            {t('postCount', { count: posts.length })}
+          </p>
         </section>
 
         {tags.length > 0 && (
@@ -80,8 +84,8 @@ export default async function BlogIndexPage({ params }: Props) {
         <section className="blog-list">
           {posts.length === 0 && <p className="blog-empty">{t('empty')}</p>}
 
-          {posts.map((post) => (
-            <article key={post.slug} className="blog-card">
+          {posts.map((post, i) => (
+            <article key={post.slug} className="blog-card" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
               <Link
                 href={{ pathname: '/blog/[slug]', params: { slug: post.slug } }}
                 className="blog-card-link"

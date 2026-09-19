@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
+import SplitWords from '@/components/motion/split-words';
 import { SERVICES } from '@/lib/data';
 import {
   FAQ_CATEGORIES,
@@ -163,11 +164,13 @@ export default function FaqPageClient({ postLinks }: Props) {
   return (
     <PageShell>
       <section className="sp-hero faq-hero">
-        <div className="sp-hero-eyebrow">{t('title')}</div>
-        <h1 className="sp-hero-title">{t('subtitle')}</h1>
-        <p className="sp-hero-sub">{t('lead')}</p>
+        <div className="sp-hero-eyebrow" data-reveal="fade-hero">{t('title')}</div>
+        <SplitWords as="h1" hero className="sp-hero-title" text={t('subtitle')} />
+        <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+          {t('lead')}
+        </p>
 
-        <div className="faq-meta">
+        <div className="faq-meta" data-reveal="fade-hero" style={{ '--reveal-delay': '300ms' } as CSSProperties}>
           <span className="faq-meta-item">
             {t('updatedLabel')}: <time dateTime={FAQ_UPDATED}>{FAQ_UPDATED}</time>
           </span>
@@ -237,9 +240,9 @@ export default function FaqPageClient({ postLinks }: Props) {
             >
               <div className="faq-cat-head">
                 <span className="faq-cat-n">{cat.n}</span>
-                <h2 className="faq-cat-title">{t(`categories.${cat.id}.title`)}</h2>
+                <SplitWords as="h2" className="faq-cat-title" text={t(`categories.${cat.id}.title`)} />
               </div>
-              <p className="faq-cat-desc">{t(`categories.${cat.id}.desc`)}</p>
+              <p className="faq-cat-desc" data-reveal="fade">{t(`categories.${cat.id}.desc`)}</p>
               <div className="faq-list">{catViews.map(renderItem)}</div>
             </section>
           );

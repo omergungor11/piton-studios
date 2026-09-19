@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
@@ -23,13 +24,13 @@ export default function ServicesPageClient() {
     <PageShell>
       {/* Hero */}
       <section className="sp-hero">
-        <div className="sp-hero-eyebrow">{t('title')}</div>
-        <h1 className="sp-hero-title">
+        <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{t('title')}</div>
+        <h1 className="sp-hero-title" data-reveal="fade-hero" style={{ '--reveal-delay': '120ms' } as CSSProperties}>
           {t.rich('headline', {
             accent: (chunks) => <span className="em">{chunks}</span>,
           })}
         </h1>
-        <p className="sp-hero-sub">
+        <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>
           {t('subtitle')}
         </p>
       </section>
@@ -65,12 +66,20 @@ export default function ServicesPageClient() {
       <SnakeBorder radius={28}>
         <section className="svc-glass" style={{ padding: 0 }}>
           <div className="svc-grid">
-            {filtered.map((s) => {
+            {filtered.map((s, i) => {
               const title = ts(`${s.slug}.title`);
               const desc = ts(`${s.slug}.desc`);
               const items = ts.raw(`${s.slug}.items`) as string[];
               return (
-                <Link key={s.n} href={{ pathname: '/services/[slug]', params: { slug: s.slug } }} className="svc" data-cursor="hover" data-cursor-label="+">
+                <Link
+                  key={s.n}
+                  href={{ pathname: '/services/[slug]', params: { slug: s.slug } }}
+                  className="svc"
+                  data-cursor="hover"
+                  data-cursor-label="+"
+                  data-reveal="rise"
+                  style={{ '--i': i % 6 } as CSSProperties}
+                >
                   <div className="svc-top">
                     <span className="n">{s.n}</span>
                     <span className="cat">{t(`filterCat.${s.cat}`)}</span>

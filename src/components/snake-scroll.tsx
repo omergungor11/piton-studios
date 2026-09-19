@@ -1,5 +1,6 @@
 'use client';
 
+import { useLenis } from 'lenis/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**
@@ -30,6 +31,7 @@ const PX_PER_FRAME = 80;
 export default function SnakeScroll() {
   const railRef = useRef<HTMLDivElement | null>(null);
   const dragRef = useRef(false);
+  const lenis = useLenis();
   const [progress, setProgress] = useState(0);
   const [frame, setFrame] = useState(0);
   const [scrollable, setScrollable] = useState(false);
@@ -77,8 +79,11 @@ export default function SnakeScroll() {
     const usable = box.height - THUMB;
     const p = usable > 0 ? (clientY - box.top - THUMB / 2) / usable : 0;
     const max = document.documentElement.scrollHeight - window.innerHeight;
-    window.scrollTo({ top: Math.min(1, Math.max(0, p)) * max, behavior: 'auto' });
-  }, []);
+    const top = Math.min(1, Math.max(0, p)) * max;
+    // Lenis varsa onun uzerinden: dogrudan window.scrollTo yumusak kaydirmanin hedefini bozar.
+    if (lenis) lenis.scrollTo(top, { immediate: true });
+    else window.scrollTo({ top, behavior: 'auto' });
+  }, [lenis]);
 
   useEffect(() => {
     const onMove = (e: PointerEvent) => {

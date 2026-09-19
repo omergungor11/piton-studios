@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-20 — Lenis yumuşak kaydırma ve metin animasyonları (TASK-078)
+
+- **Lenis** (`lenis` 1.3): tüm sitede yumuşak tekerlek kaydırması (`src/components/motion/smooth-scroll.tsx`); dokunmatikte doğal kaydırma, reduced-motion'da kapalı. Çakışmalar giderildi: 3B proje bulutu tekerleği tükettiğinde `stopPropagation` (Lenis `defaultPrevented`'a bakmıyor), yılan scrollbar ve anasayfa sahne gezinmesi `lenis.scrollTo`, mobil menü/preloader açıkken `lenis.stop()`, mega menü ve mobil menü `data-lenis-prevent`, sayfa geçişinde başa dönüş.
+- **Reveal sistemi**: tek IntersectionObserver (`reveal-observer.tsx`) + `SplitWords` (kelime kelime maskeli yükselme) + `data-reveal` varyantları (`words`, `fade`, `rise`, `mask`, `line`; ekranın üstü için saf CSS `-hero`). `data-parallax` sürücüsü. Satır içi boot script titremeyi önler; JS yoksa 3 sn'de içerik görünür. İlk ziyarette preloader açıkken hero animasyonları bekler.
+- 3 paralel ajanla anasayfa, hizmet/sektör/çözüm/şehir ve diğer iç sayfalara uygulandı (141 işaret). Formlar, SSS cevapları, blog gövdesi, tablolar animasyonsuz. Eski framer `Reveal` hakkında/iletişim sayfalarında yeni sisteme taşındı (çift animasyon yok).
+- Doğrulama: 21 sayfa tekerlekle baştan sona — takılı kalan öğe yok; mobil (4x CPU, Fast 4G) LCP anasayfa 549 ms, hizmet 622 ms, CLS 0. Düzeltme: `mask` kırpması çocuğa taşındı (IntersectionObserver clip-path'i hesaba katıyor, öğe hiç açılmıyordu).
+
 ## 2026-09-19 — Hizmet sayfası görselleri (TASK-077)
 
 - **18 hero sahnesi** (`src/components/service-visuals/art/<slug>.tsx`): kodla üretilen SVG sahneler — koyu zemin, marka kırmızısı ışık, perspektif zemin, akan ışık çizgileri. Metin/rakam içermez (dil bağımsız), her sahne ayrı chunk (~3 KB gzip). Hero iki sütuna geçti; yalnızca hizmet detay sayfalarında, menü ve listelerde görsel yok.
