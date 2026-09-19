@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import { Link, getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import SparkScene from '@/components/scenes/spark';
-import PriceWizard, { type WizardCopy, type WizardPackage } from '@/components/price-wizard';
 import type { Locale } from '@/lib/site';
 
 export interface PricingPostLink {
@@ -37,29 +36,6 @@ export default async function PricingContent({ locale, roiPost }: Props) {
   const faqPath = getPathname({ href: '/faq', locale });
   const factors = t.raw('factors.items') as PricingFactor[];
   const aiPoints = t.raw('ai.points') as string[];
-  const contactPath = getPathname({ href: '/contact', locale });
-  // Sihirbaz sayfadaki paketlerle ayni metin ve bantlari kullanir — ayri rakam kaynagi yok.
-  const wizardPackages = {
-    ...(Object.fromEntries(
-      PACKAGE_KEYS.map((key) => [
-        key,
-        {
-          name: t(`packages.${key}.name`),
-          price: t(`packages.${key}.price`),
-          priceLabel: t('bandLabel'),
-          desc: t(`packages.${key}.desc`),
-          includes: t.raw(`packages.${key}.includes`) as string[],
-        },
-      ])
-    ) as Record<(typeof PACKAGE_KEYS)[number], WizardPackage>),
-    ai: {
-      name: t('ai.name'),
-      price: t('ai.price'),
-      priceLabel: t('ai.priceLabel'),
-      desc: t('ai.desc'),
-      includes: aiPoints,
-    },
-  };
 
   return (
     <PageShell>
@@ -96,8 +72,6 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       </div>
 
       <p className="pricing-note">{t('note')}</p>
-
-      <PriceWizard copy={t.raw('wizard') as WizardCopy} packages={wizardPackages} contactPath={contactPath} />
 
       <section className="pricing-ai glass strong">
         <span className="pricing-ai-accent" aria-hidden="true" />
