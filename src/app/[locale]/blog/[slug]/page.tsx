@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc';
@@ -11,6 +12,7 @@ import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
 import BlogToc from '@/components/blog-toc';
+import SplitWords from '@/components/motion/split-words';
 import { mdxComponents } from '@/components/mdx/mdx-components';
 import {
   getPost,
@@ -154,10 +156,12 @@ export default async function BlogPostPage({ params }: Props) {
               ← {t('backToBlog')}
             </Link>
 
-            <h1 className="blog-post-title">{post.title}</h1>
-            <p className="blog-post-desc">{post.description}</p>
+            <SplitWords as="h1" hero className="blog-post-title" text={post.title} />
+            <p className="blog-post-desc" data-reveal="fade-hero" style={{ '--reveal-delay': '160ms' } as CSSProperties}>
+              {post.description}
+            </p>
 
-            <div className="blog-post-meta">
+            <div className="blog-post-meta" data-reveal="fade-hero" style={{ '--reveal-delay': '280ms' } as CSSProperties}>
               <span>{post.author}</span>
               <span className="blog-card-dot">•</span>
               <time dateTime={post.date}>{formatPostDate(post.date, locale as Locale)}</time>
@@ -207,7 +211,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {post.faq && post.faq.length > 0 && (
             <section className="blog-faq" aria-labelledby="sss">
-              <h2 className="blog-faq-title" id="sss">
+              <h2 className="blog-faq-title" id="sss" data-reveal="fade">
                 {t('faqTitle')}
               </h2>
               <dl className="blog-faq-list">
@@ -223,14 +227,16 @@ export default async function BlogPostPage({ params }: Props) {
 
           {related.length > 0 && (
             <aside className="blog-related">
-              <h2 className="blog-related-title">{t('relatedPosts')}</h2>
+              <h2 className="blog-related-title" data-reveal="fade">{t('relatedPosts')}</h2>
               <div className="blog-related-grid">
-                {related.map((p) => (
+                {related.map((p, i) => (
                   <Link
                     key={p.slug}
                     href={{ pathname: '/blog/[slug]', params: { slug: p.slug } }}
                     className="blog-related-card"
                     data-cursor="hover"
+                    data-reveal="rise"
+                    style={{ '--i': i } as CSSProperties}
                   >
                     <span className="blog-related-card-title">{p.title}</span>
                     <span className="blog-related-card-meta">

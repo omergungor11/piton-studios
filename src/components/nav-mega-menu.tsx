@@ -108,7 +108,7 @@ export default function NavMegaMenu({ label, active = false }: Props) {
       {/* Dis kapsayici kirpmaz: ust boslugu tetikle panel arasindaki hover koprusu.
           Ic panel ekrana sigmazsa kendi icinde kayar. */}
       <div className="nav-mega-drop">
-        <div className="nav-mega-panel glass strong">
+        <div className="nav-mega-panel glass strong" data-lenis-prevent>
           {[services, solutions].map((col) => (
             <nav key={col.key} className={`nav-mega-col nav-mega-col--${col.key}`} aria-label={col.title}>
               <Link href={col.href} className="nav-mega-title" data-cursor="hover">

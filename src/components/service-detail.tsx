@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { type Service, SERVICES } from '@/lib/data';
@@ -9,6 +10,7 @@ import SERVICE_ICONS from '@/components/service-icons';
 import PartnerBadges from '@/components/partner-badges';
 import RelatedSolutions, { type RelatedSolution } from '@/components/related-solutions';
 import { SERVICE_ART, SERVICE_FLOWS, ServiceFlow } from '@/components/service-visuals';
+import SplitWords from '@/components/motion/split-words';
 
 type ServiceVisual = { alt: string; flow: { title: string; caption: string; nodes: Record<string, string> } };
 
@@ -55,7 +57,7 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {/* ── A. HERO ─────────────────────────────────────────── */}
       <section className={Art ? 'sd-hero has-art' : 'sd-hero'}>
         <div className="sd-hero-text">
-        <div className="sd-hero-eyebrow">
+        <div className="sd-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>
           <span className="sd-hero-accent-line" aria-hidden="true" />
           <span className="sd-hero-n">[{service.n}]</span>
           <span className="sd-hero-cat">{service.cat}</span>
@@ -65,12 +67,12 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
             {SERVICE_ICONS[service.slug]}
           </div>
         )}
-        <h1 className="sd-hero-title">{title}</h1>
-        <p className="sd-hero-desc">{longDesc}</p>
+        <SplitWords as="h1" className="sd-hero-title" text={title} hero />
+        <p className="sd-hero-desc" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>{longDesc}</p>
         </div>
 
         {Art && visual && (
-          <div className="sd-hero-art sv-stage">
+          <div className="sd-hero-art sv-stage" data-reveal="mask">
             <Art label={visual.alt} />
           </div>
         )}
@@ -78,7 +80,7 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
         {stats.length > 0 && (
           <div className="sd-stats">
             {stats.map((stat, i) => (
-              <div key={i} className="sd-stat glass">
+              <div key={i} className="sd-stat glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
                 <span
                   className={
                     // Degerler her zaman sayi degil: "n8n", "Kuruma özel" gibi
@@ -103,12 +105,12 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {features.length > 0 && (
         <section className="sd-features sd-section-fade">
           <div className="sd-section-header">
-            <span className="sd-section-label">{t('features')}</span>
-            <h2 className="sd-section-title">{t('whatsIncluded')}</h2>
+            <span className="sd-section-label" data-reveal="fade">{t('features')}</span>
+            <SplitWords as="h2" className="sd-section-title" text={t('whatsIncluded')} />
           </div>
           <div className="sd-features-grid">
             {features.map((feature, i) => (
-              <div key={i} className="sd-feature-card glass" data-cursor="hover">
+              <div key={i} className="sd-feature-card glass" data-cursor="hover" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
                 <span className="sd-feature-bg-n" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -139,8 +141,8 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {process.length > 0 && (
         <section className="sd-process sd-section-fade">
           <div className="sd-section-header">
-            <span className="sd-section-label">{t('process')}</span>
-            <h2 className="sd-section-title">{t('howWeWork')}</h2>
+            <span className="sd-section-label" data-reveal="fade">{t('process')}</span>
+            <SplitWords as="h2" className="sd-section-title" text={t('howWeWork')} />
           </div>
           <div className="sd-timeline">
             {process.map((step, i) => (
@@ -167,8 +169,8 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {/* ── D. TOOLS ────────────────────────────────────────── */}
       {service.tools.length > 0 && (
         <section className="sd-tools sd-section-fade">
-          <span className="sd-section-label">{t('tools')}</span>
-          <div className="sd-tools-list">
+          <span className="sd-section-label" data-reveal="fade">{t('tools')}</span>
+          <div className="sd-tools-list" data-reveal="fade" style={{ '--i': 1 } as CSSProperties}>
             {service.tools.map((tool) => (
               <span key={tool} className="sd-tool-badge" data-cursor="hover">
                 <span className="sd-tool-dot" aria-hidden="true" />
@@ -183,14 +185,16 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {faq.length > 0 && (
         <section className="sd-faq sd-section-fade">
           <div className="sd-section-header">
-            <span className="sd-section-label">{t('faq')}</span>
-            <h2 className="sd-section-title">{t('commonQuestions')}</h2>
+            <span className="sd-section-label" data-reveal="fade">{t('faq')}</span>
+            <SplitWords as="h2" className="sd-section-title" text={t('commonQuestions')} />
           </div>
           <div className="sd-faq-list">
             {faq.map((item, i) => (
               <div
                 key={i}
                 className={`sd-faq-item ${openFaq === i ? 'is-open' : ''}`}
+                data-reveal="rise"
+                style={{ '--i': i } as CSSProperties}
               >
                 <button
                   className="sd-faq-question"
@@ -231,7 +235,7 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
 
       {/* ── F. INFO BOXES ───────────────────────────────────── */}
       <section className="sd-info-boxes sd-section-fade">
-        <div className="sd-info-box glass strong">
+        <div className="sd-info-box glass strong" data-reveal="rise" style={{ '--i': 0 } as CSSProperties}>
           <span className="sd-info-box-accent-bar" aria-hidden="true" />
           <h3 className="sd-info-box-title">{t('whyUs')}</h3>
           <ul className="sd-info-box-list">
@@ -243,7 +247,7 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
             ))}
           </ul>
         </div>
-        <div className="sd-info-box glass strong">
+        <div className="sd-info-box glass strong" data-reveal="rise" style={{ '--i': 1 } as CSSProperties}>
           <span className="sd-info-box-accent-bar" aria-hidden="true" />
           <h3 className="sd-info-box-title">{t('theProcess')}</h3>
           <ol className="sd-process-mini">
@@ -271,17 +275,19 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       {relatedServices.length > 0 && (
         <section className="sd-related sd-section-fade">
           <div className="sd-section-header">
-            <span className="sd-section-label">{t('related')}</span>
-            <h2 className="sd-section-title">{t('youMightNeed')}</h2>
+            <span className="sd-section-label" data-reveal="fade">{t('related')}</span>
+            <SplitWords as="h2" className="sd-section-title" text={t('youMightNeed')} />
           </div>
           <div className="sd-related-grid">
-            {relatedServices.map((rel) => (
+            {relatedServices.map((rel, i) => (
               <Link
                 key={rel.slug}
                 href={{ pathname: '/services/[slug]', params: { slug: rel.slug } }}
                 className="sd-related-card glass"
                 data-cursor="hover"
                 data-cursor-label="↗"
+                data-reveal="rise"
+                style={{ '--i': i } as CSSProperties}
               >
                 <span className="sd-related-stripe" aria-hidden="true" />
                 <div className="sd-related-card-top">
@@ -307,9 +313,9 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
       <section className="sd-cta sd-section-fade">
         <span className="sd-cta-bg-accent" aria-hidden="true" />
         <div className="sd-cta-inner">
-          <p className="sd-cta-eyebrow">{t('ctaEyebrow')}</p>
-          <h2 className="sd-cta-title">{t('ctaTitle')}</h2>
-          <p className="sd-cta-sub">{t('ctaSub')}</p>
+          <p className="sd-cta-eyebrow" data-reveal="fade">{t('ctaEyebrow')}</p>
+          <SplitWords as="h2" className="sd-cta-title" text={t('ctaTitle')} />
+          <p className="sd-cta-sub" data-reveal="fade" style={{ '--i': 1 } as CSSProperties}>{t('ctaSub')}</p>
           <div className="sd-cta-btns">
             <a
               href={wpUrl}

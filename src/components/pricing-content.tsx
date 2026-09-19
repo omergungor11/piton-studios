@@ -1,7 +1,9 @@
+import type { CSSProperties } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Link, getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import SparkScene from '@/components/scenes/spark';
+import SplitWords from '@/components/motion/split-words';
 import type { Locale } from '@/lib/site';
 
 export interface PricingPostLink {
@@ -40,16 +42,18 @@ export default async function PricingContent({ locale, roiPost }: Props) {
   return (
     <PageShell>
       <section className="sp-hero pricing-hero">
-        <div className="sp-hero-eyebrow">{t('title')}</div>
-        <h1 className="sp-hero-title">{t('subtitle')}</h1>
-        <p className="sp-hero-sub pricing-lead">{t('lead')}</p>
+        <div className="sp-hero-eyebrow" data-reveal="fade-hero">{t('title')}</div>
+        <SplitWords as="h1" hero className="sp-hero-title" text={t('subtitle')} />
+        <p className="sp-hero-sub pricing-lead" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+          {t('lead')}
+        </p>
       </section>
 
       <div className="pricing-grid">
-        {PACKAGE_KEYS.map((key) => {
+        {PACKAGE_KEYS.map((key, i) => {
           const includes = t.raw(`packages.${key}.includes`) as string[];
           return (
-            <article key={key} className="pricing-card glass">
+            <article key={key} className="pricing-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
               <div>
                 <h2 className="pricing-card-name">{t(`packages.${key}.name`)}</h2>
                 <p className="pricing-card-desc">{t(`packages.${key}.desc`)}</p>
@@ -73,7 +77,7 @@ export default async function PricingContent({ locale, roiPost }: Props) {
 
       <p className="pricing-note">{t('note')}</p>
 
-      <section className="pricing-ai glass strong">
+      <section className="pricing-ai glass strong" data-reveal="fade">
         <span className="pricing-ai-accent" aria-hidden="true" />
         <div className="pricing-ai-inner">
           <div className="pricing-ai-main">
@@ -110,11 +114,11 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       </section>
 
       <section className="pricing-factors">
-        <h2 className="pricing-section-title">{t('factors.title')}</h2>
-        <p className="pricing-section-lead">{t('factors.lead')}</p>
+        <SplitWords as="h2" className="pricing-section-title" text={t('factors.title')} />
+        <p className="pricing-section-lead" data-reveal="fade">{t('factors.lead')}</p>
         <div className="pricing-factors-grid">
-          {factors.map((factor) => (
-            <div key={factor.t} className="pricing-factor glass">
+          {factors.map((factor, i) => (
+            <div key={factor.t} className="pricing-factor glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
               <h3>{factor.t}</h3>
               <p>{factor.d}</p>
             </div>
@@ -123,8 +127,8 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       </section>
 
       <section className="pricing-faq glass">
-        <h2 className="pricing-section-title">{t('faq.title')}</h2>
-        <p className="pricing-section-lead">{t('faq.lead')}</p>
+        <SplitWords as="h2" className="pricing-section-title" text={t('faq.title')} />
+        <p className="pricing-section-lead" data-reveal="fade">{t('faq.lead')}</p>
         <div className="pricing-faq-links">
           {FAQ_ANCHOR_IDS.map((id) => (
             <a

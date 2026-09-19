@@ -1,5 +1,6 @@
 "use client";
 
+import { useLenis } from "lenis/react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { SCENES } from "@/lib/data";
 import type { ProjectCloudItem } from "@/components/projects-v2/project-cloud-canvas";
@@ -159,9 +160,12 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
     return () => io.disconnect();
   }, []);
 
+  const lenis = useLenis();
   const onNav = (idx: number) => {
     const el = sceneRefs.current[idx];
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!el) return;
+    if (lenis) lenis.scrollTo(el);
+    else el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const setRef = (i: number) => (el: HTMLElement | null) => {

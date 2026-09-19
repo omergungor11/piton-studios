@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
+import SplitWords from '@/components/motion/split-words';
 import TerminalCode from '@/components/terminal-code';
 
 const ICONS = [
@@ -40,22 +41,19 @@ export default function ManifestoScene() {
   return (
     <div className="manifesto-glass glass">
       <div className="manifesto-main">
-        <Reveal variant="fadeIn">
-          <div className="eyebrow">{t('eyebrow')}</div>
-        </Reveal>
-        <Reveal variant="fadeUp" delay={0.1}>
-          <h2>
-            {(t.raw('title') as string).split('{accent}')[0]}
-            <span className="em">{t('titleAccent')}</span>
-            {(t.raw('title') as string).split('{accent}')[1]}
-          </h2>
-        </Reveal>
-        <Reveal variant="fadeUp" delay={0.2}>
-          <p className="manifesto-sub">{t('subtitle')}</p>
-        </Reveal>
+        <div className="eyebrow" data-reveal="fade">{t('eyebrow')}</div>
+        <SplitWords
+          as="h2"
+          segments={[
+            (t.raw('title') as string).split('{accent}')[0],
+            { text: t('titleAccent'), className: 'em' },
+            (t.raw('title') as string).split('{accent}')[1],
+          ]}
+        />
+        <p className="manifesto-sub" data-reveal="fade" style={{ '--reveal-delay': '150ms' } as CSSProperties}>{t('subtitle')}</p>
         <div className="manifesto-cards" ref={cardsRef}>
           {highlights.map((h, i) => (
-            <div key={i} className="manifesto-card">
+            <div key={i} className="manifesto-card" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
               <div className="manifesto-card-icon">{ICONS[i]}</div>
               <div>
                 <h3 className="manifesto-card-title">{h.title}</h3>

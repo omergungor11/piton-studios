@@ -159,6 +159,7 @@
 | TASK-075 | Teklif sihirbazı (fiyatlar sayfası) + iletişim formuna `?brief=` ön doldurma | M | **REVERTED** — 2026-09-19 kullanıcı kararıyla kaldırıldı (gereksiz) |
 | TASK-076 | Yeni hizmetler için 3 blog yazısı × 3 dil (ERP mi Excel mi, WhatsApp Business API, web sitesi bakımı) | L | COMPLETED |
 | TASK-077 | Hizmet sayfası görselleri: 18 kodla üretilmiş SVG hero sahnesi + "Nasıl çalışır" akış diyagramı × 3 dil (3 paralel ajan) | L | COMPLETED |
+| TASK-078 | Lenis yumuşak kaydırma + başlık/açıklama/kart reveal animasyonları, paralaks (3 paralel ajan) | L | COMPLETED |
 | TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
 | TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |
 | TASK-062 | 10 şehir sayfası (`/bolgeler`, `/web-tasarim/[slug]`), ortak `landing-view` | L | COMPLETED |

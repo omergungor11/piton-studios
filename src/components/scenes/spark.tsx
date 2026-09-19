@@ -1,5 +1,6 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
 
@@ -28,39 +29,36 @@ export default function SparkScene({ hideStats = false, sub }: SparkSceneProps) 
     <div className="spark-glass glass">
 
       {/* Eyebrow */}
-      <Reveal variant="fadeIn">
-        <div className="spark-eyebrow">
-          <span className="spark-pulse" aria-hidden="true" />
-          {t('eyebrow')}
-        </div>
-      </Reveal>
+      <div className="spark-eyebrow" data-reveal="fade">
+        <span className="spark-pulse" aria-hidden="true" />
+        {t('eyebrow')}
+      </div>
 
       {/* Main content grid */}
       <div className="spark-grid">
         {/* Left: headline + sub */}
         <div className="spark-left">
-          <Reveal variant="fadeUp" delay={0.05}>
-            <h2 className="spark-title">
-              {t.rich('title', {
-                accent: (chunks) => <span className="em">{chunks}</span>,
-              })}
-            </h2>
-          </Reveal>
-          <Reveal variant="fadeUp" delay={0.12}>
-            <p className="spark-sub">{sub ?? t('sub')}</p>
-          </Reveal>
+          <h2 className="spark-title" data-reveal="fade" style={{ '--reveal-delay': '80ms' } as CSSProperties}>
+            {t.rich('title', {
+              accent: (chunks) => <span className="em">{chunks}</span>,
+            })}
+          </h2>
+          <p className="spark-sub" data-reveal="fade" style={{ '--reveal-delay': '160ms' } as CSSProperties}>{sub ?? t('sub')}</p>
 
           {!hideStats && (
-            <Reveal variant="fadeUp" delay={0.18}>
-              <div className="spark-stats">
-                {STATS.map((s) => (
-                  <div key={s.labelKey} className={`spark-stat ${s.value === '24h' ? 'spark-stat-response' : ''}`}>
-                    <span className="spark-stat-value">{s.value}</span>
-                    <span className="spark-stat-label">{t(`stats.${s.labelKey}`)}</span>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
+            <div className="spark-stats">
+              {STATS.map((s, i) => (
+                <div
+                  key={s.labelKey}
+                  className={`spark-stat ${s.value === '24h' ? 'spark-stat-response' : ''}`}
+                  data-reveal="rise"
+                  style={{ '--i': i } as CSSProperties}
+                >
+                  <span className="spark-stat-value">{s.value}</span>
+                  <span className="spark-stat-label">{t(`stats.${s.labelKey}`)}</span>
+                </div>
+              ))}
+            </div>
           )}
         </div>
 

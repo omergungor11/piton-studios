@@ -7558,3 +7558,81 @@ html[data-theme="light"] .sv-flow-node { background: rgba(0, 0, 0, 0.02); }
 @media (prefers-reduced-motion: reduce) {
   .sv-flow, .sv-pulse, .sv-float, .sv-flow-stage + .sv-flow-stage::before { animation: none; }
 }
+
+/* ============================================================
+   Hareket sistemi — Lenis + reveal (plan: piton-plans/motion-plan.md)
+   Bilesenler: src/components/motion/{smooth-scroll,reveal-observer,split-words}.tsx
+   ============================================================ */
+
+/* Lenis temel stilleri (lenis/dist/lenis.css) */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent], .lenis [data-lenis-prevent-wheel], .lenis [data-lenis-prevent-touch] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+:root {
+  --reveal-ease: cubic-bezier(0.16, 0.84, 0.32, 1);
+  --reveal-dur: 0.95s;
+}
+
+/* Kelime maskesi: her kelime tasmayi gizleyen bir kutuda asagidan yukselir */
+.rw { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.1em; margin-bottom: -0.1em; }
+.rw-i { display: inline-block; will-change: auto; }
+
+/* ---- Gozlemciyle tetiklenenler: yalnizca reveal-ready varken gizli baslar ---- */
+html.reveal-ready [data-reveal="words"]:not(.is-revealed) .rw-i { transform: translate3d(0, 108%, 0); }
+[data-reveal="words"] .rw-i {
+  transition: transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: calc(var(--reveal-delay, 0ms) + var(--w, 0) * 45ms);
+}
+
+html.reveal-ready [data-reveal="fade"]:not(.is-revealed) { opacity: 0; transform: translate3d(0, 22px, 0); filter: blur(6px); }
+[data-reveal="fade"] {
+  transition: opacity 0.8s ease, transform var(--reveal-dur) var(--reveal-ease), filter 0.8s ease;
+  transition-delay: calc(var(--reveal-delay, 0ms) + min(var(--i, 0), 5) * 70ms);
+}
+
+html.reveal-ready [data-reveal="rise"]:not(.is-revealed) { opacity: 0; transform: translate3d(0, 32px, 0) scale(0.97); }
+[data-reveal="rise"] {
+  transition: opacity 0.7s ease, transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: calc(var(--reveal-delay, 0ms) + min(var(--i, 0), 5) * 80ms);
+}
+
+/* Kirpma cocuga uygulanir: IntersectionObserver clip-path'i hesaba katar, tamamen kirpilmis
+   oge hic "gorunur" sayilmaz ve acilmazdi. */
+html.reveal-ready [data-reveal="mask"]:not(.is-revealed) > * { clip-path: inset(100% 0 0 0); }
+[data-reveal="mask"] > * {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.1s var(--reveal-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.reveal-ready [data-reveal="line"]:not(.is-revealed) { transform: scaleX(0); }
+[data-reveal="line"] {
+  transform-origin: left center;
+  transition: transform 0.9s var(--reveal-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* ---- Hero varyantlari: ekranin ustu, saf CSS — JS beklemez ---- */
+@keyframes reveal-rise { from { transform: translate3d(0, 108%, 0); } to { transform: none; } }
+@keyframes reveal-fade { from { opacity: 0; transform: translate3d(0, 18px, 0); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+html.reveal-ready [data-reveal="words-hero"] .rw-i {
+  animation: reveal-rise var(--reveal-dur) var(--reveal-ease) both;
+  animation-delay: calc(var(--reveal-delay, 0ms) + 80ms + var(--w, 0) * 45ms);
+}
+html.reveal-ready [data-reveal="fade-hero"] {
+  animation: reveal-fade 0.9s ease both;
+  animation-delay: calc(var(--reveal-delay, 250ms) + min(var(--i, 0), 5) * 70ms);
+}
+
+/* Ilk ziyarette preloader acikken hero animasyonlari bekler (preloader.tsx sinifi kaldirir). */
+html.is-preloading [data-reveal="words-hero"] .rw-i,
+html.is-preloading [data-reveal="fade-hero"] { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal] .rw-i, [data-reveal="mask"] > * {
+    opacity: 1 !important; transform: none !important; filter: none !important;
+    clip-path: none !important; animation: none !important; transition: none !important;
+  }
+}

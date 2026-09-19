@@ -1,5 +1,6 @@
 'use client';
 
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
 
@@ -20,24 +21,18 @@ export default function ProcessScene() {
   return (
     <div className="prc-glass glass">
       <header className="prc-head">
-        <Reveal variant="fadeIn">
-          <div className="prc-eyebrow">{t('eyebrow')}</div>
-        </Reveal>
-        <Reveal variant="fadeUp" delay={0.08}>
-          <h2 className="prc-title">
-            {t.rich('title', {
-              accent: (chunks) => <span className="em">{chunks}</span>,
-            })}
-          </h2>
-        </Reveal>
-        <Reveal variant="fadeUp" delay={0.16}>
-          <p className="prc-sub">{t('sub')}</p>
-        </Reveal>
+        <div className="prc-eyebrow" data-reveal="fade">{t('eyebrow')}</div>
+        <h2 className="prc-title" data-reveal="fade" style={{ '--reveal-delay': '80ms' } as CSSProperties}>
+          {t.rich('title', {
+            accent: (chunks) => <span className="em">{chunks}</span>,
+          })}
+        </h2>
+        <p className="prc-sub" data-reveal="fade" style={{ '--reveal-delay': '160ms' } as CSSProperties}>{t('sub')}</p>
       </header>
 
       <ol className="prc-grid">
         {STEP_KEYS.map((k, i) => (
-          <Reveal key={k} as="li" variant="fadeUp" delay={0.1 + i * 0.07} className="prc-cell">
+          <li key={k} className="prc-cell" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
             <div className="prc-step" data-cursor="hover">
               <span className="prc-step-ghost" aria-hidden="true">
                 {String(i + 1).padStart(2, '0')}
@@ -54,7 +49,7 @@ export default function ProcessScene() {
                 <span className="prc-step-link" aria-hidden="true" />
               )}
             </div>
-          </Reveal>
+          </li>
         ))}
       </ol>
 

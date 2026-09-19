@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
@@ -8,6 +8,7 @@ import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 import ProjectPlaceholder from '@/components/project-placeholder';
 import RelatedSolutions, { type RelatedSolution } from '@/components/related-solutions';
+import SplitWords from '@/components/motion/split-words';
 
 interface Props {
   project: Project;
@@ -82,12 +83,15 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
     ? (tw.raw(`${slug}.caseStudy`) as CaseStudy)
     : null;
 
+  // pd-meta-item'lar kosullu render edildigi icin sirali --i burada elle sayilir.
+  let metaIndex = 0;
+
   return (
     <PageShell>
       {/* Hero — screenshot showcase */}
       <section className={`pd-hero${hasPreviews && view === 'mobile' ? ' pd-hero-mobile' : ''}`}>
         {/* Görsel — önizleme yoksa jenerik stok görsel yerine arayüz iskeleti */}
-        <div className="pd-hero-video">
+        <div className="pd-hero-video" data-parallax="0.08">
           {hasPreviews ? (
             <Image
               src={heroSrc}
@@ -123,9 +127,11 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
 
         {/* Proje bilgisi — alt sol */}
         <div className="pd-hero-overlay">
-          <span className="pd-hero-n">[{number}]</span>
-          <h1 className="pd-hero-title">{title}</h1>
-          <span className="pd-hero-year">{year}</span>
+          <span className="pd-hero-n" data-reveal="fade-hero">[{number}]</span>
+          <SplitWords as="h1" hero className="pd-hero-title" text={title} />
+          <span className="pd-hero-year" data-reveal="fade-hero" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
+            {year}
+          </span>
         </div>
 
         {/* Kategori etiketi — sol üst (sadece preview yoksa) */}
@@ -137,33 +143,33 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
       {/* Metadata bar */}
       <section className="pd-meta glass">
         {client && (
-          <div className="pd-meta-item">
+          <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
             <div className="pd-meta-k">{td('client')}</div>
             <div className="pd-meta-v">{client}</div>
           </div>
         )}
-        <div className="pd-meta-item">
+        <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
           <div className="pd-meta-k">{td('year')}</div>
           <div className="pd-meta-v">{year}</div>
         </div>
         {(kind || scope) && (
-          <div className="pd-meta-item">
+          <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
             <div className="pd-meta-k">{td('scope')}</div>
             <div className="pd-meta-v">{scope || kind}</div>
           </div>
         )}
-        <div className="pd-meta-item">
+        <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
           <div className="pd-meta-k">{td('role')}</div>
           <div className="pd-meta-v">{role}</div>
         </div>
         {collaborator && (
-          <div className="pd-meta-item">
+          <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
             <div className="pd-meta-k">{td('collab')}</div>
             <div className="pd-meta-v">{collaborator}</div>
           </div>
         )}
         {liveUrl && (
-          <div className="pd-meta-item">
+          <div className="pd-meta-item" data-reveal="rise" style={{ '--i': metaIndex++ } as CSSProperties}>
             <div className="pd-meta-k">{td('live')}</div>
             <div className="pd-meta-v">
               <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="pd-live-link" data-cursor="hover" data-cursor-label="↗">
@@ -176,10 +182,8 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
 
       {/* Body */}
       <section className="pd-body">
-        <div className="pd-body-eyebrow">{td('caseStudy')}</div>
-        <h2 className="pd-body-title">
-          {title} — <span className="em">{summary}</span>
-        </h2>
+        <div className="pd-body-eyebrow" data-reveal="fade">{td('caseStudy')}</div>
+        <SplitWords as="h2" className="pd-body-title" segments={[`${title} — `, { text: summary, className: 'em' }]} />
 
         <div className="pd-body-text">
           {body.map((p, i) => (
@@ -199,16 +203,16 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
       {caseStudy && (
         <section className="pd-case" aria-label={td('caseStudy')}>
           <div className="pd-case-grid">
-            <div className="pd-case-block glass">
+            <div className="pd-case-block glass" data-reveal="rise" style={{ '--i': 0 } as CSSProperties}>
               <h3 className="pd-case-k">{td('caseChallenge')}</h3>
               <p>{caseStudy.challenge}</p>
             </div>
-            <div className="pd-case-block glass">
+            <div className="pd-case-block glass" data-reveal="rise" style={{ '--i': 1 } as CSSProperties}>
               <h3 className="pd-case-k">{td('caseSolution')}</h3>
               <p>{caseStudy.solution}</p>
             </div>
           </div>
-          <div className="pd-case-block glass">
+          <div className="pd-case-block glass" data-reveal="rise" style={{ '--i': 2 } as CSSProperties}>
             <h3 className="pd-case-k">{td('caseHighlights')}</h3>
             <ul className="pd-case-list">
               {caseStudy.highlights.map((h, i) => (
@@ -223,7 +227,7 @@ export default function ProjectDetail({ project, relatedSolutions = [] }: Props)
               ))}
             </div>
           </div>
-          <div className="pd-case-block pd-case-outcome glass">
+          <div className="pd-case-block pd-case-outcome glass" data-reveal="rise" style={{ '--i': 3 } as CSSProperties}>
             <h3 className="pd-case-k">{td('caseOutcome')}</h3>
             <p>{caseStudy.outcome}</p>
           </div>

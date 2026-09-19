@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useScrollLock } from '@/components/motion/smooth-scroll';
 
 type Phase = 'loading' | 'exit' | 'done';
 
@@ -42,6 +43,14 @@ export default function Preloader() {
     if (phase !== 'exit') return;
     const id = setTimeout(() => setPhase('done'), EXIT_MS);
     return () => clearTimeout(id);
+  }, [phase]);
+
+  // Lenis body overflow'unu dinlemez; kaydirma ayrica durdurulur.
+  useScrollLock(phase !== 'done');
+
+  // Hero reveal animasyonlari (html.is-preloading ile duraklatilmis) preloader kapanirken oynasin.
+  useEffect(() => {
+    if (phase !== 'loading') document.documentElement.classList.remove('is-preloading');
   }, [phase]);
 
   // Lock scroll while the intro is on screen.

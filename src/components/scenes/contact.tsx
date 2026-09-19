@@ -60,9 +60,7 @@ export default function ContactScene() {
 
   return (
     <div className="contact-glass glass">
-      <Reveal variant="fadeIn">
-        <div className="eyebrow">{t('eyebrow')}</div>
-      </Reveal>
+      <div className="eyebrow" data-reveal="fade">{t('eyebrow')}</div>
 
       <Reveal variant="fadeUp" delay={0.2}>
       <div className="contact-actions">

@@ -1,8 +1,10 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { Link, getPathname } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import ProjectPlaceholder from "@/components/project-placeholder";
 import JsonLd from "@/components/json-ld";
+import SplitWords from "@/components/motion/split-words";
 import { messageString } from "@/lib/sectors";
 import type { LandingRelations, LandingText } from "@/lib/landing";
 import {
@@ -73,7 +75,7 @@ export default function LandingView({
       <span className="sec-head-n" aria-hidden="true">
         ◦
       </span>
-      <h2 className="sec-head-title">{title}</h2>
+      <SplitWords as="h2" className="sec-head-title" text={title} />
       {link && (
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         <Link href={link.href as any} className="sec-head-link" data-cursor="hover">
@@ -126,9 +128,13 @@ export default function LandingView({
 
       <PageShell>
         <section className="sp-hero sec-hero">
-          <div className="sp-hero-eyebrow">{ui.eyebrow}</div>
-          <h1 className="sp-hero-title">{text.title}</h1>
-          {text.intro && <p className="sp-hero-sub sec-intro">{text.intro}</p>}
+          <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{ui.eyebrow}</div>
+          <SplitWords as="h1" className="sp-hero-title" text={text.title} hero />
+          {text.intro && (
+            <p className="sp-hero-sub sec-intro" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>
+              {text.intro}
+            </p>
+          )}
         </section>
 
         {text.painPoints.length > 0 && (
@@ -136,7 +142,7 @@ export default function LandingView({
             {text.painTitle && head(text.painTitle)}
             <div className="sec-pain-grid">
               {text.painPoints.map((point, i) => (
-                <div key={i} className="sec-pain-card glass">
+                <div key={i} className="sec-pain-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
                   <span className="sec-pain-n">{String(i + 1).padStart(2, "0")}</span>
                   <p>{point}</p>
                 </div>
@@ -171,13 +177,15 @@ export default function LandingView({
           <section className="sec-block">
             {head(ui.relatedProjects, { href: "/projects", label: ui.viewAll })}
             <div className="sec-projects">
-              {works.map((w) => (
+              {works.map((w, i) => (
                 <Link
                   key={w.slug}
                   href={{ pathname: "/projects/[slug]", params: { slug: w.slug } }}
                   className="sec-project-card glass"
                   data-cursor="hover"
                   data-cursor-label="View ↗"
+                  data-reveal="rise"
+                  style={{ '--i': i } as CSSProperties}
                 >
                   <div className="sec-project-shot">
                     {w.previews?.desktop ? (
@@ -208,12 +216,14 @@ export default function LandingView({
           <section className="sec-block">
             {head(ui.relatedServices)}
             <div className="sec-services">
-              {services.map((s) => (
+              {services.map((s, i) => (
                 <Link
                   key={s.slug}
                   href={{ pathname: "/services/[slug]", params: { slug: s.slug } }}
                   className="sec-service-card glass"
                   data-cursor="hover"
+                  data-reveal="rise"
+                  style={{ '--i': i } as CSSProperties}
                 >
                   <span className="sec-service-n">{s.n}</span>
                   <span className="sec-service-title">{serviceTitle(s.slug, s.title)}</span>
@@ -279,7 +289,7 @@ export default function LandingView({
           ))}
 
         <section className="sp-cta glass">
-          <div>
+          <div data-reveal="fade">
             <h3>{text.ctaText ?? ui.ctaTitle}</h3>
             <p>{ui.ctaSub}</p>
           </div>

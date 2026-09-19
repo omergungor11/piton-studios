@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
@@ -34,13 +34,15 @@ export default function ProjectsPageClient() {
     <PageShell>
       {/* Hero */}
       <section className="sp-hero is-wide">
-        <div className="sp-hero-eyebrow">{t('title')}</div>
-        <h1 className="sp-hero-title">
+        <div className="sp-hero-eyebrow" data-reveal="fade-hero">{t('title')}</div>
+        <h1 className="sp-hero-title" data-reveal="fade-hero" style={{ '--reveal-delay': '120ms' } as CSSProperties}>
           {t.rich('headline', {
             accent: (chunks) => <span className="em">{chunks}</span>,
           })}
         </h1>
-        <p className="sp-hero-sub">{t('subtitle')}</p>
+        <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '240ms' } as CSSProperties}>
+          {t('subtitle')}
+        </p>
       </section>
 
       {/* Screenshot showcase */}
@@ -125,7 +127,7 @@ export default function ProjectsPageClient() {
 
       {/* Projects table */}
       <section className="pp-section">
-        <div className="pp-section-head">
+        <div className="pp-section-head" data-reveal="fade">
           <span className="pp-section-tag">{t('worksSection')}</span>
           <span className="pp-section-count">[{String(filteredWorks.length).padStart(2, '0')}]</span>
         </div>

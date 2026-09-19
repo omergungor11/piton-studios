@@ -7,6 +7,7 @@ import { SCENES } from '@/lib/data';
 import LanguageSwitcher from '@/components/language-switcher';
 import NavMegaMenu from '@/components/nav-mega-menu';
 import MobileMenuSections from '@/components/mobile-menu-sections';
+import { useScrollLock } from '@/components/motion/smooth-scroll';
 
 interface TopChromeProps {
   clock: string;
@@ -19,6 +20,8 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
   // nav namespace'inde "Sektorler" yok; ortak etiket common'dan.
   const tc = useTranslations('common');
   const [menuOpen, setMenuOpen] = useState(false);
+  // Lenis body overflow'unu dinlemez: menu acikken sayfa kaydirmasi ayrica durdurulur.
+  useScrollLock(menuOpen);
 
   useEffect(() => {
     const onResize = () => {
@@ -115,7 +118,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
       </header>
 
       <div className={`mobile-menu-overlay ${menuOpen ? 'is-open' : ''}`}>
-        <div className="mobile-menu-panel glass strong">
+        <div className="mobile-menu-panel glass strong" data-lenis-prevent>
           <div className="mobile-menu-header">
             <div className="mm-brand">
               <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />

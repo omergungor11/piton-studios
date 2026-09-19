@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
+import SplitWords from '@/components/motion/split-words';
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
 
 const FEATURED = SERVICES.slice(0, 5);
@@ -36,11 +37,9 @@ export default function StoriesScene() {
   return (
     <div className="stories-glass glass" tabIndex={0} onKeyDown={onKey}>
       <div className="stories-head">
-        <div className="stories-tag">SERVICES / {String(n).padStart(2, '0')}</div>
-        <h3>
-          What We <span className="em">Build</span>
-        </h3>
-        <p className="stories-lead">End-to-end digital solutions — from design to deployment.</p>
+        <div className="stories-tag" data-reveal="fade">SERVICES / {String(n).padStart(2, '0')}</div>
+        <SplitWords as="h3" segments={['What We ', { text: 'Build', className: 'em' }]} />
+        <p className="stories-lead" data-reveal="fade" style={{ '--reveal-delay': '150ms' } as CSSProperties}>End-to-end digital solutions — from design to deployment.</p>
       </div>
 
       {/* Desktop: horizontal scroll */}
