@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { track } from '@vercel/analytics';
 import { Reveal } from '@/components/motion';
 import type { ContactResponse } from '@/lib/contact';
 import { Link } from '@/i18n/navigation';
@@ -17,6 +18,17 @@ export default function ContactScene() {
   const [company, setCompany] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorKey, setErrorKey] = useState<string>('error');
+
+  // Fiyatlar sayfasindaki teklif sihirbazi cevaplari `?brief=` ile gelir; bos mesaj alanina yazilir.
+  useEffect(() => {
+    const brief = new URLSearchParams(window.location.search).get('brief');
+    if (!brief) return;
+    // Sunucu HTML'i bos formla render edildi; hidrasyondan sonra bir karede doldurulur.
+    const frame = requestAnimationFrame(() =>
+      setForm((prev) => (prev.message ? prev : { ...prev, message: brief.slice(0, 5000) }))
+    );
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -35,6 +47,8 @@ export default function ContactScene() {
 
       if (data.ok) {
         setStatus('sent');
+        // Donusum olayi — kisisel veri yok, yalnizca dil ve sayfa.
+        track('contact_form_submit', { locale, path: window.location.pathname });
         setForm({ name: '', email: '', phone: '', message: '' });
         setTimeout(() => setStatus('idle'), 6000);
         return;

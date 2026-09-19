@@ -239,6 +239,14 @@ Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/
 > (varsayilan Resend Broadcasts yer tutucusu `{{{RESEND_UNSUBSCRIBE_URL}}}`). Icerikte uydurma
 > rakam/musteri yok — kurallar hizmet metinleriyle ayni.
 
+### Donusum olcumu ve teklif sihirbazi (2026-09-19)
+
+- `conversion-tracker.tsx` (layout'ta): `wa.me`, `tel:`, `mailto:` linklerini belge dinleyicisiyle yakalar —
+  yeni iletisim linki eklerken ayrica isaretlemeye gerek yok. Olaylara kisisel veri yazilmaz.
+- Teklif sihirbazi `pricingPage.wizard`; paket bantlari sayfadaki `packages`/`ai` metinlerinden gelir —
+  **fiyat bandi degisirse sihirbaz otomatik guncellenir**, ayrica rakam tutulmaz.
+- Iletisim formu `?brief=` parametresini bos mesaj alanina yazar (sihirbazdan gelen ozet).
+
 ### SEO kurallari (2026-09-15 denetimi)
 
 - `buildPageMetadata` baslik ekini (" — Piton Studios") yalnizca 60 karakteri asmiyorsa ekler,

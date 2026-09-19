@@ -1,0 +1,197 @@
+---
+title: "Web sitesi bakımı neden gerekli?"
+description: "Bakımsız bir sitede güvenlik açığı, SSL/alan adı süresi, bozuk formlar ve SEO kaybı nasıl birikir; aylık kontrol listesi ve iyi bir bakım anlaşmasının kapsamı."
+date: 2026-09-19
+tags: ["bakım", "güvenlik", "web tasarım"]
+author: "Piton Studios"
+draft: false
+translationKey: website-maintenance
+sources:
+  - title: "Patchstack — State of WordPress Security in 2026"
+    url: "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/"
+  - title: "Google Search Central — Understanding Google Page Experience"
+    url: "https://developers.google.com/search/docs/appearance/page-experience"
+faq:
+  - q: "Yayına aldıktan sonra destek veriyor musunuz?"
+    a: "Evet. Teslimden sonraki belirli bir süre hata düzeltmesi garanti kapsamındadır; kapsamı ve süresi sözleşmede yazılı olarak önceden belirlenir. Garanti süresi dolduktan sonraki destek ihtiyacı için bakım paketine geçilir."
+  - q: "Yedekleme ve kesinti durumunda ne oluyor?"
+    a: "Barındırma platformlarını günlük otomatik yedekleme ve yönetilen altyapı sunanlar arasından seçiyoruz; kurtarma büyük ölçüde bu sağlayıcıların altyapı garantilerine dayanır. Kritik projelerde felaket kurtarma prosedürü mimari aşamasında ayrıca tanımlanır."
+  - q: "Bakım paketiniz nasıl işliyor?"
+    a: "Bakım paketi, düzenli güncelleme, izleme ve küçük değişiklik taleplerini kapsayan aylık bir anlaşmadır; kapsam projenin büyüklüğüne ve ihtiyaç duyulan destek sıklığına göre teklif aşamasında netleştirilir. Sabit ve tek tip bir fiyat listemiz yok."
+  - q: "Destek taleplerine ne kadar sürede dönüyorsunuz?"
+    a: "İlk dönüş için hedefimiz 24 saat. Aktif bakım anlaşması olan projelerde öncelik sırası ve müdahale süresi kapsam sözleşmesinde ayrıca belirlenir; kritik bir kesinti ile küçük bir görsel düzeltme hiçbir zaman aynı öncelikte değerlendirilmez."
+  - q: "WordPress sitem için de bakım gerekiyor mu, yoksa sadece özel yazılımlar mı?"
+    a: "WordPress sitelerde bakım daha da kritiktir çünkü çekirdek, tema ve her eklenti ayrı ayrı güncellenmesi gereken birer parçadır. Statik sitelerde bakım yükü çok daha hafiftir ama sıfır değildir — bağımlılıklar, sertifikalar ve izleme yine de sahibini bekler."
+---
+
+Bir web sitesi yayına girdiği gün en güncel hâlindedir. Sonra zaman geçer: bir kütüphanenin yeni
+sürümü çıkar, bir eklentide açık bulunur, SSL sertifikasının süresi dolmaya yaklaşır. Hiçbiri o gün
+görünür bir sorun yaratmaz — sorun birikir ve genellikle en kötü zamanda, örneğin bir kampanya
+gününde veya bir müşterinin iletişim formunu doldurduğu anda ortaya çıkar.
+
+Bakım, bu birikmeyi görünür hale gelmeden önce yönetmektir. Bu yazıda bakımsız bir sitede gerçekte
+ne bozulduğunu, aylık/üç aylık bir kontrol listesini ve iyi bir bakım anlaşmasının neyi kapsaması
+gerektiğini anlatıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Bakımsız sitelerde risk aniden değil birikerek oluşur: güncelleme borcu, süresi dolan sertifikalar, sessizce bozulan formlar.",
+    "WordPress'te yeni güvenlik açıklarının büyük çoğunluğu eklentilerden geliyor — çekirdek güncel olsa bile eklenti güncel değilse site savunmasız kalır.",
+    "Yedek olmadan 'geri alma' yoktur; yedeğin var olması yetmez, geri yükleme prosedürünün test edilmiş olması gerekir.",
+    "Performans ve SEO sabit kalmaz, zamanla geriler (drift) — düzenli ölçüm olmadan gerileme fark edilmez.",
+    "Statik / Next.js sitelerde bakım yükü daha hafiftir ama sıfır değildir: bağımlılık, sertifika ve izleme yine sahibini bekler.",
+  ]}
+/>
+
+## Bakımsız bir site zamanla ne olur
+
+### Güvenlik yamaları ve bağımlılık açıkları
+
+Bir site canlıya alındığında kullandığı framework, kütüphaneler ve (varsa) eklentiler o günün güncel
+sürümleridir. Zaman geçtikçe bu sürümlerde açıklar bulunur ve yayınlanır — bu, yazılımın kalitesizliği
+değil, her yazılımın doğal yaşam döngüsüdür. Sorun, açık yayınlandıktan sonra kimsenin yamayı
+uygulamamasıdır.
+
+WordPress ekosisteminde bu riskin nereden geldiği net: Patchstack'in 2026 güvenlik raporuna göre yeni
+bulunan güvenlik açıklarının **%91'i eklentilerden**, %9'u temalardan geliyor; WordPress çekirdeğinde
+yalnızca birkaç düşük öncelikli açık raporlandı. Yani "WordPress'im güncel" demek çoğu zaman yeterli
+değil — asıl risk kurulu onlarca eklentinin her birinde ayrı ayrı yatıyor.
+
+<Callout type="warn" title="Yama her zaman hazır olmuyor">
+  Aynı rapora göre açıklanan güvenlik açıklarının **%46'sı**, kamuya duyurulduğu anda geliştiricisi
+  tarafından henüz yamalanmamıştı. Bu, "eklentimi güncelledim, güvendeyim" varsayımının neden yeterli
+  olmadığını gösteriyor — izleme ve hızlı müdahale, güncelleme kadar önemli.
+</Callout>
+
+Statik / Next.js sitelerde saldırı yüzeyi çok daha küçüktür çünkü istek anında çalışan bir sunucu
+tarafı veya veritabanı yoktur — ama bağımlılıklar (npm paketleri) hâlâ güncellenmesi gereken bir
+listedir. Bu farkı [Next.js mi WordPress mi](/tr/blog/nextjs-mi-wordpress-mi) yazısında ayrıntılı
+işledik.
+
+### SSL sertifikası ve alan adı süresi doluyor
+
+SSL sertifikaları genelde otomatik yenilenir, ama otomasyonun kırıldığı durumlar vardır: ödeme
+bilgisi güncel değildir, DNS kaydı değişmiştir, sağlayıcı taşınmıştır. Sonuç aynı: tarayıcı "bağlantı
+güvenli değil" uyarısı gösterir ve ziyaretçi sayfayı hiç göremeden kapatır.
+
+Alan adı süresi dolması daha da sessiz ilerler — hiçbir uyarı olmadan bir gün site tamamen erişilemez
+hâle gelir, çünkü domain artık başkasının satın alabileceği bir kayıttır. İkisinin de tedavisi
+basittir: otomatik yenilemenin gerçekten çalıştığını düzenli olarak kontrol etmek.
+
+### Formlar sessizce bozuluyor
+
+İletişim formu bir API anahtarına, bir e-posta servisine veya bir üçüncü taraf entegrasyona bağlıdır.
+Bu bağlantılardan biri değiştiğinde (servis sağlayıcı API'sini günceller, e-posta adresi değişir,
+anahtar süresi dolar) form ziyaretçiye hâlâ "gönderildi" gösterebilir ama e-posta hiçbir yere
+gitmez. Bu, sahibinin fark etmesi en zor bozulma türüdür çünkü hiçbir hata mesajı görünmez —
+yalnızca gelen talep sayısı sebepsizce düşer.
+
+Düzenli test gönderimi (ayda bir gerçek bir form doldurup e-postanın ulaştığını doğrulamak) bu riski
+tamamen ortadan kaldıran ucuz bir alışkanlıktır.
+
+### Yedek yoksa geri alma yoktur
+
+"Yedeğimiz var" ile "yedeğimizden geri yükleme yaptık ve çalıştı" arasında büyük fark var. Bir
+yedekleme sistemi kurulup hiç test edilmemişse, ihtiyaç anında bozuk bir dosya, eksik bir tablo veya
+erişilemeyen bir depolama alanıyla karşılaşma riski yüksektir. Kritik projelerde yedeğin varlığı
+kadar, geri yükleme adımlarının önceden bir kez denenmiş olması önemlidir.
+
+### Performans zamanla geriliyor
+
+Bir site lansmanda hızlıdır çünkü o gün ölçülüp optimize edilmiştir. Sonra her ay birkaç görsel
+eklenir, bir izleme scripti daha bağlanır, bir üçüncü taraf widget kurulur — her biri tek başına
+küçük, toplamda ise sayfayı yavaşlatan bir birikim. Buna performans **drift**i denir ve fark
+edilmesinin tek yolu düzenli ölçümdür. Bütçe temelli yaklaşımı
+[hızlı web sitesi nasıl yapılır](/tr/blog/hizli-web-sitesi-nasil-yapilir) yazısında anlattık.
+
+### SEO sıralamaları geriliyor
+
+Arama motorları sabit bir anlık görüntüye göre değil, sitenin güncel durumuna göre sıralar. Google'ın
+kendi dokümantasyonu Core Web Vitals'ın sıralama sistemlerinde kullanıldığını doğrudan belirtiyor —
+yani performans gerilerse bunun SEO tarafında da bir karşılığı olur. Buna ek olarak kırık linkler,
+güncellenmeyen içerik ve gözden kaçan yapılandırılmış veri hataları zamanla organik trafiği aşındırır.
+Bir sitenin SEO sağlığını nasıl koruduğumuzu
+[SEO ve GEO yazısında](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo) ele aldık.
+
+<StatGrid
+  items={[
+    { value: "%91", label: "Yeni WordPress açıklarının eklentilerden gelme oranı", note: "Patchstack, 2026" },
+    { value: "%46", label: "Açıklandığında henüz yamalanmamış açık oranı", note: "Patchstack, 2026" },
+    { value: "0", label: "Statik sitede çalışan sunucu tarafı", note: "Saldırı yüzeyi farkı" },
+  ]}
+/>
+
+## Aylık / üç aylık bakım kontrol listesi
+
+Aşağıdaki liste bir başlangıç noktasıdır — kapsam projenin altyapısına göre daralır veya genişler.
+
+| Sıklık | Kontrol | Ne aranır |
+|---|---|---|
+| Aylık | Bağımlılık ve eklenti güncellemeleri | Bilinen güvenlik açığı olan sürüm var mı |
+| Aylık | Yedekleme doğrulaması | Son yedek alınmış mı, geri yüklenebilir mi |
+| Aylık | Form ve entegrasyon testi | İletişim formu gerçekten e-posta gönderiyor mu |
+| Aylık | Uptime ve hata oranı raporu | Kesinti veya hata artışı yaşanmış mı |
+| Üç aylık | SSL ve alan adı süresi | Otomatik yenileme gerçekten çalışıyor mu |
+| Üç aylık | Performans ölçümü (LCP, INP, CLS) | Lansmandaki değerlere göre gerileme var mı |
+| Üç aylık | Kırık link ve 404 taraması | Yeni kırık iç/dış link birikmiş mi |
+| Üç aylık | Yapılandırılmış veri (schema) doğrulama | JSON-LD hâlâ hatasız mı |
+| Yıllık | Erişilebilirlik ve güvenlik taraması | Yeni standartlara göre gözden geçirme |
+
+<Callout type="tip" title="Kontrol listesi kimin işi olduğu belli olmalı">
+  Liste kâğıt üzerinde durduğu sürece işe yaramaz. Her satırın bir sorumlusu (ajans, iç ekip veya
+  otomatik izleme aracı) ve bir takvimi olmalı — aksi hâlde "birileri bakar" diye düşünülen madde
+  aylarca atlanır.
+</Callout>
+
+## İyi bir bakım anlaşmasında neler olmalı
+
+Bir bakım paketi teklifini değerlendirirken bakılacak dört kalem var.
+
+1. **Yanıt beklentisi net tanımlanmış olmalı.** Sabit bir sayı yerine, kritik bir kesinti ile küçük
+   bir metin değişikliğinin aynı öncelikte değerlendirilmediği, önceliklendirme mantığının sözleşmede
+   yazılı olduğu bir yapı arayın. "Ne kadar hızlı" sorusunun cevabı duruma göre değişir; önemli olan
+   bu değişkenliğin baştan tanımlanmış olmasıdır.
+2. **Yedekleme kim tarafından, ne sıklıkla yapılıyor.** Barındırma sağlayıcısının kendi otomatik
+   yedeklemesi mi yeterli görülüyor, yoksa ayrı bir yedekleme katmanı mı var? Kritik projelerde bu
+   ayrım önemlidir.
+3. **Uptime izleme aktif mi.** Site çöktüğünde bunu ilk fark eden ziyaretçi olmamalı — izleme sistemi
+   ekip haberdar olmadan önce ziyaretçinin fark etmesini engeller.
+4. **Küçük içerik güncellemeleri kapsamda mı.** Metin değişikliği, görsel ekleme gibi küçük talepler
+   her seferinde ayrı bir teklif beklemeden mi yürütülüyor, yoksa her değişiklik yeni bir süreç mi
+   başlatıyor?
+
+Bu dört kalem [Bakım & Destek hizmetimizin](/tr/hizmetler/bakim-ve-destek) çekirdeğini oluşturuyor:
+güvenlik yamaları, yedekleme, uptime izleme ve küçük değişiklik yönetimi aynı aylık pakette bir arada
+ilerliyor.
+
+## WordPress ile modern statik / Next.js bakımı arasındaki fark
+
+İki mimari aynı bakım ihtiyacını taşımıyor — yük WordPress tarafında daha ağır.
+
+| Kalem | WordPress | Statik / Next.js |
+|---|---|---|
+| Güncellenmesi gereken parça sayısı | Çekirdek + tema + her eklenti ayrı ayrı | Framework + npm bağımlılıkları |
+| Saldırı yüzeyi | Her istekte çalışan PHP + veritabanı | Build zamanında üretilmiş, sunucu tarafı çalışmıyor |
+| Uyumsuzluk riski | Eklenti güncellemesi siteyi kırabilir | Bağımlılık güncellemesi genelde izole test edilir |
+| Yedekleme kapsamı | Dosyalar + veritabanı | Kod deposu (git) + varsa veri kaynağı |
+| Bakım sıklığı | Ayda birden fazla, sık | Aylık kontrol genelde yeterli |
+| Panelsiz risk | Panel eklentisi de bakım gerektirir | Panel yoksa bu risk kalemi yok |
+
+Bu fark, hangi mimarinin "daha iyi" olduğu değil, hangi bakım yükünü üstlenmeye hazır olduğunuzla
+ilgili. WordPress'te kalmak bilinçli bir tercihse bakım paketi bu yükü karşılamalı; statik bir
+mimariye geçmek bakım yükünü azaltır ama sıfırlamaz. İki mimarinin bakım dışındaki farklarını
+[Next.js mi WordPress mi](/tr/blog/nextjs-mi-wordpress-mi) yazısında karşılaştırdık.
+
+## Sonuç
+
+Bakım, lansman sonrası unutulan bir madde değil, sitenin üç yıl sonra hâlâ güvenli, hızlı ve
+bulunabilir olmasını sağlayan sürekli bir iştir. Aylık küçük bir kontrol listesi, birikmeden önce
+müdahale etme fırsatı verir; bakım anlaşmasının yanıt beklentisini, yedekleme kapsamını ve
+izlemesini net yazması ise sürprizi ortadan kaldırır.
+
+Mevcut sitenizin bakım durumunu birlikte gözden geçirelim —
+[iletişim sayfasından](/tr/iletisim) yazın. Bakım paketimizin kapsamına
+[Bakım & Destek hizmetimizden](/tr/hizmetler/bakim-ve-destek) bakabilir, otel ve konaklama işletmeleri
+için özelleştirilmiş yaklaşımı [otel bakım & destek çözümümüzde](/tr/cozumler/otel-bakim-destek)
+inceleyebilirsiniz.

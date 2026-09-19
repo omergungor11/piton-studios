@@ -18,7 +18,7 @@ export const LEGAL = {
   /** Is iliskisine donusmeyen form mesajlarinin saklanma suresi. */
   retentionYears: 2,
   /** Metinlerde "son guncelleme" olarak gosterilir; metin degisince guncelleyin. */
-  updated: '2026-09-15',
+  updated: '2026-09-19',
 } as const;
 
 export const LEGAL_READY = Boolean(LEGAL.controllerName.trim() && LEGAL.address.trim());

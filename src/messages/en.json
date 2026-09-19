@@ -785,7 +785,7 @@
     },
     "pampas-investment": {
       "title": "Pampas Investment",
-      "summary": "Real estate investment company website in North Cyprus.",
+      "summary": "Multilingual corporate site with a project portfolio for a real estate investment firm in Esentepe, North Cyprus.",
       "body": [
         "We developed a corporate website focused on real estate investment and sales for Pampas Investment, based in Esentepe, North Cyprus. We built a strong digital presence with a project portfolio, land details, and investor information pages.",
         "SEO optimization, multi-language support, and responsive design helped us reach international investors. Property listing integrations and social media connections boosted client acquisition."
@@ -835,7 +835,7 @@
     },
     "pinnacle-yatirim": {
       "title": "Pinnacle Yatırım",
-      "summary": "Real estate investment company website in North Cyprus.",
+      "summary": "Corporate site showcasing the investment portfolio and consultancy services of a North Cyprus real estate firm.",
       "body": [
         "We developed a professional corporate website for Pinnacle Yatırım targeting the North Cyprus real estate investment sector. We created a comprehensive platform showcasing the investment portfolio, project details, and consultancy services.",
         "Modern design, SEO optimization, and a mobile-friendly structure delivered a strong digital experience for potential investors."
@@ -845,7 +845,7 @@
     },
     "jet-transfer-cyprus": {
       "title": "Jet Transfer Cyprus",
-      "summary": "Airport transfer and VIP transportation service website.",
+      "summary": "Multilingual airport transfer and VIP transport site with online booking and a fare calculator.",
       "body": [
         "We developed a professional website for Jet Transfer Cyprus offering airport transfer and VIP transportation services. An online booking system, route information, and fare calculators put the user experience first.",
         "Mobile-friendly design, WhatsApp integration, and multi-language support made it easy for both local and international tourists to book services."
@@ -935,7 +935,7 @@
     },
     "aydin-transfer": {
       "title": "Aydın Transfer",
-      "summary": "Airport transfer and VIP transportation service website.",
+      "summary": "Mobile-first booking site for airport and intercity transfers, built with local SEO in mind.",
       "body": [
         "We developed a professional website for Aydın Transfer offering airport transfer and intercity transportation services. Online booking, route information, and fare calculation put the user experience first.",
         "Local SEO optimization, WhatsApp integration, and a mobile-first design boosted client acquisition."
@@ -3866,8 +3866,8 @@
     "subtitle": "Every card links to a live project — click through and see for yourself.",
     "results": {
       "ambalajCini": {
-        "highlight": "30% sales growth",
-        "desc": "E-commerce store with payment integration for a packaging supplier; online sales grew 30% after launch."
+        "highlight": "30% growth",
+        "desc": "Payment-integrated e-commerce for a packaging supplier; together with the Google Ads and Meta campaigns we ran, the business grew 30%."
       },
       "nexos": {
         "highlight": "End-to-end custom system",
@@ -4051,6 +4051,107 @@
       "title": "Let's talk about your project",
       "desc": "We'll scope it together and come back with a tailored proposal — usually within 24 hours.",
       "button": "Contact us"
+    },
+    "wizard": {
+      "eyebrow": "Quote wizard",
+      "title": "Which package fits you?",
+      "lead": "Answer a few questions and we'll show the package that fits, its starting band and the choices that affect the price. Your answers are carried over to your enquiry.",
+      "step": "Question {current} / {total}",
+      "back": "Back",
+      "restart": "Start over",
+      "resultEyebrow": "Our suggestion",
+      "resultTitle": "Your starting point: {name}",
+      "driversTitle": "Choices that affect the price",
+      "noDrivers": "Nothing in your choices adds an extra cost line; the exact price is set after a short scoping call.",
+      "includesLabel": "What's included",
+      "cta": "Request a proposal with these answers",
+      "ctaNote": "Bands are starting ranges; the exact price is set in the proposal once we've scoped the project together.",
+      "questions": {
+        "need": {
+          "q": "What do you need?",
+          "options": {
+            "showcase": {
+              "label": "Company / showcase website",
+              "hint": "A site presenting your company, services and work"
+            },
+            "ecommerce": {
+              "label": "E-commerce store",
+              "hint": "Online sales, payments and shipping"
+            },
+            "webapp": {
+              "label": "Custom software / web app",
+              "hint": "Dashboards, booking, CRM, ERP and similar systems"
+            },
+            "automation": {
+              "label": "AI and business automation",
+              "hint": "Automating repetitive work"
+            }
+          }
+        },
+        "design": {
+          "q": "Which design approach is closer to you?",
+          "options": {
+            "template": {
+              "label": "Fast and economical",
+              "hint": "A quality ready-made theme adapted to your brand"
+            },
+            "custom": {
+              "label": "Custom brand design",
+              "hint": "No template, designed and coded from scratch"
+            }
+          }
+        },
+        "languages": {
+          "q": "How many languages?",
+          "options": {
+            "one": {
+              "label": "One language"
+            },
+            "multi": {
+              "label": "Two or more languages",
+              "hint": "For example English, Turkish, Russian"
+            }
+          }
+        },
+        "timeline": {
+          "q": "When should it go live?",
+          "options": {
+            "urgent": {
+              "label": "Within a month"
+            },
+            "normal": {
+              "label": "In 1–3 months"
+            },
+            "flexible": {
+              "label": "Flexible"
+            }
+          }
+        },
+        "content": {
+          "q": "Are your texts and images ready?",
+          "options": {
+            "ready": {
+              "label": "Yes, we provide the content"
+            },
+            "help": {
+              "label": "We need content support",
+              "hint": "Copywriting, image preparation"
+            }
+          }
+        }
+      },
+      "drivers": {
+        "custom": "Custom design and animation depth add time; design depth is one of the main price drivers.",
+        "multi": "Each extra language adds translation, editing, testing and hreflang setup.",
+        "integrations": "Payments, CRM, ERP or third-party API integrations expand the scope and testing load.",
+        "content": "Content production (copy, images) is a separate line item in the proposal.",
+        "urgent": "On a tight timeline we prioritise the scope and plan a phased launch."
+      },
+      "brief": {
+        "intro": "Hi, I'm coming from the quote wizard on your pricing page.",
+        "package": "Suggested package: {name} ({price})",
+        "outro": "A few words about my project:"
+      }
     }
   },
   "sectorItems": {

@@ -1,0 +1,192 @@
+---
+title: "KOBİ için ERP mi, Excel mi? Ne zaman geçiş yapmalı"
+description: "Excel ne zaman yetmez olur, ERP/CRM'e geçiş sinyalleri, hazır ile özel sistem farkı, geçiş adımları ve gerçekçi bütçe bantları."
+date: 2026-09-19
+tags: ["erp", "crm", "otomasyon", "kobi"]
+author: "Piton Studios"
+draft: false
+translationKey: erp-vs-excel
+sources:
+  - title: "Microsoft Support — Excel specifications and limits"
+    url: "https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3"
+  - title: "Microsoft Support — Reduce file size to fix Excel performance issues"
+    url: "https://support.microsoft.com/en-us/office/reduce-file-size-to-fix-excel-performance-issues-3d259467-e0ec-4dea-830e-27bfd2fe3b64"
+faq:
+  - q: "Excel'den ne zaman ERP'ye geçmeliyim?"
+    a: "Birden fazla kişi aynı dosyayı e-postayla dolaştırıyorsa, cari/stok bilgisi iki farklı dosyada çelişiyorsa veya bir raporu hazırlamak yarım günü buluyorsa geçiş vaktidir. Tek bir kişinin tuttuğu, tekil bir tabloysa Excel muhtemelen hâlâ doğru araçtır."
+  - q: "Hazır bir ERP mi almalıyım, özel mi yaptırmalıyım?"
+    a: "Standart bir muhasebe/stok akışınız varsa hazır bir paket daha hızlı ve ucuzdur. Bayi bazlı fiyatlandırma, sektöre özel üretim takibi veya birkaç sistemi tek panelde birleştirme gibi kendine özgü bir akışınız varsa hazır paket bunu eklenti üstüne eklentiyle zorlar; özel geliştirme daha sürdürülebilir olur."
+  - q: "Küçük bir işletme için ERP'nin maliyeti ne kadar tutar?"
+    a: "Kapsama göre değişir; özel bir web uygulaması/ERP projesi bizim fiyatlandırmamızda 150.000 ₺'den başlıyor ve kapsam büyüdükçe artıyor. Kesin rakam, hangi modüllerin (cari, stok, bayi, üretim) gerektiğine bağlı bir kapsam görüşmesinden sonra netleşir."
+  - q: "Mevcut Excel verimizi kaybetmeden geçiş yapabilir miyiz?"
+    a: "Evet — veri aktarımı geçişin ayrı ve planlanan bir aşamasıdır. Eski tablolar temizlenip yeni şemaya taşınır, geçmiş kayıtlar kaybolmaz."
+  - q: "ERP ile CRM aynı şey mi?"
+    a: "Hayır ama çoğu zaman birlikte gelirler. ERP; stok, üretim, cari ve finans gibi operasyonel süreçleri yönetir, CRM ise müşteri ilişkisi ve satış hunisini. Küçük ölçekli bir işletmede ikisi genelde tek bir panelde birleştirilir."
+---
+
+"Excel yeter mi, ERP mi gerek" sorusu genelde yanlış zamanda soruluyor — sistem zaten günlük işi
+yavaşlatmaya başladıktan sonra. Oysa bu bir teknoloji tercihinden çok bir **büyüme sinyali**: Excel
+tek kişinin tuttuğu bir tabloyken işe yarar, birden fazla kişi aynı veriye farklı yerlerden dokunmaya
+başladığında çatlamaya başlar. Bu yazıda çatlamanın hangi noktada başladığını, hazır ile özel ERP
+arasındaki gerçek farkı ve geçişin nasıl yapılacağını ele alıyoruz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Excel bir kişinin tuttuğu tabloda güçlüdür; birden fazla kişi aynı veriye dokununca çatlamaya başlar.",
+    "Geçiş sinyalleri teknik değil operasyoneldir: çelişen kopyalar, e-postayla dolaşan dosyalar, saatler süren raporlar.",
+    "Hazır ERP standart akışlarda hızlı ve ucuzdur; bayi bazlı fiyatlandırma gibi sektöre özel akışlarda özel geliştirme daha sürdürülebilir olur.",
+    "Geçiş, veri aktarımı ayrı bir aşama olacak şekilde planlanırsa geçmiş kayıt kaybı yaşanmaz.",
+    "Özel bir web uygulaması/ERP projesi 150.000 ₺'den başlıyor; kesin rakam kapsam görüşmesiyle netleşir.",
+  ]}
+/>
+
+## Excel'in gerçek sınırı: satır sayısı değil, koordinasyon
+
+Excel'in teknik sınırları oldukça yüksek — [Microsoft'un kendi belgelerine göre](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
+bir çalışma sayfası 1.048.576 satır ve 16.384 sütuna kadar veri tutabiliyor. Küçük bir işletmenin bu
+sınıra satır sayısıyla ulaşması neredeyse imkânsız. Sorun büyüklük değil; aynı veriye birden fazla
+kişinin, birden fazla dosyada, farklı zamanlarda dokunması.
+
+<Callout type="info" title="Bu bir Excel'e karşı yazı değil">
+  Excel, tek kişinin tuttuğu, tekil bir veri kümesi için hâlâ en hızlı ve en ucuz araç. Sorun
+  Excel'in kendisi değil; birden fazla kişinin, birden fazla kopyada aynı veriyi tutmaya çalışması.
+  ERP burada bir üstünlük yarışı değil, koordinasyon ihtiyacına verilen bir cevap.
+</Callout>
+
+[Microsoft'un performans rehberi](https://support.microsoft.com/en-us/office/reduce-file-size-to-fix-excel-performance-issues-3d259467-e0ec-4dea-830e-27bfd2fe3b64)
+de aynı noktaya işaret ediyor: dosya boyutu büyüdükçe, formül ve biçimlendirme birikince Excel
+yavaşlıyor ve önerilen çözüm çoğunlukla veriyi bölmek, gereksiz biçimlendirmeyi temizlemek veya harici
+verileri bağlantı olarak tutmak. Bunların hepsi, aslında tek bir dosyanın artık tek bir sistemin işini
+yapmaya çalıştığının işareti.
+
+## ERP/CRM'e geçiş sinyalleri
+
+Aşağıdaki sinyallerden ikisi ya da üçü aynı anda görülüyorsa, sorun artık "daha iyi bir Excel şablonu"
+ile çözülmez.
+
+1. **Aynı bilginin birden fazla kopyası var ve çelişiyor.** Satış ekibinin elindeki stok sayısı,
+   depodakinden farklı. Hangisi doğru, kimse emin değil.
+2. **Dosya e-postayla dolaşıyor.** "Güncel_liste_SON_v3.xlsx" gibi bir dosya adı görüyorsanız, veri
+   sahipliği zaten dağılmış demektir.
+3. **Bir raporu hazırlamak yarım günü buluyor.** Aylık satış özetini çıkarmak için üç farklı
+   dosyadan kopyala-yapıştır yapıyorsanız, bu süre büyüdükçe işin geri kalanından çalınıyor.
+4. **Bayi veya cari bazlı fiyatlandırmayı elle takip ediyorsunuz.** Her bayi için ayrı bir sekme,
+   her güncellemede unutulma riski demek.
+5. **Yeni bir çalışan işe başladığında "hangi dosyayı nereden bulacağını" öğrenmesi günler
+   sürüyor.** Bilgi kişilerde değil, sistemde tutulmalı.
+6. **Stok ile üretim/sipariş verisi ayrı tablolarda ve elle senkronize ediliyor.** Bir sipariş
+   girildiğinde stok otomatik düşmüyorsa, gecikmeli ve hatalı stok bilgisiyle çalışıyorsunuz demektir.
+
+<StatGrid
+  items={[
+    { value: "1.048.576", label: "Bir Excel sayfasının satır sınırı", note: "MICROSOFT DESTEK" },
+    { value: "16.384", label: "Bir Excel sayfasının sütun sınırı", note: "MICROSOFT DESTEK" },
+    { value: "2+", label: "Aynı anda tuttuğunuz veri kopyası sayısı", note: "GERÇEK SINIR BURADA BAŞLAR" },
+  ]}
+/>
+
+## Karar matrisi: Excel mi kalmalı, ERP'ye mi geçilmeli
+
+| Kriter | Excel lehine | ERP/CRM lehine |
+|---|---|---|
+| Kullanıcı sayısı | Tek kişi veya küçük, aynı odada çalışan ekip | Birden fazla departman, farklı lokasyon |
+| Veri hacmi | Birkaç yüz-bin satır, durağan yapı | Sürekli büyüyen, ilişkisel veri (sipariş↔stok↔cari) |
+| Süreç karmaşıklığı | Basit liste, tekil hesaplama | Teklif→sipariş→fatura gibi çok adımlı akış |
+| Hata toleransı | Hatalı hücre fark edilir, düzeltilir | Hatalı veri finansal veya operasyonel sonuç doğurur |
+| Raporlama ihtiyacı | Ara sıra, manuel | Düzenli, birden fazla kişiye anlık |
+| Bayi/cari yapısı | Yok veya çok basit | Bayi bazlı fiyat, cari bakiye, tahsilat takibi var |
+| Bütçe | Sıfır ek maliyet (zaten var) | Kurulum + bakım maliyeti var |
+
+Tablonun çoğunluğu sağ sütuna düşüyorsa, sorun artık "hangi Excel şablonunu kullanmalıyım" değil,
+"hangi sistemi kurmalıyım" sorusu.
+
+## Hazır ERP mi, özel geliştirme mi
+
+Bu ikisi arasındaki tercih sıklıkla yanlış çerçevelenir: "hazır ucuz, özel pahalı" gibi basit bir
+denklem değil. Gerçek ayrım, işinizin ne kadar standart olduğu.
+
+| | Hazır ERP paketi | Özel geliştirilen sistem |
+|---|---|---|
+| Uygunluk | Standart muhasebe, stok, satış akışı | Sektöre özgü akış (bayi bazlı fiyat, özel üretim takibi) |
+| Kurulum hızı | Genelde daha hızlı, hazır modüller | Kapsam analizi + geliştirme süreci gerektirir |
+| Kullanılmayan modül yükü | Sık — paket, ihtiyacınız olmayan modüllerle gelir | Yok — yalnızca gereken modül geliştirilir |
+| Özelleştirme sınırı | Eklenti/entegrasyon ile sınırlı | Sınır yok, iş akışı sıfırdan modellenir |
+| Veri sahipliği | Genelde sağlayıcı platformunda | Kendi altyapınızda, tam sahiplik |
+| Uzun vadeli bağımlılık | Lisans/abonelik sağlayıcıya bağlı | Kod ve veritabanı size ait |
+
+Hazır bir paket, standart bir cari-stok-fatura akışı için genelde daha hızlı ve daha ucuz bir
+başlangıçtır. Ama sektöre özgü bir akışınız varsa — örneğin bayi bazlı fiyatlandırma, varyant bazlı
+üretim takibi veya birden fazla sistemin (e-ticaret vitrini + stok + muhasebe) tek panelde
+birleşmesi gerekiyorsa — hazır paketler bunu genelde eklenti üstüne eklenti ile zorlar ve sonunda
+"hazır ama uymuyor" bir sisteme dönüşür.
+
+Kendi projelerimizden iki örnek bu ayrımı netleştiriyor: [FurCRM](/tr/projeler/fur-crm), mobilya
+üreticileri için ürün/varyant yönetimi, cari & finans takibi, teklif–sipariş–fatura akışı ve bayi
+yönetimini tek panelde birleştiren, sıfırdan geliştirdiğimiz bir sistem — sektöre özgü bayi bazlı
+akış, hazır bir paketin doğal olarak karşılamadığı bir ihtiyaçtı. [Ambalaj Cini](/tr/projeler/ambalaj-cini)'nde
+ise e-ticaret vitrinini stok, kargo, fatura, muhasebe ve CRM'i kapsayan tam bir back-office ile
+bütünleştirdik; burada da amaç ayrı sistemlerde dağılan veriyi tek panelde toplamaktı.
+
+<Callout type="warn" title="Hazır paketi eklentiyle zorlamak, geçici çözümü kalıcı maliyete çevirir">
+  Standart olmayan bir akışı hazır bir ERP'ye eklenti üstüne eklenti ekleyerek sığdırmaya
+  çalışmak kısa vadede daha ucuz görünür. Ancak her eklenti bir güncelleme uyumsuzluğu riski ve
+  ayrı bir bakım kalemi ekler; birkaç yıl sonra toplam maliyet, baştan özel geliştirilen bir
+  sistemden daha yüksek olabilir.
+</Callout>
+
+## Geçiş adımları
+
+Excel'den ERP/CRM'e geçiş, doğru sırayla yapıldığında veri kaybı ya da operasyon kesintisi
+yaşatmaz.
+
+| Adım | Yapılacak | Neden önemli |
+|---|---|---|
+| 1. Süreç envanteri | Hangi tabloyu kim, ne sıklıkla, nasıl güncelliyor — hepsi çıkarılır | Görünmeyen manuel adımlar burada ortaya çıkar |
+| 2. Veri modeli tasarımı | Cari, stok, sipariş, bayi ilişkileri tek şemada birleştirilir | Tabloların birbirini nasıl beslediği netleşir |
+| 3. Modül geliştirme/kurulum | İlgili modüller sırayla geliştirilir veya hazır paket yapılandırılır | Tek seferde her şeyi değiştirmek riski artırır |
+| 4. Veri aktarımı | Mevcut Excel verisi temizlenip yeni sisteme taşınır | Geçmiş kayıtların bütünlüğü burada korunur |
+| 5. Paralel çalışma | Bir süre eski ve yeni sistem birlikte kontrol edilir | Veri tutarsızlığı canlıya geçmeden yakalanır |
+| 6. Eğitim & devir | Ekip yeni sistemde çalışmaya başlar, destek penceresi açık kalır | Alışkanlık direnci en çok bu aşamada kırılır |
+
+Dördüncü adım en çok atlanan veya aceleye getirilen aşama. Eski tablolardaki tutarsız kayıtlar
+(yinelenen müşteri kaydı, eksik cari bakiyesi) temizlenmeden aktarılırsa, yeni sistem eskisinin
+hatalarını miras alır — bu yüzden veri aktarımı ayrı ve planlı bir aşama olmalı, geçişin bir yan
+işi değil.
+
+## Ne zaman Excel'de kalmalı
+
+Her işletmenin ERP'ye ihtiyacı yok. Aşağıdaki durumlarda Excel hâlâ doğru araç:
+
+1. **Veriyi tutan tek bir kişiyse ve paylaşım ihtiyacı yoksa.** Koordinasyon sorunu olmayan yerde
+   ERP gereksiz bir karmaşıklık ekler.
+2. **Süreç durağansa ve büyüme beklenmiyorsa.** Sabit sayıda müşteri, sabit bir ürün listesi
+   varsa mevcut tablo yeterli olabilir.
+3. **Bütçe kısıtlıysa ve sorun henüz operasyonu yavaşlatmıyorsa.** "Belki ileride lazım olur"
+   düşüncesiyle erken geçiş yapmak, henüz gerekmeyen bir bakım yükü yaratır.
+
+## Ne zaman ERP/CRM'e geçilmeli
+
+1. **Yukarıdaki sinyallerden birden fazlası aynı anda görülüyorsa.** Tek bir sinyal erken uyarı,
+   ikisi-üçü birlikte artık bir maliyet.
+2. **Bayi, cari veya çok kanallı bir yapı büyüyorsa.** Elle takip, hacim büyüdükçe hatayı da
+   büyütür.
+3. **Ekip büyüyor ve bilgi kişilere bağımlı hâle geliyorsa.** Sistemleştirme, kişi bağımlılığını
+   azaltır.
+4. **Raporlama, karar almayı geciktiriyorsa.** Yönetim, güncel veriye anlık erişemediği için karar
+   erteliyorsa bu doğrudan bir maliyet.
+
+## Sonuç
+
+Excel ile ERP arasındaki soru "hangisi daha iyi" değil, "veri artık kaç kişinin elinde, kaç kopyada
+dolaşıyor" sorusu. Tek kişi, tek tablo düzeninde Excel hâlâ en hızlı araç. Veri birden fazla kişiye,
+birden fazla sürece yayıldığında ve çelişen kopyalar operasyonu yavaşlatmaya başladığında, doğru
+soru "ERP mi Excel mi" değil, "hazır bir paket mi yoksa işimize özel modellenmiş bir sistem mi"
+sorusudur.
+
+Süreçlerinizin hangi tarafa düştüğünden emin değilseniz [ERP & CRM hizmetimize](/tr/hizmetler/erp-crm)
+göz atabilir; inşaat sektöründe [inşaat ERP çözümümüze](/tr/cozumler/insaat-erp), üretimde
+[üretim ERP çözümümüze](/tr/cozumler/uretim-erp), emlak ofislerinde [emlak CRM çözümümüze](/tr/cozumler/emlak-crm)
+veya bayi ağınız varsa [bayi sipariş portalı çözümümüze](/tr/cozumler/bayi-siparis-portali)
+bakabilirsiniz. Başlangıç bantları için [fiyatlandırma sayfasını](/tr/fiyatlandirma) inceleyebilir
+ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

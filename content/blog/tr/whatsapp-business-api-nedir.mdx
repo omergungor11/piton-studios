@@ -1,0 +1,221 @@
+---
+title: "WhatsApp Business API Nedir? İşletmeler İçin Rehber"
+description: "WhatsApp Business App ile Business Platform (API) arasındaki fark, şablon mesajlar, opt-in kuralları, fiyatlandırma modeli ve kurulum adımları."
+date: 2026-09-19
+tags: ["whatsapp", "whatsapp business api", "chatbot", "otomasyon"]
+author: "Piton Studios"
+draft: false
+translationKey: whatsapp-business-api
+sources:
+  - title: "Meta for Developers — About the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform"
+  - title: "Meta for Developers — WhatsApp Cloud API Get Started"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started"
+  - title: "Meta for Developers — Pricing on the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+  - title: "Meta for Developers — Message Templates Overview"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview"
+  - title: "Meta for Developers — Template Categorization"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-categorization"
+  - title: "Meta for Developers — Get Opt-In for WhatsApp"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/getting-opt-in"
+faq:
+  - q: "WhatsApp Business App ile WhatsApp Business Platform (API) arasındaki fark nedir?"
+    a: "Business App, tek kişi veya küçük bir ekibin telefonundan kullandığı ücretsiz bir uygulamadır; Platform (API) ise CRM'inize, e-ticaret sisteminize veya bir chatbot'a programatik olarak bağlanan, otomasyon ve ölçek için tasarlanmış kurumsal bir altyapıdır. Aradaki fark tasarım hedefinde: biri manuel kullanım için, diğeri sistemler arası otomasyon için var."
+  - q: "WhatsApp Business API'yi kurmak için Meta onayı şart mı?"
+    a: "Evet. API'yi kullanmak bir WhatsApp Business Hesabı (WABA) oluşturmayı, telefon numarasını doğrulamayı ve göndereceğiniz şablon mesajları Meta'nın onayına sunmayı gerektiriyor; bu süreç işletme doğrulamasına bağlı olarak değişkenlik gösterebiliyor."
+  - q: "Şablon mesaj (template) nedir, her mesaj için gerekli mi?"
+    a: "Hayır — kullanıcı size son 24 saat içinde yazdıysa serbest metin mesajı gönderebilirsiniz. Şablon mesaj yalnızca bu pencerenin dışında, siz konuşmayı başlattığınızda gerekiyor; Meta'nın dokümantasyonuna göre pencerenin dışına çıkan tek mesaj türü önceden onaylanmış şablonlardır."
+  - q: "Opt-in almadan müşterilere WhatsApp mesajı gönderebilir miyim?"
+    a: "Hayır. Meta'nın politikasına göre yalnızca size mesaj gönderme konusunda açıkça onay vermiş kullanıcılara mesaj gönderebilirsiniz; bu onayda işletmenizin adı ve hangi amaçla mesaj gönderileceği net şekilde belirtilmiş olmalı."
+  - q: "WhatsApp API'nin fiyatlandırma modeli nasıl işliyor?"
+    a: "Meta, 1 Temmuz 2025'te fiyatlandırmayı konuşma bazlı modelden gönderilen şablon mesaj başına ücretlendirmeye geçirdi; ücret şablonun kategorisine (pazarlama, hizmet amaçlı, kimlik doğrulama) ve alıcının ülke koduna göre değişiyor. Güncel oranlar sık değiştiği için kesin rakam vermek yerine [Meta'nın resmî fiyatlandırma sayfasına](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing) bakmanızı öneririz."
+---
+
+Bir müşteri "siparişim nerede" diye WhatsApp'tan yazdığında, elle cevap veren biri mi var, yoksa
+sistem mi otomatik yanıtlıyor? Bu sorunun cevabı, işletmenizin WhatsApp Business App mı yoksa
+WhatsApp Business Platform (Cloud API) mi kullandığına bağlı. İkisi aynı isimle anılsa da farklı
+işler için tasarlandı — bu yazı ikisi arasındaki gerçek farkı, API'nin neyi mümkün kıldığını ve
+kurallarını Meta'nın kendi dokümantasyonuna dayanarak anlatıyor.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "WhatsApp Business App manuel kullanım içindir; Business Platform (API) sistemlere bağlanan, otomasyon için tasarlanmış bir altyapıdır.",
+    "API üzerinden otomatik yanıt, sipariş/randevu bildirimi, CRM entegrasyonu ve kendi verinizden yanıtlayan chatbot kurulabilir.",
+    "24 saatlik müşteri hizmeti penceresinin dışına çıkan her mesaj, Meta onaylı bir şablon (template) gerektirir.",
+    "Kullanıcıya mesaj göndermeden önce açık, kanal belirten bir opt-in şart — bu bir öneri değil, Meta politikası.",
+    "Fiyatlandırma 1 Temmuz 2025'te konuşma bazlıdan şablon mesaj başına ücrete geçti; güncel oranlar için Meta'nın resmî sayfasına bakılmalı.",
+  ]}
+/>
+
+## WhatsApp Business App ile WhatsApp Business Platform (API) arasındaki fark
+
+**WhatsApp Business App**, küçük işletmelerin telefonlarına indirip kullandığı ücretsiz bir
+uygulama. İşletme profili, katalog, otomatik karşılama mesajı gibi temel özellikler sunuyor ama
+elle yönetiliyor — birileri telefonu açıp mesajlara bakmak zorunda.
+
+**WhatsApp Business Platform**, [Meta'nın kendi tanımıyla](https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform)
+"işletmelerin WhatsApp üzerinden programatik olarak mesaj gönderip alabildiği" bir altyapı. Uygulama
+değil; CRM'inize, e-ticaret sisteminize veya bir yapay zekâ asistanına doğrudan bağlanan bir API. Bu,
+mesajın bir insan tarafından değil, önceden tanımlanmış bir kural veya bir yapay zekâ modeli
+tarafından gönderilebildiği anlamına geliyor.
+
+<Callout type="info" title="İkisi rakip değil, farklı ölçekler için var">
+  Tek kişilik bir işletmeyseniz Business App muhtemelen yeterli. Sipariş durumu bildirimi, randevu
+  hatırlatması veya günde onlarca-yüzlerce tekrar eden soruyu otomatikleştirmek istediğinizde
+  ihtiyacınız olan şey Platform (API) tarafı.
+</Callout>
+
+| Kriter | WhatsApp Business App | WhatsApp Business Platform (API) |
+|---|---|---|
+| Kullanım şekli | Telefondan manuel | Sisteme entegre, programatik |
+| Maliyet | Ücretsiz | Şablon mesaj başına ücretli |
+| Otomasyon | Sınırlı (temel karşılama/uzakta mesajı) | Tam otomasyon, kural veya AI tabanlı |
+| Ekip erişimi | Tek cihaz / kısıtlı çoklu cihaz | Sınırsız sistem entegrasyonu |
+| CRM / e-ticaret bağlantısı | Yok | Webhook ve API üzerinden doğrudan |
+| Mesaj hacmi | Düşük-orta, elle takip edilebilir | Yüksek hacim, saniyede çok sayıda mesaj |
+| Onay süreci | Yok | WABA kurulumu + şablon onayı gerekir |
+| Hedef kitle | Tek kişi / küçük işletme | Büyüyen işletme, çok kanallı operasyon |
+
+## API'nin işletmelere gerçekte kazandırdığı şeyler
+
+Platform'un teknik detayları bir kenara, işletme için pratik karşılığı şu beş alanda toplanıyor:
+
+- **Otomatik yanıt.** Sık sorulan sorular (çalışma saati, adres, kargo süresi) insan beklemeden
+  anında yanıtlanır.
+- **Katalog ve sipariş akışları.** Ürün kataloğu WhatsApp içinde gösterilebilir, sipariş durumu
+  değiştiğinde ("kargoya verildi", "teslim edildi") tetikleyici bazlı otomatik mesaj gider.
+- **Randevu hatırlatmaları.** Randevu tarihi yaklaşınca otomatik hatırlatma gönderilir — resepsiyonun
+  elle arayıp hatırlatmasına gerek kalmaz.
+- **CRM entegrasyonu.** Gelen ve giden mesajlar mevcut sipariş, stok veya müşteri sistemine
+  webhook'lar üzerinden bağlanır; bilgi elle taşınmaz.
+- **Kendi verisinden yanıtlayan chatbot.** Asistan, genel internet bilgisiyle değil sizin ürün
+  kataloğunuzdan, SSS'inizden veya politikalarınızdan (RAG mimarisiyle) yanıt üretir; emin
+  olmadığında konuşmayı bir insana devreder.
+
+<Callout type="key" title="Canlıda uyguladığımız bir örnek">
+  [Gel Gez Gör](/tr/projeler/gel-gez-gor) için trend ilanları otomatik tespit edip ilan sahibine
+  WhatsApp üzerinden bildirim gönderen bir otomasyon kurduk — tetikleyici bazlı, elle müdahale
+  gerektirmeyen bir akış. Bu yazıda anlatılan bildirim/sipariş senaryolarının aynı mantığı, farklı
+  bir veri kaynağıyla çalışıyor.
+</Callout>
+
+## Şablon mesajlar (template) ve 24 saatlik müşteri hizmeti penceresi
+
+WhatsApp'ta iki tür mesaj var: **serbest metin mesajları** ve **şablon mesajlar**. Kullanıcı size son
+24 saat içinde bir mesaj gönderdiyse, bu "müşteri hizmeti penceresi" açık demektir ve içinde istediğiniz
+serbest metni gönderebilirsiniz. Ama pencere kapandıysa ya da konuşmayı ilk siz başlatıyorsanız, [Meta'nın
+kendi dokümantasyonuna göre](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview)
+"müşteri hizmeti penceresinin dışında WhatsApp kullanıcılarına gönderilebilecek tek mesaj türü şablon
+mesajlardır."
+
+Şablonlar önceden Meta'ya gönderilip onaylanır ve üç kategoriden birine ayrılır:
+
+1. **Marketing (pazarlama)** — kampanya, duyuru, yeniden hedefleme.
+2. **Utility (hizmet amaçlı)** — kullanıcının bir eylemine bağlı takip mesajı: sipariş onayı, randevu
+   hatırlatması, teslimat güncellemesi.
+3. **Authentication (kimlik doğrulama)** — tek kullanımlık şifre (OTP), kimlik doğrulama kodu.
+
+<StatGrid
+  items={[
+    { value: "3", label: "Resmî şablon kategorisi: marketing, utility, authentication", note: "META FOR DEVELOPERS" },
+    { value: "80/sn", label: "Bir telefon numarası için varsayılan gönderim limiti", note: "META FOR DEVELOPERS" },
+    { value: "72 sa", label: "Reklam/sayfa CTA'sından gelen kullanıcı için ücretsiz giriş penceresi", note: "META FOR DEVELOPERS" },
+  ]}
+/>
+
+Kategori seçimi gösteriş değil — Meta, şablonun içeriğini kategoriyle karşılaştırıp doğruluyor;
+yanlış kategoriyle gönderilen bir şablon reddedilebiliyor veya sonradan yeniden sınıflandırılabiliyor.
+
+## Opt-in kuralları: kime, nasıl mesaj gönderebilirsiniz
+
+Bu, çoğu işletmenin atladığı ama Meta'nın en sıkı denetlediği kural: [resmî opt-in
+dokümantasyonuna göre](https://developers.facebook.com/documentation/business-messaging/whatsapp/getting-opt-in)
+işletmeler mesaj göndermeden önce kullanıcıdan açık onay almalı ve bu onay sürecinde **işletmenin
+adını** ve **hangi amaçla WhatsApp üzerinden iletişim kurulacağını** net şekilde belirtmeli. Kabul
+edilen opt-in yöntemleri arasında SMS, web sitesi formu, telefonla IVR akışı ve yüz yüze/kağıt üzerinde
+imzalanan onay sayılıyor.
+
+<Callout type="warn" title="Opt-in bir formalite değil, denetlenen bir kural">
+  Onay almadan gönderilen mesajlar hesabın kısıtlanmasına, hatta askıya alınmasına yol açabilir.
+  Kullanıcının aynı zamanda istediği an belirli mesaj kategorilerinden çıkma (opt-out) hakkı var ve
+  işletme bu talebi net bir şekilde karşılamalı. Hasta veya müşteri verisi işleniyorsa bu süreç
+  [gizlilik politikamızda](/tr/gizlilik-politikasi) anlattığımız KVKK/GDPR ilkeleriyle birlikte
+  planlanmalı — bu yazı hukuki tavsiye vermiyor, yalnızca teknik/operasyonel çerçeveyi anlatıyor.
+</Callout>
+
+## Fiyatlandırma modeli nasıl işliyor
+
+WhatsApp Business Platform'un fiyatlandırması son yıllarda değişti ve değişmeye devam ediyor; bu
+yüzden burada kesin rakam vermek yerine modeli anlatıyoruz. [Meta'nın resmî fiyatlandırma
+sayfasına göre](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing)
+1 Temmuz 2025'te ücretlendirme, "konuşma bazlı fiyatlandırmadan mesaj bazlı fiyatlandırmaya" geçti —
+yani artık 24 saatlik bir konuşma penceresi için değil, **gönderilen her şablon mesaj için** ücret
+alınıyor. Ücret, şablonun kategorisine (marketing, utility, authentication) ve alıcının ülke koduna
+göre değişiyor.
+
+Aynı sayfaya göre bazı mesaj türleri ücretsiz: müşteri hizmeti penceresi içindeki serbest metin
+mesajları, açık pencere içinde gönderilen utility şablonları ve kullanıcının bir reklam veya sayfa
+CTA'sı üzerinden başlattığı konuşmalarda ilk 72 saat içindeki mesajlar. Fiyatlandırma modelinin kendisi
+son bir yılda birkaç kez değiştiği için, projenizin bütçesini planlarken güncel oranları doğrudan
+[Meta'nın fiyatlandırma sayfasından](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing)
+teyit etmenizi öneriyoruz — biz de her yeni proje kapsamında bu adımı birlikte yapıyoruz.
+
+## Kurulum adımları
+
+API'yi kurmak bir "hesap aç, hemen başla" işi değil; [Meta'nın Cloud API başlangıç
+kılavuzuna göre](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started)
+sıra şöyle işliyor:
+
+1. **Meta Geliştirici hesabı ve bir Meta App oluşturmak**, App'e WhatsApp ürününü eklemek.
+2. **WhatsApp Business Hesabı (WABA)** oluşturmak veya mevcut birini App'e bağlamak.
+3. **Telefon numarası eklemek ve doğrulamak** — bu numara artık WhatsApp Business App'te
+   kullanılamaz hâle gelir, tek bir numara iki sistemde aynı anda çalışmaz.
+4. **Erişim token'ı üretmek** ve gelen mesaj/durum bildirimleri için bir **webhook** (callback URL)
+   tanımlamak.
+5. **Göndereceğiniz şablon mesajları hazırlayıp Meta onayına sunmak** — onay süresi işletme
+   doğrulama durumuna göre değişebiliyor.
+6. **Test numarasıyla ilk mesajı göndermek**, ardından gerçek entegrasyona (CRM, sipariş sistemi,
+   chatbot) geçmek.
+
+Bu adımların her biri teknik olarak basit görünse de, WABA'nın hangi işletme hesabına bağlı olacağı,
+hangi numaranın kullanılacağı ve şablonların hangi kategoriyle onaya gönderileceği gibi kararlar
+sonradan değiştirmesi zor kararlar — baştan doğru planlanmalı.
+
+## Yaygın hatalar
+
+1. **Opt-in almadan toplu mesaj göndermek.** En sık görülen ve en ağır sonuçlu hata; hesap kısıtlaması
+   veya askıya almayla sonuçlanabiliyor.
+2. **Yanlış şablon kategorisi seçmek.** Bir hatırlatma mesajını "marketing" olarak göndermek hem
+   onay sürecini uzatıyor hem de maliyeti farklılaştırabiliyor.
+3. **Chatbot'u insana devir mekanizması olmadan kurmak.** Asistan emin olmadığı bir soruda uydurma
+   yanıt verirse, güven kaybı WhatsApp'ın sağladığı hız avantajından daha büyük bir maliyete
+   dönüşüyor.
+4. **Business App numarasıyla API'yi karıştırmak.** Aynı numara iki sistemde birden aktif
+   olamıyor; geçiş öncesi hangi numaranın hangi tarafta kalacağı netleştirilmeli.
+5. **Fiyatlandırmayı eski modele göre bütçelemek.** Model değiştiği için geçen yılın rakamlarıyla
+   bugünün bütçesini kurmak yanıltıcı olabiliyor; güncel oranlar her zaman Meta'nın kendi sayfasından
+   teyit edilmeli.
+
+## Piton Studios'ta bu nasıl kuruluyor
+
+[WhatsApp & Chatbot hizmetimizde](/tr/hizmetler/whatsapp-chatbot) bu süreci uçtan uca yürütüyoruz:
+kapsam ve onay planlaması, içerik/akış tasarımı, Twilio veya Meta Cloud API üzerinden entegrasyon,
+yanıt kalitesi testi ve yayın sonrası izleme. İki somut senaryo üzerinde çalışıyoruz —
+[WhatsApp satış ve sipariş botu](/tr/cozumler/whatsapp-satis-botu) e-ticaret sitelerinde sipariş
+durumu, terk edilmiş sepet hatırlatması ve ürün sorularını otomatikleştirirken,
+[klinikler için WhatsApp randevu botu](/tr/cozumler/klinik-whatsapp-randevu) randevu talebi toplama
+ve hatırlatmayı, hasta verisini KVKK'ya uygun bir çerçevede işleyerek otomatikleştiriyor.
+
+## Sonuç
+
+WhatsApp Business API, WhatsApp Business App'in "büyümüş hâli" değil — farklı bir amaç için
+tasarlanmış, sistemlere bağlanan bir altyapı. Otomatik yanıt, sipariş/randevu bildirimi ve kendi
+verinizden yanıtlayan bir chatbot kurmak istiyorsanız ihtiyacınız olan taraf bu. Ama işin kuralları
+net: 24 saatlik pencerenin dışına çıkan her mesaj onaylı bir şablon gerektiriyor, her mesajın
+arkasında geçerli bir opt-in olmalı ve fiyatlandırma modeli değişken olduğu için bütçe kararını
+her zaman Meta'nın güncel sayfasına bakarak vermek gerekiyor.
+
+Projenizin hangi kapsamda olduğundan emin değilseniz [iletişime geçin](/tr/iletisim) — ihtiyaç
+analizini ve Meta onay sürecini birlikte planlayalım.

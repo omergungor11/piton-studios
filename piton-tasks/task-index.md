@@ -154,6 +154,10 @@
 | TASK-070 | Menü: Hizmetler paneli + öne çıkan çözümler, mobil akordeon ve sıra; iletişim başlığı çevirisi | M | COMPLETED |
 | TASK-071 | SEO denetimi (515 URL tarama + Lighthouse) ve düzeltmeler: ru etiket 404, etiket hreflang, varsayılan OG görseli, liste sayfası JSON-LD, başlık/açıklama uzunlukları, yetim sayfalar, anasayfa erişilebilirlik, llms.txt | L | COMPLETED |
 | TASK-072 | E-posta tasarım sistemi (`src/lib/email`): iletişim bildirimi + 3 dilde otomatik yanıt canlıda, kampanya şablonu, dev önizleme rotası | M | COMPLETED |
+| TASK-073 | Ambalaj Cini referans kartı tutarlılığı + tekrar eden 4 proje özetinin farklılaştırılması (3 dil) | S | COMPLETED |
+| TASK-074 | Dönüşüm takibi: iletişim link tıklamaları + form gönderimi Vercel Analytics olayları, gizlilik metni güncellemesi | S | COMPLETED |
+| TASK-075 | Teklif sihirbazı (fiyatlar sayfası) + iletişim formuna `?brief=` ön doldurma | M | COMPLETED |
+| TASK-076 | Yeni hizmetler için 3 blog yazısı × 3 dil (ERP mi Excel mi, WhatsApp Business API, web sitesi bakımı) | L | COMPLETED |
 | TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
 | TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |
 | TASK-062 | 10 şehir sayfası (`/bolgeler`, `/web-tasarim/[slug]`), ortak `landing-view` | L | COMPLETED |
