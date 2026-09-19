@@ -20,7 +20,7 @@ import {
 } from "@/lib/seo";
 import type { Locale } from "@/lib/site";
 
-const NAMESPACES = ["serviceDetail", "servicesList", "common"] as const;
+const NAMESPACES = ["serviceDetail", "servicesList", "serviceVisuals", "common"] as const;
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;

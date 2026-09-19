@@ -19,6 +19,7 @@ import { WORKS, SERVICES, STORIES } from '../src/lib/data';
 import { FAQ_ITEMS } from '../src/lib/faq';
 import { LOCATIONS } from '../src/lib/locations';
 import { SOLUTIONS } from '../src/lib/solutions';
+import { SERVICE_FLOWS } from '../src/components/service-visuals/flows';
 
 const LOCALES = ['tr', 'en', 'ru'] as const;
 type Locale = (typeof LOCALES)[number];
@@ -111,6 +112,19 @@ function collect(): Row[] {
         status: statusOf(m.solutionItems?.[solution.slug], landingKeys),
       });
     }
+    // Hizmet gorselleri: akis tanimi olan her hizmette alt metin, baslik, aciklama ve tum dugum etiketleri.
+    for (const [slug, flow] of Object.entries(SERVICE_FLOWS)) {
+      const v = m.serviceVisuals?.[slug];
+      const nodeIds = flow.stages.flat();
+      const labelled = nodeIds.filter((id) => typeof v?.flow?.nodes?.[id] === 'string' && v.flow.nodes[id].trim());
+      const base = statusOf(v ? { alt: v.alt, title: v.flow?.title, caption: v.flow?.caption } : undefined, ['alt', 'title', 'caption']);
+      rows.push({
+        locale,
+        namespace: 'serviceVisuals',
+        slug,
+        status: base === 'done' && labelled.length === nodeIds.length ? 'done' : base === 'missing' ? 'missing' : 'draft',
+      });
+    }
     // Vaka calismasi opsiyonel; ama tr'de varsa diger dillerde de olmali.
     for (const work of WORKS) {
       if (!tr.works?.[work.slug]?.caseStudy) continue;
@@ -150,7 +164,7 @@ function main() {
 
     console.log(
       `${locale}: ${byNs('works')}, ${byNs('stories')}, ${byNs('servicesList')}, ${byNs('faqItems')}, ` +
-        `${byNs('locationItems')}, ${byNs('solutionItems')}, ${byNs('caseStudy')}` +
+        `${byNs('locationItems')}, ${byNs('solutionItems')}, ${byNs('caseStudy')}, ${byNs('serviceVisuals')}` +
         (bad.length ? `  → ${bad.length} SORUNLU` : '  ✓')
     );
 

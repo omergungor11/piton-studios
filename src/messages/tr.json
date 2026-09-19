@@ -372,7 +372,8 @@
     "ctaEmailBtn": "E-posta Gönder",
     "ctaWpText": "{title} hizmetiniz hakkında bilgi almak istiyorum.",
     "ctaEmailSubject": "{title} Hakkında Bilgi",
-    "ctaEmailBody": "Merhaba,\n\n{title} hizmetiniz hakkında bilgi almak istiyorum.\n\nTeşekkürler."
+    "ctaEmailBody": "Merhaba,\n\n{title} hizmetiniz hakkında bilgi almak istiyorum.\n\nTeşekkürler.",
+    "flowLabel": "Nasıl çalışır"
   },
   "reel": {
     "eyebrow": "§ 04 · Showreel",
@@ -5204,6 +5205,289 @@
         "3": "Kurulumda önce mevcut hesabı ve varsa ölçüm altyapısını denetleriz; Pixel/Conversions API eksikse veya yanlış kurulmuşsa önce bunu düzeltiriz, yeni kampanyayı bozuk veri üzerine kurmayız. Katalog reklamı için ürün beslemesi hazırlanır, dinamik yeniden hedefleme segmentleri (sepeti terk eden, ürün görüntüleyen, geçmiş müşteri) ayrı ayrı kurulur. İlk iki hafta büyük değişiklik yapmadan veri toplarız, algoritmanın öğrenmesine alan tanırız; sonrasında haftalık optimizasyon döngüsüyle bütçe en çok dönüşüm getiren segmentlere kayar. Yönetim ücreti reklam harcamasından ayrıdır; harcamayı doğrudan Meta'ya siz ödersiniz, biz yalnızca strateji, kreatif üretim ve optimizasyon çalışmamız için ayrı bir yönetim ücreti alırız, harcamadan pay almayız."
       },
       "ctaText": "Kataloğunuz Meta'da otomatik reklama dönsün — e-ticaret Meta reklam yönetimini konuşalım."
+    }
+  },
+  "serviceVisuals": {
+    "web-design": {
+      "alt": "Perspektifte yüzen bir web sitesi tasarımı: tarayıcı penceresi, renk ve tipografi paneli, mobil görünüm ve sayfaya uzanan kırmızı imleç izi.",
+      "flow": {
+        "title": "Stratejiden yayına tek akış",
+        "caption": "Her site, marka ve içerik stratejisiyle başlar; tasarım sistemi hem tasarımı hem geliştirmeyi aynı dile bağlar.",
+        "nodes": {
+          "strategy": "Marka ve içerik stratejisi",
+          "architecture": "Bilgi mimarisi ve wireframe",
+          "designSystem": "Tasarım sistemi",
+          "build": "Duyarlı geliştirme",
+          "cms": "İçerik yönetimi (CMS)",
+          "launch": "Yayın, hız ve SEO kontrolü"
+        }
+      }
+    },
+    "custom-software": {
+      "alt": "Üst üste kurulmuş modül bloklarının ortasında parlayan kırmızı bir çekirdek; süreç haritasından bu çekirdeğe, oradan yönetim paneline ve rapora akan veri hattı.",
+      "flow": {
+        "title": "Süreçten çalışan sisteme",
+        "caption": "Önce iş sürecinizi ve veri modelini netleştiririz; paneller, entegrasyonlar ve raporlar bu sağlam temelin üzerine kurulur.",
+        "nodes": {
+          "process": "Süreç haritalama ve keşif",
+          "dataModel": "Veri modeli",
+          "roles": "Rol bazlı yetkilendirme",
+          "api": "API ve iş mantığı",
+          "integrations": "3. parti entegrasyonlar",
+          "panel": "Özel yönetim paneli",
+          "documents": "Otomatik teklif ve rapor",
+          "handover": "Dokümantasyon ve ekip devri"
+        }
+      }
+    },
+    "web-app": {
+      "alt": "Perspektifte üst üste dizilmiş dashboard ekranları: grafik, tablo ve kartlar; soldaki veritabanı ve entegrasyon modülünden ekranlara akan kırmızı veri çizgileri.",
+      "flow": {
+        "title": "Arayüzden veriye her katman",
+        "caption": "Kullanıcının gördüğü ekranla veritabanı arasındaki her katmanı birlikte tasarlarız; kimlik doğrulama ve izleme ilk günden yerindedir.",
+        "nodes": {
+          "client": "Dashboard arayüzü",
+          "realtime": "Gerçek zamanlı güncellemeler",
+          "auth": "Kimlik doğrulama ve roller",
+          "appLayer": "Uygulama katmanı ve tipli API",
+          "database": "Veritabanı ve veri modeli",
+          "integrations": "Ödeme ve dış servisler",
+          "monitoring": "Hata takibi ve izleme"
+        }
+      }
+    },
+    "mobile-app": {
+      "alt": "Birbirine doğru eğik duran iki telefon ekranı, aralarında senkron ışık yayı ve altta ortak kod tabanını simgeleyen parlayan küp, yanlarda mağaza rozetleri.",
+      "flow": {
+        "title": "Tek kod tabanından iki mağazaya",
+        "caption": "Native gerçekten gerekli mi, önce bunu birlikte netleştiririz; sonra tek kod tabanıyla iOS ve Android'e aynı anda ulaşırız.",
+        "nodes": {
+          "decision": "Native mi PWA mı kararı",
+          "design": "Platforma uygun arayüz",
+          "codebase": "Tek kod tabanı (React Native)",
+          "backend": "Backend, senkron ve bildirim",
+          "ios": "Gerçek cihazda iOS testi",
+          "android": "Gerçek cihazda Android testi",
+          "stores": "App Store ve Google Play yayını"
+        }
+      }
+    },
+    "progressive-web-app": {
+      "alt": "Tarayıcı penceresinden telefonun ana ekranındaki uygulama ikonuna uzanan kırmızı kurulum ışını; altta önbellek bloklarının durduğu çevrimdışı katman.",
+      "flow": {
+        "title": "Tarayıcıdan ana ekrana",
+        "caption": "Service Worker uygulamanızı önbelleğe alır; bağlantı olmadan açılır, ana ekrana eklenir ve mağaza onayı beklemeden güncellenir.",
+        "nodes": {
+          "shell": "Web uygulaması ve kabuk tasarımı",
+          "serviceWorker": "Service Worker",
+          "cache": "Çevrimdışı önbellek",
+          "sync": "Arka plan senkronizasyonu",
+          "push": "Push bildirimleri",
+          "homeScreen": "Ana ekrana ekleme",
+          "updates": "Mağazasız otomatik güncelleme"
+        }
+      }
+    },
+    "ecommerce": {
+      "alt": "Ürün kartlarından alışveriş sepetine, sepetten ödeme terminaline akan kırmızı ışık; terminalin üstünde temassız kart, yanında kargo paketi.",
+      "flow": {
+        "title": "Vitrinden muhasebeye tek akış",
+        "caption": "Ödeme, kargo ve stok ayrı ayrı değil, birbiriyle senkron çalışan tek bir akış olarak kurulur; hepsi tek panelden yönetilir.",
+        "nodes": {
+          "storefront": "Markanıza özel vitrin",
+          "cart": "Sepet ve sipariş",
+          "payment": "Güvenli ödeme tahsilatı",
+          "shipping": "Kargo entegrasyonu",
+          "marketplace": "Pazar yeri senkronizasyonu",
+          "backOffice": "Stok, fatura ve muhasebe paneli"
+        }
+      }
+    },
+    "erp-crm": {
+      "alt": "Ortada parlayan tek veri merkezi ve çevresinde cari, stok, satış ve bayi modüllerini simgeleyen dört panel; her birinden merkeze akan kırmızı veri çizgileri.",
+      "flow": {
+        "title": "Tekliften cariye tek kaynak",
+        "caption": "Bir teklif siparişe, sipariş faturaya kendiliğinden dönüşür; stok, cari ve bayi bilgisi aynı kayıttan beslenir, elle tekrar giriş olmaz.",
+        "nodes": {
+          "quote": "Müşteri ve teklif (CRM)",
+          "order": "Sipariş",
+          "stock": "Stok ve varyant takibi",
+          "production": "Üretim aşamaları",
+          "invoice": "Fatura",
+          "account": "Cari hesap ve tahsilat",
+          "dealer": "Bayi fiyat ve cari takibi"
+        }
+      }
+    },
+    "automation": {
+      "alt": "Konveyör bandında işleme kapısından geçen belgeler, üstte dönen dişli düğümler, soldaki tetikleyici paneli ve sağdaki rapor paneline uzanan kırmızı ışık çizgileri.",
+      "flow": {
+        "title": "Tetikleyiciden rapora otomatik akış",
+        "caption": "Bir olay akışı başlatır; kurallar ve gerektiğinde AI karar verir, aksiyonlar sistemlerinizde çalışır ve her çalıştırma izlenir.",
+        "nodes": {
+          "trigger": "Tetikleyici (webhook, zamanlama)",
+          "rules": "Kurallar ve karar noktaları",
+          "ai": "Gerektiğinde AI adımı",
+          "actions": "Sistemler arası aksiyonlar",
+          "notify": "Onay ve bildirim",
+          "monitoring": "Log, uyarı ve rapor"
+        }
+      }
+    },
+    "whatsapp-chatbot": {
+      "alt": "Sohbet balonlarıyla dolu bir telefon, kendi bilgi tabanından beslenen parlayan bot ve konuşmanın ekip paneline devredildiğini gösteren kırmızı mesaj izi.",
+      "flow": {
+        "title": "Sorudan doğru yanıta ya da doğru kişiye",
+        "caption": "Mesaj WhatsApp'tan veya sitenizden gelir; bot yanıtı kendi içeriğinizden üretir, emin olmadığında konuşmayı ekibinize devreder.",
+        "nodes": {
+          "customer": "WhatsApp'taki müşteri",
+          "visitor": "Sitedeki ziyaretçi",
+          "whatsapp": "WhatsApp Business API",
+          "siteChat": "Site chatbot'u",
+          "bot": "Kendi verinizle yanıt veren asistan",
+          "handoff": "Ekibe insan devri",
+          "crm": "Talep yönlendirme ve bildirim"
+        }
+      }
+    },
+    "ai-integration": {
+      "alt": "Yörünge halkalarıyla parlayan bir model çekirdeği; belge, veritabanı ve vektör dizini kaynaklarından ona akan ışık ve güvenlik kalkanlı bir uygulama penceresi.",
+      "flow": {
+        "title": "Verinizden güvenli bir AI özelliğine",
+        "caption": "Kaynaklarınız RAG ile modele doğru bağlamı taşır; güvenlik katmanları ve izleme, özelliğin üründe güvenilir ve ölçülebilir çalışmasını sağlar.",
+        "nodes": {
+          "sources": "Belgeler ve veri kaynakları",
+          "rag": "RAG: vektör arama ve sıralama",
+          "model": "Kullanım senaryosuna göre model",
+          "tools": "Tool-use ve agent adımları",
+          "guardrails": "Girdi/çıktı güvenlik katmanı",
+          "app": "Ürününüzdeki AI özelliği",
+          "observability": "Değerlendirme ve maliyet izleme"
+        }
+      }
+    },
+    "ai-consulting": {
+      "alt": "Eğik duran bir karar haritası: tek noktadan dallanan kırmızı yollar, işaretli fırsat noktaları, büyüteçli keşif paneli ve kilometre taşlı yol haritası.",
+      "flow": {
+        "title": "Keşiften önceliklendirilmiş yol haritasına",
+        "caption": "İşinizi ve verinizi tanıyarak başlarız; kullanım durumlarını etki, maliyet ve riske göre sıralar, aşamalı bir uygulama planına dönüştürürüz.",
+        "nodes": {
+          "discovery": "İş ve teknoloji ortamını tanıma",
+          "readiness": "Veri, altyapı ve ekip hazırlığı",
+          "useCases": "Kullanım durumu haritası",
+          "vendors": "Tedarikçi ve model karşılaştırması",
+          "prioritize": "Etki, maliyet ve riske göre öncelik",
+          "roadmap": "Aşamalı uygulama yol haritası"
+        }
+      }
+    },
+    "data-engineering": {
+      "alt": "Üst katmanı parlayan, üst üste dizilmiş veri ambarı silindirleri; veri kaynaklarından dönüşüm küpüne akan ışık ve grafikli bir analitik paneli.",
+      "flow": {
+        "title": "Dağınık kaynaklardan güvenilir panolara",
+        "caption": "Veriyi kaynaklarından çeker, test edilmiş dönüşümlerle ambarda modelleriz; tek metrik tanımı tüm panolarda aynı yanıtı verir.",
+        "nodes": {
+          "sources": "Veritabanı, API ve dosya kaynakları",
+          "extract": "Çıkarma ve yükleme (ELT)",
+          "orchestration": "Zamanlama ve izleme",
+          "warehouse": "Veri ambarı",
+          "dbt": "Test edilmiş dbt modelleri",
+          "metrics": "Ortak metrik katmanı",
+          "dashboards": "İş sorularına göre panolar"
+        }
+      }
+    },
+    "cloud-ecosystem": {
+      "alt": "Parlayan bir bulut kütlesinin altında sunucu rafları, koddan CI/CD adımlarıyla buluta uzanan hat ve nabız çizgili bir izleme paneli.",
+      "flow": {
+        "title": "Commit'ten izlenen production'a",
+        "caption": "Kod her commit'te test edilip kontrollü sürümlerle buluta çıkar; altyapı Terraform'da kodlanır, izleme sorunları kullanıcıdan önce bildirir.",
+        "nodes": {
+          "code": "Kod ve commit",
+          "cicd": "CI/CD: test ve preview",
+          "iac": "Terraform ile altyapı (IaC)",
+          "cloud": "Google Cloud servisleri",
+          "vercel": "Vercel frontend dağıtımı",
+          "monitoring": "İzleme ve uyarılar",
+          "runbooks": "Runbook ve dokümantasyon"
+        }
+      }
+    },
+    "google-ads": {
+      "alt": "Anahtar kelime çiplerinden beslenen bir arama sonuç sayfası: tıklanan öne çıkan reklam kartı, açılış sayfasına uzanan kırmızı ışık ve ölçeksiz yükselen bir dönüşüm eğrisi.",
+      "flow": {
+        "title": "Aramadan dönüşüme ölçülebilir yol",
+        "caption": "Kampanya açılmadan önce dönüşüm takibi doğrulanır; teklif ve kreatif kararları gösterime değil, ölçülen gerçek sonuca göre verilir.",
+        "nodes": {
+          "search": "Alıcı niyetli arama",
+          "searchAds": "Search kampanyaları",
+          "pmax": "Performance Max",
+          "landing": "Reklamla uyumlu açılış sayfası",
+          "tracking": "Dönüşüm takibi (GA4, sunucu tarafı)",
+          "optimize": "Haftalık optimizasyon ve kreatif test"
+        }
+      }
+    },
+    "meta-ads": {
+      "alt": "Hedef halkalarına yerleşmiş bir kitle, ortada sosyal akış gösteren bir telefon, yanda video ve carousel kreatif yığını ve dönüşümü simgeleyen parlayan bir küp.",
+      "flow": {
+        "title": "Kitleden dönüşüme tek mantık",
+        "caption": "Kitle, kreatif ve bütçe tek bir dönüşüm hedefine bağlanır; Meta Pixel ve Conversions API doğru kurulmadan reklama bütçe ayrılmaz.",
+        "nodes": {
+          "audience": "Custom ve lookalike kitleler",
+          "retargeting": "Retargeting kitleleri",
+          "creative": "Görsel, video ve carousel kreatif",
+          "feed": "Facebook ve Instagram akışı",
+          "pixel": "Meta Pixel + Conversions API",
+          "iterate": "Kreatif testi ve yenileme"
+        }
+      }
+    },
+    "seo-geo": {
+      "alt": "Bir arama çubuğu, sitenin öne çıktığı sıralama listesi, siteyi kaynak olarak alıntılayan yapay zekâ yanıt kartı, altta tarama ağı ve yapısal veri paneli.",
+      "flow": {
+        "title": "Taramadan yapay zekâ alıntısına",
+        "caption": "Önce arama motorlarının siteyi sorunsuz taraması sağlanır; ardından yapısal veri ve içerik hem sıralama hem dil modeli alıntısı için kurgulanır.",
+        "nodes": {
+          "audit": "Teknik SEO denetimi",
+          "crawl": "Taranabilirlik ve dizinleme",
+          "vitals": "Core Web Vitals",
+          "schema": "Schema markup ve yapısal veri",
+          "content": "Niyete dayalı içerik kümeleri",
+          "ranking": "Arama sonuçlarında sıralama",
+          "citation": "Yapay zekâ yanıtlarında alıntı"
+        }
+      }
+    },
+    "maintenance-support": {
+      "alt": "Nabız çizgisi atan bir izleme ekranının önünde onay işaretli kırmızı bir kalkan; solda üst üste yedek katmanları, sağda ilerleyen bir güncelleme paneli.",
+      "flow": {
+        "title": "Yayından sonra da ayakta",
+        "caption": "İzleme sorunu kullanıcıdan önce yakalar; yamalar, güncellemeler ve küçük talepler planlı bir döngüde yürür, her ay kısa bir raporla paylaşılır.",
+        "nodes": {
+          "monitoring": "Uptime ve hata izleme",
+          "patches": "Güvenlik yamaları",
+          "deps": "Bağımlılık güncellemeleri",
+          "backup": "Otomatik yedekleme",
+          "requests": "Küçük değişiklik talepleri",
+          "report": "Aylık rapor ve değerlendirme"
+        }
+      }
+    },
+    "how-to-do": {
+      "alt": "Sunum ekranının önünde dizüstü bilgisayarların durduğu bir workshop masası; masada oturan ekip, ekranı gösteren bir mentor ve yanda işaretli bir playbook kartı.",
+      "flow": {
+        "title": "İhtiyaç analizinden bağımsız ekibe",
+        "caption": "Müfredat ekibin gerçek projesine ve araçlarına göre hazırlanır; uygulamalı oturumlar ve yazılı playbook'larla ekip bize bağımlı kalmadan ilerler.",
+        "nodes": {
+          "needs": "İhtiyaç ve beceri analizi",
+          "curriculum": "Stack'e özel müfredat",
+          "workshop": "Uygulamalı workshop",
+          "mentoring": "1:1 mentorluk",
+          "playbook": "Ekip playbook'ları ve dokümantasyon",
+          "independent": "Bağımsız ve yetkin ekip"
+        }
+      }
     }
   }
 }

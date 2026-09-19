@@ -8,6 +8,9 @@ import PageShell from '@/components/page-shell';
 import SERVICE_ICONS from '@/components/service-icons';
 import PartnerBadges from '@/components/partner-badges';
 import RelatedSolutions, { type RelatedSolution } from '@/components/related-solutions';
+import { SERVICE_ART, SERVICE_FLOWS, ServiceFlow } from '@/components/service-visuals';
+
+type ServiceVisual = { alt: string; flow: { title: string; caption: string; nodes: Record<string, string> } };
 
 interface Props {
   service: Service;
@@ -17,6 +20,7 @@ interface Props {
 export default function ServiceDetail({ service, relatedSolutions = [] }: Props) {
   const t = useTranslations('serviceDetail');
   const ts = useTranslations('servicesList');
+  const tv = useTranslations('serviceVisuals');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const title = ts(`${service.slug}.title`);
@@ -32,6 +36,11 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
   const faq = ts.raw(`${service.slug}.faq`) as { q: string; a: string }[];
   const stats = ts.raw(`${service.slug}.stats`) as { value: string; label: string }[];
 
+  // Hero sahnesi + akis diyagrami (plan: piton-plans/service-visuals-plan.md). Metni olmayan hizmet eski duzende kalir.
+  const visual = tv.has(service.slug) ? (tv.raw(service.slug) as ServiceVisual) : null;
+  const Art = visual ? SERVICE_ART[service.slug] : undefined;
+  const flowDef = visual ? SERVICE_FLOWS[service.slug] : undefined;
+
   const relatedServices = service.relatedServices
     .map((slug) => SERVICES.find((s) => s.slug === slug))
     .filter((s): s is Service => s !== undefined);
@@ -44,19 +53,27 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
     <PageShell>
 
       {/* ── A. HERO ─────────────────────────────────────────── */}
-      <section className="sd-hero">
+      <section className={Art ? 'sd-hero has-art' : 'sd-hero'}>
+        <div className="sd-hero-text">
         <div className="sd-hero-eyebrow">
           <span className="sd-hero-accent-line" aria-hidden="true" />
           <span className="sd-hero-n">[{service.n}]</span>
           <span className="sd-hero-cat">{service.cat}</span>
         </div>
-        {SERVICE_ICONS[service.slug] && (
+        {!Art && SERVICE_ICONS[service.slug] && (
           <div className="sd-hero-icon">
             {SERVICE_ICONS[service.slug]}
           </div>
         )}
         <h1 className="sd-hero-title">{title}</h1>
         <p className="sd-hero-desc">{longDesc}</p>
+        </div>
+
+        {Art && visual && (
+          <div className="sd-hero-art sv-stage">
+            <Art label={visual.alt} />
+          </div>
+        )}
 
         {stats.length > 0 && (
           <div className="sd-stats">
@@ -105,6 +122,17 @@ export default function ServiceDetail({ service, relatedSolutions = [] }: Props)
             ))}
           </div>
         </section>
+      )}
+
+      {/* ── B2. NASIL CALISIR (akis diyagrami) ───────────────── */}
+      {flowDef && visual && (
+        <ServiceFlow
+          def={flowDef}
+          label={t('flowLabel')}
+          title={visual.flow.title}
+          caption={visual.flow.caption}
+          nodes={visual.flow.nodes}
+        />
       )}
 
       {/* ── C. PROCESS TIMELINE ─────────────────────────────── */}

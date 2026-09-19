@@ -373,7 +373,8 @@
     "ctaEmailBtn": "Send Email",
     "ctaWpText": "I would like to learn more about your {title} service.",
     "ctaEmailSubject": "Inquiry about {title}",
-    "ctaEmailBody": "Hello,\n\nI would like to learn more about your {title} service.\n\nThank you."
+    "ctaEmailBody": "Hello,\n\nI would like to learn more about your {title} service.\n\nThank you.",
+    "flowLabel": "How it works"
   },
   "projectsPage": {
     "title": "Projects",
@@ -5255,6 +5256,289 @@
         "3": "We start by auditing your existing account and any measurement infrastructure; if Pixel/Conversions API is missing or misconfigured, we fix that before building anything new on top of broken data. For catalog ads we prepare the product feed, and dynamic retargeting segments — cart abandoners, product viewers, past customers — are built separately. For the first two weeks we don't make major changes, giving the algorithm room to learn; after that, a weekly optimization cycle shifts budget toward whichever segment converts best. Our management fee is separate from ad spend — you pay Meta directly for that."
       },
       "ctaText": "Turn your catalog into automatic Meta ads — let's talk about Meta ads management for your store."
+    }
+  },
+  "serviceVisuals": {
+    "web-design": {
+      "alt": "A website design floating in perspective: a browser window, a colour and type panel, a mobile view and a red cursor trail reaching the page.",
+      "flow": {
+        "title": "One flow from strategy to launch",
+        "caption": "Every site starts with brand and content strategy; the design system ties design and development to the same language.",
+        "nodes": {
+          "strategy": "Brand and content strategy",
+          "architecture": "Information architecture and wireframes",
+          "designSystem": "Design system",
+          "build": "Responsive development",
+          "cms": "Content management (CMS)",
+          "launch": "Launch, speed and SEO checks"
+        }
+      }
+    },
+    "custom-software": {
+      "alt": "A glowing red core at the centre of stacked module blocks, with a data line flowing from a process map into the core and on to an admin panel and report.",
+      "flow": {
+        "title": "From process to a working system",
+        "caption": "We first pin down your business process and data model; panels, integrations and reports are then built on that solid foundation.",
+        "nodes": {
+          "process": "Process mapping and discovery",
+          "dataModel": "Data model",
+          "roles": "Role-based access",
+          "api": "API and business logic",
+          "integrations": "Third-party integrations",
+          "panel": "Custom admin panel",
+          "documents": "Automated quotes and reports",
+          "handover": "Documentation and team handover"
+        }
+      }
+    },
+    "web-app": {
+      "alt": "Dashboard screens layered in perspective with a chart, table and cards, and red data lines flowing into them from a database and an integration module on the left.",
+      "flow": {
+        "title": "Every layer, from interface to data",
+        "caption": "We design every layer between the screen your users see and the database together; authentication and monitoring are in place from day one.",
+        "nodes": {
+          "client": "Dashboard interface",
+          "realtime": "Real-time updates",
+          "auth": "Authentication and roles",
+          "appLayer": "Application layer and typed API",
+          "database": "Database and data model",
+          "integrations": "Payments and external services",
+          "monitoring": "Error tracking and monitoring"
+        }
+      }
+    },
+    "mobile-app": {
+      "alt": "Two phone screens tilted towards each other, linked by an arc of syncing light, with a glowing cube for the shared codebase below and store badges at the sides.",
+      "flow": {
+        "title": "One codebase, two app stores",
+        "caption": "First we decide together whether native is really needed; then a single codebase reaches iOS and Android at the same time.",
+        "nodes": {
+          "decision": "Native or PWA decision",
+          "design": "Platform-appropriate interface",
+          "codebase": "Single codebase (React Native)",
+          "backend": "Backend, sync and notifications",
+          "ios": "iOS testing on real devices",
+          "android": "Android testing on real devices",
+          "stores": "App Store and Google Play release"
+        }
+      }
+    },
+    "progressive-web-app": {
+      "alt": "A red install beam reaching from a browser window to an app icon on a phone's home screen, above an offline layer holding cache blocks.",
+      "flow": {
+        "title": "From the browser to the home screen",
+        "caption": "A Service Worker caches your app so it opens without a connection, installs to the home screen and updates without waiting for store approval.",
+        "nodes": {
+          "shell": "Web app and app shell design",
+          "serviceWorker": "Service Worker",
+          "cache": "Offline cache",
+          "sync": "Background sync",
+          "push": "Push notifications",
+          "homeScreen": "Add to home screen",
+          "updates": "Automatic updates, no store"
+        }
+      }
+    },
+    "ecommerce": {
+      "alt": "Red light flowing from product cards into a shopping cart and on to a payment terminal, with a contactless card above the terminal and a parcel beside it.",
+      "flow": {
+        "title": "One flow from storefront to accounts",
+        "caption": "Payments, shipping and stock are built as one synchronised flow rather than separate pieces, all managed from a single panel.",
+        "nodes": {
+          "storefront": "Storefront built for your brand",
+          "cart": "Cart and checkout",
+          "payment": "Secure payment collection",
+          "shipping": "Shipping integration",
+          "marketplace": "Marketplace sync",
+          "backOffice": "Stock, invoicing and accounts panel"
+        }
+      }
+    },
+    "erp-crm": {
+      "alt": "A glowing central data hub surrounded by four panels for accounts, stock, sales and dealer modules, each sending red data lines into the centre.",
+      "flow": {
+        "title": "One source from quote to account",
+        "caption": "A quote becomes an order and an order becomes an invoice automatically; stock, account and dealer data come from the same record, with no re-entry.",
+        "nodes": {
+          "quote": "Customers and quotes (CRM)",
+          "order": "Order",
+          "stock": "Stock and variant tracking",
+          "production": "Production stages",
+          "invoice": "Invoice",
+          "account": "Account balance and collections",
+          "dealer": "Dealer pricing and accounts"
+        }
+      }
+    },
+    "automation": {
+      "alt": "Documents moving along a conveyor through a processing gate, turning gears above, a trigger panel on the left and red light lines reaching a report panel on the right.",
+      "flow": {
+        "title": "From trigger to report, automatically",
+        "caption": "An event starts the flow; rules, and AI where it helps, make the decisions, actions run across your systems and every run is monitored.",
+        "nodes": {
+          "trigger": "Trigger (webhook, schedule)",
+          "rules": "Rules and decision points",
+          "ai": "AI step where needed",
+          "actions": "Actions across systems",
+          "notify": "Approvals and notifications",
+          "monitoring": "Logs, alerts and reports"
+        }
+      }
+    },
+    "whatsapp-chatbot": {
+      "alt": "A phone full of chat bubbles, a glowing bot fed by its own knowledge base and a red message trail showing the conversation handed over to a team panel.",
+      "flow": {
+        "title": "From question to the right answer or person",
+        "caption": "Messages arrive via WhatsApp or your site; the bot answers from your own content and hands the conversation to your team when it is unsure.",
+        "nodes": {
+          "customer": "Customer on WhatsApp",
+          "visitor": "Website visitor",
+          "whatsapp": "WhatsApp Business API",
+          "siteChat": "Website chatbot",
+          "bot": "Assistant answering from your data",
+          "handoff": "Human handoff to your team",
+          "crm": "Request routing and notifications"
+        }
+      }
+    },
+    "ai-integration": {
+      "alt": "A glowing model core with orbit rings, light flowing in from document, database and vector index sources, and an application window guarded by a shield.",
+      "flow": {
+        "title": "From your data to a safe AI feature",
+        "caption": "Your sources feed the model the right context through RAG; guardrails and monitoring keep the feature reliable and measurable in production.",
+        "nodes": {
+          "sources": "Documents and data sources",
+          "rag": "RAG: vector search and reranking",
+          "model": "Model chosen for the use case",
+          "tools": "Tool use and agent steps",
+          "guardrails": "Input and output guardrails",
+          "app": "AI feature in your product",
+          "observability": "Evals, cost and latency tracking"
+        }
+      }
+    },
+    "ai-consulting": {
+      "alt": "A tilted decision map: red paths branching from a single point, marked opportunity pins, a discovery panel with a magnifier and a roadmap with milestones.",
+      "flow": {
+        "title": "From discovery to a prioritised roadmap",
+        "caption": "We start by understanding your business and data, rank use cases by impact, cost and risk, and turn them into a phased implementation plan.",
+        "nodes": {
+          "discovery": "Understanding your business and stack",
+          "readiness": "Data, infrastructure, team readiness",
+          "useCases": "Use case mapping",
+          "vendors": "Vendor and model comparison",
+          "prioritize": "Prioritised by impact, cost and risk",
+          "roadmap": "Phased implementation roadmap"
+        }
+      }
+    },
+    "data-engineering": {
+      "alt": "Stacked data warehouse cylinders with a glowing top layer, light flowing from data sources into a transformation cube, and an analytics panel with charts.",
+      "flow": {
+        "title": "From scattered sources to trusted dashboards",
+        "caption": "We pull data from its sources and model it in the warehouse with tested transformations, so one metric definition gives the same answer everywhere.",
+        "nodes": {
+          "sources": "Databases, APIs and files",
+          "extract": "Extract and load (ELT)",
+          "orchestration": "Scheduling and monitoring",
+          "warehouse": "Data warehouse",
+          "dbt": "Tested dbt models",
+          "metrics": "Shared metrics layer",
+          "dashboards": "Dashboards built on real questions"
+        }
+      }
+    },
+    "cloud-ecosystem": {
+      "alt": "Server racks beneath a glowing cloud mass, a pipeline running from code through CI/CD steps into the cloud, and a monitoring panel with a pulse line.",
+      "flow": {
+        "title": "From commit to monitored production",
+        "caption": "Every commit is tested and shipped to the cloud through controlled releases; infrastructure lives in Terraform and monitoring flags issues before users do.",
+        "nodes": {
+          "code": "Code and commits",
+          "cicd": "CI/CD: tests and previews",
+          "iac": "Infrastructure as code (Terraform)",
+          "cloud": "Google Cloud services",
+          "vercel": "Vercel frontend hosting",
+          "monitoring": "Monitoring and alerts",
+          "runbooks": "Runbooks and documentation"
+        }
+      }
+    },
+    "google-ads": {
+      "alt": "A search results page fed by keyword chips: a clicked featured ad card, a red beam reaching the landing page and a scale-less conversion curve climbing upward.",
+      "flow": {
+        "title": "A measurable path from search to sale",
+        "caption": "Conversion tracking is verified before any campaign goes live; bidding and creative decisions follow measured results, not impressions.",
+        "nodes": {
+          "search": "High-intent search",
+          "searchAds": "Search campaigns",
+          "pmax": "Performance Max",
+          "landing": "Landing page matched to the ad",
+          "tracking": "Conversion tracking (GA4, server-side)",
+          "optimize": "Weekly optimisation and ad testing"
+        }
+      }
+    },
+    "meta-ads": {
+      "alt": "An audience placed on target rings, a phone showing a social feed in the centre, a stack of video and carousel creatives and a glowing cube for the conversion.",
+      "flow": {
+        "title": "One logic from audience to conversion",
+        "caption": "Audience, creative and budget all serve a single conversion goal; no budget goes to ads until Meta Pixel and the Conversions API are set up correctly.",
+        "nodes": {
+          "audience": "Custom and lookalike audiences",
+          "retargeting": "Retargeting audiences",
+          "creative": "Image, video and carousel creative",
+          "feed": "Facebook and Instagram feeds",
+          "pixel": "Meta Pixel + Conversions API",
+          "iterate": "Creative testing and refresh"
+        }
+      }
+    },
+    "seo-geo": {
+      "alt": "A search bar, a ranking list with the site on top, an AI answer card citing the site as a source, plus a crawl network and a structured data panel.",
+      "flow": {
+        "title": "From crawling to AI citations",
+        "caption": "First we make sure search engines crawl the site cleanly; then structured data and content are shaped for both rankings and citations by language models.",
+        "nodes": {
+          "audit": "Technical SEO audit",
+          "crawl": "Crawlability and indexing",
+          "vitals": "Core Web Vitals",
+          "schema": "Schema markup and structured data",
+          "content": "Intent-based topic clusters",
+          "ranking": "Rankings in search results",
+          "citation": "Citations in AI answers"
+        }
+      }
+    },
+    "maintenance-support": {
+      "alt": "A red shield with a check mark in front of a monitoring screen with a pulse line; stacked backup layers on the left and an update panel in progress on the right.",
+      "flow": {
+        "title": "Still running long after launch",
+        "caption": "Monitoring catches issues before users do; patches, updates and small requests run on a planned cycle and are shared in a short monthly report.",
+        "nodes": {
+          "monitoring": "Uptime and error monitoring",
+          "patches": "Security patches",
+          "deps": "Dependency updates",
+          "backup": "Automated backups",
+          "requests": "Small change requests",
+          "report": "Monthly report and review"
+        }
+      }
+    },
+    "how-to-do": {
+      "alt": "A workshop table with laptops in front of a presentation screen; a team seated at the table, a mentor pointing at the screen and a checked playbook card beside it.",
+      "flow": {
+        "title": "From needs analysis to an independent team",
+        "caption": "The curriculum is built around your team's real project and tools; hands-on sessions and written playbooks let the team move forward without depending on us.",
+        "nodes": {
+          "needs": "Needs and skills analysis",
+          "curriculum": "Curriculum tailored to your stack",
+          "workshop": "Hands-on workshop",
+          "mentoring": "1:1 mentoring",
+          "playbook": "Team playbooks and documentation",
+          "independent": "An independent, capable team"
+        }
+      }
     }
   }
 }
