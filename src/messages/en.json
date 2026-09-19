@@ -9,19 +9,19 @@
       "description": "Design, code & AI under one roof. We design your brand, build your product and accelerate your growth."
     },
     "projects": {
-      "title": "Projects",
+      "title": "Web, Software and AI Projects",
       "description": "A selection of the work we have delivered across web, mobile, AI and automation — each with a measurable business outcome."
     },
     "services": {
-      "title": "Services",
+      "title": "Web, Software and Digital Growth Services",
       "description": "Web design, product development, AI integration and growth — end-to-end digital services."
     },
     "about": {
-      "title": "About",
+      "title": "About Us: Independent Digital Studio",
       "description": "Piton Studios is an independent digital studio bringing design, engineering and AI together in one team."
     },
     "contact": {
-      "title": "Contact",
+      "title": "Contact: Let's Talk About Your Project",
       "description": "Let's talk about your project. Get in touch with Piton Studios — we usually reply within 24 hours."
     },
     "faq": {
@@ -29,9 +29,11 @@
       "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton Studios."
     },
     "pricing": {
-      "title": "Pricing",
+      "title": "Pricing: Website and Software Packages",
       "description": "Transparent starting bands for websites, e-commerce, custom web apps and AI automation: packages from €200, what each includes, and the factors that drive the price."
-    }
+    },
+    "projectTitle": "{title}: Case Study",
+    "projectDescSuffix": "Scope, technology and process details in this Piton Studios case study."
   },
   "nav": {
     "services": "Services",
@@ -49,7 +51,7 @@
     "pricing": "Pricing"
   },
   "blog": {
-    "metaTitle": "Blog",
+    "metaTitle": "Blog: Web, SEO and AI Guides",
     "metaDescription": "Writing on web design, development and AI — from the Piton Studios team.",
     "title": "Blog",
     "subtitle": "Notes on design, code and artificial intelligence.",

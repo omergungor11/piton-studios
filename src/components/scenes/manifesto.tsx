@@ -58,7 +58,7 @@ export default function ManifestoScene() {
             <div key={i} className="manifesto-card">
               <div className="manifesto-card-icon">{ICONS[i]}</div>
               <div>
-                <h4 className="manifesto-card-title">{h.title}</h4>
+                <h3 className="manifesto-card-title">{h.title}</h3>
                 <p className="manifesto-card-desc">{h.desc}</p>
               </div>
             </div>

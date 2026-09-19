@@ -70,7 +70,8 @@ export function getProjectBySlug(slug: string): Project | undefined {
 }
 
 export function getAllProjectSlugs(): string[] {
-  return [...WORKS.map((w) => w.slug), ...STORIES.map((s) => s.slug)];
+  // aydin-transfer hem WORKS hem STORIES'te; tekrar sitemap'e cift girdi yaziyordu.
+  return [...new Set([...WORKS.map((w) => w.slug), ...STORIES.map((s) => s.slug)])];
 }
 
 export function getAllProjects(): Project[] {
@@ -81,7 +82,8 @@ export function getAllProjects(): Project[] {
 }
 
 export function getAdjacentProjects(slug: string): { prev: Project | null; next: Project | null } {
-  const all = WORKS.map((w) => ({ ...w, type: "work" as const }));
+  // Hikayeler de donguye dahil: aksi halde hicbir sayfadan link almiyorlardi (yetim sayfa).
+  const all = getAllProjects().filter((p, i, list) => list.findIndex((x) => x.slug === p.slug) === i);
   const idx = all.findIndex((p) => p.slug === slug);
   if (idx === -1) return { prev: null, next: null };
   return {

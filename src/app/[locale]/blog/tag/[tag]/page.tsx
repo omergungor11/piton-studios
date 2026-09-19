@@ -13,7 +13,7 @@ import {
   slugifyTag,
   formatPostDate,
 } from '@/lib/blog';
-import { buildPageMetadata, absoluteUrl, breadcrumbJsonLd } from '@/lib/seo';
+import { buildPageMetadata, absoluteUrl, breadcrumbJsonLd, clampText } from '@/lib/seo';
 import type { Locale } from '@/lib/site';
 
 const NAMESPACES = ['blog', 'common'] as const;
@@ -35,12 +35,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!label) return { title: 'Not Found' };
 
   const t = await getTranslations({ locale, namespace: 'blog' });
+  const subtitle = t('tagPageSubtitle', { tag: label });
+  const titles = getPostsByTag(locale as Locale, tag).map((post) => post.title);
 
   return buildPageMetadata({
     locale: locale as Locale,
     href: { pathname: '/blog/tag/[tag]', params: { tag } },
-    title: t('tagPageSubtitle', { tag: label }),
-    description: t('tagPageSubtitle', { tag: label }),
+    title: subtitle,
+    description: clampText(`${subtitle}: ${titles.join(' · ')}`),
+    // Etiketler dile ozgu; ayni slug diger dillerde yok, hreflang yanlis sayfalari gosteriyordu.
+    selfOnlyAlternates: true,
   });
 }
 

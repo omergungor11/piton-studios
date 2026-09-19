@@ -37,8 +37,8 @@ export default function ProcessScene() {
 
       <ol className="prc-grid">
         {STEP_KEYS.map((k, i) => (
-          <Reveal key={k} variant="fadeUp" delay={0.1 + i * 0.07} className="prc-cell">
-            <li className="prc-step" data-cursor="hover">
+          <Reveal key={k} as="li" variant="fadeUp" delay={0.1 + i * 0.07} className="prc-cell">
+            <div className="prc-step" data-cursor="hover">
               <span className="prc-step-ghost" aria-hidden="true">
                 {String(i + 1).padStart(2, '0')}
               </span>
@@ -48,12 +48,12 @@ export default function ProcessScene() {
                   {STEP_ICONS[i]}
                 </span>
               </div>
-              <h4 className="prc-step-title">{t(`steps.${k}.title`)}</h4>
+              <h3 className="prc-step-title">{t(`steps.${k}.title`)}</h3>
               <p className="prc-step-desc">{t(`steps.${k}.desc`)}</p>
               {i < STEP_KEYS.length - 1 && (
                 <span className="prc-step-link" aria-hidden="true" />
               )}
-            </li>
+            </div>
           </Reveal>
         ))}
       </ol>

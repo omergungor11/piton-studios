@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Not Found' };
 
   const base = buildPageMetadata({
+    ownOgImage: true,
     locale: locale as Locale,
     href: { pathname: '/blog/[slug]', params: { slug } },
     title: post.title,

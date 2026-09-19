@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'pageMeta' });
 
   return buildPageMetadata({
+    ownOgImage: true,
     locale: locale as Locale,
     href: '/faq',
     title: t('faq.title'),

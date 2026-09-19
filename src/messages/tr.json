@@ -9,19 +9,19 @@
       "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
     },
     "projects": {
-      "title": "Projeler",
+      "title": "Web, Yazılım ve AI Projeleri",
       "description": "Web, mobil, yapay zeka ve otomasyon alanında teslim ettiğimiz projelerden seçki — her biri ölçülebilir bir iş sonucuyla."
     },
     "services": {
-      "title": "Hizmetler",
+      "title": "Web, Yazılım ve Dijital Büyüme Hizmetleri",
       "description": "Web tasarım, ürün geliştirme, yapay zeka entegrasyonu ve büyüme — uçtan uca dijital hizmetler."
     },
     "about": {
-      "title": "Hakkında",
+      "title": "Hakkımızda: Bağımsız Dijital Stüdyo",
       "description": "Piton Studios; tasarım, yazılım ve yapay zekayı tek ekipte birleştiren bağımsız bir dijital stüdyo."
     },
     "contact": {
-      "title": "İletişim",
+      "title": "İletişim: Projenizi Konuşalım",
       "description": "Projenizi konuşalım. Piton Studios ile iletişime geçin — genelde 24 saat içinde dönüş yapıyoruz."
     },
     "faq": {
@@ -29,9 +29,11 @@
       "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
     },
     "pricing": {
-      "title": "Fiyatlar",
-      "description": "Web sitesi, e-ticaret, özel web uygulaması ve AI otomasyon için şeffaf başlangıç bantları: 10.000 TL'den başlayan paketler, her pakette neler dahil ve fiyatı etkileyen faktörler."
-    }
+      "title": "Fiyatlar: Web Sitesi ve Yazılım Paketleri",
+      "description": "Web sitesi, e-ticaret, özel web uygulaması ve AI otomasyon için şeffaf başlangıç bantları: 10.000 TL'den başlayan paketler ve fiyatı etkileyen faktörler."
+    },
+    "projectTitle": "{title}: Proje İncelemesi",
+    "projectDescSuffix": "Kapsam, teknoloji ve süreç detaylarıyla Piton Studios proje incelemesi."
   },
   "nav": {
     "services": "Hizmetler",
@@ -48,7 +50,7 @@
     "pricing": "Fiyatlar"
   },
   "blog": {
-    "metaTitle": "Blog",
+    "metaTitle": "Blog: Web, SEO ve Yapay Zeka Rehberleri",
     "metaDescription": "Web tasarım, geliştirme ve yapay zekâ üzerine yazılar — Piton Studios ekibinden.",
     "title": "Blog",
     "subtitle": "Tasarım, kod ve yapay zekâ üzerine notlar.",

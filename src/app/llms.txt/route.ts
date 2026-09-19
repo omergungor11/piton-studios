@@ -10,6 +10,8 @@
  */
 import trMessages from '@/messages/tr.json';
 import { SERVICES } from '@/lib/data';
+import { SECTORS } from '@/lib/sectors';
+import { SOLUTIONS } from '@/lib/solutions';
 import { getAllPosts } from '@/lib/blog';
 import { FAQ_ITEMS, FAQ_COUNT, FAQ_UPDATED } from '@/lib/faq';
 import { readFaqEntries } from '@/lib/faq-content';
@@ -21,6 +23,8 @@ export const dynamic = 'force-static';
 /** JSON import'u kesin tiplenir; slug ile dinamik erisim icin gevsetiliyor. */
 const MESSAGES = trMessages as unknown as {
   servicesList?: Record<string, { title?: string; desc?: string } | undefined>;
+  sectorItems?: Record<string, { title?: string } | undefined>;
+  solutionItems?: Record<string, { title?: string } | undefined>;
 };
 
 const INTRO =
@@ -47,7 +51,25 @@ export async function GET() {
   for (const service of SERVICES) {
     const title = MESSAGES.servicesList?.[service.slug]?.title ?? service.title;
     const url = absoluteUrl('tr', { pathname: '/services/[slug]', params: { slug: service.slug } });
-    lines.push(`- ${title}: ${url}`);
+    lines.push(`- [${title}](${url})`);
+  }
+  lines.push('');
+
+  lines.push('## Sektorler');
+  lines.push('');
+  for (const sector of SECTORS) {
+    const title = MESSAGES.sectorItems?.[sector.slug]?.title ?? sector.slug;
+    const url = absoluteUrl('tr', { pathname: '/sectors/[slug]', params: { slug: sector.slug } });
+    lines.push(`- [${title}](${url})`);
+  }
+  lines.push('');
+
+  lines.push('## Cozumler');
+  lines.push('');
+  for (const solution of SOLUTIONS) {
+    const title = MESSAGES.solutionItems?.[solution.slug]?.title ?? solution.slug;
+    const url = absoluteUrl('tr', { pathname: '/solutions/[slug]', params: { slug: solution.slug } });
+    lines.push(`- [${title}](${url})`);
   }
   lines.push('');
 
@@ -58,7 +80,7 @@ export async function GET() {
   for (const item of FAQ_ITEMS) {
     const entry = entries.get(item.id);
     const question = entry ? entry.q : item.id;
-    lines.push(`- ${question}: ${absoluteUrl('tr', '/faq')}#faq-${item.id}`);
+    lines.push(`- [${question}](${absoluteUrl('tr', '/faq')}#faq-${item.id})`);
   }
   lines.push('');
 
@@ -66,15 +88,15 @@ export async function GET() {
   lines.push('');
   for (const post of getAllPosts('tr')) {
     const url = absoluteUrl('tr', { pathname: '/blog/[slug]', params: { slug: post.slug } });
-    lines.push(`- ${post.title} (${post.date.slice(0, 10)}): ${url}`);
+    lines.push(`- [${post.title}](${url}) (${post.date.slice(0, 10)})`);
   }
   lines.push('');
 
   lines.push('## Iletisim');
   lines.push('');
-  lines.push(`E-posta: ${SITE.email}`);
-  lines.push(`Iletisim formu: ${absoluteUrl('tr', '/contact')}`);
-  for (const link of SITE.social) lines.push(`Sosyal: ${link}`);
+  lines.push(`- [E-posta: ${SITE.email}](mailto:${SITE.email})`);
+  lines.push(`- [Iletisim formu](${absoluteUrl('tr', '/contact')})`);
+  for (const link of SITE.social) lines.push(`- [Sosyal](${link})`);
   lines.push('');
 
   return new Response(lines.join('\n'), {

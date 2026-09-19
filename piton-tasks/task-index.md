@@ -152,6 +152,8 @@
 | TASK-068 | Çözümler: SEO ağırlıklı 3 çözüm kaldırıldı, yeni hizmetlere dayalı benzersiz çözümler × 3 dil | L | COMPLETED |
 | TASK-069 | Yerel URL mimarisi: slugs.ts, navigation sarmalayıcıları, ru segmentleri, otomatik yönlendirmeler, iç link dönüşümü | L | COMPLETED |
 | TASK-070 | Menü: Hizmetler paneli + öne çıkan çözümler, mobil akordeon ve sıra; iletişim başlığı çevirisi | M | COMPLETED |
+| TASK-071 | SEO denetimi (515 URL tarama + Lighthouse) ve düzeltmeler: ru etiket 404, etiket hreflang, varsayılan OG görseli, liste sayfası JSON-LD, başlık/açıklama uzunlukları, yetim sayfalar, anasayfa erişilebilirlik, llms.txt | L | COMPLETED |
+| TASK-072 | E-posta tasarım sistemi (`src/lib/email`): iletişim bildirimi + 3 dilde otomatik yanıt canlıda, kampanya şablonu, dev önizleme rotası | M | COMPLETED |
 | TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
 | TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |
 | TASK-062 | 10 şehir sayfası (`/bolgeler`, `/web-tasarim/[slug]`), ortak `landing-view` | L | COMPLETED |
