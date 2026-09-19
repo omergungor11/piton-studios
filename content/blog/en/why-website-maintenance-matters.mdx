@@ -1,0 +1,197 @@
+---
+title: "Why website maintenance matters"
+description: "What happens when a site goes unmaintained: security debt, expired SSL, broken forms, SEO drift — plus a maintenance checklist and what a good agreement covers."
+date: 2026-09-19
+tags: ["maintenance", "security", "web design"]
+author: "Piton Studios"
+draft: false
+translationKey: website-maintenance
+sources:
+  - title: "Patchstack — State of WordPress Security in 2026"
+    url: "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/"
+  - title: "Google Search Central — Understanding Google Page Experience"
+    url: "https://developers.google.com/search/docs/appearance/page-experience"
+faq:
+  - q: "Do you provide support after launch?"
+    a: "Yes. Bug fixes are covered under warranty for a defined period after delivery; scope and length are written into the contract up front. Once the warranty period ends, ongoing support moves to a maintenance plan."
+  - q: "What happens with backups and outages?"
+    a: "We choose hosting platforms that offer daily automated backups and managed infrastructure; recovery largely relies on those providers' own infrastructure guarantees. For critical projects, a disaster-recovery procedure is defined separately during the architecture phase."
+  - q: "How does your maintenance plan work?"
+    a: "A maintenance plan is a monthly agreement covering regular updates, monitoring, and small change requests; scope is clarified during the proposal based on the project's size and how often support is needed. We don't run a fixed, one-size-fits-all price list."
+  - q: "How quickly do you respond to support requests?"
+    a: "Our target for a first reply is 24 hours. For projects with an active maintenance agreement, priority order and response time are defined separately in the scope contract — a critical outage and a minor visual fix are never treated with the same priority."
+  - q: "Does a WordPress site need maintenance, or is that only for custom software?"
+    a: "Maintenance matters even more on WordPress, because core, theme, and every plugin are separate pieces that each need updating on their own. Static sites carry a much lighter maintenance load — but not zero: dependencies, certificates, and monitoring still need an owner."
+---
+
+A website is at its most current on the day it launches. Then time passes: a library ships a new
+version, a vulnerability is found in a plugin, an SSL certificate quietly approaches expiry. None of
+it causes a visible problem on the day it happens — it accumulates, and it tends to surface at the
+worst possible moment, like during a campaign or the moment a customer submits a contact form.
+
+Maintenance is managing that build-up before it becomes visible. This article covers what actually
+breaks on an unmaintained site, a monthly/quarterly checklist, and what a good maintenance agreement
+should cover.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Risk on unmaintained sites doesn't appear suddenly — it accumulates: update debt, expiring certificates, forms that fail silently.",
+    "On WordPress, the large majority of new vulnerabilities come from plugins — a current core doesn't help if a plugin isn't.",
+    "Without a backup there is no undo; having a backup isn't enough, the restore procedure has to be tested.",
+    "Performance and SEO don't hold steady — they drift over time, and drift is invisible without regular measurement.",
+    "Static / Next.js sites carry a lighter maintenance load, but not a zero one: dependencies, certificates, and monitoring still need an owner.",
+  ]}
+/>
+
+## What happens to a site over time without maintenance
+
+### Security patches and dependency vulnerabilities
+
+When a site goes live, its framework, libraries, and any plugins are on current versions. As time
+passes, vulnerabilities get discovered and disclosed in those versions — that's not a sign of bad
+software, it's the normal lifecycle of any software. The problem is when nobody applies the patch
+once it exists.
+
+In the WordPress ecosystem, the source of that risk is well documented: according to Patchstack's
+State of WordPress Security in 2026 report, **91% of newly discovered vulnerabilities came from
+plugins**, 9% from themes, and only a handful of low-priority issues were reported in WordPress core
+itself. In other words, "my WordPress is up to date" often isn't enough on its own — the real risk
+sits separately in each of the dozens of installed plugins.
+
+<Callout type="warn" title="A patch isn't always ready when you need it">
+  The same report found that **46% of disclosed vulnerabilities** had no developer-issued fix at the
+  moment they became public. That's why assuming "I updated my plugin, I'm safe" falls short —
+  monitoring and fast response matter as much as the update itself.
+</Callout>
+
+Static / Next.js sites have a much smaller attack surface, since there's no server side or database
+running on request — but dependencies (npm packages) are still a list that needs updating. We
+covered that difference in detail in
+[Next.js or WordPress](/en/blog/nextjs-vs-wordpress).
+
+### SSL certificates and domains expire
+
+SSL certificates usually renew automatically, but the automation breaks in real situations: billing
+details go stale, a DNS record changes, the hosting provider migrates. The outcome is the same either
+way: the browser shows a "connection not secure" warning and the visitor closes the tab before ever
+seeing the page.
+
+Domain expiry is even quieter — with no warning at all, the site becomes fully unreachable one day
+because the domain is now available for anyone else to register. Both are cheap to prevent: regularly
+confirm that auto-renewal is actually working, not just configured.
+
+### Forms break silently
+
+A contact form depends on an API key, an email service, or a third-party integration. When one of
+those changes — a service provider updates its API, an email address changes, a key expires — the
+form can still show the visitor a "sent" confirmation while the email goes nowhere. That's one of the
+hardest failures for an owner to catch, because no error appears anywhere — the number of inbound
+leads just drops for no visible reason.
+
+A regular test submission (once a month, fill out the real form and confirm the email arrives) is a
+cheap habit that removes this risk entirely.
+
+### No backup means no undo
+
+There's a big difference between "we have a backup" and "we restored from a backup and it worked."
+A backup system that's set up and never tested carries real risk of hitting a corrupted file, a
+missing table, or unreachable storage exactly when it's needed. On critical projects, having tested
+the restore steps at least once matters as much as the backup existing.
+
+### Performance drifts over time
+
+A site is fast at launch because it was measured and optimized that day. Then, month by month, a few
+more images get added, another tracking script gets wired in, a third-party widget gets installed —
+each change small on its own, together a build-up that slows the page down. This is called performance
+**drift**, and the only way to catch it is regular measurement. We covered the budget-based approach
+in [how to build a fast website](/en/blog/how-to-build-a-fast-website).
+
+### SEO rankings slip
+
+Search engines rank based on a site's current state, not a frozen snapshot from launch. Google's own
+documentation states directly that Core Web Vitals are used by its ranking systems — so when
+performance drifts, there's a real SEO cost attached to it. On top of that, broken links, stale
+content, and structured-data errors that go unnoticed erode organic traffic over time. We covered how
+we keep a site's SEO health intact in
+[search visibility in the AI era: SEO to GEO](/en/blog/search-visibility-in-the-ai-era-seo-to-geo).
+
+<StatGrid
+  items={[
+    { value: "91%", label: "New WordPress vulnerabilities coming from plugins", note: "Patchstack, 2026" },
+    { value: "46%", label: "Disclosed vulnerabilities with no fix yet available", note: "Patchstack, 2026" },
+    { value: "0", label: "Running server side on a static site", note: "Attack surface difference" },
+  ]}
+/>
+
+## Monthly / quarterly maintenance checklist
+
+This list is a starting point — scope narrows or widens depending on the project's infrastructure.
+
+| Frequency | Check | What to look for |
+|---|---|---|
+| Monthly | Dependency and plugin updates | Any version with a known vulnerability |
+| Monthly | Backup verification | Was the latest backup taken, is it restorable |
+| Monthly | Form and integration test | Does the contact form actually deliver an email |
+| Monthly | Uptime and error-rate report | Any outage or error spike since last check |
+| Quarterly | SSL and domain expiry | Is auto-renewal actually working |
+| Quarterly | Performance measurement (LCP, INP, CLS) | Any drift from the values measured at launch |
+| Quarterly | Broken-link and 404 scan | Have new broken internal/external links built up |
+| Quarterly | Structured data (schema) validation | Is JSON-LD still error-free |
+| Yearly | Accessibility and security review | Re-check against current standards |
+
+<Callout type="tip" title="Every line needs an owner">
+  A checklist that only exists on paper does nothing. Every row needs an owner — an agency, an
+  in-house team, or an automated monitoring tool — and a schedule; otherwise the item everyone assumes
+  "someone's handling" gets skipped for months.
+</Callout>
+
+## What a good maintenance agreement should cover
+
+There are four things worth checking when evaluating a maintenance proposal.
+
+1. **Response expectations should be clearly defined.** Rather than a single fixed number, look for
+   a structure where a critical outage and a minor text change are explicitly not treated with the
+   same priority, and where that prioritization logic is written into the contract. "How fast" varies
+   by situation — what matters is that the variability is defined up front, not left implicit.
+2. **Who runs backups, and how often.** Is the hosting provider's own automated backup considered
+   sufficient, or is there a separate backup layer? That distinction matters on critical projects.
+3. **Is uptime monitoring active.** A visitor shouldn't be the first to notice the site is down —
+   monitoring exists so the team knows before visitors do.
+4. **Are small content updates in scope.** Are minor requests like a text change or a new image
+   handled without a separate quote every time, or does each change kick off a new process?
+
+Those four points form the core of our
+[Maintenance & Support service](/en/services/maintenance-support): security patches, backups, uptime
+monitoring, and small-change handling all move forward under the same monthly plan.
+
+## WordPress maintenance vs. modern static / Next.js maintenance
+
+The two architectures don't carry the same maintenance load — WordPress carries the heavier one.
+
+| Item | WordPress | Static / Next.js |
+|---|---|---|
+| Pieces that need updating | Core + theme + every plugin, separately | Framework + npm dependencies |
+| Attack surface | PHP + database running on every request | Built at build time, nothing runs server-side |
+| Incompatibility risk | A plugin update can break the site | Dependency updates are usually tested in isolation |
+| Backup scope | Files + database | Code repository (git) + any data source |
+| Maintenance cadence | Multiple times a month, frequent | A monthly check is usually enough |
+| Panel-less risk | An admin panel plugin is also a maintenance item | No panel means that risk item doesn't exist |
+
+The point isn't which architecture is "better" — it's which maintenance load you're prepared to
+carry. If staying on WordPress is a deliberate choice, the maintenance plan needs to cover that load;
+moving to a static architecture reduces the load but doesn't erase it. We compared the two beyond
+maintenance in [Next.js or WordPress](/en/blog/nextjs-vs-wordpress).
+
+## Conclusion
+
+Maintenance isn't a line item forgotten after launch — it's the ongoing work that keeps a site secure,
+fast, and findable three years down the line. A small monthly checklist catches things before they
+build up; a maintenance agreement that clearly states response expectations, backup scope, and
+monitoring removes the surprises.
+
+Let's review your current site's maintenance status together — write to us via the
+[contact page](/en/contact). See the scope of our maintenance plan on our
+[Maintenance & Support service](/en/services/maintenance-support) page, or look at the tailored
+approach for hospitality businesses on our
+[hotel maintenance & care solution](/en/solutions/hotel-maintenance-care).

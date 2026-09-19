@@ -1,0 +1,216 @@
+---
+title: "What Is WhatsApp Business API? A Guide for Businesses"
+description: "WhatsApp Business App vs. Business Platform (API): the real difference, template messages, opt-in rules, pricing model and setup steps."
+date: 2026-09-19
+tags: ["whatsapp", "whatsapp business api", "chatbot", "automation"]
+author: "Piton Studios"
+draft: false
+translationKey: whatsapp-business-api
+sources:
+  - title: "Meta for Developers — About the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform"
+  - title: "Meta for Developers — WhatsApp Cloud API Get Started"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started"
+  - title: "Meta for Developers — Pricing on the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+  - title: "Meta for Developers — Message Templates Overview"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview"
+  - title: "Meta for Developers — Template Categorization"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-categorization"
+  - title: "Meta for Developers — Get Opt-In for WhatsApp"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/getting-opt-in"
+faq:
+  - q: "What's the actual difference between the WhatsApp Business App and the Business Platform (API)?"
+    a: "The Business App is a free app one person or a small team uses from a phone; the Platform (API) is enterprise infrastructure that connects programmatically to your CRM, e-commerce system or a chatbot, built for automation and scale. The difference is in design intent: one is for manual use, the other for system-to-system automation."
+  - q: "Do I need Meta's approval to set up the WhatsApp Business API?"
+    a: "Yes. Using the API requires creating a WhatsApp Business Account (WABA), verifying a phone number, and submitting the message templates you plan to send for Meta's review; how long that takes can vary depending on your business verification status."
+  - q: "Is a message template required for every message?"
+    a: "No — if a user has messaged you within the last 24 hours, you can send free-form text. Templates are only needed outside that window, when you're the one starting the conversation; per Meta's own documentation, pre-approved templates are the only message type allowed outside that window."
+  - q: "Can I message customers on WhatsApp without opt-in?"
+    a: "No. Under Meta's policy, you may only message users who have clearly consented to receive messages from you — and that consent must name your business and state the purpose of the WhatsApp communication."
+  - q: "How does WhatsApp API pricing actually work?"
+    a: "On July 1, 2025, Meta moved from conversation-based pricing to charging per delivered template message, with rates that vary by template category (marketing, utility, authentication) and the recipient's country code. Because rates change, we point to [Meta's official pricing page](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing) rather than quoting a fixed number."
+---
+
+When a customer messages you on WhatsApp asking "where's my order," is a person answering, or is a
+system replying automatically? The answer depends on whether your business is running the WhatsApp
+Business App or the WhatsApp Business Platform (Cloud API). They share a name but were built for
+different jobs — this guide explains the real difference, what the API actually enables, and its
+rules, based on Meta's own documentation.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "The WhatsApp Business App is for manual, single-device use; the Business Platform (API) is infrastructure built to connect to systems and automate at scale.",
+    "The API enables automated replies, order/appointment notifications, CRM integration, and a chatbot that answers from your own data.",
+    "Any message sent outside the 24-hour customer service window requires a Meta-approved template.",
+    "You need explicit, business-named opt-in before messaging a user — this is a policy requirement, not a best practice.",
+    "Pricing shifted from conversation-based to per-template-message billing on July 1, 2025; check Meta's official page for current rates.",
+  ]}
+/>
+
+## WhatsApp Business App vs. WhatsApp Business Platform (API)
+
+The **WhatsApp Business App** is a free app small businesses download and run from a phone. It
+offers a business profile, a catalog, and basic automation like greeting messages — but it's
+managed by hand, meaning someone has to open the phone and read the messages.
+
+The **WhatsApp Business Platform**, in [Meta's own words](https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform),
+lets businesses "programmatically message and call" on WhatsApp. It isn't an app — it's an API
+that plugs directly into your CRM, e-commerce system, or an AI assistant. That means a message can
+be sent by a predefined rule or an AI model, not just by a human.
+
+<Callout type="info" title="Not competitors — different scales">
+  If you're a one-person business, the Business App is probably enough. Once you want to automate
+  order-status notifications, appointment reminders, or dozens-to-hundreds of repetitive questions
+  a day, you need the Platform (API) side.
+</Callout>
+
+| Criterion | WhatsApp Business App | WhatsApp Business Platform (API) |
+|---|---|---|
+| How it's used | Manual, from a phone | Integrated into systems, programmatic |
+| Cost | Free | Billed per template message |
+| Automation | Limited (basic greeting/away message) | Full automation, rule- or AI-based |
+| Team access | Single device / limited multi-device | Unlimited system integration |
+| CRM / e-commerce link | None | Direct via webhooks and API |
+| Message volume | Low-to-medium, trackable by hand | High volume, many messages per second |
+| Approval process | None | Requires WABA setup + template approval |
+| Best fit | Solo operator / small business | Growing business, multi-channel operations |
+
+## What the API actually delivers for a business
+
+Strip away the technical layer and the practical value lands in five areas:
+
+- **Automated replies.** Common questions (hours, address, delivery time) get answered instantly,
+  no one has to be online.
+- **Catalog and order flows.** A product catalog can be shown inside WhatsApp, and order-status
+  changes ("shipped," "delivered") trigger automatic messages.
+- **Appointment reminders.** As an appointment date approaches, a reminder goes out automatically —
+  no one at the front desk has to call.
+- **CRM integration.** Incoming and outgoing messages connect to your existing order, inventory, or
+  customer system through webhooks; nothing gets copied by hand.
+- **A chatbot that answers from your own data.** The assistant draws answers from your product
+  catalog, FAQ, or policies (via a RAG architecture) rather than general internet knowledge, and
+  hands off to a human when it isn't sure.
+
+<Callout type="key" title="A live example we've built">
+  For [Gel Gez Gör](/en/projects/gel-gez-gor) we built an automation that detects trending listings
+  and sends the listing owner an automatic WhatsApp notification — trigger-based, no manual
+  intervention. It's the same notification/order logic described above, running on a different
+  data source.
+</Callout>
+
+## Template messages and the 24-hour customer service window
+
+WhatsApp has two message types: **free-form text** and **template messages**. If a user has
+messaged you within the last 24 hours, that "customer service window" is open, and you can send
+whatever free-form text you want. But once the window closes, or if you're the one initiating the
+conversation, [Meta's own documentation states](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview)
+that "template messages are the only type of message that can be sent to WhatsApp users outside of
+a customer service window."
+
+Templates are submitted to Meta for approval in advance and fall into one of three categories:
+
+1. **Marketing** — campaigns, announcements, re-engagement.
+2. **Utility** — a follow-up tied to a user's action: order confirmation, appointment reminder,
+   delivery update.
+3. **Authentication** — one-time passwords (OTP), verification codes.
+
+<StatGrid
+  items={[
+    { value: "3", label: "Official template categories: marketing, utility, authentication", note: "META FOR DEVELOPERS" },
+    { value: "80/sec", label: "Default sending limit per business phone number", note: "META FOR DEVELOPERS" },
+    { value: "72 hrs", label: "Free entry-point window after a user starts a chat via an ad or page CTA", note: "META FOR DEVELOPERS" },
+  ]}
+/>
+
+Category choice isn't cosmetic — Meta validates a template's content against its declared category,
+and a mismatched category can get it rejected or reclassified later.
+
+## Opt-in rules: who you can message, and how
+
+This is the rule most businesses skip, and the one Meta enforces most strictly. Per the [official
+opt-in documentation](https://developers.facebook.com/documentation/business-messaging/whatsapp/getting-opt-in),
+businesses must get explicit consent before messaging a user, and that consent must clearly state
+**the business's name** and **the purpose** of the WhatsApp communication. Accepted opt-in methods
+include SMS, a website form, an IVR phone flow, and an in-person or paper signature.
+
+<Callout type="warn" title="Opt-in isn't a formality — it's an enforced rule">
+  Messaging without consent can get an account restricted or suspended. Users also have the right
+  to opt out of specific message categories at any time, and businesses must honor that clearly. If
+  patient or customer data is involved, this needs to be planned alongside the principles in our
+  [privacy policy](/en/privacy) — this article isn't legal advice, just the technical/operational
+  framework.
+</Callout>
+
+## How the pricing model actually works
+
+WhatsApp Business Platform pricing has changed in recent years and keeps evolving, so rather than
+quoting a fixed number, here's how the model works. Per [Meta's official pricing
+page](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing), on July
+1, 2025 billing moved "from conversation-based pricing to per-message pricing" — meaning you're no
+longer charged for a 24-hour conversation window, but **per delivered template message**. The rate
+varies by template category (marketing, utility, authentication) and the recipient's country code.
+
+The same page states several message types are free: free-form text inside an open customer service
+window, utility templates delivered within an open window, and messages sent within the first 72
+hours after a user starts a conversation via an ad or page CTA. Because the pricing model itself has
+shifted more than once in the last year, budgeting off last year's numbers can mislead — we always
+confirm current rates directly on [Meta's pricing page](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing)
+as part of scoping a new project.
+
+## Setup steps
+
+Setting up the API isn't a "sign up and go" flow. Per [Meta's Cloud API get-started
+guide](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started), the
+sequence looks like this:
+
+1. **Create a Meta Developer account and a Meta App**, and add the WhatsApp product to it.
+2. **Create or connect a WhatsApp Business Account (WABA)** to that app.
+3. **Add and verify a phone number** — that number can no longer be used in the Business App;
+   the same number can't run on both systems at once.
+4. **Generate an access token** and set up a **webhook** (callback URL) for incoming messages and
+   status updates.
+5. **Draft the message templates you'll send and submit them for Meta's review** — approval time
+   can vary depending on business verification status.
+6. **Send a first test message**, then move into real integration (CRM, order system, chatbot).
+
+Each step looks simple on its own, but decisions like which business account the WABA belongs to,
+which phone number gets used, and which category a template is submitted under are hard to change
+later — they need to be planned correctly from the start.
+
+## Common pitfalls
+
+1. **Sending bulk messages without opt-in.** The most common and most costly mistake; it can lead
+   to account restriction or suspension.
+2. **Choosing the wrong template category.** Submitting a reminder as "marketing" both slows down
+   approval and can change the cost.
+3. **Building a chatbot with no human-handoff path.** If the assistant makes up an answer to a
+   question it isn't sure about, the resulting loss of trust outweighs the speed WhatsApp was
+   supposed to add.
+4. **Confusing the Business App number with the API number.** The same number can't be active on
+   both systems — decide up front which side keeps which number.
+5. **Budgeting against the old pricing model.** Because the model has changed, planning this year's
+   budget off last year's figures can mislead; always confirm current rates on Meta's own page.
+
+## How Piton Studios sets this up
+
+Through our [WhatsApp & Chatbot service](/en/services/whatsapp-chatbot) we run this end to end:
+scope and approval planning, content/flow design, integration via Twilio or the Meta Cloud API,
+response-quality testing, and post-launch monitoring. We work on two concrete scenarios — a
+[WhatsApp sales and order bot](/en/solutions/whatsapp-sales-bot) that automates order-status updates,
+abandoned-cart reminders, and product questions for e-commerce sites, and a
+[WhatsApp appointment bot for clinics](/en/solutions/clinic-whatsapp-appointments) that automates
+appointment requests and reminders while handling patient data within a privacy-compliant framework.
+
+## Conclusion
+
+WhatsApp Business API isn't a "grown-up version" of the Business App — it's infrastructure built
+for a different purpose, one that connects to your systems. If you want automated replies, order or
+appointment notifications, and a chatbot that answers from your own data, this is the side you need.
+But the rules are firm: any message outside the 24-hour window needs an approved template, every
+message needs valid opt-in behind it, and because the pricing model keeps shifting, budget decisions
+should always be checked against Meta's current page.
+
+Not sure which side your project falls into? [Get in touch](/en/contact) — we'll plan the scope and
+the Meta approval process together.

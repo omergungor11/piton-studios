@@ -772,7 +772,7 @@
     },
     "pampas-investment": {
       "title": "Pampas Investment",
-      "summary": "KKTC gayrimenkul yatırım şirketi kurumsal sitesi.",
+      "summary": "Esentepe merkezli gayrimenkul yatırım şirketi için proje portföylü, çok dilli kurumsal site.",
       "body": [
         "Kuzey Kıbrıs Esentepe merkezli Pampas Investment için gayrimenkul yatırım ve satış odaklı kurumsal bir web sitesi geliştirdik. Proje portföyü, arazi detayları ve yatırımcı bilgilendirme sayfaları ile güçlü bir dijital varlık oluşturduk.",
         "SEO optimizasyonu, çok dilli yapı ve responsive tasarım ile uluslararası yatırımcılara ulaşmayı hedefledik. Emlak ilan entegrasyonları ve sosyal medya bağlantıları ile müşteri edinimini artırdık."
@@ -812,7 +812,7 @@
     },
     "pinnacle-yatirim": {
       "title": "Pinnacle Yatırım",
-      "summary": "KKTC gayrimenkul yatırım şirketi kurumsal sitesi.",
+      "summary": "KKTC gayrimenkul yatırımında portföy ve danışmanlık hizmetlerini sergileyen kurumsal site.",
       "body": [
         "Pinnacle Yatırım için Kuzey Kıbrıs gayrimenkul yatırım sektörüne yönelik profesyonel bir kurumsal web sitesi geliştirdik. Yatırım portföyü, proje detayları ve danışmanlık hizmetlerini sergileyen kapsamlı bir platform oluşturduk.",
         "Modern tasarım, SEO optimizasyonu ve mobil uyumlu yapı ile potansiyel yatırımcılara güçlü bir dijital deneyim sunduk."
@@ -820,7 +820,7 @@
     },
     "jet-transfer-cyprus": {
       "title": "Jet Transfer Cyprus",
-      "summary": "Havalimanı transfer ve VIP ulaşım hizmeti sitesi.",
+      "summary": "Online rezervasyon ve fiyat hesaplamalı, çok dilli havalimanı transfer ve VIP ulaşım sitesi.",
       "body": [
         "Jet Transfer Cyprus için havalimanı transfer ve VIP ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon sistemi, rota bilgileri ve fiyat hesaplama araçları ile kullanıcı deneyimini ön plana çıkardık.",
         "Mobil uyumlu tasarım, WhatsApp entegrasyonu ve çok dilli yapı ile yerli ve yabancı turistlere kolayca ulaşmayı sağladık."
@@ -892,7 +892,7 @@
     },
     "aydin-transfer": {
       "title": "Aydın Transfer",
-      "summary": "Havalimanı transfer ve VIP ulaşım hizmeti sitesi.",
+      "summary": "Havalimanı ve şehirlerarası transfer için yerel SEO odaklı, mobil öncelikli rezervasyon sitesi.",
       "body": [
         "Aydın Transfer için havalimanı transfer ve şehirlerarası ulaşım hizmetlerini sunan profesyonel bir web sitesi geliştirdik. Online rezervasyon, rota bilgileri ve fiyat hesaplama ile kullanıcı deneyimini ön plana çıkardık.",
         "Yerel SEO optimizasyonu, WhatsApp entegrasyonu ve mobil öncelikli tasarım ile müşteri edinimini artırdık."
@@ -3815,8 +3815,8 @@
     "subtitle": "Her kartın arkasında gerçek bir proje var — tıklayın, kendiniz inceleyin.",
     "results": {
       "ambalajCini": {
-        "highlight": "%30 satış büyümesi",
-        "desc": "Ambalaj tedarikçisi için ödeme entegrasyonlu e-ticaret sitesi; yayına alındıktan sonra çevrimiçi satışlar %30 arttı."
+        "highlight": "%30 büyüme",
+        "desc": "Ambalaj tedarikçisi için ödeme entegrasyonlu e-ticaret altyapısı; birlikte yürüttüğümüz Google Ads ve Meta kampanyalarıyla firma %30 büyüdü."
       },
       "nexos": {
         "highlight": "Uçtan uca özel sistem",
@@ -4000,6 +4000,107 @@
       "title": "Projenizi konuşalım",
       "desc": "Kapsamı birlikte netleştirelim; genelde 24 saat içinde size özel bir teklifle dönüyoruz.",
       "button": "İletişime geçin"
+    },
+    "wizard": {
+      "eyebrow": "Teklif sihirbazı",
+      "title": "Hangi paket size uygun?",
+      "lead": "Birkaç soruyu yanıtlayın; ihtiyacınıza uyan paketi, başlangıç bandını ve fiyatı etkileyen seçimlerinizi gösterelim. Cevaplarınız teklif talebinize hazır olarak aktarılır.",
+      "step": "Soru {current} / {total}",
+      "back": "Geri",
+      "restart": "Baştan başla",
+      "resultEyebrow": "Önerimiz",
+      "resultTitle": "Size uygun başlangıç: {name}",
+      "driversTitle": "Fiyatı etkileyen seçimleriniz",
+      "noDrivers": "Seçimlerinizde fiyatı yukarı taşıyan ek bir kalem görünmüyor; kesin fiyat ön görüşmeden sonra netleşir.",
+      "includesLabel": "Neler dahil",
+      "cta": "Bu bilgilerle teklif isteyin",
+      "ctaNote": "Bantlar başlangıç aralıklarıdır; kesin fiyat, kapsamı birlikte netleştirdikten sonra hazırlanan teklifte belirlenir.",
+      "questions": {
+        "need": {
+          "q": "Neye ihtiyacınız var?",
+          "options": {
+            "showcase": {
+              "label": "Tanıtım / kurumsal web sitesi",
+              "hint": "Firmanızı, hizmetlerinizi ve projelerinizi anlatan site"
+            },
+            "ecommerce": {
+              "label": "E-ticaret sitesi",
+              "hint": "Online satış, ödeme ve kargo"
+            },
+            "webapp": {
+              "label": "Özel yazılım / web uygulaması",
+              "hint": "Panel, rezervasyon, CRM, ERP gibi sistemler"
+            },
+            "automation": {
+              "label": "Yapay zeka ve iş otomasyonu",
+              "hint": "Tekrarlayan işleri otomatikleştirmek"
+            }
+          }
+        },
+        "design": {
+          "q": "Tasarım tarafında hangisi size yakın?",
+          "options": {
+            "template": {
+              "label": "Hızlı ve ekonomik",
+              "hint": "Kaliteli bir hazır temanın markanıza uyarlanması"
+            },
+            "custom": {
+              "label": "Markaya özel tasarım",
+              "hint": "Şablonsuz, sıfırdan tasarlanıp kodlanan site"
+            }
+          }
+        },
+        "languages": {
+          "q": "Kaç dilde yayında olacak?",
+          "options": {
+            "one": {
+              "label": "Tek dil"
+            },
+            "multi": {
+              "label": "İki veya daha fazla dil",
+              "hint": "Örneğin Türkçe, İngilizce, Rusça"
+            }
+          }
+        },
+        "timeline": {
+          "q": "Ne zaman yayında olmalı?",
+          "options": {
+            "urgent": {
+              "label": "Bir ay içinde"
+            },
+            "normal": {
+              "label": "1–3 ay içinde"
+            },
+            "flexible": {
+              "label": "Takvim esnek"
+            }
+          }
+        },
+        "content": {
+          "q": "Metin ve görseller hazır mı?",
+          "options": {
+            "ready": {
+              "label": "Evet, içerik bizden"
+            },
+            "help": {
+              "label": "İçerik desteği gerekiyor",
+              "hint": "Metin yazımı, görsel hazırlığı"
+            }
+          }
+        }
+      },
+      "drivers": {
+        "custom": "Markaya özel tasarım ve animasyon derinliği süreyi artırır; tasarım derinliği fiyatın ana etkenlerinden biridir.",
+        "multi": "Her ek dil çeviri, düzenleme, test ve hreflang kurulumu ekler.",
+        "integrations": "Ödeme, CRM, ERP veya üçüncü parti API entegrasyonları kapsamı ve test yükünü büyütür.",
+        "content": "İçerik üretimi (metin, görsel) teklifte ayrı kalem olarak yer alır.",
+        "urgent": "Kısa takvimde kapsamı önceliklendirip aşamalı yayın planlıyoruz."
+      },
+      "brief": {
+        "intro": "Merhaba, fiyatlar sayfasındaki teklif sihirbazından geliyorum.",
+        "package": "Önerilen paket: {name} ({price})",
+        "outro": "Projem hakkında kısaca:"
+      }
     }
   },
   "sectorItems": {

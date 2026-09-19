@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-19 — Teklif sihirbazı, dönüşüm takibi, içerik düzeltmeleri (TASK-073..076)
+
+- **Teklif sihirbazı** (`src/components/price-wizard.tsx`, fiyatlar sayfası): en fazla 5 soru (ihtiyaç, tasarım, dil, takvim, içerik) → uygun paket, mevcut başlangıç bandı ve fiyatı etkileyen seçimler. Yeni rakam üretmez; bantlar `pricingPage.packages` / `ai`'dan. "Bu bilgilerle teklif isteyin" cevapları `?brief=` ile iletişim formunun mesaj alanına taşır. Metinler `pricingPage.wizard` × 3 dil.
+- **Dönüşüm takibi** (`src/components/conversion-tracker.tsx`): tüm WhatsApp / telefon / e-posta link tıklamaları ve başarılı form gönderimi Vercel Analytics özel olayı (`whatsapp_click`, `phone_click`, `email_click`, `contact_form_submit`, `price_wizard_complete`). Kişisel veri yok; gizlilik metni 3 dilde güncellendi, `LEGAL.updated` 2026-09-19. Özel olaylar Vercel Pro planda raporlanır.
+- **Blog** (tr/en/ru 17→20): "KOBİ için ERP mi Excel mi?", "WhatsApp Business API nedir?", "Web sitesi bakımı neden gerekli?" — yeni hizmet (ERP & CRM, WhatsApp & Chatbot, Bakım & Destek) ve çözüm sayfalarına iç link; dış iddialar birincil kaynaklı (Microsoft Excel sınırları, Meta WhatsApp Platform dokümanları, Patchstack 2026, Google Page Experience), uydurma rakam/müşteri yok.
+- **İçerik**: Ambalaj Cini referans kartı proje sayfasıyla aynı ifadeye çekildi (e-ticaret altyapısı + Google Ads/Meta kampanyalarıyla %30 büyüme; "site yayına alınınca satışlar %30 arttı" iddiası kaldırıldı). Pampas/Pinnacle ve Jet Transfer/Aydın Transfer'in birebir aynı özetleri projelerin kendi metinlerinden farklılaştırıldı (3 dil).
+
 ## 2026-09-15 — SEO denetimi düzeltmeleri ve e-posta tasarımı (TASK-071..072)
 
 Canlı sitede 515 URL'lik tarama + anasayfa Lighthouse. Önce/sonra: sitemap'te 404 10 → 0, yanlış hreflang 74 → 0 (etiket sayfaları artık yalnızca canonical), og:image eksik 229 → 0, dilsiz iç link 3 → 0, yetim proje sayfası 15 → 0 (bölge listesi bilerek menüde yok).

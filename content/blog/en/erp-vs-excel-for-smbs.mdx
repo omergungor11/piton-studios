@@ -1,0 +1,196 @@
+---
+title: "ERP or Excel for SMBs? When to make the switch"
+description: "When spreadsheets stop scaling, the signs you need an ERP/CRM, off-the-shelf vs custom builds, migration steps, and realistic price bands."
+date: 2026-09-19
+tags: ["erp", "crm", "automation", "smb"]
+author: "Piton Studios"
+draft: false
+translationKey: erp-vs-excel
+sources:
+  - title: "Microsoft Support — Excel specifications and limits"
+    url: "https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3"
+  - title: "Microsoft Support — Reduce file size to fix Excel performance issues"
+    url: "https://support.microsoft.com/en-us/office/reduce-file-size-to-fix-excel-performance-issues-3d259467-e0ec-4dea-830e-27bfd2fe3b64"
+faq:
+  - q: "When should I move from Excel to an ERP?"
+    a: "The moment several people are emailing the same file around, stock or account figures contradict each other across copies, or pulling one report eats half a day, it's time to switch. If it's a single file kept by a single person, Excel is probably still the right tool."
+  - q: "Should I buy an off-the-shelf ERP or build a custom one?"
+    a: "If your accounting/stock workflow is standard, an off-the-shelf package is faster and cheaper. If you have something specific to your business — dealer-tiered pricing, industry-specific production tracking, or several systems that need to live in one panel — off-the-shelf packages force that in through plugin after plugin; custom development holds up better long-term."
+  - q: "What does an ERP cost for a small business?"
+    a: "It depends on scope; in our pricing, a custom web application/ERP project starts at €3,350 and grows with scope. The exact number is set after a scoping call that establishes which modules — accounts, stock, dealers, production — you actually need."
+  - q: "Can we migrate without losing our existing spreadsheet data?"
+    a: "Yes — data migration is its own planned phase of the move. Old spreadsheets are cleaned and moved into the new schema; nothing from your history gets lost."
+  - q: "Is ERP the same thing as CRM?"
+    a: "No, but they often ship together. ERP manages operational processes — stock, production, accounts, finance — while CRM manages customer relationships and the sales pipeline. In a small business, the two are usually combined into one panel."
+---
+
+"Is Excel enough, or do we need an ERP" usually gets asked at the wrong moment — after the system
+has already started slowing down daily work. It's less a technology choice than a **growth signal**:
+Excel works well as long as one person owns a spreadsheet, and starts to crack the moment several
+people touch the same data from different places. This article covers where that crack actually
+starts, the real difference between off-the-shelf and custom ERPs, and how to make the move.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Excel is strong when one person owns the spreadsheet; it starts to crack once several people touch the same data.",
+    "The signals to switch are operational, not technical: conflicting copies, files emailed around, reports that take hours to build.",
+    "Off-the-shelf ERPs are fast for standard workflows; custom development holds up better for industry-specific flows like dealer-tiered pricing.",
+    "A migration planned with data transfer as its own phase doesn't lose historical records.",
+    "A custom web app/ERP project starts at €3,350; the exact figure comes from a scoping call.",
+  ]}
+/>
+
+## Excel's real limit isn't row count — it's coordination
+
+Excel's technical ceiling is quite high — according to
+[Microsoft's own documentation](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3),
+a single worksheet can hold up to 1,048,576 rows and 16,384 columns. It's nearly impossible for a
+small business to hit that ceiling on row count alone. The real problem isn't size — it's several
+people touching the same data, across several files, at different times.
+
+<Callout type="info" title="This isn't an anti-Excel article">
+  For a single dataset owned by a single person, Excel is still the fastest and cheapest tool
+  available. The problem was never Excel itself — it's several people trying to hold the same
+  data in several separate copies. An ERP isn't a step up in prestige; it's an answer to a
+  coordination problem.
+</Callout>
+
+[Microsoft's own performance guide](https://support.microsoft.com/en-us/office/reduce-file-size-to-fix-excel-performance-issues-3d259467-e0ec-4dea-830e-27bfd2fe3b64)
+points at the same thing: as file size grows and formulas and formatting pile up, Excel slows down,
+and the recommended fix is usually to split the data, strip unnecessary formatting, or keep external
+data as links rather than copies. All of that is really a sign that a single file is now trying to
+do the work of an entire system.
+
+## Signs it's time to move to an ERP/CRM
+
+If two or three of the signals below show up at once, the fix is no longer "a better spreadsheet
+template."
+
+1. **The same information exists in multiple copies, and they disagree.** The stock count sales is
+   working from doesn't match the warehouse's. Nobody's sure which one is correct.
+2. **A file is circulating by email.** If you see a filename like "Latest_list_FINAL_v3.xlsx",
+   ownership of that data has already fragmented.
+3. **Building one report eats half a day.** If a monthly sales summary means copy-pasting from
+   three different files, that time gets stolen from everything else as it grows.
+4. **Dealer- or account-based pricing is tracked by hand.** A separate tab per dealer means a
+   forgotten update at every revision.
+5. **A new hire takes days just to learn "which file to find things in."** Knowledge should live
+   in the system, not in specific people.
+6. **Stock and order/production data sit in separate sheets, synced by hand.** If placing an order
+   doesn't automatically deduct stock, you're operating on delayed, error-prone stock data.
+
+<StatGrid
+  items={[
+    { value: "1,048,576", label: "Row limit of a single Excel worksheet", note: "MICROSOFT SUPPORT" },
+    { value: "16,384", label: "Column limit of a single Excel worksheet", note: "MICROSOFT SUPPORT" },
+    { value: "2+", label: "Copies of the same data you're keeping at once", note: "THIS IS WHERE THE REAL LIMIT STARTS" },
+  ]}
+/>
+
+## Decision matrix: stay on Excel or move to an ERP
+
+| Criterion | Favours Excel | Favours ERP/CRM |
+|---|---|---|
+| Number of users | One person, or a small team in the same room | Multiple departments, different locations |
+| Data volume | A few hundred to a few thousand rows, static structure | Continuously growing, relational data (orders↔stock↔accounts) |
+| Process complexity | A simple list, single calculation | A multi-step flow like quote→order→invoice |
+| Error tolerance | A bad cell is noticed and fixed | Bad data produces a financial or operational consequence |
+| Reporting need | Occasional, manual | Regular, needed instantly by multiple people |
+| Dealer/account structure | None or very simple | Dealer-tiered pricing, account balances, collections |
+| Budget | Zero extra cost (already have it) | Setup and maintenance cost |
+
+If most of the row checks fall on the right, the question is no longer "which spreadsheet template
+should we use" but "which system should we build."
+
+## Off-the-shelf ERP or custom development
+
+This choice is often framed too simply — "off-the-shelf is cheap, custom is expensive." The real
+divide is how standard your business actually is.
+
+| | Off-the-shelf ERP package | Custom-built system |
+|---|---|---|
+| Fit | Standard accounting, stock, sales flow | Industry-specific flow (dealer-tiered pricing, custom production tracking) |
+| Setup speed | Usually faster, ready-made modules | Requires a scoping phase + development |
+| Unused-module overhead | Common — the package ships with modules you won't use | None — only the modules you need get built |
+| Customization ceiling | Limited to plugins/integrations | No ceiling, workflow modeled from scratch |
+| Data ownership | Usually on the vendor's platform | On your own infrastructure, fully owned |
+| Long-term dependency | Tied to a license/subscription and vendor | Code and database belong to you |
+
+For a standard accounts-stock-invoice flow, an off-the-shelf package is generally a faster and
+cheaper start. But if you have something specific to your industry — dealer-tiered pricing,
+variant-based production tracking, or several systems (storefront + stock + accounting) that need
+to live in one panel — off-the-shelf packages tend to force that in through plugin after plugin,
+ending up as a system that's "off-the-shelf but doesn't quite fit."
+
+Two of our own projects make this divide concrete: [FurCRM](/en/projects/fur-crm) is a system we
+built from scratch for furniture manufacturers, bringing product/variant management, accounts &
+finance tracking, the quote–order–invoice flow, and dealer management together in one panel — the
+industry-specific dealer-tiered flow was exactly the kind of need an off-the-shelf package doesn't
+naturally cover. With [Ambalaj Cini](/en/projects/ambalaj-cini), we integrated the storefront with
+a full back-office covering stock, shipping, invoicing, accounting, and CRM — again, the goal was
+consolidating data scattered across separate systems into one panel.
+
+<Callout type="warn" title="Forcing an off-the-shelf package with plugins turns a shortcut into a permanent cost">
+  Squeezing a non-standard workflow into an off-the-shelf ERP through plugin after plugin looks
+  cheaper in the short run. But every plugin adds an update-compatibility risk and its own
+  maintenance line item; a few years in, the total cost can end up higher than building custom
+  from the start.
+</Callout>
+
+## Migration steps
+
+Moving from Excel to an ERP/CRM, done in the right order, doesn't have to cost you data or
+interrupt operations.
+
+| Step | What happens | Why it matters |
+|---|---|---|
+| 1. Process inventory | Map out who updates which sheet, how often, and how | This is where invisible manual steps surface |
+| 2. Data model design | Accounts, stock, orders, and dealer relationships get unified into one schema | Clarifies how the sheets actually feed each other |
+| 3. Module development/setup | Relevant modules are built in sequence, or the off-the-shelf package gets configured | Changing everything at once raises the risk |
+| 4. Data migration | Existing spreadsheet data is cleaned and moved into the new system | This is where historical record integrity is preserved |
+| 5. Parallel run | Old and new systems are checked side by side for a period | Data inconsistencies get caught before go-live |
+| 6. Training & handover | The team starts working in the new system, with a support window open | This is where habit resistance breaks down most |
+
+Step four is the one most often skipped or rushed. If inconsistent records in the old sheets —
+duplicate customer entries, an incomplete account balance — get migrated uncleaned, the new system
+inherits the old one's mistakes. Data migration needs to be its own planned phase, not a side task
+of the move.
+
+## When to stay on Excel
+
+Not every business needs an ERP. In these situations, Excel is still the right tool:
+
+1. **One person owns the data and there's no sharing need.** Where there's no coordination
+   problem, an ERP adds unnecessary complexity.
+2. **The process is static and no growth is expected.** A fixed customer count, a fixed product
+   list — the current spreadsheet may well be enough.
+3. **Budget is tight and the problem isn't slowing operations down yet.** Switching early on a
+   "we might need it later" basis creates a maintenance burden that isn't needed yet.
+
+## When to move to an ERP/CRM
+
+1. **Several of the signals above are showing up at once.** One signal is an early warning; two or
+   three together are already a cost.
+2. **A dealer, account, or multi-channel structure is growing.** Manual tracking scales its errors
+   right along with its volume.
+3. **The team is growing and knowledge is becoming person-dependent.** Systemizing reduces
+   dependency on specific individuals.
+4. **Reporting is delaying decisions.** If management is deferring decisions because they can't get
+   current data instantly, that's already a direct cost.
+
+## Conclusion
+
+The question between Excel and an ERP isn't "which is better" — it's "how many people, and how many
+copies, is this data living in now." In a single-person, single-spreadsheet setup, Excel is still
+the fastest tool. Once data spreads across multiple people and processes, and conflicting copies
+start slowing operations down, the real question isn't "ERP or Excel" anymore — it's "an
+off-the-shelf package, or a system modeled specifically around our business."
+
+If you're not sure which side your processes fall on, take a look at our
+[ERP & CRM service](/en/services/erp-crm); for construction, our
+[construction ERP solution](/en/solutions/construction-erp); for manufacturing, our
+[manufacturing ERP solution](/en/solutions/manufacturing-erp); for real-estate offices, our
+[real-estate CRM solution](/en/solutions/real-estate-crm); or if you run a dealer network, our
+[B2B dealer portal solution](/en/solutions/b2b-dealer-portal). Check the
+[pricing page](/en/pricing) for starting bands, or [get in touch directly](/en/contact).
