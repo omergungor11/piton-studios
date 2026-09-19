@@ -156,7 +156,7 @@
 | TASK-072 | E-posta tasarım sistemi (`src/lib/email`): iletişim bildirimi + 3 dilde otomatik yanıt canlıda, kampanya şablonu, dev önizleme rotası | M | COMPLETED |
 | TASK-073 | Ambalaj Cini referans kartı tutarlılığı + tekrar eden 4 proje özetinin farklılaştırılması (3 dil) | S | COMPLETED |
 | TASK-074 | Dönüşüm takibi: iletişim link tıklamaları + form gönderimi Vercel Analytics olayları, gizlilik metni güncellemesi | S | COMPLETED |
-| TASK-075 | Teklif sihirbazı (fiyatlar sayfası) + iletişim formuna `?brief=` ön doldurma | M | COMPLETED |
+| TASK-075 | Teklif sihirbazı (fiyatlar sayfası) + iletişim formuna `?brief=` ön doldurma | M | **REVERTED** — 2026-09-19 kullanıcı kararıyla kaldırıldı (gereksiz) |
 | TASK-076 | Yeni hizmetler için 3 blog yazısı × 3 dil (ERP mi Excel mi, WhatsApp Business API, web sitesi bakımı) | L | COMPLETED |
 | TASK-060 | 4 blog yazısının en/ru çevirisi (erişilebilir formlar, B2B landing, site yenileme SEO, yapay zekânın etkisi) | M | COMPLETED |
 | TASK-061 | Dile özel 404 (`[locale]/not-found.tsx` + catch-all), 3 dil | S | COMPLETED |

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-19 — Teklif sihirbazı kaldırıldı
+
+- Fiyatlar sayfasındaki teklif sihirbazı (TASK-075) kullanıcı kararıyla tamamen kaldırıldı: bileşen, `pricingPage.wizard` metinleri (3 dil), CSS ve iletişim formundaki `?brief=` ön doldurma. Dönüşüm takibi ve diğer değişiklikler yerinde.
+
 ## 2026-09-19 — Teklif sihirbazı, dönüşüm takibi, içerik düzeltmeleri (TASK-073..076)
 
 - **Teklif sihirbazı** (`src/components/price-wizard.tsx`, fiyatlar sayfası): en fazla 5 soru (ihtiyaç, tasarım, dil, takvim, içerik) → uygun paket, mevcut başlangıç bandı ve fiyatı etkileyen seçimler. Yeni rakam üretmez; bantlar `pricingPage.packages` / `ai`'dan. "Bu bilgilerle teklif isteyin" cevapları `?brief=` ile iletişim formunun mesaj alanına taşır. Metinler `pricingPage.wizard` × 3 dil.
