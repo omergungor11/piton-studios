@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-19 — Hizmet sayfası görselleri (TASK-077)
+
+- **18 hero sahnesi** (`src/components/service-visuals/art/<slug>.tsx`): kodla üretilen SVG sahneler — koyu zemin, marka kırmızısı ışık, perspektif zemin, akan ışık çizgileri. Metin/rakam içermez (dil bağımsız), her sahne ayrı chunk (~3 KB gzip). Hero iki sütuna geçti; yalnızca hizmet detay sayfalarında, menü ve listelerde görsel yok.
+- **"Nasıl çalışır" akış diyagramı** (`ServiceFlow`): her hizmete 4–5 aşamalı kavramsal akış, vurgulu çekirdek düğüm; masaüstünde yatay, mobilde dikey. Yapı `service-visuals/flows.ts`, metinler `serviceVisuals.<slug>` × 3 dil (alt metin, başlık, açıklama, düğüm etiketleri). Rakam içermez.
+- Ortak çizim kiti `service-visuals/kit.tsx` (renkler, filtreler, panel/tarayıcı/telefon/küp/ışık/düğüm parçaları); `pnpm content:check` artık `serviceVisuals`'ı da denetliyor. Plan: `piton-plans/service-visuals-plan.md`.
+
 ## 2026-09-19 — Teklif sihirbazı kaldırıldı
 
 - Fiyatlar sayfasındaki teklif sihirbazı (TASK-075) kullanıcı kararıyla tamamen kaldırıldı: bileşen, `pricingPage.wizard` metinleri (3 dil), CSS ve iletişim formundaki `?brief=` ön doldurma. Dönüşüm takibi ve diğer değişiklikler yerinde.

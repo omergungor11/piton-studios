@@ -244,6 +244,16 @@ Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/
 - `conversion-tracker.tsx` (layout'ta): `wa.me`, `tel:`, `mailto:` linklerini belge dinleyicisiyle yakalar —
   yeni iletisim linki eklerken ayrica isaretlemeye gerek yok. Olaylara kisisel veri yazilmaz.
 
+### Hizmet sayfasi gorselleri (2026-09-19)
+
+- `src/components/service-visuals/`: `kit.tsx` (tek palet + parcalar), `art/<slug>.tsx` (18 SVG hero sahnesi,
+  `next/dynamic` ile hizmet basina ayri chunk), `flows.ts` + `service-flow.tsx` ("Nasil calisir" diyagrami).
+  Metinler `serviceVisuals.<slug>` (alt, flow.title/caption/nodes) — `pnpm content:check` denetler.
+- Kurallar: sahnede **kelime/rakam yok**, yalnizca kit renkleri/filtreleri; hareket yalnizca `sv-flow`/`sv-pulse`/
+  `sv-float` siniflariyla (reduced-motion'da durur). `sv-float`, `transform` niteligi olan `<g>`'ye konmaz
+  (CSS transform ezer). Gorseller yalnizca hizmet detayinda — menude/listelerde yok (kullanici karari).
+- Yeni hizmet eklenirse: sahne + `flows.ts` girdisi + 3 dilde `serviceVisuals` + `index.tsx` haritasi.
+
 ### SEO kurallari (2026-09-15 denetimi)
 
 - `buildPageMetadata` baslik ekini (" — Piton Studios") yalnizca 60 karakteri asmiyorsa ekler,
