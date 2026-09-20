@@ -6955,10 +6955,22 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   background: var(--accent);
 }
 
+/* Kart sahnesi — hizmet sayfalarindaki .sv-stage kutusunun aynisi */
+.pricing-art { box-shadow: 0 30px 70px -48px rgba(211, 58, 62, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.35); }
+
 /* 5. paket (mobil uygulama) tek basina kaldigi icin iki sutunu kaplar */
 .pricing-card--wide { grid-column: 1 / -1; }
 .pricing-card--wide .pricing-band { align-self: flex-start; }
 @media (min-width: 1001px) {
+  /* Genis kartta sahne solda, metin sagda — serit tam genislige yayilmasin */
+  .pricing-card--wide {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 32px;
+    align-items: center;
+  }
+  .pricing-card-body { display: flex; flex-direction: column; gap: 20px; }
+  .pricing-card--wide .pricing-includes { margin-top: 0; }
   .pricing-card--wide .pricing-includes ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -7042,6 +7054,7 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
 }
 .pricing-roi-link:hover { border-color: var(--accent); }
 .pricing-ai-includes { margin-top: 0; }
+.pricing-ai-side { display: flex; flex-direction: column; gap: 22px; }
 
 /* Fiyati ne etkiler */
 .pricing-factors { margin-bottom: 72px; }
