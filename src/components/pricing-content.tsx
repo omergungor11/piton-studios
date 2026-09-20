@@ -4,6 +4,7 @@ import { Link, getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import SparkScene from '@/components/scenes/spark';
 import SplitWords from '@/components/motion/split-words';
+import PricingArt from '@/components/pricing-art';
 import type { Locale } from '@/lib/site';
 
 export interface PricingPostLink {
@@ -22,6 +23,20 @@ const PACKAGE_KEYS = ['template', 'corporate', 'ecommerce', 'webapp', 'mobile'] 
 /** Aylik calisan buyume hizmetleri — anahtarlar ayni zamanda hizmet sayfasi slug'i. */
 const GROWTH_KEYS = ['seo-geo', 'google-ads', 'meta-ads'] as const;
 
+/**
+ * Paket → hizmet sahnesi (`service-visuals/art/<slug>`). Alt metinler de o hizmetin
+ * `serviceVisuals.<slug>.alt` cevirisinden gelir, yeni metin uretilmez.
+ */
+const PACKAGE_ART: Record<(typeof PACKAGE_KEYS)[number], string> = {
+  template: 'web-design',
+  corporate: 'custom-software',
+  ecommerce: 'ecommerce',
+  webapp: 'web-app',
+  mobile: 'mobile-app',
+};
+
+const AI_ART_SLUG = 'automation';
+
 /** SSS sayfasindaki kalici soru anchor'lari (faq.ts id'leri) — soru silinmedikce degismez. */
 const FAQ_ANCHOR_IDS = [
   'website-cost',
@@ -38,6 +53,7 @@ interface PricingFactor {
 
 export default async function PricingContent({ locale, roiPost }: Props) {
   const t = await getTranslations({ locale, namespace: 'pricingPage' });
+  const tv = await getTranslations({ locale, namespace: 'serviceVisuals' });
   const faqPath = getPathname({ href: '/faq', locale });
   const factors = t.raw('factors.items') as PricingFactor[];
   const aiPoints = t.raw('ai.points') as string[];
@@ -57,13 +73,8 @@ export default async function PricingContent({ locale, roiPost }: Props) {
           const includes = t.raw(`packages.${key}.includes`) as string[];
           // Tek sayida kart varsa sonuncusu yalniz kalir — iki sutunu kaplasin.
           const wide = PACKAGE_KEYS.length % 2 === 1 && i === PACKAGE_KEYS.length - 1;
-          return (
-            <article
-              key={key}
-              className={`pricing-card glass${wide ? ' pricing-card--wide' : ''}`}
-              data-reveal="rise"
-              style={{ '--i': i } as CSSProperties}
-            >
+          const body = (
+            <>
               <div>
                 <h2 className="pricing-card-name">{t(`packages.${key}.name`)}</h2>
                 <p className="pricing-card-desc">{t(`packages.${key}.desc`)}</p>
@@ -80,6 +91,18 @@ export default async function PricingContent({ locale, roiPost }: Props) {
                   ))}
                 </ul>
               </div>
+            </>
+          );
+          return (
+            <article
+              key={key}
+              className={`pricing-card glass${wide ? ' pricing-card--wide' : ''}`}
+              data-reveal="rise"
+              style={{ '--i': i } as CSSProperties}
+            >
+              <PricingArt slug={PACKAGE_ART[key]} label={tv(`${PACKAGE_ART[key]}.alt`)} />
+              {/* Genis kartta sahne ve metin yan yana: metin tek sutunda toplanir. */}
+              {wide ? <div className="pricing-card-body">{body}</div> : body}
             </article>
           );
         })}
@@ -97,6 +120,7 @@ export default async function PricingContent({ locale, roiPost }: Props) {
             const label = key === 'seo-geo' ? t('growth.monthlyLabel') : t('growth.adsLabel');
             return (
               <article key={key} className="pricing-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
+                <PricingArt slug={key} label={tv(`${key}.alt`)} />
                 <div>
                   <h3 className="pricing-card-name">{t(`growth.items.${key}.name`)}</h3>
                   <p className="pricing-card-desc">{t(`growth.items.${key}.desc`)}</p>
@@ -152,13 +176,16 @@ export default async function PricingContent({ locale, roiPost }: Props) {
               </p>
             )}
           </div>
-          <div className="pricing-includes pricing-ai-includes">
-            <span className="pricing-includes-label">{t('includesLabel')}</span>
-            <ul>
-              {aiPoints.map((line, i) => (
-                <li key={i}>{line}</li>
-              ))}
-            </ul>
+          <div className="pricing-ai-side">
+            <PricingArt slug={AI_ART_SLUG} label={tv(`${AI_ART_SLUG}.alt`)} />
+            <div className="pricing-includes pricing-ai-includes">
+              <span className="pricing-includes-label">{t('includesLabel')}</span>
+              <ul>
+                {aiPoints.map((line, i) => (
+                  <li key={i}>{line}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

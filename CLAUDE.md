@@ -200,6 +200,11 @@ Icerik ici 81 ic link sitemap'e karsi dogrulandi. Statik sayfa 476 → 525.
 > asgari onerilen butce 1.500 $/ay). Metinler `messages/*.json` → `pricingPage.packages.mobile`
 > ve `pricingPage.growth`; bant degisirse `PRICING_UPDATED` tarihini de guncelleyin
 > (`src/app/[locale]/pricing/page.tsx`). Bu bantlar blog yazilarinda gecmiyor.
+> Her kartta hizmet sayfalarindaki SVG sahnesi var (`PricingArt` → `SERVICE_ART`);
+> alt metinler `serviceVisuals.<slug>.alt`'tan okunur, fiyat sayfasina ayri metin yazilmaz.
+> Esleme `PACKAGE_ART` (sablon→web-design, kurumsal→custom-software, e-ticaret→ecommerce,
+> web uygulamasi→web-app, mobil→mobile-app), AI karti→automation, buyume kartlari kendi slug'i.
+> `SERVICE_ART` istemci modulu oldugundan arama sunucuda yapilamaz — `pricing-art.tsx` sarmalayicisi bunun icin var.
 >
 > ⚠️ OG gorselleri Satori ile uretiliyor ve **`₺` glifi dinamik fontta yok** — frontmatter
 > `description` alaninda `₺` kullanmayin, "TL" yazin (gövde metninde `₺` sorunsuz).
