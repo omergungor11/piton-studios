@@ -193,6 +193,14 @@ Icerik ici 81 ic link sitemap'e karsi dogrulandi. Statik sayfa 476 → 525.
 > uzerine kurulu. Fiyat degisirse **5 yazi × 3 dil** birlikte guncellenmeli:
 > maliyet, ai-otomasyon-roi, nextjs-vs-wordpress, cok-dilli-site, e-ticaret-cro.
 >
+> **Fiyatlar sayfasi (2026-09-20)**: 5. paket **mobil uygulama 180.000–500.000 ₺**
+> (€4.000–€11.100; piyasa taramasiyla belirlendi — TR cross-platform MVP bandi 120–250k,
+> orta seviye 250–500k) ve **aylik buyume hizmetleri** bolumu eklendi:
+> SEO & GEO 7.000 ₺/ay, Google Ads ve Meta Reklamlari 10.000 ₺/ay (reklam butcesi haric,
+> asgari onerilen butce 1.500 $/ay). Metinler `messages/*.json` → `pricingPage.packages.mobile`
+> ve `pricingPage.growth`; bant degisirse `PRICING_UPDATED` tarihini de guncelleyin
+> (`src/app/[locale]/pricing/page.tsx`). Bu bantlar blog yazilarinda gecmiyor.
+>
 > ⚠️ OG gorselleri Satori ile uretiliyor ve **`₺` glifi dinamik fontta yok** — frontmatter
 > `description` alaninda `₺` kullanmayin, "TL" yazin (gövde metninde `₺` sorunsuz).
 

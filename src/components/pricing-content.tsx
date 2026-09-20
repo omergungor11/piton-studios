@@ -17,7 +17,10 @@ interface Props {
   roiPost: PricingPostLink | null;
 }
 
-const PACKAGE_KEYS = ['template', 'corporate', 'ecommerce', 'webapp'] as const;
+const PACKAGE_KEYS = ['template', 'corporate', 'ecommerce', 'webapp', 'mobile'] as const;
+
+/** Aylik calisan buyume hizmetleri — anahtarlar ayni zamanda hizmet sayfasi slug'i. */
+const GROWTH_KEYS = ['seo-geo', 'google-ads', 'meta-ads'] as const;
 
 /** SSS sayfasindaki kalici soru anchor'lari (faq.ts id'leri) — soru silinmedikce degismez. */
 const FAQ_ANCHOR_IDS = [
@@ -52,8 +55,15 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       <div className="pricing-grid">
         {PACKAGE_KEYS.map((key, i) => {
           const includes = t.raw(`packages.${key}.includes`) as string[];
+          // Tek sayida kart varsa sonuncusu yalniz kalir — iki sutunu kaplasin.
+          const wide = PACKAGE_KEYS.length % 2 === 1 && i === PACKAGE_KEYS.length - 1;
           return (
-            <article key={key} className="pricing-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
+            <article
+              key={key}
+              className={`pricing-card glass${wide ? ' pricing-card--wide' : ''}`}
+              data-reveal="rise"
+              style={{ '--i': i } as CSSProperties}
+            >
               <div>
                 <h2 className="pricing-card-name">{t(`packages.${key}.name`)}</h2>
                 <p className="pricing-card-desc">{t(`packages.${key}.desc`)}</p>
@@ -76,6 +86,46 @@ export default async function PricingContent({ locale, roiPost }: Props) {
       </div>
 
       <p className="pricing-note">{t('note')}</p>
+
+      <section className="pricing-growth">
+        <SplitWords as="h2" className="pricing-section-title" text={t('growth.title')} />
+        <p className="pricing-section-lead" data-reveal="fade">{t('growth.lead')}</p>
+        <div className="pricing-growth-grid">
+          {GROWTH_KEYS.map((key, i) => {
+            const includes = t.raw(`growth.items.${key}.includes`) as string[];
+            // Reklam hizmetlerinde bedel yalnizca yonetim — bant etiketi bunu acikca soyluyor.
+            const label = key === 'seo-geo' ? t('growth.monthlyLabel') : t('growth.adsLabel');
+            return (
+              <article key={key} className="pricing-card glass" data-reveal="rise" style={{ '--i': i } as CSSProperties}>
+                <div>
+                  <h3 className="pricing-card-name">{t(`growth.items.${key}.name`)}</h3>
+                  <p className="pricing-card-desc">{t(`growth.items.${key}.desc`)}</p>
+                </div>
+                <p className="pricing-band">
+                  <span className="pricing-band-value">{t(`growth.items.${key}.price`)}</span>
+                  <span className="pricing-band-label">{label}</span>
+                </p>
+                <div className="pricing-includes">
+                  <span className="pricing-includes-label">{t('includesLabel')}</span>
+                  <ul>
+                    {includes.map((line, j) => (
+                      <li key={j}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+                <Link
+                  href={{ pathname: '/services/[slug]', params: { slug: key } }}
+                  className="pricing-growth-link"
+                  data-cursor="hover"
+                >
+                  {t('growth.linkLabel')} <span aria-hidden="true">↗</span>
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+        <p className="pricing-note pricing-growth-note">{t('growth.note')}</p>
+      </section>
 
       <section className="pricing-ai glass strong" data-reveal="fade">
         <span className="pricing-ai-accent" aria-hidden="true" />

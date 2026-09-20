@@ -29,8 +29,8 @@
       "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton Studios."
     },
     "pricing": {
-      "title": "Pricing: Website and Software Packages",
-      "description": "Transparent starting bands for websites, e-commerce, custom web apps and AI automation: packages from €200, what each includes, and the factors that drive the price."
+      "title": "Pricing: Web, Mobile, SEO and Ads",
+      "description": "Transparent starting bands: websites from €200, mobile apps from €4,000, SEO & GEO from €150/month, ad management from €200/month."
     },
     "projectTitle": "{title}: Case Study",
     "projectDescSuffix": "Scope, technology and process details in this Piton Studios case study."
@@ -3988,6 +3988,70 @@
           "Delivery: from 8 weeks, depending on scope",
           "Ongoing maintenance agreement available"
         ]
+      },
+      "mobile": {
+        "name": "Mobile app",
+        "price": "€4,000–€11,100",
+        "desc": "A mobile app for iOS and Android built from a single codebase and shipped to both stores.",
+        "includes": [
+          "Requirements analysis and platform decision (native or PWA)",
+          "One codebase for iOS + Android (React Native/Expo)",
+          "Custom interface design and in-app flows",
+          "Backend, authentication and push notification infrastructure",
+          "Native hardware access: camera, location, notifications",
+          "Real-device testing and store review compliance",
+          "App Store and Google Play release; the developer account stays yours",
+          "Delivery: 8–16 weeks · 2 months of post-launch support"
+        ]
+      }
+    },
+    "growth": {
+      "title": "Monthly growth services",
+      "lead": "What happens after launch is its own job: visibility and demand. These three services run monthly, separately from the project fee.",
+      "monthlyLabel": "monthly, starting at",
+      "adsLabel": "monthly management · excl. ad spend",
+      "linkLabel": "Service details",
+      "note": "Ad spend is not included in these fees; you pay Google and Meta directly from your own account. For the learning period to produce meaningful data, we recommend a minimum ad budget of $1,500 per month. On the SEO & GEO side, technical fixes show up in 2–4 weeks and content impact in 3–6 months — which is why we don’t recommend short engagements.",
+      "items": {
+        "seo-geo": {
+          "name": "SEO & GEO",
+          "price": "€150",
+          "desc": "Ranking on Google and being cited by language models — two disciplines, handled in one engagement.",
+          "includes": [
+            "Technical SEO audit with a prioritised fix list",
+            "Core Web Vitals and indexation improvements",
+            "Structured data (schema) implementation",
+            "Content map and calendar built around search intent",
+            "GEO layer: content structured for model citation",
+            "Monthly report on rankings, traffic and citations"
+          ]
+        },
+        "google-ads": {
+          "name": "Google Ads",
+          "price": "€200",
+          "desc": "Search and Performance Max campaigns — aimed at measurable conversions, not impressions.",
+          "includes": [
+            "Account audit or setup from scratch",
+            "Campaign architecture, keyword and negative lists",
+            "Conversion tracking: GA4, Google Ads, server-side",
+            "Ad copy and creative testing",
+            "Weekly optimisation cycle",
+            "Monthly report: conversions, cost, ROAS"
+          ]
+        },
+        "meta-ads": {
+          "name": "Meta Ads",
+          "price": "€200",
+          "desc": "Facebook and Instagram campaigns — built to generate demand and sales, not likes.",
+          "includes": [
+            "Account audit, Pixel and Conversions API setup",
+            "Campaign architecture and audience segmentation",
+            "Ad creative production (static, video, carousel)",
+            "Retargeting and lookalike audiences",
+            "Regular creative refresh and testing",
+            "Monthly report: conversions, cost, ROAS"
+          ]
+        }
       }
     },
     "ai": {

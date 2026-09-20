@@ -29,8 +29,8 @@
       "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
     },
     "pricing": {
-      "title": "Fiyatlar: Web Sitesi ve Yazılım Paketleri",
-      "description": "Web sitesi, e-ticaret, özel web uygulaması ve AI otomasyon için şeffaf başlangıç bantları: 10.000 TL'den başlayan paketler ve fiyatı etkileyen faktörler."
+      "title": "Fiyatlar: Web, Mobil, SEO ve Reklam",
+      "description": "Şeffaf başlangıç bantları: web sitesi 10.000 TL’den, mobil uygulama 180.000 TL’den, SEO & GEO 7.000 TL/ay, reklam yönetimi 10.000 TL/ay."
     },
     "projectTitle": "{title}: Proje İncelemesi",
     "projectDescSuffix": "Kapsam, teknoloji ve süreç detaylarıyla Piton Studios proje incelemesi."
@@ -3937,6 +3937,70 @@
           "Teslim: kapsama göre 8 hafta ve üzeri",
           "Sürekli bakım anlaşması opsiyonu"
         ]
+      },
+      "mobile": {
+        "name": "Mobil uygulama",
+        "price": "180.000–500.000 ₺",
+        "desc": "iOS ve Android için tek kod tabanından geliştirilen, mağazalarda yayına alınan mobil uygulama.",
+        "includes": [
+          "İhtiyaç analizi ve platform kararı (native mi, PWA mı)",
+          "iOS + Android için tek kod tabanı (React Native/Expo)",
+          "Özel arayüz tasarımı ve uygulama içi akışlar",
+          "Backend, kimlik doğrulama ve bildirim altyapısı",
+          "Native donanım erişimi: kamera, konum, bildirim",
+          "Gerçek cihaz testleri ve mağaza inceleme uyumu",
+          "App Store ve Google Play yayını; geliştirici hesabı sizde kalır",
+          "Teslim: 8–16 hafta · yayın sonrası 2 ay destek"
+        ]
+      }
+    },
+    "growth": {
+      "title": "Aylık büyüme hizmetleri",
+      "lead": "Site yayına girdikten sonrası ayrı bir iş: görünürlük ve talep. Bu üç hizmet proje bedelinden bağımsız, aylık çalışır.",
+      "monthlyLabel": "aylık, başlangıç",
+      "adsLabel": "aylık yönetim · bütçe hariç",
+      "linkLabel": "Hizmet detayı",
+      "note": "Reklam bütçesi bu bedellere dahil değildir; Google ve Meta’ya doğrudan siz ödersiniz, harcama sizin hesabınızdan geçer. Öğrenme döneminin anlamlı veri üretebilmesi için asgari aylık 1.500 $ reklam bütçesi öneriyoruz. SEO & GEO tarafında teknik düzeltmelerin etkisi 2–4 haftada, içerik etkisi 3–6 ayda görülür — bu yüzden kısa süreli çalışma önermiyoruz.",
+      "items": {
+        "seo-geo": {
+          "name": "SEO & GEO",
+          "price": "7.000 ₺",
+          "desc": "Google’da sıralamak ve yapay zekâ modellerinde kaynak gösterilmek — iki ayrı disiplin, tek çalışma.",
+          "includes": [
+            "Teknik SEO denetimi ve öncelikli düzeltme listesi",
+            "Core Web Vitals ve indeksleme iyileştirmeleri",
+            "Yapılandırılmış veri (schema) kurulumu",
+            "Arama niyetine göre içerik haritası ve takvim",
+            "GEO katmanı: modellerin alıntılayabileceği içerik yapısı",
+            "Aylık sıralama, trafik ve alıntı raporu"
+          ]
+        },
+        "google-ads": {
+          "name": "Google Ads",
+          "price": "10.000 ₺",
+          "desc": "Arama ve Performance Max kampanyaları — gösterim değil, ölçülebilir dönüşüm hedefiyle.",
+          "includes": [
+            "Hesap denetimi veya sıfırdan kurulum",
+            "Kampanya mimarisi, anahtar kelime ve negatif liste",
+            "Dönüşüm takibi: GA4, Google Ads, sunucu tarafı",
+            "Reklam metni ve görsel testleri",
+            "Haftalık optimizasyon döngüsü",
+            "Aylık rapor: dönüşüm, maliyet, ROAS"
+          ]
+        },
+        "meta-ads": {
+          "name": "Meta Reklamları",
+          "price": "10.000 ₺",
+          "desc": "Facebook ve Instagram kampanyaları — beğeni değil, talep ve satış üretmek için.",
+          "includes": [
+            "Hesap denetimi, Pixel ve Conversions API kurulumu",
+            "Kampanya mimarisi ve kitle segmentasyonu",
+            "Reklam kreatifi üretimi (statik, video, carousel)",
+            "Yeniden pazarlama ve benzer kitleler",
+            "Düzenli kreatif yenileme ve test",
+            "Aylık rapor: dönüşüm, maliyet, ROAS"
+          ]
+        }
       }
     },
     "ai": {

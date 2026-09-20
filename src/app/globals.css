@@ -6955,6 +6955,17 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   background: var(--accent);
 }
 
+/* 5. paket (mobil uygulama) tek basina kaldigi icin iki sutunu kaplar */
+.pricing-card--wide { grid-column: 1 / -1; }
+.pricing-card--wide .pricing-band { align-self: flex-start; }
+@media (min-width: 1001px) {
+  .pricing-card--wide .pricing-includes ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 28px;
+  }
+}
+
 .pricing-note {
   font-size: 13px;
   line-height: 1.7;
@@ -6962,6 +6973,23 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   max-width: 64ch;
   margin-bottom: 72px;
 }
+
+/* Aylik buyume hizmetleri (SEO & GEO, Google Ads, Meta) */
+.pricing-growth { margin-bottom: 72px; }
+.pricing-growth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pricing-growth-link {
+  align-self: flex-start;
+  font-size: 12.5px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.pricing-growth-link:hover { color: var(--ink); border-color: var(--accent); }
+.pricing-growth-note { margin-top: 20px; margin-bottom: 0; }
 
 /* AI otomasyon karti */
 .pricing-ai {
@@ -7076,7 +7104,9 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   .pricing-ai-inner { grid-template-columns: 1fr; gap: 24px; }
   .pricing-factors-grid { grid-template-columns: 1fr 1fr; }
   .pricing-note { margin-bottom: 56px; }
-  .pricing-ai, .pricing-factors { margin-bottom: 56px; }
+  .pricing-growth-note { margin-bottom: 0; }
+  .pricing-growth-grid { grid-template-columns: 1fr; }
+  .pricing-ai, .pricing-factors, .pricing-growth { margin-bottom: 56px; }
 }
 @media (max-width: 640px) {
   .pricing-factors-grid { grid-template-columns: 1fr; }
@@ -7086,6 +7116,7 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   .pricing-card,
   .pricing-factor,
   .pricing-faq-link,
+  .pricing-growth-link,
   .pricing-roi-link {
     transition: none;
   }
