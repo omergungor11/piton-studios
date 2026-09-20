@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-20 — Proje sayacı 50+ ve takım kartı ismi
+
+- Anasayfa Spark sahnesindeki "Tamamlanan Proje" sayacı `40+` → `50+` (`scenes/spark.tsx`); hero "Rakamlarla Piton Studios" istatistiği `49+` → `50+` (tr/en/ru). Portfolyoda 52 proje var.
+- Hakkında → Takım kartında isim "Ömer Faruk Güngör" oldu (`legal.ts`'teki veri sorumlusu adıyla aynı); avatar baş harfleri `ÖG` kaldı.
+- Açık: SSS cevaplarında hâlâ "49 teslim edilmiş proje" / "50 proje" geçiyor — güncellenmedi.
+
 ## 2026-09-20 — Liste görselleri, blog sayfalama ve blog yazı görselleri (TASK-080..082)
 
 **Projeler tablosu — görsel kolonu (TASK-080)**

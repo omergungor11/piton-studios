@@ -8,7 +8,7 @@ const WP_NUMBER = '905439500750';
 const EMAIL     = 'hi@pitonstudios.com';
 
 const STATS = [
-  { value: '40+', labelKey: 'completedProjects' },
+  { value: '50+', labelKey: 'completedProjects' },
   { value: '5+',  labelKey: 'yearsExperience'  },
   { value: '24h', labelKey: 'responseTime'     },
 ] as const;

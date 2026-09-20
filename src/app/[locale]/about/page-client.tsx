@@ -110,7 +110,7 @@ export default function AboutPageClient() {
         <div className="ap-team-card" data-cursor="hover">
           <div className="ap-team-avatar">ÖG</div>
           <div className="ap-team-info">
-            <h3 className="ap-team-name">Ömer Güngör</h3>
+            <h3 className="ap-team-name">Ömer Faruk Güngör</h3>
             <div className="ap-team-role">{ts('team.role')}</div>
             <p className="ap-team-desc">{ts('team.desc')}</p>
           </div>
