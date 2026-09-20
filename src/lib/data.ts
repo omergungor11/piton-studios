@@ -286,6 +286,50 @@ export const WORKS: Work[] = [
   },
   {
     n: "10",
+    slug: "kabizzu",
+    title: "Kabizzu",
+    client: "Piton Studios",
+    kind: "Web Design · Architecture",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Scroll Animation", "Vanilla JS", "Lenis", "Architecture"],
+    image: "story-04.jpg",
+    summary: "Scroll-driven concept site for an architecture and interior studio — layered photography, horizontal room showcase and a choreographed intro.",
+    body: [
+      "Kabizzu, mimarlık ve iç mekân odaklı bir stüdyo için tasarladığımız konsept site. Krem ve zeytin tonları, büyük serif tipografi ve scroll ile ilerleyen katmanlı görseller üzerine kurulu; açılışta iki sıralı fotoğraf şeridi merkezde toplanıp tam ekran kapağa dönüşüyor, ardından dört konsept mekân dikey kaydırmayla yatay olarak geziliyor.",
+      "Site framework ve build adımı olmadan, saf HTML, CSS ve JavaScript ile yazıldı; yumuşak kaydırma için yalnızca Lenis kullanıldı. Scroll geometrisi DOM'dan bağımsız bir modülde tutulup otomatik test ediliyor. Azaltılmış hareket tercihi, klavye erişimi, mobil düzen ve yerel WebP görsel ile fontlar baştan hesaba katıldı. Projeler, görseller ve metinler bir tasarım konseptini temsil eder; formlar demodur.",
+    ],
+    scope: "Web design, scroll animation, front-end",
+    url: "https://kabizzu.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/kabizzu.webp',
+      mobile: '/assets/previews/mobile/kabizzu.webp',
+    },
+  },
+  {
+    n: "11",
+    slug: "3monkeys-bozuyuk",
+    title: "3 Monkeys Bozüyük",
+    client: "Piton Studios",
+    kind: "Web Design · Restaurant",
+    year: "2026",
+    role: "Design / Development",
+    tags: ["Next.js", "Scroll Animation", "WebGL", "Restaurant"],
+    image: "story-05.jpg",
+    summary: "Concept website for a burger house — a burger that assembles layer by layer on scroll and a real-time WebGL smoke hero.",
+    body: [
+      "3 Monkey Burger House'un Bozüyük şubesi için hazırladığımız, Türkçe ve mobil uyumlu bir web sitesi konsepti. Sinematik ana ekranda üç burgerli sahnenin üzerinde gerçek zamanlı duman süzülüyor; sayfa kaydırıldıkça altı ayrı fotoğraf katmanı — ekmek, sos, cheddar, köfte, yeşillik — tek bir burgerde birleşiyor. Ana sayfa, menü, hikâyemiz ve iletişim ayrı sayfalar olarak kurgulandı.",
+      "Next.js App Router, React 19 ve TypeScript ile geliştirildi. Burger sahnesi bir 3B model değil, CSS perspektifiyle kurulmuş 2.5D bir katman düzeni; duman ise bağımlılıksız bir WebGL shader'ı. Bu bağımsız bir tasarım konseptidir, restoranın resmî sitesi değildir; sahne görselleri temsilîdir, fiyat ve doğrulanamayan bilgiler gösterilmez.",
+    ],
+    scope: "Web design, scroll animation, WebGL",
+    url: "https://3monkeysbozuyuk.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/3monkeys-bozuyuk.webp',
+      mobile: '/assets/previews/mobile/3monkeys-bozuyuk.webp',
+    },
+  },
+  {
+    n: "12",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -307,7 +351,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "11",
+    n: "13",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -329,7 +373,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "12",
+    n: "14",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -351,7 +395,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "15",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -373,7 +417,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "16",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -391,7 +435,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "15",
+    n: "17",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -409,7 +453,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "16",
+    n: "18",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -430,7 +474,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "17",
+    n: "19",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -451,7 +495,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "18",
+    n: "20",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -472,7 +516,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "19",
+    n: "21",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -493,7 +537,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "22",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -515,7 +559,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "21",
+    n: "23",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -532,7 +576,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "22",
+    n: "24",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -553,7 +597,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "23",
+    n: "25",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -574,7 +618,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "24",
+    n: "26",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -594,7 +638,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "25",
+    n: "27",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -616,7 +660,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "26",
+    n: "28",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -638,7 +682,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "27",
+    n: "29",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -660,7 +704,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "28",
+    n: "30",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -681,7 +725,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "31",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -703,7 +747,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "30",
+    n: "32",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -723,7 +767,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "31",
+    n: "33",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -745,7 +789,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "32",
+    n: "34",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -766,7 +810,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "35",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -787,7 +831,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "34",
+    n: "36",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton Studios",
@@ -804,7 +848,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "35",
+    n: "37",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton Studios",
@@ -821,7 +865,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "36",
+    n: "38",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton Studios",
@@ -841,7 +885,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "37",
+    n: "39",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton Studios",
@@ -858,7 +902,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "38",
+    n: "40",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton Studios",
@@ -875,7 +919,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "39",
+    n: "41",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton Studios",
@@ -892,7 +936,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "40",
+    n: "42",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton Studios",
@@ -912,7 +956,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "41",
+    n: "43",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -929,7 +973,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "42",
+    n: "44",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -946,7 +990,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "43",
+    n: "45",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -963,7 +1007,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "44",
+    n: "46",
     slug: "lithos",
     title: "Lithos",
     client: "Lithos",
@@ -985,7 +1029,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "45",
+    n: "47",
     slug: "vanguard",
     title: "Vanguard",
     client: "Vanguard",
@@ -1007,7 +1051,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "46",
+    n: "48",
     slug: "jack-portfolio",
     title: "Jack — 3D Creator",
     client: "Jack Portfolio",
@@ -1029,7 +1073,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "47",
+    n: "49",
     slug: "veldara",
     title: "Veldara",
     client: "Veldara",
@@ -1051,7 +1095,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "48",
+    n: "50",
     slug: "emlak-sync",
     title: "Emlak Sync",
     client: "Emlak Sync",
@@ -1068,7 +1112,7 @@ export const WORKS: Work[] = [
     scope: "Listing sync, portal integrations, automation",
   },
   {
-    n: "49",
+    n: "51",
     slug: "dolmus-kontrol",
     title: "Dolmuş Güzergah Kontrol",
     client: "Piton Studios",
@@ -1085,7 +1129,7 @@ export const WORKS: Work[] = [
     scope: "Automation, data processing, reporting",
   },
   {
-    n: "50",
+    n: "52",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",
