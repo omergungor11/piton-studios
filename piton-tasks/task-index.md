@@ -18,9 +18,10 @@
 | 11 | Büyüme Sayfaları | 6 | 6 | 0 | 0 | 0 |
 | 12 | Hizmet & URL Yeniden Yapılanması | 5 | 5 | 0 | 0 | 0 |
 | 13 | SEO, Dönüşüm & Görsel Deneyim (TASK-071..078) | 8 | 7 | 0 | 0 | 0 |
-| **Total** | | **77** | **76** | **0** | **0** | **0** |
+| 14 | Fiyatlandırma (TASK-079) | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **78** | **77** | **0** | **0** | **0** |
 
-**Progress**: 76/77 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 77/78 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -167,4 +168,5 @@
 | TASK-063 | 12 hizmet × sektör çözüm sayfası (`/cozumler`, `/cozumler/[slug]`) | L | COMPLETED |
 | TASK-064 | 5 karşılaştırma yazısı × 3 dil (ajans/freelancer, site kurucu, Shopify, PWA, Google Ads/SEO) | L | COMPLETED |
 | TASK-065 | 6 rakamsız teknik vaka çalışması (`works.{slug}.caseStudy`) × 3 dil + Supabase izlerinin kaldırılması | M | COMPLETED |
+| TASK-079 | Fiyatlar sayfası: mobil uygulama paketi (piyasa analiziyle 180.000–500.000 ₺) + aylık büyüme hizmetleri bölümü (SEO & GEO 7.000 ₺/ay, Google Ads ve Meta 10.000 ₺/ay, reklam bütçesi hariç) × 3 dil | M | COMPLETED |
 | TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): iki satır — menü / teknoloji ikonları · "Piton Studios © 2026" · hukuki linkler; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |

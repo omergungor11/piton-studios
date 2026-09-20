@@ -15,7 +15,7 @@ import type { Locale } from '@/lib/site';
 import PricingContent, { type PricingPostLink } from '@/components/pricing-content';
 
 /** Bantlar guncellendiginde bu tarihi de guncelleyin — WebPage.dateModified buradan okunur. */
-const PRICING_UPDATED = '2026-08-24';
+const PRICING_UPDATED = '2026-09-20';
 
 // PageShell `common`, alt CTA ise `spark` namespace'ini kullaniyor.
 const NAMESPACES = ['common', 'spark'] as const;

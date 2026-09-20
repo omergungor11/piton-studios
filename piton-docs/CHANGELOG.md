@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-20 — Fiyatlar sayfası: mobil uygulama ve aylık büyüme hizmetleri (TASK-079)
+
+- **Mobil uygulama paketi** (5. kart, tam genişlik): **180.000–500.000 ₺** / €4.000–€11.100. Band piyasa taramasıyla belirlendi — TR'de cross-platform MVP 120.000–250.000 ₺, orta seviye iş uygulaması 250.000–500.000 ₺ (Edvido, Makrops, Demircode; uluslararası RN/Flutter MVP $5–25k). Taban mevcut özel web uygulaması bandının (150.000 ₺+) üstünde: iki mağaza, gerçek cihaz testi, store review ve bildirim altyapısı. İçerik ve "8–16 hafta" süresi `mobile-app` hizmet sayfasının kendi verisinden.
+- **Aylık büyüme hizmetleri** bölümü (paketlerin altında, 3 kart, hizmet sayfalarına linkli): SEO & GEO **7.000 ₺/ay** (€150), Google Ads ve Meta Reklamları **10.000 ₺/ay** (€200). Bant etiketi reklam hizmetlerinde "aylık yönetim · bütçe hariç"; bölüm notunda reklam bütçesinin Google/Meta'ya doğrudan ödendiği ve hizmet sayfasındaki asgari 1.500 $/ay bütçe önerisi yazılı. Uydurma rakam yok.
+- Metinler `messages/{tr,en,ru}.json` → `pricingPage.packages.mobile` ve `pricingPage.growth`; euro karşılıkları mevcut 1 € = 45 ₺ kuruyla. Sayfa başlığı/açıklaması yeni hizmetleri kapsayacak şekilde güncellendi, `PRICING_UPDATED` (WebPage `dateModified`) 2026-09-20.
+- CSS: tek kalan 5. kart iki sütunu kaplıyor (`.pricing-card--wide`, ≥1001px'te iki sütunlu içerik listesi), `.pricing-growth-grid` 3 sütun / mobilde tek. Build 841 sayfa, typecheck + lint + `content:check` temiz.
+
 ## 2026-09-20 — Lenis yumuşak kaydırma ve metin animasyonları (TASK-078)
 
 - **Lenis** (`lenis` 1.3): tüm sitede yumuşak tekerlek kaydırması (`src/components/motion/smooth-scroll.tsx`); dokunmatikte doğal kaydırma, reduced-motion'da kapalı. Çakışmalar giderildi: 3B proje bulutu tekerleği tükettiğinde `stopPropagation` (Lenis `defaultPrevented`'a bakmıyor), yılan scrollbar ve anasayfa sahne gezinmesi `lenis.scrollTo`, mobil menü/preloader açıkken `lenis.stop()`, mega menü ve mobil menü `data-lenis-prevent`, sayfa geçişinde başa dönüş.
