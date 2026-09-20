@@ -12,6 +12,7 @@ import { Link } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
 import BlogToc from '@/components/blog-toc';
+import BlogHeroArt from '@/components/blog-visuals/blog-hero-art';
 import SplitWords from '@/components/motion/split-words';
 import { mdxComponents } from '@/components/mdx/mdx-components';
 import {
@@ -190,6 +191,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             )}
           </header>
+
+          {/* Hero sahnesi (translationKey basina); sahnesi olmayan yazida null doner. */}
+          <BlogHeroArt artKey={post.translationKey} label={post.title} />
 
           <BlogToc title={t('tableOfContents')} headings={headings} />
 

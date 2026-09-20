@@ -1,0 +1,35 @@
+/*
+ * Blog sahnelerinin yerlesimi. Cerceve (.sv-stage) ve animasyon siniflari (sv-flow/sv-pulse/
+ * sv-float) globals.css'te tanimli — burada yalnizca bu iki kullanimin bosluk/tipografisi var.
+ */
+
+.hero {
+  margin: 34px 0 6px;
+}
+
+.figure {
+  margin: 0;
+}
+
+.stage {
+  /* Kart icindeki sahne: dis cerceveden bir tik daha yumusak koseler. */
+  border-radius: 14px;
+}
+
+.caption {
+  display: block;
+  margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    margin: 24px 0 4px;
+    border-radius: 16px;
+  }
+}
+
+.cardStage {
+  /* Liste kartindaki sahne: hero'dan kucuk, kosesi kart ritmine uygun. */
+  border-radius: 14px;
+  box-shadow: 0 24px 50px -40px rgba(211, 58, 62, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.35);
+}

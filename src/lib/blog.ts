@@ -158,6 +158,28 @@ export function getAllPosts(locale: Locale): PostMeta[] {
   return loadLocale(locale).map(({ content: _content, ...meta }) => meta);
 }
 
+/** Blog ve etiket listelerinde sayfa basina yazi sayisi. */
+export const POSTS_PER_PAGE = 10;
+
+/** Toplam yazi sayisindan sayfa adedi — bos liste de tek sayfadir. */
+export function getPageCount(total: number, perPage = POSTS_PER_PAGE): number {
+  return Math.max(1, Math.ceil(total / perPage));
+}
+
+/** Sayfa numarasina dusen dilim (1 tabanli). */
+export function paginatePosts<T>(posts: T[], page: number, perPage = POSTS_PER_PAGE): T[] {
+  return posts.slice((page - 1) * perPage, page * perPage);
+}
+
+/**
+ * URL'deki sayfa parametresini sayiya cevirir. Yalnizca bastaki sifiri olmayan pozitif
+ * tamsayilar kabul edilir ("02", "2.5", "-1", "abc" → undefined → notFound).
+ */
+export function parsePageParam(value: string): number | undefined {
+  if (!/^[1-9][0-9]{0,4}$/.test(value)) return undefined;
+  return Number(value);
+}
+
 export function getPost(locale: Locale, slug: string): Post | undefined {
   return loadLocale(locale).find((p) => p.slug === slug);
 }

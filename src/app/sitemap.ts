@@ -5,7 +5,8 @@ import { getAllProjectSlugs, getAllServiceSlugs } from '@/lib/data';
 import { getAllSectorSlugs } from '@/lib/sectors';
 import { getAllLocationSlugs } from '@/lib/locations';
 import { getAllSolutionSlugs } from '@/lib/solutions';
-import { getAllPosts, getAllTags, slugifyTag } from '@/lib/blog';
+import { getAllPosts, getAllTags, getPageCount, getPostsByTag, slugifyTag } from '@/lib/blog';
+import { blogPageHref, blogTagPageHref } from '@/lib/blog-links';
 import { LEGAL_READY } from '@/lib/legal';
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -87,6 +88,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
   }
 
+  // Sayfalanmis blog listesi (2. sayfadan itibaren; 1. sayfa /blog girdisidir).
+  // Yazi sayisi dile gore degisebilir: sayfa her dilde varsa hreflang'li ortak girdi,
+  // degilse yalnizca o dilin tekil girdisi uretilir — hreflang kirik hedef gostermesin.
+  const blogPages = new Map(locales.map((locale) => [locale, getPageCount(getAllPosts(locale).length)]));
+  const maxBlogPages = Math.max(...blogPages.values());
+  for (let page = 2; page <= maxBlogPages; page++) {
+    const href = blogPageHref(page);
+    const present = locales.filter((locale) => (blogPages.get(locale) ?? 1) >= page);
+    if (present.length === locales.length) {
+      all.push(...entries(href, { changeFrequency: 'weekly', priority: 0.5 }));
+    } else {
+      for (const locale of present) {
+        all.push({
+          url: absoluteUrl(locale, href),
+          lastModified: new Date(),
+          changeFrequency: 'weekly',
+          priority: 0.5,
+        });
+      }
+    }
+  }
+
   // Blog yazilari dil basina bagimsiz — her dilde ayni yazi olmayabilir,
   // bu yuzden alternates yerine dil basina tekil girdi uretiliyor.
   for (const locale of locales) {
@@ -99,15 +122,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    // Etiketler dile ozgu (hreflang yok) — sayfalanmis surumleri de dil basina tekil girdi.
     for (const { tag } of getAllTags(locale)) {
-      all.push({
-        url: absoluteUrl(locale, {
-          pathname: '/blog/tag/[tag]',
-          params: { tag: slugifyTag(tag) },
-        }),
-        changeFrequency: 'weekly',
-        priority: 0.4,
-      });
+      const tagSlug = slugifyTag(tag);
+      const pages = getPageCount(getPostsByTag(locale, tagSlug).length);
+      for (let page = 1; page <= pages; page++) {
+        all.push({
+          url: absoluteUrl(locale, blogTagPageHref(tagSlug, page)),
+          changeFrequency: 'weekly',
+          priority: page === 1 ? 0.4 : 0.3,
+        });
+      }
     }
   }
 

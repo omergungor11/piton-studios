@@ -50,14 +50,31 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   `common` olmali (yoksa footer ham anahtar gosterir)
 - **Videolar**: YOK — `videos/` (289 MB) 2026-07-28'de silindi, kodda tek referansi yoktu
 - **Proje detay hero**: Screenshot IS the hero — Desktop/Mobile toggle hero icinde sag ust
-- **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli)
+- **Projeler sayfasi**: `pp-showcase` yatay screenshot seridi (toggle'li, kareler oranli).
+  2026-09-20: proje tablosunda **gorsel kolonu** var (16:9, `previews.desktop`, tembel yuklenir);
+  ekran goruntusu olmayan 15 projede baslik bas harfleri gosterilir (`pp-row-thumb-empty`)
 - **Blog**: MDX tabanli, `content/blog/{tr,en,ru}/*.mdx` — liste, yazi, etiket sayfalari + RSS.
-  8 yazi × 3 dil. Yazi sayfasinda otomatik icindekiler tablosu (`blog-toc.tsx`), frontmatter
+  **20 yazi × 3 dil**. Yazi sayfasinda otomatik icindekiler tablosu (`blog-toc.tsx`), frontmatter
   `faq` alani (SSS bolumu + FAQPage JSON-LD) ve MDX component'leri var:
-  `BarChart`, `TrendChart`, `StatGrid`, `Callout`, `KeyTakeaways`
+  `BarChart`, `TrendChart`, `StatGrid`, `Callout`, `KeyTakeaways`, `BlogFigure`
   (`src/components/mdx/mdx-components.tsx`).
   > MDXRemote'ta `blockJS: false` **zorunlu** — varsayilan `true`, MDX icindeki tum JS
   > ifadelerini siler ve component prop'lari `undefined` gelir
+  - **Sayfalama** (2026-09-20): sayfa basina 10 yazi, yol tabanli. `POSTS_PER_PAGE` + `paginatePosts`
+    `src/lib/blog.ts`'te, URL'ler `src/lib/blog-links.ts`'ten uretilir (tek kaynak: sayfa, metadata,
+    sayfalama bileseni, sitemap). Segment 3 dilde cevrili: `/tr/blog/sayfa/2`, `/en/blog/page/2`,
+    `/ru/blog/stranitsa/2` (+ etiket sayfalari). `sayfa/1` → kanonik listeye 307, aralik disi → 404.
+    Her sayfa kendi canonical'i + `rel=prev/next`; sitemap sayfalanmis adresleri hreflang'li icerir.
+    Kart seridi ortak: `src/components/blog-post-list.tsx`.
+  - **Yazi gorselleri** (2026-09-20): `src/components/blog-visuals/` — `translationKey` basina 1 hero
+    sahnesi (20) + konusu uyan 9 yazida govde semasi (`<BlogFigure name="…" />`). Sahneler dil
+    bagimsizdir (kelime icermez), tr/en/ru ayni sahneyi paylasir; palet `service-visuals/kit`'ten gelir
+    ve ayni sahne kurallari gecerlidir. Hero dekoratif (`aria-hidden`), govde semasi anlam tasir
+    (`alt` zorunlu + gorunur `caption`, her dilin kendi MDX'inde). Blog listesi kartlarinda da ayni
+    sahne kucuk halde gosterilir (`blog-card-art.tsx`, tembel).
+    > `BLOG_ART` istemci modulu; sunucu tarafi "bu yazinin sahnesi var mi" sorusunu
+    > `blog-visuals/art-keys.ts` → `hasBlogArt()` ile sorar. Yeni sahne eklerken **iki dosya birden**
+    > guncellenir (tip zaten uyusmazligi derlemede yakalar).
 - **SSS sayfasi** (2026-08-14): `/sss` · `/en/faq` · `/ru/faq` — 12 kategori, **75 soru × 3 dil**.
   Yapi `src/lib/faq.ts` (kategoriler + kalici soru id'leri + ilgili hizmet/blog baglantilari),
   metinler `messages/*.json` → `faqItems`. Plan: `piton-plans/faq-page-plan.md`
@@ -120,8 +137,9 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   > açılınca). Analytics/Speed Insights çerezsiz. Yeni çerez, izleme pikseli, harici script veya
   > üçüncü taraf servis eklenirse **çerez politikası + gizlilik metni (3 dil) + `LEGAL.updated`**
   > birlikte güncellenmeli; zorunlu olmayan çerez eklenirse onay banner'ı gerekir.
-- **Ceviriler**: 429/429 eksiksiz (works 50, stories 6, servicesList 12, faqItems 75 × 3 dil).
-  `pnpm content:check` ile dogrulanir — **her yeni icerikten sonra calistirin**, eksik varsa exit 1.
+- **Ceviriler**: `pnpm content:check` 615 kontrol / 0 sorun (works 50, stories 6, servicesList,
+  faqItems 75, locationItems, solutionItems, serviceVisuals, `blog.pagination` × 3 dil).
+  **Her yeni icerikten sonra calistirin** — eksik ceviri varsa exit 1.
 - **E-posta altyapisi (2026-09-15)**: gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi;
   MX `mx.zoho.eu`). Form gonderimi Resend ile — `pitonstudios.com` Resend'te dogrulandi (`send.` alt alan adi).
   Vercel env: `RESEND_API_KEY`, `CONTACT_NOTIFY_EMAIL` (hedef `hi@pitonstudios.com`), `CONTACT_FROM_EMAIL`.
@@ -264,7 +282,10 @@ Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/
   Metinler `serviceVisuals.<slug>` (alt, flow.title/caption/nodes) — `pnpm content:check` denetler.
 - Kurallar: sahnede **kelime/rakam yok**, yalnizca kit renkleri/filtreleri; hareket yalnizca `sv-flow`/`sv-pulse`/
   `sv-float` siniflariyla (reduced-motion'da durur). `sv-float`, `transform` niteligi olan `<g>`'ye konmaz
-  (CSS transform ezer). Gorseller yalnizca hizmet detayinda — menude/listelerde yok (kullanici karari).
+  (CSS transform ezer). Sahneler hizmet **detayinda, hizmet listesinde** (`/hizmetler` kartlari) ve fiyat
+  kartlarinda kullanilir; menude yok. 2026-09-20: liste kartlarina eklendi — onceki "yalnizca detayda"
+  karari kullanici tarafindan degistirildi. Liste kartinda sahne `services/service-card-art.tsx` ile
+  IntersectionObserver'la tembel render edilir ve animasyon yalnizca hover'da calisir (18 sahne ayni anda donmesin).
 - Yeni hizmet eklenirse: sahne + `flows.ts` girdisi + 3 dilde `serviceVisuals` + `index.tsx` haritasi.
 
 ### Kaydirma ve animasyon sistemi (2026-09-20, plan: piton-plans/motion-plan.md)

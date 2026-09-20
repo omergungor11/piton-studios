@@ -1,0 +1,79 @@
+/* Hizmet listesi kartlarindaki SVG sahne alani (detay sayfasindaki .sv-stage'in kucuk hali). */
+
+.card {
+  /* Sahne .svc'nin kendi padding/gap duzenine oturur; ek bir kural gerekmiyor */
+  position: relative;
+}
+
+/* Ok isareti artik koyu sahnenin uzerinde duruyor — okunur kalsin */
+.card :global(.svc-arrow) {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid rgba(242, 239, 233, 0.12);
+  box-shadow: 0 24px 50px -42px rgba(211, 58, 62, 0.5);
+}
+
+.stage :global(.sv-art) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Listede 18 sahne ayni anda donerse gorsel gurultu olur: hareket varsayilan olarak durur,
+ * yalnizca isaretci kartin uzerindeyken calisir. Kare dizileri globals.css'teki sv-* ile ayni,
+ * ancak CSS module kapsaminda yeniden tanimlandi (global kare adlari modulde cozulmez).
+ */
+.stage :global(.sv-flow),
+.stage :global(.sv-pulse),
+.stage :global(.sv-float) {
+  animation: none;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card:hover .stage :global(.sv-flow) {
+    animation: cardDash 1.8s linear infinite;
+  }
+  .card:hover .stage :global(.sv-pulse) {
+    animation: cardPulse 2.6s ease-out infinite;
+  }
+  .card:hover .stage :global(.sv-float) {
+    animation: cardFloat 7s ease-in-out infinite;
+  }
+}
+
+@keyframes cardDash {
+  to {
+    stroke-dashoffset: -44;
+  }
+}
+
+@keyframes cardPulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes cardFloat {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 640px) {
+  .stage {
+    border-radius: 10px;
+  }
+}

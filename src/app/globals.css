@@ -3471,7 +3471,7 @@ html[data-theme="light"] .ip-dim:hover { background: rgba(0,0,0,0.035); }
 .pp-table { border-radius: 22px; overflow: hidden; }
 .pp-table-header {
   display: grid;
-  grid-template-columns: 60px 1.4fr 1fr 1fr 70px;
+  grid-template-columns: 60px 96px 1.4fr 1fr 1fr 70px;
   gap: 16px; padding: 14px 20px;
   font-size: 11px; letter-spacing: 0;
   text-transform: none; color: var(--muted);
@@ -3481,7 +3481,7 @@ html[data-theme="light"] .ip-dim:hover { background: rgba(0,0,0,0.035); }
 }
 .pp-table-row {
   display: grid;
-  grid-template-columns: 60px 1.4fr 1fr 1fr 70px;
+  grid-template-columns: 60px 96px 1.4fr 1fr 1fr 70px;
   gap: 16px; padding: 18px 20px;
   align-items: center;
   border-bottom: 1px solid var(--line);
@@ -3492,6 +3492,31 @@ html[data-theme="light"] .ip-dim:hover { background: rgba(0,0,0,0.035); }
 html[data-theme="light"] .pp-table-row:hover { background: rgba(0,0,0,0.04); }
 .pp-row-n { font-size: 12px; color: var(--muted); letter-spacing: 0.2em; font-family: var(--font-mono); font-weight: 500; }
 .pp-table-row:hover .pp-row-n { color: var(--accent); }
+.pp-row-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  transition: border-color 200ms ease, transform 400ms cubic-bezier(.2,.8,.2,1);
+}
+html[data-theme="light"] .pp-row-thumb { background: rgba(0,0,0,0.03); }
+.pp-row-thumb img { object-fit: cover; object-position: top center; }
+.pp-row-thumb-empty {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-sans); font-size: 14px; font-weight: 700;
+  letter-spacing: 0.06em; color: var(--muted);
+  background:
+    linear-gradient(135deg, rgba(183,23,39,0.16), transparent 62%);
+}
+.pp-table-row:hover .pp-row-thumb-empty { color: var(--ink-soft); }
+.pp-table-row:hover .pp-row-thumb { border-color: var(--accent); transform: scale(1.06); }
+@media (prefers-reduced-motion: reduce) {
+  .pp-table-row:hover .pp-row-thumb { transform: none; }
+}
 .pp-row-title {
   font-family: var(--font-sans);
   font-size: clamp(19px, 2.4vw, 30px);
@@ -4956,7 +4981,7 @@ html[data-theme="light"] .mobile-menu-item:active {
 @media (max-width: 1000px) {
   .sp-grid { grid-template-columns: 1fr 1fr; }
   .pp-stories-grid { grid-template-columns: 1fr 1fr; }
-  .pp-table-header, .pp-table-row { grid-template-columns: 40px 1fr 60px; }
+  .pp-table-header, .pp-table-row { grid-template-columns: 40px 56px 1fr 60px; gap: 12px; }
   .pp-hide-mobile { display: none; }
   .sp-cta { flex-direction: column; text-align: center; padding: 32px 24px; }
   .page-main { padding: 100px 16px 40px; }
@@ -5830,7 +5855,15 @@ h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
   color: inherit;
   transition: padding-left .25s ease;
 }
+/* Sahnesi olan yazida kart iki sutun: solda gorsel, sagda metin. */
+.blog-card-link--art {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
 .blog-card-link:hover { padding-left: 12px; }
+.blog-card-body { min-width: 0; }
 .blog-card-meta {
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-mono);
@@ -6391,6 +6424,7 @@ h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
 
 @media (max-width: 700px) {
   .blog-card-link { padding: 24px 0; }
+  .blog-card-link--art { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .blog-card-link:hover { padding-left: 0; }
   .blog-post { margin-bottom: 64px; }
   .blog-prose { font-size: 16px; }

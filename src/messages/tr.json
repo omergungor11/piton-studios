@@ -70,7 +70,16 @@
     "readMore": "Devamini oku",
     "shareTitle": "Paylas",
     "tableOfContents": "İçindekiler",
-    "faqTitle": "Sikca sorulan sorular"
+    "faqTitle": "Sikca sorulan sorular",
+    "pagination": {
+      "label": "Sayfalama",
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "goToPage": "Sayfa {page}",
+      "status": "Sayfa {page} / {total}",
+      "metaTitle": "{title} — Sayfa {page}",
+      "metaDescription": "{description} Sayfa {page}/{total}."
+    }
   },
   "hero": {
     "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",

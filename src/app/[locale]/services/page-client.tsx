@@ -6,16 +6,20 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
+import { SERVICE_ART } from '@/components/service-visuals';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
 import SnakeBorder from '@/components/snake-border';
 import SparkScene from '@/components/scenes/spark';
+import ServiceCardArt from './service-card-art';
+import styles from './services-list.module.css';
 
 const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
 
 export default function ServicesPageClient() {
   const t = useTranslations('servicesPage');
   const ts = useTranslations('servicesList');
+  const tv = useTranslations('serviceVisuals');
   const [activeCat, setActiveCat] = useState('All');
 
   const filtered = activeCat === 'All' ? SERVICES : SERVICES.filter((s) => s.cat === activeCat);
@@ -70,23 +74,27 @@ export default function ServicesPageClient() {
               const title = ts(`${s.slug}.title`);
               const desc = ts(`${s.slug}.desc`);
               const items = ts.raw(`${s.slug}.items`) as string[];
+              const hasArt = s.slug in SERVICE_ART;
               return (
                 <Link
                   key={s.n}
                   href={{ pathname: '/services/[slug]', params: { slug: s.slug } }}
-                  className="svc"
+                  className={`svc ${styles.card}`}
                   data-cursor="hover"
                   data-cursor-label="+"
                   data-reveal="rise"
                   style={{ '--i': i % 6 } as CSSProperties}
                 >
+                  {hasArt && <ServiceCardArt slug={s.slug} label={tv(`${s.slug}.alt`)} />}
                   <div className="svc-top">
                     <span className="n">{s.n}</span>
                     <span className="cat">{t(`filterCat.${s.cat}`)}</span>
                   </div>
-                  <div className="svc-icon">
-                    {SERVICE_ICONS[s.slug] || null}
-                  </div>
+                  {!hasArt && (
+                    <div className="svc-icon">
+                      {SERVICE_ICONS[s.slug] || null}
+                    </div>
+                  )}
                   <h4>{title}</h4>
                   <p className="svc-desc">{desc}</p>
                   <ul className="svc-items">

@@ -1,10 +1,12 @@
 import type { ReactNode } from 'react';
 import NextLink from 'next/link';
+import BlogFigure from '@/components/blog-visuals/blog-figure';
 
 /**
  * MDX icinde kullanilabilen component'ler.
- * Hepsi server component — state yok, hook yok. Renkler tema degiskenlerinden
- * gelir, boylece acik/koyu temada ayni bilesenler calisir.
+ * Grafik ve kutular server component — state yok, hook yok. Renkler tema degiskenlerinden
+ * gelir, boylece acik/koyu temada ayni bilesenler calisir. Tek istisna `BlogFigure`:
+ * sahneler `next/dynamic` ile yuklendigi icin istemci modulu (bkz. blog-visuals/index.tsx).
  */
 
 /* ---------------------------------------------------------------- Callout */
@@ -350,6 +352,7 @@ function MdxLink({ href = '', children, ...rest }: React.ComponentProps<'a'>) {
 
 export const mdxComponents = {
   a: MdxLink,
+  BlogFigure,
   Callout,
   KeyTakeaways,
   StatGrid,

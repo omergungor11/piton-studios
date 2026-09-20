@@ -9,7 +9,7 @@ import { getLocalizedService } from "@/lib/content-i18n";
 import type { Locale } from "@/lib/site";
 import ServicesPageClient from "./page-client";
 
-const NAMESPACES = ["servicesPage", "servicesList", "impact", "spark", "common"] as const;
+const NAMESPACES = ["servicesPage", "servicesList", "serviceVisuals", "impact", "spark", "common"] as const;
 
 type Props = {
   params: Promise<{ locale: string }>;
