@@ -1,5 +1,36 @@
 # Changelog
 
+## 2026-09-20 — Liste görselleri, blog sayfalama ve blog yazı görselleri (TASK-080..082)
+
+**Projeler tablosu — görsel kolonu (TASK-080)**
+- Proje tablosunda No. ile başlık arasına 16:9 ekran görüntüsü kolonu (masaüstü 96px, ≤1000px 56px, `loading="lazy"`). Kaynak mevcut `previews.desktop` görselleri — yeni dosya eklenmedi.
+- Ekran görüntüsü olmayan 15 projede başlık baş harfleri gösteriliyor (`pp-row-thumb-empty`); ilk hali proje numarasını basıyordu, soldaki `[08]` kolonuyla tekrar ettiği için değiştirildi.
+- Hover'da görsel `scale(1.06)` + vurgu rengiyle çerçeveleniyor; `prefers-reduced-motion`'da hareket yok.
+
+**Hizmetler listesi — kart görselleri (TASK-080)**
+- 18 hizmet kartının hepsinde kendi SVG hero sahnesi (`SERVICE_ART`), kartın üstünde 16:10 kutuda. Sarmalayıcı `services/service-card-art.tsx` (`pricing-art.tsx` deseni) — sahne chunk'ı yalnızca kart görünüm alanına 400px yaklaşınca render ediliyor, kutu oranlı olduğu için layout kaymıyor.
+- 18 sahne aynı anda dönmesin diye listede animasyon varsayılan olarak kapalı; yalnızca `@media (hover: hover)` altında kart hover'ında çalışıyor. Hizmet detay sayfası ve fiyat kartları etkilenmedi.
+- Kartta zaten başlık + açıklama olduğu için sahne `aria-hidden`; yeni çeviri anahtarı eklenmedi. CSS `services-list.module.css`'te (globals.css'e dokunulmadı).
+- ⚠️ Bu, TASK-077'deki "görseller yalnızca hizmet detayında, menü/listelerde yok" kararını **tersine çeviriyor** — kullanıcı kararıyla.
+
+**Blog sayfalama (TASK-081)**
+- Sayfa başına 10 yazı (20 yazı → 2 sayfa). Yol tabanlı, query param değil: `/tr/blog/sayfa/2`, `/en/blog/page/2`, `/ru/blog/stranitsa/2` ve etiket karşılıkları. `sayfa/1` → kanonik listeye 307, aralık dışı/sayı olmayan → 404.
+- `POSTS_PER_PAGE` + `getPageCount` + `paginatePosts` + `parsePageParam` `src/lib/blog.ts`'te; URL'ler tek kaynaktan (`src/lib/blog-links.ts`) — sayfa, metadata, sayfalama bileşeni ve sitemap aynı yardımcıyı kullanıyor.
+- SEO: her sayfa kendi canonical'ı, `rel=prev/next`, başlık/açıklamada "Sayfa X / Y". Sitemap sayfalanmış blog adreslerini hreflang'li içeriyor (545 URL); etiket sayfaları `selfOnlyAlternates` olarak kaldı.
+- Sayfalama bileşeni `<nav aria-label>` + `aria-current="page"`; CSS `blog-pagination.module.css`. Metinler `blog.pagination` × 3 dil.
+- Yan fayda: 4 yerde tekrarlanan yazı kartı şeridi `src/components/blog-post-list.tsx`'e ortaklandı; blog ve etiket sayfaları ince route kabuğu oldu (`blog-index-view.tsx`, `tag-view.tsx`).
+- Not: şu an hiçbir etiketin 10'dan fazla yazısı yok (en çok `web tasarım` = 10) — etiket sayfalaması kodda hazır ama canlıda görünmüyor.
+
+**Blog yazı görselleri (TASK-082)**
+- `src/components/blog-visuals/`: `translationKey` başına 1 hero SVG sahnesi (20) + konusu şema gerektiren 9 yazıda gövde şeması. Sahneler dil bağımsız (kelime/rakam içermez), tr/en/ru aynı sahneyi paylaşıyor; palet `service-visuals/kit`'ten geliyor, yeni palet tanımlanmadı.
+- Gövde şeması MDX'ten `<BlogFigure name="…" />` ile kullanılıyor (`mdx-components.tsx`); 9 yazı × 3 dil = 27 yerleştirme, `alt` ve `caption` her dilin kendi MDX'inde. Hero dekoratif (`aria-hidden`), gövde şeması `role="img"` + görünür açıklama.
+- Blog **listesi** kartlarında da aynı sahnenin küçük hali var (`blog-card-art.tsx`, IntersectionObserver'la tembel). Kart düzeni iki sütuna geçti — solda görsel, sağda metin; ≤700px tek sütun (`.blog-card-link--art`).
+- `BLOG_ART` istemci modülü olduğu için sunucu tarafı "bu yazının sahnesi var mı" sorusunu `blog-visuals/art-keys.ts` → `hasBlogArt()` ile soruyor; `BLOG_ART` bu listeye göre tiplendiği için iki liste derlemede birbirinden kayamıyor.
+- Sahnelerin tamamı PNG'ye çevrilip gözle incelendi; üst üste binen katmanlar, yanlış WhatsApp tik sayısı, kutu gibi görünen veritabanı silindiri gibi hatalar düzeltildi.
+
+**Doğrulama**: `pnpm build` 844 statik sayfa (841'den), `typecheck` 0 hata, `lint` 0 hata / 18 mevcut uyarı, `content:check` 615/615.
+**Süreç notu**: üç iş üç paralel ajanla yürütüldü (dizin izolasyonu; `globals.css` ve `messages/*.json` tek sahibe verildi). Dev sunucusu bir ara eski CSS'i `.next` önbelleğinden servis etti — `.next` silinip yeniden başlatılarak çözüldü.
+
 ## 2026-09-20 — Fiyatlar sayfası: mobil uygulama ve aylık büyüme hizmetleri (TASK-079)
 
 - **Mobil uygulama paketi** (5. kart, tam genişlik): **180.000–500.000 ₺** / €4.000–€11.100. Band piyasa taramasıyla belirlendi — TR'de cross-platform MVP 120.000–250.000 ₺, orta seviye iş uygulaması 250.000–500.000 ₺ (Edvido, Makrops, Demircode; uluslararası RN/Flutter MVP $5–25k). Taban mevcut özel web uygulaması bandının (150.000 ₺+) üstünde: iki mağaza, gerçek cihaz testi, store review ve bildirim altyapısı. İçerik ve "8–16 hafta" süresi `mobile-app` hizmet sayfasının kendi verisinden.

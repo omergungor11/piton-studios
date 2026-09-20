@@ -18,6 +18,17 @@ const AREA_COUNTS = Object.fromEntries(
 ) as Record<AreaKey, number>;
 const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
 
+// Ekran goruntusu olmayan projede tabloda sayi tekrar etmesin — baslik bas harfleri daha okunur.
+function initials(title: string) {
+  return title
+    .split(/[\s·—-]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase();
+}
+
 type ShowcaseView = 'desktop' | 'mobile';
 
 export default function ProjectsPageClient() {
@@ -134,12 +145,15 @@ export default function ProjectsPageClient() {
         <div className="pp-table glass">
           <div className="pp-table-header">
             <span>No.</span>
+            <span aria-hidden="true" />
             <span>{t('colProject')}</span>
             <span className="pp-hide-mobile">{t('colClient')}</span>
             <span className="pp-hide-mobile">{t('colDiscipline')}</span>
             <span>{t('colYear')}</span>
           </div>
-          {filteredWorks.map((w) => (
+          {filteredWorks.map((w) => {
+            const rowTitle = tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title;
+            return (
             <Link
               key={w.n}
               href={{ pathname: '/projects/[slug]', params: { slug: w.slug } }}
@@ -148,12 +162,26 @@ export default function ProjectsPageClient() {
               data-cursor-label="View"
             >
               <span className="pp-row-n">[{w.n}]</span>
-              <span className="pp-row-title">{tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title}</span>
+              <span className="pp-row-thumb" aria-hidden="true">
+                {w.previews?.desktop ? (
+                  <Image
+                    src={w.previews.desktop}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1000px) 56px, 96px"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="pp-row-thumb-empty">{initials(rowTitle)}</span>
+                )}
+              </span>
+              <span className="pp-row-title">{rowTitle}</span>
               <span className="pp-row-meta pp-hide-mobile">{w.client}</span>
               <span className="pp-row-meta pp-hide-mobile">{tw.has(`${w.slug}.kind`) ? tw(`${w.slug}.kind`) : w.kind}</span>
               <span className="pp-row-year">{w.year}</span>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 

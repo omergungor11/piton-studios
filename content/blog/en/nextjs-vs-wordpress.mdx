@@ -76,6 +76,8 @@ Read each row against your own project. Whichever column holds the majority is y
 
 ## Where the performance difference comes from
 
+<BlogFigure name="nextjs-vs-wordpress" alt="Request path comparison: on top, the long chain of a page rebuilt on the server for every visitor with a database stop; below, the short chain of a prebuilt page served straight from the edge." caption="The difference is not one plugin but how many stops a request makes: when the page is built in advance, the visitor only waits for the last stop." />
+
 The chart below is not a measured benchmark but a **schematic comparison of typical scenarios**. Real
 numbers vary widely with the theme, plugin count, hosting and caching setup.
 

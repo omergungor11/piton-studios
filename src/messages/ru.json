@@ -71,7 +71,16 @@
     "readMore": "Читать далее",
     "shareTitle": "Поделиться",
     "tableOfContents": "Содержание",
-    "faqTitle": "Часто задаваемые вопросы"
+    "faqTitle": "Часто задаваемые вопросы",
+    "pagination": {
+      "label": "Постраничная навигация",
+      "prev": "Назад",
+      "next": "Вперёд",
+      "goToPage": "Страница {page}",
+      "status": "Страница {page} из {total}",
+      "metaTitle": "{title} — страница {page}",
+      "metaDescription": "{description} Страница {page} из {total}."
+    }
   },
   "hero": {
     "kicker": "Дизайн · Код · ИИ — Цифровая Студия",

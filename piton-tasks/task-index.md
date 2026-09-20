@@ -19,9 +19,10 @@
 | 12 | Hizmet & URL Yeniden Yapılanması | 5 | 5 | 0 | 0 | 0 |
 | 13 | SEO, Dönüşüm & Görsel Deneyim (TASK-071..078) | 8 | 7 | 0 | 0 | 0 |
 | 14 | Fiyatlandırma (TASK-079) | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **78** | **77** | **0** | **0** | **0** |
+| 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
+| **Total** | | **81** | **80** | **0** | **0** | **0** |
 
-**Progress**: 77/78 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 80/81 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -170,3 +171,11 @@
 | TASK-065 | 6 rakamsız teknik vaka çalışması (`works.{slug}.caseStudy`) × 3 dil + Supabase izlerinin kaldırılması | M | COMPLETED |
 | TASK-079 | Fiyatlar sayfası: mobil uygulama paketi (piyasa analiziyle 180.000–500.000 ₺) + aylık büyüme hizmetleri bölümü (SEO & GEO 7.000 ₺/ay, Google Ads ve Meta 10.000 ₺/ay, reklam bütçesi hariç) × 3 dil | M | COMPLETED |
 | TASK-059 | Ortak `SiteFooter` (anasayfa + iç sayfalar): iki satır — menü / teknoloji ikonları · "Piton Studios © 2026" · hukuki linkler; iletişim sosyal ikonlarına Upwork, Behance, Dribbble, Fiverr | S | COMPLETED |
+
+## Phase 15: Liste görselleri ve blog sayfalama (2026-09-20)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-080 | Liste görselleri: projeler tablosuna 16:9 ekran görüntüsü kolonu (görseli olmayan 15 projede baş harf yer tutucusu) + hizmetler listesi kartlarına 18 SVG sahnesi (tembel render, animasyon yalnızca hover) | M | COMPLETED |
+| TASK-081 | Blog sayfalama: sayfa başına 10 yazı, yol tabanlı ve 3 dilde çevrili segment (`sayfa`/`page`/`stranitsa`), etiket sayfaları, canonical + rel=prev/next + sitemap | M | COMPLETED |
+| TASK-082 | Blog yazı görselleri: 20 hero SVG sahnesi (translationKey başına) + 9 gövde şeması (`BlogFigure`), yazı detayı ve blog listesi kartlarında | L | COMPLETED |

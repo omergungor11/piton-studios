@@ -39,6 +39,8 @@ this rule every project gets slower over time.
 
 ## Pick the right rendering strategy
 
+<BlogFigure name="fast-website" alt="Critical path diagram: request, server response, document, critical CSS and first paint in one chain; heavy images and scripts sit to the right of the paint line, deferred." caption="Only the top chain blocks first paint; assets on the lower track load after paint, so the visitor never waits for them." />
+
 In Next.js different pages of the same site can use different strategies:
 
 ```tsx

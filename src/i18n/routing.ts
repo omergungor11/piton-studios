@@ -76,6 +76,13 @@ export const routing = defineRouting({
       en: '/blog',
       ru: '/blog',
     },
+    // Sayfalanmis blog listesi. Sayfa numarasi dilden bagimsiz (2, 3 ...), yalnizca
+    // segment cevriliyor. 1. sayfa hep /blog'dur; /blog/sayfa/1 oraya yonlendirilir.
+    '/blog/pages/[page]': {
+      tr: '/blog/sayfa/[page]',
+      en: '/blog/page/[page]',
+      ru: '/blog/stranitsa/[page]',
+    },
     '/blog/[slug]': {
       tr: '/blog/[slug]',
       en: '/blog/[slug]',
@@ -85,6 +92,11 @@ export const routing = defineRouting({
       tr: '/blog/etiket/[tag]',
       en: '/blog/tag/[tag]',
       ru: '/blog/teg/[tag]',
+    },
+    '/blog/tag/[tag]/pages/[page]': {
+      tr: '/blog/etiket/[tag]/sayfa/[page]',
+      en: '/blog/tag/[tag]/page/[page]',
+      ru: '/blog/teg/[tag]/stranitsa/[page]',
     },
     '/faq': {
       tr: '/sss',

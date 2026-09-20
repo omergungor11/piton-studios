@@ -1,0 +1,107 @@
+/*
+ * Blog / etiket listesi sayfalamasi.
+ * globals.css'e yazilmaz (paralel ajanlarla catisma riski) — bu modul yalnizca
+ * blog-pagination.tsx tarafindan kullanilir. Renkler globals.css'teki temalara bagli.
+ */
+
+.nav {
+  margin: 0 0 80px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+}
+
+.link,
+.current,
+.gap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+.link {
+  color: var(--ink-soft);
+}
+
+.link:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.current {
+  color: #000;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.gap {
+  border-color: transparent;
+  color: var(--muted);
+  min-width: 24px;
+  padding: 0 2px;
+}
+
+.edge {
+  letter-spacing: 0.06em;
+}
+
+.status {
+  margin: 14px 0 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .nav {
+    margin-bottom: 56px;
+  }
+  .list {
+    gap: 6px;
+  }
+  .link,
+  .current,
+  .gap {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .edge span {
+    display: none;
+  }
+}

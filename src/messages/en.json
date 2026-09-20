@@ -71,7 +71,16 @@
     "readMore": "Read more",
     "shareTitle": "Share",
     "tableOfContents": "Table of contents",
-    "faqTitle": "Frequently asked questions"
+    "faqTitle": "Frequently asked questions",
+    "pagination": {
+      "label": "Pagination",
+      "prev": "Previous",
+      "next": "Next",
+      "goToPage": "Go to page {page}",
+      "status": "Page {page} of {total}",
+      "metaTitle": "{title} — Page {page}",
+      "metaDescription": "{description} Page {page} of {total}."
+    }
   },
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",

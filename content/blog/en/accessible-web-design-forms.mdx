@@ -55,6 +55,8 @@ W3C's [forms tutorial](https://www.w3.org/WAI/tutorials/forms/) covers labels, i
 
 ## Label, help text and field relationship
 
+<BlogFigure name="accessible-web-design-forms" alt="Anatomy of a form field: label, help text, an input with a visible focus ring, an error line marked with an icon, and a large touch target, top to bottom." caption="The order matters: the label stays above the field, help text is read before the input, and the error sits right below it, never signalled by colour alone." />
+
 The label tells the user what to type into the field. Help text explains why it's asked for, or the expected format. A placeholder shouldn't replace a persistent label — it disappears once text is entered. W3C explains that the label must be associated with its control; the standard approach is to match the `for` value on the `label` with the field's `id`. The [labelling guide](https://www.w3.org/WAI/tutorials/forms/labels/) has the details.
 
 The HTML below shows the structure of a single field. It isn't a complete working form — submission, server-side validation and error states still need to be implemented separately.
