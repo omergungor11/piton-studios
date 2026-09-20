@@ -1199,6 +1199,64 @@
         ],
         "outcome": "Sonuç, canlıda yayınlanan ve altı bölümü tek scroll akışında kesintisiz gezdiren bir konsept demo. WebGL yokluğunda, azaltılmış harekette ve mobilde okunabilir kalan yapısıyla üç boyutlu anlatım ve motion tasarımı yetkinliğimizi gösteren bir referans niteliğinde. Kendi dokümantasyonumuzda not ettiğimiz gibi, lisanslı sanatçı modeli ve cihaz bazlı performans ölçümleri sonraki üretim turunun konusu."
       }
+    },
+    "kabizzu": {
+      "title": "Kabizzu",
+      "summary": "Mimarlık ve iç mekân stüdyosu için scroll ile ilerleyen konsept site — katmanlı fotoğraflar, yatay mekân geçişi ve kurgulu açılış.",
+      "body": [
+        "Kabizzu, mimarlık ve iç mekân odaklı bir stüdyo için tasarladığımız konsept site. Krem ve zeytin tonları, büyük serif tipografi ve scroll ile ilerleyen katmanlı görseller üzerine kurulu; açılışta iki sıralı fotoğraf şeridi merkezde toplanıp tam ekran kapağa dönüşüyor, ardından dört konsept mekân dikey kaydırmayla yatay olarak geziliyor.",
+        "Site framework ve build adımı olmadan, saf HTML, CSS ve JavaScript ile yazıldı; yumuşak kaydırma için yalnızca Lenis kullanıldı. Scroll geometrisi DOM'dan bağımsız bir modülde tutulup otomatik test ediliyor. Azaltılmış hareket tercihi, klavye erişimi, mobil düzen ve yerel WebP görsel ile fontlar baştan hesaba katıldı. Projeler, görseller ve metinler bir tasarım konseptini temsil eder; formlar demodur."
+      ],
+      "caseStudy": {
+        "challenge": "Kabizzu, Piton Studios'un kendi inisiyatifiyle hazırladığı bir konsept çalışma; gerçek bir müşteri ya da gerçekleşmiş proje iddiası yok. Hedef, mimarlık sitelerinde alışılmış statik galeri yerine mekânı kaydırdıkça 'gezdiren' bir anlatım kurmaktı: kurgulu bir açılış, farklı hızlarda ilerleyen fotoğraf katmanları, yatay ilerleyen mekân sahnesi ve renk geçişleri. Bütün bunların ağır bir framework'e yaslanmadan, mobilde ve azaltılmış hareket tercihinde de okunabilir kalması gerekiyordu.",
+        "solution": "Site build adımı olmayan statik bir yapı: tek HTML, CSS ve birkaç JavaScript modülü. Açılış zaman çizelgesi ayrı bir modülde; görsel ve font yüklemesini bekliyor, geç düğmesi, Escape, azaltılmış hareket ve hata durumunda kendiliğinden açılıyor. Scroll'a bağlı hesaplar DOM'a dokunmayan saf fonksiyonlarda tutuluyor ve Node test runner ile test ediliyor. Dört konsept mekân dikey kaydırmayla yatay ilerliyor; her görsel yeşil zeminde büyüyüp çerçevesine dönüyor. Menü hover ile açılıyor ama dokunma ve klavyeyle de kullanılabiliyor. Proje formu demo: talep cihazda oluşturulup indiriliyor, sunucuya veri gönderilmiyor. Bir doğrulama betiği yerel varlıkları, bağlantı hedeflerini ve görsel boyutlarını kontrol ediyor.",
+        "highlights": [
+          "Framework ve build adımı yok: saf HTML, CSS ve JavaScript; tek bağımlılık sabit sürümlü Lenis.",
+          "Görsel ve font yüklemesini bekleyen, atlanabilen ve hata durumunda kendiliğinden tamamlanan kurgulu açılış.",
+          "Dikey kaydırmayla yatay ilerleyen dört mekânlık sahne ve siyah-beyazdan renkliye geçen süreç satırları.",
+          "Scroll geometrisi DOM'dan bağımsız; açılış, menü ve hareket mantığı 18 otomatik testle korunuyor.",
+          "Azaltılmış hareket tercihi, klavye erişimi, mobil düzen; yerel WebP görseller ve yerel fontlar."
+        ],
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Lenis",
+          "WebP",
+          "Node test runner",
+          "Vercel"
+        ],
+        "outcome": "Sonuç, canlıda yayınlanan ve masaüstünde olduğu kadar mobilde de akıcı ilerleyen bir konsept stüdyo sitesi. Mimarlık, iç mimarlık ve butik markalar için editoryal görünümlü, hareketle anlatan siteler kurma yetkinliğimizi gösteriyor. İç mekân görselleri bu konsept için yapay zekâ ile üretildi; gerçek bir uygulamada yerlerini stüdyonun kendi proje fotoğrafları alır."
+      }
+    },
+    "3monkeys-bozuyuk": {
+      "title": "3 Monkeys Bozüyük",
+      "summary": "Burger restoranı için konsept web sitesi — kaydırdıkça katman katman birleşen burger ve gerçek zamanlı WebGL dumanlı hero.",
+      "body": [
+        "3 Monkey Burger House'un Bozüyük şubesi için hazırladığımız, Türkçe ve mobil uyumlu bir web sitesi konsepti. Sinematik ana ekranda üç burgerli sahnenin üzerinde gerçek zamanlı duman süzülüyor; sayfa kaydırıldıkça altı ayrı fotoğraf katmanı — ekmek, sos, cheddar, köfte, yeşillik — tek bir burgerde birleşiyor. Ana sayfa, menü, hikâyemiz ve iletişim ayrı sayfalar olarak kurgulandı.",
+        "Next.js App Router, React 19 ve TypeScript ile geliştirildi. Burger sahnesi bir 3B model değil, CSS perspektifiyle kurulmuş 2.5D bir katman düzeni; duman ise bağımlılıksız bir WebGL shader'ı. Bu bağımsız bir tasarım konseptidir, restoranın resmî sitesi değildir; sahne görselleri temsilîdir, fiyat ve doğrulanamayan bilgiler gösterilmez."
+      ],
+      "caseStudy": {
+        "challenge": "Bu çalışma Piton Studios'un kendi inisiyatifiyle hazırladığı bağımsız bir konsept; restoranın resmî sitesi değil ve ısmarlanmış bir müşteri işi olarak sunulmuyor. Hedef, yerel bir burger restoranı için iştah açan, hareketli ama hafif bir site kurmaktı: ürünü anlatan bir scroll sahnesi, güçlü bir hero ve menüye hızlı erişim. Bunu ağır bir 3B model ya da video yüklemeden, mobilde ve düşük donanımda akıcı kalacak şekilde yapmak gerekiyordu.",
+        "solution": "Burger sahnesi tek bir fotoğraf sprite'ındaki altı katmandan oluşuyor; katmanlar CSS perspektifi ve kaydırma ilerlemesiyle açılıp birleşiyor, WebGL modeli gerekmiyor. Hero'daki duman, bağımlılıksız bir WebGL shader'ı: 30 fps ile sınırlı, ekran dışındayken, sekme gizliyken ve azaltılmış hareket seçiliyken duruyor; WebGL yoksa arayüz çalışmaya devam ediyor. Animasyonlar pasif scroll dinleyicisi ve requestAnimationFrame ile yürütülüyor, tekerlek kaydırması Lenis ile yumuşatılıyor. Mobil için ayrı dikey hero kompozisyonu, klavyeyle kullanılabilen mobil menü ve Escape desteği var. Telefon, Instagram, harita ve güncel menü bağlantıları şubenin gerçek kanallarına gidiyor; backend, ödeme, üyelik ya da kişisel veri toplama yok.",
+        "highlights": [
+          "Kaydırdıkça birleşen altı fotoğraf katmanı: CSS perspektifli 2.5D sahne, 3B model yok.",
+          "Bağımlılıksız WebGL duman shader'ı; 30 fps sınırı, ekran dışında ve gizli sekmede otomatik duraklama.",
+          "Mobil için ayrı dikey hero kompozisyonu ve klavyeyle kullanılabilen mobil navigasyon.",
+          "JavaScript olmadan da görünür kalan içerik ve azaltılmış hareket tercihi desteği.",
+          "Fiyat, ödül ya da doğrulanamayan çalışma saati yok; güncel bilgi için şubenin kendi kanallarına yönlendirme."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "WebGL",
+          "CSS",
+          "Lenis",
+          "Vercel"
+        ],
+        "outcome": "Sonuç, canlıda yayınlanan dört sayfalık bir konsept site: güçlü bir hero, ürünü katman katman anlatan bir scroll sahnesi ve menüye doğrudan erişim. Restoran, kafe ve yerel işletmeler için hafif ama akılda kalan siteler kurma yaklaşımımızı gösteriyor. Sahne ve menü görselleri temsilîdir ve bu konsept için yapay zekâ ile üretildi; marka ve logo ilgili sahibine aittir."
+      }
     }
   },
   "areas": {

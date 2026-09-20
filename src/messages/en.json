@@ -1250,6 +1250,64 @@
         ],
         "outcome": "The result is a live concept demo that carries visitors through six sections in one uninterrupted scroll flow. Staying readable without WebGL, under reduced motion, and on mobile, it stands as a reference showcasing our 3D storytelling and motion-design capability. As we note in our own documentation, a licensed artist model and device-level performance benchmarking are subjects for the next production round."
       }
+    },
+    "kabizzu": {
+      "title": "Kabizzu",
+      "summary": "Scroll-driven concept site for an architecture and interior studio — layered photography, a horizontal room showcase and a choreographed intro.",
+      "body": [
+        "Kabizzu is a concept site we designed for an architecture and interior design studio. It is built on cream and olive tones, large serif typography and layered imagery that moves with the scroll: a two-row photo strip gathers at the centre and becomes a full-screen cover, then four concept spaces are explored horizontally while the visitor scrolls vertically.",
+        "The site is written in plain HTML, CSS and JavaScript with no framework or build step; Lenis is the only dependency, used for smooth scrolling. Scroll geometry lives in a DOM-independent module covered by automated tests. Reduced-motion preference, keyboard access, a dedicated mobile layout and locally served WebP images and fonts were considered from the start. Projects, imagery and copy represent a design concept; the forms are demos."
+      ],
+      "caseStudy": {
+        "challenge": "Kabizzu is a concept Piton Studios started on its own initiative; there is no real client and no claim of completed projects. The goal was to replace the static gallery typical of architecture websites with a narrative that walks the visitor through the space as they scroll: a choreographed intro, photo layers moving at different speeds, a horizontally travelling room scene and colour transitions. All of it had to work without leaning on a heavy framework, and remain readable on mobile and under a reduced-motion preference.",
+        "solution": "The site is a static build-free structure: one HTML file, CSS and a handful of JavaScript modules. The intro timeline lives in its own module; it waits for images and fonts, and completes on its own via a skip button, Escape, reduced motion or an error. Scroll-linked calculations are kept in pure functions that never touch the DOM and are tested with the Node test runner. Four concept spaces travel horizontally on vertical scroll; each image grows on a green stage and settles back into its frame. The menu opens on hover but is equally usable by touch and keyboard. The project form is a demo: the request is generated on the device and downloaded, and nothing is sent to a server. A validation script checks local assets, link targets and image dimensions.",
+        "highlights": [
+          "No framework and no build step: plain HTML, CSS and JavaScript; the only dependency is a pinned version of Lenis.",
+          "A choreographed intro that waits for images and fonts, can be skipped, and completes safely on error.",
+          "A four-room scene that travels horizontally on vertical scroll, plus process rows that shift from black-and-white to colour.",
+          "Scroll geometry is DOM-independent; intro, menu and motion logic are covered by 18 automated tests.",
+          "Reduced-motion support, keyboard access, a mobile layout; locally served WebP images and fonts."
+        ],
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Lenis",
+          "WebP",
+          "Node test runner",
+          "Vercel"
+        ],
+        "outcome": "The result is a live concept studio site that flows as smoothly on mobile as on desktop. It shows our ability to build editorial-looking, motion-led websites for architecture, interior design and boutique brands. The interior images were generated with AI for this concept; in a real engagement they would be replaced by the studio's own project photography."
+      }
+    },
+    "3monkeys-bozuyuk": {
+      "title": "3 Monkeys Bozüyük",
+      "summary": "Concept website for a burger house — a burger that assembles layer by layer on scroll and a real-time WebGL smoke hero.",
+      "body": [
+        "A Turkish-language, mobile-ready website concept we prepared for the Bozüyük branch of 3 Monkey Burger House. Real-time smoke drifts over a cinematic three-burger hero; as the page scrolls, six separate photo layers — bun, sauce, cheddar, patty, greens — come together into a single burger. Home, menu, our story and contact are built as separate pages.",
+        "It is built with the Next.js App Router, React 19 and TypeScript. The burger scene is not a 3D model but a 2.5D layer arrangement driven by CSS perspective, and the smoke is a dependency-free WebGL shader. This is an independent design concept, not the restaurant's official website; scene imagery is representative, and prices or unverifiable details are not shown."
+      ],
+      "caseStudy": {
+        "challenge": "This is an independent concept Piton Studios prepared on its own initiative; it is not the restaurant's official website and is not presented as commissioned client work. The goal was to build an appetising, animated yet lightweight site for a local burger restaurant: a scroll scene that explains the product, a strong hero and quick access to the menu. It had to be done without loading a heavy 3D model or video, and stay smooth on mobile and low-end hardware.",
+        "solution": "The burger scene is made of six layers from a single photo sprite; the layers separate and assemble through CSS perspective and scroll progress, with no WebGL model required. The hero smoke is a dependency-free WebGL shader: capped at 30 fps, paused when off-screen, when the tab is hidden and when reduced motion is selected; if WebGL is unavailable the interface keeps working. Animations run on a passive scroll listener and requestAnimationFrame, and wheel scrolling is smoothed with Lenis. There is a separate vertical hero composition for mobile, a keyboard-operable mobile menu and Escape support. Phone, Instagram, map and current-menu links point to the branch's real channels; there is no backend, payment, membership or personal data collection.",
+        "highlights": [
+          "Six photo layers that assemble on scroll: a 2.5D scene built with CSS perspective, no 3D model.",
+          "Dependency-free WebGL smoke shader; 30 fps cap, automatic pause off-screen and in hidden tabs.",
+          "A separate vertical hero composition for mobile and keyboard-operable mobile navigation.",
+          "Content stays visible without JavaScript, and reduced-motion preference is respected.",
+          "No prices, awards or unverifiable opening hours; visitors are pointed to the branch's own channels for current information."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "WebGL",
+          "CSS",
+          "Lenis",
+          "Vercel"
+        ],
+        "outcome": "The result is a live four-page concept site: a strong hero, a scroll scene that explains the product layer by layer, and direct access to the menu. It shows our approach to building lightweight but memorable websites for restaurants, cafés and local businesses. Scene and menu imagery is representative and was generated with AI for this concept; the brand and logo belong to their respective owner."
+      }
     }
   },
   "areas": {

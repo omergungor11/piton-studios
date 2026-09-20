@@ -69,7 +69,7 @@ export const SECTORS: Sector[] = [
   {
     slug: "restaurant",
     icon: "◍",
-    workSlugs: ["boon-fresh", "virginia-ice-cream"],
+    workSlugs: ["boon-fresh", "virginia-ice-cream", "3monkeys-bozuyuk"],
     serviceSlugs: ["web-design", "ecommerce", "automation", "whatsapp-chatbot", "seo-geo", "google-ads", "maintenance-support"],
     faqIds: ["website-cost", "chatbot-on-site", "automation-tools", "google-ads-vs-seo", "seo-included"],
     blogSlugs: ["website-cost", "fast-website", "ai-automation-roi"],
