@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-21 — Ambalaj Cini önizleme görselleri
+
+- Ambalaj Cini'nin masaüstü (1440×810) ve mobil (430×928 @2x) önizlemeleri canlı siteden (ambalajcini.com) çekildi → `public/assets/previews/{desktop,mobile}/ambalaj-cini.webp`. Mobilde PWA "uygulama olarak yükle" balonu kapatılarak çekildi.
+- `data.ts`'te projeye `previews` ve canlı site `url`'i eklendi.
+
 ## 2026-09-20 — Proje sayacı 50+ ve takım kartı ismi
 
 - Anasayfa Spark sahnesindeki "Tamamlanan Proje" sayacı `40+` → `50+` (`scenes/spark.tsx`); hero "Rakamlarla Piton Studios" istatistiği `49+` → `50+` (tr/en/ru). Portfolyoda 52 proje var.

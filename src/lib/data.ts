@@ -261,6 +261,11 @@ export const WORKS: Work[] = [
       "Kullanıcı deneyimi odaklı tasarım, kolay sipariş akışı ve güvenli ödeme altyapısı ile müşterinin online satışlarını önemli ölçüde artırdık. 2022'den bu yana aktif olarak hizmet veriyor.",
     ],
     scope: "E-commerce, web design, payment",
+    url: "https://www.ambalajcini.com/",
+    previews: {
+      desktop: '/assets/previews/desktop/ambalaj-cini.webp',
+      mobile: '/assets/previews/mobile/ambalaj-cini.webp',
+    },
   },
   {
     n: "09",
