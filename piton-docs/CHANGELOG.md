@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-02 — Marka adı: Piton Studios → Piton (TASK-083)
+
+- Sitedeki tüm görünen metinlerde "Piton Studios" → "Piton": nav/menü, footer telif satırı, preloader, hero, OG görselleri, sayfa başlık eki, breadcrumb/JSON-LD, `llms.txt`, RSS başlığı, e-posta şablonları (bildirim, otomatik yanıt, kampanya), `messages/{tr,en,ru}.json`, 60 blog MDX'i (gövde + `author`) ve 9 hukuki MDX.
+- Anasayfa hero başlığı tek kelime "Piton" oldu (`hero.title2` "Studios" vurgusu kaldırıldı).
+- Dilbilgisi: Türkçe ekler "Piton'da / Piton'dan / Piton'dur" olarak düzeltildi; İngilizcede "Piton's".
+- SEO: Organization ve WebSite JSON-LD'ye `alternateName: "Piton Studios"` (`SITE.formerName`) eklendi — domain aynı kaldığı için eski adla aramalar eşleşsin. `llms.txt` girişinde de "eski adıyla Piton Studios" yazıyor.
+- Hukuki metinlerde ticari ad değiştiği için `LEGAL.updated` → 2026-10-02.
+- Değişmeyenler: domain, e-posta adresi, sosyal hesap URL'leri, paket adı, SSS anchor id'si `what-is-piton-studios`, eski sosyal medya çıktıları.
+
 ## 2026-09-21 — Ambalaj Cini önizleme görselleri
 
 - Ambalaj Cini'nin masaüstü (1440×810) ve mobil (430×928 @2x) önizlemeleri canlı siteden (ambalajcini.com) çekildi → `public/assets/previews/{desktop,mobile}/ambalaj-cini.webp`. Mobilde PWA "uygulama olarak yükle" balonu kapatılarak çekildi.

@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "title": "Piton Studios — Dijital Stüdyo",
+    "title": "Piton — Dijital Stüdyo",
     "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
   },
   "pageMeta": {
     "home": {
-      "title": "Piton Studios — Dijital Stüdyo",
+      "title": "Piton — Dijital Stüdyo",
       "description": "Tasarım, kod & AI — tek çatı altında. Markanızı tasarlar, ürününüzü geliştirir, büyümenizi hızlandırırız."
     },
     "projects": {
@@ -18,22 +18,22 @@
     },
     "about": {
       "title": "Hakkımızda: Bağımsız Dijital Stüdyo",
-      "description": "Piton Studios; tasarım, yazılım ve yapay zekayı tek ekipte birleştiren bağımsız bir dijital stüdyo."
+      "description": "Piton; tasarım, yazılım ve yapay zekayı tek ekipte birleştiren bağımsız bir dijital stüdyo."
     },
     "contact": {
       "title": "İletişim: Projenizi Konuşalım",
-      "description": "Projenizi konuşalım. Piton Studios ile iletişime geçin — genelde 24 saat içinde dönüş yapıyoruz."
+      "description": "Projenizi konuşalım. Piton ile iletişime geçin — genelde 24 saat içinde dönüş yapıyoruz."
     },
     "faq": {
       "title": "Sıkça Sorulan Sorular",
-      "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton Studios'tan net, rakamlı yanıtlar."
+      "description": "Web sitesi maliyeti, proje süresi, kod sahipliği, SEO, yapay zeka ve bakım hakkında 75 soruya Piton'dan net, rakamlı yanıtlar."
     },
     "pricing": {
       "title": "Fiyatlar: Web, Mobil, SEO ve Reklam",
       "description": "Şeffaf başlangıç bantları: web sitesi 10.000 TL’den, mobil uygulama 180.000 TL’den, SEO & GEO 7.000 TL/ay, reklam yönetimi 10.000 TL/ay."
     },
     "projectTitle": "{title}: Proje İncelemesi",
-    "projectDescSuffix": "Kapsam, teknoloji ve süreç detaylarıyla Piton Studios proje incelemesi."
+    "projectDescSuffix": "Kapsam, teknoloji ve süreç detaylarıyla Piton proje incelemesi."
   },
   "nav": {
     "services": "Hizmetler",
@@ -51,7 +51,7 @@
   },
   "blog": {
     "metaTitle": "Blog: Web, SEO ve Yapay Zeka Rehberleri",
-    "metaDescription": "Web tasarım, geliştirme ve yapay zekâ üzerine yazılar — Piton Studios ekibinden.",
+    "metaDescription": "Web tasarım, geliştirme ve yapay zekâ üzerine yazılar — Piton ekibinden.",
     "title": "Blog",
     "subtitle": "Tasarım, kod ve yapay zekâ üzerine notlar.",
     "readingTime": "{minutes} dk okuma",
@@ -84,7 +84,6 @@
   "hero": {
     "kicker": "Tasarım · Kod · AI — Dijital Stüdyo",
     "title1": "Piton",
-    "title2": "Studios",
     "title3": "Türkiye'den dijital",
     "title4": "stüdyo gücü",
     "subtitle": "Dijital çözümler, otomasyonlar ve yapay zekâ ile markanızı geliştiririz.",
@@ -96,7 +95,7 @@
       "CLOUD",
       "OTOMASYON"
     ],
-    "statsLabel": "Rakamlarla Piton Studios",
+    "statsLabel": "Rakamlarla Piton",
     "stats": {
       "projects": {
         "value": "50+",
@@ -119,7 +118,7 @@
   "manifesto": {
     "eyebrow": "§ 02 · Not",
     "title": "Neden {accent}?",
-    "titleAccent": "Piton Studios",
+    "titleAccent": "Piton",
     "subtitle": "Projenizin her adımında yanınızdayız — fikirden yayına, tasarımdan koda kadar. İşinizi büyüten dijital çözümler; tek ekip, net sonuç.",
     "noteMediaTag": "[ NOT · FİLM ]",
     "highlights": [
@@ -197,7 +196,7 @@
   },
   "aboutSections": {
     "story": {
-      "p1": "Piton Studios, 2021'de kurulmuş bağımsız bir dijital stüdyodur. Fikir aşamasından lansmana kadar uçtan uca çalışıyoruz: web tasarımı ve uygulama geliştirme, süreç otomasyonu, AI entegrasyonu ve dijital büyüme.",
+      "p1": "Piton, 2021'de kurulmuş bağımsız bir dijital stüdyodur. Fikir aşamasından lansmana kadar uçtan uca çalışıyoruz: web tasarımı ve uygulama geliştirme, süreç otomasyonu, AI entegrasyonu ve dijital büyüme.",
       "p2": "Startup'lardan kurumsal markalara, yerel işletmelerden uluslararası müşterilere — her projede kalite, hız ve ölçülebilir sonuç odaklı çalışırız. Teknoloji karmaşıklaştırmak için değil, sadeleştirmek için vardır."
     },
     "numbers": {
@@ -364,7 +363,7 @@
     "tools": "// Teknoloji Yığını",
     "faq": "// SSS",
     "commonQuestions": "Sık sorulan sorular",
-    "whyUs": "Neden Piton Studios?",
+    "whyUs": "Neden Piton?",
     "whyUsItems": [
       "Her disiplinde derin uzmanlık — yüzeysel kalan genel ajans değil.",
       "Şeffaf süreç — her aşamada ne olduğunu ve neden olduğunu bilirsiniz.",
@@ -395,7 +394,7 @@
     "labelProjectCount": "Proje Sayısı",
     "valueProjectCount": "50+",
     "labelPreparedBy": "Hazırlayan",
-    "valuePreparedBy": "Piton Studios",
+    "valuePreparedBy": "Piton",
     "body1": "Son projelerimizden derlenen görsel özet — her çeyrekte güncellenir.",
     "body2": "Tasarımdan deploy'a kadar tüm süreci gösterir.",
     "cta": "Tüm Projeleri Gör",
@@ -407,7 +406,7 @@
     "title": "Aynı bütçe, <accent>farklı</accent> eğri.",
     "desc": "Web sitesi, özel yazılım, otomasyon ya da AI — hangisini yaptırırsanız yaptırın, iş teslim gününde değil on ikinci ayında değerlenir. Aşağıdaki altı kalem, doğru kurulmuş bir sistemin zaman içinde nereye gittiğini gösteriyor.",
     "dimsLabel": "Sonuç boyutları",
-    "seriesUs": "Piton Studios ile",
+    "seriesUs": "Piton ile",
     "seriesTypical": "Mevcut düzende",
     "deltaHigher": "daha yüksek",
     "deltaLower": "daha düşük",
@@ -591,9 +590,9 @@
     "availability": "Yeni projelere açığız · Hemen başlayalım"
   },
   "common": {
-    "copyright": "Piton Studios © 2026",
+    "copyright": "Piton © 2026",
     "home": "Ana Sayfa",
-    "pitonStudios": "Piton Studios",
+    "pitonStudios": "Piton",
     "projects": "Projeler",
     "services": "Hizmetler",
     "gallery": "Galeri",
@@ -1090,7 +1089,7 @@
         "Fintech alanındaki bu ürün denememiz; gerçek zamanlı veri işleme ve otomasyon yetkinliğimizi gösteren bir yan proje."
       ],
       "caseStudy": {
-        "challenge": "Holly Trader, Piton Studios'un fintech alanında kendi başlattığı bir ürün denemesi; gerçek bir borsa müşterisi ya da canlı sermaye yok. Amaç, kaldıraçlı işlem riskini sunucu tarafında denetleyen, birden fazla varlık sınıfını (kripto, hisse, emtia) tek çatı altında toplayan ve otomatik stratejileri gerçek zamanlı piyasa verisiyle çalıştırabilen uçtan uca bir trading altyapısını, ayrı backend/frontend/paket sınırlarına sahip bir monorepo içinde kurmaktı. Asıl zorluk, WebSocket üzerinden akan piyasa verisini, emir/pozisyon durumunu ve risk limitlerini tek tutarlı bir state'te senkron tutmaktı.",
+        "challenge": "Holly Trader, Piton'un fintech alanında kendi başlattığı bir ürün denemesi; gerçek bir borsa müşterisi ya da canlı sermaye yok. Amaç, kaldıraçlı işlem riskini sunucu tarafında denetleyen, birden fazla varlık sınıfını (kripto, hisse, emtia) tek çatı altında toplayan ve otomatik stratejileri gerçek zamanlı piyasa verisiyle çalıştırabilen uçtan uca bir trading altyapısını, ayrı backend/frontend/paket sınırlarına sahip bir monorepo içinde kurmaktı. Asıl zorluk, WebSocket üzerinden akan piyasa verisini, emir/pozisyon durumunu ve risk limitlerini tek tutarlı bir state'te senkron tutmaktı.",
         "solution": "Backend NestJS üzerine REST, WebSocket ve BullMQ tabanlı kuyruklarla kuruldu; Prisma/PostgreSQL veri katmanını, Redis ise kuyruk ve önbellek işlerini karşılıyor. Binance entegrasyonu spot, futures, cüzdan ve kullanıcı stream servislerini ayrı modüllerde topluyor; hisse, emtia ve DEX verisi için ayrı market-data servisleri var. Kimlik doğrulama JWT ile klasik girişin yanında ethers tabanlı cüzdan (MetaMask) imzasıyla da yapılabiliyor. RiskService her emirden önce kaldıraç, maruziyet ve marj oranını sunucu tarafında doğruluyor; ayrı bir stop-loss/take-profit monitörü ve trailing-stop servisi açık pozisyonları periyodik kontrol ediyor, bir reconciliation servisi borsadaki durumu yerel veriyle karşılaştırıyor. Strateji motoru grid bot, DCA, RSI mean-reversion, MACD crossover, breakout ve scalping gibi hazır stratejileri ortak bir arayüz üzerinden çalıştırıyor; BullMQ kuyruklu ayrı bir backtest servisi de bulunuyor. Frontend Next.js 14 üzerine kuruldu; socket.io-client ile gelen canlı veri Zustand ve React Query state'ine bağlanıyor, lightweight-charts ve recharts ile analiz arayüzü oluşturuluyor.",
         "highlights": [
           "RiskService her emri sunucu tarafında kaldıraç/marj/maruziyet limitlerine karşı doğruluyor; kontrol istemciye bırakılmıyor.",
@@ -1178,7 +1177,7 @@
         "Next.js, React Three Fiber, Drei ve GSAP ScrollTrigger ile kurulan deneyimde tek bir ilerleme değeri kamerayı, jeti ve bulutları yönetiyor; boşta sürekli render yok. Hareketi azalt tercihi, WebGL olmadığında aynı modelden üretilmiş statik görseller ve mobil kadraj uyarlamasıyla performans ve erişilebilirlik birlikte gözetildi."
       ],
       "caseStudy": {
-        "challenge": "VELAIR, Piton Studios'un kendi inisiyatifiyle başlattığı bir konsept çalışma; gerçek bir müşteri ya da uçak üreticisi yok. Hedef, özel jet temalı bir portfolyo parçasını satın alınmış 3D modellere ya da video kesitlere dayandırmadan, tarayıcıda üretilen özgün bir geometriyle kurmak; tepeden görünüm, bulut geçişi, kabin açılımı ve yatay uçuşu tek bir doğal scroll akışında kesintisiz birleştirmekti. Aynı zamanda WebGL desteklemeyen cihazlarda, hareketi azalt tercihinde ve dar mobil ekranlarda deneyimin okunabilir kalması, tek canvas ve tek playhead ile performansın korunması gerekiyordu.",
+        "challenge": "VELAIR, Piton'un kendi inisiyatifiyle başlattığı bir konsept çalışma; gerçek bir müşteri ya da uçak üreticisi yok. Hedef, özel jet temalı bir portfolyo parçasını satın alınmış 3D modellere ya da video kesitlere dayandırmadan, tarayıcıda üretilen özgün bir geometriyle kurmak; tepeden görünüm, bulut geçişi, kabin açılımı ve yatay uçuşu tek bir doğal scroll akışında kesintisiz birleştirmekti. Aynı zamanda WebGL desteklemeyen cihazlarda, hareketi azalt tercihinde ve dar mobil ekranlarda deneyimin okunabilir kalması, tek canvas ve tek playhead ile performansın korunması gerekiyordu.",
         "solution": "Next.js App Router'da içerik server component olarak kalıyor; Three.js sahnesi yalnızca istemci tarafında lazy yükleniyor. Uçak, tarayıcıda üretilip parça parça birleştirilen parametrik bir geometri — indirilen bir 3B model dosyası yok. GSAP ScrollTrigger tek bir 0–1 ilerleme değeri üretiyor; saf bir fonksiyon bu değeri kamera, jet ve bulut pozuna dönüştürüyor, ayrı bir yardımcı da viewport yüksekliğine göre zoom ve mobil kadrajı ayarlıyor. Sahne talep üzerine render ediliyor: kare yalnızca scroll olduğunda çiziliyor, kare başına React state veya DOM ölçümü yok. WebGL2 desteklenmediğinde, context kaybında ya da hareketi azalt tercihinde aynı modelden üretilmiş statik posterlere geçiliyor; kabin seçim butonları ekran okuyucularla erişilebilir. Bölüm sınırları, poz örneklemesi ve mobil kadraj Node test runner ile otomatik test ediliyor.",
         "highlights": [
           "Uçak dışarıdan içe aktarılan bir GLB değil, tarayıcıda parametrik olarak üretilip birleştirilen özgün bir geometri.",
@@ -1208,7 +1207,7 @@
         "Site framework ve build adımı olmadan, saf HTML, CSS ve JavaScript ile yazıldı; yumuşak kaydırma için yalnızca Lenis kullanıldı. Scroll geometrisi DOM'dan bağımsız bir modülde tutulup otomatik test ediliyor. Azaltılmış hareket tercihi, klavye erişimi, mobil düzen ve yerel WebP görsel ile fontlar baştan hesaba katıldı. Projeler, görseller ve metinler bir tasarım konseptini temsil eder; formlar demodur."
       ],
       "caseStudy": {
-        "challenge": "Kabizzu, Piton Studios'un kendi inisiyatifiyle hazırladığı bir konsept çalışma; gerçek bir müşteri ya da gerçekleşmiş proje iddiası yok. Hedef, mimarlık sitelerinde alışılmış statik galeri yerine mekânı kaydırdıkça 'gezdiren' bir anlatım kurmaktı: kurgulu bir açılış, farklı hızlarda ilerleyen fotoğraf katmanları, yatay ilerleyen mekân sahnesi ve renk geçişleri. Bütün bunların ağır bir framework'e yaslanmadan, mobilde ve azaltılmış hareket tercihinde de okunabilir kalması gerekiyordu.",
+        "challenge": "Kabizzu, Piton'un kendi inisiyatifiyle hazırladığı bir konsept çalışma; gerçek bir müşteri ya da gerçekleşmiş proje iddiası yok. Hedef, mimarlık sitelerinde alışılmış statik galeri yerine mekânı kaydırdıkça 'gezdiren' bir anlatım kurmaktı: kurgulu bir açılış, farklı hızlarda ilerleyen fotoğraf katmanları, yatay ilerleyen mekân sahnesi ve renk geçişleri. Bütün bunların ağır bir framework'e yaslanmadan, mobilde ve azaltılmış hareket tercihinde de okunabilir kalması gerekiyordu.",
         "solution": "Site build adımı olmayan statik bir yapı: tek HTML, CSS ve birkaç JavaScript modülü. Açılış zaman çizelgesi ayrı bir modülde; görsel ve font yüklemesini bekliyor, geç düğmesi, Escape, azaltılmış hareket ve hata durumunda kendiliğinden açılıyor. Scroll'a bağlı hesaplar DOM'a dokunmayan saf fonksiyonlarda tutuluyor ve Node test runner ile test ediliyor. Dört konsept mekân dikey kaydırmayla yatay ilerliyor; her görsel yeşil zeminde büyüyüp çerçevesine dönüyor. Menü hover ile açılıyor ama dokunma ve klavyeyle de kullanılabiliyor. Proje formu demo: talep cihazda oluşturulup indiriliyor, sunucuya veri gönderilmiyor. Bir doğrulama betiği yerel varlıkları, bağlantı hedeflerini ve görsel boyutlarını kontrol ediyor.",
         "highlights": [
           "Framework ve build adımı yok: saf HTML, CSS ve JavaScript; tek bağımlılık sabit sürümlü Lenis.",
@@ -1237,7 +1236,7 @@
         "Next.js App Router, React 19 ve TypeScript ile geliştirildi. Burger sahnesi bir 3B model değil, CSS perspektifiyle kurulmuş 2.5D bir katman düzeni; duman ise bağımlılıksız bir WebGL shader'ı. Bu bağımsız bir tasarım konseptidir, restoranın resmî sitesi değildir; sahne görselleri temsilîdir, fiyat ve doğrulanamayan bilgiler gösterilmez."
       ],
       "caseStudy": {
-        "challenge": "Bu çalışma Piton Studios'un kendi inisiyatifiyle hazırladığı bağımsız bir konsept; restoranın resmî sitesi değil ve ısmarlanmış bir müşteri işi olarak sunulmuyor. Hedef, yerel bir burger restoranı için iştah açan, hareketli ama hafif bir site kurmaktı: ürünü anlatan bir scroll sahnesi, güçlü bir hero ve menüye hızlı erişim. Bunu ağır bir 3B model ya da video yüklemeden, mobilde ve düşük donanımda akıcı kalacak şekilde yapmak gerekiyordu.",
+        "challenge": "Bu çalışma Piton'un kendi inisiyatifiyle hazırladığı bağımsız bir konsept; restoranın resmî sitesi değil ve ısmarlanmış bir müşteri işi olarak sunulmuyor. Hedef, yerel bir burger restoranı için iştah açan, hareketli ama hafif bir site kurmaktı: ürünü anlatan bir scroll sahnesi, güçlü bir hero ve menüye hızlı erişim. Bunu ağır bir 3B model ya da video yüklemeden, mobilde ve düşük donanımda akıcı kalacak şekilde yapmak gerekiyordu.",
         "solution": "Burger sahnesi tek bir fotoğraf sprite'ındaki altı katmandan oluşuyor; katmanlar CSS perspektifi ve kaydırma ilerlemesiyle açılıp birleşiyor, WebGL modeli gerekmiyor. Hero'daki duman, bağımlılıksız bir WebGL shader'ı: 30 fps ile sınırlı, ekran dışındayken, sekme gizliyken ve azaltılmış hareket seçiliyken duruyor; WebGL yoksa arayüz çalışmaya devam ediyor. Animasyonlar pasif scroll dinleyicisi ve requestAnimationFrame ile yürütülüyor, tekerlek kaydırması Lenis ile yumuşatılıyor. Mobil için ayrı dikey hero kompozisyonu, klavyeyle kullanılabilen mobil menü ve Escape desteği var. Telefon, Instagram, harita ve güncel menü bağlantıları şubenin gerçek kanallarına gidiyor; backend, ödeme, üyelik ya da kişisel veri toplama yok.",
         "highlights": [
           "Kaydırdıkça birleşen altı fotoğraf katmanı: CSS perspektifli 2.5D sahne, 3B model yok.",
@@ -3145,7 +3144,7 @@
     "categories": {
       "studio": {
         "title": "Stüdyo & Ekip",
-        "desc": "Piton Studios kimdir, nerede çalışır ve projenizde kiminle muhatap olursunuz."
+        "desc": "Piton kimdir, nerede çalışır ve projenizde kiminle muhatap olursunuz."
       },
       "services": {
         "title": "Hizmetler & Kapsam",
@@ -3195,8 +3194,8 @@
   },
   "faqItems": {
     "what-is-piton-studios": {
-      "q": "Piton Studios nedir, ne iş yapar?",
-      "a": "Piton Studios, 2021'de kurulmuş bağımsız bir dijital stüdyodur; web tasarımı, web uygulaması, otomasyon, yapay zeka entegrasyonu ve dijital büyüme alanlarında fikir aşamasından lansmana uçtan uca çalışır. Portfolyosunda 49 teslim edilmiş proje bulunur.",
+      "q": "Piton nedir, ne iş yapar?",
+      "a": "Piton, 2021'de kurulmuş bağımsız bir dijital stüdyodur; web tasarımı, web uygulaması, otomasyon, yapay zeka entegrasyonu ve dijital büyüme alanlarında fikir aşamasından lansmana uçtan uca çalışır. Portfolyosunda 49 teslim edilmiş proje bulunur.",
       "detail": [
         "Tasarım, kod ve yapay zekâyı tek çatı altında toplayan bir yapıyla çalışır — ayrı ajanslar arasında koordinasyon kaybı olmadan, aynı ekip keşiften devreye almaya kadar sürecin tamamını yürütür.",
         "Web tasarım ve web uygulamadan e-ticarete, süreç otomasyonundan AI/ML projelerine ve SEO/GEO çalışmalarına kadar 12 hizmet alanında çalışır; hangisinin doğru çözüm olduğuna proje bazında keşif görüşmesinde karar verilir."
@@ -3211,7 +3210,7 @@
     },
     "where-are-you-located": {
       "q": "Nerede bulunuyorsunuz, hangi bölgelere hizmet veriyorsunuz?",
-      "a": "Piton Studios Türkiye merkezli, tamamen uzaktan çalışan bağımsız bir stüdyodur. Fiziksel ofis ziyareti şart değildir; görüşmeler görüntülü toplantı ve yazılı iletişimle yürütülür, bu sayede yerel işletmelerden uluslararası müşterilere kadar coğrafi sınır gözetmeden çalışılır.",
+      "a": "Piton Türkiye merkezli, tamamen uzaktan çalışan bağımsız bir stüdyodur. Fiziksel ofis ziyareti şart değildir; görüşmeler görüntülü toplantı ve yazılı iletişimle yürütülür, bu sayede yerel işletmelerden uluslararası müşterilere kadar coğrafi sınır gözetmeden çalışılır.",
       "detail": [
         "Ekip Türkiye saat diliminde çalışır ama proje akışı buna bağlı değildir — keşif, tasarım ve geliştirme adımları zaman farkına göre planlanır, gerektiğinde erken ya da geç saatte görüşme ayarlanır.",
         "Yurt dışı müşteriler için fatura ve ödeme süreçleri uluslararası transfer ve kart ödemelerine uygun şekilde kurulur; detaylar teklif aşamasında netleştirilir."
@@ -3226,8 +3225,8 @@
       ]
     },
     "why-choose-you": {
-      "q": "Neden büyük bir ajans yerine Piton Studios'u seçmeliyim?",
-      "a": "Büyük ajanslarda proje birden fazla ekip arasında el değiştirir; Piton Studios'ta aynı kişi keşiften devreye almaya kadar projenin sorumluluğunu taşır — bilgi kaybı, katmanlar arası iletişim gecikmesi ve genel ajans yüzeyselliği olmaz.",
+      "q": "Neden büyük bir ajans yerine Piton'u seçmeliyim?",
+      "a": "Büyük ajanslarda proje birden fazla ekip arasında el değiştirir; Piton'da aynı kişi keşiften devreye almaya kadar projenin sorumluluğunu taşır — bilgi kaybı, katmanlar arası iletişim gecikmesi ve genel ajans yüzeyselliği olmaz.",
       "detail": [
         "Kapsam yazılı olmadan fiyat verilmez, her adımın çıktısı ve sizden istenen belli — sürpriz fatura veya belirsiz zaman çizelgesi olmaz.",
         "Küçük ölçek, tasarım, kod ve AI'ı aynı çatı altında tutmayı mümkün kılar; ayrı tedarikçiler arasında koordinasyon kaybetmek yerine tek elden ilerlenir. Büyük hacimli veya çok disiplinli işlerde Saiber ortaklığıyla kapasite genişletilir."
@@ -3235,9 +3234,9 @@
     },
     "saiber-partnership": {
       "q": "Saiber iş birliği ne anlama geliyor?",
-      "a": "Saiber, bazı projelerde ek kapasite ve uzmanlık için birlikte çalışılan bir iş ortağıdır; portfolyodaki 18 projede 'İş Birliği: Saiber' notu bu ortaklığı gösterir. Piton Studios projeyi yönetir, Saiber ilgili adımlarda destek verir.",
+      "a": "Saiber, bazı projelerde ek kapasite ve uzmanlık için birlikte çalışılan bir iş ortağıdır; portfolyodaki 18 projede 'İş Birliği: Saiber' notu bu ortaklığı gösterir. Piton projeyi yönetir, Saiber ilgili adımlarda destek verir.",
       "detail": [
-        "Ortaklık; ölçek, zaman baskısı veya ek disiplin gerektiren projelerde devreye girer. Müşteri için tek muhatap Piton Studios'tur — süreç, iletişim ve teslim sorumluluğu değişmez.",
+        "Ortaklık; ölçek, zaman baskısı veya ek disiplin gerektiren projelerde devreye girer. Müşteri için tek muhatap Piton'dur — süreç, iletişim ve teslim sorumluluğu değişmez.",
         "Hangi projede iş birliği olduğu proje detay sayfasında 'İş Birliği' meta bilgisi olarak açıkça görünür; şeffaflık için gizlenmez."
       ]
     },
@@ -3251,7 +3250,7 @@
     },
     "services-overview": {
       "q": "Hangi hizmetleri sunuyorsunuz?",
-      "a": "Piton Studios 18 hizmet alanında çalışır: web tasarım, özel yazılım, web uygulama, mobil uygulama, progressive web app, e-ticaret altyapısı, ERP & CRM, otomasyon, WhatsApp & chatbot, AI entegrasyonu, AI danışmanlığı, veri mühendisliği, bulut altyapı, Google Ads, Meta reklamları, SEO & GEO, bakım & destek ve eğitim & danışmanlık.",
+      "a": "Piton 18 hizmet alanında çalışır: web tasarım, özel yazılım, web uygulama, mobil uygulama, progressive web app, e-ticaret altyapısı, ERP & CRM, otomasyon, WhatsApp & chatbot, AI entegrasyonu, AI danışmanlığı, veri mühendisliği, bulut altyapı, Google Ads, Meta reklamları, SEO & GEO, bakım & destek ve eğitim & danışmanlık.",
       "detail": [
         "Her hizmet kendi süreci, teknoloji seti ve sık sorulan sorularıyla ayrı bir sayfada anlatılır. Bir projede birden fazla hizmet birlikte yürütülebilir — örneğin web uygulama, otomasyon ve SEO tek kapsamda birleşebilir.",
         "Hangi hizmetin doğru çözüm olduğuna keşif görüşmesinde birlikte karar verilir; müşterinin hizmet adını bilmesi gerekmez, sorunu anlatması yeterlidir."
@@ -3291,7 +3290,7 @@
     },
     "content-and-copy": {
       "q": "Site metinlerini ve görselleri siz mi hazırlıyorsunuz?",
-      "a": "İkisi de mümkün — müşteri kendi metin ve görsellerini sağlayabilir ya da Piton Studios üretebilir. İçerik üretimi bütçeye eklendiğinde toplam maliyetin yaklaşık %15-35'i kadar ek kalem oluşturur, çünkü metin yazarlığı ve fotoğraf/video ayrı bir iş yüküdür.",
+      "a": "İkisi de mümkün — müşteri kendi metin ve görsellerini sağlayabilir ya da Piton üretebilir. İçerik üretimi bütçeye eklendiğinde toplam maliyetin yaklaşık %15-35'i kadar ek kalem oluşturur, çünkü metin yazarlığı ve fotoğraf/video ayrı bir iş yüküdür.",
       "detail": [
         "İçeriğin kim tarafından sağlanacağı sözleşmede net yazılır — bu, projelerin en sık gecikme nedenidir; tasarım ve kod hazır olsa da içerik gelmediği için lansman haftalarca ertelenebilir.",
         "Kendi içeriğinizi hazırlıyorsanız bütçenin bir kısmını doğrudan geri kazanırsınız; hazırlamıyorsanız içerik üretimi de brief aşamasında kapsam ve teslim tarihine dahil edilir."
@@ -3299,7 +3298,7 @@
     },
     "white-label": {
       "q": "Ajanslara white-label / taşeron olarak çalışıyor musunuz?",
-      "a": "Evet, ajanslara white-label geliştirme ve tasarım desteği veriliyor — müşteriye karşı ajans marka adı görünür kalır, teknik uygulama Piton Studios tarafından yürütülür. Kapasite yetersiz kaldığında veya özel bir uzmanlık gerektiğinde tercih edilir.",
+      "a": "Evet, ajanslara white-label geliştirme ve tasarım desteği veriliyor — müşteriye karşı ajans marka adı görünür kalır, teknik uygulama Piton tarafından yürütülür. Kapasite yetersiz kaldığında veya özel bir uzmanlık gerektiğinde tercih edilir.",
       "detail": [
         "Süreç gizlilik anlaşmasıyla korunur; iletişim doğrudan ajans üzerinden yürütülür, son müşteriyle temas ajansın tercihine bağlıdır.",
         "Fiyatlar ve teslim süreleri standart proje akışıyla aynıdır; fark yalnızca marka görünürlüğü ve iletişim kanalıdır."
@@ -3614,7 +3613,7 @@
       "a": "Büyük sağlayıcıların (Anthropic, OpenAI, Google gibi) kurumsal ve API planlarında, API üzerinden gönderilen veri varsayılan olarak model eğitiminde kullanılmaz; ancak bu politika sağlayıcıya, plana ve zaman içindeki değişikliklere göre farklılaşabilir. Bu yüzden her projede ilgili sağlayıcının o anki güncel veri kullanım koşullarını sizinle birlikte doğruluyoruz, varsayımla ilerlemiyoruz.",
       "detail": [
         "Tüketici, yani ücretsiz veya bireysel planlar ile kurumsal API planları genellikle birbirinden farklı kurallara tabidir; bu yüzden hangi plan ve hangi arayüz — web arayüzü mü, doğrudan API mi — üzerinden çalışıldığı kritik bir detaydır ve entegrasyon kurulurken bu ayrım proje başında net biçimde belirlenir, karışıklığa mahal bırakılmaz.",
-        "Kendi sitemizde de aynı ihtiyatlı ilkeyi uyguluyoruz: Piton Studios veritabanı kullanmıyor, iletişim formunda bıraktığınız bilgi Resend üzerinden doğrudan e-postaya gidiyor ve ayrıca hiçbir yerde saklanmıyor. Prensip müşteri projelerinde de aynı kalıyor: gereksiz veri toplamayın, topladığınızı da açıkça ve net biçimde belirtin."
+        "Kendi sitemizde de aynı ihtiyatlı ilkeyi uyguluyoruz: Piton veritabanı kullanmıyor, iletişim formunda bıraktığınız bilgi Resend üzerinden doğrudan e-postaya gidiyor ve ayrıca hiçbir yerde saklanmıyor. Prensip müşteri projelerinde de aynı kalıyor: gereksiz veri toplamayın, topladığınızı da açıkça ve net biçimde belirtin."
       ]
     },
     "hallucination": {
@@ -3771,7 +3770,7 @@
       "a": "Barındırma platformlarını (Vercel, Google Cloud gibi) günlük otomatik yedekleme ve yönetilen altyapı sunanlar arasından özenle seçiyoruz; kesinti durumunda kurtarma büyük ölçüde bu sağlayıcıların kendi altyapı garantilerine dayanır. Kritik projelerde felaket kurtarma prosedürü mimari aşamasında ayrıca ve özel olarak tanımlanır, sonradan eklenmez.",
       "detail": [
         "RTO, yani kabul edilebilir kesinti süresi, ve RPO, yani kabul edilebilir veri kaybı penceresi, mimari kurulurken sizinle birlikte belirlenir ve test edilmiş kurtarma prosedürleriyle birlikte gelir; felaket kurtarma bizde sonradan akla gelen bir ekleme değil, en baştan tasarımın ayrılmaz bir parçasıdır.",
-        "Piton Studios'un kendi sitesi tamamen statik ve hiçbir veritabanı kullanmıyor; bu yüzden kendi sitemiz özelinde yedekleme konusu geçerli değil, ama müşteri projelerinde altyapı seçimine ve verinin ne kadar kritik olduğuna göre ayrıca ve özenle kurulur, tek tip bir varsayılan uygulanmaz."
+        "Piton'un kendi sitesi tamamen statik ve hiçbir veritabanı kullanmıyor; bu yüzden kendi sitemiz özelinde yedekleme konusu geçerli değil, ama müşteri projelerinde altyapı seçimine ve verinin ne kadar kritik olduğuna göre ayrıca ve özenle kurulur, tek tip bir varsayılan uygulanmaz."
       ]
     },
     "security-updates": {
@@ -3808,7 +3807,7 @@
     },
     "data-storage-location": {
       "q": "Verilerimiz nerede saklanıyor?",
-      "a": "Projeye göre değişir — altyapıyı genellikle Vercel ve yönetilen PostgreSQL servisleri üzerinde, ihtiyacınıza en uygun coğrafi bölgede kuruyoruz; hangi bölgenin seçileceği veri gizliliği gereksinimlerinize göre proje başında sizinle birlikte netleştirilir. Piton Studios'un kendi sitesi ise veritabanı kullanmıyor; iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor, ayrıca saklanmıyor.",
+      "a": "Projeye göre değişir — altyapıyı genellikle Vercel ve yönetilen PostgreSQL servisleri üzerinde, ihtiyacınıza en uygun coğrafi bölgede kuruyoruz; hangi bölgenin seçileceği veri gizliliği gereksinimlerinize göre proje başında sizinle birlikte netleştirilir. Piton'un kendi sitesi ise veritabanı kullanmıyor; iletişim formu verisi Resend üzerinden doğrudan e-postaya gidiyor, ayrıca saklanmıyor.",
       "detail": [
         "Sabit bir varsayılan bölge iddia etmiyoruz çünkü doğru cevap müşteriden müşteriye önemli ölçüde değişir — bazı projelerde AB bölgesi tercih edilirken bazılarında yerel barındırma gerekebilir; bu karar mimari aşamasında sizinle birlikte, sizin gereksinimlerinize göre karşılıklı olarak verilir, tek taraflı olarak size hiçbir zaman dayatılmaz.",
         "Analytics tarafında da aynı minimal yaklaşım geçerli: kendi sitemizde Vercel Analytics ve Speed Insights kullanıyoruz, ikisi de çerezsiz çalışıyor ve ziyaretçiden hiçbir kişisel veri toplamıyor, yalnızca toplu ve tamamen anonim istatistik üretiyor, kimlik bilgisi hiç işlenmiyor."
@@ -4137,7 +4136,7 @@
   "sectorItems": {
     "finance": {
       "title": "Finans Sektörüne Dijital Çözümler",
-      "metaTitle": "Finans Sektörüne Dijital Çözümler | Piton Studios",
+      "metaTitle": "Finans Sektörüne Dijital Çözümler | Piton",
       "metaDescription": "Döviz büroları, kripto merkezleri ve finans şirketleri için canlı veri entegrasyonlu siteler, ödeme takip otomasyonu ve veri raporlama — uçtan uca çözümler.",
       "intro": "Finans sektöründe dijital ihtiyaç güven ve güncellik üzerine kuruludur: canlı kur veya piyasa verisi gösteren bir site, ödeme ve vade takibini otomatikleştiren bir sistem ve verinin doğru toplanıp raporlandığı bir altyapı birlikte çalışır. Halas Exchange ve Arslan Coin Center için kurduğumuz canlı veri entegrasyonlu siteleri, kendi ürünlerimiz Ödeme Takip Botu ve Holly Trader'daki otomasyon ve veri işleme deneyimimizle birleştiriyoruz.",
       "bullets": {
@@ -4162,7 +4161,7 @@
     },
     "e-commerce": {
       "title": "E-Ticaret Sektörüne Dijital Çözümler",
-      "metaTitle": "E-Ticaret Sektörüne Dijital Çözümler | Piton Studios",
+      "metaTitle": "E-Ticaret Sektörüne Dijital Çözümler | Piton",
       "metaDescription": "Ödeme entegrasyonu, stok/kargo otomasyonu, Google & Meta reklam yönetimi ve SEO — Ambalaj Cini'nde %30 büyüme sağladığımız yaklaşımla çözümler kuruyoruz.",
       "intro": "E-ticarette dijital ihtiyaç, ödeme ve stok yönetiminin tek panelde birleştiği bir altyapı ile bu altyapıyı satışa çeviren reklam yönetiminin birlikte yürümesidir. Ambalaj Cini için kurduğumuz ödeme, kargo, stok ve muhasebeyi kapsayan back-office'i aynı projede yürüttüğümüz Google Ads ve Meta kampanyalarıyla birleştirdik ve firma %30 büyüdü; bu yaklaşımı Boon Fresh ve Beton Store'daki e-ticaret deneyimimizle birlikte sunuyoruz.",
       "bullets": {
@@ -4187,7 +4186,7 @@
     },
     "corporate": {
       "title": "Kurumsal Şirketler için Dijital Çözümler",
-      "metaTitle": "Kurumsal Şirketler için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Kurumsal Şirketler için Dijital Çözümler | Piton",
       "metaDescription": "Kurumsal web sitesinden özel yazılıma, ERP/CRM'den otomasyona: şirketinizin ihtiyaç duyduğu dijital çözümleri tek çatı altında tasarlıyor, kuruyoruz.",
       "intro": "Kurumsal bir şirketin dijital ihtiyacı artık tek bir web sitesiyle sınırlı değil; kurumsal site, ekibin kullandığı özel yazılım, ERP/CRM panelleri, tekrarlayan işleri devralan otomasyonlar ve arama görünürlüğü birlikte çalışır. BT Elevator, Arslan Group ve Alp Sigorta gibi projelerdeki kurumsal site deneyimimizi, kendi ürünümüz FurCRM'deki ERP/CRM birikimimizle birleştirerek şirketinize uçtan uca bir dijital altyapı kuruyoruz.",
       "bullets": {
@@ -4212,7 +4211,7 @@
     },
     "real-estate": {
       "title": "Emlak Sektörüne Dijital Çözümler",
-      "metaTitle": "Emlak Sektörüne Dijital Çözümler | Piton Studios",
+      "metaTitle": "Emlak Sektörüne Dijital Çözümler | Piton",
       "metaDescription": "Emlak ofisleri ve yatırım şirketleri için özel ilan yönetim sistemi, çoklu portal senkronizasyonu, kurumsal site ve SEO — uçtan uca dijital çözümler kuruyoruz.",
       "intro": "Emlak sektöründe dijital ihtiyaç bir vitrin siteden fazlasıdır: ilanların yönetildiği özel bir sistem, birden fazla portala otomatik yayın yapan bir senkronizasyon ve yatırımcıya ulaşan çok dilli bir kurumsal site birlikte çalışır. Nexos Investment için geliştirdiğimiz özel ilan yönetim platformunu ve kendi ürünümüz Emlak Sync'teki portal senkronizasyon deneyimini, Pampas Investment ve Arslan Estates gibi projelerdeki emlak sitesi birikimimizle birleştiriyoruz.",
       "bullets": {
@@ -4237,7 +4236,7 @@
     },
     "transportation": {
       "title": "Ulaşım ve Transfer Sektörüne Dijital Çözümler",
-      "metaTitle": "Ulaşım Sektörüne Dijital Çözümler | Piton Studios",
+      "metaTitle": "Ulaşım Sektörüne Dijital Çözümler | Piton",
       "metaDescription": "Taksi ve transfer firmaları için rezervasyon formlu siteler, WhatsApp entegrasyonu, güzergah otomasyonu ve yerel SEO — uçtan uca dijital çözümler kuruyoruz.",
       "intro": "Taksi ve transfer işletmelerinde dijital ihtiyaç, müşterinin telefonu açmadan rezervasyon yapabildiği bir siteyle başlar; buna WhatsApp üzerinden anında iletişim, yerel aramalarda görünürlük ve filo/güzergah tarafında operasyonel otomasyon eklenir. Welcome Pickups, Jet Transfer Cyprus ve Kıbrıs Lefkoşa Taksi gibi projelerdeki site deneyimimizi, Dolmuş Güzergah Kontrol ürünümüzdeki otomasyon birikimimizle birleştiriyoruz.",
       "bullets": {
@@ -4262,7 +4261,7 @@
     },
     "restaurant": {
       "title": "Restoran ve Kafeler için Dijital Çözümler",
-      "metaTitle": "Restoran ve Kafeler için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Restoran ve Kafeler için Dijital Çözümler | Piton",
       "metaDescription": "Restoran ve kafeler için yalnızca site değil; online sipariş, otomasyon, WhatsApp rezervasyonu ve yerel SEO'yu kapsayan uçtan uca dijital çözümler kuruyoruz.",
       "intro": "Restoranlar ve kafeler için sadece web sitesi değil, misafir deneyiminin tamamını kapsayan dijital çözümler kuruyoruz: menüden online siparişe, rezervasyondan WhatsApp üzerinden gelen taleplere kadar. Boon Fresh için kurduğumuz gıda teslimat altyapısı ve Virginia Ice Cream'in menü odaklı sitesi, bu sektörü hem tasarım hem teknik tarafıyla tanıdığımızı gösteriyor.",
       "bullets": {
@@ -4287,7 +4286,7 @@
     },
     "tourism": {
       "title": "Turizm ve Otelcilik için Dijital Çözümler",
-      "metaTitle": "Turizm ve Otelcilik için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Turizm ve Otelcilik için Dijital Çözümler | Piton",
       "metaDescription": "Otel, tur ve transfer işletmeleri için tanıtım sitesinden rezervasyona, WhatsApp entegrasyonundan çok dilli SEO'ya kadar dijital çözümler kuruyoruz.",
       "intro": "Otel, tur operatörü ve transfer işletmeleri için yalnızca tanıtım sitesi değil, misafirin karar anından rezervasyona kadar tüm yolculuğu kapsayan dijital çözümler kuruyoruz. Sammys Hotel'in galeri odaklı otel sitesinden Jet Transfer Cyprus ve Aydın Transfer'in WhatsApp entegreli rezervasyon akışlarına kadar, bu sektörü hem tanıtım hem operasyon tarafıyla tanıyoruz.",
       "bullets": {
@@ -4312,7 +4311,7 @@
     },
     "health": {
       "title": "Sağlık ve Klinikler için Dijital Çözümler",
-      "metaTitle": "Sağlık ve Klinikler için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Sağlık ve Klinikler için Dijital Çözümler | Piton",
       "metaDescription": "Klinikler ve sağlık kuruluşları için randevu akışından WhatsApp hatırlatmalarına, otomasyondan çok dilli SEO'ya kadar güven veren dijital çözümler tasarlıyoruz.",
       "intro": "Klinikler ve sağlık kuruluşları için yalnızca tanıtım sitesi değil, hastanın güven duyup randevu almasına kadar giden süreci kapsayan dijital çözümler kuruyoruz. Dental Health için kurduğumuz, tedavileri ve uzman kadroyu sergileyen randevu odaklı klinik sitesi, bu sektörde önce güven sonra kolaylık ilkesiyle çalıştığımızı gösteriyor.",
       "bullets": {
@@ -4337,7 +4336,7 @@
     },
     "construction": {
       "title": "İnşaat ve Mimarlık için Dijital Çözümler",
-      "metaTitle": "İnşaat ve Mimarlık için Dijital Çözümler | Piton Studios",
+      "metaTitle": "İnşaat ve Mimarlık için Dijital Çözümler | Piton",
       "metaDescription": "İnşaat firmaları ve mimarlık ofisleri için proje galerisinden e-ticarete, ERP & CRM'den yerel SEO'ya kadar kurumsal güven veren dijital çözümler kuruyoruz.",
       "intro": "İnşaat firmaları ve mimarlık ofisleri için yalnızca kurumsal site değil, bitmiş projeleri kanıta çeviren ve iş süreçlerini destekleyen dijital çözümler kuruyoruz. EKH Yapı ve Alert Mühendislik'in proje portföylü kurumsal siteleri ile Beton Store'un yapı malzemeleri e-ticaret altyapısı, bu sektörü hem tanıtım hem operasyon tarafıyla tanıdığımızı gösteriyor.",
       "bullets": {
@@ -4362,7 +4361,7 @@
     },
     "education": {
       "title": "Eğitim Kurumları için Dijital Çözümler",
-      "metaTitle": "Eğitim Kurumları için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Eğitim Kurumları için Dijital Çözümler | Piton",
       "metaDescription": "Kurs merkezleri, özel okullar ve eğitim kurumları için online başvuru sistemi, otomasyon, WhatsApp bildirimleri, yapay zekâ asistanı ve SEO sunuyoruz.",
       "intro": "Eğitim kurumunuz, kurs merkeziniz veya özel okulunuz için kayıt sürecinin tamamını dijitalleştiriyoruz: online başvuru akışlı bir web sitesi, ekibinizin elle yaptığı hatırlatmaları devralan otomasyon, WhatsApp üzerinden anlık bildirim ve programlarınızdan yanıt veren bir yapay zekâ asistanı. Eğitim sektöründe henüz bir referans projemiz yok; ama randevu ve panel kurma deneyimimiz bu ihtiyaca doğrudan uyarlanabiliyor.",
       "bullets": {
@@ -4387,7 +4386,7 @@
     },
     "beauty": {
       "title": "Güzellik ve Kuaför Salonları için Dijital Çözümler",
-      "metaTitle": "Güzellik Salonları için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Güzellik Salonları için Dijital Çözümler | Piton",
       "metaDescription": "Güzellik salonları, kuaförler ve spa merkezleri için randevu odaklı site, WhatsApp'tan otomatik randevu, hatırlatma otomasyonu ve yerel SEO sunuyoruz.",
       "intro": "Güzellik salonunuz, kuaförünüz veya spa merkeziniz için randevuyu mesaj trafiğinden kurtaran dijital çözümler kuruyoruz: hızlı ve mobil öncelikli bir site, WhatsApp üzerinden otomatik randevu akışı, no-show'u azaltan hatırlatma otomasyonu ve yerel aramalarda görünürlük. Güzellik sektöründe henüz bir referans projemiz yok; ama randevu ve rezervasyon akışı kurma deneyimimiz bu ihtiyaca doğrudan uyarlanabiliyor.",
       "bullets": {
@@ -4412,7 +4411,7 @@
     },
     "engineering": {
       "title": "Mühendislik Firmaları için Dijital Çözümler",
-      "metaTitle": "Mühendislik Firmaları için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Mühendislik Firmaları için Dijital Çözümler | Piton",
       "metaDescription": "Mühendislik ve teknik danışmanlık firmaları için kurumsal site, özel yazılım, otomasyon, yapay zekâ asistanı ve SEO içeren uçtan uca dijital çözümler sunuyoruz.",
       "intro": "Mühendislik firmanız için yalnızca kurumsal bir site değil, teklif sürecinden proje takibine uzanan dijital çözümler kuruyoruz: teknik yetkinliğinizi anlatan çok dilli bir web sitesi, tekrar eden iş akışlarını devralan otomasyon, dokümanlarınızdan yanıt veren yapay zekâ asistanı ve teknik aramalarda görünürlük. Alert Mühendislik ve BT Elevator projelerimiz bu yaklaşımın kurumsal site ayağını gösteriyor.",
       "bullets": {
@@ -4437,7 +4436,7 @@
     },
     "industry": {
       "title": "Sanayi ve Üretim Firmaları için Dijital Çözümler",
-      "metaTitle": "Sanayi Firmaları için Dijital Çözümler | Piton Studios",
+      "metaTitle": "Sanayi Firmaları için Dijital Çözümler | Piton",
       "metaDescription": "Fabrikalar, üreticiler ve endüstriyel tedarikçiler için kurumsal site, ERP & CRM, bayi portalı, otomasyon ve SEO içeren uçtan uca dijital çözümler sunuyoruz.",
       "intro": "Fabrikanız, üretim tesisiniz veya endüstriyel tedarikçi firmanız için üretimden bayiye uzanan dijital çözümler kuruyoruz: kurumsal bir web sitesi, cari-stok-üretim takibini tek panelde toplayan ERP & CRM sistemi, bayilerinizin sipariş verdiği B2B portal ve tekrar eden işleri devralan otomasyon. FurCRM ve Ambalaj Cini gibi projelerimiz bu yaklaşımın somut örnekleri.",
       "bullets": {
@@ -4496,7 +4495,7 @@
     "eyebrow": "Bölgeler",
     "title": "Hizmet verdiğimiz şehirler",
     "subtitle": "Bozüyük merkezli ekibimizle KKTC ve Türkiye genelinde uzaktan çalışıyoruz. Şehrinizi seçin; oradaki işlerimizi ve size nasıl yardımcı olabileceğimizi görün.",
-    "metaTitle": "Şehirlere Göre Web Tasarım ve Yazılım | Piton Studios",
+    "metaTitle": "Şehirlere Göre Web Tasarım ve Yazılım | Piton",
     "metaDescription": "KKTC, Lefkoşa, İstanbul, İzmir, Antalya, Bursa ve daha fazlası: şehrinizdeki işletmeler için web tasarım, yazılım, SEO ve reklam hizmetlerimizi inceleyin.",
     "cyprus": "Kuzey Kıbrıs",
     "turkey": "Türkiye",
@@ -4519,7 +4518,7 @@
     "eyebrowDetail": "Çözüm",
     "title": "Sektörünüze özel çözümler",
     "subtitle": "Hizmetlerimizi sektörün gerçek ihtiyacına göre paketledik: emlak yazılımından klinik SEO çalışmasına, rezervasyon sistemlerinden yapay zekâ asistanlarına.",
-    "metaTitle": "Sektöre Özel Web ve Yazılım Çözümleri | Piton Studios",
+    "metaTitle": "Sektöre Özel Web ve Yazılım Çözümleri | Piton",
     "metaDescription": "Emlak ilan yazılımı, e-ticaret SEO, transfer rezervasyon sistemi, klinik SEO ve daha fazlası: sektörünüze göre tasarlanmış web ve yazılım çözümleri.",
     "whatWeDo": "Bu çözümde neler var",
     "detailTitle": "Nasıl çalışıyoruz",
@@ -4537,9 +4536,9 @@
   "locationItems": {
     "kktc": {
       "title": "KKTC Web Tasarım ve Yazılım",
-      "metaTitle": "KKTC Web Tasarım ve Yazılım Hizmetleri | Piton Studios",
+      "metaTitle": "KKTC Web Tasarım ve Yazılım Hizmetleri | Piton",
       "metaDescription": "Kuzey Kıbrıs'taki emlak, finans, turizm ve ticaret işletmeleri için kurumsal web sitesi ve otomasyon çözümleri geliştiriyoruz; tüm süreç uzaktan yürür.",
-      "intro": "Piton Studios, Bilecik merkezli ama tamamen uzaktan çalışan bir dijital ajans olarak KKTC'deki işletmelere kurumsal web sitesi, platform ve otomasyon çözümleri sunuyor. Kuzey Kıbrıs'ta emlak yatırımı, döviz, transfer ve otelcilik sektörlerinde tamamlanmış projelerimiz ve bir ilan sitesi için kurduğumuz otomasyon var; keşif görüşmesinden teslime kadar tüm süreç online yürütülür, seyahat veya yerel ofis gerekmez.",
+      "intro": "Piton, Bilecik merkezli ama tamamen uzaktan çalışan bir dijital ajans olarak KKTC'deki işletmelere kurumsal web sitesi, platform ve otomasyon çözümleri sunuyor. Kuzey Kıbrıs'ta emlak yatırımı, döviz, transfer ve otelcilik sektörlerinde tamamlanmış projelerimiz ve bir ilan sitesi için kurduğumuz otomasyon var; keşif görüşmesinden teslime kadar tüm süreç online yürütülür, seyahat veya yerel ofis gerekmez.",
       "bullets": {
         "1": "Kurumsal web sitesi, platform ve otomasyon — Sammys Hotel'de olduğu gibi rezervasyon odaklı sitelerden, Gel Gez Gör ilan sitesi için kurduğumuz trend ve sosyal medya otomasyonuna kadar.",
         "2": "Çok dilli yapı (Türkçe, İngilizce, Rusça) — adadaki yerli halk, İngiliz ve Rus yatırımcı/turist karışımına aynı sitede kendi dillerinde hitap etmenizi sağlıyoruz.",
@@ -4555,14 +4554,14 @@
       },
       "ctaText": "KKTC'deki işletmeniz için web projesini konuşmak üzere bize yazın; tüm süreci uzaktan birlikte yürütelim.",
       "detail": {
-        "1": "KKTC pazarı kendine has bir karışıma sahip: yerli işletmeler, İngiliz ve Rus yatırımcılar, sezonluk turistler aynı anda aynı siteye bakıyor. Bu yüzden ada için kurduğumuz siteler baştan çok dilli tasarlanıyor; Türkçe içerik yerli müşteriyi, İngilizce ve Rusça içerik ise yabancı yatırımcı ve turisti aynı deneyimde karşılıyor. Piton Studios KKTC'de fiziksel bir ofis bulundurmuyor — bu bilinçli bir tercih; süreç tamamen online yürüdüğü için adada nerede olursanız olun aynı hızda hizmet alıyorsunuz.",
+        "1": "KKTC pazarı kendine has bir karışıma sahip: yerli işletmeler, İngiliz ve Rus yatırımcılar, sezonluk turistler aynı anda aynı siteye bakıyor. Bu yüzden ada için kurduğumuz siteler baştan çok dilli tasarlanıyor; Türkçe içerik yerli müşteriyi, İngilizce ve Rusça içerik ise yabancı yatırımcı ve turisti aynı deneyimde karşılıyor. Piton KKTC'de fiziksel bir ofis bulundurmuyor — bu bilinçli bir tercih; süreç tamamen online yürüdüğü için adada nerede olursanız olun aynı hızda hizmet alıyorsunuz.",
         "2": "Adadaki tamamlanmış projelerimiz farklı sektörlere yayılıyor: Pampas Investment ve Pinnacle Yatırım ile gayrimenkul yatırım şirketlerine kurumsal ve güven veren siteler tasarladık; Halas Exchange ile canlı kur bilgili bir döviz platformu, Jet Transfer Cyprus ile havalimanı/VIP transfer rezervasyon sitesi, Sammys Hotel ile otelcilik sektöründe bir rezervasyon deneyimi geliştirdik. Mevcut bir ilan sitesi olan Gel Gez Gör için ise trend ilanları tespit edip ilan sahiplerine WhatsApp'tan bildiren ve sosyal medya paylaşımlarını üreten bir otomasyon kurduk. Bu çeşitlilik, adadaki farklı sektörlerin ihtiyacını bildiğimiz anlamına geliyor.",
         "3": "Teknik tarafta site hızını ve arama görünürlüğünü aynı önemde tutuyoruz. Klasik SEO ile 'KKTC' ve ilçe bazlı aramalarda bulunabilirken, GEO çalışmasıyla yapay zekâ destekli arama sonuçlarında da görünür oluyorsunuz. Emlak Sync gibi kendi ürünümüzle KKTC'ye özgü portal entegrasyonları (HangiEv, 101evler) kurma deneyimimiz var; benzer bir tekrarlayan iş yükünüz varsa bunu da otomasyonla çözebiliyoruz."
       }
     },
     "lefkosa": {
       "title": "Lefkoşa Web Tasarım ve Yazılım",
-      "metaTitle": "Lefkoşa Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Lefkoşa Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Lefkoşa'daki işletmeler için kurumsal web sitesi, yerel SEO ve dijital reklam çözümleri kuruyoruz. Kıbrıs Lefkoşa Taksi projemiz dahil, tüm süreç uzaktan yürür.",
       "intro": "Lefkoşa'da doğrudan tamamladığımız Kıbrıs Lefkoşa Taksi projesinde online rezervasyon, rota hesaplama ve 'lefkoşa taksi' gibi yerel aramalarda üst sıralarda yer almayı sağlayan bir SEO kurulumu yaptık. KKTC genelinde tamamladığımız holding, finans ve hizmet sektörü projeleriyle birlikte, başkentteki işletmelerin ihtiyacını tanıyoruz; süreç baştan sona online yürür.",
       "bullets": {
@@ -4587,9 +4586,9 @@
     },
     "bilecik": {
       "title": "Bilecik Web Tasarım ve Yazılım",
-      "metaTitle": "Bilecik Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Bilecik Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Bozüyük merkezli ajans olarak Bilecik'teki işletmelere web sitesi, e-ticaret ve otomasyon kuruyoruz — Ambalaj Cini ve Dolmuş projelerimiz buradan çıktı.",
-      "intro": "Piton Studios'un merkezi Bozüyük, Bilecik'te — bu sayfadaki diğer şehirlerin aksine buradaki işletmelerle uzaktan değil, bölgeyi bilerek çalışıyoruz. Bilecik merkezli Ambalaj Cini için ödeme entegrasyonlu bir e-ticaret sitesi kurduk; Bozüyük Dolmuşçular Derneği için güzergah takip uygulaması ve bu deneyimden doğan Dolmuş Güzergah Kontrol otomasyon ürünümüz de yine buradan çıktı.",
+      "intro": "Piton'un merkezi Bozüyük, Bilecik'te — bu sayfadaki diğer şehirlerin aksine buradaki işletmelerle uzaktan değil, bölgeyi bilerek çalışıyoruz. Bilecik merkezli Ambalaj Cini için ödeme entegrasyonlu bir e-ticaret sitesi kurduk; Bozüyük Dolmuşçular Derneği için güzergah takip uygulaması ve bu deneyimden doğan Dolmuş Güzergah Kontrol otomasyon ürünümüz de yine buradan çıktı.",
       "bullets": {
         "1": "E-ticaret altyapısı — Ambalaj Cini'nde kurduğumuz gibi ödeme entegrasyonu, ürün ve stok yönetimini kapsayan online satış siteleri.",
         "2": "Kurumsal web sitesi — Bilecik ve Bozüyük'teki üretim, ticaret ve hizmet işletmeleri için görünürlüğü ve güveni artıran tasarım.",
@@ -4605,14 +4604,14 @@
       },
       "ctaText": "Bilecik ve Bozüyük'teki işletmeniz için buluşup projeyi konuşalım.",
       "detail": {
-        "1": "Bilecik sayfası, listedeki diğer şehirlerden farklı bir yerde duruyor: Piton Studios'un adresi burada, Bozüyük'te. Yani bölgedeki bir işletmeyle çalışırken uzaktan çalışma anlatmıyoruz, doğrudan buradan hizmet veriyoruz — gerektiğinde yerinde görüşme de mümkün. Bu, özellikle ilk kez web sitesi yaptıracak veya online satışa geçecek işletmeler için süreci daha somut hale getiriyor.",
+        "1": "Bilecik sayfası, listedeki diğer şehirlerden farklı bir yerde duruyor: Piton'un adresi burada, Bozüyük'te. Yani bölgedeki bir işletmeyle çalışırken uzaktan çalışma anlatmıyoruz, doğrudan buradan hizmet veriyoruz — gerektiğinde yerinde görüşme de mümkün. Bu, özellikle ilk kez web sitesi yaptıracak veya online satışa geçecek işletmeler için süreci daha somut hale getiriyor.",
         "2": "Ambalaj Cini projesi bunun net bir örneği: Bilecik merkezli bu firma için ödeme entegrasyonu, ürün yönetimi ve stok takibini kapsayan bir e-ticaret altyapısı kurduk, 2022'den bu yana aktif olarak hizmet veriyor. Bozüyük Dolmuşçular Derneği için geliştirdiğimiz güzergah takip uygulaması ise farklı bir ihtiyacı gösteriyor: toplu taşımada kullanıcıların güzergahı görüp seyahat planlaması yapabildiği bir web uygulaması. Bu projeden edindiğimiz deneyimle, dolmuş hatlarının zamanında çalışıp çalışmadığını GPS verisinden otomatik rapora döken Dolmuş Güzergah Kontrol ürününü kendi bünyemizde geliştirdik.",
         "3": "Bölgedeki bir işletme için önerimiz genellikle şu sırayla ilerliyor: önce net ve hızlı yüklenen bir kurumsal site veya e-ticaret altyapısı, ardından yerel SEO ile aranabilirlik, sonra da varsa tekrarlayan operasyonel işlerin otomasyonu. Merkezimiz burada olduğu için bu süreci adım adım, ihtiyaç çıktıkça birlikte şekillendirebiliyoruz."
       }
     },
     "eskisehir": {
       "title": "Eskişehir Web Tasarım ve Yazılım",
-      "metaTitle": "Eskişehir Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Eskişehir Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Eskişehir'deki işletmeler için çok dilli kurumsal web sitesi ve SEO çözümleri geliştiriyoruz. BT Elevator projemiz burada; komşu Bilecik'ten kolay ulaşırız.",
       "intro": "Eskişehir merkezli BT Elevator için çok dilli, SEO optimizasyonlu bir kurumsal web sitesi geliştirdik — teknik SEO, schema markup ve performans çalışmasıyla arama motorlarında görünürlüğü artırdık. Merkezimiz komşu il Bilecik'te olduğu için Eskişehir'deki işletmelere hem uzaktan hem gerektiğinde yerinde destek verebiliyoruz.",
       "bullets": {
@@ -4637,7 +4636,7 @@
     },
     "bursa": {
       "title": "Bursa Web Tasarım ve Yazılım",
-      "metaTitle": "Bursa Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Bursa Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Bursa'daki işletmeler için kurumsal web sitesi ve e-ticaret çözümleri geliştiriyoruz. Bilecik merkezli ekibimiz, komşu ile tamamen uzaktan hızlı hizmet veriyor.",
       "intro": "Bursa'da henüz tamamladığımız bir portföy projesi yok; işletmelere tamamen uzaktan hizmet veriyoruz — keşif görüşmesinden teslime kadar süreç online yürür. Komşu il Bilecik'teki Ambalaj Cini için kurduğumuz e-ticaret altyapısı ve Eskişehir'deki BT Elevator için yaptığımız çok dilli kurumsal site, Bursa'nın sanayi ve ticaret ağırlıklı yapısına benzer işletmelere nasıl yaklaştığımızı gösteren referanslarımız.",
       "bullets": {
@@ -4655,14 +4654,14 @@
       },
       "ctaText": "Bursa'daki işletmeniz için web projesini konuşmak üzere bize yazın; süreç tamamen uzaktan işler.",
       "detail": {
-        "1": "Bursa için elimizde henüz doğrudan bir referans projesi yok ve bunu olduğu gibi söylüyoruz — ama bu, hizmet veremeyeceğimiz anlamına gelmiyor. Piton Studios zaten uzaktan çalışan bir ajans; merkezimiz komşu il Bilecik'te olduğu için Bursa'daki bir işletmeyle çalışmak, iletişim hızı ve süreç açısından uzak bir şehirle çalışmaktan farklı değil.",
+        "1": "Bursa için elimizde henüz doğrudan bir referans projesi yok ve bunu olduğu gibi söylüyoruz — ama bu, hizmet veremeyeceğimiz anlamına gelmiyor. Piton zaten uzaktan çalışan bir ajans; merkezimiz komşu il Bilecik'te olduğu için Bursa'daki bir işletmeyle çalışmak, iletişim hızı ve süreç açısından uzak bir şehirle çalışmaktan farklı değil.",
         "2": "Bursa'nın sanayi, tekstil ve otomotiv yan sanayi ağırlıklı yapısına en yakın referanslarımız komşu illerden geliyor: Bilecik'teki Ambalaj Cini için kurduğumuz, ödeme entegrasyonu ve stok yönetimi içeren e-ticaret sitesi; Eskişehir'deki BT Elevator için geliştirdiğimiz çok dilli, teknik SEO odaklı kurumsal site. İkisi de üretim/ticaret ağırlıklı işletmelerin ihtiyacına yakın örnekler.",
         "3": "Bursa'daki bir işletme için önerimiz genelde şu sırayla ilerliyor: önce net ve hızlı yüklenen bir kurumsal site veya e-ticaret altyapısı, ardından yerel SEO ile aranabilirlik. Süreç boyunca tüm görüşmeler online yapılır; bu hem maliyeti hem de proje süresini kısaltan bir çalışma şekli."
       }
     },
     "istanbul": {
       "title": "İstanbul Web Tasarım ve Yazılım",
-      "metaTitle": "İstanbul Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "İstanbul Web Tasarım ve Yazılım | Piton",
       "metaDescription": "İstanbul'daki işletmeler için kurumsal web sitesi, e-ticaret ve özel yazılım geliştiriyoruz. Ekip uzaktan çalışır; görüşme, tasarım ve teslim online yürür.",
       "intro": "İstanbul'daki işletmenize kurumsal web sitesi, e-ticaret altyapısı veya özel yazılım kurarız. Ofisimiz Bilecik'te olsa da tüm süreç online yürür: kickoff görüşmesi, tasarım onayı, revizyon turları ve teslim uzaktan tamamlanır — İstanbul'un yoğun trafiğinde saha ziyaretine gerek kalmadan proje ilerler ve takvim aksamaz.",
       "bullets": {
@@ -4687,7 +4686,7 @@
     },
     "kutahya": {
       "title": "Kütahya Web Tasarım ve Yazılım",
-      "metaTitle": "Kütahya Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Kütahya Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Kütahya'daki imalat, ticaret ve zanaat işletmeleri için kurumsal web sitesi ve SEO hizmeti sunuyoruz. Ekip tamamen uzaktan çalışır, tüm süreç online yürür.",
       "intro": "Kütahya'daki imalat, ticaret ve zanaat işletmelerine kurumsal web sitesi ve SEO hizmeti sunuyoruz. Ofisimiz Bilecik'te; tüm süreç online yürür, saha ziyareti gerekmez. Kütahya'nın çini ve porselen mirasıyla özdeşleşen ürün kataloğunu, yıllara dayanan sektör tecrübesini yansıtacak şekilde dijitalde doğru sergilemeyi hedefleriz.",
       "bullets": {
@@ -4712,7 +4711,7 @@
     },
     "antalya": {
       "title": "Antalya Web Tasarım ve Yazılım",
-      "metaTitle": "Antalya Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "Antalya Web Tasarım ve Yazılım | Piton",
       "metaDescription": "Antalya'daki otel, transfer ve turizm işletmeleri için çok dilli web sitesi ve online rezervasyon çözümleri geliştiriyoruz. Ekip uzaktan çalışır.",
       "intro": "Antalya'daki otel, transfer ve turizm işletmelerine çok dilli web sitesi ve online rezervasyon altyapısı kuruyoruz. Ofisimiz Bilecik'te; süreç tamamen uzaktan yürür. Turizm sektöründe yabancı misafire kendi dilinde ulaşmak, sezon yoğunluğunda rezervasyonun kaçırılmamasının ve talebin doğru kanaldan, doğru zamanda gelmesinin ilk şartıdır.",
       "bullets": {
@@ -4737,7 +4736,7 @@
     },
     "izmit": {
       "title": "İzmit Web Tasarım ve Yazılım",
-      "metaTitle": "İzmit Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "İzmit Web Tasarım ve Yazılım | Piton",
       "metaDescription": "İzmit ve Kocaeli'deki mühendislik, inşaat ve ticaret firmaları için kurumsal web sitesi ve e-ticaret geliştiriyoruz. Ekip uzaktan çalışır, süreç online yürür.",
       "intro": "İzmit ve Kocaeli sanayi bölgesindeki mühendislik, inşaat ve ticaret firmalarına kurumsal web sitesi ve e-ticaret altyapısı kuruyoruz. Ofisimiz Bilecik'te; süreç tamamen online yürür. Sanayi bölgesinin B2B ağırlıklı yapısına uygun, referans ve proje portföyünü öne çıkaran, güven veren kurumsal siteler tasarlarız.",
       "bullets": {
@@ -4762,7 +4761,7 @@
     },
     "izmir": {
       "title": "İzmir Web Tasarım ve Yazılım",
-      "metaTitle": "İzmir Web Tasarım ve Yazılım | Piton Studios",
+      "metaTitle": "İzmir Web Tasarım ve Yazılım | Piton",
       "metaDescription": "İzmir'deki e-ticaret, gıda ve hizmet işletmeleri için web tasarım, e-ticaret ve SEO çözümleri sunuyoruz. Ekip tamamen uzaktan çalışır, tüm süreç online yürür.",
       "intro": "İzmir'deki e-ticaret, gıda ve hizmet işletmelerine web tasarım, e-ticaret altyapısı ve SEO hizmeti sunuyoruz. Ofisimiz Bilecik'te; tüm süreç online yürür, saha ziyareti gerekmez. Şehrin çeşitli ekonomik yapısına uygun olarak hem markalaşmayı hem de sipariş ve randevu akışını dijitalleştiren siteler tasarlarız.",
       "bullets": {
@@ -4789,7 +4788,7 @@
   "solutionItems": {
     "real-estate-listing-software": {
       "title": "Emlak İlan Yönetim Yazılımı",
-      "metaTitle": "Emlak İlan Yönetim Yazılımı | Piton Studios",
+      "metaTitle": "Emlak İlan Yönetim Yazılımı | Piton",
       "metaDescription": "Emlak ofisleri için harita, çok dilli yapı ve otomatik teklif üretimi olan özel ilan yönetim yazılımları geliştiriyoruz; portal senkronizasyonu dahil.",
       "intro": "Emlak ilan yönetim yazılımı, portföyünüzü hazır bir web sitesinin ötesinde yönetmenizi sağlayan özel bir sistemdir: harita üzerinde ilan gösterimi, çok dilli yönetim paneli ve ilan verisinden otomatik teklif üretimi. Nexos Investment için bu sistemi sıfırdan kurduk; Emlak Sync ürünümüzle de ilanların portallarla senkronizasyonunu otomatikleştiriyoruz.",
       "bullets": {
@@ -4814,7 +4813,7 @@
     },
     "transfer-booking-system": {
       "title": "Transfer Rezervasyon Sistemi",
-      "metaTitle": "Transfer Rezervasyon Sistemi | Piton Studios",
+      "metaTitle": "Transfer Rezervasyon Sistemi | Piton",
       "metaDescription": "Transfer ve taksi firmaları için online rezervasyon, rota bazlı fiyat hesaplama ve WhatsApp entegrasyonlu sistemler kuruyoruz; beş projede uyguladık.",
       "intro": "Transfer rezervasyon sistemi, yolcunun güzergâhını ve tarihini seçip talebini doğrudan bıraktığı bir akıştır. Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi ve Welcome Pickups'ta bu akışı rota/fiyat hesaplama ve WhatsApp entegrasyonuyla kurduk. İhtiyaç büyüdükçe aynı yapıyı araç ve şoför yönetimi olan tam bir web uygulamasına genişletebiliriz.",
       "bullets": {
@@ -4839,7 +4838,7 @@
     },
     "hotel-booking-website": {
       "title": "Otel Web Sitesi ve Rezervasyon",
-      "metaTitle": "Otel Web Sitesi ve Rezervasyon | Piton Studios",
+      "metaTitle": "Otel Web Sitesi ve Rezervasyon | Piton",
       "metaDescription": "Oteller için fotoğraf galerisi odaklı, özel kodlanmış rezervasyon akışlı ve çok dilli web siteleri tasarlıyoruz. Örnek: Sammys Hotel butik otel sitesi.",
       "intro": "Otel web sitesi, misafirin kararını fotoğraflara ve rezervasyonun kolaylığına bakarak verdiği bir vitrindir. Sammys Hotel için hazır eklenti yerine otelin iş akışına özel kodlanmış bir rezervasyon sistemi kurduk: oda seçimi, tarih ve talep akışı markaya özel tasarımla bütünleşik. Aynı yaklaşımı her ölçekteki konaklama işletmesine uyarlıyoruz.",
       "bullets": {
@@ -4864,7 +4863,7 @@
     },
     "ecommerce-automation": {
       "title": "E-Ticaret Otomasyonu",
-      "metaTitle": "E-Ticaret Otomasyonu | Piton Studios",
+      "metaTitle": "E-Ticaret Otomasyonu | Piton",
       "metaDescription": "E-ticaret mağazaları için stok, sipariş ve pazaryeri senkronizasyonunu otomatikleştiren n8n ve webhook tabanlı akışlar kuruyoruz; kapsamı birlikte belirleriz.",
       "intro": "E-ticaret otomasyonu, mağazanızdaki sipariş, ödeme, kargo ve bildirim adımlarını elle yürütmek yerine birbirine bağlayan akışlardır. Ambalaj Cini'de ödeme tahsilatını, DHL kargo takibini ve sipariş durumunu birbirine senkronize eden, müşteriye ve ekibe otomatik bildirim gönderen bir altyapı kurduk; aynı yaklaşımı stok ve pazaryeri senkronizasyonuna da uyguluyoruz.",
       "bullets": {
@@ -4889,7 +4888,7 @@
     },
     "restaurant-google-ads": {
       "title": "Restoranlar için Google Ads",
-      "metaTitle": "Restoranlar için Google Ads Yönetimi | Piton Studios",
+      "metaTitle": "Restoranlar için Google Ads Yönetimi | Piton",
       "metaDescription": "Restoran ve kafeler için arama kampanyalarıyla yeni müşteri getiren Google Ads yönetimi. Rezervasyon ve sipariş sayfanıza uyumlu kampanya kurulumu ve takibi.",
       "intro": "Restoranınız için 'yakınımda restoran', 'bölge adı restoran' gibi aramalarda doğru anda karşınıza çıkan Google Ads kampanyaları kuruyor ve yönetiyoruz. Kampanya yalnızca tıklama getirmez; menü sayfanıza ve rezervasyon akışınıza bağlanarak tıklamayı masaya çevirir. Yerel SEO'yu beklerken hemen görünürlük isteyen mekânlar için doğru araç budur.",
       "bullets": {
@@ -4914,7 +4913,7 @@
     },
     "finance-automation": {
       "title": "Finans Süreç Otomasyonu",
-      "metaTitle": "Finans Süreç Otomasyonu Hizmeti | Piton Studios",
+      "metaTitle": "Finans Süreç Otomasyonu Hizmeti | Piton",
       "metaDescription": "Döviz büroları, kripto işletmeleri ve finans şirketleri için ödeme takibi, hatırlatma ve raporlama süreçlerini otomatikleştiren yazılım geliştiriyoruz.",
       "intro": "Finans şirketiniz, döviz büronuz veya kripto işletmeniz için ödeme takibi, vade hatırlatma ve raporlama gibi tekrar eden süreçleri otomatikleştiren yazılımlar geliştiriyoruz. Kendi ürünümüz Ödeme Takip Botu ile ödeme vadelerini izleyip otomatik hatırlatma gönderen, Holly Trader ile piyasa verisi toplayıp raporlayan sistemler kurduk. Amaç, elle takip edilen tabloların yerine kendi kendine çalışan bir sistem koymak.",
       "bullets": {
@@ -4939,7 +4938,7 @@
     },
     "corporate-ai-assistant": {
       "title": "Kurumsal Yapay Zekâ Asistanı",
-      "metaTitle": "Kurumsal Yapay Zekâ Asistanı Geliştirme | Piton Studios",
+      "metaTitle": "Kurumsal Yapay Zekâ Asistanı Geliştirme | Piton",
       "metaDescription": "Kurumsal web sitenize veya iç süreçlerinize entegre yapay zekâ asistanı geliştiriyoruz. Claude, OpenAI ve Gemini ile guardrail ve maliyet kontrollü kurulum.",
       "intro": "Kurumsal web siteniz veya iç süreçleriniz için müşteri sorularını yanıtlayan, doküman arayan ya da tekrar eden bir görevi devralan yapay zekâ asistanları geliştiriyoruz. Claude, OpenAI ve Gemini modelleriyle çalışıyor, modeli alışkanlıkla değil kullanım senaryosuna göre seçiyoruz. Kendi ürün denememiz ContentFlow AI'da içerik üretim akışını yapay zekâ ile hızlandıran bir sistem kurarak bu alandaki entegrasyon deneyimimizi kendi tarafımızda test ettik.",
       "bullets": {
@@ -4964,7 +4963,7 @@
     },
     "education-platform": {
       "title": "Eğitim Platformu Geliştirme",
-      "metaTitle": "Eğitim Platformu Geliştirme Hizmeti | Piton Studios",
+      "metaTitle": "Eğitim Platformu Geliştirme Hizmeti | Piton",
       "metaDescription": "Kurs, sınav veya öğrenci takip özellikli özel eğitim platformları geliştiriyoruz. Kayıt akışı, kullanıcı paneli ve içerik yönetimi tek yapıda kurulur.",
       "intro": "Kurs merkeziniz veya eğitim kurumunuz standart bir tanıtım sitesinin ötesine geçip öğrenci girişi, ilerleme takibi veya sınav gibi özellikler istediğinde özel bir web uygulaması geliştiriyoruz. Portföyümüzde eğitim sektörüne özel bir proje henüz yok; ancak panel, portal ve kullanıcı girişli sistem kurma deneyimimizi Nexos Investment'taki ilan yönetim portalı ve kendi ürünümüz Social Pro'daki çoklu hesap mimarisiyle kanıtlıyoruz.",
       "bullets": {
@@ -4989,7 +4988,7 @@
     },
     "beauty-appointment-system": {
       "title": "Güzellik Salonu Randevu Sistemi",
-      "metaTitle": "Güzellik Salonu Randevu Sistemi Geliştirme | Piton Studios",
+      "metaTitle": "Güzellik Salonu Randevu Sistemi Geliştirme | Piton",
       "metaDescription": "Salon ve kuaförler için takvim, personel ve hizmet bazlı özel randevu sistemi geliştiriyoruz. Müşteri online randevu alır, salon panelden yönetir.",
       "intro": "Standart bir randevu formunun ötesinde, personel bazlı takvim ve hizmet süresine göre müsaitlik gösteren özel bir randevu sistemi isteyen salon ve kuaförler için web uygulaması geliştiriyoruz. Portföyümüzde güzellik sektörüne özel bir proje henüz yok; ancak online rezervasyon akışı kurma deneyimimizi Jet Transfer Cyprus ve Welcome Pickups'taki booking sistemleriyle kanıtlıyoruz — aynı mantık salon takvimine uyarlanabilir.",
       "bullets": {
@@ -5014,7 +5013,7 @@
     },
     "whatsapp-sales-bot": {
       "title": "WhatsApp Satış ve Sipariş Botu",
-      "metaTitle": "WhatsApp Satış Botu | Piton Studios",
+      "metaTitle": "WhatsApp Satış Botu | Piton",
       "metaDescription": "E-ticaret sitenize WhatsApp üzerinden sipariş durumu, terk edilmiş sepet hatırlatması ve ürün sorularını yanıtlayan otomatik satış botu kuruyoruz, Meta onaylı.",
       "intro": "Müşteriniz siparişinin nerede olduğunu sormak, sepette unuttuğu ürünü hatırlamak ya da bir ürün hakkında soru sormak için artık WhatsApp'ı açıyor. Sipariş durumu, terk edilmiş sepet hatırlatması ve ürün sorularını otomatik yanıtlayan bir WhatsApp botu, bu talebi e-postadan çok daha hızlı karşılar.",
       "bullets": {
@@ -5039,7 +5038,7 @@
     },
     "clinic-whatsapp-appointments": {
       "title": "Klinik İçin WhatsApp Randevu Botu",
-      "metaTitle": "Klinik WhatsApp Randevu Botu | Piton Studios",
+      "metaTitle": "Klinik WhatsApp Randevu Botu | Piton",
       "metaDescription": "Klinikler için randevu talebi almayı ve hatırlatma göndermeyi WhatsApp üzerinden otomatikleştiren bot kuruyoruz; hasta verisi KVKK'ya uygun şekilde işlenir.",
       "intro": "Hastalarınız randevu almak veya değiştirmek için telefonu çevirmek yerine WhatsApp'a yazmayı tercih ediyor. Randevu taleplerini alan ve yaklaşan randevular için otomatik hatırlatma gönderen bir WhatsApp botu, resepsiyonun telefon trafiğini azaltırken hasta tarafında da daha hızlı bir yanıt sağlar. Bu otomasyon hasta verisini işlerken KVKK'ya uygun bir çerçevede çalışır.",
       "bullets": {
@@ -5064,7 +5063,7 @@
     },
     "real-estate-meta-ads": {
       "title": "Emlak Ofisleri İçin Meta Reklamları",
-      "metaTitle": "Emlak İçin Meta Reklamları | Piton Studios",
+      "metaTitle": "Emlak İçin Meta Reklamları | Piton",
       "metaDescription": "Emlak ofisleri için yerli ve yabancı alıcılara yönelik ilan/lead reklamları kuruyoruz; Meta Pixel ve Conversions API ile doğru lead verisi, çok dilli hedefleme.",
       "intro": "Bir mülk ilanının Facebook ve Instagram'da doğru kişiye ulaşması, sitenize gelen trafikten çok daha fazla lead'e dönüşür. Emlak ofisleri için ilan ve lead odaklı Meta kampanyaları kuruyoruz — yerli alıcı ile yurt dışından bakan yabancı alıcıyı ayrı hedefleyen, Pixel ve Conversions API'ye dayanan bir yapıyla.",
       "bullets": {
@@ -5089,7 +5088,7 @@
     },
     "engineering-quote-portal": {
       "title": "Mühendislik Firmaları İçin Teknik Teklif Portalı",
-      "metaTitle": "Mühendislik Teklif Portalı | Piton Studios",
+      "metaTitle": "Mühendislik Teklif Portalı | Piton",
       "metaDescription": "Mühendislik firmaları için teknik teklif hazırlama ve proje talebi yönetimini tek panelde toplayan özel yazılım geliştiriyoruz; teklif PDF'e otomatik döner.",
       "intro": "Mühendislik firmalarında teklif hazırlama süreci genelde tablolar, e-postalar ve elle hazırlanan dosyalar arasında dağınık ilerler. Teknik teklif ve proje talebi yönetimini tek bir panelde toplayan, teklif verisinden otomatik doküman üreten özel bir sistem, mühendisin zamanını hesap yapmaya değil dosya hazırlamaya harcamasını engeller.",
       "bullets": {
@@ -5114,7 +5113,7 @@
     },
     "finance-customer-portal": {
       "title": "Finans Şirketleri İçin Güvenli Müşteri Portalı",
-      "metaTitle": "Finans Müşteri Portalı | Piton Studios",
+      "metaTitle": "Finans Müşteri Portalı | Piton",
       "metaDescription": "Finans şirketleri için ekstre, belge ve talep yönetimini tek panelde toplayan güvenli müşteri portalı geliştiriyoruz; rol bazlı erişim ve denetlenebilir kayıt.",
       "intro": "Müşterinize ekstresini, belgesini veya talebinin durumunu göstermek için hâlâ e-posta veya telefon kullanıyorsanız, hem müşteri hem ekip zaman kaybediyor demektir. Ekstre, belge ve taleplerin tek bir güvenli panelden yönetildiği bir müşteri portalı, bu bilgiyi müşterinin kendisinin görebileceği, ekibinizin de aynı yerden yönetebileceği tek bir sisteme taşır.",
       "bullets": {
@@ -5139,7 +5138,7 @@
     },
     "hotel-maintenance-care": {
       "title": "Otel Siteleri İçin Sezona Dayanıklı Bakım Planı",
-      "metaTitle": "Otel Sitesi Bakım Planı | Piton Studios",
+      "metaTitle": "Otel Sitesi Bakım Planı | Piton",
       "metaDescription": "Otel ve turizm siteleri için sezonluk trafik artışına dayanıklı bakım planı sunuyoruz: güncellemeler, yedekleme ve rezervasyon formunun sürekli izlenmesi.",
       "intro": "Bir otel sitesi için en kritik an, sezonun yoğun haftalarında rezervasyon formunun sessizce bozulduğu andır — kimse fark etmeden günler geçebilir. Otel siteleri için kurduğumuz bakım planı, güncellemeleri, yedeklemeyi ve rezervasyon formunun sürekli izlenmesini sezon boyunca tek bir sorumlulukta toplar.",
       "bullets": {
@@ -5164,7 +5163,7 @@
     },
     "real-estate-crm": {
       "title": "Emlak Ofisleri için CRM",
-      "metaTitle": "Emlak Ofisleri için CRM | Piton Studios",
+      "metaTitle": "Emlak Ofisleri için CRM | Piton",
       "metaDescription": "Emlak ofisleri için lead takibi, portföy eşleştirme ve gösterim/randevu planlaması yapan özel CRM sistemleri geliştiriyoruz — Nexos Investment deneyimimizle.",
       "intro": "Emlak CRM'i, danışmanın hangi müşteriyle hangi aşamada olduğunu, hangi portföyü kime gösterdiğini ve bir sonraki randevunun ne zaman olduğunu tek yerden gösteren iç sistemdir. Nexos Investment'ta kurduğumuz özel panel mimarisini ve Emlak Sync'teki senkronizasyon mantığını, lead ve gösterim takibi yapan bir CRM'e uyarlıyoruz.",
       "bullets": {
@@ -5189,7 +5188,7 @@
     },
     "construction-erp": {
       "title": "İnşaat Firmaları için ERP",
-      "metaTitle": "İnşaat Firmaları için ERP | Piton Studios",
+      "metaTitle": "İnşaat Firmaları için ERP | Piton",
       "metaDescription": "İnşaat firmaları için proje, taşeron, hakediş ve malzeme takibini tek panelde birleştiren özel ERP sistemleri geliştiriyoruz; kapsamı iş akışınıza göre kurarız.",
       "intro": "İnşaat ERP'si, bir firmanın hangi projede hangi taşeronun çalıştığını, ilerleme yüzdesine göre kesilen hakedişi ve şantiyeye giden malzemeyi tek sistemden görmesini sağlar. Bu ölçekte inşaat sektöründe henüz bir projemiz yok; FurCRM'de kurduğumuz üretim/bayi takibini ve Ambalaj Cini'nin stok/muhasebe altyapısını inşaat iş akışına uyarlayarak kuruyoruz.",
       "bullets": {
@@ -5214,7 +5213,7 @@
     },
     "manufacturing-erp": {
       "title": "Üretim Firmaları için ERP",
-      "metaTitle": "Üretim Firmaları için ERP | Piton Studios",
+      "metaTitle": "Üretim Firmaları için ERP | Piton",
       "metaDescription": "Üretim, stok, sipariş ve bayi takibini tek panelde birleştiren özel ERP sistemleri geliştiriyoruz; FurCRM deneyimimize ve mobilya sektörü referansımıza dayanır.",
       "intro": "Üretim ERP'si, hangi üründen ne kadar stokta olduğunu, hangi siparişin üretimde hangi aşamada beklediğini ve hangi bayinin ne kadar borcu olduğunu tek panelde gösterir. FurCRM'de mobilya üreticileri için tam olarak bunu kurduk: ürün/varyant, cari, sipariş-fatura akışı ve bayi yönetimi tek sistemde birleşti — aynı mimariyi başka üretim sektörlerine de uyarlıyoruz.",
       "bullets": {
@@ -5239,7 +5238,7 @@
     },
     "b2b-dealer-portal": {
       "title": "Bayiler için B2B Sipariş Portalı",
-      "metaTitle": "Bayiler için B2B Sipariş Portalı | Piton Studios",
+      "metaTitle": "Bayiler için B2B Sipariş Portalı | Piton",
       "metaDescription": "Bayilerinizin kendi fiyatlarıyla sipariş verdiği B2B portal geliştiriyoruz; FurCRM'in bayi yönetimi ve Ambalaj Cini'nin sipariş altyapısı deneyimimize dayanır.",
       "intro": "B2B bayi portalı, her bayinin kendi fiyat listesiyle, kendi hesabından sipariş verip geçmiş siparişlerini ve bakiyesini görebildiği bir ön yüzdür. FurCRM'de bayiye özel fiyatlandırma ve sipariş takibi yapan bayi yönetimi modülünü kurduk; Ambalaj Cini'nin sipariş, stok ve kargo senkronizasyonu olan back-office'i de bu portalın altyapısına doğrudan taşınabilir.",
       "bullets": {
@@ -5264,7 +5263,7 @@
     },
     "restaurant-qr-ordering": {
       "title": "Restoranlar için QR Menü ve Sipariş Sistemi",
-      "metaTitle": "Restoranlar için QR Menü ve Sipariş | Piton Studios",
+      "metaTitle": "Restoranlar için QR Menü ve Sipariş | Piton",
       "metaDescription": "Restoran ve kafeler için masadan QR ile menü görüntüleme, sipariş verme ve mutfak ekranına anlık düşen sipariş akışı olan özel yazılım geliştiriyoruz.",
       "intro": "QR menü ve sipariş sistemi, müşterinin masadan telefonuyla taradığı kodla menüyü görüp siparişini doğrudan verdiği, siparişin de anında mutfak ekranına düştüğü bir akıştır. Bugün bu tam akışı teslim ettiğimiz bir restoran projemiz yok; Boon Fresh'te kurduğumuz sipariş yönetimini ve Ambalaj Cini'nin gerçek zamanlı bildirim altyapısını restoran iş akışına uyarlayarak kuruyoruz.",
       "bullets": {
@@ -5289,7 +5288,7 @@
     },
     "transfer-driver-app": {
       "title": "Transfer Firmaları için Şoför Uygulaması",
-      "metaTitle": "Transfer Şoför Uygulaması | Piton Studios",
+      "metaTitle": "Transfer Şoför Uygulaması | Piton",
       "metaDescription": "Transfer firmaları için iş atama, güzergah ve durum takibi yapan şoför uygulaması geliştiriyoruz; native uygulamamız henüz yok, kararı sizinle birlikte veririz.",
       "intro": "Şoför uygulaması, merkez ofisin şoföre işi atadığı, şoförün güzergahı gördüğü ve durumunu (yolda, müşteride, tamamlandı) bildirdiği mobil araçtır. Bugüne kadar yayınladığımız bir native mobil uygulama yok; beş transfer sitesinde kurduğumuz rezervasyon deneyimini ve mobile-app hizmetimizdeki PWA/native karar sürecini bu uygulamaya taşıyoruz.",
       "bullets": {
@@ -5314,7 +5313,7 @@
     },
     "ecommerce-meta-ads": {
       "title": "E-Ticaret için Meta Reklamları",
-      "metaTitle": "E-Ticaret için Meta Reklamları | Piton Studios",
+      "metaTitle": "E-Ticaret için Meta Reklamları | Piton",
       "metaDescription": "E-ticaret için katalog ve dinamik retargeting odaklı Facebook/Instagram kampanyaları yönetiyoruz; Ambalaj Cini'nde Google Ads ile birlikte %30 büyüme sağladık.",
       "intro": "E-ticaret için Meta reklamları, ürün kataloğunuzu Facebook ve Instagram'da otomatik reklam haline getiren ve sitenizi ziyaret edip almadan çıkan kullanıcıyı ürünüyle yeniden hedefleyen kampanyalardır. Ambalaj Cini'nde Google Ads kampanyalarıyla birlikte yürüttüğümüz Meta reklamları, firmanın dijital büyümesinde %30'luk artışın parçası oldu.",
       "bullets": {

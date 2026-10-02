@@ -1,7 +1,16 @@
-# Piton Studios - Project Memory
+# Piton - Project Memory
+
+## Marka adı: Piton (2026-10-02)
+- "Piton Studios" → "Piton" (kullanıcı kararı). Domain `pitonstudios.com`, `hi@pitonstudios.com`, sosyal hesaplar
+  (instagram/behance/fiverr `pitonstudios`, LinkedIn `piton-studios`) ve repo/paket adı değişmedi.
+- Eski ad `SITE.formerName` → Organization + WebSite JSON-LD `alternateName`. Hukuki metinlerde ticari ad da Piton
+  (`LEGAL.tradeName = SITE.name`), `LEGAL.updated` 2026-10-02.
+- Vercel env `CONTACT_FROM_EMAIL` görünen adı hâlâ "Piton Studios <…>" ise elle "Piton <…>" yapılmalı (koddaki
+  yalnızca varsayılan değer).
+- SSS cevaplarında (tr/ru) ilk paragraf zaten 40 kelimenin altındaydı; ad kısalınca 1'er kelime daha azaldı.
 
 ## Hukuki sayfalar (2026-09-14)
-- Veri sorumlusu: Ömer Faruk Güngör (kayıtlı şirket yok, "Piton Studios" ticari adı), adres 4 Eylül Mah. 889. Sk. Karaca Apt. A Blok, Bozüyük / Bilecik. Yetkili mahkeme Bozüyük. Form yazışmaları iş ilişkisine dönüşmezse 2 yıl saklanır.
+- Veri sorumlusu: Ömer Faruk Güngör (kayıtlı şirket yok, "Piton" ticari adı — 2026-10-02'ye kadar "Piton Studios"), adres 4 Eylül Mah. 889. Sk. Karaca Apt. A Blok, Bozüyük / Bilecik. Yetkili mahkeme Bozüyük. Form yazışmaları iş ilişkisine dönüşmezse 2 yıl saklanır.
 - Veri akışı: form → Resend (ABD) → hi@pitonstudios.com (Zoho Mail, AB veri merkezi; 2026-09-15'te Gmail'den geçildi); barındırma + Analytics/Speed Insights → Vercel (ABD). Veritabanı yok. IP yalnızca bellek içi hız sınırı (10 dk).
 - Metinler avukat incelemesinden geçmedi — özellikle KVKK m.9 yurt dışı aktarım bölümü (standart sözleşme / bildirim yükümlülüğü) hukukçuya gösterilmeli.
 

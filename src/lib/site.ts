@@ -21,7 +21,9 @@ export const SITE_URL = resolveSiteUrl();
 
 export const SITE = {
   url: SITE_URL,
-  name: 'Piton Studios',
+  name: 'Piton',
+  /** Eski marka adi (2026-10'a kadar). Domain ayni kaldigi icin JSON-LD'de alternateName olarak kalir. */
+  formerName: 'Piton Studios',
   email: 'hi@pitonstudios.com',
   logo: `${SITE_URL}/logo.webp`,
   social: [

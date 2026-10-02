@@ -77,7 +77,7 @@ export default function Preloader() {
           <span className="preloader-bar-fill" style={{ width: `${count}%` }} />
           <span className="preloader-snake" style={{ left: `${count}%` }} />
         </div>
-        <div className="preloader-label">PİTON STUDIOS — LOADING</div>
+        <div className="preloader-label">PİTON — LOADING</div>
       </div>
     </div>
   );

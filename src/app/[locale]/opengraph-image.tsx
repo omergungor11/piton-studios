@@ -8,7 +8,7 @@ import { locales } from '@/lib/site';
  */
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = 'Piton Studios';
+export const alt = 'Piton';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

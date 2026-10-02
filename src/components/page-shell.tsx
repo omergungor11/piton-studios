@@ -84,7 +84,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
       <header className="chrome">
         <Link href="/" className="lockup glass" data-cursor="hover" data-cursor-label="Home">
           <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
-          <span className="mark">Piton Studios</span>
+          <span className="mark">Piton</span>
         </Link>
 
         <nav className="nav glass desktop-nav">
@@ -150,7 +150,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
           <div className="mobile-menu-header">
             <div className="mm-brand">
               <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
-              <span>Piton Studios</span>
+              <span>Piton</span>
             </div>
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>

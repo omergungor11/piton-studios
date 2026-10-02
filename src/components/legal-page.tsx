@@ -69,7 +69,7 @@ export default async function LegalPageView({ locale, page }: { locale: string; 
             dateModified: LEGAL.updated,
           }),
           breadcrumbJsonLd([
-            { name: 'Piton Studios', url: absoluteUrl(locale as Locale, '/') },
+            { name: 'Piton', url: absoluteUrl(locale as Locale, '/') },
             { name: doc.title, url },
           ]),
         ]}

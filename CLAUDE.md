@@ -1,8 +1,8 @@
-# Piton Studios
+# Piton
 
 ## Proje
 
-Piton Studios firmasinin dijital ajans / portfolyo websitesi. Proje screenshot'lari ve case study'ler
+Piton firmasinin dijital ajans / portfolyo websitesi (eski adi **Piton Studios** — 2026-10-02'de kisaltildi). Proje screenshot'lari ve case study'ler
 uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 - **GitHub**: https://github.com/omergungor11/piton-studios
@@ -25,16 +25,22 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
 
 ## Mevcut Durum
 
-**Progress**: 76/77 task — son is TASK-078 (Lenis + reveal animasyonlari), 2026-09-20. TASK-075 (teklif sihirbazi) kullanici karariyla geri alindi.
+**Progress**: 81/82 task — son is TASK-083 (marka adi Piton Studios → Piton), 2026-10-02. TASK-075 (teklif sihirbazi) kullanici karariyla geri alindi.
 
 > `piton-tasks/task-index.md` Phase 0-1'de **yanlis COMPLETED** isaretli tasklar iceriyordu
 > (veritabani kurulumu, video pipeline, admin CRUD API'leri). Hicbiri uygulanmamisti;
 > `NEVER_DONE` olarak duzeltildi. Yeniden yapilmasi planlanmiyor.
 
+- **Marka adi = Piton** (2026-10-02): sitede, blogda, hukuki metinlerde, e-postalarda ve JSON-LD'de "Piton Studios" → "Piton".
+  **Degismeyenler**: domain `pitonstudios.com`, `hi@pitonstudios.com`, sosyal hesap URL'leri, paket/repo adi ve
+  SSS id'si `what-is-piton-studios` (kalici anchor). Tek kaynak `SITE.name`; eski ad `SITE.formerName` olarak
+  Organization/WebSite JSON-LD'de `alternateName` — arama motorlari eski adla eslestirsin diye, silmeyin.
+  > Turkce ek uyumu: "Piton'da / Piton'dan / Piton'dur" (Studios'ta/tan/tur degil); Ingilizce iyelik "Piton's".
+  > `social-production/` altindaki eski sosyal medya ciktilari tarihsel kayittir, eski adla kaldi.
 - **50 proje** WORKS array'inde (2026-09-14: VELAIR — 3B özel jet deneyimi, canlı link + desktop/mobil önizleme — #09 sırasına EKH Yapı'nın yerine alındı, EKH Yapı #50'ye kaydı) — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
-- **Anasayfa**: Hero → Spark CTA → Projects → Manifesto (Neden Piton Studios) → Services → Process → About → Contact (8 scene; 2026-09-05'te Projects one alindi)
+- **Anasayfa**: Hero → Spark CTA → Projects → Manifesto (Neden Piton) → Services → Process → About → Contact (8 scene; 2026-09-05'te Projects one alindi)
 - **Anasayfa Projeler sahnesi = 3B proje bulutu** (2026-09-04): `src/components/projects-v2/project-cloud-section.tsx`
   (React Three Fiber, 15 proje, ilk 7'si tekerlek/yatay dokunma ile one gelir; sayfa kaydirmasini kilitlemez). Secim listesi + server veri yardimcisi
   `src/lib/project-cloud.ts`, metinler `messages/*.json` → `projectCloud`. Sahne `.scene--cloud`
@@ -302,7 +308,7 @@ Onizleme: `pnpm dev` → `/api/email-preview` (production'da 404). Logo `public/
 
 ### SEO kurallari (2026-09-15 denetimi)
 
-- `buildPageMetadata` baslik ekini (" — Piton Studios") yalnizca 60 karakteri asmiyorsa ekler,
+- `buildPageMetadata` baslik ekini (" — Piton") yalnizca 60 karakteri asmiyorsa ekler,
   aciklamayi 160'ta keser ve varsayilan OG gorselini (`[locale]/opengraph-image`) acikca yazar.
   Kendi `opengraph-image.tsx` dosyasi olan rotada **`ownOgImage: true` zorunlu** — config gorseli
   dosya tabanli gorseli ezer.

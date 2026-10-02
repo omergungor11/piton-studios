@@ -58,7 +58,7 @@ export default async function SectorsPage({ params }: Props) {
           },
           {
             ...breadcrumbJsonLd([
-              { name: "Piton Studios", url: absoluteUrl(locale as Locale, "/") },
+              { name: "Piton", url: absoluteUrl(locale as Locale, "/") },
               { name: t("title"), url },
             ]),
             "@id": `${url}#breadcrumb`,

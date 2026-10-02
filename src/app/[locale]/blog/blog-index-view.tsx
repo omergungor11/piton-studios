@@ -31,7 +31,7 @@ export default async function BlogIndexView({ locale, page }: { locale: Locale; 
   const nextUrl = page < totalPages ? absoluteUrl(locale, blogPageHref(page + 1)) : undefined;
 
   const crumbs = [
-    { name: 'Piton Studios', url: absoluteUrl(locale, '/') },
+    { name: 'Piton', url: absoluteUrl(locale, '/') },
     { name: t('title'), url: absoluteUrl(locale, '/blog') },
     ...(page > 1
       ? [{ name: t('pagination.status', { page, total: totalPages }), url }]

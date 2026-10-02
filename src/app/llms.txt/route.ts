@@ -2,7 +2,7 @@
  * /llms.txt — LLM crawler'lari icin duz metin site ozeti (llmstxt.org onerisi).
  *
  * Amac: bir dil modeli siteyi tarayamadan ya da JS calistiramadan da
- * "Piton Studios ne yapar, hangi hizmetleri verir, hangi soruya nerede yanit
+ * "Piton ne yapar, hangi hizmetleri verir, hangi soruya nerede yanit
  * var" sorularini tek istekte cevaplayabilsin. Her SSS sorusu kalici
  * anchor'iyla listelenir; model dogrudan o adrese atif yapabilir.
  *
@@ -28,7 +28,7 @@ const MESSAGES = trMessages as unknown as {
 };
 
 const INTRO =
-  'Piton Studios, 2021 yilinda kurulmus, Turkiye merkezli bagimsiz bir dijital studyodur. ' +
+  'Piton (eski adiyla Piton Studios), 2021 yilinda kurulmus, Turkiye merkezli bagimsiz bir dijital studyodur. ' +
   'Web tasarimi ve gelistirme, ozel web uygulamalari, e-ticaret, mobil/PWA, SEO ve GEO, ' +
   'Google Ads, yapay zeka entegrasyonu, is sureci otomasyonu ve bulut altyapisi hizmetleri verir. ' +
   'Kullanilan ana teknolojiler: Next.js, React, TypeScript, Node.js, Vercel. ' +
@@ -38,7 +38,7 @@ export async function GET() {
   const entries = new Map(readFaqEntries(trMessages).map((entry) => [entry.id, entry]));
   const lines: string[] = [];
 
-  lines.push('# Piton Studios');
+  lines.push('# Piton');
   lines.push('');
   lines.push(INTRO);
   lines.push('');

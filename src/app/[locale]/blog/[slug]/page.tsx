@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: Props) {
             sources: post.sources,
           }),
           breadcrumbJsonLd([
-            { name: 'Piton Studios', url: absoluteUrl(locale as Locale, '/') },
+            { name: 'Piton', url: absoluteUrl(locale as Locale, '/') },
             { name: t('title'), url: absoluteUrl(locale as Locale, '/blog') },
             { name: post.title, url },
           ]),

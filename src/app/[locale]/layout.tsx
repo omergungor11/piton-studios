@@ -43,7 +43,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Piton Studios — Blog"
+          title="Piton — Blog"
           href={`${SITE_URL}/${locale}/rss.xml`}
         />
       </head>

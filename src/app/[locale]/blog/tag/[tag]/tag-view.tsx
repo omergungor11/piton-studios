@@ -63,7 +63,7 @@ export default async function BlogTagView({
 
       <JsonLd
         data={breadcrumbJsonLd([
-          { name: 'Piton Studios', url: absoluteUrl(locale, '/') },
+          { name: 'Piton', url: absoluteUrl(locale, '/') },
           { name: t('title'), url: absoluteUrl(locale, '/blog') },
           { name: label, url: absoluteUrl(locale, blogTagPageHref(tag, 1)) },
           ...(page > 1

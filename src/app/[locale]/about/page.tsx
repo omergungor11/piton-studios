@@ -44,7 +44,7 @@ export default async function Page({ params }: Props) {
           description: tm("about.description"),
           locale: l,
           crumbs: [
-            { name: "Piton Studios", url: absoluteUrl(l, "/") },
+            { name: "Piton", url: absoluteUrl(l, "/") },
             { name: tc("about"), url },
           ],
         })}

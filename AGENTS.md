@@ -1,8 +1,8 @@
-# Piton Studios
+# Piton
 
 ## Proje
 
-Piton Studios firmasinin video portfolyo websitesi. Video tabanli sunumlari sergileyen, hizli yuklenme ve akici video deneyimi sunan modern bir portfolyo sitesi.
+Piton (eski adi Piton Studios) firmasinin video portfolyo websitesi. Video tabanli sunumlari sergileyen, hizli yuklenme ve akici video deneyimi sunan modern bir portfolyo sitesi.
 
 - **GitHub**: [repo URL]
 - **Deploy**: Vercel

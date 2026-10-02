@@ -50,7 +50,7 @@ export function renderContactNotification(input: ContactEmailInput & { receivedA
       { label: 'Dil', value: LANG_LABEL[input.locale] },
     ]),
     quote('Mesaj', input.message),
-    button('E-postayla yanıtla', `mailto:${input.email}?subject=${encodeURIComponent('Piton Studios — mesajınız hakkında')}`),
+    button('E-postayla yanıtla', `mailto:${input.email}?subject=${encodeURIComponent('Piton — mesajınız hakkında')}`),
     whatsapp ? button('WhatsApp', whatsapp, 'secondary') : '',
   ].join('');
 
@@ -100,7 +100,7 @@ const AUTO_REPLY: Record<
   }
 > = {
   tr: {
-    subject: 'Mesajınızı aldık — Piton Studios',
+    subject: 'Mesajınızı aldık — Piton',
     label: 'Mesaj alındı',
     eyebrow: 'Mesajınız bize ulaştı',
     greeting: (n) => `Teşekkürler, ${n}.`,
@@ -114,11 +114,11 @@ const AUTO_REPLY: Record<
     messageLabel: 'Gönderdiğiniz mesaj',
     cta: 'Projelerimize göz atın',
     replyHint: 'Eklemek istediğiniz bir şey varsa bu e-postayı yanıtlamanız yeterli.',
-    team: 'Piton Studios ekibi',
+    team: 'Piton ekibi',
     role: 'Tasarım · Yazılım · Yapay zeka',
   },
   en: {
-    subject: 'We received your message — Piton Studios',
+    subject: 'We received your message — Piton',
     label: 'Message received',
     eyebrow: 'Your message reached us',
     greeting: (n) => `Thanks, ${n}.`,
@@ -132,11 +132,11 @@ const AUTO_REPLY: Record<
     messageLabel: 'Your message',
     cta: 'Explore our projects',
     replyHint: 'If you want to add anything, simply reply to this email.',
-    team: 'The Piton Studios team',
+    team: 'The Piton team',
     role: 'Design · Engineering · AI',
   },
   ru: {
-    subject: 'Мы получили ваше сообщение — Piton Studios',
+    subject: 'Мы получили ваше сообщение — Piton',
     label: 'Сообщение получено',
     eyebrow: 'Ваше сообщение получено',
     greeting: (n) => `Спасибо, ${n}.`,
@@ -150,7 +150,7 @@ const AUTO_REPLY: Record<
     messageLabel: 'Ваше сообщение',
     cta: 'Посмотреть наши проекты',
     replyHint: 'Если хотите что-то добавить, просто ответьте на это письмо.',
-    team: 'Команда Piton Studios',
+    team: 'Команда Piton',
     role: 'Дизайн · Разработка · ИИ',
   },
 };

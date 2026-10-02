@@ -117,7 +117,7 @@ export default function LandingView({
             : null,
           {
             ...breadcrumbJsonLd([
-              { name: "Piton Studios", url: absoluteUrl(locale, "/") },
+              { name: "Piton", url: absoluteUrl(locale, "/") },
               { name: parent.name, url: absoluteUrl(locale, parent.href) },
               { name: text.title, url },
             ]),

@@ -50,7 +50,7 @@ export function renderOgImage({ title, eyebrow, description, footnote }: OgInput
               }}
             />
             <div style={{ fontSize: 26, letterSpacing: 2, textTransform: 'uppercase' }}>
-              Piton Studios
+              Piton
             </div>
           </div>
           {eyebrow ? (

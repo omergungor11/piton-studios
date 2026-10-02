@@ -137,6 +137,7 @@ export function organizationJsonLd(): JsonLdObject {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: SITE.name,
+    alternateName: SITE.formerName,
     url: SITE_URL,
     logo: SITE.logo,
     email: SITE.email,
@@ -151,6 +152,7 @@ export function websiteJsonLd(locale: Locale): JsonLdObject {
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
     name: SITE.name,
+    alternateName: SITE.formerName,
     inLanguage: locale,
     publisher: { '@id': `${SITE_URL}/#organization` },
   };

@@ -64,7 +64,7 @@ export default async function LocationsPage({ params }: Props) {
           },
           {
             ...breadcrumbJsonLd([
-              { name: "Piton Studios", url: absoluteUrl(loc, "/") },
+              { name: "Piton", url: absoluteUrl(loc, "/") },
               { name: t("title"), url },
             ]),
             "@id": `${url}#breadcrumb`,

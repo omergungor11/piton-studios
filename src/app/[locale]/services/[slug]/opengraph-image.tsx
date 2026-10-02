@@ -6,7 +6,7 @@ import { localizeSlug, resolveSlug } from '@/lib/slugs';
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = 'Piton Studios';
+export const alt = 'Piton';
 
 // URL parcasi dile gore degisir (src/lib/slugs.ts).
 export function generateStaticParams() {
@@ -25,7 +25,7 @@ export default async function Image({
   const service = slug ? await getLocalizedService(locale as Locale, slug) : null;
 
   if (!service) {
-    return renderOgImage({ title: 'Piton Studios' });
+    return renderOgImage({ title: 'Piton' });
   }
 
   return renderOgImage({

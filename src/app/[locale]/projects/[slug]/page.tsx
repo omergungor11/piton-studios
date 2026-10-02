@@ -77,7 +77,7 @@ export default async function ProjectPage({ params }: Props) {
               client: localized.client,
             }),
             breadcrumbJsonLd([
-              { name: "Piton Studios", url: absoluteUrl(locale as Locale, "/") },
+              { name: "Piton", url: absoluteUrl(locale as Locale, "/") },
               { name: t("projects"), url: absoluteUrl(locale as Locale, "/projects") },
               { name: localized.title, url },
             ]),

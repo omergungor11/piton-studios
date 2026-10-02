@@ -66,7 +66,7 @@ function readPostFile(locale: Locale, fileName: string): Post | null {
     updated: data.updated ? toIsoDate(data.updated) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     cover: data.cover ? String(data.cover) : undefined,
-    author: data.author ? String(data.author) : 'Piton Studios',
+    author: data.author ? String(data.author) : 'Piton',
     draft: data.draft === true,
     translationKey: data.translationKey ? String(data.translationKey) : slug,
     faq: parseFaq(data.faq),

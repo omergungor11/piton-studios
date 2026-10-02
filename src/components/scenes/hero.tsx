@@ -8,7 +8,7 @@ import SplitWords from '@/components/motion/split-words';
 
 const HeroLogo3D = dynamic(() => import('@/components/hero-logo-3d'), {
   ssr: false,
-  loading: () => <img src="/logo.webp" alt="Piton Studios" className="hero-logo" />,
+  loading: () => <img src="/logo.webp" alt="Piton" className="hero-logo" />,
 });
 
 interface HeroSceneProps {
@@ -29,11 +29,7 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
         <Reveal variant="fadeIn" duration={0.8}>
           <div className="kicker">{t('kicker')}</div>
         </Reveal>
-        <SplitWords
-          as="h1"
-          hero
-          segments={[`${t('title1')} `, { text: t('title2'), className: 'it' }]}
-        />
+        <SplitWords as="h1" hero text={t('title1')} />
         <div className="sub" data-reveal="fade-hero" style={{ '--reveal-delay': '350ms' } as CSSProperties}>
           {t('subtitle')}
         </div>

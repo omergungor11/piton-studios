@@ -13,7 +13,7 @@ export const dynamic = 'force-dynamic';
 const NOTIFY_TO = process.env.CONTACT_NOTIFY_EMAIL ?? 'hi@pitonstudios.com';
 
 /** Dogrulanmis alan adi varsa oradan, yoksa Resend'in test gondericisinden. */
-const FROM = process.env.CONTACT_FROM_EMAIL ?? 'Piton Studios <onboarding@resend.dev>';
+const FROM = process.env.CONTACT_FROM_EMAIL ?? 'Piton <onboarding@resend.dev>';
 
 /** Ziyaretciye otomatik yanit yalnizca dogrulanmis alan adiyla mumkun. */
 const CAN_AUTO_REPLY = Boolean(process.env.CONTACT_FROM_EMAIL);

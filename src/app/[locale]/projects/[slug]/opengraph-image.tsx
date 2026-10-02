@@ -5,7 +5,7 @@ import { locales, type Locale } from '@/lib/site';
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = 'Piton Studios';
+export const alt = 'Piton';
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -22,7 +22,7 @@ export default async function Image({
   const project = await getLocalizedProject(locale as Locale, slug);
 
   if (!project) {
-    return renderOgImage({ title: 'Piton Studios' });
+    return renderOgImage({ title: 'Piton' });
   }
 
   return renderOgImage({

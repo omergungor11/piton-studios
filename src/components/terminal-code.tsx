@@ -9,7 +9,7 @@ const LINES: Line[] = [
   [{ t: '// studio.ts', c: 'cm' }],
   [{ t: '', c: '' }],
   [{ t: 'const ', c: 'kw' }, { t: 'studio', c: 'vr' }, { t: ' = {', c: 'pu' }],
-  [{ t: '  name', c: 'pr' }, { t: ': ', c: 'pu' }, { t: '"Piton Studios"', c: 'st' }, { t: ',', c: 'pu' }],
+  [{ t: '  name', c: 'pr' }, { t: ': ', c: 'pu' }, { t: '"Piton"', c: 'st' }, { t: ',', c: 'pu' }],
   [{ t: '  stack', c: 'pr' }, { t: ': [', c: 'pu' }, { t: '"Next.js"', c: 'st' }, { t: ', ', c: 'pu' }, { t: '"AI"', c: 'st' }, { t: '],', c: 'pu' }],
   [{ t: '  since', c: 'pr' }, { t: ': ', c: 'pu' }, { t: '2021', c: 'nm' }, { t: ',', c: 'pu' }],
   [{ t: '}', c: 'pu' }],

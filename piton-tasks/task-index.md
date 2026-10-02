@@ -1,4 +1,4 @@
-# Piton Studios - Task Index
+# Piton - Task Index
 
 ## Dashboard
 
@@ -20,9 +20,10 @@
 | 13 | SEO, Dönüşüm & Görsel Deneyim (TASK-071..078) | 8 | 7 | 0 | 0 | 0 |
 | 14 | Fiyatlandırma (TASK-079) | 1 | 1 | 0 | 0 | 0 |
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
-| **Total** | | **81** | **80** | **0** | **0** | **0** |
+| 16 | Marka Adı (TASK-083) | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **82** | **81** | **0** | **0** | **0** |
 
-**Progress**: 80/81 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 81/82 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -179,3 +180,9 @@
 | TASK-080 | Liste görselleri: projeler tablosuna 16:9 ekran görüntüsü kolonu (görseli olmayan 15 projede baş harf yer tutucusu) + hizmetler listesi kartlarına 18 SVG sahnesi (tembel render, animasyon yalnızca hover) | M | COMPLETED |
 | TASK-081 | Blog sayfalama: sayfa başına 10 yazı, yol tabanlı ve 3 dilde çevrili segment (`sayfa`/`page`/`stranitsa`), etiket sayfaları, canonical + rel=prev/next + sitemap | M | COMPLETED |
 | TASK-082 | Blog yazı görselleri: 20 hero SVG sahnesi (translationKey başına) + 9 gövde şeması (`BlogFigure`), yazı detayı ve blog listesi kartlarında | L | COMPLETED |
+
+## Phase 16: Marka adı (2026-10-02)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-083 | Marka adı "Piton Studios" → "Piton": site metinleri, 3 dil çeviri, blog + hukuki MDX, e-posta şablonları, OG, JSON-LD (`alternateName` eski ad); domain ve e-posta aynı | M | COMPLETED |

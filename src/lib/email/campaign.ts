@@ -108,14 +108,14 @@ export function sampleCampaign(lang: Locale): CampaignInput {
   if (lang === 'tr') {
     return {
       lang,
-      subject: 'İşletmeniz için web, yazılım ve yapay zeka — Piton Studios',
+      subject: 'İşletmeniz için web, yazılım ve yapay zeka — Piton',
       preheader: 'Web sitesi, özel yazılım ve otomasyonla işinizi büyütmenin üç yolu.',
-      label: 'Piton Studios · Bülten',
+      label: 'Piton · Bülten',
       eyebrow: 'Dijital büyüme',
       title: 'Web sitenizden daha fazlası: işinizi büyüten dijital altyapı',
       greeting: 'Merhaba,',
       intro: [
-        'Piton Studios olarak işletmelere web tasarım, özel yazılım ve yapay zeka entegrasyonunu tek ekipten sunuyoruz.',
+        'Piton olarak işletmelere web tasarım, özel yazılım ve yapay zeka entegrasyonunu tek ekipten sunuyoruz.',
         'Aşağıda en sık başladığımız üç alanı kısaca özetledik.',
       ],
       sectionsTitle: 'Nereden başlayabiliriz?',
@@ -133,30 +133,30 @@ export function sampleCampaign(lang: Locale): CampaignInput {
       },
       cta: { label: 'Projenizi konuşalım', href: url('/contact') },
       closing: 'Sorularınız için bu e-postayı yanıtlamanız da yeterli.',
-      signature: { name: 'Piton Studios', role: 'Tasarım · Yazılım · Yapay zeka' },
+      signature: { name: 'Piton', role: 'Tasarım · Yazılım · Yapay zeka' },
       reason: 'Bu e-postayı, işletmenizin dijital altyapısıyla ilgili olabileceğini düşündüğümüz için aldınız.',
     };
   }
 
   return {
     lang,
-    subject: lang === 'ru' ? 'Веб, разработка и ИИ для вашего бизнеса — Piton Studios' : 'Web, software and AI for your business — Piton Studios',
+    subject: lang === 'ru' ? 'Веб, разработка и ИИ для вашего бизнеса — Piton' : 'Web, software and AI for your business — Piton',
     preheader: lang === 'ru' ? 'Три способа развить бизнес с помощью сайта, ПО и автоматизации.' : 'Three ways to grow with a website, custom software and automation.',
-    label: 'Piton Studios · Newsletter',
+    label: 'Piton · Newsletter',
     eyebrow: lang === 'ru' ? 'Цифровой рост' : 'Digital growth',
     title: lang === 'ru' ? 'Больше, чем сайт: цифровая основа для роста' : 'More than a website: digital infrastructure that grows your business',
     greeting: lang === 'ru' ? 'Здравствуйте,' : 'Hello,',
     intro: [
       lang === 'ru'
-        ? 'Piton Studios объединяет веб-дизайн, разработку ПО и интеграцию ИИ в одной команде.'
-        : 'Piton Studios brings web design, custom software and AI integration together in one team.',
+        ? 'Piton объединяет веб-дизайн, разработку ПО и интеграцию ИИ в одной команде.'
+        : 'Piton brings web design, custom software and AI integration together in one team.',
     ],
     sections: [
       { eyebrow: 'Web', title: lang === 'ru' ? 'Быстрый многоязычный сайт' : 'Fast, multilingual website', body: lang === 'ru' ? 'Сайты на Next.js, готовые к поиску и ИИ-ответам.' : 'Next.js sites ready for search engines and AI answers.', href: service('web-design'), linkLabel: lang === 'ru' ? 'Веб-дизайн' : 'Web design' },
       { eyebrow: 'Software', title: 'ERP & CRM', body: lang === 'ru' ? 'Переносим таблицы и разрозненные инструменты в одну систему.' : 'We move spreadsheets and scattered tools into one system built around your workflow.', href: service('erp-crm'), linkLabel: 'ERP & CRM' },
     ],
     cta: { label: lang === 'ru' ? 'Обсудить проект' : "Let's talk about your project", href: url('/contact') },
-    signature: { name: 'Piton Studios', role: lang === 'ru' ? 'Дизайн · Разработка · ИИ' : 'Design · Engineering · AI' },
+    signature: { name: 'Piton', role: lang === 'ru' ? 'Дизайн · Разработка · ИИ' : 'Design · Engineering · AI' },
     reason: lang === 'ru'
       ? 'Вы получили это письмо, потому что мы считаем его полезным для цифровой инфраструктуры вашей компании.'
       : 'You received this email because we believe it is relevant to your company’s digital infrastructure.',

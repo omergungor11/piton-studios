@@ -1,8 +1,11 @@
-# Piton Studios Marka Kiti
+# Piton Marka Kiti
+
+> 2026-10-02: marka adi **Piton Studios → Piton** olarak kisaltildi. Domain (`pitonstudios.com`),
+> e-posta ve sosyal hesap kullanici adlari ayni kaldi. Eski sosyal medya ciktilari eski adi tasir.
 
 ## Marka fikri
 
-Piton Studios; tasarim, kod ve yapay zekayi tek cati altinda birlestiren bagimsiz dijital studyodur. Gorsel dil teknik, net, karanlik ve hareket hissi tasiyan bir yapida olmalidir.
+Piton; tasarim, kod ve yapay zekayi tek cati altinda birlestiren bagimsiz dijital studyodur. Gorsel dil teknik, net, karanlik ve hareket hissi tasiyan bir yapida olmalidir.
 
 ## Renk sistemi
 
@@ -50,4 +53,4 @@ Harf araligi sifir tutulur. Buyuk basliklarda satir araligi sikidir; uzun metinl
 - Guvenli alan: her kenardan en az 72 px
 - Carousel kapagi: tek fikir, en fazla uc satir ana mesaj
 - Proje anlatimi: problem, yaklasim, cozum, sonuc, cagri
-- Her gorselde seri adi, slayt numarasi ve Piton Studios imzasi korunur.
+- Her gorselde seri adi, slayt numarasi ve Piton imzasi korunur.

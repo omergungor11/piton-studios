@@ -160,7 +160,7 @@ export const TIMELINE: YearEntry[] = (() => {
  * Kendi urunlerimizde `client` alani studyonun adidir — musteri sayimina girmemeli.
  * Bu ad data.ts'te degisirse burasi da guncellenmeli.
  */
-const SELF_CLIENT = 'Piton Studios';
+const SELF_CLIENT = 'Piton';
 
 export const STUDIO = {
   projects: WORKS.length,

@@ -79,14 +79,14 @@ export default function HeroLogo3D() {
   }, []);
 
   if (!modelAvailable) {
-    return <img src="/logo.webp" alt="Piton Studios" className="hero-logo" />;
+    return <img src="/logo.webp" alt="Piton" className="hero-logo" />;
   }
 
   return (
     <div className="hero-logo hero-logo-3d">
       <img
         src="/logo.webp"
-        alt="Piton Studios"
+        alt="Piton"
         className="hero-logo-fallback"
         style={{ opacity: modelLoaded ? 0 : 1 }}
       />

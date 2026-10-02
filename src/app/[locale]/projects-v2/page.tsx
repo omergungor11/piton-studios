@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'projectCloud' });
 
   return {
-    title: `${EYEBROW[locale] ?? EYEBROW.tr} — Piton Studios`,
+    title: `${EYEBROW[locale] ?? EYEBROW.tr} — Piton`,
     description: t('intro'),
     robots: { index: false, follow: false },
   };

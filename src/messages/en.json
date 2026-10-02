@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "title": "Piton Studios — Digital Studio",
+    "title": "Piton — Digital Studio",
     "description": "Design, code & AI under one roof. We design your brand, develop your product, and accelerate your growth."
   },
   "pageMeta": {
     "home": {
-      "title": "Piton Studios — Digital Studio",
+      "title": "Piton — Digital Studio",
       "description": "Design, code & AI under one roof. We design your brand, build your product and accelerate your growth."
     },
     "projects": {
@@ -18,22 +18,22 @@
     },
     "about": {
       "title": "About Us: Independent Digital Studio",
-      "description": "Piton Studios is an independent digital studio bringing design, engineering and AI together in one team."
+      "description": "Piton is an independent digital studio bringing design, engineering and AI together in one team."
     },
     "contact": {
       "title": "Contact: Let's Talk About Your Project",
-      "description": "Let's talk about your project. Get in touch with Piton Studios — we usually reply within 24 hours."
+      "description": "Let's talk about your project. Get in touch with Piton — we usually reply within 24 hours."
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton Studios."
+      "description": "Website cost, project timelines, code ownership, SEO, AI and maintenance — 75 questions answered directly, with real numbers, by Piton."
     },
     "pricing": {
       "title": "Pricing: Web, Mobile, SEO and Ads",
       "description": "Transparent starting bands: websites from €200, mobile apps from €4,000, SEO & GEO from €150/month, ad management from €200/month."
     },
     "projectTitle": "{title}: Case Study",
-    "projectDescSuffix": "Scope, technology and process details in this Piton Studios case study."
+    "projectDescSuffix": "Scope, technology and process details in this Piton case study."
   },
   "nav": {
     "services": "Services",
@@ -52,7 +52,7 @@
   },
   "blog": {
     "metaTitle": "Blog: Web, SEO and AI Guides",
-    "metaDescription": "Writing on web design, development and AI — from the Piton Studios team.",
+    "metaDescription": "Writing on web design, development and AI — from the Piton team.",
     "title": "Blog",
     "subtitle": "Notes on design, code and artificial intelligence.",
     "readingTime": "{minutes} min read",
@@ -85,7 +85,6 @@
   "hero": {
     "kicker": "Design · Code · AI — Digital Studio",
     "title1": "Piton",
-    "title2": "Studios",
     "title3": "A digital studio",
     "title4": "from Turkey",
     "subtitle": "Design, code & AI — under one roof. We design your brand, develop your product, and accelerate your growth. Quality-focused, results guaranteed.",
@@ -97,7 +96,7 @@
       "CLOUD",
       "AUTOMATION"
     ],
-    "statsLabel": "Piton Studios in numbers",
+    "statsLabel": "Piton in numbers",
     "stats": {
       "projects": {
         "value": "50+",
@@ -120,7 +119,7 @@
   "manifesto": {
     "eyebrow": "§ 02 · Note",
     "title": "Why {accent}?",
-    "titleAccent": "Piton Studios",
+    "titleAccent": "Piton",
     "subtitle": "We're with you at every step — from idea to launch, design to code. Digital solutions that grow your business; one team, clear results.",
     "noteMediaTag": "[ NOTE · FILM ]",
     "highlights": [
@@ -198,7 +197,7 @@
   },
   "aboutSections": {
     "story": {
-      "p1": "Piton Studios is an independent digital studio founded in 2021. We work end to end, from idea to launch: web design and application development, process automation, AI integration and digital growth.",
+      "p1": "Piton is an independent digital studio founded in 2021. We work end to end, from idea to launch: web design and application development, process automation, AI integration and digital growth.",
       "p2": "From startups to established brands, from local businesses to international clients — every project is run for quality, speed and measurable outcomes. Technology exists to simplify, not to complicate."
     },
     "numbers": {
@@ -365,7 +364,7 @@
     "tools": "// Stack & Tools",
     "faq": "// FAQ",
     "commonQuestions": "Common questions",
-    "whyUs": "Why Piton Studios?",
+    "whyUs": "Why Piton?",
     "whyUsItems": [
       "Deep expertise in each discipline, not a generalist agency spreading thin.",
       "Transparent process — you know what's happening and why at every stage.",
@@ -442,7 +441,7 @@
     "labelProjectCount": "Project Count",
     "valueProjectCount": "50+",
     "labelPreparedBy": "Prepared by",
-    "valuePreparedBy": "Piton Studios",
+    "valuePreparedBy": "Piton",
     "body1": "A visual summary compiled from our latest projects — updated quarterly.",
     "body2": "Shows the full process from design to deployment.",
     "cta": "View All Projects",
@@ -454,7 +453,7 @@
     "title": "Same budget, <accent>different</accent> curve.",
     "desc": "Website, custom software, automation or AI — whichever you commission, the work proves its worth in month twelve, not on handover day. These six lines show where a well-built system ends up over time.",
     "dimsLabel": "Outcome dimensions",
-    "seriesUs": "With Piton Studios",
+    "seriesUs": "With Piton",
     "seriesTypical": "Business as usual",
     "deltaHigher": "higher",
     "deltaLower": "lower",
@@ -592,9 +591,9 @@
     "availability": "Open for new projects · Let's start"
   },
   "common": {
-    "copyright": "Piton Studios © 2026",
+    "copyright": "Piton © 2026",
     "home": "Home",
-    "pitonStudios": "Piton Studios",
+    "pitonStudios": "Piton",
     "projects": "Projects",
     "services": "Services",
     "gallery": "Gallery",
@@ -1141,7 +1140,7 @@
         "This fintech product experiment is a side project demonstrating real-time data processing and automation capability."
       ],
       "caseStudy": {
-        "challenge": "Holly Trader is a fintech product experiment Piton Studios launched on its own — there is no real exchange client or live capital behind it. The goal was to build, inside a monorepo with clean backend/frontend/package boundaries, an end-to-end trading infrastructure that enforces leveraged-trading risk on the server side, brings multiple asset classes (crypto, equities, commodities) under one roof, and can run automated strategies against real-time market data. The real challenge was keeping market data streamed over WebSocket, order/position state and risk limits in a single, consistently synchronized state.",
+        "challenge": "Holly Trader is a fintech product experiment Piton launched on its own — there is no real exchange client or live capital behind it. The goal was to build, inside a monorepo with clean backend/frontend/package boundaries, an end-to-end trading infrastructure that enforces leveraged-trading risk on the server side, brings multiple asset classes (crypto, equities, commodities) under one roof, and can run automated strategies against real-time market data. The real challenge was keeping market data streamed over WebSocket, order/position state and risk limits in a single, consistently synchronized state.",
         "solution": "The backend was built on NestJS with REST, WebSocket and BullMQ-based queues; Prisma and PostgreSQL handle the data layer, Redis handles queuing and caching. The Binance integration groups spot, futures, wallet and user-stream services into separate modules, with separate market-data services covering equities, commodities and DEX data. Authentication supports classic JWT login alongside ethers-based wallet (MetaMask) signature login. A RiskService validates leverage, exposure and margin ratio server-side before every order; a dedicated stop-loss/take-profit monitor and trailing-stop service check open positions periodically, and a reconciliation service compares exchange state against local data. The strategy engine runs ready-made strategies — grid bot, DCA, RSI mean-reversion, MACD crossover, breakout and scalping — through a shared interface, backed by a separate BullMQ-queued backtesting service. The frontend is built on Next.js 14; live data arriving via socket.io-client feeds into Zustand and React Query state, with lightweight-charts and recharts powering the analysis interface.",
         "highlights": [
           "RiskService validates every order server-side against leverage, margin and exposure limits — the check is never left to the client.",
@@ -1229,7 +1228,7 @@
         "Built with Next.js, React Three Fiber, Drei and GSAP ScrollTrigger, a single progress value drives the camera, the jet and the clouds, with no continuous rendering while idle. A reduced-motion option, static images rendered from the same model when WebGL is unavailable, and mobile-specific framing keep performance and accessibility in balance."
       ],
       "caseStudy": {
-        "challenge": "VELAIR is a concept Piton Studios launched on its own initiative — there is no real client or aircraft manufacturer behind it. The goal was to build a private-jet-themed portfolio piece on original geometry generated in the browser, rather than purchased 3D models or video footage; to blend a top-down view, a cloud transition, a cabin reveal and a horizontal flight into one seamless, natural scroll flow; and to keep the experience readable on devices without WebGL support, under a reduced-motion preference, and on narrow mobile screens — all while holding performance steady with a single canvas and a single playhead.",
+        "challenge": "VELAIR is a concept Piton launched on its own initiative — there is no real client or aircraft manufacturer behind it. The goal was to build a private-jet-themed portfolio piece on original geometry generated in the browser, rather than purchased 3D models or video footage; to blend a top-down view, a cloud transition, a cabin reveal and a horizontal flight into one seamless, natural scroll flow; and to keep the experience readable on devices without WebGL support, under a reduced-motion preference, and on narrow mobile screens — all while holding performance steady with a single canvas and a single playhead.",
         "solution": "In the Next.js App Router, content stays a server component while the Three.js scene lazy-loads only on the client. The aircraft is a parametric geometry built and assembled piece by piece in the browser — there is no downloaded 3D model file. A single GSAP ScrollTrigger produces one 0–1 progress value, which a pure function converts into camera, jet and cloud pose, while a separate helper adjusts zoom and mobile framing to viewport height. The scene renders on demand: frames are drawn only when the user scrolls, with no per-frame React state or DOM measurement. When WebGL2 isn't supported, on context loss, or under a reduced-motion preference, the experience falls back to static posters rendered from the same model; cabin-selection buttons are accessible to screen readers. Section boundaries, pose sampling and mobile framing are covered by automated tests run with the Node test runner.",
         "highlights": [
           "The aircraft isn't an imported GLB — it's an original geometry built and assembled parametrically in the browser.",
@@ -1259,7 +1258,7 @@
         "The site is written in plain HTML, CSS and JavaScript with no framework or build step; Lenis is the only dependency, used for smooth scrolling. Scroll geometry lives in a DOM-independent module covered by automated tests. Reduced-motion preference, keyboard access, a dedicated mobile layout and locally served WebP images and fonts were considered from the start. Projects, imagery and copy represent a design concept; the forms are demos."
       ],
       "caseStudy": {
-        "challenge": "Kabizzu is a concept Piton Studios started on its own initiative; there is no real client and no claim of completed projects. The goal was to replace the static gallery typical of architecture websites with a narrative that walks the visitor through the space as they scroll: a choreographed intro, photo layers moving at different speeds, a horizontally travelling room scene and colour transitions. All of it had to work without leaning on a heavy framework, and remain readable on mobile and under a reduced-motion preference.",
+        "challenge": "Kabizzu is a concept Piton started on its own initiative; there is no real client and no claim of completed projects. The goal was to replace the static gallery typical of architecture websites with a narrative that walks the visitor through the space as they scroll: a choreographed intro, photo layers moving at different speeds, a horizontally travelling room scene and colour transitions. All of it had to work without leaning on a heavy framework, and remain readable on mobile and under a reduced-motion preference.",
         "solution": "The site is a static build-free structure: one HTML file, CSS and a handful of JavaScript modules. The intro timeline lives in its own module; it waits for images and fonts, and completes on its own via a skip button, Escape, reduced motion or an error. Scroll-linked calculations are kept in pure functions that never touch the DOM and are tested with the Node test runner. Four concept spaces travel horizontally on vertical scroll; each image grows on a green stage and settles back into its frame. The menu opens on hover but is equally usable by touch and keyboard. The project form is a demo: the request is generated on the device and downloaded, and nothing is sent to a server. A validation script checks local assets, link targets and image dimensions.",
         "highlights": [
           "No framework and no build step: plain HTML, CSS and JavaScript; the only dependency is a pinned version of Lenis.",
@@ -1288,7 +1287,7 @@
         "It is built with the Next.js App Router, React 19 and TypeScript. The burger scene is not a 3D model but a 2.5D layer arrangement driven by CSS perspective, and the smoke is a dependency-free WebGL shader. This is an independent design concept, not the restaurant's official website; scene imagery is representative, and prices or unverifiable details are not shown."
       ],
       "caseStudy": {
-        "challenge": "This is an independent concept Piton Studios prepared on its own initiative; it is not the restaurant's official website and is not presented as commissioned client work. The goal was to build an appetising, animated yet lightweight site for a local burger restaurant: a scroll scene that explains the product, a strong hero and quick access to the menu. It had to be done without loading a heavy 3D model or video, and stay smooth on mobile and low-end hardware.",
+        "challenge": "This is an independent concept Piton prepared on its own initiative; it is not the restaurant's official website and is not presented as commissioned client work. The goal was to build an appetising, animated yet lightweight site for a local burger restaurant: a scroll scene that explains the product, a strong hero and quick access to the menu. It had to be done without loading a heavy 3D model or video, and stay smooth on mobile and low-end hardware.",
         "solution": "The burger scene is made of six layers from a single photo sprite; the layers separate and assemble through CSS perspective and scroll progress, with no WebGL model required. The hero smoke is a dependency-free WebGL shader: capped at 30 fps, paused when off-screen, when the tab is hidden and when reduced motion is selected; if WebGL is unavailable the interface keeps working. Animations run on a passive scroll listener and requestAnimationFrame, and wheel scrolling is smoothed with Lenis. There is a separate vertical hero composition for mobile, a keyboard-operable mobile menu and Escape support. Phone, Instagram, map and current-menu links point to the branch's real channels; there is no backend, payment, membership or personal data collection.",
         "highlights": [
           "Six photo layers that assemble on scroll: a 2.5D scene built with CSS perspective, no 3D model.",
@@ -3196,7 +3195,7 @@
     "categories": {
       "studio": {
         "title": "Studio & Team",
-        "desc": "Who Piton Studios is, where we work and who you deal with on your project."
+        "desc": "Who Piton is, where we work and who you deal with on your project."
       },
       "services": {
         "title": "Services & Scope",
@@ -3246,8 +3245,8 @@
   },
   "faqItems": {
     "what-is-piton-studios": {
-      "q": "What is Piton Studios, and what does it do?",
-      "a": "Piton Studios is an independent digital studio founded in 2021, working end-to-end from concept to launch across web design, web applications, automation, AI integration, and digital growth. Design, code, and business strategy are handled by the same team rather than being split across separate vendors. Its portfolio includes 49 delivered projects.",
+      "q": "What is Piton, and what does it do?",
+      "a": "Piton is an independent digital studio founded in 2021, working end-to-end from concept to launch across web design, web applications, automation, AI integration, and digital growth. Design, code, and business strategy are handled by the same team rather than being split across separate vendors. Its portfolio includes 49 delivered projects.",
       "detail": [
         "It works as one team spanning design, code, and AI — the same people carry a project from discovery through launch, with no coordination loss between separate agencies.",
         "It works across 12 service areas, from web design and web applications to e-commerce, process automation, AI/ML projects, and SEO/GEO — which one fits is decided project by project in a discovery call."
@@ -3262,7 +3261,7 @@
     },
     "where-are-you-located": {
       "q": "Where are you based, and which regions do you serve?",
-      "a": "Piton Studios is a Turkey-based, fully remote independent studio. No office visit is required — calls run over video and written communication, so work happens with local businesses and international clients alike, without geographic limits. Clients across Europe and the Gulf are served on the same basis as clients in Turkey.",
+      "a": "Piton is a Turkey-based, fully remote independent studio. No office visit is required — calls run over video and written communication, so work happens with local businesses and international clients alike, without geographic limits. Clients across Europe and the Gulf are served on the same basis as clients in Turkey.",
       "detail": [
         "The team works in the Turkey time zone, but the project flow is not bound to it — discovery, design, and development steps are scheduled around the time difference, with calls set early or late when needed.",
         "For international clients, invoicing and payment are set up for international transfer and card payments; details are settled at the quote stage."
@@ -3277,8 +3276,8 @@
       ]
     },
     "why-choose-you": {
-      "q": "Why choose Piton Studios over a large agency?",
-      "a": "At a large agency, a project changes hands between multiple teams; at Piton Studios, the same person carries responsibility for it from discovery through launch — no information loss, no delay between layers, none of the general shallowness that comes with bigger agency overhead.",
+      "q": "Why choose Piton over a large agency?",
+      "a": "At a large agency, a project changes hands between multiple teams; at Piton, the same person carries responsibility for it from discovery through launch — no information loss, no delay between layers, none of the general shallowness that comes with bigger agency overhead.",
       "detail": [
         "No price is quoted without a written scope — the output of each step and what is expected from you are both clear, so there is no surprise invoice or vague timeline.",
         "Staying small keeps design, code, and AI under one roof instead of losing coordination between separate vendors — everything runs through one hand. For high-volume or multi-discipline work, capacity is extended through the Saiber partnership."
@@ -3286,9 +3285,9 @@
     },
     "saiber-partnership": {
       "q": "What does the Saiber partnership mean?",
-      "a": "Saiber is a partner Piton Studios works with on some projects for extra capacity and expertise; the \"Collaboration: Saiber\" note on 18 portfolio projects marks this partnership. Piton Studios manages the project and remains the client's point of contact; Saiber supports specific steps behind the scenes.",
+      "a": "Saiber is a partner Piton works with on some projects for extra capacity and expertise; the \"Collaboration: Saiber\" note on 18 portfolio projects marks this partnership. Piton manages the project and remains the client's point of contact; Saiber supports specific steps behind the scenes.",
       "detail": [
-        "The partnership comes in for projects that need scale, tight timelines, or an extra discipline. Piton Studios remains the client's single point of contact — process, communication, and delivery responsibility do not change.",
+        "The partnership comes in for projects that need scale, tight timelines, or an extra discipline. Piton remains the client's single point of contact — process, communication, and delivery responsibility do not change.",
         "Which projects involve the partnership is shown openly as a \"Collaboration\" meta field on the project detail page — it is not hidden, for the sake of transparency."
       ]
     },
@@ -3302,7 +3301,7 @@
     },
     "services-overview": {
       "q": "What services do you offer?",
-      "a": "Piton Studios works across 18 service areas: web design, custom software, web applications, mobile apps, progressive web apps, e-commerce development, ERP & CRM, automation, WhatsApp & chatbots, AI integration, AI consulting, data engineering, cloud infrastructure, Google Ads, Meta ads, SEO & GEO, maintenance & support, and training & consulting. Most projects combine two or three of these under a single scope.",
+      "a": "Piton works across 18 service areas: web design, custom software, web applications, mobile apps, progressive web apps, e-commerce development, ERP & CRM, automation, WhatsApp & chatbots, AI integration, AI consulting, data engineering, cloud infrastructure, Google Ads, Meta ads, SEO & GEO, maintenance & support, and training & consulting. Most projects combine two or three of these under a single scope.",
       "detail": [
         "Each service is described on its own page with its process, tech stack, and FAQs. Multiple services often run together on one project — a web app, automation, and SEO can sit in a single scope, for example.",
         "Which service is the right fit gets decided together in the discovery call; you do not need to know the service name, only describe the problem."
@@ -3342,7 +3341,7 @@
     },
     "content-and-copy": {
       "q": "Do you write the site copy and produce the images, or do we?",
-      "a": "Both are possible — the client can supply their own copy and images, or Piton Studios can produce them. When content production is added to the budget, it typically adds roughly 15-35% to the total cost, since copywriting and photo or video work are a separate line of effort.",
+      "a": "Both are possible — the client can supply their own copy and images, or Piton can produce them. When content production is added to the budget, it typically adds roughly 15-35% to the total cost, since copywriting and photo or video work are a separate line of effort.",
       "detail": [
         "Who supplies the content is written explicitly into the contract — it is the most common cause of project delay; even with design and code ready, launch can slip by weeks waiting on content.",
         "If you prepare your own content, you recover part of the budget directly; if not, content production is factored into scope and delivery date at the brief stage."
@@ -3350,7 +3349,7 @@
     },
     "white-label": {
       "q": "Do you work white-label as a subcontractor for agencies?",
-      "a": "Yes, white-label development and design support is offered to agencies — the agency's brand stays visible to the client, while Piton Studios handles the technical execution. This is used when an agency's capacity falls short or a specific expertise is needed for a particular project.",
+      "a": "Yes, white-label development and design support is offered to agencies — the agency's brand stays visible to the client, while Piton handles the technical execution. This is used when an agency's capacity falls short or a specific expertise is needed for a particular project.",
       "detail": [
         "The process is protected by an NDA; communication runs directly through the agency, and contact with the end client is at the agency's discretion.",
         "Pricing and delivery times follow the same standard project flow; the only difference is brand visibility and the communication channel."
@@ -3514,7 +3513,7 @@
       "a": "The core stack is Next.js, React, and TypeScript; Python and Node.js on the backend; PostgreSQL for the database; Vercel and Google Cloud for deployment. Claude AI is used for AI integrations, and n8n is the platform of choice for automation projects.",
       "detail": [
         "Technology choice follows the need, not habit — WordPress can be the right call for a static brochure site; Next.js and TypeScript are preferred for projects needing custom business logic, real-time features, or a complex data model.",
-        "The Piton Studios site itself is built with Next.js, hosted on Vercel, fully static, and trilingual (tr/en/ru) — that choice also serves as an example of the studio's own output."
+        "The Piton site itself is built with Next.js, hosted on Vercel, fully static, and trilingual (tr/en/ru) — that choice also serves as an example of the studio's own output."
       ],
       "list": [
         "Next.js, React, TypeScript",
@@ -3665,7 +3664,7 @@
       "a": "Under enterprise and API plans from major providers (Anthropic, OpenAI, Google, and similar), data sent via the API is not used for model training by default — but this policy varies by provider, plan, and changes over time. So on every project we verify the current data-use terms with you rather than assuming.",
       "detail": [
         "Consumer plans — free or individual — and enterprise API plans are typically governed by different rules; which plan and which interface (web UI or direct API) you're using is a critical detail we pin down clearly at project start, with no room for confusion.",
-        "We apply the same cautious principle on our own site: Piton Studios doesn't use a database, contact form submissions go straight to email via Resend and aren't stored anywhere. The principle stays the same on client projects — don't collect data you don't need, and state clearly what you do collect."
+        "We apply the same cautious principle on our own site: Piton doesn't use a database, contact form submissions go straight to email via Resend and aren't stored anywhere. The principle stays the same on client projects — don't collect data you don't need, and state clearly what you do collect."
       ]
     },
     "hallucination": {
@@ -3822,7 +3821,7 @@
       "a": "We carefully choose hosting platforms (Vercel, Google Cloud, and similar) that offer daily automated backups and managed infrastructure; recovery in an outage largely relies on those providers' own infrastructure guarantees. For critical projects, a disaster-recovery procedure is defined separately during the architecture phase, not added later.",
       "detail": [
         "RTO — acceptable downtime — and RPO — acceptable data-loss window — are set together with you while the architecture is built and come with tested recovery procedures; disaster recovery isn't an afterthought for us, it's an integral part of the design from the start.",
-        "Piton Studios' own site is fully static and uses no database, so backups aren't relevant to our own site; on client projects it's set up carefully based on the infrastructure choice and how critical the data is — there's no single default."
+        "Piton's own site is fully static and uses no database, so backups aren't relevant to our own site; on client projects it's set up carefully based on the infrastructure choice and how critical the data is — there's no single default."
       ]
     },
     "security-updates": {
@@ -3859,7 +3858,7 @@
     },
     "data-storage-location": {
       "q": "Where is our data stored?",
-      "a": "It depends on the project — we typically build infrastructure on Vercel and managed PostgreSQL services, in whichever geographic region fits your needs; the region is settled with you at project start based on your data privacy requirements. Piton Studios' own site uses no database at all; contact form data goes straight to email via Resend and isn't stored separately.",
+      "a": "It depends on the project — we typically build infrastructure on Vercel and managed PostgreSQL services, in whichever geographic region fits your needs; the region is settled with you at project start based on your data privacy requirements. Piton's own site uses no database at all; contact form data goes straight to email via Resend and isn't stored separately.",
       "detail": [
         "We don't claim a fixed default region because the right answer varies significantly client to client — some projects prefer EU hosting, others need local hosting; this decision is made together with you during the architecture phase, based on your requirements, and is never imposed unilaterally.",
         "The same minimal approach applies to analytics: on our own site we use Vercel Analytics and Speed Insights, both cookie-free and collecting no personal data from visitors — only aggregate, fully anonymous statistics, with no identifying information ever processed."
@@ -4188,7 +4187,7 @@
   "sectorItems": {
     "finance": {
       "title": "Digital Solutions for Finance",
-      "metaTitle": "Digital Solutions for Finance | Piton Studios",
+      "metaTitle": "Digital Solutions for Finance | Piton",
       "metaDescription": "Live-data websites, payment-tracking automation and data reporting for exchange offices, crypto centers and finance companies — end-to-end solutions.",
       "intro": "In finance, digital needs are built on trust and up-to-date information: a site showing live rates, a system that automates payment tracking, and infrastructure that reports data correctly all work together. We combine the live-data sites built for Halas Exchange and Arslan Coin Center with the automation experience behind our own products, Ödeme Takip Botu and Holly Trader.",
       "bullets": {
@@ -4213,7 +4212,7 @@
     },
     "e-commerce": {
       "title": "Digital Solutions for E-Commerce",
-      "metaTitle": "Digital Solutions for E-Commerce | Piton Studios",
+      "metaTitle": "Digital Solutions for E-Commerce | Piton",
       "metaDescription": "Payment integration, stock and shipping automation, Google & Meta ad management and SEO — the approach that drove 30% growth for Ambalaj Cini.",
       "intro": "E-commerce needs an infrastructure where payment and stock management sit in one panel, running together with the ad management that turns it into sales. For Ambalaj Cini we built a back-office covering payment, shipping, stock and accounting, ran it alongside Google Ads and Meta campaigns, and the company grew 30% — an approach we bring to projects like Boon Fresh and Beton Store.",
       "bullets": {
@@ -4238,7 +4237,7 @@
     },
     "corporate": {
       "title": "Digital Solutions for Corporate Businesses",
-      "metaTitle": "Digital Solutions for Corporate Businesses | Piton Studios",
+      "metaTitle": "Digital Solutions for Corporate Businesses | Piton",
       "metaDescription": "From a corporate website to custom software, ERP/CRM and automation — we design and build every digital system a growing company needs, under one roof.",
       "intro": "A corporate company's digital needs no longer stop at a website; a corporate site, custom software or an ERP/CRM panel, and automation that takes over repetitive work all work together. We combine the multilingual corporate sites built for BT Elevator, Arslan Group and Alp Sigorta with the ERP/CRM experience from our own product, FurCRM, into one connected setup.",
       "bullets": {
@@ -4263,7 +4262,7 @@
     },
     "real-estate": {
       "title": "Digital Solutions for Real Estate",
-      "metaTitle": "Digital Solutions for Real Estate | Piton Studios",
+      "metaTitle": "Digital Solutions for Real Estate | Piton",
       "metaDescription": "Custom listing platforms, multi-portal sync, corporate sites and SEO for real estate agencies and investment firms — end-to-end digital solutions.",
       "intro": "Real estate needs more than a showcase site: a listing-management system, a sync layer that publishes to multiple portals automatically, and a multilingual corporate site that reaches investors all have to work together. We combine the custom platform built for Nexos Investment and the portal-sync behind our own product, Emlak Sync, with the site work done for Pampas Investment and Arslan Estates.",
       "bullets": {
@@ -4288,7 +4287,7 @@
     },
     "transportation": {
       "title": "Digital Solutions for Transportation",
-      "metaTitle": "Digital Solutions for Transportation | Piton Studios",
+      "metaTitle": "Digital Solutions for Transportation | Piton",
       "metaDescription": "Booking-ready websites, WhatsApp integration, route automation and local SEO for taxi and transfer companies — end-to-end digital solutions, delivered.",
       "intro": "For taxi and transfer businesses, the digital need starts with a site customers can book without calling; instant WhatsApp contact, local search visibility and route or fleet automation all build on that. We combine the site work done for Welcome Pickups, Jet Transfer Cyprus and Kıbrıs Lefkoşa Taksi with the automation behind our own Minibus Route Control product.",
       "bullets": {
@@ -4313,7 +4312,7 @@
     },
     "restaurant": {
       "title": "Digital Solutions for Restaurants & Cafés",
-      "metaTitle": "Digital Solutions for Restaurants & Cafés | Piton Studios",
+      "metaTitle": "Digital Solutions for Restaurants & Cafés | Piton",
       "metaDescription": "We build the full digital toolkit for restaurants and cafés — online ordering, automation, WhatsApp reservations and local SEO, not just a website.",
       "intro": "We build more than restaurant websites — digital menus, online ordering, WhatsApp reservations and local SEO, all working together around how a kitchen actually runs. The food-delivery platform we built for Boon Fresh and the menu-led Virginia Ice Cream site show how differently that mix comes together depending on the business.",
       "bullets": {
@@ -4338,7 +4337,7 @@
     },
     "tourism": {
       "title": "Digital Solutions for Tourism & Hospitality",
-      "metaTitle": "Digital Solutions for Tourism & Hospitality | Piton Studios",
+      "metaTitle": "Digital Solutions for Tourism & Hospitality | Piton",
       "metaDescription": "From gallery-led hotel sites to WhatsApp-integrated transfer bookings and multilingual SEO, we build the full digital stack for tourism businesses.",
       "intro": "We build digital solutions for hotels, tour operators and transfer businesses that cover the whole guest journey, not just a promotional site — from first impression to booking. The Sammys Hotel gallery-led site and the WhatsApp-integrated booking flows we built for Jet Transfer Cyprus and Aydın Transfer show how we work both sides of this sector.",
       "bullets": {
@@ -4363,7 +4362,7 @@
     },
     "health": {
       "title": "Digital Solutions for Healthcare & Clinics",
-      "metaTitle": "Digital Solutions for Healthcare & Clinics | Piton Studios",
+      "metaTitle": "Digital Solutions for Healthcare & Clinics | Piton",
       "metaDescription": "For clinics and healthcare providers we design trust-building sites, appointment flows, WhatsApp reminders and multilingual SEO — not just a homepage.",
       "intro": "We design digital solutions for clinics and healthcare organizations that cover the whole path from earning trust to booking an appointment, not just a promotional site. The appointment-focused site we built for Dental Health — presenting treatments, equipment and the specialist team — shows how we apply a trust-first approach in this sector.",
       "bullets": {
@@ -4388,7 +4387,7 @@
     },
     "construction": {
       "title": "Digital Solutions for Construction & Architecture",
-      "metaTitle": "Digital Solutions for Construction Firms | Piton Studios",
+      "metaTitle": "Digital Solutions for Construction Firms | Piton",
       "metaDescription": "From project galleries to e-commerce, ERP & CRM and local SEO, we build trust-focused digital solutions for construction firms and architecture studios.",
       "intro": "We build digital solutions for construction firms and architecture studios that turn finished projects into proof and support day-to-day operations, not just a corporate site. The project-portfolio sites we built for EKH Yapı and Alert Mühendislik, alongside the building-materials store we built for Beton Store, show how we work both the promotional and the operational side of this sector.",
       "bullets": {
@@ -4413,7 +4412,7 @@
     },
     "education": {
       "title": "Digital Solutions for Education Providers",
-      "metaTitle": "Digital Solutions for Education Providers | Piton Studios",
+      "metaTitle": "Digital Solutions for Education Providers | Piton",
       "metaDescription": "We build online application systems, automation, WhatsApp notifications, an AI assistant and SEO for schools, course centers and training providers.",
       "intro": "For your school, course center or training provider we digitize the enrollment process: a website with an online application flow, automation that takes over reminders your team sends by hand, instant WhatsApp notifications, and an AI assistant that answers from your program content. We don't yet have a reference project in education — but our booking-flow experience adapts directly to this need.",
       "bullets": {
@@ -4438,7 +4437,7 @@
     },
     "beauty": {
       "title": "Digital Solutions for Beauty Salons",
-      "metaTitle": "Digital Solutions for Beauty Salons | Piton Studios",
+      "metaTitle": "Digital Solutions for Beauty Salons | Piton",
       "metaDescription": "We build appointment-focused websites, WhatsApp booking automation, no-show reminders and local SEO for beauty salons, hairdressers and spas.",
       "intro": "For your beauty salon, hairdresser shop or spa we build digital solutions that rescue bookings from message traffic: a fast, mobile-first site, an automated WhatsApp booking flow, reminder automation that cuts no-shows, and local search visibility. We don't yet have a reference project in the beauty industry — but our booking-flow experience adapts directly to this need.",
       "bullets": {
@@ -4463,7 +4462,7 @@
     },
     "engineering": {
       "title": "Digital Solutions for Engineering Firms",
-      "metaTitle": "Digital Solutions for Engineering Firms | Piton Studios",
+      "metaTitle": "Digital Solutions for Engineering Firms | Piton",
       "metaDescription": "We build end-to-end digital solutions for engineering and technical consultancy firms: corporate sites, custom software, automation, AI assistants and SEO.",
       "intro": "For your engineering firm we build more than a corporate site — digital solutions spanning the quote process to project tracking: a multilingual website that shows your technical capability, automation that takes over repetitive workflows, and an AI assistant that answers from your documentation. Our Alert Mühendislik and BT Elevator projects show the website side of this approach.",
       "bullets": {
@@ -4488,7 +4487,7 @@
     },
     "industry": {
       "title": "Digital Solutions for Industry & Manufacturing",
-      "metaTitle": "Industry & Manufacturing Solutions | Piton Studios",
+      "metaTitle": "Industry & Manufacturing Solutions | Piton",
       "metaDescription": "We build corporate sites, ERP & CRM, B2B dealer portals, automation and SEO for factories, producers and industrial suppliers — end-to-end digital solutions.",
       "intro": "For your factory, production facility or industrial supplier we build digital solutions spanning production to dealer: a corporate website, an ERP & CRM system that unifies accounts, stock and production in one panel, a B2B portal where dealers place orders, and automation that takes over recurring work. Projects like FurCRM and Ambalaj Cini are concrete examples of this approach.",
       "bullets": {
@@ -4547,7 +4546,7 @@
     "eyebrow": "Locations",
     "title": "Cities we serve",
     "subtitle": "Our team is based in Bozüyük, Türkiye and works remotely across North Cyprus and Türkiye. Pick your city to see our work there and how we can help.",
-    "metaTitle": "Web Design & Development by City | Piton Studios",
+    "metaTitle": "Web Design & Development by City | Piton",
     "metaDescription": "North Cyprus, Nicosia, Istanbul, Izmir, Antalya, Bursa and more: web design, software, SEO and advertising services for businesses in your city.",
     "cyprus": "North Cyprus",
     "turkey": "Türkiye",
@@ -4570,7 +4569,7 @@
     "eyebrowDetail": "Solution",
     "title": "Solutions built for your industry",
     "subtitle": "We package our services around what each industry actually needs: from real estate software to clinic SEO, from booking systems to AI assistants.",
-    "metaTitle": "Industry Web & Software Solutions | Piton Studios",
+    "metaTitle": "Industry Web & Software Solutions | Piton",
     "metaDescription": "Real estate listing software, e-commerce SEO, transfer booking systems, clinic SEO and more: web and software solutions designed around your industry.",
     "whatWeDo": "What this solution includes",
     "detailTitle": "How we work",
@@ -4588,9 +4587,9 @@
   "locationItems": {
     "kktc": {
       "title": "Web Design & Development in North Cyprus",
-      "metaTitle": "Web Design & Development in North Cyprus | Piton Studios",
+      "metaTitle": "Web Design & Development in North Cyprus | Piton",
       "metaDescription": "We build corporate websites and automation for real estate, finance, tourism and trade businesses in North Cyprus — the whole process runs remotely.",
-      "intro": "Piton Studios is a digital agency based in Bilecik, Türkiye that works entirely remotely, building corporate websites, platforms and automation for businesses across North Cyprus. We've delivered projects in real estate investment, currency exchange, transfers and hospitality on the island, plus an automation layer for a classifieds site; the whole process, from discovery call to delivery, runs online, with no travel or local office required.",
+      "intro": "Piton is a digital agency based in Bilecik, Türkiye that works entirely remotely, building corporate websites, platforms and automation for businesses across North Cyprus. We've delivered projects in real estate investment, currency exchange, transfers and hospitality on the island, plus an automation layer for a classifieds site; the whole process, from discovery call to delivery, runs online, with no travel or local office required.",
       "bullets": {
         "1": "Corporate websites, platforms and automation — from reservation-focused sites like Sammys Hotel to the trend and social media automation we built for the Gel Gez Gor classifieds site.",
         "2": "Multilingual structure (Turkish, English, Russian) — reach the island's mix of local residents, British and Russian investors and tourists in their own language on the same site.",
@@ -4606,14 +4605,14 @@
       },
       "ctaText": "Write to us to talk through the web project for your North Cyprus business — we'll run the whole process remotely, together.",
       "detail": {
-        "1": "The North Cyprus market has a distinctive mix: local businesses, British and Russian investors and seasonal tourists all look at the same site. That's why the sites we build for the island are designed multilingual from the start — Turkish content serves local customers, while English and Russian content meets foreign investors and tourists in the same experience. Piton Studios keeps no physical office in North Cyprus — that's a deliberate choice; since the whole process runs online, you get the same speed of service no matter where on the island you are.",
+        "1": "The North Cyprus market has a distinctive mix: local businesses, British and Russian investors and seasonal tourists all look at the same site. That's why the sites we build for the island are designed multilingual from the start — Turkish content serves local customers, while English and Russian content meets foreign investors and tourists in the same experience. Piton keeps no physical office in North Cyprus — that's a deliberate choice; since the whole process runs online, you get the same speed of service no matter where on the island you are.",
         "2": "Our completed projects on the island span several sectors: with Pampas Investment and Pinnacle Yatırım we designed corporate, trust-building sites for real estate investment firms; with Halas Exchange we built a live-rate currency platform, with Jet Transfer Cyprus an airport/VIP transfer booking site, and with Sammys Hotel a reservation experience for the hospitality sector. For Gel Gez Gor, an existing classifieds site, we built automation that detects trending listings, notifies their owners via WhatsApp and produces social media posts. That range means we know what different sectors on the island need.",
         "3": "On the technical side, we treat site speed and search visibility as equally important. Classic SEO gets you found in 'North Cyprus' and district-level searches, while GEO work makes you visible in AI-powered search results too. We have direct experience building North Cyprus-specific portal integrations (HangiEv, 101evler) with our own Emlak Sync product; if you have a similar repetitive workload, we can automate that too."
       }
     },
     "lefkosa": {
       "title": "Web Design & Development in Nicosia",
-      "metaTitle": "Web Design & Development in Nicosia | Piton Studios",
+      "metaTitle": "Web Design & Development in Nicosia | Piton",
       "metaDescription": "We build corporate websites, local SEO and digital ads for businesses in Nicosia, including our Kıbrıs Lefkoşa Taksi project — the whole process runs remotely.",
       "intro": "For Kıbrıs Lefkoşa Taksi, delivered directly in Nicosia, we built online booking, route calculation and an SEO setup that ranks it near the top for local searches like 'Nicosia taxi.' Combined with the holding, finance and service-sector projects we've completed across North Cyprus, we know what businesses in the capital need; the whole process runs online from start to finish.",
       "bullets": {
@@ -4638,9 +4637,9 @@
     },
     "bilecik": {
       "title": "Web Design & Development in Bilecik",
-      "metaTitle": "Web Design & Development in Bilecik | Piton Studios",
+      "metaTitle": "Web Design & Development in Bilecik | Piton",
       "metaDescription": "Based in Bozüyük, we build websites, e-commerce and automation for businesses in Bilecik — our Ambalaj Cini and Minibus Route Control projects started here.",
-      "intro": "Piton Studios is headquartered in Bozüyük, Bilecik — unlike the other cities on this page, we work with local businesses here in person. For Bilecik-based Ambalaj Cini we built a payment-integrated e-commerce site; for the Bozüyük Minibus Drivers' Association we built a route-tracking app, and the Minibus Route Control automation product grew out of that experience.",
+      "intro": "Piton is headquartered in Bozüyük, Bilecik — unlike the other cities on this page, we work with local businesses here in person. For Bilecik-based Ambalaj Cini we built a payment-integrated e-commerce site; for the Bozüyük Minibus Drivers' Association we built a route-tracking app, and the Minibus Route Control automation product grew out of that experience.",
       "bullets": {
         "1": "E-commerce infrastructure — online sales sites covering payment integration, product and stock management, as we built for Ambalaj Cini.",
         "2": "Corporate websites — design that boosts visibility and trust for manufacturing, trade and service businesses in Bilecik and Bozüyük.",
@@ -4656,14 +4655,14 @@
       },
       "ctaText": "Let's meet and talk through the project for your Bilecik or Bozüyük business.",
       "detail": {
-        "1": "The Bilecik page is different from the other cities on this list: Piton Studios is headquartered right here, in Bozüyük. That means working with a local business isn't about explaining remote work — we serve you directly from here, with in-person meetings available when needed. That makes the process more tangible, especially for a business building its first website or moving online sales for the first time.",
+        "1": "The Bilecik page is different from the other cities on this list: Piton is headquartered right here, in Bozüyük. That means working with a local business isn't about explaining remote work — we serve you directly from here, with in-person meetings available when needed. That makes the process more tangible, especially for a business building its first website or moving online sales for the first time.",
         "2": "The Ambalaj Cini project is a clear example: for this Bilecik-based company we built an e-commerce platform covering payment integration, product management and stock tracking, active since 2022. The route-tracking app we built for the Bozüyük Minibus Drivers' Association shows a different kind of need: a web app where public-transport users can see routes and plan trips. From that experience we developed our own Minibus Route Control product, which turns GPS data into automatic reports on whether minibus lines are running on schedule.",
         "3": "For a business in the region, our recommendation usually goes in this order: first a clear, fast-loading corporate site or e-commerce platform, then findability through local SEO, then automation of any repetitive operational work. Because we're based here, we can shape that process step by step, together, as needs come up."
       }
     },
     "eskisehir": {
       "title": "Web Design & Development in Eskişehir",
-      "metaTitle": "Web Design & Development in Eskişehir | Piton Studios",
+      "metaTitle": "Web Design & Development in Eskişehir | Piton",
       "metaDescription": "We build multilingual corporate websites and SEO for businesses in Eskişehir. Our BT Elevator project is here, and we're a short trip away from Bilecik.",
       "intro": "For Eskişehir-based BT Elevator we built a multilingual, SEO-optimized corporate website; technical SEO, schema markup and performance work boosted its search visibility. Since we're headquartered in the neighboring province of Bilecik, we can support Eskişehir businesses both remotely and, when needed, in person.",
       "bullets": {
@@ -4688,7 +4687,7 @@
     },
     "bursa": {
       "title": "Web Design & Development in Bursa",
-      "metaTitle": "Web Design & Development in Bursa | Piton Studios",
+      "metaTitle": "Web Design & Development in Bursa | Piton",
       "metaDescription": "We build corporate websites and e-commerce for businesses in Bursa. Based in neighboring Bilecik, our team delivers fast service, entirely remotely.",
       "intro": "We haven't yet completed a portfolio project in Bursa; we serve businesses there entirely remotely, with the whole process running online from discovery call to delivery. The e-commerce platform for Ambalaj Cini in neighboring Bilecik and the multilingual corporate site for BT Elevator in Eskişehir show how we approach businesses similar to Bursa's industry- and trade-heavy structure.",
       "bullets": {
@@ -4706,14 +4705,14 @@
       },
       "ctaText": "Write to us to talk through the web project for your Bursa business — the whole process runs remotely.",
       "detail": {
-        "1": "We don't yet have a direct reference project in Bursa, and we say that plainly — but it doesn't mean we can't serve you. Piton Studios already works remotely as an agency; being headquartered in neighboring Bilecik means working with a Bursa business is no different, in communication speed or process, from working with a business in a distant city.",
+        "1": "We don't yet have a direct reference project in Bursa, and we say that plainly — but it doesn't mean we can't serve you. Piton already works remotely as an agency; being headquartered in neighboring Bilecik means working with a Bursa business is no different, in communication speed or process, from working with a business in a distant city.",
         "2": "Our closest references to Bursa's industrial, textile and automotive-supply-heavy landscape come from neighboring provinces: the e-commerce site with payment integration and stock management we built for Ambalaj Cini in Bilecik, and the multilingual, technical-SEO-focused corporate site we built for BT Elevator in Eskişehir. Both are close analogues for manufacturing- and trade-heavy businesses.",
         "3": "For a Bursa business, our recommendation usually goes in this order: first a clear, fast-loading corporate site or e-commerce platform, then findability through local SEO. All meetings happen online throughout — a way of working that keeps both cost and project timeline down."
       }
     },
     "istanbul": {
       "title": "Web Design & Development in Istanbul",
-      "metaTitle": "Web Design & Development in Istanbul | Piton Studios",
+      "metaTitle": "Web Design & Development in Istanbul | Piton",
       "metaDescription": "We build corporate websites, e-commerce platforms and custom software for businesses in Istanbul. Our team works remotely -- meetings, design and delivery all happen online.",
       "intro": "We build corporate websites, e-commerce infrastructure or custom software for your business in Istanbul. Our office is in Bilecik, but the whole process runs online: kickoff call, design approval, revision rounds and delivery are all handled remotely -- so your project moves forward without a single site visit through Istanbul's heavy traffic, and the timeline never slips.",
       "bullets": {
@@ -4738,7 +4737,7 @@
     },
     "kutahya": {
       "title": "Web Design & Development in Kütahya",
-      "metaTitle": "Web Design & Development in Kütahya | Piton Studios",
+      "metaTitle": "Web Design & Development in Kütahya | Piton",
       "metaDescription": "We build corporate websites and SEO for manufacturing, trade and craft businesses in Kütahya. Our team works fully remotely, and the whole process runs online.",
       "intro": "We build corporate websites and SEO for manufacturing, trade and craft businesses in Kütahya. Our office is in Bilecik; the whole process runs online, with no site visit required. We aim to showcase the product catalogue that's tied to Kütahya's tile and porcelain heritage in a way that reflects years of genuine industry experience online.",
       "bullets": {
@@ -4763,7 +4762,7 @@
     },
     "antalya": {
       "title": "Web Design & Development in Antalya",
-      "metaTitle": "Web Design & Development in Antalya | Piton Studios",
+      "metaTitle": "Web Design & Development in Antalya | Piton",
       "metaDescription": "We build multilingual websites and online booking solutions for hotels, transfer companies and tourism businesses in Antalya. Our team works remotely.",
       "intro": "We build multilingual websites and online booking infrastructure for hotels, transfer companies and tourism businesses in Antalya. Our office is in Bilecik; the whole process runs remotely. In tourism, reaching foreign guests in their own language is the first requirement for not losing bookings during peak season, with demand arriving through the right channel at the right time.",
       "bullets": {
@@ -4788,7 +4787,7 @@
     },
     "izmit": {
       "title": "Web Design & Development in Izmit",
-      "metaTitle": "Web Design & Development in Izmit | Piton Studios",
+      "metaTitle": "Web Design & Development in Izmit | Piton",
       "metaDescription": "We build corporate websites and e-commerce for engineering, construction and trade firms in Izmit and Kocaeli. Our team works remotely; the process runs online.",
       "intro": "We build corporate websites and e-commerce infrastructure for engineering, construction and trade firms in the Izmit and Kocaeli industrial region. Our office is in Bilecik; the whole process runs online. We design corporate sites suited to the region's B2B-heavy character -- sites that build trust by putting your references and project portfolio front and centre.",
       "bullets": {
@@ -4813,7 +4812,7 @@
     },
     "izmir": {
       "title": "Web Design & Development in Izmir",
-      "metaTitle": "Web Design & Development in Izmir | Piton Studios",
+      "metaTitle": "Web Design & Development in Izmir | Piton",
       "metaDescription": "We provide web design, e-commerce and SEO solutions for e-commerce, food and service businesses in Izmir. Our team works fully remotely, and the whole process runs online.",
       "intro": "We provide web design, e-commerce infrastructure and SEO for e-commerce, food and service businesses in Izmir. Our office is in Bilecik; the whole process runs online, with no site visit required. Matching the city's diverse economy, we design sites that build your brand while also digitalising your order and appointment flow.",
       "bullets": {
@@ -4840,7 +4839,7 @@
   "solutionItems": {
     "real-estate-listing-software": {
       "title": "Real Estate Listing Software",
-      "metaTitle": "Real Estate Listing Management Software | Piton Studios",
+      "metaTitle": "Real Estate Listing Management Software | Piton",
       "metaDescription": "We build custom listing management software for real estate offices, with map display, multilingual admin panels and automatic proposal generation.",
       "intro": "Real estate listing software is a custom system that lets you manage your portfolio beyond what a ready-made website can do: map-based listing display, a multilingual admin panel, and automatic proposal generation straight from listing data. We built this system from scratch for Nexos Investment; with our own product, Emlak Sync, we also automate syncing listings across portals.",
       "bullets": {
@@ -4865,7 +4864,7 @@
     },
     "transfer-booking-system": {
       "title": "Transfer Booking System",
-      "metaTitle": "Transfer Booking System Development | Piton Studios",
+      "metaTitle": "Transfer Booking System Development | Piton",
       "metaDescription": "We build online booking systems for transfer and taxi companies with route-based price calculation and WhatsApp integration; delivered on five projects.",
       "intro": "A transfer booking system is a flow where the passenger picks their route and date and leaves a request directly. We built this flow -- with route/price calculation and WhatsApp integration -- for Jet Transfer Cyprus, Aydın Transfer, Kıbrıs Lefkoşa Taksi, Kardeşler Taxi and Welcome Pickups. It can scale into a full web application as needs grow.",
       "bullets": {
@@ -4890,7 +4889,7 @@
     },
     "hotel-booking-website": {
       "title": "Hotel Website & Booking",
-      "metaTitle": "Hotel Website & Booking System | Piton Studios",
+      "metaTitle": "Hotel Website & Booking System | Piton",
       "metaDescription": "We design photo-gallery-driven hotel websites with a custom-coded booking flow and multilingual structure. Example: the Sammys Hotel boutique property site.",
       "intro": "A hotel website is a showcase where the guest decides based on the photos and how easy booking is. For Sammys Hotel we built a booking system custom-coded to the hotel's own workflow instead of an off-the-shelf plugin: room selection, dates and requests all integrated into brand-specific design. We adapt the same approach to hospitality businesses of every size.",
       "bullets": {
@@ -4915,7 +4914,7 @@
     },
     "ecommerce-automation": {
       "title": "E-commerce Automation",
-      "metaTitle": "E-commerce Automation Services | Piton Studios",
+      "metaTitle": "E-commerce Automation Services | Piton",
       "metaDescription": "We build n8n and webhook-based automation workflows that sync stock, orders and marketplace listings for e-commerce stores; scope is defined together with you.",
       "intro": "E-commerce automation connects the order, payment, shipping and notification steps in your store instead of running them by hand. For Ambalaj Cini we built infrastructure that keeps payment collection, DHL shipment tracking and order status in sync and sends automatic notifications to customers and staff; we apply the same approach to stock and marketplace synchronisation.",
       "bullets": {
@@ -4940,7 +4939,7 @@
     },
     "restaurant-google-ads": {
       "title": "Google Ads for Restaurants",
-      "metaTitle": "Google Ads Management for Restaurants | Piton Studios",
+      "metaTitle": "Google Ads Management for Restaurants | Piton",
       "metaDescription": "Google Ads management that brings new customers to restaurants and cafes through search campaigns, with setup and tracking tied to your reservation page.",
       "intro": "We build and manage Google Ads campaigns that put your restaurant in front of searches like 'restaurant near me' at the right moment. A campaign shouldn't just earn clicks -- it should turn them into filled tables by connecting to your menu page and reservation flow, ahead of local SEO taking hold.",
       "bullets": {
@@ -4965,7 +4964,7 @@
     },
     "finance-automation": {
       "title": "Finance Process Automation",
-      "metaTitle": "Finance Process Automation Services | Piton Studios",
+      "metaTitle": "Finance Process Automation Services | Piton",
       "metaDescription": "We build software for currency exchanges, crypto businesses and finance companies that automates payment tracking, reminders and reporting workflows.",
       "intro": "We build software for your finance company, currency exchange or crypto business that automates recurring processes like payment tracking, due-date reminders and reporting. With our own product, Payment Tracker Bot, we track due dates and send automatic reminders; Holly Trader collects and reports market data.",
       "bullets": {
@@ -4990,7 +4989,7 @@
     },
     "corporate-ai-assistant": {
       "title": "Corporate AI Assistant Development",
-      "metaTitle": "Corporate AI Assistant Development | Piton Studios",
+      "metaTitle": "Corporate AI Assistant Development | Piton",
       "metaDescription": "We build AI assistants integrated into your corporate website or internal processes. Claude, OpenAI and Gemini, with guardrails and cost control built in.",
       "intro": "We build AI assistants for your corporate website or internal processes that answer customer questions, search documents, or take over a repetitive task. We work with Claude, OpenAI and Gemini, choosing the model by use case rather than habit. Our own product experiment, ContentFlow AI, tested this integration experience firsthand.",
       "bullets": {
@@ -5015,7 +5014,7 @@
     },
     "education-platform": {
       "title": "Education Platform Development",
-      "metaTitle": "Education Platform Development Services | Piton Studios",
+      "metaTitle": "Education Platform Development Services | Piton",
       "metaDescription": "We build custom education platforms with course, exam or student-tracking features. Enrollment flow, user panels and content management in one system.",
       "intro": "When your course center or educational institution needs to go beyond a standard promotional site to features like student logins, progress tracking or exams, we build a custom web application. We don't yet have an education-sector project, but our listing-management portal for Nexos Investment and Social Pro's multi-account architecture prove the experience transfers.",
       "bullets": {
@@ -5040,7 +5039,7 @@
     },
     "beauty-appointment-system": {
       "title": "Beauty Salon Booking System",
-      "metaTitle": "Beauty Salon Booking System Development | Piton Studios",
+      "metaTitle": "Beauty Salon Booking System Development | Piton",
       "metaDescription": "Custom booking systems for salons and hairdressers with staff- and service-based scheduling. Clients book online, the salon manages it all from one panel.",
       "intro": "For salons and hairdressers that want a custom booking system beyond a standard appointment form -- one that shows availability by staff member and service duration -- we build a web application. We don't yet have a beauty-sector project in our portfolio, but our booking-flow work for Jet Transfer Cyprus and Welcome Pickups adapts directly to a salon's calendar.",
       "bullets": {
@@ -5065,7 +5064,7 @@
     },
     "whatsapp-sales-bot": {
       "title": "WhatsApp Sales & Order Bot",
-      "metaTitle": "WhatsApp Sales Bot | Piton Studios",
+      "metaTitle": "WhatsApp Sales Bot | Piton",
       "metaDescription": "We build a WhatsApp bot for your online store that sends order-status updates, abandoned-cart reminders and answers product questions, Meta-approved.",
       "intro": "Your customers now open WhatsApp to ask where their order is, get reminded about an abandoned cart, or ask a quick product question. A bot that answers order status, cart reminders and product questions automatically handles that faster than email ever could.",
       "bullets": {
@@ -5090,7 +5089,7 @@
     },
     "clinic-whatsapp-appointments": {
       "title": "WhatsApp Appointment Bot for Clinics",
-      "metaTitle": "Clinic WhatsApp Appointments | Piton Studios",
+      "metaTitle": "Clinic WhatsApp Appointments | Piton",
       "metaDescription": "We build a WhatsApp bot for clinics that takes appointment requests and sends reminders automatically, with patient data handled under clear privacy rules.",
       "intro": "Patients increasingly message a clinic on WhatsApp instead of calling to book or change an appointment. A bot that takes appointment requests and sends automatic reminders as the date approaches cuts phone traffic at the front desk while giving patients a faster response.",
       "bullets": {
@@ -5115,7 +5114,7 @@
     },
     "real-estate-meta-ads": {
       "title": "Meta Ads for Real Estate Agencies",
-      "metaTitle": "Meta Ads for Real Estate | Piton Studios",
+      "metaTitle": "Meta Ads for Real Estate | Piton",
       "metaDescription": "We run listing and lead-generation Meta ad campaigns for real estate agencies, targeting local and foreign buyers separately with Pixel and Conversions API.",
       "intro": "A listing that reaches the right person on Facebook and Instagram converts to leads far better than site traffic alone ever does. We run listing and lead-focused Meta campaigns for real estate agencies -- built on Pixel and Conversions API, targeting local buyers and overseas buyers separately.",
       "bullets": {
@@ -5140,7 +5139,7 @@
     },
     "engineering-quote-portal": {
       "title": "Technical Quote Portal for Engineering Firms",
-      "metaTitle": "Engineering Quote Portal | Piton Studios",
+      "metaTitle": "Engineering Quote Portal | Piton",
       "metaDescription": "We build custom software for engineering firms that manages technical quotes and project requests in one panel, generating quote documents from your data.",
       "intro": "In engineering firms, quoting usually runs across scattered spreadsheets, email threads and hand-built files. A custom system that manages technical quotes and project requests in one panel -- generating documents automatically from the quote data -- keeps an engineer's time on the actual calculation, not file formatting.",
       "bullets": {
@@ -5165,7 +5164,7 @@
     },
     "finance-customer-portal": {
       "title": "Secure Customer Portal for Finance Companies",
-      "metaTitle": "Finance Customer Portal | Piton Studios",
+      "metaTitle": "Finance Customer Portal | Piton",
       "metaDescription": "We build a secure customer portal for finance companies that manages statements, documents and requests in one panel, with role-based access and an audit trail.",
       "intro": "If showing a client their statement, a document, or a request's status still runs through email or a phone call, both sides are losing time. A customer portal that manages statements, documents and requests from one secure panel moves that information into a system the client can check themselves, and your team can manage from the same place.",
       "bullets": {
@@ -5190,7 +5189,7 @@
     },
     "hotel-maintenance-care": {
       "title": "Season-Proof Maintenance for Hotel Sites",
-      "metaTitle": "Hotel Site Maintenance Plan | Piton Studios",
+      "metaTitle": "Hotel Site Maintenance Plan | Piton",
       "metaDescription": "We offer a maintenance plan for hotel and tourism sites built for seasonal traffic spikes: updates, backups and continuous booking-form monitoring.",
       "intro": "The riskiest moment for a hotel site is when the booking form quietly breaks during the busiest week of the season -- days can pass before anyone notices. Our maintenance plan for hotel sites puts updates, backups and continuous booking-form monitoring under one responsibility, for the whole season, not just after launch.",
       "bullets": {
@@ -5215,7 +5214,7 @@
     },
     "real-estate-crm": {
       "title": "CRM for Real Estate Agencies",
-      "metaTitle": "CRM for Real Estate Agencies | Piton Studios",
+      "metaTitle": "CRM for Real Estate Agencies | Piton",
       "metaDescription": "We build custom CRM systems tracking leads, portfolio matches, and viewing appointments for real estate agencies, drawing on our Nexos Investment experience.",
       "intro": "A real estate CRM is the internal system that shows which stage each lead is at, which listings they've been shown, and when the next viewing is. We haven't delivered a dedicated lead-and-viewing CRM for real estate yet; we adapt the panel architecture from Nexos Investment and the sync logic behind Emlak Sync.",
       "bullets": {
@@ -5240,7 +5239,7 @@
     },
     "construction-erp": {
       "title": "ERP for Construction Companies",
-      "metaTitle": "ERP for Construction Companies | Piton Studios",
+      "metaTitle": "ERP for Construction Companies | Piton",
       "metaDescription": "We build custom ERP systems unifying project, subcontractor, progress-payment, and material tracking for construction firms, scoped to your company's workflow.",
       "intro": "A construction ERP shows which subcontractor is working on which project, what's owed based on completed progress, and how much material has gone to which site — all from one system. We don't have a construction-sector project at this scale yet; we adapt the production/dealer tracking from FurCRM and the stock/accounting back-office from Ambalaj Cini to a construction workflow.",
       "bullets": {
@@ -5265,7 +5264,7 @@
     },
     "manufacturing-erp": {
       "title": "ERP for Manufacturing Companies",
-      "metaTitle": "ERP for Manufacturing Companies | Piton Studios",
+      "metaTitle": "ERP for Manufacturing Companies | Piton",
       "metaDescription": "We build custom ERP systems unifying production, stock, order, and dealer tracking in one panel — the architecture we built for furniture with FurCRM.",
       "intro": "A manufacturing ERP shows how much stock exists per product, what stage each order is at in production, and how much each dealer owes — all from one panel. We built exactly this for FurCRM, a furniture manufacturer: product/variant, accounts, quote-order-invoice flow, and dealer management unified in one system — the same architecture adapts to other manufacturing sectors.",
       "bullets": {
@@ -5290,7 +5289,7 @@
     },
     "b2b-dealer-portal": {
       "title": "B2B Ordering Portal for Dealers",
-      "metaTitle": "B2B Ordering Portal for Dealers | Piton Studios",
+      "metaTitle": "B2B Ordering Portal for Dealers | Piton",
       "metaDescription": "We build B2B portals where each dealer orders at their own pricing, combining FurCRM's dealer management with the order/stock back-office from Ambalaj Cini.",
       "intro": "A B2B dealer portal is the front end where each dealer logs in, orders at their own negotiated pricing, and sees their own order history and account balance. FurCRM's dealer management module already handles dealer-specific pricing and order tracking; Ambalaj Cini's order/stock/shipping back-office is a direct fit for the rest of this portal's infrastructure.",
       "bullets": {
@@ -5315,7 +5314,7 @@
     },
     "restaurant-qr-ordering": {
       "title": "QR Menu & Ordering for Restaurants",
-      "metaTitle": "QR Menu & Ordering for Restaurants | Piton Studios",
+      "metaTitle": "QR Menu & Ordering for Restaurants | Piton",
       "metaDescription": "We build custom software for restaurants and cafes: table-side QR menu, direct ordering, and orders that land instantly on a kitchen screen — no paper tickets.",
       "intro": "A QR menu and ordering system lets a customer scan a code at their table, browse the menu, and place an order that lands instantly on a kitchen screen. We haven't delivered this exact flow for a restaurant yet; we adapt the order management from Boon Fresh and the real-time notification infrastructure from Ambalaj Cini to a restaurant's workflow.",
       "bullets": {
@@ -5340,7 +5339,7 @@
     },
     "transfer-driver-app": {
       "title": "Driver App for Transfer Companies",
-      "metaTitle": "Driver App for Transfer Companies | Piton Studios",
+      "metaTitle": "Driver App for Transfer Companies | Piton",
       "metaDescription": "We build driver apps for transfer companies: job assignment, route view, status updates; no native app published yet — we decide PWA vs. native together.",
       "intro": "A driver app is the mobile tool a dispatcher uses to assign a job to a driver, the driver uses to see the route, and both use to track status — on the way, completed. We haven't published a native app yet; we bring the reservation experience built across five transfer sites and our PWA/native decision process to this app.",
       "bullets": {
@@ -5365,7 +5364,7 @@
     },
     "ecommerce-meta-ads": {
       "title": "Meta Ads for E-commerce",
-      "metaTitle": "Meta Ads for E-commerce | Piton Studios",
+      "metaTitle": "Meta Ads for E-commerce | Piton",
       "metaDescription": "We run catalog and dynamic-retargeting Facebook/Instagram campaigns for online stores — part of the Google Ads plus Meta effort that grew Ambalaj Cini by 30%.",
       "intro": "Meta ads for e-commerce turn your product catalog into automatic Facebook and Instagram ads and re-target visitors who leave your site without buying, with the exact product they looked at. At Ambalaj Cini, the Meta ads we ran alongside Google Ads campaigns were part of the effort that grew the business by 30%.",
       "bullets": {

@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: Props) {
             }),
             faqJsonLd(localized.faq),
             breadcrumbJsonLd([
-              { name: "Piton Studios", url: absoluteUrl(locale as Locale, "/") },
+              { name: "Piton", url: absoluteUrl(locale as Locale, "/") },
               { name: t("services"), url: absoluteUrl(locale as Locale, "/services") },
               { name: localized.title, url },
             ]),
