@@ -208,9 +208,9 @@ _(session devam ediyor)_
 - [x] Her 3 proje için desktop (1440x810) + mobile (430x928) WebP preview görselleri üretildi (PIL + cwebp pipeline)
   - Mindloop desktop: cover-crop; Mindloop mobile + Dental Health + Securify (4 görsel): scale-to-width + pad-bottom (UI elemanları kenara yakındı, crop riski vardı)
 - [x] Tarayıcıda canlı doğrulama yapıldı (Desktop/Mobile toggle, hero render)
-- [x] CHANGELOG güncellendi, commit + push (`d62d4c9`)
+- [x] CHANGELOG güncellendi, commit + push (`94c0466`)
 - [x] Türkçe/İngilizce çeviri eksikleri bulundu ve düzeltildi: 11 proje slug'ında (`alert-muhendislik`, `beton-store`, `crazy-girl-night-club`, `kibris-katalog`, `misse-night-club`, `virginia-ice-cream`, `faraon-night-clubs`, `welcome-pickups`, `mindloop`, `dental-health`, `securify`) `works.{slug}.{title,summary,body}` eksikti → fallback mekanizması yanlış dilde metin sızdırıyordu (TR sayfada EN summary, EN sayfada TR body)
-- [x] `tr.json` + `en.json`'a 11 eksik çeviri eklendi, `beton-store` üzerinden tarayıcıda doğrulandı, commit + push (`124a8e7`)
+- [x] `tr.json` + `en.json`'a 11 eksik çeviri eklendi, `beton-store` üzerinden tarayıcıda doğrulandı, commit + push (`13bed3c`)
 
 ### Pending / Yarım Kalan
 - [ ] `ru.json`'da aynı 11 slug hâlâ eksik (bilerek ertelendi — kullanıcı istemedi, çeviri kalitesi doğrulanamadı)
@@ -266,7 +266,7 @@ Plan: `piton-plans/2026-07-28-blog-admin-platform-plan.md` (Sprint 1 uygulandi, 
 
 ### Completed
 
-**SEO altyapisi** (`27274ff`)
+**SEO altyapisi** (`25b4087`)
 - [x] `src/app/sitemap.ts` — 3 dilde 267 URL, her girdide hreflang + x-default, lokalize yollar (`/tr/projeler` ↔ `/en/projects`)
 - [x] `src/app/robots.ts` — preview deploy'da noindex
 - [x] Tum sayfalarda canonical + hreflang (`src/lib/seo.ts`)
@@ -276,17 +276,17 @@ Plan: `piton-plans/2026-07-28-blog-admin-platform-plan.md` (Sprint 1 uygulandi, 
 **Bulunan ve duzeltilen hatalar**
 - [x] **Cok dilli metadata**: proje/hizmet detay sayfalari `data.ts`'teki Turkce sabitleri kullaniyordu — `/en/` ve `/ru/` sayfalari Turkce baslik+aciklama ile indexleniyordu. `src/lib/content-i18n.ts` ile ceviri dosyalarindan okunuyor.
 - [x] **Eksik ceviri**: `stories.cyprokey` ve `stories.salih-defterali` **hicbir dilde** cevrilmemisti (`CLAUDE.md` "ceviriler TAMAM" diyordu — bu iddia `works` icin dogru, `stories` icin degildi). 3 dilde eklendi.
-- [x] **35 proje sayfasinda kirik hero gorseli** (`a4fa8e9`): `public/assets/optimized/` gitignore'daydi, `src/lib/media.ts` oraya isaret ediyordu. 10 dosya (876 KB) repoya hic girmiyordu. 29 preview'siz work + 6 story + /projeler hero + reel + case-study etkileniyordu. Dosyalar repoya alindi.
-- [x] **Sahte iletisim formu** (`4756404`): `contact.tsx` 1.2 sn bekleyip "✓ Gonderildi" yaziyor, hicbir yere hicbir sey gondermiyordu.
+- [x] **35 proje sayfasinda kirik hero gorseli** (`df5a926`): `public/assets/optimized/` gitignore'daydi, `src/lib/media.ts` oraya isaret ediyordu. 10 dosya (876 KB) repoya hic girmiyordu. 29 preview'siz work + 6 story + /projeler hero + reel + case-study etkileniyordu. Dosyalar repoya alindi.
+- [x] **Sahte iletisim formu** (`3ff8b74`): `contact.tsx` 1.2 sn bekleyip "✓ Gonderildi" yaziyor, hicbir yere hicbir sey gondermiyordu.
 
-**Blog** (`27274ff`)
+**Blog** (`25b4087`)
 - [x] MDX pipeline: `content/blog/{tr,en,ru}/*.mdx`, gray-matter + remark-gfm + rehype-pretty-code
 - [x] Liste / yazi / etiket sayfalari, tr'de `/blog/etiket/[tag]` lokalize yolu
 - [x] `translationKey` frontmatter alani diller arasi hreflang'i kuruyor
 - [x] RSS: `/[locale]/rss.xml`
 - [x] 3 dilde 2'ser ornek yazi (gercek icerik)
 
-**Iletisim formu** (`4756404`)
+**Iletisim formu** (`3ff8b74`)
 - [x] `/api/contact` — zod, honeypot, IP basina 10 dk / 3 gonderim
 - [x] Bildirim `pitonstudios@gmail.com`, `replyTo` gonderenin adresi
 - [x] `RESEND_API_KEY` yoksa acik hata + kullaniciya dogrudan e-posta adresi
@@ -297,9 +297,9 @@ Plan: `piton-plans/2026-07-28-blog-admin-platform-plan.md` (Sprint 1 uygulandi, 
 - [x] Vercel Analytics + Speed Insights
 
 **Geri alinanlar** (kullanici karari — panel gereksiz yuk)
-- Neon + Drizzle + icerik gocu: kod `61b0d2a`, geri alindi `a4fa8e9`
-- Auth.js + admin panel: kod `5cd315c`, geri alindi `0a35979`
-- Vercel Blob: hic baglanmadi, `b9af751`
+- Neon + Drizzle + icerik gocu: kod `af59eae`, geri alindi `df5a926`
+- Auth.js + admin panel: kod `dcaeea2`, geri alindi `75ce1bc`
+- Vercel Blob: hic baglanmadi, `c03fd1c`
 
 ### Pending — kullanici tarafinda
 
@@ -334,7 +334,7 @@ Icerik uretimi sessioni. Blog altyapisi grafik/TOC/SSS destegiyle genisletildi,
 
 ### Completed
 
-**Blog altyapisi** (`7e9ed89` — TASK-030)
+**Blog altyapisi** (`7f550e0` — TASK-030)
 - [x] `src/components/mdx/mdx-components.tsx` — `BarChart` (CSS yatay cubuk),
       `TrendChart` (inline SVG cok serili cizgi), `StatGrid`, `Callout`, `KeyTakeaways`
       + site ici baglantilari `next/link`'e ceviren `a` override'i. Hepsi tema
@@ -347,7 +347,7 @@ Icerik uretimi sessioni. Blog altyapisi grafik/TOC/SSS destegiyle genisletildi,
       `.blog-toc` / `.mdx-*` / `.blog-faq` stilleri (globals.css +230 satir)
 - [x] `blog.tableOfContents` ve `blog.faqTitle` cevirileri tr/en/ru
 
-**Icerik — 6 yazi × 3 dil = 18 MDX** (`7e9ed89` TASK-031, `d50eeb8` TASK-032)
+**Icerik — 6 yazi × 3 dil = 18 MDX** (`7f550e0` TASK-031, `da26da1` TASK-032)
 - [x] `seo-to-geo` — yapay zeka caginda arama gorunurlugu, SEO'dan GEO'ya
 - [x] `website-cost` — kurumsal web sitesi maliyeti 2026, butce kalemleri
 - [x] `ai-automation-roi` — KOBI'ler icin AI otomasyonu ve ROI hesabi
@@ -358,7 +358,7 @@ Icerik uretimi sessioni. Blog altyapisi grafik/TOC/SSS destegiyle genisletildi,
 - [x] Icerik ici **81 ic link**, tamami sitemap'e karsi dogrulandi — kirik yok
 - [x] Blog toplam **8 yazi × 3 dil**, statik sayfa 476 → 525
 
-**Nav duzeltmesi** (`d50eeb8` — TASK-033)
+**Nav duzeltmesi** (`da26da1` — TASK-033)
 - [x] Anasayfa nav'inda Blog linki yoktu. Site iki ayri nav component'i kullaniyor:
       `chrome.tsx` (anasayfa) ve `page-shell.tsx` (ic sayfalar); Blog yalnizca
       ikincisindeydi. `chrome.tsx`'in masaustu nav'ina + mobil menu dizisine eklendi
@@ -495,7 +495,7 @@ Session'da baslanip bitirilmemis is yok.
   nav etiketlerini `nav` degil **`common`** namespace'inden okuyor; yeni link eklerken
   her iki namespace'e de etiket gerekebiliyor
 - Sosyal medya uretim dosyalari (`piton-docs/social-production/`, `render-*.cjs`)
-  bu oturumun isi degildi; karismasin diye **ayri commit'e** alindi (`1b7f299`)
+  bu oturumun isi degildi; karismasin diye **ayri commit'e** alindi (`4fbdfc1`)
 
 
 ## 2026-09-15 / 2026-09-20 — SEO, dönüşüm ve görsel deneyim

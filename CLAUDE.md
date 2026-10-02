@@ -177,7 +177,7 @@ onlar da Resend ile dogrudan e-postaya gidecek. Ikinci bir depo bakim yuku olust
 Kaldirilanlar: `src/lib/db/`, `src/lib/content/`, `drizzle/`, `drizzle.config.ts`,
 `scripts/migrate-content.ts`, `scripts/export-content.ts`,
 drizzle-orm / drizzle-kit / @neondatabase/serverless bagimliliklari.
-Kod git gecmisinde `61b0d2a` commit'inde duruyor.
+Kod git gecmisinde `af59eae` commit'inde duruyor.
 
 **Korunan**: `pnpm content:check` → `scripts/check-translations.ts`.
 Artik tamamen statik calisiyor (data.ts + messages/*.json). Iki eksik story

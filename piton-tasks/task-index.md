@@ -73,40 +73,40 @@
 
 | ID | Task | Complexity | Status | Commit |
 |----|------|-----------|--------|--------|
-| TASK-022 | SEO altyapisi: sitemap (267 URL), robots, hreflang, canonical | L | COMPLETED | `27274ff` |
-| TASK-023 | JSON-LD: Organization, WebSite, BreadcrumbList, CreativeWork, Service, FAQPage | M | COMPLETED | `27274ff` |
-| TASK-024 | Dinamik OG gorselleri (proje / hizmet / blog) | M | COMPLETED | `27274ff` |
-| TASK-025 | Cok dilli metadata duzeltmesi — en/ru sayfalari Turkce indexleniyordu | M | COMPLETED | `27274ff` |
-| TASK-026 | MDX blog: liste, yazi, etiket sayfalari, RSS, 3 dilde 2'ser yazi | L | COMPLETED | `27274ff` |
-| TASK-027 | Vercel Analytics + Speed Insights | S | COMPLETED | `27274ff` |
-| TASK-028 | Eksik hero gorselleri — 35 proje sayfasi production'da kirikti | M | COMPLETED | `a4fa8e9` |
-| TASK-029 | Calisan iletisim formu (Resend, honeypot, rate limit) | L | COMPLETED | `4756404` |
+| TASK-022 | SEO altyapisi: sitemap (267 URL), robots, hreflang, canonical | L | COMPLETED | `25b4087` |
+| TASK-023 | JSON-LD: Organization, WebSite, BreadcrumbList, CreativeWork, Service, FAQPage | M | COMPLETED | `25b4087` |
+| TASK-024 | Dinamik OG gorselleri (proje / hizmet / blog) | M | COMPLETED | `25b4087` |
+| TASK-025 | Cok dilli metadata duzeltmesi — en/ru sayfalari Turkce indexleniyordu | M | COMPLETED | `25b4087` |
+| TASK-026 | MDX blog: liste, yazi, etiket sayfalari, RSS, 3 dilde 2'ser yazi | L | COMPLETED | `25b4087` |
+| TASK-027 | Vercel Analytics + Speed Insights | S | COMPLETED | `25b4087` |
+| TASK-028 | Eksik hero gorselleri — 35 proje sayfasi production'da kirikti | M | COMPLETED | `df5a926` |
+| TASK-029 | Calisan iletisim formu (Resend, honeypot, rate limit) | L | COMPLETED | `3ff8b74` |
 
 ## Phase 5: Icerik Uretimi (2026-08-08)
 
 | ID | Task | Complexity | Status | Commit |
 |----|------|-----------|--------|--------|
-| TASK-030 | Blog MDX component seti (BarChart, TrendChart, StatGrid, Callout, KeyTakeaways), otomatik icindekiler tablosu, frontmatter `faq` → FAQPage JSON-LD, rehype-slug | L | COMPLETED | `7e9ed89` |
-| TASK-031 | 3 uzun form SEO/GEO uyumlu blog yazisi × 3 dil (9 MDX) — tablo, grafik, SSS ve 54 dogrulanmis ic link | L | COMPLETED | `7e9ed89` |
-| TASK-032 | 3 blog yazisi daha × 3 dil (9 MDX): Next.js vs WordPress, cok dilli site/hreflang, e-ticaret CRO | L | COMPLETED | `d50eeb8` |
-| TASK-033 | Anasayfa nav'ina Blog linki (chrome.tsx masaustu + mobil) — yalnizca ic sayfalarda vardi | S | COMPLETED | `d50eeb8` |
-| TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `1fbce47` |
-| TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `cae515a` |
-| TASK-036 | Projeler sayfasindaki "Studyo Tanitim" showreel bolumu kaldirildi (JSX + CSS + 3 dil ceviri) | S | COMPLETED | `fce9ebb` |
-| TASK-037 | Yeni marka logosu (python + devre karti dunya): arka plan alfaya cevrildi, logo.webp + icon/apple-icon/favicon yeniden uretildi | S | COMPLETED | `af405aa` |
-| TASK-038 | Etki Paneli hizmetler sayfasina tasindi; icerik 5 web boyutundan 6 boyuta genisletildi (otomasyon, AI, performans, SEO/GEO, donusum, bakim) | M | COMPLETED | `1e8c743` |
-| TASK-039 | Projeler sayfasina Teslim Akisi: 6 adimli interaktif surec seridi, her adimda cikti/gereksinim + farkli disiplinlerden ornek proje | M | COMPLETED | `1e8c743` |
-| TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `ba5c5f7` |
-| TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `ba5c5f7` |
-| TASK-042 | Surunen yilan animasyonu: preloader'da ilerlemeye bagli yilan + sayfa arka planinda kaydirmayla suzulen 3 yilan (CSS sprite, 164 KB) | M | COMPLETED | `bac924b` |
-| TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `5ad8d79` |
-| TASK-044 | Bolum kenarini sarmalayan yilan: CSS Motion Path + onde/arkada iki katman, 3 bolumde deneme | M | COMPLETED | `17dc822` |
-| TASK-045 | Yilan sarmalama elden gecirildi: kose kirilmasi duzeltildi (36 dilim + adim hizalamasi), tek katmana indi, arka plan yilanlari kaldirildi | M | COMPLETED | `3e6bdc5` |
-| TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `3e6bdc5` |
-| TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `3e6bdc5` |
-| TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `3e6bdc5` |
-| TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `a3faf7d` |
-| TASK-050 | Hizmet sayfalarindaki abartili rakamlar portfoye dayandirildi (15 hizmet x 4 rakam x 3 dil; site ici celiski 750+ vs 40+); 3 hizmet kaldirildi (ai-training, ai-chatbot, prompt-engineering) + 301 yonlendirme | L | COMPLETED | `4fa2651`, `00fb701` |
+| TASK-030 | Blog MDX component seti (BarChart, TrendChart, StatGrid, Callout, KeyTakeaways), otomatik icindekiler tablosu, frontmatter `faq` → FAQPage JSON-LD, rehype-slug | L | COMPLETED | `7f550e0` |
+| TASK-031 | 3 uzun form SEO/GEO uyumlu blog yazisi × 3 dil (9 MDX) — tablo, grafik, SSS ve 54 dogrulanmis ic link | L | COMPLETED | `7f550e0` |
+| TASK-032 | 3 blog yazisi daha × 3 dil (9 MDX): Next.js vs WordPress, cok dilli site/hreflang, e-ticaret CRO | L | COMPLETED | `da26da1` |
+| TASK-033 | Anasayfa nav'ina Blog linki (chrome.tsx masaustu + mobil) — yalnizca ic sayfalarda vardi | S | COMPLETED | `da26da1` |
+| TASK-034 | Blog fiyatlandirmasi: TR yazilari TL'ye, en/ru euro bantlari gercek fiyat seviyesine cekildi (5 yazi × 3 dil) | M | COMPLETED | `a8cff3a` |
+| TASK-035 | Projeler sayfasina interaktif Etki Paneli (5 boyut, imlecle taranan SVG grafik, 3 dil) + showreel baslik hatasi | M | COMPLETED | `d309309` |
+| TASK-036 | Projeler sayfasindaki "Studyo Tanitim" showreel bolumu kaldirildi (JSX + CSS + 3 dil ceviri) | S | COMPLETED | `ade9d00` |
+| TASK-037 | Yeni marka logosu (python + devre karti dunya): arka plan alfaya cevrildi, logo.webp + icon/apple-icon/favicon yeniden uretildi | S | COMPLETED | `0b8daea` |
+| TASK-038 | Etki Paneli hizmetler sayfasina tasindi; icerik 5 web boyutundan 6 boyuta genisletildi (otomasyon, AI, performans, SEO/GEO, donusum, bakim) | M | COMPLETED | `c8da455` |
+| TASK-039 | Projeler sayfasina Teslim Akisi: 6 adimli interaktif surec seridi, her adimda cikti/gereksinim + farkli disiplinlerden ornek proje | M | COMPLETED | `c8da455` |
+| TASK-040 | Baslik sarma duzeltmesi: projeler hero'su ve Teslim Akisi basligi kapsayici genislik kapagi yuzunden 2 satira dusuyordu | S | COMPLETED | `4df5169` |
+| TASK-041 | Hakkinda sayfasi elden gecirildi: 3 interaktif bolum (rakamlar, zaman cizelgesi, yetenek haritasi), gomulu Turkce metinler i18n'e tasindi, sayilar WORKS'ten turetiliyor | L | COMPLETED | `4df5169` |
+| TASK-042 | Surunen yilan animasyonu: preloader'da ilerlemeye bagli yilan + sayfa arka planinda kaydirmayla suzulen 3 yilan (CSS sprite, 164 KB) | M | COMPLETED | `22bcd16` |
+| TASK-043 | Yilan scrollbar: tarayici cubugunun yerine gecen, suruklenebilir sag kenar rayi (90 derece cevrilmis sprite) | M | COMPLETED | `5617aa1` |
+| TASK-044 | Bolum kenarini sarmalayan yilan: CSS Motion Path + onde/arkada iki katman, 3 bolumde deneme | M | COMPLETED | `0d66cb1` |
+| TASK-045 | Yilan sarmalama elden gecirildi: kose kirilmasi duzeltildi (36 dilim + adim hizalamasi), tek katmana indi, arka plan yilanlari kaldirildi | M | COMPLETED | `33a85d4` |
+| TASK-046 | Ic sayfalar anasayfanin arka planini kullaniyor; aurora blur(80px) kaldirilarak kaydirma 2 kat hizlandi | M | COMPLETED | `33a85d4` |
+| TASK-047 | Icerik duzeltmeleri: yil filtresi -> alan filtresi, is karmasi alan kartlari, yanlis "web'den AI'a gectik" anlatimi, proje yillari dagitildi | L | COMPLETED | `33a85d4` |
+| TASK-048 | Onizlemesi olmayan projeler icin arayuz iskeleti yer tutucu + 2 yeni ekran goruntusu | S | COMPLETED | `33a85d4` |
+| TASK-049 | Tipografi sistemi: Space Grotesk (baslik/govde/nav) + IBM Plex Mono (numara, kategori, sayac, tarih, teknik metadata); JetBrains Mono ve Press Start 2P kaldirildi, `latin-ext` eklendi | L | COMPLETED | `4a245e5` |
+| TASK-050 | Hizmet sayfalarindaki abartili rakamlar portfoye dayandirildi (15 hizmet x 4 rakam x 3 dil; site ici celiski 750+ vs 40+); 3 hizmet kaldirildi (ai-training, ai-chatbot, prompt-engineering) + 301 yonlendirme | L | COMPLETED | `d93858d`, `34789bf` |
 | TASK-051 | SSS sayfasi: 12 kategori x 75 soru x 3 dil (225 soru-cevap), FAQPage + WebPage(speakable) JSON-LD, `/llms.txt`, 14 AI crawler izni, cevap-once GEO yazimi, native `<details>` (kapaliyken de DOM'da) | L | COMPLETED | — |
 | TASK-052 | Donusum bolumleri: referanslar sahnesi (vaka sonuc kartlari — taslak yorum/karusel yerine dogrulanabilir 6 sonuc karti), 6 adimlik surec sahnesi (teknoloji adi gecmez), fiyatlandirma sayfasi (TL/euro, 3 dil), hero rakamlar seridi (49+/10+/12/3), 11 sektorel landing + indeks (3 dil; egitim + guzellik referanssiz, tum sayfalarda "Sektore bakisimiz" detail bolumu), nav + routing + sitemap entegrasyonu | L | COMPLETED | — |
 
@@ -128,9 +128,9 @@
 
 | ID | Task | Durum | Not |
 |----|------|-------|-----|
-| — | Neon Postgres + Drizzle + icerik gocu | **CANCELLED** | Kod `61b0d2a`, geri alindi `a4fa8e9` |
-| — | Auth.js + admin panel | **CANCELLED** | Kod `5cd315c`, geri alindi `0a35979` |
-| — | Vercel Blob medya altyapisi | **CANCELLED** | Hic baglanmadi, `b9af751` |
+| — | Neon Postgres + Drizzle + icerik gocu | **CANCELLED** | Kod `af59eae`, geri alindi `df5a926` |
+| — | Auth.js + admin panel | **CANCELLED** | Kod `dcaeea2`, geri alindi `75ce1bc` |
+| — | Vercel Blob medya altyapisi | **CANCELLED** | Hic baglanmadi, `c03fd1c` |
 | — | i18n refaktoru (JSON bolme) | **CANCELLED** | `pnpm content:check` ile yonetiliyor |
 
 ## Phase 7: Blog geliştirme (2026-09-05)

@@ -11,9 +11,9 @@
 >
 > | Sprint | Durum |
 > |---|---|
-> | 1 — SEO + Blog + Analytics | ✅ **Yayında** (`27274ff`) |
-> | 2 — Neon + şema + içerik göçü | ❌ İptal — kod `61b0d2a`'da, geri alındı `a4fa8e9` |
-> | 3 — Auth + admin iskeleti | ❌ İptal — kod `5cd315c`'de, geri alındı `0a35979` |
+> | 1 — SEO + Blog + Analytics | ✅ **Yayında** (`25b4087`) |
+> | 2 — Neon + şema + içerik göçü | ❌ İptal — kod `af59eae`'da, geri alındı `df5a926` |
+> | 3 — Auth + admin iskeleti | ❌ İptal — kod `dcaeea2`'de, geri alındı `75ce1bc` |
 > | 4 — CMS + medya + lead | ❌ İptal (iletişim formu hariç, aşağıya bakın) |
 > | 5 — i18n refaktörü | ❌ İptal — çeviri borcu `content:check` ile yönetiliyor |
 >
