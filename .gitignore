@@ -68,3 +68,6 @@ tmp/
 # altindaki uretim notlari bahsediyor. Uretim notlari ve alt metinler repoda,
 # gorsellerin kendisi disarida.
 /public/assets/social/
+
+# mattpocock skills local issue tracker
+.scratch/

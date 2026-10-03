@@ -400,3 +400,18 @@ Detaylar → `piton-config/agent-instructions.md`
 - Gorseller `public/assets/` altinda; `optimized/` gitignore'da (buyuk dosyalar)
 - 2026-07-28: `videos/` klasoru (289MB, 17 dosya) silindi — kodda hicbir referansi yoktu,
   site screenshot tabanli calisiyor
+
+## Agent skills
+
+### Issue tracker
+
+Issue ve spec'ler local markdown olarak `.scratch/<feature>/` altında (gitignore'lu, sadece bu makinede). See `docs/agents/issue-tracker.md`.
+Eski `piton-tasks/` sistemi tamamlanmış işlerin kaydı olarak duruyor; yeni işler `.scratch/`'e açılır.
+
+### Triage labels
+
+Default beş role: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix (issue dosyasındaki `Status:` satırı). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: root'ta `CONTEXT.md` + `docs/adr/` (ihtiyaç oldukça oluşturulur). See `docs/agents/domain.md`.
