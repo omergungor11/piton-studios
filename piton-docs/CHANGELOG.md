@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Mobil alt kontrol hizalaması (TASK-085)
+
+- Mobil sahne göstergesi ve WhatsApp/telefon butonları ortak alt boşluk ve 42px yükseklik kullanıyor. ≤480px'te 12px, 481–1000px'te 20px alt boşluğa cihazın güvenli alanı ekleniyor.
+- Tarayıcıda 360, 390, 430, 480, 481, 768, 844 (yatay) ve 1000px genişliklerde üst/alt kenarlar ve yükseklikler eşit. Masaüstü 1001/1440px görünümü korundu.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve production build başarılı (859 sayfa). Eski CSS sunan yerel geliştirme sunucusu yeniden başlatıldı.
+
 ## 2026-10-08 — Marka fontu: karşılaştırma ve Nippo (TASK-084)
 
 - `/tr/font-lab`: mevcut hero bileşeni ve logo yazısı üzerinde 24 font seçeneği. Modern (10), karakterli (6), teknolojik (6), serif (2); font adı/açıklama araması, kategori filtreleri ve önizleme seçicisi.
