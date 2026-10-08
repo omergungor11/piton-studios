@@ -62,7 +62,7 @@ export default function ProcessScene({ variant = 'home' }: { variant?: 'home' | 
         ))}
       </ol>
 
-      <Reveal variant="fadeUp" delay={0.2}>
+      <Reveal variant="fadeUp" delay={0.2} className="prc-footer">
         <footer className="prc-foot">
           <p className="prc-foot-note">{t('footNote')}</p>
           {variant === 'page' ? (

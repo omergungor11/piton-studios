@@ -6940,7 +6940,8 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
 @media (max-width: 640px) {
   .prc-glass { gap: 26px; }
   .prc-grid { grid-template-columns: 1fr; gap: 12px; }
-  .prc-glass--home .prc-grid { display: none; }
+  .prc-glass--home .prc-grid,
+  .prc-glass--home .prc-footer { display: none; }
   .prc-glass--home .prc-details { display: inline-flex; }
   .prc-step { padding: 18px 16px 20px; }
   .prc-step-ghost { font-size: 48px; }

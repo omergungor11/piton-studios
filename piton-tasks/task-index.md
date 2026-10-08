@@ -22,11 +22,11 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..097) | 7 | 7 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..098) | 8 | 8 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095) | 2 | 2 | 0 | 0 | 0 |
-| **Total** | | **96** | **95** | **0** | **0** | **0** |
+| **Total** | | **97** | **96** | **0** | **0** | **0** |
 
-**Progress**: 95/96 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 96/97 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -211,6 +211,7 @@
 | TASK-093 | Anasayfadaki Hakkında bölümünü kaldır; sahne sayısını ve iletişim etiketini güncelle | S | COMPLETED |
 | TASK-096 | İkinci bölümdeki Tamamlanan Proje ve Yıllık Deneyim etiketlerini Nippo yap | S | COMPLETED |
 | TASK-097 | Mobil süreç kutularını Detaylar bağlantısıyla ayrı Nasıl Çalışıyoruz sayfasına taşı | M | COMPLETED |
+| TASK-098 | Mobil anasayfa süreç bölümündeki süre notunu ve Projeni anlat butonunu kaldır | S | COMPLETED |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 

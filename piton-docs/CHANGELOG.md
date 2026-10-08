@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Mobil süreç alt notu kaldırıldı (TASK-098)
+
+- Mobil anasayfa süreç bölümünde “Çoğu proje…” notu ve “Projeni anlat” butonu gizlendi. Reveal kapsayıcısı da gizlenir; bölüm Detaylar butonuyla biter, boş alt satır kalmaz.
+- Masaüstü anasayfa ve ayrı süreç sayfasındaki not/CTA korunur. Tarayıcıda 390 px mobil görünüm, 1280 px masaüstü ve Detaylar akışı doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — Mobil süreç özeti ve Detaylar sayfası (TASK-097)
 
 - 640 px ve altındaki anasayfada Nasıl Çalışıyoruz bölümünün altı kartı gizlendi; açıklamanın altına “Detaylar” bağlantısı eklendi. Masaüstü kartları ve mevcut Projeni anlat bağlantısı korunur.
