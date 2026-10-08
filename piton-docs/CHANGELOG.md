@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Bölüm etiketleri ve ürünler vurgusu Nippo (TASK-090)
+
+- Anasayfa bölüm etiketleri (Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, Hakkında, İletişim ve Spark CTA üst etiketi) Nippo Medium 500 kullanır. Hizmetler etiketinin § 04 numarası da aynı fonttadır.
+- Hakkında başlığındaki “ürünler” vurgusu Nippo Bold 700, normal stile geçti. Hakkında üst etiketindeki inline stiller `.about-eyebrow` sınıfına taşındı.
+- Tarayıcıda dokuz metin parçasının Nippo ailesi/ağırlığı doğrulandı; 423 px görünümde yatay taşma yok. Hakkında ve süreç bölümleri görsel olarak kontrol edildi.
+- Turbopack eski global CSS'i sunmayı sürdürdüğü için yerel sunucu `pnpm dev --webpack --port 3000` ile yeniden başlatıldı; güncel stiller tarayıcıda doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Nippo başlık vurguları ve proje kaydırma alanı (TASK-089)
 
 - “Fikrinizi & Projenizi Konuşalım” başlığının vurgusu ve “Neden Piton?” başlığındaki “Piton?” Nippo Bold 700 kullanır; yapay italik kaldırıldı. Soru işareti üç dilde vurguya dahil, aradaki boşluk giderildi.

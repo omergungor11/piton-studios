@@ -1133,7 +1133,7 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
   font-size: 13px; letter-spacing: 0; text-transform: none;
   color: var(--muted); margin-bottom: 28px;
   display: flex; gap: 14px; align-items: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-nippo), var(--font-sans);
   font-weight: 500;
 }
 .manifesto-glass .eyebrow::before { content: ""; width: 40px; height: 1px; background: currentColor; }
@@ -1979,8 +1979,8 @@ html[data-theme="light"] .case-text .arrow { background: rgba(0,0,0,0.05); }
   font-family: var(--font-sans);
   font-weight: 500;
 }
-.svc-glass .head .t { color: var(--ink); letter-spacing: 0; font-size: 14px; font-family: var(--font-sans); font-weight: 500; }
-.svc-glass .head .n { color: var(--accent); }
+.svc-glass .head .t { color: var(--ink); letter-spacing: 0; font-size: 14px; font-family: var(--font-nippo), var(--font-sans); font-weight: 500; }
+.svc-glass .head .n { color: var(--accent); font-family: var(--font-nippo), var(--font-sans); }
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .svc-all-btn {
   display: flex;
@@ -2190,6 +2190,16 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
   font-family: var(--font-sans);
   font-weight: 500;
 }
+.about-eyebrow {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  text-align: center;
+}
 .about-glass h3 {
   font-family: var(--font-sans); font-weight: 700;
   font-size: clamp(24px, 3.4vw, 46px);
@@ -2197,7 +2207,12 @@ html[data-theme="light"] .svc:hover { background: rgba(0,0,0,0.06); }
   text-transform: none; color: var(--ink);
   max-width: 22ch;
 }
-.about-glass h3 .em { font-style: italic; color: var(--accent); }
+.about-glass h3 .em {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent);
+}
 .about-desc {
   text-align: center;
   font-size: 15px; line-height: 1.8;
@@ -2269,7 +2284,7 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   display: flex; align-items: center; gap: 10px;
   font-size: 12px; letter-spacing: 0; text-transform: none;
   color: var(--accent);
-  font-family: var(--font-sans);
+  font-family: var(--font-nippo), var(--font-sans);
   font-weight: 500;
 }
 .spark-pulse {
@@ -2372,7 +2387,7 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   font-size: 13px; letter-spacing: 0; text-transform: none;
   color: var(--muted); margin-bottom: 30px;
   display: flex; gap: 14px; align-items: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-nippo), var(--font-sans);
   font-weight: 500;
 }
 .contact-glass .eyebrow::before { content: ""; width: 60px; height: 1px; background: currentColor; }
@@ -6753,6 +6768,8 @@ h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
 
 .prc-head { max-width: 72ch; }
 .prc-eyebrow {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;

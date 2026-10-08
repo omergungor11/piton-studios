@@ -1,6 +1,8 @@
 # Piton - Project Memory
 
 ## Marka fontu: Nippo (2026-10-08)
+- TASK-090: anasayfadaki bölüm etiketleri (Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, Hakkında, İletişim ve Spark CTA üst etiketi) Nippo Medium 500 kullanır. Hakkında başlığındaki “ürünler” vurgusu Nippo Bold 700, normal stildir. `.about-eyebrow` inline etiket stillerinin yerini aldı; çeviriler ve gövde metinleri aynı kaldı.
+- Yerel önizlemede Turbopack globals.css güncellemelerini eski önbellekten sunabiliyor; yeniden başlatmak da çözmezse `pnpm dev --webpack --port 3000` güncel stilleri doğru sunuyor. Üretim doğrulamasında `pnpm build --webpack` kullanılıyor.
 - TASK-089: Spark CTA'daki “Konuşalım” ve Manifesto'daki “Piton?” vurguları Nippo Bold 700, normal stil kullanır. Üç dilde soru işareti `titleAccent` içinde tutulur; soru işareti ile marka arasında boşluk oluşmaz.
 - TASK-088: hero rozetleri (ONLINE, WEB APP, AI, SEO, CLOUD, OTOMASYON) Nippo Medium 500 kullanır. `.chip` doğrudan `--font-nippo` kullanır; font karşılaştırmasında başka bir başlık fontu seçilse de rozetler Nippo olarak kalır.
 - TASK-087: görsel marka yazımı küçük harf “piton”. Hero başlığı (tr/en/ru), anasayfa ve iç sayfa nav/mobil menü logoları, font karşılaştırmasındaki tüm örnekler küçük harf kullanır.

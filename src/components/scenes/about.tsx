@@ -17,17 +17,7 @@ export default function AboutScene() {
     <div className="about-glass glass">
       <div className="about-top">
         <div className="about-heading">
-          <div
-            data-reveal="fade"
-            style={{
-              fontSize: 10,
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
-              color: 'var(--muted)',
-              marginBottom: 18,
-              textAlign: 'center',
-            }}
-          >
+          <div className="about-eyebrow" data-reveal="fade">
             {t('eyebrow')}
           </div>
           <h3 data-reveal="fade" style={{ textAlign: 'center', '--reveal-delay': '100ms' } as CSSProperties}>

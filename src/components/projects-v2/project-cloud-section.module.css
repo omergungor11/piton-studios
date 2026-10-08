@@ -600,6 +600,8 @@
 }
 
 .trackHome .eyebrow {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 500;
   margin-bottom: 10px;
   color: var(--muted);
   font-size: 12px;
