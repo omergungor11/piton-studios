@@ -1,4 +1,16 @@
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
+
+/** Marka yazisi: hero 700, nav ve mobil menu 500. Dosyalar dev/build oncesi indirilir. */
+export const nippo = localFont({
+  src: [
+    { path: './fonts/nippo-medium.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/nippo-bold.woff2', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-nippo',
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
+});
 
 /**
  * Ana font. Basliklar 600-700, govde 400-500, nav/buton 500-600.

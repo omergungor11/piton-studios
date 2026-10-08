@@ -8,7 +8,7 @@ import SnakeScroll from '@/components/snake-scroll';
 import ConversionTracker from '@/components/conversion-tracker';
 import SmoothScroll from '@/components/motion/smooth-scroll';
 import RevealObserver, { REVEAL_BOOT_SCRIPT } from '@/components/motion/reveal-observer';
-import { spaceGrotesk, ibmPlexMono } from '@/lib/fonts';
+import { spaceGrotesk, ibmPlexMono, nippo } from '@/lib/fonts';
 import { SITE_URL } from '@/lib/site';
 
 type Props = {
@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       data-theme="dark"
       // reveal-ready (satir ici script) ve lenis siniflari hidrasyondan once/sonra html'e eklenir.
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
+      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} ${nippo.variable}`}
     >
       <head>
         <meta charSet="utf-8" />

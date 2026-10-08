@@ -1,5 +1,13 @@
 # Piton - Project Memory
 
+## Marka fontu: Nippo (2026-10-08)
+- Kullanıcı Qurova'dan sonra farklı adayları karşılaştırmak istedi ve sonunda Fontshare Nippo'yu seçti.
+- Hero Piton başlığı Nippo Bold 700; ortak nav ve mobil menüde logo yanındaki Piton Nippo Medium 500. Diğer tipografi Space Grotesk / IBM Plex Mono olarak kaldı.
+- `src/lib/fonts.ts` → `next/font/local`, `--font-nippo` / `--font-brand`; fontlar ziyaretçiye kendi alan adımızdan sunulur.
+- Nippo ITF Free Font License 2.0: ücretsiz ticari kullanım + self-hosting izinli, public repoda font dosyası dağıtımı yasak. `pnpm dev/build` eksik WOFF2'leri resmi CDN'den indirir (`scripts/fetch-brand-fonts.mjs`); ikililer gitignore'da, lisans `src/lib/fonts/nippo-license.txt`.
+- Yerel karşılaştırma: `http://localhost:3000/tr/font-lab` — 24 aday (Nippo dahil), arama, 4 kategori; gerçek hero bileşeni ve logo yazısı birlikte değişir. Rota production'da 404 ve noindex, nav/sitemap'te yok.
+- Qurova DEMO seçilmediği için deneme dosyası kaldırıldı. Kalıcı seçim Nippo.
+
 ## Marka adı: Piton (2026-10-02)
 - "Piton Studios" → "Piton" (kullanıcı kararı). Domain `pitonstudios.com`, `hi@pitonstudios.com`, sosyal hesaplar
   (instagram/behance/fiverr `pitonstudios`, LinkedIn `piton-studios`) ve repo/paket adı değişmedi.

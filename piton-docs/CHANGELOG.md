@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-08 — Marka fontu: karşılaştırma ve Nippo (TASK-084)
+
+- `/tr/font-lab`: mevcut hero bileşeni ve logo yazısı üzerinde 24 font seçeneği. Modern (10), karakterli (6), teknolojik (6), serif (2); font adı/açıklama araması, kategori filtreleri ve önizleme seçicisi.
+- Font seçimi hero ve logo metnini birlikte değiştirir; doğal ağırlıklar korunur (400/700). Mobilde kart seçimi önizlemeye kaydırır; önizlemedeki seçiciyle font değiştirilebilir.
+- Kullanıcı Fontshare **Nippo**'yu seçti: anasayfa hero başlığı 700, ortak nav ve mobil menüdeki Piton yazısı 500. Diğer metinler mevcut fontlarında. `next/font/local` ve `--font-brand` ile üç dilde aynı marka fontu.
+- Nippo'nun ITF FFL 2.0 lisansı ve kaynak notu saklandı. Public repoda font dağıtmamak için WOFF2 dosyaları gitignore'da; `pnpm dev/build` resmi Fontshare CDN'inden eksik dosyaları indirir. Ziyaretçi tarayıcısı harici font sunucusuna bağlanmaz. Qurova demo dosyası kaldırıldı; karşılaştırmada Nippo seçili.
+- Karşılaştırma rotası yalnızca geliştirme ortamında açık ve `noindex`; nav/sitemap'e eklenmedi, production'da 404.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve production build başarılı (859 sayfa). Tarayıcıda masaüstü/mobil hero, nav, iç sayfa logosu ve mobil menü; font araması, kategori ve boş sonuç; 500/700 ağırlıkları ve gövde fontunun korunması kontrol edildi. Nippo indirme ve yerel dosya önbelleği çalışıyor.
+
 ## 2026-10-02 — Marka adı: Piton Studios → Piton (TASK-083)
 
 - Sitedeki tüm görünen metinlerde "Piton Studios" → "Piton": nav/menü, footer telif satırı, preloader, hero, OG görselleri, sayfa başlık eki, breadcrumb/JSON-LD, `llms.txt`, RSS başlığı, e-posta şablonları (bildirim, otomatik yanıt, kampanya), `messages/{tr,en,ru}.json`, 60 blog MDX'i (gövde + `author`) ve 9 hukuki MDX.

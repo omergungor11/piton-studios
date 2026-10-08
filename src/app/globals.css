@@ -15,6 +15,7 @@
   --glass-hi: rgba(255,255,255,0.06);
   --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-brand: var(--font-nippo), var(--font-sans);
   --blur: 18px;
 }
 
@@ -372,7 +373,7 @@ html[data-theme="light"] .cursor-dot { background: #000; }
   box-shadow: 0 0 16px var(--accent);
   animation: pulse 2.2s ease-in-out infinite;
 }
-.lockup .mark { font-weight: 500; letter-spacing: 0.02em; color: var(--accent); }
+.lockup .mark { font-family: var(--font-brand); font-weight: 500; letter-spacing: 0; color: var(--accent); }
 .lockup .sub { color: var(--muted); font-size: 12px; border-left: 1px solid var(--line); padding-left: 14px; }
 
 /* Brand logo mark (header lockups + mobile menu brand) */
@@ -583,6 +584,7 @@ html[data-theme="light"] .nav-mega-panel.glass { background: color-mix(in oklab,
 /* Mobile menu — brand */
 .mm-brand {
   display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-brand);
   font-size: 15px; font-weight: 500;
   letter-spacing: 0; text-transform: none;
 }
@@ -906,7 +908,7 @@ html[data-theme="light"] .socials a:hover { background: rgba(0,0,0,0.06); }
   font-weight: 500;
 }
 .hero-main h1 {
-  font-family: var(--font-sans);
+  font-family: var(--font-brand);
   font-weight: 700;
   font-size: clamp(44px, 7vw, 110px);
   line-height: 0.85;

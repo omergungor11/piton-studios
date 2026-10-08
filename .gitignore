@@ -71,3 +71,7 @@ tmp/
 
 # mattpocock skills local issue tracker
 .scratch/
+
+# Nippo: kendi sitemizde sunulur; public repoda font dosyasi dagitilmaz.
+# pnpm dev/build resmi Fontshare CDN'inden eksik dosyalari indirir.
+/src/lib/fonts/nippo-*.woff2
