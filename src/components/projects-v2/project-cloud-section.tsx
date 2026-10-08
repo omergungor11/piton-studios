@@ -15,6 +15,7 @@ import { useMotionValue, useMotionValueEvent, useSpring } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
 import SplitWords from '@/components/motion/split-words';
+import { advanceProjectPreview, getProjectPreviewDistance, PROJECT_SCROLL_PX_PER_CARD } from '@/lib/project-cloud-scroll';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';
 import styles from './project-cloud-section.module.css';
 
@@ -28,8 +29,6 @@ const ProjectCloudCanvas = dynamic(
 
 /** Kaydirmanin one getirdigi proje sayisi; kalanlar helisin arka kollarinda durur. */
 const DEFAULT_SCROLL_COUNT = 7;
-/** Bir kartin one gelmesi icin gereken tekerlek mesafesi (px). */
-const WHEEL_PX_PER_CARD = 150;
 /** Uca gelindikten sonra sayfaya devretmeden once yutulan sure — momentum sicramasini onler. */
 const EDGE_HOLD_MS = 450;
 /** Dokunmatik: otomatik ilerleme araligi ve kullanici etkilesiminden sonra bekleme. */
@@ -64,6 +63,7 @@ type ExperienceMode = 'checking' | 'webgl' | 'fallback';
 interface ExperienceBoundaryProps {
   children: ReactNode;
   fallback: ReactNode;
+  onFailure: () => void;
 }
 
 interface ExperienceBoundaryState {
@@ -75,6 +75,10 @@ class ExperienceBoundary extends Component<ExperienceBoundaryProps, ExperienceBo
 
   static getDerivedStateFromError(): ExperienceBoundaryState {
     return { failed: true };
+  }
+
+  componentDidCatch() {
+    this.props.onFailure();
   }
 
   render() {
@@ -139,7 +143,9 @@ function ProjectFallback({ hint, projects, onFocus }: ProjectFallbackProps) {
 }
 
 /**
- * Sahne sayfa kaydirmasini kilitlemez. Ilerleme uc kaynaktan gelir:
+ * Anasayfa akisinda ilk dort proje kisa bir sticky onizlemede gosterilir.
+ * Proje alaninda kalip kaydiran ziyaretci tum kaydirilabilir seckide gezebilir.
+ * Ilerleme kaynaklari:
  * - Masaustu: imlec proje gorsellerinin uzerindeyken tekerlek; uclara (0/1) gelince olay sayfaya
  *   devredilir, boylece ziyaretci asagi/yukari inmeye devam eder.
  * - Anasayfa mobil: proje alanindaki dikey/yatay hareket ilerletir; disindaki dokunuslar sayfayi kaydirir.
@@ -155,6 +161,7 @@ export default function ProjectCloudSection({
 }: ProjectCloudSectionProps) {
   const t = useTranslations('projectCloud');
   const router = useRouter();
+  const trackRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLElement>(null);
@@ -165,12 +172,14 @@ export default function ProjectCloudSection({
   const isHoveringRef = useRef(false);
   const lastInteractionRef = useRef(0);
   const edgeHitAtRef = useRef(0);
+  const pageScrollOffsetRef = useRef(0);
   const [mode, setMode] = useState<ExperienceMode>('checking');
   const [activeSlug, setActiveSlug] = useState(projects[0]?.slug ?? '');
   const [scrollIndex, setScrollIndex] = useState(0);
 
   const scrollCount = Math.max(1, Math.min(scrollCountProp, projects.length));
   const scrollSteps = Math.max(1, scrollCount - 1);
+  const previewDistance = getProjectPreviewDistance(scrollCount);
   const titleId = `project-cloud-title-${variant}`;
   const isHome = variant === 'home';
   const isHeroTitle = titleAs === 'h1';
@@ -228,6 +237,37 @@ export default function ProjectCloudSection({
     lastInteractionRef.current = Date.now();
   }, [targetProgress]);
 
+  // Normal sayfa akisi ilk dort projeyi gosterir, sonra sticky sahne dogal olarak biter.
+  // Proje alanindaki elle gezinme ayridir; sayfaya donunce secili proje geri sarilmaz.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || !isHome || mode !== 'webgl') return;
+    let frame = 0;
+    const syncProgress = () => {
+      const next = advanceProjectPreview(
+        -track.getBoundingClientRect().top,
+        pageScrollOffsetRef.current,
+        targetProgress.get(),
+        scrollCount,
+      );
+      if (next.offset === pageScrollOffsetRef.current) return;
+      pageScrollOffsetRef.current = next.offset;
+      setProgress(next.progress);
+    };
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(syncProgress);
+    };
+    syncProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, [isHome, mode, scrollCount, setProgress, targetProgress]);
+
   // Baslik, HUD ve kenarlar sayfaya aittir; yalnizca aradaki proje alani bulutu surer.
   const isProjectArea = useCallback((x: number, y: number) => {
     if (!isHome) return true;
@@ -265,7 +305,7 @@ export default function ProjectCloudSection({
 
       event.preventDefault();
       event.stopPropagation();
-      const next = clamp01(current + delta / (WHEEL_PX_PER_CARD * scrollSteps));
+      const next = clamp01(current + delta / (PROJECT_SCROLL_PX_PER_CARD * scrollSteps));
       if (next === 0 || next === 1) edgeHitAtRef.current = Date.now();
       setProgress(next);
     };
@@ -324,7 +364,7 @@ export default function ProjectCloudSection({
       const cardsPerWidth = 2;
       const next = horizontal
         ? startProgress - (dx / panel.clientWidth) * cardsPerWidth / scrollSteps
-        : startProgress - dy / (WHEEL_PX_PER_CARD * scrollSteps);
+        : startProgress - dy / (PROJECT_SCROLL_PX_PER_CARD * scrollSteps);
       setProgress(next);
     };
 
@@ -396,7 +436,9 @@ export default function ProjectCloudSection({
 
   return (
     <section
-      className={`${styles.track} ${mode === 'fallback' ? styles.trackFallback : ''} ${isHome ? styles.trackHome : ''}`}
+      ref={trackRef}
+      className={`${styles.track} ${mode === 'fallback' ? styles.trackFallback : ''} ${isHome ? styles.trackHome : ''} ${isHome && mode === 'webgl' ? styles.trackPreview : ''}`}
+      style={isHome ? { '--cloud-preview-distance': `${previewDistance}px` } as CSSProperties : undefined}
       aria-labelledby={titleId}
     >
       <div ref={stageRef} className={styles.stage}>
@@ -419,7 +461,7 @@ export default function ProjectCloudSection({
             data-reveal={isHeroTitle ? 'fade-hero' : 'fade'}
             style={{ '--reveal-delay': isHeroTitle ? '300ms' : '150ms' } as CSSProperties}
           >
-            {t('intro')}
+            {t(isHome ? 'homeIntro' : 'intro')}
           </p>
           <p className={styles.touchNote}>{t('touchInteraction')}</p>
           {isHome ? (
@@ -430,7 +472,7 @@ export default function ProjectCloudSection({
         </header>
 
         {mode === 'webgl' && projects.length > 0 ? (
-          <ExperienceBoundary fallback={fallback}>
+          <ExperienceBoundary fallback={fallback} onFailure={() => setMode('fallback')}>
             <div
               className={styles.canvas}
               data-cursor="play"

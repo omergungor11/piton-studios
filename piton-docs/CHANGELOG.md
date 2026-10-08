@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Dört projelik sayfa akışı ve isteğe bağlı gezinme (TASK-101)
+
+- Normal anasayfa kaydırması ilk dört projeyi 450 px kısa sticky önizlemede gösterir; ardından Neden Piton bölümüne devam eder. Proje alanındaki doğrudan tekerlek/dokunma mevcut yedi projelik gezinmeyi sürdürür.
+- Sayfa ve doğrudan gezinme ilerlemeleri birlikte korunur; elle beşinci/altıncı projeye gidip sayfaya dönmek slider'ı geri sarmaz. On beş görünür kart ve HUD kontrolleri korunur.
+- Önizleme yalnızca anasayfa WebGL modunda uygulanır. Reduced-motion/Save-Data/WebGL fallback ve bağımsız V2 prototipi ek kaydırma mesafesi almaz; WebGL hata sınırı da fallback moduna geçer. Açıklama üç dilde güncellendi.
+- Tarayıcıda 1280×720 görünümde kenardan 1 → 2 → 3 → 4 → Neden Piton akışı, geri dönüş, proje alanında sayfa sabitken 5/6'ya devam ve alan dışından geri sarmadan çıkış doğrulandı.
+- Dört davranış testi (dört proje sınırı, elle gezinmenin korunması, geri kaydırma, kısa seçkiler), lint (0 hata / 18 mevcut uyarı), typecheck, 627 çeviri kontrolü ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — Hero üst satırı kaldırıldı (TASK-100)
 
 - “Tasarım · Kod · AI — Dijital Stüdyo” satırı ve Reveal kapsayıcısı ortak HeroScene'den kaldırıldı; logo görselinden doğrudan piton başlığına geçilir. Değişiklik tüm dillerde ve font karşılaştırmasında uygulanır.

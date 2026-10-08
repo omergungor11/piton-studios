@@ -5,6 +5,7 @@
 - TASK-095: 16, 17, 18, 19, 20, 21, 23, 26, 32, 36–45, 50, 51, 52 numaralı 22 proje yalnızca projeler sayfasındaki Seçilmiş Projeler tablosundan gizlendi. `src/lib/project-list.ts` slug tabanlı görünürlüğü yönetir; tabloda 30 proje kalır, alan sayaçları ve liste JSON-LD aynı seçkiyi kullanır. Üstteki görsel şeridi, teslim akışı, proje detayları ve diğer sayfalar tüm kayıtları kullanmaya devam eder.
 
 ## Anasayfa düzeni (2026-10-08)
+- TASK-101: anasayfa proje bulutunda normal sayfa akışı ilk dört projeyi gösterir; 450 px (3 × 150 px) kısa sticky önizlemeden sonra Neden Piton bölümüne devam eder. Görsellerin üzerinde tekerlek/dokunma mevcut 7 projelik gezinmeyi sürdürür; 15 görünür kart ve HUD kontrolleri korunur. Elle gezinmeden sonra sayfaya dönmek seçimi geri sarmaz. `project-cloud-scroll.ts` bu ilerleme politikasını yönetir; dört davranış testi vardır. Reduced-motion/Save-Data/WebGL fallback ve bağımsız V2 prototipine sticky önizleme uygulanmaz.
 - TASK-100: hero'daki “Tasarım · Kod · AI — Dijital Stüdyo” kicker satırı ve Reveal kapsayıcısı kaldırıldı. Ortak HeroScene tüm dillerde, mobil/masaüstü ve font karşılaştırmasında logo görselinden doğrudan piton başlığına geçer.
 - TASK-099: Neden Piton bölümündeki sekiz özellik, 480 px ve altındaki telefonlarda da iki sütunda gösterilir. Dar kartlarda ikon metnin üstündedir; eşit sütunlar `minmax(0, 1fr)` ve 8 px aralık kullanır. Tablet/masaüstü düzeni korunur.
 - TASK-098: mobil anasayfa süreç bölümünde süre notu (“Çoğu proje…”) ve “Projeni anlat” butonu, Reveal kapsayıcısıyla birlikte gizlenir; altta boş satır/aralık kalmaz. Detaylar bağlantısı görünür; masaüstü ve ayrı süreç sayfası alt not/CTA'sını korur.
@@ -74,6 +75,7 @@
   dokunulmadi (nav/sitemap'te yok).
 - Anasayfa `.scene` blok konteynerinde `section` 0px genislik olcuyordu — `.track`
   `width: 100%` zorunlu; kaldirmayin.
+- 2026-10-08 (TASK-101): normal sayfa akışına ilk dört proje için 450 px kısa sticky önizleme eklendi; görsel alanındaki doğrudan gezinme ve kenarlardan sayfaya geçiş sürer. Önceki TASK-089 düzeni aşağıda tarihsel kayıt olarak korunur.
 - 2026-10-08 (TASK-089): anasayfa sahnesi masaüstü ve mobilde 100svh. Mobildeki
   `320svh` track, sticky stage ve sayfa scroll'undan proje ilerlemesi kaldırıldı.
   Tekerlek yalnızca başlık ile HUD arasındaki orta proje alanında bulutu döndürür;

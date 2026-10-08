@@ -566,6 +566,15 @@
   --cloud-frame-x: 40px;
 }
 
+.trackPreview {
+  height: calc(100svh + var(--cloud-preview-distance));
+}
+
+.trackPreview .stage {
+  position: sticky;
+  top: 0;
+}
+
 .trackHome .stage {
   min-height: 0;
   padding: var(--cloud-frame-top) var(--cloud-frame-x) var(--cloud-frame-bottom);
