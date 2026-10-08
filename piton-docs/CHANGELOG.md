@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Mobil Neden Piton kartları iki sütun (TASK-099)
+
+- 480 px ve altındaki telefonlarda tek sütun kuralı kaldırıldı; sekiz özellik iki eşit sütunda, 8 px aralıkla gösterilir. İkonlar metnin üstüne alınarak dar kartlarda başlık ve açıklamaya yer açıldı.
+- Tablet/masaüstü düzeni ve tüm metinler korunur. Tarayıcıda 390 px görünümde iki sütun, sekiz kart, kart/sayfa taşması olmadığı ve 1280 px masaüstü düzeni doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — Mobil süreç alt notu kaldırıldı (TASK-098)
 
 - Mobil anasayfa süreç bölümünde “Çoğu proje…” notu ve “Projeni anlat” butonu gizlendi. Reveal kapsayıcısı da gizlenir; bölüm Detaylar butonuyla biter, boş alt satır kalmaz.

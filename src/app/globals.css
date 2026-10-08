@@ -1242,7 +1242,8 @@ html[data-theme="light"] .manifesto-card:hover { background: rgba(0,0,0,0.04); }
 
 @media (max-width: 480px) {
   .manifesto-glass { padding: 24px 16px; }
-  .manifesto-cards { grid-template-columns: 1fr; gap: 10px; }
+  .manifesto-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .manifesto-card { flex-direction: column; gap: 8px; }
   .manifesto-glass h2 { font-size: clamp(24px, 7vw, 36px); }
   .note-media { min-height: 360px; }
 }
