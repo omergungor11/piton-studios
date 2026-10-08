@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-08 — Kabizzu ilk sırada (TASK-094)
+
+- Projeler listesinde Kabizzu #01, Velis LTD #10 olarak yer değiştirdi. Görsel şeridi, proje tablosu ve ItemList JSON-LD ortak `WORKS` sırasını kullanır.
+- 52 proje kaydı ve iki projenin içerikleri korunur; sıra numaraları güncellenir. Gizlenecek projelerin isimleri kullanıcıdan bekleniyor.
+- Yerel tarayıcıda Kabizzu'nun ilk sırada, Velis LTD'nin onuncu sırada olduğu doğrulandı. Kayıt sayısı, benzersiz slug/numaralar ve iki detay kaydı kontrol edildi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Anasayfa Hakkında bölümü kaldırıldı (TASK-093)
 
 - Hakkında / Biz bölümü `SCENES` ve anasayfa render akışından kaldırıldı. Yedi bölüm kaldı; süreç bölümünü doğrudan iletişim izler, alt sayaç otomatik 07 gösterir.

@@ -23,9 +23,10 @@
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
 | 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093) | 5 | 5 | 0 | 0 | 0 |
-| **Total** | | **92** | **91** | **0** | **0** | **0** |
+| 19 | Proje Sırası (TASK-094) | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **93** | **92** | **0** | **0** | **0** |
 
-**Progress**: 91/92 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 92/93 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -208,3 +209,9 @@
 | TASK-091 | Nasıl Çalışıyoruz başlığındaki altı adımda vurgusunu Nippo yap | S | COMPLETED |
 | TASK-092 | Öne çıkan projeler başlığındaki projelerden kelimesini Nippo ve firma rengiyle vurgula | S | COMPLETED |
 | TASK-093 | Anasayfadaki Hakkında bölümünü kaldır; sahne sayısını ve iletişim etiketini güncelle | S | COMPLETED |
+
+## Phase 19: Proje sırası (2026-10-08)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-094 | Projeler listesinde Kabizzu #01 ve Velis LTD #10 olacak şekilde yerlerini değiştir | S | COMPLETED |

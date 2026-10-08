@@ -1,5 +1,9 @@
 # Piton - Project Memory
 
+## Proje sıralaması (2026-10-08)
+- TASK-094: `WORKS` içinde Kabizzu #01, Velis LTD #10 olarak yer değiştirdi. Projeler sayfasının görsel şeridi, tablosu ve ItemList JSON-LD sırası aynı kaynaktan güncellenir. Anasayfa proje bulutunun seçili slug sırası ayrıdır.
+- Kullanıcı bazı projeleri gizlemek istiyor; gizlenecek proje isimleri henüz belirtilmedi.
+
 ## Anasayfa düzeni (2026-10-08)
 - TASK-093: Hakkında / Biz (`#about`) bölümü anasayfadan kaldırıldı. Akış: Hero → Spark → Projeler → Not → Hizmetler → Süreç → İletişim; `SCENES` 7 öğe, alt sayaç otomatik 07 gösterir. Süreçten sonra doğrudan İletişim gelir; iletişim üst etiketi üç dilde § 05 oldu.
 - Anasayfanın `AboutScene` import/render dalı ve istemciye gönderilen `about` çeviri namespace'i kaldırıldı. Ayrı Hakkında sayfası, nav/footer bağlantıları ve kayıtlı AboutScene bileşeni korunur.
