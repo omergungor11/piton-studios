@@ -95,6 +95,28 @@ export function getAdjacentProjects(slug: string): { prev: Project | null; next:
 export const WORKS: Work[] = [
   {
     n: "01",
+    slug: "naiben",
+    title: "naiben",
+    client: "Piton",
+    kind: "Web Design · Creative Studio",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["React", "TypeScript", "GSAP", "Lenis", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Creative studio concept rebuilt in React — animated typography, video backgrounds and scroll-driven transitions.",
+    body: [
+      "Naiben, Neiden tasarım referansını React ve TypeScript ile yeniden geliştirdiğimiz yaratıcı stüdyo konsepti. Büyük ölçekli tipografi, video arka planı, karakter bazlı metin geçişleri ve kaydırmayla ilerleyen portfolyo sahnesi aynı akışta birleşiyor. Ana sayfada hero, stüdyo tanıtımı, hizmetler ve seçilmiş işler bölümleri yer alıyor.",
+      "Lenis yumuşak kaydırması GSAP ve ScrollTrigger ile ortak bir zamanlama üzerinden çalışıyor. Masaüstü ve mobil yerleşimler, açılış animasyonu, menü geçişleri, yerel medya ve fontlar ile azaltılmış hareket tercihi birlikte ele alındı. Çalışma, özgün Neiden tasarımını referans alan bir ön yüz geliştirme konsepti olarak Naiben adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, scroll animation, responsive UI",
+    url: "https://neiden-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/naiben.webp',
+      mobile: '/assets/previews/mobile/naiben.webp',
+    },
+  },
+  {
+    n: "02",
     slug: "kabizzu",
     title: "Kabizzu",
     client: "Piton",
@@ -116,7 +138,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "02",
+    n: "03",
     slug: "fur-crm",
     title: "FurCRM",
     client: "FurCRM",
@@ -138,7 +160,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "03",
+    n: "04",
     slug: "bt-elevator",
     title: "BT Elevator",
     client: "BT Elevator",
@@ -159,7 +181,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "04",
+    n: "05",
     slug: "gel-gez-gor",
     title: "Gel Gez Gör",
     client: "Gel Gez Gör",
@@ -181,7 +203,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "05",
+    n: "06",
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
@@ -202,7 +224,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "06",
+    n: "07",
     slug: "alp-sigorta",
     title: "Alp Sigorta",
     client: "Alp Sigorta",
@@ -223,7 +245,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "07",
+    n: "08",
     slug: "pampas-investment",
     title: "Pampas Investment",
     client: "Pampas Investment",
@@ -245,7 +267,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "08",
+    n: "09",
     slug: "ambalaj-cini",
     title: "Ambalaj Cini",
     client: "Ambalaj Cini",
@@ -268,7 +290,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "09",
+    n: "10",
     slug: "velair-experience",
     title: "VELAIR",
     client: "VELAIR",
@@ -290,7 +312,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "10",
+    n: "11",
     slug: "velis-ltd",
     title: "Velis LTD",
     client: "Velis Ticaret LTD",
@@ -312,7 +334,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "11",
+    n: "12",
     slug: "3monkeys-bozuyuk",
     title: "3 Monkeys Bozüyük",
     client: "Piton",
@@ -334,7 +356,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "12",
+    n: "13",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -356,7 +378,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "14",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -378,7 +400,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "15",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -400,7 +422,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "15",
+    n: "16",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -422,7 +444,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "16",
+    n: "17",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -440,7 +462,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "17",
+    n: "18",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -458,7 +480,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "18",
+    n: "19",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -479,7 +501,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "19",
+    n: "20",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -500,7 +522,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "21",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -521,7 +543,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "21",
+    n: "22",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -542,7 +564,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "22",
+    n: "23",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -564,7 +586,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "23",
+    n: "24",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -581,7 +603,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "24",
+    n: "25",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -602,7 +624,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "25",
+    n: "26",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -623,7 +645,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "26",
+    n: "27",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -643,7 +665,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "27",
+    n: "28",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -665,7 +687,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "28",
+    n: "29",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -687,7 +709,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "30",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -709,7 +731,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "30",
+    n: "31",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -730,7 +752,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "31",
+    n: "32",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -752,7 +774,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "32",
+    n: "33",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -772,7 +794,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "34",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -794,7 +816,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "34",
+    n: "35",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -815,7 +837,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "35",
+    n: "36",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -836,7 +858,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "36",
+    n: "37",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton",
@@ -853,7 +875,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "37",
+    n: "38",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton",
@@ -870,7 +892,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "38",
+    n: "39",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton",
@@ -890,7 +912,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "39",
+    n: "40",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton",
@@ -907,7 +929,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "40",
+    n: "41",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton",
@@ -924,7 +946,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "41",
+    n: "42",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton",
@@ -941,7 +963,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "42",
+    n: "43",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton",
@@ -961,7 +983,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "43",
+    n: "44",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -978,7 +1000,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "44",
+    n: "45",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -995,7 +1017,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "45",
+    n: "46",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -1012,7 +1034,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "46",
+    n: "47",
     slug: "lithos",
     title: "Lithos",
     client: "Lithos",
@@ -1034,7 +1056,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "47",
+    n: "48",
     slug: "vanguard",
     title: "Vanguard",
     client: "Vanguard",
@@ -1056,7 +1078,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "48",
+    n: "49",
     slug: "jack-portfolio",
     title: "Jack — 3D Creator",
     client: "Jack Portfolio",
@@ -1078,7 +1100,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "49",
+    n: "50",
     slug: "veldara",
     title: "Veldara",
     client: "Veldara",
@@ -1100,7 +1122,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "50",
+    n: "51",
     slug: "emlak-sync",
     title: "Emlak Sync",
     client: "Emlak Sync",
@@ -1117,7 +1139,7 @@ export const WORKS: Work[] = [
     scope: "Listing sync, portal integrations, automation",
   },
   {
-    n: "51",
+    n: "52",
     slug: "dolmus-kontrol",
     title: "Dolmuş Güzergah Kontrol",
     client: "Piton",
@@ -1134,7 +1156,7 @@ export const WORKS: Work[] = [
     scope: "Automation, data processing, reporting",
   },
   {
-    n: "52",
+    n: "53",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",

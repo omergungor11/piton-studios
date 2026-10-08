@@ -662,6 +662,15 @@
     }
   },
   "works": {
+    "naiben": {
+      "title": "naiben",
+      "kind": "Web Design · Creative Studio",
+      "summary": "Creative studio concept rebuilt in React — animated typography, video backgrounds and scroll-driven transitions.",
+      "body": [
+        "Naiben is a creative studio concept we rebuilt in React and TypeScript using Neiden as the design reference. Large-scale typography, a video background, character-by-character text transitions and a scroll-driven portfolio scene form a continuous experience. The homepage includes the hero, studio introduction, services and selected work.",
+        "Lenis smooth scrolling shares its timing with GSAP and ScrollTrigger. Desktop and mobile layouts, the intro animation, menu transitions, local media and fonts, and reduced-motion preferences were considered together. Published on Vercel under the Naiben name, this is a front-end development concept based on the original Neiden design."
+      ]
+    },
     "velis-ltd": {
       "title": "Velis LTD",
       "summary": "Construction company corporate site with product catalog.",

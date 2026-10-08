@@ -661,6 +661,15 @@
     }
   },
   "works": {
+    "naiben": {
+      "title": "naiben",
+      "kind": "Web Tasarım · Yaratıcı Stüdyo",
+      "summary": "React ile yeniden geliştirilen yaratıcı stüdyo konsepti — hareketli tipografi, video arka planları ve kaydırmaya bağlı geçişler.",
+      "body": [
+        "Naiben, Neiden tasarım referansını React ve TypeScript ile yeniden geliştirdiğimiz yaratıcı stüdyo konsepti. Büyük ölçekli tipografi, video arka planı, karakter bazlı metin geçişleri ve kaydırmayla ilerleyen portfolyo sahnesi aynı akışta birleşiyor. Ana sayfada hero, stüdyo tanıtımı, hizmetler ve seçilmiş işler bölümleri yer alıyor.",
+        "Lenis yumuşak kaydırması GSAP ve ScrollTrigger ile ortak bir zamanlama üzerinden çalışıyor. Masaüstü ve mobil yerleşimler, açılış animasyonu, menü geçişleri, yerel medya ve fontlar ile azaltılmış hareket tercihi birlikte ele alındı. Çalışma, özgün Neiden tasarımını referans alan bir ön yüz geliştirme konsepti olarak Naiben adıyla Vercel'de yayınlandı."
+      ]
+    },
     "velis-ltd": {
       "title": "Velis LTD",
       "summary": "İnşaat firması kurumsal sitesi ve ürün kataloğu.",

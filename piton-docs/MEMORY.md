@@ -1,6 +1,7 @@
 # Piton - Project Memory
 
 ## Proje sıralaması (2026-10-08)
+- TASK-103: `naiben` #01 olarak eklendi; mevcut proje numaraları bir sıra ilerledi. `WORKS` 53, Seçilmiş Projeler 31 kayıt içerir; gizleme slug tabanlı kalır. Anasayfa `PROJECT_CLOUD_SELECTION` Naiben ile başlar; Radyo Juke seçkiden çıkarıldı, portfolyo kaydı korunur. Bulut 15 kart / 7 gezilebilir proje olarak kaldı. Canlı adres `https://neiden-konsept.vercel.app/`; masaüstü 1440×810 ve mobil 430×928 WebP önizlemeleri canlı siteden alındı. TR/EN/RU açıklamaları Neiden referansından yeniden geliştirilen ön yüz konsepti kapsamını belirtir.
 - TASK-094: `WORKS` içinde Kabizzu #01, Velis LTD #10 olarak yer değiştirdi. Projeler sayfasının görsel şeridi, tablosu ve ItemList JSON-LD sırası aynı kaynaktan güncellenir. Anasayfa proje bulutunun seçili slug sırası ayrıdır.
 - TASK-095: 16, 17, 18, 19, 20, 21, 23, 26, 32, 36–45, 50, 51, 52 numaralı 22 proje yalnızca projeler sayfasındaki Seçilmiş Projeler tablosundan gizlendi. `src/lib/project-list.ts` slug tabanlı görünürlüğü yönetir; tabloda 30 proje kalır, alan sayaçları ve liste JSON-LD aynı seçkiyi kullanır. Üstteki görsel şeridi, teslim akışı, proje detayları ve diğer sayfalar tüm kayıtları kullanmaya devam eder.
 

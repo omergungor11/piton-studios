@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Naiben ilk sırada, Radyo Juke slider'dan çıkarıldı (TASK-103)
+
+- Naiben portfolyoya #01 olarak eklendi; mevcut projeler bir sıra ilerledi. Projeler sayfasındaki görsel şeridi, seçilmiş işler tablosu ve ItemList JSON-LD Naiben ile başlar. Ana kaynak 53, görünür tablo 31 proje içerir.
+- Anasayfa proje bulutu Naiben ile başlar; Radyo Juke yalnızca bu seçkiden çıkarıldı. 15 kart ve yedi projelik gezinme korunur.
+- Canlı siteden masaüstü ve mobil WebP önizlemeleri, canlı site bağlantısı ve TR/EN/RU proje açıklamaları eklendi. Metinler Neiden tasarım referansına dayanan React/TypeScript ön yüz geliştirme konseptini anlatır.
+- Tarayıcıda ilk sıra, görsel yüklemesi, detay bağlantısı, masaüstü/mobil önizleme seçimi ve mobil taşma kontrol edildi. Anasayfa HUD'u Naiben'i #01 gösterir; Radyo Juke bulunmaz. Üç dilin üretim HTML'inde detay sayfaları ve 31 öğeli ItemList doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck, 630 çeviri kontrolü ve `pnpm build --webpack` başarılı (868 sayfa).
+
 ## 2026-10-08 — Mobil iletişimde Fiverr gizlendi (TASK-102)
 
 - Ortak iletişim bölümündeki Fiverr bağlantısı mevcut mobil kırılımında (1000 px ve altı) gizlenir; diğer sosyal bağlantılar otomatik yeniden dizilir.
