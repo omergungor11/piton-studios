@@ -20,11 +20,11 @@
 | 13 | SEO, Dönüşüm & Görsel Deneyim (TASK-071..078) | 8 | 7 | 0 | 0 | 0 |
 | 14 | Fiyatlandırma (TASK-079) | 1 | 1 | 0 | 0 | 0 |
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
-| 16 | Marka Adı & Tipografi (TASK-083..084, 086..087) | 4 | 4 | 0 | 0 | 0 |
+| 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **86** | **85** | **0** | **0** | **0** |
+| **Total** | | **87** | **86** | **0** | **0** | **0** |
 
-**Progress**: 85/86 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 86/87 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -190,6 +190,7 @@
 | TASK-084 | Marka tipografisi: 24 fontlu yerel karşılaştırma, arama/filtreler; seçilen Nippo'nun hero, nav ve mobil menüdeki Piton yazılarına uygulanması | S | COMPLETED |
 | TASK-086 | Qurova DEMO'yu kayıtlı aday olarak sakla; Gotico Antiqua'yı font karşılaştırmasına ekle (26 seçenek, yeni font varsayılan önizleme) | S | COMPLETED |
 | TASK-087 | Hero, nav, mobil menü ve font önizlemelerindeki marka yazısını küçük harfle “piton” yap | S | COMPLETED |
+| TASK-088 | Hero rozetlerini Nippo Medium 500 fontuna geçir (anasayfa ve font önizlemesi) | S | COMPLETED |
 
 ## Phase 17: Mobil alt kontroller (2026-10-08)
 

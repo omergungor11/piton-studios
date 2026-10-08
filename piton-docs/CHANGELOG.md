@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Hero rozetleri Nippo (TASK-088)
+
+- Hero rozetleri IBM Plex Mono 600 yerine Nippo Medium 500 kullanır. Ortak `.chip` stili anasayfa ve font karşılaştırmasında uygulanır; rozet fontu karşılaştırmadaki başlık seçiminden bağımsızdır.
+- Yerel sunucu eski CSS'i tuttuğu için yeniden başlatıldı. Tarayıcıda altı rozetin Nippo 500 kullandığı ve mobilde yatay taşma olmadığı doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı; üretim derlemesi `pnpm build --webpack` ile başarılı (859 sayfa). Typecheck, derleme sırasında yenilenen `.next/types` ile çakıştığı için derleme sonrası tekrar çalıştırıldı ve geçti.
+
 ## 2026-10-08 — Küçük harfli marka yazısı (TASK-087)
 
 - Hero başlığı üç dilde “piton” oldu. Anasayfa/iç sayfa nav ve mobil menüdeki marka yazıları, font karşılaştırmasının 26 kartı ve önizleme logosu aynı küçük harfli yazımı kullanır.

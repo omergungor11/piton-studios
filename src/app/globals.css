@@ -954,8 +954,8 @@ html[data-theme="light"] .socials a:hover { background: rgba(0,0,0,0.06); }
   text-transform: uppercase;
   background: rgba(255,255,255,0.08);
   border: 1px solid var(--line);
-  font-family: var(--font-mono);
-  font-weight: 600;
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 500;
 }
 html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
 .chip.accent { background: var(--accent); color: #000; border-color: var(--accent); }

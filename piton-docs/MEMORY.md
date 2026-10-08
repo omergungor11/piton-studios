@@ -1,6 +1,7 @@
 # Piton - Project Memory
 
 ## Marka fontu: Nippo (2026-10-08)
+- TASK-088: hero rozetleri (ONLINE, WEB APP, AI, SEO, CLOUD, OTOMASYON) Nippo Medium 500 kullanır. `.chip` doğrudan `--font-nippo` kullanır; font karşılaştırmasında başka bir başlık fontu seçilse de rozetler Nippo olarak kalır.
 - TASK-087: görsel marka yazımı küçük harf “piton”. Hero başlığı (tr/en/ru), anasayfa ve iç sayfa nav/mobil menü logoları, font karşılaştırmasındaki tüm örnekler küçük harf kullanır.
 - Kullanıcı Qurova'dan sonra farklı adayları karşılaştırmak istedi ve sonunda Fontshare Nippo'yu seçti.
 - Hero Piton başlığı Nippo Bold 700; ortak nav ve mobil menüde logo yanındaki Piton Nippo Medium 500. Diğer tipografi Space Grotesk / IBM Plex Mono olarak kaldı.
