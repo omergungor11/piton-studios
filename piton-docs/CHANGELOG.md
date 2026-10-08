@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Hero üst satırı kaldırıldı (TASK-100)
+
+- “Tasarım · Kod · AI — Dijital Stüdyo” satırı ve Reveal kapsayıcısı ortak HeroScene'den kaldırıldı; logo görselinden doğrudan piton başlığına geçilir. Değişiklik tüm dillerde ve font karşılaştırmasında uygulanır.
+- Tarayıcıda 390 px mobil ve 1280 px masaüstü görünümde satırın bulunmadığı, marka başlığının korunduğu ve yatay taşma olmadığı doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — Mobil Neden Piton kartları iki sütun (TASK-099)
 
 - 480 px ve altındaki telefonlarda tek sütun kuralı kaldırıldı; sekiz özellik iki eşit sütunda, 8 px aralıkla gösterilir. İkonlar metnin üstüne alınarak dar kartlarda başlık ve açıklamaya yer açıldı.

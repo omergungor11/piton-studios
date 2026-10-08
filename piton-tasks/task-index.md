@@ -22,11 +22,11 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..099) | 9 | 9 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..100) | 10 | 10 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095) | 2 | 2 | 0 | 0 | 0 |
-| **Total** | | **98** | **97** | **0** | **0** | **0** |
+| **Total** | | **99** | **98** | **0** | **0** | **0** |
 
-**Progress**: 97/98 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 98/99 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -213,6 +213,7 @@
 | TASK-097 | Mobil süreç kutularını Detaylar bağlantısıyla ayrı Nasıl Çalışıyoruz sayfasına taşı | M | COMPLETED |
 | TASK-098 | Mobil anasayfa süreç bölümündeki süre notunu ve Projeni anlat butonunu kaldır | S | COMPLETED |
 | TASK-099 | Neden Piton özellik kartlarını mobilde iki sütunda göster | S | COMPLETED |
+| TASK-100 | Hero üstündeki Tasarım · Kod · AI — Dijital Stüdyo satırını kaldır | S | COMPLETED |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 
