@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-08 — İkinci bölüm istatistik etiketleri Nippo (TASK-096)
+
+- Spark CTA'daki “Tamamlanan Proje” ve “Yıllık Deneyim” etiketleri Nippo Medium 500 kullanır.
+- İstatistik sayıları ve “Yanıt Süresi” etiketi mevcut mono fontta kalır; değişiklik üç dilde ortak stillerden uygulanır.
+- Tarayıcıda etiketlerin font ailesi ve ağırlığı, sayıların korunması ve yatay taşma olmadığı doğrulandı; mobil önizleme görsel olarak kontrol edildi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Seçilmiş Projeler görünürlüğü (TASK-095)
 
 - Kullanıcının belirttiği 16, 17, 18, 19, 20, 21, 23, 26, 32, 36–45, 50, 51, 52 numaralı 22 proje yalnızca projeler sayfasındaki Seçilmiş Projeler tablosundan gizlendi; 30 kayıt gösterilir.

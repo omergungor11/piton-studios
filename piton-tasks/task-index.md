@@ -22,11 +22,11 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093) | 5 | 5 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096) | 6 | 6 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095) | 2 | 2 | 0 | 0 | 0 |
-| **Total** | | **94** | **93** | **0** | **0** | **0** |
+| **Total** | | **95** | **94** | **0** | **0** | **0** |
 
-**Progress**: 93/94 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 94/95 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -209,6 +209,7 @@
 | TASK-091 | Nasıl Çalışıyoruz başlığındaki altı adımda vurgusunu Nippo yap | S | COMPLETED |
 | TASK-092 | Öne çıkan projeler başlığındaki projelerden kelimesini Nippo ve firma rengiyle vurgula | S | COMPLETED |
 | TASK-093 | Anasayfadaki Hakkında bölümünü kaldır; sahne sayısını ve iletişim etiketini güncelle | S | COMPLETED |
+| TASK-096 | İkinci bölümdeki Tamamlanan Proje ve Yıllık Deneyim etiketlerini Nippo yap | S | COMPLETED |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 

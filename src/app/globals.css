@@ -2334,6 +2334,10 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   font-family: var(--font-mono);
   font-weight: 600;
 }
+.spark-stat:not(.spark-stat-response) .spark-stat-label {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 500;
+}
 .spark-right {
   display: flex; flex-direction: column; gap: 12px;
   min-width: 240px;
