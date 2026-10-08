@@ -6785,7 +6785,12 @@ h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
   margin: 0 0 14px;
   color: var(--ink);
 }
-.prc-title .em { font-style: italic; color: var(--accent); }
+.prc-title .em {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent);
+}
 .prc-sub {
   font-size: 14px;
   line-height: 1.65;

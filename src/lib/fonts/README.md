@@ -5,7 +5,7 @@
 - Lisans: ITF Free Font License 2.0 (17 Ağustos 2026); ücretsiz ticari kullanım ve kendi sitesinde self-hosting izni.
 - Lisans metni: `nippo-license.txt`; güncel kaynak https://www.fontshare.com/licenses/itf-ffl
 - Kullanım: hero piton başlığı (700), nav ve mobil menüde logo yanındaki piton yazısı ve hero rozetleri (500).
-- Anasayfa başlık vurguları: “Konuşalım”, “Piton?” ve “ürünler” (700, normal stil).
+- Anasayfa başlık vurguları: “Konuşalım”, “Piton?”, “ürünler” ve “altı adımda” (700, normal stil).
 - Anasayfa bölüm etiketleri: Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, Hakkında, İletişim ve Spark CTA üst etiketi (500).
 
 Font ikilileri public Git deposuna eklenmez. `pnpm dev` ve `pnpm build`,

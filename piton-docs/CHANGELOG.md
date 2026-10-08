@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Altı adımda vurgusu Nippo (TASK-091)
+
+- Nasıl Çalışıyoruz başlığındaki “altı adımda” vurgusu Nippo Bold 700, normal stil kullanır; kırmızı vurgu rengi korunur.
+- Tarayıcıda font ailesi, ağırlığı ve normal stil doğrulandı; mobil önizlemede yatay taşma yok.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Bölüm etiketleri ve ürünler vurgusu Nippo (TASK-090)
 
 - Anasayfa bölüm etiketleri (Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, Hakkında, İletişim ve Spark CTA üst etiketi) Nippo Medium 500 kullanır. Hizmetler etiketinin § 04 numarası da aynı fonttadır.
