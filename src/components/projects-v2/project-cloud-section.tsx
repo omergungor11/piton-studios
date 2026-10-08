@@ -174,6 +174,16 @@ export default function ProjectCloudSection({
   const titleId = `project-cloud-title-${variant}`;
   const isHome = variant === 'home';
   const isHeroTitle = titleAs === 'h1';
+  const titleText = t('title');
+  const titleAccent = t('titleAccent');
+  const titleAccentIndex = titleText.indexOf(titleAccent);
+  const titleSegments = isHome && titleAccentIndex >= 0
+    ? [
+        titleText.slice(0, titleAccentIndex),
+        { text: titleAccent, className: styles.titleAccent },
+        titleText.slice(titleAccentIndex + titleAccent.length),
+      ]
+    : undefined;
 
   const targetProgress = useMotionValue(0);
   const smoothProgress = useSpring(targetProgress, {
@@ -400,7 +410,8 @@ export default function ProjectCloudSection({
             as={titleAs}
             id={titleId}
             className={styles.title}
-            text={t('title')}
+            text={titleText}
+            segments={titleSegments}
             hero={isHeroTitle}
           />
           <p

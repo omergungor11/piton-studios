@@ -22,10 +22,10 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..091) | 3 | 3 | 0 | 0 | 0 |
-| **Total** | | **90** | **89** | **0** | **0** | **0** |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..092) | 4 | 4 | 0 | 0 | 0 |
+| **Total** | | **91** | **90** | **0** | **0** | **0** |
 
-**Progress**: 89/90 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 90/91 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -206,3 +206,4 @@
 | TASK-089 | Konuşalım ve Piton? vurgularını Nippo yap; proje animasyonunu görsel alanında kaydırmaya bağla, dışından sayfaya devam et | M | COMPLETED |
 | TASK-090 | Anasayfa bölüm etiketlerini ve Hakkında başlığındaki ürünler vurgusunu Nippo yap | S | COMPLETED |
 | TASK-091 | Nasıl Çalışıyoruz başlığındaki altı adımda vurgusunu Nippo yap | S | COMPLETED |
+| TASK-092 | Öne çıkan projeler başlığındaki projelerden kelimesini Nippo ve firma rengiyle vurgula | S | COMPLETED |

@@ -1,6 +1,7 @@
 # Piton - Project Memory
 
 ## Marka fontu: Nippo (2026-10-08)
+- TASK-092: anasayfa Öne Çıkan Projeler başlığındaki “projelerden” kelimesi Nippo Bold 700 ve `--accent` firma rengiyle vurgulanır. EN “projects” / RU “проектов” karşılıkları `projectCloud.titleAccent` anahtarında; `SplitWords` segmentleri mevcut kelime animasyonunu korur. V2 prototip başlığı düz metin olarak kalır.
 - TASK-091: Nasıl Çalışıyoruz başlığındaki “altı adımda” vurgusu da Nippo Bold 700, normal stil kullanır (`.prc-title .em`).
 - TASK-090: anasayfadaki bölüm etiketleri (Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, Hakkında, İletişim ve Spark CTA üst etiketi) Nippo Medium 500 kullanır. Hakkında başlığındaki “ürünler” vurgusu Nippo Bold 700, normal stildir. `.about-eyebrow` inline etiket stillerinin yerini aldı; çeviriler ve gövde metinleri aynı kaldı.
 - Yerel önizlemede Turbopack globals.css güncellemelerini eski önbellekten sunabiliyor; yeniden başlatmak da çözmezse `pnpm dev --webpack --port 3000` güncel stilleri doğru sunuyor. Üretim doğrulamasında `pnpm build --webpack` kullanılıyor.

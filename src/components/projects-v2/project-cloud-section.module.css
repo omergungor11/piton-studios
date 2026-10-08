@@ -621,6 +621,13 @@
   letter-spacing: 0;
 }
 
+.trackHome .titleAccent {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent);
+}
+
 .trackHome .lede {
   width: min(440px, 70%);
   margin-top: 12px;

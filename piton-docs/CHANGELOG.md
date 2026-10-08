@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-08 — Projelerden vurgusu Nippo ve marka rengi (TASK-092)
+
+- Anasayfa Öne Çıkan Projeler başlığındaki “projelerden” kelimesi Nippo Bold 700 ve `--accent` firma rengiyle vurgulanır.
+- `projectCloud.titleAccent` üç dile eklendi; tam başlık metni ve `SplitWords` kelime animasyonu korunur. Vurgu yalnızca anasayfa varyantında uygulanır.
+- Tarayıcıda başlığın tam metni, yalnızca hedef kelimede Nippo 700 ve firma rengi, ayrıca mobilde yatay taşma olmadığı doğrulandı. Yeni çeviri anahtarından önceki HMR oturumunun uyarıları sayfa yenilenince temizlendi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck, 627 çeviri kontrolü ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Altı adımda vurgusu Nippo (TASK-091)
 
 - Nasıl Çalışıyoruz başlığındaki “altı adımda” vurgusu Nippo Bold 700, normal stil kullanır; kırmızı vurgu rengi korunur.

@@ -169,6 +169,7 @@
   "projectCloud": {
     "eyebrow": "§ 01 · Featured Projects",
     "title": "A selection of projects we designed and shipped.",
+    "titleAccent": "projects",
     "intro": "Scroll over the projects to browse; scroll elsewhere to continue down the page.",
     "allProjects": "See all projects",
     "interaction": "Scroll · Hover · Select",
