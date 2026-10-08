@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { WORKS } from '@/lib/data';
+import { PROJECT_LIST_WORKS } from '@/lib/project-list';
 import { AREA_KEYS, isInArea, type AreaKey } from '@/lib/studio-stats';
 import PageShell from '@/components/page-shell';
 import DeliveryFlow from '@/components/delivery-flow';
@@ -14,7 +15,7 @@ import SparkScene from '@/components/scenes/spark';
 // Yil yerine calisma alani: yil bir projenin ne oldugunu anlatmiyor, alan anlatiyor.
 // Alanlar ortusmeli — bir proje hem web hem otomasyon olabilir.
 const AREA_COUNTS = Object.fromEntries(
-  AREA_KEYS.map((k) => [k, WORKS.filter((w) => isInArea(w, k)).length])
+  AREA_KEYS.map((k) => [k, PROJECT_LIST_WORKS.filter((w) => isInArea(w, k)).length])
 ) as Record<AreaKey, number>;
 const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
 
@@ -39,7 +40,7 @@ export default function ProjectsPageClient() {
   const ta = useTranslations('areas');
 
   const filteredWorks =
-    activeArea === 'All' ? WORKS : WORKS.filter((w) => isInArea(w, activeArea));
+    activeArea === 'All' ? PROJECT_LIST_WORKS : PROJECT_LIST_WORKS.filter((w) => isInArea(w, activeArea));
 
   return (
     <PageShell>

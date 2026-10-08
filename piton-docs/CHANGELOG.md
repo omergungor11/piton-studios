@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Seçilmiş Projeler görünürlüğü (TASK-095)
+
+- Kullanıcının belirttiği 16, 17, 18, 19, 20, 21, 23, 26, 32, 36–45, 50, 51, 52 numaralı 22 proje yalnızca projeler sayfasındaki Seçilmiş Projeler tablosundan gizlendi; 30 kayıt gösterilir.
+- Slug tabanlı seçki `src/lib/project-list.ts` içinde tutulur. Alan filtreleri, sayaçlar ve ItemList JSON-LD aynı seçkiyi kullanır; mevcut proje numaraları korunur.
+- Üst görsel şeridi, teslim akışı, detay sayfaları ve diğer sayfalar korunur; ana `WORKS` kaynağı 52 proje içerir.
+- Tarayıcıda 30 satır, tam numara eşleşmesi, 38 görsel kartının korunması, 30 öğeli JSON-LD ve alan filtresi doğrulandı; mobil görünüm kontrol edildi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Kabizzu ilk sırada (TASK-094)
 
 - Projeler listesinde Kabizzu #01, Velis LTD #10 olarak yer değiştirdi. Görsel şeridi, proje tablosu ve ItemList JSON-LD ortak `WORKS` sırasını kullanır.

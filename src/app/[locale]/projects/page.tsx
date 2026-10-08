@@ -4,7 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { pickMessages } from "@/lib/pick-messages";
 import { buildPageMetadata, absoluteUrl, listingPageJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/json-ld";
-import { WORKS } from "@/lib/data";
+import { PROJECT_LIST_WORKS } from "@/lib/project-list";
 import { getLocalizedProject } from "@/lib/content-i18n";
 import type { Locale } from "@/lib/site";
 import ProjectsPageClient from "./page-client";
@@ -36,7 +36,7 @@ export default async function Page({ params }: Props) {
   const tc = await getTranslations({ locale, namespace: "common" });
   const url = absoluteUrl(l, "/projects");
   const items = await Promise.all(
-    WORKS.map(async (work) => ({
+    PROJECT_LIST_WORKS.map(async (work) => ({
       name: (await getLocalizedProject(l, work.slug))?.title ?? work.title,
       url: absoluteUrl(l, { pathname: "/projects/[slug]", params: { slug: work.slug } }),
     }))
