@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Anasayfa Hakkında bölümü kaldırıldı (TASK-093)
+
+- Hakkında / Biz bölümü `SCENES` ve anasayfa render akışından kaldırıldı. Yedi bölüm kaldı; süreç bölümünü doğrudan iletişim izler, alt sayaç otomatik 07 gösterir.
+- Kullanılmayan `AboutScene` import'u ve anasayfa istemcisine gönderilen `about` çevirileri kaldırıldı. Ayrı Hakkında sayfası ve nav/footer bağlantıları korunur.
+- İletişim üst etiketi üç dilde § 05 olarak güncellendi; kayıtlı Hakkında bileşeni ve font stilleri silinmedi.
+- Tarayıcıda yedi bölümün sırası, `#about` bulunmaması, süreç → iletişim komşuluğu, sayaç ve yatay taşma doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck, 627 çeviri kontrolü ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Projelerden vurgusu Nippo ve marka rengi (TASK-092)
 
 - Anasayfa Öne Çıkan Projeler başlığındaki “projelerden” kelimesi Nippo Bold 700 ve `--accent` firma rengiyle vurgulanır.

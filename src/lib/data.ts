@@ -1879,7 +1879,6 @@ export const SCENES: Scene[] = [
   { id: "note",  label: "Hakkımızda",   hash: "note"  },
   { id: "services", label: "Hizmetler", hash: "services" },
   { id: "process", label: "Süreç", hash: "process" },
-  { id: "about", label: "Biz", hash: "about" },
   { id: "contact", label: "İletişim", hash: "contact" },
 ];
 

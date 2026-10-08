@@ -23,7 +23,6 @@ import SparkScene from "@/components/scenes/spark";
 import ManifestoScene from "@/components/scenes/manifesto";
 import ServicesScene from "@/components/scenes/services";
 import ProjectCloudSection from "@/components/projects-v2/project-cloud-section";
-import AboutScene from "@/components/scenes/about";
 import ProcessScene from "@/components/scenes/process";
 import ContactScene from "@/components/scenes/contact";
 
@@ -203,7 +202,6 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
           else if (s.id === "process") inner = <ProcessScene />;
           else if (s.id === "work")
             inner = <ProjectCloudSection projects={projectCloud} variant="home" titleAs="h2" />;
-          else if (s.id === "about") inner = <AboutScene />;
           else if (s.id === "contact") inner = <ContactScene />;
           // Proje bulutu tam genislik sahne: .inner sarmalayicisi (reveal
           // transform/blur) ve sahne padding'i olmadan dogrudan render edilir.

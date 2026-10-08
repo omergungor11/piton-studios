@@ -1,5 +1,9 @@
 # Piton - Project Memory
 
+## Anasayfa düzeni (2026-10-08)
+- TASK-093: Hakkında / Biz (`#about`) bölümü anasayfadan kaldırıldı. Akış: Hero → Spark → Projeler → Not → Hizmetler → Süreç → İletişim; `SCENES` 7 öğe, alt sayaç otomatik 07 gösterir. Süreçten sonra doğrudan İletişim gelir; iletişim üst etiketi üç dilde § 05 oldu.
+- Anasayfanın `AboutScene` import/render dalı ve istemciye gönderilen `about` çeviri namespace'i kaldırıldı. Ayrı Hakkında sayfası, nav/footer bağlantıları ve kayıtlı AboutScene bileşeni korunur.
+
 ## Marka fontu: Nippo (2026-10-08)
 - TASK-092: anasayfa Öne Çıkan Projeler başlığındaki “projelerden” kelimesi Nippo Bold 700 ve `--accent` firma rengiyle vurgulanır. EN “projects” / RU “проектов” karşılıkları `projectCloud.titleAccent` anahtarında; `SplitWords` segmentleri mevcut kelime animasyonunu korur. V2 prototip başlığı düz metin olarak kalır.
 - TASK-091: Nasıl Çalışıyoruz başlığındaki “altı adımda” vurgusu da Nippo Bold 700, normal stil kullanır (`.prc-title .em`).
