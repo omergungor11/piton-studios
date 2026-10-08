@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Mobil iletişimde Fiverr gizlendi (TASK-102)
+
+- Ortak iletişim bölümündeki Fiverr bağlantısı mevcut mobil kırılımında (1000 px ve altı) gizlenir; diğer sosyal bağlantılar otomatik yeniden dizilir.
+- Tarayıcıda 423 px mobil görünümde yedi sosyal bağlantı ve Fiverr'ın gizlendiği, 1280 px masaüstünde sekiz bağlantının korunduğu doğrulandı.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — Dört projelik sayfa akışı ve isteğe bağlı gezinme (TASK-101)
 
 - Normal anasayfa kaydırması ilk dört projeyi 450 px kısa sticky önizlemede gösterir; ardından Neden Piton bölümüne devam eder. Proje alanındaki doğrudan tekerlek/dokunma mevcut yedi projelik gezinmeyi sürdürür.

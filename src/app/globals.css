@@ -4993,6 +4993,7 @@ html[data-theme="light"] .mobile-menu-item:active {
   .contact-action-btn.phone, .contact-action-btn.mail-btn { flex: 1 1 calc(50% - 5px); }
   .contact-socials { gap: 10px; margin-top: 12px; }
   .contact-social-btn { width: 42px; height: 42px; flex: 0 0 auto; }
+  .contact-social-btn.fiverr { display: none; }
   .contact-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .contact-form-fields { grid-template-columns: 1fr; }
   .contact-submit { width: 100%; justify-content: center; }
