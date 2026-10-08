@@ -4,7 +4,17 @@ import {
   Orbitron, Outfit, Plus_Jakarta_Sans, Poppins, Rajdhani, Righteous, Sora, Syne,
   Unbounded, Urbanist,
 } from 'next/font/google';
+import localFont from 'next/font/local';
 import { nippo } from '@/lib/fonts';
+
+const qurova = localFont({
+  src: '../../../lib/fonts/qurova-demo-bold.otf',
+  weight: '700', style: 'normal', display: 'swap', preload: false,
+});
+const goticoAntiqua = localFont({
+  src: './assets/gotico-antiqua-durandus.otf',
+  weight: '400', style: 'normal', display: 'swap', preload: false,
+});
 
 const outfit = Outfit({ subsets: ['latin'], weight: '700', display: 'swap', preload: false });
 const sora = Sora({ subsets: ['latin'], weight: '700', display: 'swap', preload: false });
@@ -40,6 +50,8 @@ export const FONT_CATEGORIES = [
 export type FontCategory = (typeof FONT_CATEGORIES)[number]['id'];
 
 export const FONT_OPTIONS = [
+  { id: 'gotico-antiqua', name: 'Gotico Antiqua', description: 'Gotik detaylar, tarihi bir imza.', family: goticoAntiqua.style.fontFamily, weight: 400, category: 'serif', badge: 'Yeni' },
+  { id: 'qurova', name: 'Qurova', description: 'Kalın, yumuşak ve karakterli.', family: qurova.style.fontFamily, weight: 700, category: 'character', badge: 'Kayıtlı' },
   { id: 'nippo', name: 'Nippo', description: 'Köşeli detaylar, teknik bir imza.', family: nippo.style.fontFamily, weight: 700, category: 'character', badge: 'Seçilen' },
   { id: 'outfit', name: 'Outfit', description: 'Yuvarlak, sade ve dengeli.', family: outfit.style.fontFamily, weight: 700, category: 'modern', badge: '' },
   { id: 'sora', name: 'Sora', description: 'Geometrik ve teknolojik.', family: sora.style.fontFamily, weight: 700, category: 'modern', badge: '' },

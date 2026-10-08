@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-08 — Qurova kayıtlı aday ve Gotico Antiqua (TASK-086)
+
+- `/tr/font-lab` 24 → 26 font: Qurova DEMO Bold “Kayıtlı”, Gotico Antiqua “Yeni” olarak ilk sıraya eklendi. Önizleme Gotico Antiqua seçili açılır; ana sitedeki Nippo seçimi korunur.
+- Gotico Antiqua için verilen bağlantının kullandığı Fust & Schöffer “Durandus” 118G varyantı resmi ANRT kaynağından alındı; orijinal OTF, OFL 1.1 lisansı ve yazar bilgileri birlikte saklandı. Hero ve logo doğal 400 ağırlığında gösterilir.
+- Qurova demo dosyası public repoda dağıtılmaz; indirme betiği eksik OTF'yi kaynağından alır, yerelde saklar. Demo lisans notu kaydedildi; Qurova seçilince ticari kullanımın tam sürüm lisansı gerektirdiği gösterilir.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck ve production build başarılı (859 sayfa). Masaüstü 1440px ve mobil 390px'te yeni fontun hero/logo görünümü ve Qurova'ya geçiş kontrol edildi; yatay taşma yok. Production karşılaştırma rotası 404.
+
 ## 2026-10-08 — Mobil alt kontrol hizalaması (TASK-085)
 
 - Mobil sahne göstergesi ve WhatsApp/telefon butonları ortak alt boşluk ve 42px yükseklik kullanıyor. ≤480px'te 12px, 481–1000px'te 20px alt boşluğa cihazın güvenli alanı ekleniyor.

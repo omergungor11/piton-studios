@@ -10,3 +10,14 @@ Font ikilileri public Git deposuna eklenmez. `pnpm dev` ve `pnpm build`,
 `scripts/fetch-brand-fonts.mjs` ile eksik dosyaları doğrudan resmi Fontshare CDN'inden
 indirir. Sonraki çalıştırmalarda yerel dosyalar yeniden kullanılır.
 Site ziyaretçilerine fontlar `next/font/local` ile sitenin kendi alan adından sunulur.
+
+## Qurova DEMO — kayıtlı aday
+
+- Kaynak: https://www.1001fonts.com/qurova-demo-font.html
+- Kullanılan sürüm: Qurova DEMO Bold 700, yalnızca yerel `/tr/font-lab` karşılaştırması.
+- Demo kişisel kullanım içindir. Ticari kullanım için tam sürüm lisansı gerekir:
+  https://prioritypeco.com/product/qurova-logo-font/
+- Paketle gelen lisans notu: `qurova-demo-license.txt`.
+
+Qurova dosyası gitignore'da tutulur; `pnpm dev/build` eksikse kaynaktan indirir.
+Ana sitedeki Nippo seçimi bu adayın saklanmasından etkilenmez.

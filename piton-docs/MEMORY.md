@@ -5,8 +5,9 @@
 - Hero Piton başlığı Nippo Bold 700; ortak nav ve mobil menüde logo yanındaki Piton Nippo Medium 500. Diğer tipografi Space Grotesk / IBM Plex Mono olarak kaldı.
 - `src/lib/fonts.ts` → `next/font/local`, `--font-nippo` / `--font-brand`; fontlar ziyaretçiye kendi alan adımızdan sunulur.
 - Nippo ITF Free Font License 2.0: ücretsiz ticari kullanım + self-hosting izinli, public repoda font dosyası dağıtımı yasak. `pnpm dev/build` eksik WOFF2'leri resmi CDN'den indirir (`scripts/fetch-brand-fonts.mjs`); ikililer gitignore'da, lisans `src/lib/fonts/nippo-license.txt`.
-- Yerel karşılaştırma: `http://localhost:3000/tr/font-lab` — 24 aday (Nippo dahil), arama, 4 kategori; gerçek hero bileşeni ve logo yazısı birlikte değişir. Rota production'da 404 ve noindex, nav/sitemap'te yok.
-- Qurova DEMO seçilmediği için deneme dosyası kaldırıldı. Kalıcı seçim Nippo.
+- Yerel karşılaştırma: `http://localhost:3000/tr/font-lab` — 26 aday (Nippo dahil), arama, 4 kategori; gerçek hero bileşeni ve logo yazısı birlikte değişir. Rota production'da 404 ve noindex, nav/sitemap'te yok.
+- TASK-086: kullanıcı Qurova'yı saklamak ve Gotico Antiqua'yı eklemek istedi. Qurova DEMO Bold 700 “Kayıtlı” adayı olarak geri eklendi; ikilisi gitignore'da, eksikse başlangıçta 1001fonts kaynağından indirilir. Demo yalnızca kişisel deneme içindir; ticari kullanım için tam lisans gerekir.
+- Gotico Antiqua referansındaki varyant Fust & Schöffer “Durandus” 118G, Regular 400. Resmi ANRT deposundan değişmeden alınan OTF, OFL 1.1 lisansı ve yazar bilgileri `font-lab/assets/` altında. Karşılaştırma Gotico Antiqua seçili açılır; ana sitede uygulanan font Nippo olarak kaldı.
 
 ## Marka adı: Piton (2026-10-02)
 - "Piton Studios" → "Piton" (kullanıcı kararı). Domain `pitonstudios.com`, `hi@pitonstudios.com`, sosyal hesaplar

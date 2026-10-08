@@ -7,7 +7,7 @@ import { FONT_CATEGORIES, FONT_OPTIONS, type FontCategory, type FontId } from '.
 import styles from './font-lab.module.css';
 
 export default function FontLab() {
-  const [selectedId, setSelectedId] = useState<FontId>('nippo');
+  const [selectedId, setSelectedId] = useState<FontId>('gotico-antiqua');
   const [category, setCategory] = useState<FontCategory>('all');
   const [query, setQuery] = useState('');
   const previewRef = useRef<HTMLElement>(null);
@@ -120,7 +120,13 @@ export default function FontLab() {
           </div>
           <div className={styles.previewFoot}>
             <p>Hero ve logo aynı fontla gösteriliyor. Diğer metinler mevcut fontlarında.</p>
-            <p>Nippo seçildi ve siteye uygulandı; diğer adayları karşılaştırmaya devam edebilirsin.</p>
+            {selected.id === 'qurova' ? (
+              <p>Qurova kayıtlı aday. Bu DEMO sürümü kişisel deneme içindir; ticari kullanım için <a href="https://prioritypeco.com/product/qurova-logo-font/" target="_blank" rel="noreferrer">tam sürüm lisansı</a> gerekir.</p>
+            ) : selected.id === 'gotico-antiqua' ? (
+              <p><a href="https://github.com/anrt-type/GoticoAntiqua" target="_blank" rel="noreferrer">Gotico Antiqua · Durandus 118G</a> yeni aday. Qurova da karşılaştırma listesinde kayıtlı.</p>
+            ) : (
+              <p>Nippo siteye uygulanan font. Qurova kayıtlı; diğer adayları karşılaştırmaya devam edebilirsin.</p>
+            )}
           </div>
         </section>
       </div>

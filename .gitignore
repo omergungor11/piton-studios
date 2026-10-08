@@ -75,3 +75,6 @@ tmp/
 # Nippo: kendi sitemizde sunulur; public repoda font dosyasi dagitilmaz.
 # pnpm dev/build resmi Fontshare CDN'inden eksik dosyalari indirir.
 /src/lib/fonts/nippo-*.woff2
+
+# Qurova DEMO: yalnizca yerel karsilastirma, public repoda dagitilmaz.
+/src/lib/fonts/qurova-demo-*.otf
