@@ -71,11 +71,11 @@ export default function FontLab() {
                 <span>{String(FONT_OPTIONS.indexOf(font) + 1).padStart(2, '0')} / {font.name}</span>
                 {font.badge && <span className={styles.badge}>{font.badge}</span>}
               </span>
-              <span className={styles.specimen} style={{ fontFamily: font.family, fontWeight: font.weight }}>Piton</span>
+              <span className={styles.specimen} style={{ fontFamily: font.family, fontWeight: font.weight }}>piton</span>
               <span className={styles.description}>{font.description}</span>
               <span className={styles.miniLockup}>
                 <Image src="/logo.webp" alt="" width={24} height={24} aria-hidden="true" />
-                <span style={{ fontFamily: font.family, fontWeight: font.id === 'nippo' ? 500 : font.weight }}>Piton</span>
+                <span style={{ fontFamily: font.family, fontWeight: font.id === 'nippo' ? 500 : font.weight }}>piton</span>
                 <span className={styles.selectionMark} aria-hidden="true">{selectedId === font.id ? '✓' : '↗'}</span>
               </span>
             </button>
@@ -111,7 +111,7 @@ export default function FontLab() {
           <div className={styles.siteHeader}>
             <div className={`lockup glass ${styles.lockup}`}>
               <Image src="/logo.webp" alt="" width={26} height={26} className="mark-logo" aria-hidden="true" />
-              <span className="mark">Piton</span>
+              <span className="mark">piton</span>
             </div>
             <div className={styles.sampleNav} aria-hidden="true">Projeler <span>Hizmetler</span> İletişim ↗</div>
           </div>

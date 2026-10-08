@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Küçük harfli marka yazısı (TASK-087)
+
+- Hero başlığı üç dilde “piton” oldu. Anasayfa/iç sayfa nav ve mobil menüdeki marka yazıları, font karşılaştırmasının 26 kartı ve önizleme logosu aynı küçük harfli yazımı kullanır.
+- Tarayıcıda Gotico Antiqua ile önizleme, anasayfa hero/nav ve mobil menü doğrulandı. Lint 0 hata / 18 mevcut uyarı; typecheck başarılı.
+- Google Fonts indirme bağlantısı Turbopack derlemesini engelledi; `pnpm build --webpack` ile üretim derlemesi başarılı (859 sayfa).
+
 ## 2026-10-08 — Qurova kayıtlı aday ve Gotico Antiqua (TASK-086)
 
 - `/tr/font-lab` 24 → 26 font: Qurova DEMO Bold “Kayıtlı”, Gotico Antiqua “Yeni” olarak ilk sıraya eklendi. Önizleme Gotico Antiqua seçili açılır; ana sitedeki Nippo seçimi korunur.

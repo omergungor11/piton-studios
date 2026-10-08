@@ -61,7 +61,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
       <header className="chrome">
         <div className="lockup glass">
           <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
-          <span className="mark">Piton</span>
+          <span className="mark">piton</span>
         </div>
 
         <nav className="nav glass desktop-nav">
@@ -122,7 +122,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
           <div className="mobile-menu-header">
             <div className="mm-brand">
               <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
-              <span>Piton</span>
+              <span>piton</span>
             </div>
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
           </div>
