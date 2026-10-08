@@ -118,8 +118,8 @@
   },
   "manifesto": {
     "eyebrow": "§ 02 · Note",
-    "title": "Why {accent}?",
-    "titleAccent": "Piton",
+    "title": "Why {accent}",
+    "titleAccent": "Piton?",
     "subtitle": "We're with you at every step — from idea to launch, design to code. Digital solutions that grow your business; one team, clear results.",
     "noteMediaTag": "[ NOTE · FILM ]",
     "highlights": [
@@ -169,7 +169,7 @@
   "projectCloud": {
     "eyebrow": "§ 01 · Featured Projects",
     "title": "A selection of projects we designed and shipped.",
-    "intro": "Scroll over the box to browse the projects; select one for details.",
+    "intro": "Scroll over the projects to browse; scroll elsewhere to continue down the page.",
     "allProjects": "See all projects",
     "interaction": "Scroll · Hover · Select",
     "touchInteraction": "Scroll · Tap to focus · Tap again to open",

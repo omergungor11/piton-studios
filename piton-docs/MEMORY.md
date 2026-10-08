@@ -1,10 +1,11 @@
 # Piton - Project Memory
 
 ## Marka fontu: Nippo (2026-10-08)
+- TASK-089: Spark CTA'daki “Konuşalım” ve Manifesto'daki “Piton?” vurguları Nippo Bold 700, normal stil kullanır. Üç dilde soru işareti `titleAccent` içinde tutulur; soru işareti ile marka arasında boşluk oluşmaz.
 - TASK-088: hero rozetleri (ONLINE, WEB APP, AI, SEO, CLOUD, OTOMASYON) Nippo Medium 500 kullanır. `.chip` doğrudan `--font-nippo` kullanır; font karşılaştırmasında başka bir başlık fontu seçilse de rozetler Nippo olarak kalır.
 - TASK-087: görsel marka yazımı küçük harf “piton”. Hero başlığı (tr/en/ru), anasayfa ve iç sayfa nav/mobil menü logoları, font karşılaştırmasındaki tüm örnekler küçük harf kullanır.
 - Kullanıcı Qurova'dan sonra farklı adayları karşılaştırmak istedi ve sonunda Fontshare Nippo'yu seçti.
-- Hero Piton başlığı Nippo Bold 700; ortak nav ve mobil menüde logo yanındaki Piton Nippo Medium 500. Diğer tipografi Space Grotesk / IBM Plex Mono olarak kaldı.
+- Hero piton başlığı Nippo Bold 700; ortak nav ve mobil menüde logo yanındaki piton Nippo Medium 500. Genel gövde tipografisi Space Grotesk / IBM Plex Mono.
 - `src/lib/fonts.ts` → `next/font/local`, `--font-nippo` / `--font-brand`; fontlar ziyaretçiye kendi alan adımızdan sunulur.
 - Nippo ITF Free Font License 2.0: ücretsiz ticari kullanım + self-hosting izinli, public repoda font dosyası dağıtımı yasak. `pnpm dev/build` eksik WOFF2'leri resmi CDN'den indirir (`scripts/fetch-brand-fonts.mjs`); ikililer gitignore'da, lisans `src/lib/fonts/nippo-license.txt`.
 - Yerel karşılaştırma: `http://localhost:3000/tr/font-lab` — 26 aday (Nippo dahil), arama, 4 kategori; gerçek hero bileşeni ve logo yazısı birlikte değişir. Rota production'da 404 ve noindex, nav/sitemap'te yok.
@@ -56,11 +57,13 @@
   dokunulmadi (nav/sitemap'te yok).
 - Anasayfa `.scene` blok konteynerinde `section` 0px genislik olcuyordu — `.track`
   `width: 100%` zorunlu; kaldirmayin.
-- 2026-09-05 (2): masaustunde sticky/uzun scroll track kaldirildi. Sahne 100svh;
-  tekerlek yalnizca kutu uzerindeyken ilerletir ve uclarda sayfaya devreder. Mobil
-  anasayfa varyantinda sonraki duzeltmeyle `320svh` track + sticky stage geri geldi;
-  dikey sayfa scroll'u ilk 7 projenin odagini degistiriyor. Tam sayfa V2 dokunmatik
-  varyanti yatay kaydirma + otomatik ilerlemeyi koruyor. 15 kart gorunur,
+- 2026-10-08 (TASK-089): anasayfa sahnesi masaüstü ve mobilde 100svh. Mobildeki
+  `320svh` track, sticky stage ve sayfa scroll'undan proje ilerlemesi kaldırıldı.
+  Tekerlek yalnızca başlık ile HUD arasındaki orta proje alanında bulutu döndürür;
+  başlık, HUD, yan boşluklar ve kenarlar sayfaya kalır. Uçlarda sayfaya devreder.
+  Dokunma hareketi başladığı alana göre değerlendirilir: projelerde dikey/yatay
+  ilerleme, dışarıda normal sayfa kaydırma. Anasayfada otomatik ilerleme yok.
+  Tam sayfa V2 dokunmatik varyantı yatay kaydırma + otomatik ilerlemeyi koruyor. 15 kart görünür,
   `scrollCount=7` one gelir. Kullanici 7 kartli denemeyi begenmedi — 15 kalacak.
 - 2026-09-05: sahne `.glass` kutuya alindi (`.trackHome .panel`), stage padding'i
   (`--cloud-frame-top/bottom/x`) chrome'a yer birakiyor; HUD offset artik 0. Tam sayfa

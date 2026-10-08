@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Nippo başlık vurguları ve proje kaydırma alanı (TASK-089)
+
+- “Fikrinizi & Projenizi Konuşalım” başlığının vurgusu ve “Neden Piton?” başlığındaki “Piton?” Nippo Bold 700 kullanır; yapay italik kaldırıldı. Soru işareti üç dilde vurguya dahil, aradaki boşluk giderildi.
+- Proje bulutu yalnızca görsellerin bulunduğu orta alanda tekerleği tüketir. Başlık, bilgi paneli, yan boşluklar ve kenarlardan kaydırma sayfaya bırakılır; ilk/son projede mevcut uçtan çıkış korunur.
+- Mobilde 320svh sticky alan ve sayfa kaydırmasına bağlı proje ilerlemesi kaldırıldı. Bölüm 100svh; proje alanında başlayan dikey/yatay dokunma ilerletir, dışarıda başlayan hareket sayfaya kalır. Anasayfada otomatik ilerleme kaldırıldı; bağımsız V2 prototipinin yatay/otomatik davranışı sürer.
+- Tarayıcıda 1440×1000 ve 390×844 ölçülerinde tekerlek senaryoları doğrulandı: proje alanında sayaç ilerlerken sayfa sabit; başlıkta ve yan boşluklarda sayaç sabitken sayfa sonraki bölüme geçiyor. Son projeden çıkış, Nippo vurguları ve yatay taşma kontrol edildi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck, 627 çeviri kontrolü ve `pnpm build --webpack` başarılı (859 sayfa).
+
 ## 2026-10-08 — Hero rozetleri Nippo (TASK-088)
 
 - Hero rozetleri IBM Plex Mono 600 yerine Nippo Medium 500 kullanır. Ortak `.chip` stili anasayfa ve font karşılaştırmasında uygulanır; rozet fontu karşılaştırmadaki başlık seçiminden bağımsızdır.

@@ -22,9 +22,10 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **87** | **86** | **0** | **0** | **0** |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089) | 1 | 1 | 0 | 0 | 0 |
+| **Total** | | **88** | **87** | **0** | **0** | **0** |
 
-**Progress**: 86/87 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 87/88 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -197,3 +198,9 @@
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
 | TASK-085 | Mobilde sol sahne göstergesi ile sağ WhatsApp/telefon butonlarını aynı yüksekliğe ve alt hizaya getir | S | COMPLETED |
+
+## Phase 18: Anasayfa vurguları & proje etkileşimi (2026-10-08)
+
+| ID | Task | Complexity | Status |
+|----|------|------------|--------|
+| TASK-089 | Konuşalım ve Piton? vurgularını Nippo yap; proje animasyonunu görsel alanında kaydırmaya bağla, dışından sayfaya devam et | M | COMPLETED |

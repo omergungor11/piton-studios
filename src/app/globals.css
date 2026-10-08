@@ -1144,7 +1144,12 @@ html[data-theme="light"] .chip { background: rgba(0,0,0,0.04); }
   text-transform: none;
   color: var(--ink); margin-bottom: 16px;
 }
-.manifesto-glass h2 .em { font-style: italic; color: var(--accent); }
+.manifesto-glass h2 .em {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent);
+}
 .manifesto-sub {
   font-size: 15px; line-height: 1.75;
   color: var(--ink-soft); max-width: 48ch;
@@ -2288,7 +2293,12 @@ html[data-theme="light"] .about-quote { background: rgba(0,0,0,0.03); }
   font-size: clamp(28px, 4vw, 52px);
   line-height: 1.1; color: var(--ink);
 }
-.spark-title .em { font-style: italic; color: var(--accent); }
+.spark-title .em {
+  font-family: var(--font-nippo), var(--font-sans);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent);
+}
 .spark-sub {
   font-size: 15px; line-height: 1.8; color: var(--muted);
   max-width: 480px; margin: 0;

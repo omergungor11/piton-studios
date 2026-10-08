@@ -117,8 +117,8 @@
   },
   "manifesto": {
     "eyebrow": "§ 02 · Not",
-    "title": "Neden {accent}?",
-    "titleAccent": "Piton",
+    "title": "Neden {accent}",
+    "titleAccent": "Piton?",
     "subtitle": "Projenizin her adımında yanınızdayız — fikirden yayına, tasarımdan koda kadar. İşinizi büyüten dijital çözümler; tek ekip, net sonuç.",
     "noteMediaTag": "[ NOT · FİLM ]",
     "highlights": [
@@ -168,7 +168,7 @@
   "projectCloud": {
     "eyebrow": "§ 01 · Öne Çıkan Projeler",
     "title": "Tasarladığımız ve yayına aldığımız projelerden bir seçki.",
-    "intro": "Kutunun üzerinde kaydırarak projeler arasında gezin; detaylar için bir projeyi seçin.",
+    "intro": "Projelerin üzerinde kaydırarak gezin; dışından kaydırarak sayfaya devam edin.",
     "allProjects": "Tüm projeleri gör",
     "interaction": "Kaydır · Üzerine gel · Seç",
     "touchInteraction": "Kaydır · Dokunarak odakla · Yeniden dokun ve aç",

@@ -106,8 +106,8 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
       sceneRefs.current.forEach((el, i) => {
         if (!el) return;
         const r = el.getBoundingClientRect();
-        // Ekran ortasini kapsayan sahne oncelikli — projeler sahnesi (430svh, sticky)
-        // uzun oldugu icin merkez mesafesi olcumu komsu sahneleri secerdi.
+        // Ekran ortasini kapsayan sahne oncelikli; uzun sahnelerde merkez mesafesi
+        // olcumu gorunen bolum yerine komsu sahneyi secebilir.
         if (containingIdx < 0 && r.top <= vh / 2 && r.bottom >= vh / 2) containingIdx = i;
         const dist = Math.abs(r.top + r.height / 2 - vh / 2);
         if (dist < bestDist) {
@@ -205,7 +205,7 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
             inner = <ProjectCloudSection projects={projectCloud} variant="home" titleAs="h2" />;
           else if (s.id === "about") inner = <AboutScene />;
           else if (s.id === "contact") inner = <ContactScene />;
-          // Proje bulutu tam genislik sticky sahne: .inner sarmalayicisi (reveal
+          // Proje bulutu tam genislik sahne: .inner sarmalayicisi (reveal
           // transform/blur) ve sahne padding'i olmadan dogrudan render edilir.
           const isCloud = s.id === "work";
           return (
