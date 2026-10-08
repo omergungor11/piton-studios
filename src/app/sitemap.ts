@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries('/blog', { changeFrequency: 'weekly', priority: 0.8 }),
     ...entries('/faq', { changeFrequency: 'monthly', priority: 0.8 }),
     ...entries('/pricing', { changeFrequency: 'monthly', priority: 0.8 }),
+    ...entries('/process', { changeFrequency: 'monthly', priority: 0.6 }),
     ...entries('/sectors', { changeFrequency: 'monthly', priority: 0.7 }),
     ...entries('/solutions', { changeFrequency: 'monthly', priority: 0.7 }),
     ...entries('/locations', { changeFrequency: 'monthly', priority: 0.6 }),

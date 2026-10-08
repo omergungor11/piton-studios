@@ -3961,6 +3961,7 @@
   },
   "processScene": {
     "eyebrow": "How We Work",
+    "details": "Details",
     "title": "No guesswork — from idea to launch in <accent>six steps</accent>.",
     "sub": "Every project follows the same flow. At any moment you know which step you're on, what comes next, and what we need from you.",
     "steps": {

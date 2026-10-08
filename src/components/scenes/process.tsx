@@ -3,6 +3,7 @@
 import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
+import { Link } from '@/i18n/navigation';
 
 const STEP_KEYS = ['1', '2', '3', '4', '5', '6'] as const;
 
@@ -15,20 +16,28 @@ const STEP_ICONS = [
   /* 6: Destek & Büyüme */ <svg key="6" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 27V17" /><path d="M12 27V12" /><path d="M19 27V15" /><path d="M26 27V8" /><path d="M5 12l7-5 7 4 7-6" /></svg>,
 ];
 
-export default function ProcessScene() {
+export default function ProcessScene({ variant = 'home' }: { variant?: 'home' | 'page' }) {
   const t = useTranslations('processScene');
+  const Heading = variant === 'page' ? 'h1' : 'h2';
 
   return (
-    <div className="prc-glass glass">
+    <div className={`prc-glass prc-glass--${variant} glass`}>
       <header className="prc-head">
         <div className="prc-eyebrow" data-reveal="fade">{t('eyebrow')}</div>
-        <h2 className="prc-title" data-reveal="fade" style={{ '--reveal-delay': '80ms' } as CSSProperties}>
+        <Heading className="prc-title" data-reveal="fade" style={{ '--reveal-delay': '80ms' } as CSSProperties}>
           {t.rich('title', {
             accent: (chunks) => <span className="em">{chunks}</span>,
           })}
-        </h2>
+        </Heading>
         <p className="prc-sub" data-reveal="fade" style={{ '--reveal-delay': '160ms' } as CSSProperties}>{t('sub')}</p>
       </header>
+
+      {variant === 'home' && (
+        <Link href="/process" className="prc-cta prc-details" data-cursor="hover" data-cursor-label="→">
+          <span>{t('details')}</span>
+          <span className="prc-cta-arrow" aria-hidden="true">↗</span>
+        </Link>
+      )}
 
       <ol className="prc-grid">
         {STEP_KEYS.map((k, i) => (
@@ -56,10 +65,17 @@ export default function ProcessScene() {
       <Reveal variant="fadeUp" delay={0.2}>
         <footer className="prc-foot">
           <p className="prc-foot-note">{t('footNote')}</p>
-          <a href="#contact" className="prc-cta" data-cursor="hover" data-cursor-label="→">
-            <span>{t('cta')}</span>
-            <span className="prc-cta-arrow" aria-hidden="true">↗</span>
-          </a>
+          {variant === 'page' ? (
+            <Link href="/contact" className="prc-cta" data-cursor="hover" data-cursor-label="→">
+              <span>{t('cta')}</span>
+              <span className="prc-cta-arrow" aria-hidden="true">↗</span>
+            </Link>
+          ) : (
+            <a href="#contact" className="prc-cta" data-cursor="hover" data-cursor-label="→">
+              <span>{t('cta')}</span>
+              <span className="prc-cta-arrow" aria-hidden="true">↗</span>
+            </a>
+          )}
         </footer>
       </Reveal>
     </div>

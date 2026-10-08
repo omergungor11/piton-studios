@@ -41,6 +41,11 @@ export const routing = defineRouting({
       en: '/pricing',
       ru: '/tseny',
     },
+    '/process': {
+      tr: '/nasil-calisiyoruz',
+      en: '/how-we-work',
+      ru: '/kak-my-rabotaem',
+    },
     '/sectors': {
       tr: '/sektorler',
       en: '/sectors',

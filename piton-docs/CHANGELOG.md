@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08 — Mobil süreç özeti ve Detaylar sayfası (TASK-097)
+
+- 640 px ve altındaki anasayfada Nasıl Çalışıyoruz bölümünün altı kartı gizlendi; açıklamanın altına “Detaylar” bağlantısı eklendi. Masaüstü kartları ve mevcut Projeni anlat bağlantısı korunur.
+- Yeni `/process` rotası TR `/nasil-calisiyoruz`, EN `/how-we-work`, RU `/kak-my-rabotaem` yollarında çalışır. Ortak bileşenin sayfa varyantında altı adım her genişlikte açık ve iletişim bağlantısı ayrı sayfaya gider.
+- Yeni sayfa ortak site görünümünü, yerelleştirilmiş metadata/canonical/hreflang, WebPage/breadcrumb JSON-LD ve sitemap girdilerini kullanır.
+- Tarayıcıda 390 px mobil anasayfa → Detaylar → altı açık kart akışı, 1280 px masaüstünde kutuların korunması, üç dilde yeni sayfalar ve yatay taşma kontrol edildi.
+- Doğrulama: lint 0 hata / 18 mevcut uyarı, typecheck, 627 çeviri kontrolü ve `pnpm build --webpack` başarılı (862 sayfa).
+
 ## 2026-10-08 — İkinci bölüm istatistik etiketleri Nippo (TASK-096)
 
 - Spark CTA'daki “Tamamlanan Proje” ve “Yıllık Deneyim” etiketleri Nippo Medium 500 kullanır.

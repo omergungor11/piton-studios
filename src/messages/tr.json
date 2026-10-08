@@ -3910,6 +3910,7 @@
   },
   "processScene": {
     "eyebrow": "Nasıl Çalışıyoruz",
+    "details": "Detaylar",
     "title": "Belirsizlik yok — <accent>altı adımda</accent> fikirden yayına.",
     "sub": "Her projede aynı akışı izliyoruz. Hangi adımda olduğunuzu, sırada ne olduğunu ve sizden ne beklendiğini her an bilirsiniz.",
     "steps": {
