@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-09 — Hero istatistik sayıları Nippo (TASK-107)
+
+- Hero altındaki istatistik barında 50+, 10+, 12 ve 3 sayıları Nippo Bold 700 fontuna geçirildi. Ortak stil mobil/masaüstü ve tüm dillerde uygulanır.
+- Tarayıcıda 390 px mobil ve 1280 px masaüstü görünümde dört sayının font ailesi/ağırlığı doğrulandı; mobilde yatay taşma yok.
+- Lint 0 hata / 10 mevcut uyarı, typecheck ve mevcut HEAD + bu font değişikliğiyle ayrı dizinde `pnpm build --webpack` başarılı (868 sayfa).
+
 ## 2026-10-09 — Canlı site performans denetimi (TASK-105)
 
 - Dokuz Türkçe sayfa türünde mobil/masaüstü, anasayfa/hizmetler tekrarları, EN/RU ve kök yönlendirme dahil 25 Lighthouse 13.5.0 ölçümü. TR mobil anasayfa 73/72/73 (medyan 73), LCP medyan 3,65 sn, TBT 305 ms; hizmetler 78/71/89 (medyan 78), LCP medyan 5,46 sn. Masaüstü 97–100. Bildirilen 43 bu koşullarda tekrarlanmadı.

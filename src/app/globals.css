@@ -7242,6 +7242,7 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   min-width: 0;
 }
 .hero-stat-value {
+  font-family: var(--font-nippo), sans-serif;
   font-size: clamp(20px, 2.6vw, 30px);
   font-weight: 700;
   letter-spacing: -0.02em;
