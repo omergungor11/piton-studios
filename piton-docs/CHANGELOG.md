@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-09 — Konuşalım istatistik sayıları Nippo (TASK-108)
+
+- Fikrinizi & Projenizi Konuşalım bölümündeki 50+, 5+ ve 24h değerleri Nippo Bold 700 fontuna geçirildi.
+- 1280 px masaüstünde üç değer, 390 px mobilde mevcut iki değer görünümü ve yatay taşma olmadığı tarayıcıda doğrulandı. Etiketler ve 24h'nin mobil görünürlük kuralı korunur.
+- Lint 0 hata / 10 mevcut uyarı, typecheck ve `8d1ea8b` tabanı üzerine bu font değişikliğiyle ayrı dizinde `pnpm build --webpack` başarılı (868 sayfa). Kod değişikliği eşzamanlı TASK-106 commit'ine dahil oldu; bu kayıt TASK-108 doğrulamasını tamamlar.
+
 ## 2026-10-09 — CSS, niyetle ön indirme ve hizmet kataloğu (TASK-106)
 
 - Üç ajanla ortak CSS sayfa/bileşen dosyalarına ayrıldı; kaynak 245.267 → 150.050 B. Kullanılmayan admin/galeri/lightbox stilleri kaldırıldı. Geliştirme font/proje rotalarının koşullu importları üretim CSS'ine deneme fontlarının sızmasını önler; font CSS'i 231 → 45 `@font-face`. Mobilde tüm hero başlıkları animasyon beklemeden görünür.

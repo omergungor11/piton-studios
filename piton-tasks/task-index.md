@@ -22,12 +22,12 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..108) | 14 | 13 | 1 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..108) | 14 | 14 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
 | 20 | Performans (TASK-104..106) | 3 | 3 | 0 | 0 | 0 |
-| **Total** | | **107** | **105** | **1** | **0** | **0** |
+| **Total** | | **107** | **106** | **0** | **0** | **0** |
 
-**Progress**: 105/107 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED; TASK-108 devam ediyor)
+**Progress**: 106/107 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -218,7 +218,7 @@
 | TASK-101 | Proje slider'ında dört projeden sonra sayfaya devam et; proje alanında gezinmeyi koru | M | COMPLETED |
 | TASK-102 | Mobil iletişim bölümünde Fiverr bağlantısını gizle | S | COMPLETED |
 | TASK-107 | Hero istatistik barındaki sayıları Nippo fontuna geçir | S | COMPLETED |
-| TASK-108 | Konuşalım bölümündeki 50+, 5+ ve 24h değerlerini Nippo fontuna geçir | S | IN_PROGRESS |
+| TASK-108 | Konuşalım bölümündeki 50+, 5+ ve 24h değerlerini Nippo fontuna geçir | S | COMPLETED |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 

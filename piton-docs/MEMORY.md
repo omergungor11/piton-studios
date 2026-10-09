@@ -39,6 +39,7 @@
 - Anasayfanın `AboutScene` import/render dalı ve istemciye gönderilen `about` çeviri namespace'i kaldırıldı. Ayrı Hakkında sayfası, nav/footer bağlantıları ve kayıtlı AboutScene bileşeni korunur.
 
 ## Marka fontu: Nippo (2026-10-08)
+- TASK-108 (2026-10-09): Spark / Konuşalım bölümündeki 50+, 5+ ve 24h değerleri Nippo Bold 700 kullanır (`.spark-stat-value`). 24h'nin 860 px ve altında gizlenmesi ve etiket fontları korunur.
 - TASK-107 (2026-10-09): hero altındaki istatistik barında 50+, 10+, 12 ve 3 değerleri Nippo Bold 700 kullanır (`.hero-stat-value`). Etiketler Space Grotesk olarak kalır; ortak stil tüm dillerde ve ekran boyutlarında uygulanır.
 - TASK-096: ikinci bölüm Spark CTA'daki “Tamamlanan Proje” ve “Yıllık Deneyim” etiketleri Nippo Medium 500 kullanır. İstatistik sayıları ve “Yanıt Süresi” etiketi mevcut mono fontta kalır.
 - TASK-092: anasayfa Öne Çıkan Projeler başlığındaki “projelerden” kelimesi Nippo Bold 700 ve `--accent` firma rengiyle vurgulanır. EN “projects” / RU “проектов” karşılıkları `projectCloud.titleAccent` anahtarında; `SplitWords` segmentleri mevcut kelime animasyonunu korur. V2 prototip başlığı düz metin olarak kalır.
