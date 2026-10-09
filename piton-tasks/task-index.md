@@ -22,12 +22,12 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107) | 13 | 13 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..108) | 14 | 13 | 1 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
-| 20 | Performans (TASK-104..105) | 2 | 2 | 0 | 0 | 0 |
-| **Total** | | **105** | **104** | **0** | **0** | **0** |
+| 20 | Performans (TASK-104..106) | 3 | 3 | 0 | 0 | 0 |
+| **Total** | | **107** | **105** | **1** | **0** | **0** |
 
-**Progress**: 104/105 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 105/107 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED; TASK-108 devam ediyor)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -218,6 +218,7 @@
 | TASK-101 | Proje slider'ında dört projeden sonra sayfaya devam et; proje alanında gezinmeyi koru | M | COMPLETED |
 | TASK-102 | Mobil iletişim bölümünde Fiverr bağlantısını gizle | S | COMPLETED |
 | TASK-107 | Hero istatistik barındaki sayıları Nippo fontuna geçir | S | COMPLETED |
+| TASK-108 | Konuşalım bölümündeki 50+, 5+ ve 24h değerlerini Nippo fontuna geçir | S | IN_PROGRESS |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 
@@ -233,3 +234,4 @@
 |----|------|------------|--------|
 | TASK-104 | Mobil Lighthouse darboğazlarını ölç; ilk ekran, 3B yükleme ve fontları optimize et; üretim ölçümü ve etkileşimleri doğrula | L | COMPLETED |
 | TASK-105 | Canlı siteyi mobil / masaüstü ve temel sayfa türlerinde ölç; tekrarlı sonuçları, kaynak yükünü ve geliştirme önceliklerini raporla | M | COMPLETED |
+| TASK-106 | Ajanlarla kalan CSS, ön indirme ve ilk ekran yüklerini azalt; aynı üretim profilinde önce/sonra ve kullanıcı akışlarını doğrula | L | COMPLETED |

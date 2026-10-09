@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { WORKS, type Work, type PreviewData } from '@/lib/data';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 

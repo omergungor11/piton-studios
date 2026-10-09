@@ -1,3 +1,5 @@
+import '@/styles/blog.css';
+import '@/styles/legal.css';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -6,7 +8,7 @@ import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import { pickMessages } from '@/lib/pick-messages';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
 import BlogToc from '@/components/blog-toc';

@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { track } from '@vercel/analytics';
 import { Reveal } from '@/components/motion';
 import type { ContactResponse } from '@/lib/contact';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { LEGAL_READY } from '@/lib/legal';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';

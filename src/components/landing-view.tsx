@@ -1,6 +1,8 @@
+import '@/styles/sectors.css';
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { Link, getPathname } from "@/i18n/navigation";
+import { Link } from "@/components/navigation/intent-link";
+import { getPathname } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import ProjectPlaceholder from "@/components/project-placeholder";
 import JsonLd from "@/components/json-ld";

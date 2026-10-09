@@ -1,6 +1,6 @@
 import type { ComponentProps } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import type { Href } from '@/lib/seo';
 import styles from './blog-pagination.module.css';
 

@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import BlogCardArt from '@/components/blog-visuals/blog-card-art';
 import { hasBlogArt } from '@/components/blog-visuals/art-keys';
 import { formatPostDate, type PostMeta } from '@/lib/blog';

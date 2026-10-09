@@ -1,53 +1,53 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { SERVICE_ART } from '@/components/service-visuals';
+import type { ComponentType, ReactElement } from 'react';
+import { SERVICE_ART_LOADERS } from './service-art-loaders';
+import type { ServiceArtProps } from './service-art-loaders';
 import styles from './services-list.module.css';
 
-/**
- * Hizmet kartindaki kucuk sahne. SERVICE_ART istemci modulu oldugu icin arama burada yapilir
- * (bkz. components/pricing-art.tsx).
- *
- * 18 sahnenin hepsi ayni anda inmesin diye chunk yalnizca kart ekrana yaklasinca render edilir;
- * kutu oranli oldugu icin yukleme sirasinda duzen kaymaz. Kart basliginin/aciklamasinin yaninda
- * sahne dekoratiftir — aria-hidden; `label` yine de gecilir (sahnenin kendi aria-label'i icin).
- */
+/** Filtre degistiginde indirilen sahne tekrar beklemez; ekran disinda SVG DOM'u tutulmaz. */
+const loaded = new Map<string, ComponentType<ServiceArtProps>>();
 
-/** Filtre degistiginde kart yeniden bagladiginda sahne bastan beklemesin. */
-const loaded = new Set<string>();
-
-export default function ServiceCardArt({ slug, label }: { slug: string; label: string }) {
+export default function ServiceCardArt({ slug, label }: ServiceArtProps & { slug: string }): ReactElement {
   const ref = useRef<HTMLDivElement>(null);
-  const [show, setShow] = useState(() => loaded.has(slug));
+  const [nearViewport, setNearViewport] = useState(false);
+  const [Art, setArt] = useState<ComponentType<ServiceArtProps> | null>(() => loaded.get(slug) ?? null);
 
   useEffect(() => {
-    if (show) return;
     const el = ref.current;
     if (!el) return;
     if (typeof IntersectionObserver === 'undefined') {
-      const id = requestAnimationFrame(() => setShow(true));
+      const id = requestAnimationFrame(() => setNearViewport(true));
       return () => cancelAnimationFrame(id);
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          loaded.add(slug);
-          setShow(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: '400px 0px' }
+    const observer = new IntersectionObserver(
+      ([entry]) => setNearViewport(entry.isIntersecting),
+      { rootMargin: '180px 0px' }
     );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [show, slug]);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
-  const Art = SERVICE_ART[slug];
-  if (!Art) return null;
+  useEffect(() => {
+    if (!nearViewport || Art) return;
+    const cached = loaded.get(slug);
+    const load = SERVICE_ART_LOADERS[slug];
+    if (!load) return;
+    let active = true;
+    const ready = cached ? Promise.resolve(cached) : load().then((module) => module.default);
+    ready.then((component) => {
+      loaded.set(slug, component);
+      if (active) setArt(() => component);
+    }).catch(() => {
+      // Dekoratif sahne yuklenemezse sabit kutu ve tum hizmet metni/linki korunur.
+    });
+    return () => { active = false; };
+  }, [nearViewport, Art, slug]);
 
   return (
     <div ref={ref} className={styles.stage} aria-hidden="true">
-      {show ? <Art label={label} /> : null}
+      {nearViewport && Art ? <Art label={label} /> : null}
     </div>
   );
 }

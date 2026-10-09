@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import PartnerBadges from '@/components/partner-badges';
 import { LEGAL_READY } from '@/lib/legal';
 

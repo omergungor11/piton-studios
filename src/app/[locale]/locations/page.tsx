@@ -1,9 +1,10 @@
+import '@/styles/sectors.css';
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
-import { Link } from "@/i18n/navigation";
+import { Link } from "@/components/navigation/intent-link";
 import PageShell from "@/components/page-shell";
 import JsonLd from "@/components/json-ld";
 import SplitWords from "@/components/motion/split-words";

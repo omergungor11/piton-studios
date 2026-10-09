@@ -1,9 +1,11 @@
 'use client';
 
+import '@/styles/service-detail.css';
+
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { type Service, SERVICES } from '@/lib/data';
 import PageShell from '@/components/page-shell';
 import SERVICE_ICONS from '@/components/service-icons';

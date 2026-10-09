@@ -1,3 +1,4 @@
+import '@/styles/blog.css';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
@@ -8,7 +9,7 @@ import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import { pickMessages } from '@/lib/pick-messages';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import PageShell from '@/components/page-shell';
 import JsonLd from '@/components/json-ld';
 import BlogToc from '@/components/blog-toc';

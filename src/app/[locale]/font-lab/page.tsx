@@ -3,7 +3,12 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { pickMessages } from '@/lib/pick-messages';
-import FontLab from './page-client';
+
+// Uretimde rota 404 olsa da statik client import'u font CSS'ini ortak chunk'a
+// tasiyabilir. Gelistirme dalini sabit NODE_ENV kosuluyla ayri tut.
+const loadFontLab = process.env.NODE_ENV === 'development'
+  ? () => import('./page-client')
+  : null;
 
 export const metadata: Metadata = {
   title: 'Piton — Font karşılaştırması',
@@ -11,11 +16,14 @@ export const metadata: Metadata = {
 };
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
-  if (process.env.NODE_ENV !== 'development') notFound();
+  if (!loadFontLab) notFound();
 
   const { locale } = await params;
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const [messages, { default: FontLab }] = await Promise.all([
+    getMessages(),
+    loadFontLab(),
+  ]);
 
   return (
     <NextIntlClientProvider messages={pickMessages(messages, ['hero'])}>

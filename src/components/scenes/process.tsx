@@ -3,7 +3,7 @@
 import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 
 const STEP_KEYS = ['1', '2', '3', '4', '5', '6'] as const;
 

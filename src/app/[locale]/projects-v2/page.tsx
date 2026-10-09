@@ -5,7 +5,10 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { routing } from '@/i18n/routing';
 import { pickMessages } from '@/lib/pick-messages';
 import { buildProjectCloudItems } from '@/lib/project-cloud';
-import ProjectsV2Client from './page-client';
+
+const loadProjectsV2 = process.env.NODE_ENV === 'development'
+  ? () => import('./page-client')
+  : null;
 
 const NAMESPACES = ['common', 'projectCloud'] as const;
 
@@ -38,16 +41,17 @@ export default async function Page({ params }: Props) {
   const { locale } = await params;
 
   if (
-    process.env.NODE_ENV !== 'development' ||
+    !loadProjectsV2 ||
     !routing.locales.includes(locale as (typeof routing.locales)[number])
   ) {
     notFound();
   }
 
   setRequestLocale(locale);
-  const [messages, projects] = await Promise.all([
+  const [messages, projects, { default: ProjectsV2Client }] = await Promise.all([
     getMessages(),
     buildProjectCloudItems(locale),
+    loadProjectsV2(),
   ]);
 
   return (

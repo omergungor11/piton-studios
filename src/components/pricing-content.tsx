@@ -1,6 +1,8 @@
+import '@/styles/pricing.css';
 import type { CSSProperties } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { Link, getPathname } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
+import { getPathname } from '@/i18n/navigation';
 import PageShell from '@/components/page-shell';
 import SparkScene from '@/components/scenes/spark';
 import SplitWords from '@/components/motion/split-words';

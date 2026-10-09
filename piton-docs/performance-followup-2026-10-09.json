@@ -1,0 +1,1243 @@
+{
+  "task": "TASK-106",
+  "date": "2026-10-09",
+  "baselineCommit": "cffd1d1",
+  "baselineIncludesTask104": true,
+  "productionDeployment": false,
+  "method": {
+    "lighthouseVersion": "13.5.0",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "build": "pnpm build (default Turbopack)",
+    "origin": "http://localhost:3100",
+    "mobile": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false,
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate"
+    },
+    "desktop": {
+      "mobile": false,
+      "width": 1350,
+      "height": 940,
+      "deviceScaleFactor": 1,
+      "disabled": false,
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate"
+    },
+    "notes": [
+      "Each measurement runs sequentially in a new Chrome session.",
+      "Home and services have three mobile repeats per build; other matrix pages have one.",
+      "Local simulated lab data; no field INP or live deployment claim."
+    ]
+  },
+  "before": [
+    {
+      "name": "before-home-mobile-1",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T11:52:31.627Z",
+      "finished": "2026-10-09T11:52:42.243Z",
+      "score": 81,
+      "fcp": 2110.0982,
+      "lcp": 4736.1964000000025,
+      "speedIndex": 2110.0982,
+      "tbt": 8,
+      "cls": 0,
+      "transferBytes": 608906,
+      "warnings": []
+    },
+    {
+      "name": "before-home-mobile-2",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T11:52:42.244Z",
+      "finished": "2026-10-09T11:52:52.568Z",
+      "score": 81,
+      "fcp": 2108.4708,
+      "lcp": 4754.6478,
+      "speedIndex": 2108.4708,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 608906,
+      "warnings": []
+    },
+    {
+      "name": "before-home-mobile-3",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T11:52:52.569Z",
+      "finished": "2026-10-09T11:53:02.772Z",
+      "score": 81,
+      "fcp": 2108.4937999999997,
+      "lcp": 4754.7283,
+      "speedIndex": 2108.4937999999997,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 608906,
+      "warnings": []
+    },
+    {
+      "name": "before-services-mobile-1",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T11:53:02.773Z",
+      "finished": "2026-10-09T11:53:12.862Z",
+      "score": 83,
+      "fcp": 2108.3394000000003,
+      "lcp": 4419.509099999999,
+      "speedIndex": 2108.3394000000003,
+      "tbt": 3.5000000000004547,
+      "cls": 0,
+      "transferBytes": 630483,
+      "warnings": []
+    },
+    {
+      "name": "before-services-mobile-2",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T11:53:12.863Z",
+      "finished": "2026-10-09T11:53:22.904Z",
+      "score": 83,
+      "fcp": 2106.0631,
+      "lcp": 4413.09465,
+      "speedIndex": 2106.0631,
+      "tbt": 1.9999999999995453,
+      "cls": 0,
+      "transferBytes": 630483,
+      "warnings": []
+    },
+    {
+      "name": "before-services-mobile-3",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T11:53:22.905Z",
+      "finished": "2026-10-09T11:53:32.955Z",
+      "score": 83,
+      "fcp": 2108.3256,
+      "lcp": 4419.4884,
+      "speedIndex": 2108.3256,
+      "tbt": 3.5,
+      "cls": 0,
+      "transferBytes": 630483,
+      "warnings": []
+    },
+    {
+      "name": "before-projects-mobile",
+      "url": "http://localhost:3100/tr/projeler",
+      "started": "2026-10-09T11:53:32.956Z",
+      "finished": "2026-10-09T11:53:43.884Z",
+      "score": 86,
+      "fcp": 1662.8808,
+      "lcp": 4056.7616,
+      "speedIndex": 1662.8808,
+      "tbt": 3,
+      "cls": 0,
+      "transferBytes": 935200,
+      "warnings": []
+    },
+    {
+      "name": "before-project-detail-mobile",
+      "url": "http://localhost:3100/tr/projeler/naiben",
+      "started": "2026-10-09T11:53:43.885Z",
+      "finished": "2026-10-09T11:53:53.920Z",
+      "score": 85,
+      "fcp": 1807.7621,
+      "lcp": 4267.14315,
+      "speedIndex": 1807.7621,
+      "tbt": 1.5,
+      "cls": 0,
+      "transferBytes": 639404,
+      "warnings": []
+    },
+    {
+      "name": "before-service-detail-mobile",
+      "url": "http://localhost:3100/tr/hizmetler/web-tasarim",
+      "started": "2026-10-09T11:53:53.921Z",
+      "finished": "2026-10-09T11:54:04.042Z",
+      "score": 84,
+      "fcp": 1959.1028,
+      "lcp": 4268.654199999998,
+      "speedIndex": 1959.1028,
+      "tbt": 2.5,
+      "cls": 0,
+      "transferBytes": 633354,
+      "warnings": []
+    },
+    {
+      "name": "before-blog-mobile",
+      "url": "http://localhost:3100/tr/blog",
+      "started": "2026-10-09T11:54:04.042Z",
+      "finished": "2026-10-09T11:54:14.417Z",
+      "score": 86,
+      "fcp": 1956.516,
+      "lcp": 3962.7740000000003,
+      "speedIndex": 1956.516,
+      "tbt": 1.5000000000004547,
+      "cls": 0,
+      "transferBytes": 895975,
+      "warnings": []
+    },
+    {
+      "name": "before-article-mobile",
+      "url": "http://localhost:3100/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "started": "2026-10-09T11:54:14.418Z",
+      "finished": "2026-10-09T11:54:24.733Z",
+      "score": 85,
+      "fcp": 1958.5816,
+      "lcp": 4122.163199999999,
+      "speedIndex": 1958.5816,
+      "tbt": 2.5,
+      "cls": 0,
+      "transferBytes": 662549,
+      "warnings": []
+    },
+    {
+      "name": "before-pricing-mobile",
+      "url": "http://localhost:3100/tr/fiyatlandirma",
+      "started": "2026-10-09T11:54:24.734Z",
+      "finished": "2026-10-09T11:54:34.927Z",
+      "score": 80,
+      "fcp": 1806.1747,
+      "lcp": 5183.524099999999,
+      "speedIndex": 1806.1747,
+      "tbt": 4,
+      "cls": 0,
+      "transferBytes": 648804,
+      "warnings": []
+    },
+    {
+      "name": "before-contact-mobile",
+      "url": "http://localhost:3100/tr/iletisim",
+      "started": "2026-10-09T11:54:34.928Z",
+      "finished": "2026-10-09T11:54:44.910Z",
+      "score": 80,
+      "fcp": 1805.5268,
+      "lcp": 5124.870599999998,
+      "speedIndex": 1805.5268,
+      "tbt": 3.9999999999990905,
+      "cls": 0,
+      "transferBytes": 598708,
+      "warnings": []
+    },
+    {
+      "name": "before-home-desktop",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T11:54:44.910Z",
+      "finished": "2026-10-09T11:54:55.797Z",
+      "score": 97,
+      "fcp": 486.0227,
+      "lcp": 1132.0454,
+      "speedIndex": 1055.7940231505754,
+      "tbt": 0,
+      "cls": 0.010230255759026724,
+      "transferBytes": 2000713,
+      "warnings": []
+    },
+    {
+      "name": "before-services-desktop",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T11:54:55.798Z",
+      "finished": "2026-10-09T11:55:06.289Z",
+      "score": 98,
+      "fcp": 485.2825,
+      "lcp": 1087.9237500000002,
+      "speedIndex": 679.9372581590496,
+      "tbt": 0,
+      "cls": 0.011621624156593497,
+      "transferBytes": 1789423,
+      "warnings": []
+    },
+    {
+      "name": "before-blog-desktop",
+      "url": "http://localhost:3100/tr/blog",
+      "started": "2026-10-09T11:55:06.291Z",
+      "finished": "2026-10-09T11:55:17.237Z",
+      "score": 99,
+      "fcp": 446.3081,
+      "lcp": 989.46215,
+      "speedIndex": 639.3625207806647,
+      "tbt": 0,
+      "cls": 0.011315102721070844,
+      "transferBytes": 2085028,
+      "warnings": []
+    }
+  ],
+  "after": [
+    {
+      "name": "after-home-mobile-1",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T12:07:35.939Z",
+      "finished": "2026-10-09T12:07:46.432Z",
+      "score": 84,
+      "fcp": 1668.1476000000002,
+      "lcp": 4380.246,
+      "speedIndex": 1668.1476000000002,
+      "tbt": 7,
+      "cls": 0,
+      "transferBytes": 555742,
+      "warnings": []
+    },
+    {
+      "name": "after-home-mobile-2",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T12:07:46.433Z",
+      "finished": "2026-10-09T12:07:56.691Z",
+      "score": 84,
+      "fcp": 1662.8564999999999,
+      "lcp": 4396.28475,
+      "speedIndex": 1662.8564999999999,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 555742,
+      "warnings": []
+    },
+    {
+      "name": "after-home-mobile-3",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T12:07:56.692Z",
+      "finished": "2026-10-09T12:08:06.878Z",
+      "score": 84,
+      "fcp": 1662.4443,
+      "lcp": 4395.66645,
+      "speedIndex": 1662.4443,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 555742,
+      "warnings": []
+    },
+    {
+      "name": "after-services-mobile-1",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T12:08:06.879Z",
+      "finished": "2026-10-09T12:08:16.848Z",
+      "score": 88,
+      "fcp": 1511.0077500000002,
+      "lcp": 3893.6769999999997,
+      "speedIndex": 1511.0077500000002,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 461296,
+      "warnings": []
+    },
+    {
+      "name": "after-services-mobile-2",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T12:08:16.849Z",
+      "finished": "2026-10-09T12:08:26.803Z",
+      "score": 87,
+      "fcp": 1511.0898,
+      "lcp": 4017.634700000001,
+      "speedIndex": 1511.0898,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 461296,
+      "warnings": []
+    },
+    {
+      "name": "after-services-mobile-3",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T12:08:26.804Z",
+      "finished": "2026-10-09T12:08:36.754Z",
+      "score": 88,
+      "fcp": 1510.6269,
+      "lcp": 3892.1692000000003,
+      "speedIndex": 1510.6269,
+      "tbt": 1.5,
+      "cls": 0,
+      "transferBytes": 461296,
+      "warnings": []
+    },
+    {
+      "name": "after-projects-mobile",
+      "url": "http://localhost:3100/tr/projeler",
+      "started": "2026-10-09T12:08:36.755Z",
+      "finished": "2026-10-09T12:08:47.312Z",
+      "score": 85,
+      "fcp": 1661.12895,
+      "lcp": 4322.403075,
+      "speedIndex": 1661.12895,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 753820,
+      "warnings": []
+    },
+    {
+      "name": "after-project-detail-mobile",
+      "url": "http://localhost:3100/tr/projeler/naiben",
+      "started": "2026-10-09T12:08:47.313Z",
+      "finished": "2026-10-09T12:08:57.255Z",
+      "score": 87,
+      "fcp": 1513.9888500000002,
+      "lcp": 3948.9832749999996,
+      "speedIndex": 1513.9888500000002,
+      "tbt": 3,
+      "cls": 0,
+      "transferBytes": 475118,
+      "warnings": []
+    },
+    {
+      "name": "after-service-detail-mobile",
+      "url": "http://localhost:3100/tr/hizmetler/web-tasarim",
+      "started": "2026-10-09T12:08:57.255Z",
+      "finished": "2026-10-09T12:09:07.305Z",
+      "score": 87,
+      "fcp": 1659.8195999999998,
+      "lcp": 3967.0928000000004,
+      "speedIndex": 1659.8195999999998,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 470183,
+      "warnings": []
+    },
+    {
+      "name": "after-blog-mobile",
+      "url": "http://localhost:3100/tr/blog",
+      "started": "2026-10-09T12:09:07.306Z",
+      "finished": "2026-10-09T12:09:17.254Z",
+      "score": 89,
+      "fcp": 1512.89655,
+      "lcp": 3671.1954000000005,
+      "speedIndex": 1512.89655,
+      "tbt": 2,
+      "cls": 0,
+      "transferBytes": 404740,
+      "warnings": []
+    },
+    {
+      "name": "after-article-mobile",
+      "url": "http://localhost:3100/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "started": "2026-10-09T12:09:17.255Z",
+      "finished": "2026-10-09T12:09:27.250Z",
+      "score": 88,
+      "fcp": 1666.1196,
+      "lcp": 3827.9928,
+      "speedIndex": 1666.1196,
+      "tbt": 1.5,
+      "cls": 0,
+      "transferBytes": 416943,
+      "warnings": []
+    },
+    {
+      "name": "after-pricing-mobile",
+      "url": "http://localhost:3100/tr/fiyatlandirma",
+      "started": "2026-10-09T12:09:27.252Z",
+      "finished": "2026-10-09T12:09:37.312Z",
+      "score": 87,
+      "fcp": 1509.5329499999998,
+      "lcp": 4043.7106000000013,
+      "speedIndex": 1509.5329499999998,
+      "tbt": 2.9999999999997726,
+      "cls": 0,
+      "transferBytes": 489511,
+      "warnings": []
+    },
+    {
+      "name": "after-contact-mobile",
+      "url": "http://localhost:3100/tr/iletisim",
+      "started": "2026-10-09T12:09:37.313Z",
+      "finished": "2026-10-09T12:09:47.239Z",
+      "score": 89,
+      "fcp": 1509.27045,
+      "lcp": 3738.3606,
+      "speedIndex": 1509.27045,
+      "tbt": 0.5,
+      "cls": 0,
+      "transferBytes": 437722,
+      "warnings": []
+    },
+    {
+      "name": "after-home-desktop",
+      "url": "http://localhost:3100/tr",
+      "started": "2026-10-09T12:09:47.240Z",
+      "finished": "2026-10-09T12:09:57.652Z",
+      "score": 98,
+      "fcp": 450.96139999999997,
+      "lcp": 1094.6151999999997,
+      "speedIndex": 867.203435352694,
+      "tbt": 0,
+      "cls": 0.010285325399920893,
+      "transferBytes": 959413,
+      "warnings": []
+    },
+    {
+      "name": "after-services-desktop",
+      "url": "http://localhost:3100/tr/hizmetler",
+      "started": "2026-10-09T12:09:57.652Z",
+      "finished": "2026-10-09T12:10:07.738Z",
+      "score": 99,
+      "fcp": 372.14639999999997,
+      "lcp": 996.1952000000001,
+      "speedIndex": 626.5923867243649,
+      "tbt": 0,
+      "cls": 0.01162161950507437,
+      "transferBytes": 663393,
+      "warnings": []
+    },
+    {
+      "name": "after-blog-desktop",
+      "url": "http://localhost:3100/tr/blog",
+      "started": "2026-10-09T12:10:07.739Z",
+      "finished": "2026-10-09T12:10:17.885Z",
+      "score": 99,
+      "fcp": 373.7892,
+      "lcp": 958.3856000000001,
+      "speedIndex": 593.8491495516939,
+      "tbt": 0,
+      "cls": 0.011314409889088911,
+      "transferBytes": 616671,
+      "warnings": []
+    }
+  ],
+  "assets": [
+    {
+      "case": "home-mobile-1",
+      "before": {
+        "requests": 38,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 46056,
+            "resourceBytes": 169899
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Image": {
+            "count": 4,
+            "transferBytes": 42786,
+            "resourceBytes": 41835
+          },
+          "Stylesheet": {
+            "count": 4,
+            "transferBytes": 80499,
+            "resourceBytes": 355548
+          },
+          "Script": {
+            "count": 20,
+            "transferBytes": 307640,
+            "resourceBytes": 988590
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      },
+      "after": {
+        "requests": 37,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 46012,
+            "resourceBytes": 169217
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Image": {
+            "count": 4,
+            "transferBytes": 42786,
+            "resourceBytes": 41835
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 29454,
+            "resourceBytes": 153749
+          },
+          "Script": {
+            "count": 20,
+            "transferBytes": 305565,
+            "resourceBytes": 981469
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    },
+    {
+      "case": "services-mobile-1",
+      "before": {
+        "requests": 45,
+        "rscRequests": 5,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 45090,
+            "resourceBytes": 166459
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 5,
+            "transferBytes": 81387,
+            "resourceBytes": 357030
+          },
+          "Script": {
+            "count": 22,
+            "transferBytes": 331868,
+            "resourceBytes": 1063002
+          },
+          "Image": {
+            "count": 3,
+            "transferBytes": 5684,
+            "resourceBytes": 5153
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          },
+          "Fetch": {
+            "count": 5,
+            "transferBytes": 34529,
+            "resourceBytes": 94237
+          }
+        }
+      },
+      "after": {
+        "requests": 34,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 24618,
+            "resourceBytes": 118593
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 27757,
+            "resourceBytes": 141439
+          },
+          "Script": {
+            "count": 18,
+            "transferBytes": 271312,
+            "resourceBytes": 885353
+          },
+          "Image": {
+            "count": 3,
+            "transferBytes": 5684,
+            "resourceBytes": 5153
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    },
+    {
+      "case": "blog-mobile",
+      "before": {
+        "requests": 185,
+        "rscRequests": 143,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 18514,
+            "resourceBytes": 94918
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 5,
+            "transferBytes": 81587,
+            "resourceBytes": 357824
+          },
+          "Script": {
+            "count": 24,
+            "transferBytes": 335654,
+            "resourceBytes": 1071392
+          },
+          "Image": {
+            "count": 3,
+            "transferBytes": 5684,
+            "resourceBytes": 5153
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          },
+          "Fetch": {
+            "count": 143,
+            "transferBytes": 322611,
+            "resourceBytes": 598272
+          }
+        }
+      },
+      "after": {
+        "requests": 34,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 18485,
+            "resourceBytes": 94404
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 28964,
+            "resourceBytes": 150569
+          },
+          "Script": {
+            "count": 18,
+            "transferBytes": 219682,
+            "resourceBytes": 708586
+          },
+          "Image": {
+            "count": 3,
+            "transferBytes": 5684,
+            "resourceBytes": 5153
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    },
+    {
+      "case": "home-desktop",
+      "before": {
+        "requests": 187,
+        "rscRequests": 134,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 46056,
+            "resourceBytes": 169899
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Stylesheet": {
+            "count": 6,
+            "transferBytes": 82475,
+            "resourceBytes": 359306
+          },
+          "Script": {
+            "count": 32,
+            "transferBytes": 620656,
+            "resourceBytes": 2130891
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          },
+          "Fetch": {
+            "count": 134,
+            "transferBytes": 911820,
+            "resourceBytes": 2529406
+          }
+        }
+      },
+      "after": {
+        "requests": 40,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 46012,
+            "resourceBytes": 169217
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 29454,
+            "resourceBytes": 153749
+          },
+          "Script": {
+            "count": 22,
+            "transferBytes": 544241,
+            "resourceBytes": 1884454
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    },
+    {
+      "case": "services-desktop",
+      "before": {
+        "requests": 187,
+        "rscRequests": 136,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 45090,
+            "resourceBytes": 166459
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 6,
+            "transferBytes": 82475,
+            "resourceBytes": 359306
+          },
+          "Script": {
+            "count": 30,
+            "transferBytes": 381980,
+            "resourceBytes": 1227906
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          },
+          "Fetch": {
+            "count": 136,
+            "transferBytes": 940172,
+            "resourceBytes": 2611566
+          }
+        }
+      },
+      "after": {
+        "requests": 36,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 24618,
+            "resourceBytes": 118593
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 27757,
+            "resourceBytes": 141439
+          },
+          "Script": {
+            "count": 18,
+            "transferBytes": 271312,
+            "resourceBytes": 885353
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    },
+    {
+      "case": "blog-desktop",
+      "before": {
+        "requests": 332,
+        "rscRequests": 277,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 18514,
+            "resourceBytes": 94918
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 6,
+            "transferBytes": 82475,
+            "resourceBytes": 359306
+          },
+          "Script": {
+            "count": 34,
+            "transferBytes": 401378,
+            "resourceBytes": 1290117
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          },
+          "Fetch": {
+            "count": 277,
+            "transferBytes": 1242955,
+            "resourceBytes": 3160261
+          }
+        }
+      },
+      "after": {
+        "requests": 38,
+        "rscRequests": 0,
+        "types": {
+          "Document": {
+            "count": 1,
+            "transferBytes": 18485,
+            "resourceBytes": 94404
+          },
+          "Font": {
+            "count": 8,
+            "transferBytes": 113423,
+            "resourceBytes": 111024
+          },
+          "Stylesheet": {
+            "count": 3,
+            "transferBytes": 28964,
+            "resourceBytes": 150569
+          },
+          "Script": {
+            "count": 20,
+            "transferBytes": 229516,
+            "resourceBytes": 739731
+          },
+          "Image": {
+            "count": 5,
+            "transferBytes": 207781,
+            "resourceBytes": 206547
+          },
+          "Other": {
+            "count": 1,
+            "transferBytes": 18502,
+            "resourceBytes": 18171
+          }
+        }
+      }
+    }
+  ],
+  "verification": {
+    "layoutPages": 34,
+    "layoutDifferences": 0,
+    "flows": [
+      {
+        "name": "initial-traffic",
+        "route": "/tr",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/hizmetler",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/blog",
+        "rsc": 0
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "hover",
+        "rsc": 6
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "focus",
+        "rsc": 5
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "save-data",
+        "rsc": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "tr",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 328,
+          "h": 205
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "en",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 328,
+          "h": 205
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "ru",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 328,
+          "h": 205
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "mobile-menu",
+        "navigated": "/tr/projeler",
+        "scrollLockReleased": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 390,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 1280,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 430,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1000,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1001,
+        "animations": [
+          "reveal-fade",
+          "reveal-fade",
+          "reveal-fade"
+        ]
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/hizmetler",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/fiyatlandirma",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/iletisim",
+        "visibleHero": true
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/font-lab",
+        "status": 404
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/projeler-v2",
+        "status": 404
+      },
+      {
+        "name": "project-preview",
+        "mobileView": true
+      },
+      {
+        "name": "light-theme",
+        "dark": "rgba(20, 20, 20, 0.55)",
+        "light": "rgba(255, 255, 255, 0.58)"
+      }
+    ],
+    "webgl": {
+      "mobileInitialCanvas": 0,
+      "nearSectionCanvas": true,
+      "nextProject": true,
+      "offscreenDrawCalls": [
+        945,
+        945
+      ],
+      "realContextLossFallbackLinks": 15,
+      "shortLandscapeOverflow": false,
+      "pageErrors": []
+    },
+    "developmentRoutes": [
+      {
+        "route": "/tr/font-lab",
+        "status": 200,
+        "fonts": 26,
+        "searchAndSelection": true
+      },
+      {
+        "route": "/tr/projeler-v2",
+        "status": 200,
+        "fallbackProjects": 15,
+        "errors": []
+      }
+    ],
+    "finalBuildIncludesTask107": true,
+    "finalHomeWidths": [
+      390,
+      1280
+    ],
+    "finalHomeStatisticsFont": "nippo"
+  },
+  "projectListRepeats": [
+    {
+      "name": "after-projects-mobile-2",
+      "score": 84,
+      "lcp": 4413.567750000001,
+      "fcp": 1706.74065,
+      "tbt": 34.999999999999545,
+      "cls": 0,
+      "transferBytes": 753820
+    },
+    {
+      "name": "after-projects-mobile-3",
+      "score": 84,
+      "lcp": 4352.734500000002,
+      "fcp": 1673.0369999999998,
+      "tbt": 10.5,
+      "cls": 0,
+      "transferBytes": 753820
+    }
+  ],
+  "finalHomeIntegration": [
+    {
+      "name": "final-home-mobile-1",
+      "score": 84,
+      "fcp": 1680.1521,
+      "lcp": 4400.253499999999,
+      "tbt": 10,
+      "cls": 0,
+      "transferBytes": 555745,
+      "warnings": []
+    },
+    {
+      "name": "final-home-mobile-2",
+      "score": 84,
+      "fcp": 1680.7446,
+      "lcp": 4436.1169,
+      "tbt": 15,
+      "cls": 0,
+      "transferBytes": 555745,
+      "warnings": []
+    },
+    {
+      "name": "final-home-mobile-3",
+      "score": 83,
+      "fcp": 1668.74895,
+      "lcp": 4562.248249999999,
+      "tbt": 6,
+      "cls": 0,
+      "transferBytes": 555745,
+      "warnings": []
+    }
+  ],
+  "baseCommitAtFinalBuild": "8d1ea8b"
+}

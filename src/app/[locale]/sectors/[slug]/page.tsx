@@ -1,3 +1,4 @@
+import '@/styles/sectors.css';
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
@@ -5,7 +6,8 @@ import Image from "next/image";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { pickMessages } from "@/lib/pick-messages";
-import { Link, getPathname } from "@/i18n/navigation";
+import { Link } from "@/components/navigation/intent-link";
+import { getPathname } from "@/i18n/navigation";
 import PageShell from "@/components/page-shell";
 import ProjectPlaceholder from "@/components/project-placeholder";
 import RelatedSolutions from "@/components/related-solutions";

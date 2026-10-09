@@ -1,9 +1,11 @@
 'use client';
 
+import '@/styles/projects.css';
+
 import { useState, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { WORKS } from '@/lib/data';
 import { PROJECT_LIST_WORKS } from '@/lib/project-list';
 import { AREA_KEYS, isInArea, type AreaKey } from '@/lib/studio-stats';

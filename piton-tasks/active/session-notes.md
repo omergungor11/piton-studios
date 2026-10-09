@@ -1,5 +1,16 @@
 # Session Notes
 
+## 2026-10-09 — Ajanlarla performans geliştirmesi (TASK-106)
+
+- Kullanıcının “geliştirmeleri yapalım” isteğiyle üç ajan CSS, niyetle prefetch ve hizmet kataloğunu ele aldı; ana ajan import/ortam koşulu entegrasyonunu ve tüm ölçümleri yaptı. Paket/lock/.env değişikliği yok.
+- Ortak CSS %38,8 küçüldü; geliştirme font sayfasının production CSS sızıntısı kaldırıldı. Mobilde iç sayfa hero animasyonları beklenmez. Linkler yalnız kullanıcı niyetinde ön indirir; katalog metinleri sunucuda ve SVG sahneleri yakın viewport'ta kalır.
+- Aynı varsayılan Turbopack profilinde 32 ana + 2 ek Lighthouse: anasayfa medyan 81 → 84, hizmetler 83 → 88, blog 86 → 89, fiyatlandırma 80 → 87, iletişim 80 → 89; masaüstü 98–99. Blog transferi %54,8, hizmetler %26,8 azaldı. Projeler listesi 86 → 85 (84/84 tekrar): bu sayfada skor artışı doğrulanmadı; ham ve simüle zamanların sınırı raporda açıklandı.
+- 17 sayfa × 2 genişlik karşılaştırmasında fark yok. 23 akış kontrolü, üç dilde 18 hizmet / tüm filtreler, mobil/masaüstü client navigation, menü/scroll lock, JS kapalı ilk ekran, tema, proje mobil toggle başarılı. İlk açılışta WebGL yok; yakına gelince açılır, ekran dışı draw sayısı 945/945 sabit ve gerçek context loss sonrası 15 projelik fallback çalışır.
+- Üretim ve geliştirme guard'ları test edildi: font lab/proje prototipi 404 / 200; font lab 26 aday, arama/seçim; prototip 15 proje. Oturum sırasında ayrı TASK-107 commit'i geldi; hero istatistik fontu ve ilgili takip/hafıza kayıtları korunarak son derlemeye dahil edildi.
+- Son build/typecheck tekrar geçti. TASK-107 dahil anasayfa tekrarları 84/84/83, medyan 84, LCP 4,44 sn, TBT 10 ms ve CLS 0. Son 390/1280 px hero görünümünde Nippo istatistikler ve taşmasız düzen doğrulandı. Oturum toplamı 37 Lighthouse; dev'in değiştirdiği next-env yolu üretim build ile geri döndü.
+- Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü ve `pnpm build` (868 statik sayfa) başarılı. Rapor `piton-plans/performance-followup.md`, veri `piton-docs/performance-followup-2026-10-09.json`; ham betik/rapor/görseller gitignore'daki `tmp/performance-followup-2026-10-09/` altında.
+- Yalnız bu oturumun 3100 üretim ve 3101 geliştirme test sunucuları kullanıldı; diğer projelerin süreçlerine dokunulmadı. Push/deploy yapılmadı. Canlıya yayın sonrası aynı URL/profil tekrar ölçülmeli; yerel yeni skor canlı 43/73 ile doğrudan karşılaştırılmaz.
+
 ## 2026-10-09 — Canlı performans testi (TASK-105)
 
 - Kullanıcı geliştirme/ajan planından önce canlı performans sonuçlarını istedi. Uygulama kodu değiştirilmedi; ajan veya deploy başlatılmadı.

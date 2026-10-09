@@ -1,5 +1,7 @@
 'use client';
 
+import '@/styles/about.css';
+
 import { type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import PageShell from '@/components/page-shell';

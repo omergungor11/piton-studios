@@ -1,0 +1,40 @@
+/* Legal documents. Also import blog.css for the shared article typography.
+   Motion declarations remain in globals.css to preserve reveal cascade order. */
+.legal-updated {
+  font-family: var(--font-mono); font-size: 13px;
+  letter-spacing: 0.06em; color: var(--muted);
+  font-weight: 500;
+}
+.legal-card {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--glass-hi);
+  overflow: hidden;
+}
+.legal-card > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 30%) 1fr;
+  gap: 12px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+}
+.legal-card > div:first-child { border-top: 0; }
+.legal-card dt {
+  font-family: var(--font-mono); font-size: 13px;
+  letter-spacing: 0.06em; color: var(--muted);
+  font-weight: 500;
+}
+.legal-card dd { margin: 0; color: var(--ink); font-size: 16px; line-height: 1.5; }
+.legal-nav {
+  display: flex; flex-wrap: wrap; gap: 12px 24px;
+  margin-top: 56px; padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.legal-nav-link { color: var(--accent); font-size: 15px; }
+
+@media (max-width: 640px) {
+  .legal-card > div { grid-template-columns: 1fr; gap: 2px; }
+}

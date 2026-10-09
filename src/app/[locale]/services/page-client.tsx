@@ -1,121 +1,77 @@
 'use client';
 
-import { useState } from 'react';
-import type { CSSProperties } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { SERVICES } from '@/lib/data';
-import SERVICE_ICONS from '@/components/service-icons';
-import { SERVICE_ART } from '@/components/service-visuals';
+import { Fragment, useState } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import PageShell from '@/components/page-shell';
 import ImpactPanel from '@/components/impact-panel';
 import SnakeBorder from '@/components/snake-border';
-import SparkScene from '@/components/scenes/spark';
-import ServiceCardArt from './service-card-art';
-import styles from './services-list.module.css';
 
-const CAT_KEYS = Array.from(new Set(SERVICES.map((s) => s.cat)));
+export type ServiceListingCard = {
+  id: string;
+  category: string;
+  content: ReactNode;
+};
 
-export default function ServicesPageClient() {
-  const t = useTranslations('servicesPage');
-  const ts = useTranslations('servicesList');
-  const tv = useTranslations('serviceVisuals');
+type ServicesPageClientProps = {
+  hero: ReactNode;
+  cta: ReactNode;
+  filterAll: string;
+  categories: { id: string; label: string; count: number }[];
+  cards: ServiceListingCard[];
+};
+
+/** Katalog metni sunucuda kalir; istemci yalnizca filtre ve etkilesimleri yonetir. */
+export default function ServicesPageClient({
+  hero,
+  cta,
+  filterAll,
+  categories,
+  cards,
+}: ServicesPageClientProps): ReactElement {
   const [activeCat, setActiveCat] = useState('All');
-
-  const filtered = activeCat === 'All' ? SERVICES : SERVICES.filter((s) => s.cat === activeCat);
+  const filtered = activeCat === 'All' ? cards : cards.filter((card) => card.category === activeCat);
 
   return (
     <PageShell>
-      {/* Hero */}
-      <section className="sp-hero">
-        <div className="sp-hero-eyebrow" data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>{t('title')}</div>
-        <h1 className="sp-hero-title" data-reveal="fade-hero" style={{ '--reveal-delay': '120ms' } as CSSProperties}>
-          {t.rich('headline', {
-            accent: (chunks) => <span className="em">{chunks}</span>,
-          })}
-        </h1>
-        <p className="sp-hero-sub" data-reveal="fade-hero" style={{ '--reveal-delay': '380ms' } as CSSProperties}>
-          {t('subtitle')}
-        </p>
-      </section>
+      {hero}
 
-      {/* Etki paneli — hizmetlerin zaman icindeki bilesik etkisi */}
+      {/* Etki paneli ilk ekrana yakin: gorunumunu kopyalamadan mevcut bilesen korunur. */}
       <ImpactPanel />
 
-      {/* Filter */}
       <section className="sp-filter">
         <button
+          type="button"
           className={`sp-filter-btn ${activeCat === 'All' ? 'active' : ''}`}
           onClick={() => setActiveCat('All')}
+          aria-pressed={activeCat === 'All'}
           data-cursor="hover"
         >
-          {t('filterAll')}
+          {filterAll}
         </button>
-        {CAT_KEYS.map((cat) => (
+        {categories.map((category) => (
           <button
-            key={cat}
-            className={`sp-filter-btn ${activeCat === cat ? 'active' : ''}`}
-            onClick={() => setActiveCat(cat)}
+            key={category.id}
+            type="button"
+            className={`sp-filter-btn ${activeCat === category.id ? 'active' : ''}`}
+            onClick={() => setActiveCat(category.id)}
+            aria-pressed={activeCat === category.id}
             data-cursor="hover"
           >
-            {t(`filterCat.${cat}`)}
-            <span className="sp-filter-count">
-              {SERVICES.filter((s) => s.cat === cat).length}
-            </span>
+            {category.label}
+            <span className="sp-filter-count">{category.count}</span>
           </button>
         ))}
       </section>
 
-      {/* Services grid */}
       <SnakeBorder radius={28}>
         <section className="svc-glass" style={{ padding: 0 }}>
           <div className="svc-grid">
-            {filtered.map((s, i) => {
-              const title = ts(`${s.slug}.title`);
-              const desc = ts(`${s.slug}.desc`);
-              const items = ts.raw(`${s.slug}.items`) as string[];
-              const hasArt = s.slug in SERVICE_ART;
-              return (
-                <Link
-                  key={s.n}
-                  href={{ pathname: '/services/[slug]', params: { slug: s.slug } }}
-                  className={`svc ${styles.card}`}
-                  data-cursor="hover"
-                  data-cursor-label="+"
-                  data-reveal="rise"
-                  style={{ '--i': i % 6 } as CSSProperties}
-                >
-                  {hasArt && <ServiceCardArt slug={s.slug} label={tv(`${s.slug}.alt`)} />}
-                  <div className="svc-top">
-                    <span className="n">{s.n}</span>
-                    <span className="cat">{t(`filterCat.${s.cat}`)}</span>
-                  </div>
-                  {!hasArt && (
-                    <div className="svc-icon">
-                      {SERVICE_ICONS[s.slug] || null}
-                    </div>
-                  )}
-                  <h4>{title}</h4>
-                  <p className="svc-desc">{desc}</p>
-                  <ul className="svc-items">
-                    {items.map((item) => (
-                      <li key={item}>
-                        <span className="bullet">—</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <span className="svc-arrow">↗</span>
-                </Link>
-              );
-            })}
+            {filtered.map((card) => <Fragment key={card.id}>{card.content}</Fragment>)}
           </div>
         </section>
       </SnakeBorder>
 
-      <div className="subpage-spark">
-        <SparkScene hideStats sub={t('ctaSub')} />
-      </div>
+      <div className="subpage-spark">{cta}</div>
     </PageShell>
   );
 }

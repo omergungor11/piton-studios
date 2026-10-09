@@ -1,9 +1,11 @@
 'use client';
 
+import '@/styles/project-detail.css';
+
 import { useState, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { type Project, getAdjacentProjects } from '@/lib/data';
 import PageShell from './page-shell';
 import ProjectPlaceholder from '@/components/project-placeholder';

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-09 — CSS, niyetle ön indirme ve hizmet kataloğu (TASK-106)
+
+- Üç ajanla ortak CSS sayfa/bileşen dosyalarına ayrıldı; kaynak 245.267 → 150.050 B. Kullanılmayan admin/galeri/lightbox stilleri kaldırıldı. Geliştirme font/proje rotalarının koşullu importları üretim CSS'ine deneme fontlarının sızmasını önler; font CSS'i 231 → 45 `@font-face`. Mobilde tüm hero başlıkları animasyon beklemeden görünür.
+- Yerelleştirilmiş IntentLink ilk yüklemede viewport prefetch yapmaz; hover/focus/touch niyetiyle açılır, Save-Data/2G/çevrimdışı ve açık `prefetch={false}` korunur. Mobil blog RSC istekleri 143 → 0; ilk yükleme transferi %54,8 azaldı.
+- Hizmet kartlarının metni sunucuda, filtre etkileşimi istemcide kalır. 18 SVG ayrı importla yakına gelince yüklenir, ekran dışında DOM'dan çıkarılır. Mobil hizmetler JS %18,2, HTML %45,4, toplam transfer %26,8 azaldı.
+- Aynı varsayılan Turbopack üretim profilinde 32 ana + 2 ek Lighthouse: mobil anasayfa medyan 81 → 84, hizmetler 83 → 88, blog 86 → 89, fiyatlandırma 80 → 87, iletişim 80 → 89. Anasayfa LCP 4,75 → 4,40 sn, hizmetler 4,42 → 3,89 sn; mobil ana matris CLS 0. Projeler listesi 86 → 85 (ek tekrarlar 84/84): transfer azalsa da bu sayfada skor artışı doğrulanmadı. Masaüstü 98–99.
+- 34 düzen karşılaştırmasında stil/boyut farkı yok; 23 akış kontrolü, mobil/masaüstü istemci gezinmesi, üç dilde filtreler, hero kırılımı, menü/scroll lock, JS kapalı ilk ekran ve tema başarılı. Proje canvas'ı yakında açılır, ekran dışında GPU çizimi durur (945/945); gerçek WebGL kaybında 15 projelik fallback çalışır. Geliştirme rotaları üretimde 404, dev'de 200 ve kullanılabilir.
+- Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü, varsayılan üretim build (868 sayfa) başarılı. Plan/ölçüm sınırları `piton-plans/performance-followup.md`, kalıcı veri `piton-docs/performance-followup-2026-10-09.json`. Push/deploy yapılmadı; yeni yerel skor bildirilen canlı 43 ile doğrudan önce/sonra sayılmaz.
+- Ayrı TASK-107 font commit'i korunarak son üretim build/typecheck tekrar geçti; anasayfa 84/84/83 (medyan 84), LCP medyan 4,44 sn ve CLS 0. Oturum toplamı 37 Lighthouse; son mobil/masaüstü hero istatistik fontu ve taşmasız düzen doğrulandı.
+
 ## 2026-10-09 — Hero istatistik sayıları Nippo (TASK-107)
 
 - Hero altındaki istatistik barında 50+, 10+, 12 ve 3 sayıları Nippo Bold 700 fontuna geçirildi. Ortak stil mobil/masaüstü ve tüm dillerde uygulanır.

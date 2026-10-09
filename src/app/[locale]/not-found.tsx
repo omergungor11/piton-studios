@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import FuzzyText from '@/components/fuzzy-text';
 import SplitWords from '@/components/motion/split-words';
 import { pickMessages } from '@/lib/pick-messages';

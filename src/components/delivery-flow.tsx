@@ -1,8 +1,10 @@
 "use client";
 
+import '@/styles/delivery-flow.css';
+
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link } from "@/components/navigation/intent-link";
 import { WORKS } from "@/lib/data";
 
 /**

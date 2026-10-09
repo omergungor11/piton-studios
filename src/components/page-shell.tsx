@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
+import { usePathname } from '@/i18n/navigation';
 import Cursor from '@/components/cursor';
 import BgStage from '@/components/bg-stage';
 import FloatingGlass from '@/components/floating-glass';

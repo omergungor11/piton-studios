@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import { AREA_KEYS, STUDIO, TITLE_BY_SLUG, worksInArea, type AreaKey } from '@/lib/studio-stats';
 
 /**

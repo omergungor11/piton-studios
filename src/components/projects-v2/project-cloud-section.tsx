@@ -13,7 +13,8 @@ import {
 } from 'react';
 import { useMotionValue, useMotionValueEvent, useSpring } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Link, useRouter } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
+import { useRouter } from '@/i18n/navigation';
 import SplitWords from '@/components/motion/split-words';
 import { advanceProjectPreview, getProjectPreviewDistance, PROJECT_SCROLL_PX_PER_CARD } from '@/lib/project-cloud-scroll';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';

@@ -1,8 +1,10 @@
 'use client';
 
+import '@/styles/faq.css';
+
 import { useMemo, useState, type CSSProperties } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/components/navigation/intent-link';
 import PageShell from '@/components/page-shell';
 import SplitWords from '@/components/motion/split-words';
 import { SERVICES } from '@/lib/data';

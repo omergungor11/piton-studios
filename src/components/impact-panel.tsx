@@ -1,5 +1,7 @@
 'use client';
 
+import '@/styles/impact-panel.css';
+
 import { useCallback, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
