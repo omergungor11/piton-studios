@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-09 — Süreç bölümü ayrı sayfaya taşındı (TASK-111)
+
+- Anasayfadaki “Nasıl Çalışıyoruz” bölümü ve sahne göstergesi akıştan çıkarıldı; içerik yerelleştirilmiş ayrı süreç sayfasında tutulur.
+- `/tr/nasil-calisiyoruz`, `/en/how-we-work` ve `/ru/kak-my-rabotaem` sayfalarında altı adım tüm ekranlarda tek sütunda listelenir; süreç sayfasının alt CTA'sı korunur.
+- Tarayıcıda 390 px süreç sayfasında tek sütun ve yatay taşmasız görünüm doğrulandı.
+
 ## 2026-10-09 — Mobil hizmet badge'leri yan yana (TASK-110)
 
 - Anasayfa hizmet kartlarında sıra numarası ve kategori badge'i 480 px ve altında da aynı satırda kalır; dar kartlarda uzun kategori adları tek satır içinde ellipsis ile kısaltılır.

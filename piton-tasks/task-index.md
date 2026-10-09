@@ -22,12 +22,12 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..110) | 16 | 16 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..111) | 17 | 17 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
 | 20 | Performans (TASK-104..106) | 3 | 3 | 0 | 0 | 0 |
-| **Total** | | **109** | **108** | **0** | **0** | **0** |
+| **Total** | | **110** | **109** | **0** | **0** | **0** |
 
-**Progress**: 108/109 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 109/110 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -221,6 +221,7 @@
 | TASK-108 | Konuşalım bölümündeki 50+, 5+ ve 24h değerlerini Nippo fontuna geçir | S | COMPLETED |
 | TASK-109 | Anasayfa hizmet kartlarını tablet ve mobilde iki sütunda göster | S | COMPLETED |
 | TASK-110 | Mobil hizmet kartlarında sıra numarası ve kategori badge'ini yan yana tut | S | COMPLETED |
+| TASK-111 | Nasıl Çalışıyoruz bölümünü anasayfadan kaldır; ayrı sayfada tek sütunda göster | S | COMPLETED |
 
 ## Phase 19: Proje sırası & görünürlük (2026-10-08)
 
