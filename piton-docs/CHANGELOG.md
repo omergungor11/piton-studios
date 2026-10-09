@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-09 — Tablet ve mobil hizmetler iki sütun (TASK-109)
+
+- Anasayfadaki altı hizmet kartı 1024 px ve altında iki sütun / üç satır olarak gösterilir; geniş masaüstünde üç sütun / iki satır korunur.
+- Dar telefonlarda kategori etiketleri numaranın altına alınır; kart aralığı, iç boşluk ve yazı boyutu düzenlenir. Uzun metinler taşmadan kırılır; kart açıklamaları, listeler ve bağlantılar görünür kalır.
+- Tarayıcıda 320/390/768/1024/1280 px ve üç dilde dar ekran kontrolü başarılı; kart/sayfa taşması yok.
+- Lint 0 hata / 10 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (868 sayfa).
+
 ## 2026-10-09 — Konuşalım istatistik sayıları Nippo (TASK-108)
 
 - Fikrinizi & Projenizi Konuşalım bölümündeki 50+, 5+ ve 24h değerleri Nippo Bold 700 fontuna geçirildi.
