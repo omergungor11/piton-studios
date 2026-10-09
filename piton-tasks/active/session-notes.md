@@ -1,5 +1,14 @@
 # Session Notes
 
+## 2026-10-09 — Canlı performans testi (TASK-105)
+
+- Kullanıcı geliştirme/ajan planından önce canlı performans sonuçlarını istedi. Uygulama kodu değiştirilmedi; ajan veya deploy başlatılmadı.
+- 25 Lighthouse testi: dokuz TR sayfa türünde iki profil; TR anasayfa/hizmetlerde üçer mobil tekrar; EN/RU ve kök alan adı. Anasayfa mobil medyan 73, LCP 3,65 sn, TBT 305 ms; hizmetler medyan 78, LCP 5,46 sn (71–89 skor aralığı). Masaüstü 97–100. Bildirilen 43 tekrarlanmadı.
+- Canlı ilk açılışta ekran dışı canvas, erken proje dokuları, 22 font, optimize edilmemiş hero ve çok sayıda RSC ön indirmesi görüldü. Önceki yerel TASK-104 iyileştirmeleri henüz canlıda görünmüyor.
+- Rapor/kalıcı JSON `piton-docs/performance-audit-2026-10-09.*`; ham raporlar/betikler/ekran görüntüleri `tmp/performance-audit-2026-10-09/`. Gerçek kullanıcı verisi PSI kota hatası nedeniyle alınamadı.
+- Anasayfa, hizmetler ve blog mobil Chrome emülasyonunda hatasız ve yatay taşmasız. 25 kaydın kalıcı verisi ham raporlarla doğrulandı. Lint 0 hata / 10 mevcut uyarı, typecheck ve `pnpm build` başarılı (868 sayfa). Testlere ait Chrome süreçleri kapandı; diğer projelerin süreçlerine dokunulmadı.
+- Sonraki aşama, kullanıcının istediği ajan planı ve geliştirme: mevcut yerel kod baz alınmalı ve kalan darboğazlar rapordaki kanıtlarla önceliklendirilmeli. Push/deploy yapılmadı.
+
 ## 2026-10-09 — Mobil Lighthouse (TASK-104)
 
 - Kullanıcı mobil skoru 43 bildirdi. Canlı tekrar ölçümleri URL / yönlendirmeye göre 32 (EN, kök URL'den) ve 71 (doğrudan TR); bildirilen skorun birebir tekrarı olarak kullanılmaz.

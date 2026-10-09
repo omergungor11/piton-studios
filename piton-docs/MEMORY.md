@@ -1,5 +1,11 @@
 # Piton - Project Memory
 
+## Canlı performans denetimi (2026-10-09)
+- TASK-105: 25 Lighthouse 13.5.0 ölçümü; dokuz TR sayfa türü mobil/masaüstü, TR anasayfa/hizmetler üçer mobil tekrar, EN/RU ve kök URL. Mobil TR anasayfa medyan 73 (72–73), LCP 3,65 sn, TBT 305 ms, 2,59 MiB; hizmetler medyan 78 (71–89), LCP 5,46 sn. Diğer örnek iç sayfalar 87–96; masaüstü 97–100. EN 77, RU 78; kök → EN 69 ve iki yönlendirme.
+- Ölçülen canlı deployment `dpl_8pfgspyN7nipQzeMCW9PKARETtHY`; TASK-104 yerel `6a226dd` henüz canlı davranışta görünmüyor. Mobil ilk açılışta iki canvas (biri ekran dışında), ham hero img, 22 font ve ekran dışı proje dokuları var. Yerel 81–83 sonucu canlı skorla doğrudan önce/sonra karşılaştırması değildir.
+- Blogda mobil 230 toplam / 169 RSC, masaüstü 344 toplam / 277 RSC isteği. Sonraki ajan planı mevcut yerel iyileştirmeleri tekrarlamadan kalan CSS, liste prefetch, iç sayfa açılışı ve yönlendirme işlerini ele almalı; canlı yayın sonrası aynı URL/profil tekrar ölçülmeli.
+- Kalıcı veri/rapor `piton-docs/performance-audit-2026-10-09.json` ve `.md`; ham kayıtlar gitignore'daki `tmp/performance-audit-2026-10-09/`. PSI API 429 nedeniyle alan verisi yok; INP veya Core Web Vitals geçişi iddia edilmez. Bu aşamada uygulama kodu, push veya deploy değişmedi.
+
 ## Mobil performans (2026-10-09)
 - TASK-104: yerel webpack üretim derlemesinde Lighthouse mobil 59 → 83 (üç son ölçüm 83/83/83). LCP 7,1 → 4,4–4,5 sn; TBT 630 → 10 ms; CLS 0. Görsel transferi 1.288 → 42 KB, JS 602 → 283 KB, font isteği 22 → 8. FCP 1,5 → 1,8 sn; canlı skor bu yerel sonuçla aynı kabul edilmez.
 - Hero doğrudan boyutlu / öncelikli `next/image` kullanır; GLB hazır olmadığı için gereksiz Three.js / R3F / Drei logo import'u kaldırıldı. Hero mobilde SSR ile hemen görünür. Intro perde ve Lenis kaydırma kilidi 1000 px ve altında veya reduced-motion'da çalışmaz; masaüstü intro korunur.

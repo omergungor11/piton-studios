@@ -1,0 +1,1724 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Famagusta",
+  "tested": "live-production",
+  "localCommitAtAudit": "6a226dd",
+  "lighthouseVersion": "13.5.0",
+  "chromeUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+  "started": "2026-10-09T11:29:45.253Z",
+  "finished": "2026-10-09T11:37:36.791Z",
+  "profiles": {
+    "mobile": {
+      "screen": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "method": "simulate"
+    },
+    "desktop": {
+      "screen": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "method": "simulate"
+    }
+  },
+  "rawReportsDirectory": "/Users/arlec/Work-Restored/piton-studios/tmp/performance-audit-2026-10-09",
+  "fieldData": {
+    "available": false,
+    "reason": "PageSpeed Insights API returned HTTP 429 RESOURCE_EXHAUSTED; no CrUX or Vercel Speed Insights field data was retrieved."
+  },
+  "results": [
+    {
+      "name": "home-mobile-1",
+      "requestedUrl": "https://www.pitonstudios.com/tr",
+      "finalUrl": "https://www.pitonstudios.com/tr",
+      "device": "mobile",
+      "started": "2026-10-09T11:29:45.253Z",
+      "finished": "2026-10-09T11:30:04.970Z",
+      "score": 73,
+      "fcpMs": 1530,
+      "lcpMs": 3030,
+      "speedIndexMs": 10338.912254263523,
+      "tbtMs": 454,
+      "cls": 0.0015160419609616801,
+      "transferBytes": 2720825,
+      "requestCount": 110,
+      "rscCount": 30,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45755,
+          "decodedBytes": 176799
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236337,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317883,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49085,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897368,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18362,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 156035,
+          "decodedBytes": 529642
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398514,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 350 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "home-mobile-2",
+      "requestedUrl": "https://www.pitonstudios.com/tr",
+      "finalUrl": "https://www.pitonstudios.com/tr",
+      "device": "mobile",
+      "started": "2026-10-09T11:30:04.971Z",
+      "finished": "2026-10-09T11:30:19.110Z",
+      "score": 72,
+      "fcpMs": 1571.452,
+      "lcpMs": 4796.452,
+      "speedIndexMs": 5261.396847419612,
+      "tbtMs": 298.50000000000045,
+      "cls": 0.0015062035590160127,
+      "transferBytes": 2720945,
+      "requestCount": 110,
+      "rscCount": 30,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45754,
+          "decodedBytes": 176799
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236350,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317877,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49020,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897299,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18335,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 156310,
+          "decodedBytes": 529642
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 397218,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 350 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "home-mobile-3",
+      "requestedUrl": "https://www.pitonstudios.com/tr",
+      "finalUrl": "https://www.pitonstudios.com/tr",
+      "device": "mobile",
+      "started": "2026-10-09T11:30:19.112Z",
+      "finished": "2026-10-09T11:30:47.520Z",
+      "score": 73,
+      "fcpMs": 1620.29,
+      "lcpMs": 3645.29,
+      "speedIndexMs": 16227.122371809557,
+      "tbtMs": 305.00000000000045,
+      "cls": 0.0015033299003981756,
+      "transferBytes": 2721010,
+      "requestCount": 110,
+      "rscCount": 30,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45756,
+          "decodedBytes": 176799
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236340,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317884,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49016,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897371,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18358,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 156285,
+          "decodedBytes": 529642
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398514,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 340 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "projects-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/projeler",
+      "finalUrl": "https://www.pitonstudios.com/tr/projeler",
+      "device": "mobile",
+      "started": "2026-10-09T11:30:47.521Z",
+      "finished": "2026-10-09T11:31:04.776Z",
+      "score": 87,
+      "fcpMs": 1411.6435000000001,
+      "lcpMs": 3211.6435,
+      "speedIndexMs": 6039.966726803492,
+      "tbtMs": 3,
+      "cls": 0.0014338766461056546,
+      "transferBytes": 1426465,
+      "requestCount": 137,
+      "rscCount": 40,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 43723,
+          "decodedBytes": 327863
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236274,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 40,
+          "transferBytes": 451954,
+          "decodedBytes": 444767
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49130,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 28,
+          "transferBytes": 390409,
+          "decodedBytes": 1217958
+        },
+        "Fetch": {
+          "count": 41,
+          "transferBytes": 236607,
+          "decodedBytes": 760370
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18368,
+          "decodedBytes": 18171
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 75888,
+      "unusedCssEstimateBytes": 26617,
+      "renderBlockingEstimate": "Est savings of 200 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "project-detail-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/projeler/naiben",
+      "finalUrl": "https://www.pitonstudios.com/tr/projeler/naiben",
+      "device": "mobile",
+      "started": "2026-10-09T11:31:04.777Z",
+      "finished": "2026-10-09T11:31:17.998Z",
+      "score": 87,
+      "fcpMs": 1258.42,
+      "lcpMs": 3808.42,
+      "speedIndexMs": 3446.5477632182924,
+      "tbtMs": 4,
+      "cls": 0.0014976549243532783,
+      "transferBytes": 1259541,
+      "requestCount": 94,
+      "rscCount": 33,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 33367,
+          "decodedBytes": 125805
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236369,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 4,
+          "transferBytes": 345702,
+          "decodedBytes": 345153
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49056,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 28,
+          "transferBytes": 390333,
+          "decodedBytes": 1217958
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18334,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 34,
+          "transferBytes": 186380,
+          "decodedBytes": 616988
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 85312,
+      "unusedCssEstimateBytes": 28536,
+      "renderBlockingEstimate": "Est savings of 280 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "services-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "device": "mobile",
+      "started": "2026-10-09T11:31:17.999Z",
+      "finished": "2026-10-09T11:31:30.836Z",
+      "score": 78,
+      "fcpMs": 1561.8719999999998,
+      "lcpMs": 5461.871999999999,
+      "speedIndexMs": 3438.79918689147,
+      "tbtMs": 0,
+      "cls": 0.0014943891003328079,
+      "transferBytes": 1243899,
+      "requestCount": 94,
+      "rscCount": 33,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 44687,
+          "decodedBytes": 175169
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236306,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317660,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49783,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 28,
+          "transferBytes": 391292,
+          "decodedBytes": 1225201
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18340,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 34,
+          "transferBytes": 185831,
+          "decodedBytes": 616988
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 74937,
+      "unusedCssEstimateBytes": 26092,
+      "renderBlockingEstimate": "Est savings of 380 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "service-detail-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler/web-tasarim",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler/web-tasarim",
+      "device": "mobile",
+      "started": "2026-10-09T11:31:30.836Z",
+      "finished": "2026-10-09T11:31:44.255Z",
+      "score": 90,
+      "fcpMs": 1577.774,
+      "lcpMs": 3452.774,
+      "speedIndexMs": 3241.3370440759754,
+      "tbtMs": 3.5,
+      "cls": 0.001508787852870743,
+      "transferBytes": 1246348,
+      "requestCount": 94,
+      "rscCount": 33,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45524,
+          "decodedBytes": 178648
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236297,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317608,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49135,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 29,
+          "transferBytes": 393499,
+          "decodedBytes": 1233218
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18337,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 34,
+          "transferBytes": 185948,
+          "decodedBytes": 616988
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 83759,
+      "unusedCssEstimateBytes": 26015,
+      "renderBlockingEstimate": "Est savings of 410 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "blog-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/blog",
+      "finalUrl": "https://www.pitonstudios.com/tr/blog",
+      "device": "mobile",
+      "started": "2026-10-09T11:31:44.256Z",
+      "finished": "2026-10-09T11:32:17.353Z",
+      "score": 90,
+      "fcpMs": 1690.479,
+      "lcpMs": 3190.4790000000003,
+      "speedIndexMs": 4041.244134138069,
+      "tbtMs": 0.5,
+      "cls": 0.001891734512968537,
+      "transferBytes": 1461136,
+      "requestCount": 230,
+      "rscCount": 169,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 17654,
+          "decodedBytes": 102959
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236315,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317654,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49011,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 29,
+          "transferBytes": 390205,
+          "decodedBytes": 1218150
+        },
+        "Fetch": {
+          "count": 170,
+          "transferBytes": 431921,
+          "decodedBytes": 1261644
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18376,
+          "decodedBytes": 18171
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 119276,
+      "unusedCssEstimateBytes": 28345,
+      "renderBlockingEstimate": "Est savings of 420 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "article-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "finalUrl": "https://www.pitonstudios.com/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "device": "mobile",
+      "started": "2026-10-09T11:32:17.354Z",
+      "finished": "2026-10-09T11:32:31.283Z",
+      "score": 96,
+      "fcpMs": 1264.274,
+      "lcpMs": 2539.274,
+      "speedIndexMs": 3097.5760534114024,
+      "tbtMs": 0,
+      "cls": 0.001497517856833911,
+      "transferBytes": 1245607,
+      "requestCount": 108,
+      "rscCount": 46,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 20358,
+          "decodedBytes": 102689
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236279,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317676,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49049,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 30,
+          "transferBytes": 394828,
+          "decodedBytes": 1232723
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18364,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 47,
+          "transferBytes": 209053,
+          "decodedBytes": 680146
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 119318,
+      "unusedCssEstimateBytes": 25677,
+      "renderBlockingEstimate": "Est savings of 280 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "pricing-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/fiyatlandirma",
+      "finalUrl": "https://www.pitonstudios.com/tr/fiyatlandirma",
+      "device": "mobile",
+      "started": "2026-10-09T11:32:31.284Z",
+      "finished": "2026-10-09T11:32:46.123Z",
+      "score": 93,
+      "fcpMs": 1269.635,
+      "lcpMs": 3069.635,
+      "speedIndexMs": 3458.535752284304,
+      "tbtMs": 0,
+      "cls": 0.0014975835350202742,
+      "transferBytes": 1253913,
+      "requestCount": 100,
+      "rscCount": 32,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 33325,
+          "decodedBytes": 216387
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236347,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317642,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49075,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 36,
+          "transferBytes": 413995,
+          "decodedBytes": 1281241
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18350,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 33,
+          "transferBytes": 185179,
+          "decodedBytes": 613202
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 109649,
+      "unusedCssEstimateBytes": 27310,
+      "renderBlockingEstimate": "Est savings of 210 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "contact-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/tr/iletisim",
+      "finalUrl": "https://www.pitonstudios.com/tr/iletisim",
+      "device": "mobile",
+      "started": "2026-10-09T11:32:46.124Z",
+      "finished": "2026-10-09T11:32:59.265Z",
+      "score": 93,
+      "fcpMs": 1369.7269999999999,
+      "lcpMs": 2944.727,
+      "speedIndexMs": 3688.732388837193,
+      "tbtMs": 0,
+      "cls": 0.0014976920468064395,
+      "transferBytes": 1203423,
+      "requestCount": 91,
+      "rscCount": 32,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 17091,
+          "decodedBytes": 73428
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236352,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317626,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49061,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 27,
+          "transferBytes": 380432,
+          "decodedBytes": 1187160
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18356,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 33,
+          "transferBytes": 184505,
+          "decodedBytes": 613202
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 109578,
+      "unusedCssEstimateBytes": 25582,
+      "renderBlockingEstimate": "Est savings of 380 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "home-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr",
+      "finalUrl": "https://www.pitonstudios.com/tr",
+      "device": "desktop",
+      "started": "2026-10-09T11:32:59.266Z",
+      "finished": "2026-10-09T11:33:19.092Z",
+      "score": 98,
+      "fcpMs": 366.294,
+      "lcpMs": 781.294,
+      "speedIndexMs": 1520.8193421821707,
+      "tbtMs": 21.5,
+      "cls": 0.010217062274627913,
+      "transferBytes": 3466629,
+      "requestCount": 218,
+      "rscCount": 134,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45755,
+          "decodedBytes": 176799
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236292,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317944,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49834,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 36,
+          "transferBytes": 924792,
+          "decodedBytes": 3176897
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18327,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 135,
+          "transferBytes": 873685,
+          "decodedBytes": 2666216
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398304,
+      "unusedCssEstimateBytes": 21781,
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "projects-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/projeler",
+      "finalUrl": "https://www.pitonstudios.com/tr/projeler",
+      "device": "desktop",
+      "started": "2026-10-09T11:33:19.093Z",
+      "finished": "2026-10-09T11:33:40.132Z",
+      "score": 99,
+      "fcpMs": 344.355,
+      "lcpMs": 704.355,
+      "speedIndexMs": 1207.5770690762126,
+      "tbtMs": 0,
+      "cls": 0.011430442658526165,
+      "transferBytes": 2235882,
+      "requestCount": 256,
+      "rscCount": 156,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 43717,
+          "decodedBytes": 327863
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236315,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 39,
+          "transferBytes": 439125,
+          "decodedBytes": 432211
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49816,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 31,
+          "transferBytes": 417992,
+          "decodedBytes": 1311759
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18330,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 157,
+          "transferBytes": 1030587,
+          "decodedBytes": 3116966
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 74790,
+      "unusedCssEstimateBytes": 26310,
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "project-detail-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/projeler/naiben",
+      "finalUrl": "https://www.pitonstudios.com/tr/projeler/naiben",
+      "device": "desktop",
+      "started": "2026-10-09T11:33:40.133Z",
+      "finished": "2026-10-09T11:34:02.033Z",
+      "score": 100,
+      "fcpMs": 390.508,
+      "lcpMs": 570.508,
+      "speedIndexMs": 1128.711983688278,
+      "tbtMs": 0,
+      "cls": 0.011371339811407402,
+      "transferBytes": 2031962,
+      "requestCount": 202,
+      "rscCount": 137,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 33362,
+          "decodedBytes": 125805
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236302,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 4,
+          "transferBytes": 372346,
+          "decodedBytes": 371773
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49831,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 31,
+          "transferBytes": 417857,
+          "decodedBytes": 1311759
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18356,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 138,
+          "transferBytes": 903908,
+          "decodedBytes": 2753562
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 85312,
+      "unusedCssEstimateBytes": 28171,
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "services-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "device": "desktop",
+      "started": "2026-10-09T11:34:02.035Z",
+      "finished": "2026-10-09T11:34:23.360Z",
+      "score": 97,
+      "fcpMs": 372.95849999999996,
+      "lcpMs": 664.9585,
+      "speedIndexMs": 1684.116032506105,
+      "tbtMs": 0,
+      "cls": 0.011552325659844485,
+      "transferBytes": 1977300,
+      "requestCount": 199,
+      "rscCount": 136,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 44685,
+          "decodedBytes": 175169
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236279,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317653,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49812,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 30,
+          "transferBytes": 407977,
+          "decodedBytes": 1280961
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18335,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 137,
+          "transferBytes": 902559,
+          "decodedBytes": 2749684
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 74937,
+      "unusedCssEstimateBytes": 25810,
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "service-detail-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler/web-tasarim",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler/web-tasarim",
+      "device": "desktop",
+      "started": "2026-10-09T11:34:23.361Z",
+      "finished": "2026-10-09T11:34:43.991Z",
+      "score": 98,
+      "fcpMs": 391.71500000000003,
+      "lcpMs": 703.715,
+      "speedIndexMs": 1488.0674326107328,
+      "tbtMs": 0,
+      "cls": 0.01124112468644999,
+      "transferBytes": 1981698,
+      "requestCount": 200,
+      "rscCount": 136,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 45520,
+          "decodedBytes": 178648
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236280,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317609,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49857,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 31,
+          "transferBytes": 411557,
+          "decodedBytes": 1290913
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18359,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 137,
+          "transferBytes": 902516,
+          "decodedBytes": 2749663
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 83759,
+      "unusedCssEstimateBytes": 25790,
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "blog-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/blog",
+      "finalUrl": "https://www.pitonstudios.com/tr/blog",
+      "device": "desktop",
+      "started": "2026-10-09T11:34:43.992Z",
+      "finished": "2026-10-09T11:35:08.194Z",
+      "score": 99,
+      "fcpMs": 377.10499999999996,
+      "lcpMs": 697.105,
+      "speedIndexMs": 1150.059446031329,
+      "tbtMs": 0,
+      "cls": 0.011253705351722395,
+      "transferBytes": 2231893,
+      "requestCount": 344,
+      "rscCount": 277,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 17652,
+          "decodedBytes": 102959
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236330,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317619,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49701,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 34,
+          "transferBytes": 427664,
+          "decodedBytes": 1343092
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18327,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 278,
+          "transferBytes": 1164600,
+          "decodedBytes": 3447800
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 119255,
+      "unusedCssEstimateBytes": 27815,
+      "renderBlockingEstimate": "Est savings of 60 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "article-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "finalUrl": "https://www.pitonstudios.com/tr/blog/hizli-web-sitesi-nasil-yapilir",
+      "device": "desktop",
+      "started": "2026-10-09T11:35:08.197Z",
+      "finished": "2026-10-09T11:35:28.939Z",
+      "score": 99,
+      "fcpMs": 386.957,
+      "lcpMs": 746.957,
+      "speedIndexMs": 1242.488504712987,
+      "tbtMs": 0,
+      "cls": 0.011242867861592627,
+      "transferBytes": 1991706,
+      "requestCount": 216,
+      "rscCount": 150,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 20352,
+          "decodedBytes": 102689
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236361,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317619,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49667,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 422449,
+          "decodedBytes": 1326524
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18334,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 151,
+          "transferBytes": 926924,
+          "decodedBytes": 2816720
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 119036,
+      "unusedCssEstimateBytes": 25150,
+      "renderBlockingEstimate": "Est savings of 80 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "pricing-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/fiyatlandirma",
+      "finalUrl": "https://www.pitonstudios.com/tr/fiyatlandirma",
+      "device": "desktop",
+      "started": "2026-10-09T11:35:28.940Z",
+      "finished": "2026-10-09T11:35:46.360Z",
+      "score": 99,
+      "fcpMs": 339.967,
+      "lcpMs": 519.967,
+      "speedIndexMs": 1198.4777490463766,
+      "tbtMs": 0,
+      "cls": 0.011243223886465656,
+      "transferBytes": 1999560,
+      "requestCount": 208,
+      "rscCount": 136,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 33320,
+          "decodedBytes": 216387
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236288,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317611,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49841,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 39,
+          "transferBytes": 441364,
+          "decodedBytes": 1375042
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18327,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 137,
+          "transferBytes": 902809,
+          "decodedBytes": 2749776
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 109649,
+      "unusedCssEstimateBytes": 26874,
+      "renderBlockingEstimate": "Est savings of 70 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "contact-desktop",
+      "requestedUrl": "https://www.pitonstudios.com/tr/iletisim",
+      "finalUrl": "https://www.pitonstudios.com/tr/iletisim",
+      "device": "desktop",
+      "started": "2026-10-09T11:35:46.361Z",
+      "finished": "2026-10-09T11:36:04.203Z",
+      "score": 99,
+      "fcpMs": 377.3615,
+      "lcpMs": 657.3615,
+      "speedIndexMs": 1306.984589212237,
+      "tbtMs": 0,
+      "cls": 0.011435792587187209,
+      "transferBytes": 1950349,
+      "requestCount": 199,
+      "rscCount": 136,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 17099,
+          "decodedBytes": 73428
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236255,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317652,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49827,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 30,
+          "transferBytes": 408049,
+          "decodedBytes": 1280961
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18327,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 137,
+          "transferBytes": 903140,
+          "decodedBytes": 2749776
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 106802,
+      "unusedCssEstimateBytes": 25224,
+      "renderBlockingEstimate": "Est savings of 60 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "root-mobile",
+      "requestedUrl": "https://pitonstudios.com/",
+      "finalUrl": "https://www.pitonstudios.com/en",
+      "device": "mobile",
+      "started": "2026-10-09T11:36:04.206Z",
+      "finished": "2026-10-09T11:36:18.708Z",
+      "score": 69,
+      "fcpMs": 2108.8199999999997,
+      "lcpMs": 4208.82,
+      "speedIndexMs": 5857.505860425493,
+      "tbtMs": 419,
+      "cls": 0.0015095683762449154,
+      "transferBytes": 2711379,
+      "requestCount": 112,
+      "rscCount": 30,
+      "resources": {
+        "undefined": {
+          "count": 2,
+          "transferBytes": 417,
+          "decodedBytes": 0
+        },
+        "Document": {
+          "count": 1,
+          "transferBytes": 43374,
+          "decodedBytes": 170756
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236316,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317997,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49050,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897322,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18366,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 148537,
+          "decodedBytes": 506428
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [
+        "The page may not be loading as expected because your test URL (https://pitonstudios.com/) was redirected to https://www.pitonstudios.com/en. Try testing the second URL directly."
+      ],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398261,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 210 ms",
+      "redirectSavingsEstimateMs": 1658.82
+    },
+    {
+      "name": "services-mobile-2",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "device": "mobile",
+      "started": "2026-10-09T11:36:26.801Z",
+      "finished": "2026-10-09T11:36:41.068Z",
+      "score": 71,
+      "fcpMs": 2100.654,
+      "lcpMs": 6502.654,
+      "speedIndexMs": 5232.345574198673,
+      "tbtMs": 3,
+      "cls": 0.0018919125103721587,
+      "transferBytes": 1243783,
+      "requestCount": 94,
+      "rscCount": 33,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 44684,
+          "decodedBytes": 175169
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236312,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317648,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49765,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 28,
+          "transferBytes": 391174,
+          "decodedBytes": 1225201
+        },
+        "Fetch": {
+          "count": 34,
+          "transferBytes": 185855,
+          "decodedBytes": 616988
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18345,
+          "decodedBytes": 18171
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 76035,
+      "unusedCssEstimateBytes": 26092,
+      "renderBlockingEstimate": "Est savings of 300 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "services-mobile-3",
+      "requestedUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "finalUrl": "https://www.pitonstudios.com/tr/hizmetler",
+      "device": "mobile",
+      "started": "2026-10-09T11:36:41.069Z",
+      "finished": "2026-10-09T11:36:55.685Z",
+      "score": 89,
+      "fcpMs": 1530,
+      "lcpMs": 3105,
+      "speedIndexMs": 5400.488208246174,
+      "tbtMs": 2.5,
+      "cls": 0.0014976511169221846,
+      "transferBytes": 1243801,
+      "requestCount": 94,
+      "rscCount": 33,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 44685,
+          "decodedBytes": 175169
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236361,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 3,
+          "transferBytes": 317606,
+          "decodedBytes": 317321
+        },
+        "Stylesheet": {
+          "count": 5,
+          "transferBytes": 49831,
+          "decodedBytes": 247851
+        },
+        "Script": {
+          "count": 28,
+          "transferBytes": 391201,
+          "decodedBytes": 1225201
+        },
+        "Fetch": {
+          "count": 34,
+          "transferBytes": 185762,
+          "decodedBytes": 616988
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18355,
+          "decodedBytes": 18171
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 74853,
+      "unusedCssEstimateBytes": 26092,
+      "renderBlockingEstimate": "Est savings of 370 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "home-en-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/en",
+      "finalUrl": "https://www.pitonstudios.com/en",
+      "device": "mobile",
+      "started": "2026-10-09T11:36:55.686Z",
+      "finished": "2026-10-09T11:37:19.960Z",
+      "score": 77,
+      "fcpMs": 1601.449,
+      "lcpMs": 2876.449,
+      "speedIndexMs": 11076.944083872082,
+      "tbtMs": 365,
+      "cls": 0.0015130388496866624,
+      "transferBytes": 2711409,
+      "requestCount": 110,
+      "rscCount": 30,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 43483,
+          "decodedBytes": 170756
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236281,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317948,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49046,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897411,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18384,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 148856,
+          "decodedBytes": 506428
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398537,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 200 ms",
+      "redirectSavingsEstimateMs": 0
+    },
+    {
+      "name": "home-ru-mobile",
+      "requestedUrl": "https://www.pitonstudios.com/ru",
+      "finalUrl": "https://www.pitonstudios.com/ru",
+      "device": "mobile",
+      "started": "2026-10-09T11:37:19.961Z",
+      "finished": "2026-10-09T11:37:36.791Z",
+      "score": 78,
+      "fcpMs": 1611.444,
+      "lcpMs": 3411.444,
+      "speedIndexMs": 4664.003457924263,
+      "tbtMs": 410.5,
+      "cls": 0.0015055486808679271,
+      "transferBytes": 2772759,
+      "requestCount": 110,
+      "rscCount": 30,
+      "resources": {
+        "Document": {
+          "count": 1,
+          "transferBytes": 53996,
+          "decodedBytes": 224262
+        },
+        "Font": {
+          "count": 22,
+          "transferBytes": 236340,
+          "decodedBytes": 231604
+        },
+        "Image": {
+          "count": 18,
+          "transferBytes": 1317928,
+          "decodedBytes": 1314325
+        },
+        "Stylesheet": {
+          "count": 4,
+          "transferBytes": 49100,
+          "decodedBytes": 246369
+        },
+        "Script": {
+          "count": 33,
+          "transferBytes": 897335,
+          "decodedBytes": 3083096
+        },
+        "Other": {
+          "count": 1,
+          "transferBytes": 18333,
+          "decodedBytes": 18171
+        },
+        "Fetch": {
+          "count": 31,
+          "transferBytes": 199727,
+          "decodedBytes": 772162
+        }
+      },
+      "deploymentIds": [
+        "dpl_8pfgspyN7nipQzeMCW9PKARETtHY"
+      ],
+      "warnings": [],
+      "failedRequests": [],
+      "unusedJsEstimateBytes": 398580,
+      "unusedCssEstimateBytes": 21832,
+      "renderBlockingEstimate": "Est savings of 200 ms",
+      "redirectSavingsEstimateMs": 0
+    }
+  ],
+  "browserChecks": [
+    {
+      "name": "home",
+      "url": "https://www.pitonstudios.com/tr",
+      "status": 200,
+      "title": "Piton — Dijital Stüdyo",
+      "h1": "piton",
+      "viewportWidth": 412,
+      "scrollWidth": 412,
+      "canvas": [
+        {
+          "width": 618,
+          "height": 1234,
+          "top": 0,
+          "bottom": 823,
+          "inViewport": true
+        },
+        {
+          "width": 780,
+          "height": 1322,
+          "top": 1725,
+          "bottom": 2386,
+          "inViewport": false
+        }
+      ],
+      "hero": {
+        "tag": "IMG",
+        "src": "/logo.webp",
+        "srcset": null,
+        "width": null,
+        "height": null,
+        "priority": null
+      },
+      "desktopPreviewRequests": 13,
+      "resourceCount": 107,
+      "rscRequests": 30,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "name": "services",
+      "url": "https://www.pitonstudios.com/tr/hizmetler",
+      "status": 200,
+      "title": "Web, Yazılım ve Dijital Büyüme Hizmetleri — Piton",
+      "h1": "Neler Sunuyoruz?",
+      "viewportWidth": 412,
+      "scrollWidth": 412,
+      "canvas": [],
+      "hero": null,
+      "desktopPreviewRequests": 0,
+      "resourceCount": 88,
+      "rscRequests": 32,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "name": "blog",
+      "url": "https://www.pitonstudios.com/tr/blog",
+      "status": 200,
+      "title": "Blog: Web, SEO ve Yapay Zeka Rehberleri — Piton",
+      "h1": "Tasarım, kod ve yapay zekâ üzerine notlar.",
+      "viewportWidth": 412,
+      "scrollWidth": 412,
+      "canvas": [],
+      "hero": null,
+      "desktopPreviewRequests": 0,
+      "resourceCount": 227,
+      "rscRequests": 169,
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "largeChunks": [
+    {
+      "url": "https://www.pitonstudios.com/_next/static/chunks/0w2uc~~5276eo.js?dpl=dpl_8pfgspyN7nipQzeMCW9PKARETtHY",
+      "status": 200,
+      "length": 899425,
+      "sha256": "cc00f0d0baaef772720fa954e61b48247ea5e7f9004d4fd9d0503ce58c8a2c1a",
+      "three": true,
+      "r3f": false,
+      "sourceMap": ":(0,u.jsx)(\"div\",{ref:I,style:{width:\"100%\",height:\"100%\"},children:(0,u.jsx)(\"canvas\",{ref:N,style:{display:\"block\"},children:r})})})}e.i(88440),e.s([\"Canvas\",0,function(e){return(0,u.jsx)(l.FiberProvider,{children:(0,u.jsx)(c,{...e})})}],14437)}]);"
+    },
+    {
+      "url": "https://www.pitonstudios.com/_next/static/chunks/15f4308zmm~mz.js?dpl=dpl_8pfgspyN7nipQzeMCW9PKARETtHY",
+      "status": 200,
+      "length": 899425,
+      "sha256": "a7555a8cda3cf154c42a6440ea84efb045c7fb7232483a5b51c0df611470761b",
+      "three": true,
+      "r3f": false,
+      "sourceMap": ":(0,u.jsx)(\"canvas\",{ref:N,style:{display:\"block\"},children:r})})})}e.i(88440),e.s([\"Canvas\",0,function(e){return(0,u.jsx)(l.FiberProvider,{children:(0,u.jsx)(c,{...e})})}],14437)},63305,e=>{\"use strict\";var t=e.i(25167);e.s([\"useFrame\",()=>t.D])}]);"
+    }
+  ]
+}

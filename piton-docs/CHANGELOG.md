@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-09 — Canlı site performans denetimi (TASK-105)
+
+- Dokuz Türkçe sayfa türünde mobil/masaüstü, anasayfa/hizmetler tekrarları, EN/RU ve kök yönlendirme dahil 25 Lighthouse 13.5.0 ölçümü. TR mobil anasayfa 73/72/73 (medyan 73), LCP medyan 3,65 sn, TBT 305 ms; hizmetler 78/71/89 (medyan 78), LCP medyan 5,46 sn. Masaüstü 97–100. Bildirilen 43 bu koşullarda tekrarlanmadı.
+- Canlıda erken mobil WebGL, ekran dışı proje görselleri, 22 font / 231 KiB, ham hero logosu ve fazla RSC ön indirmesi doğrulandı. Önceki yerel TASK-104 iyileştirmeleri canlıda görünmüyor; yerel ve canlı sonuçlar ayrı tutuldu.
+- Kalıcı Markdown/JSON raporu `piton-docs/performance-audit-2026-10-09.*`; ham HTML/JSON ve betikler `tmp/performance-audit-2026-10-09/`. PSI API kota hatası nedeniyle gerçek kullanıcı INP/p75 verisi elde edilmedi. Üç mobil tarayıcı kontrolünde sayfa/kaynak hatası veya yatay taşma yok.
+- Uygulama kodu değişmedi; ajan geliştirmesi, push ve deploy yapılmadı. Rapor verileri 25 ham kayıtla karşılaştırıldı; lint 0 hata / 10 mevcut uyarı, typecheck ve varsayılan üretim build (868 sayfa) başarılı.
+
 ## 2026-10-09 — Mobil ilk yükleme ve Lighthouse (TASK-104)
 
 - Hero'da hazır olmayan GLB için indirilen 3B logo modülü kaldırıldı. Boyutlu, responsive ve yüksek öncelikli `next/image` hero logosu kullanılır; nav / mobil menü / intro logoları da optimize edilir. Mobil hero SSR ile görünür; intro perde / scroll kilidi ve ilk ekran reveal gecikmesi kaldırıldı. Masaüstü intro korunur.

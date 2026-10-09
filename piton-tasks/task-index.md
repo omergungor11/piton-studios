@@ -24,10 +24,10 @@
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
 | 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102) | 12 | 12 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
-| 20 | Mobil Performans (TASK-104) | 1 | 1 | 0 | 0 | 0 |
-| **Total** | | **103** | **102** | **0** | **0** | **0** |
+| 20 | Performans (TASK-104..105) | 2 | 2 | 0 | 0 | 0 |
+| **Total** | | **104** | **103** | **0** | **0** | **0** |
 
-**Progress**: 102/103 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
+**Progress**: 103/104 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED) ✓
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -226,8 +226,9 @@
 | TASK-095 | Belirtilen 22 projeyi yalnızca Seçilmiş Projeler tablosundan gizle; filtre sayılarını ve liste JSON-LD verisini eşleştir | S | COMPLETED |
 | TASK-103 | Naiben'i portfolyo ve anasayfa öne çıkanlarının ilk sırasına ekle; Radyo Juke'u anasayfa seçkisinden kaldır | S | COMPLETED |
 
-## Phase 20: Mobil performans (2026-10-09)
+## Phase 20: Performans (2026-10-09)
 
 | ID | Task | Complexity | Status |
 |----|------|------------|--------|
 | TASK-104 | Mobil Lighthouse darboğazlarını ölç; ilk ekran, 3B yükleme ve fontları optimize et; üretim ölçümü ve etkileşimleri doğrula | L | COMPLETED |
+| TASK-105 | Canlı siteyi mobil / masaüstü ve temel sayfa türlerinde ölç; tekrarlı sonuçları, kaynak yükünü ve geliştirme önceliklerini raporla | M | COMPLETED |
