@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-09 — Öne çıkan projeler scroll mesafesi kısaltıldı (TASK-112)
+
+- Anasayfa proje önizlemesinde kart başına scroll mesafesi 150 px'den 75 px'e indirildi; ilk dört proje yaklaşık yarı sticky mesafede tamamlanır.
+- Projeler arası ilerleme, geri kaydırma, manuel HUD kontrolleri ve bölüm dışından normal sayfa akışı korunur.
+- Proje scroll yardımcı fonksiyon testleri, lint, typecheck ve `pnpm build --webpack` başarılı.
+
 ## 2026-10-09 — Süreç bölümü ayrı sayfaya taşındı (TASK-111)
 
 - Anasayfadaki “Nasıl Çalışıyoruz” bölümü ve sahne göstergesi akıştan çıkarıldı; içerik yerelleştirilmiş ayrı süreç sayfasında tutulur.

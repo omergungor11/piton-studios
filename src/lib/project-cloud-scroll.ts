@@ -1,4 +1,5 @@
-export const PROJECT_SCROLL_PX_PER_CARD = 150;
+/** Ana sayfa proje önizlemesinde her kart için yutulan scroll mesafesi. */
+export const PROJECT_SCROLL_PX_PER_CARD = 75;
 const PAGE_PREVIEW_PROJECTS = 4;
 
 export function getProjectPreviewDistance(projectCount: number): number {
