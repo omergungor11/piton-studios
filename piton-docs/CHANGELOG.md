@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-09 — Mobil hizmet badge'leri yan yana (TASK-110)
+
+- Anasayfa hizmet kartlarında sıra numarası ve kategori badge'i 480 px ve altında da aynı satırda kalır; dar kartlarda uzun kategori adları tek satır içinde ellipsis ile kısaltılır.
+- Tarayıcıda 320 ve 390 px görünümde yatay sıra, 1280 px görünümde üç sütunlu masaüstü düzeni ve taşmasız sayfa doğrulandı.
+- Lint 0 hata / 10 mevcut uyarı, typecheck ve `pnpm build --webpack` başarılı (868 sayfa).
+
 ## 2026-10-09 — Tablet ve mobil hizmetler iki sütun (TASK-109)
 
 - Anasayfadaki altı hizmet kartı 1024 px ve altında iki sütun / üç satır olarak gösterilir; geniş masaüstünde üç sütun / iki satır korunur.
