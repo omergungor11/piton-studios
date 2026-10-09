@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-09 — Başlangıç animasyon motoru (TASK-114)
+
+- Ajan geliştirmesi ve bağımsız inceleme: altı Reveal çağrısı CSS + IntersectionObserver; beş varyant, 0,9 sn/easing/delay, once ve div/li API'si korunur. Gerçek %20 eşik, statik/dinamik reduced-motion, no-JS ve IO/hydration wrapper fallback'ları; tüm gözlemci/dinleyici/zamanlayıcı cleanup. Kullanılmayan Stagger export'ları kaldırıldı.
+- CSS fallback iki uçta explicit transform none kullanır; implicit başlangıcın sonradan kimlik matrisi/containing block bırakması tarayıcı testinde bulundu ve düzeltildi. Proje spring, font preload ve 35 font binary'si korunur.
+- Başlangıç fa0c98c, 30 nihai + 15 aday Lighthouse. JS transferi anasayfa 268,9 → 237,4 KB (%11,7), hizmetler 271,7 → 232,3 KB (%14,5), projeler 256,0 → 216,6 KB (%15,4). Toplam transfer %6,2/%8,4/%6,9 azaldı. Ana mobil CLS 0.
+- Son matris harici CPU/GPU yükü altında: CPU benchmark medyanı 4264,5 → 2415; RU/blog uyarısı. Aday 86/87/87, son ana mobil medyan 86/87/87 olsa da güvenilir skor artışı iddia edilmez. Düşük EN/RU/blog/masaüstü sonuçları ve tüm kalibrasyonlar JSON'da korunur. Canlı 43 ile doğrudan karşılaştırma yok.
+- 34 düzen kontrolü; nihai client navigation stillerle eşleşir. 23 genel + 11 portfolyo + 11 native kontrol, GPU offscreen 540/540, gerçek context loss sonrası 15 kartlı fallback, dört scroll testi başarılı. Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü, Turbopack build 868 sayfa geçti.
+- Plan `piton-plans/startup-motion-performance.md`, kalıcı 45 kayıt/kod hash'leri `piton-docs/startup-motion-2026-10-09.json`; ham betikler/görseller `tmp/startup-motion-2026-10-09/`. Kullanıcı main push istedi; Git üretim hedefi pitonworks-projects/piton-studios olarak doğrulandı. Yerel .vercel eski video-portfolio bağlantısı kullanılmaz; paket/lock/.env/config değişmedi.
+
 ## 2026-10-09 — Kritik ilk yükleme verisi ve dekorasyon (TASK-113)
 
 - Üç ajanla anasayfa hizmet kartları sunucu slotuna, projeler 31 satır / 39 önizleme / altı alan ve teslim örneği için küçük yerelleştirilmiş props'a taşındı. Tam hizmet/proje verisi ve ilgili çeviri katalogları ilk istemci yükünden çıkarıldı; sahne metadata'sı ayrı modülde.

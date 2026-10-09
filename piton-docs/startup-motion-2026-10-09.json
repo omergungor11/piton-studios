@@ -1,0 +1,5220 @@
+{
+  "task": "TASK-114",
+  "date": "2026-10-09",
+  "baseCommit": "fa0c98c",
+  "build": {
+    "framework": "Next.js 16.2.4",
+    "bundler": "Turbopack",
+    "command": "NEXT_TURBOPACK_EXPERIMENTAL_USE_SYSTEM_TLS_CERTS=1 pnpm build",
+    "pages": 868
+  },
+  "methodology": {
+    "url": "http://localhost:3100",
+    "lighthouse": "13.5.0",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "totalRuns": 45,
+    "primaryRuns": 30,
+    "sequentialChromeOnly": true,
+    "realUserData": false,
+    "sourceHashes": [
+      {
+        "path": "src/components/motion.tsx",
+        "before": "0c690b1acd0a756d115f9784d55d72294bd21a53f675680858d89ab306b1cc1f",
+        "after": "dd0ea1b3f8f34fd08376e902bc67193c59a23e60e962b0339bca856650f6a5fe"
+      },
+      {
+        "path": "src/components/motion/native-reveal.module.css",
+        "before": null,
+        "after": "e0171665eecda11496ba5ce8b6298d10b243d8c27a408c01ff19d9d356ef2987"
+      },
+      {
+        "path": "src/components/motion/reveal-observer.tsx",
+        "before": "fc4bc63711aed130bc4585ae1f131239b3382786ac092533de434df2bcd1559f",
+        "after": "fc4bc63711aed130bc4585ae1f131239b3382786ac092533de434df2bcd1559f"
+      },
+      {
+        "path": "src/components/projects-v2/project-cloud-section.tsx",
+        "before": "2b39bc66e7641a4f8663e57458f87d963a5115d9134119a4c3ff55af1c413eb0",
+        "after": "2b39bc66e7641a4f8663e57458f87d963a5115d9134119a4c3ff55af1c413eb0"
+      },
+      {
+        "path": "src/lib/fonts.ts",
+        "before": "9a6f3e2c6e055d16d150b3a5e0f297dee06188b7beb0b87ea74e87050e4066e2",
+        "after": "9a6f3e2c6e055d16d150b3a5e0f297dee06188b7beb0b87ea74e87050e4066e2"
+      },
+      {
+        "path": "src/app/globals.css",
+        "before": "f3bcabc6df9d9559dee2a0a30da76fede9e10f41af682842724e11d739ac3ce1",
+        "after": "f3bcabc6df9d9559dee2a0a30da76fede9e10f41af682842724e11d739ac3ce1"
+      }
+    ],
+    "scoringComparable": false,
+    "limitation": "Final host CPU benchmark dropped markedly under concurrent external CPU/GPU load; scores/LCP/TBT are recorded but no reliable score uplift is claimed. Resource transfer reduction remains verified."
+  },
+  "profiles": {
+    "mobile": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "cli",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "desktop": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "cli",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    }
+  },
+  "comparison": [
+    {
+      "name": "home",
+      "before": {
+        "score": 86,
+        "fcp": 1524.2775,
+        "lcp": 4168.462500000001,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 497679,
+        "scores": [
+          86,
+          86,
+          85
+        ],
+        "scriptBytes": 268905
+      },
+      "after": {
+        "score": 86,
+        "fcp": 1549.0751999999998,
+        "lcp": 4104.321250000001,
+        "tbt": 23.5,
+        "cls": 0,
+        "transferBytes": 466989,
+        "scores": [
+          83,
+          86,
+          86
+        ],
+        "scriptBytes": 237407
+      },
+      "scriptReductionPct": 11.71343039363344,
+      "transferReductionPct": 6.166625475457072
+    },
+    {
+      "name": "services",
+      "before": {
+        "score": 87,
+        "fcp": 1514.75955,
+        "lcp": 3972.6262000000006,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 461743,
+        "scores": [
+          88,
+          87,
+          87
+        ],
+        "scriptBytes": 271656
+      },
+      "after": {
+        "score": 87,
+        "fcp": 1543.959,
+        "lcp": 3932.112000000001,
+        "tbt": 31.5,
+        "cls": 0,
+        "transferBytes": 423180,
+        "scores": [
+          87,
+          84,
+          88
+        ],
+        "scriptBytes": 232322
+      },
+      "scriptReductionPct": 14.479341520157847,
+      "transferReductionPct": 8.351615509060235
+    },
+    {
+      "name": "projects",
+      "before": {
+        "score": 86,
+        "fcp": 1521.8688,
+        "lcp": 4113.5676,
+        "tbt": 1,
+        "cls": 0,
+        "transferBytes": 559295,
+        "scores": [
+          86,
+          87,
+          86
+        ],
+        "scriptBytes": 255970
+      },
+      "after": {
+        "score": 87,
+        "fcp": 1588.8969,
+        "lcp": 3969.5292000000004,
+        "tbt": 23.5,
+        "cls": 0,
+        "transferBytes": 520748,
+        "scores": [
+          89,
+          82,
+          87
+        ],
+        "scriptBytes": 216631
+      },
+      "scriptReductionPct": 15.368597882564362,
+      "transferReductionPct": 6.892069480327913
+    }
+  ],
+  "resources": [
+    {
+      "name": "before-home-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 497679
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 19,
+          "transferSize": 268905
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 29558
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24505
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0sh4b5seqrj7j.js",
+          "transferSize": 9028,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/01fbb.76az-1-.js",
+          "transferSize": 9968,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 28980,
+          "wastedPercent": 73.33543521368657
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24407,
+          "wastedPercent": 34.36350678374716
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-home-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 497679
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 19,
+          "transferSize": 268905
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 29558
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24505
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0sh4b5seqrj7j.js",
+          "transferSize": 9028,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/01fbb.76az-1-.js",
+          "transferSize": 9968,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 28980,
+          "wastedPercent": 73.33543521368657
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24407,
+          "wastedPercent": 34.36350678374716
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-home-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 497679
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 19,
+          "transferSize": 268905
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 29558
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24505
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0sh4b5seqrj7j.js",
+          "transferSize": 9028,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/01fbb.76az-1-.js",
+          "transferSize": 9968,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 28980,
+          "wastedPercent": 73.33543521368657
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 23246,
+          "wastedPercent": 32.72784063913281
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-home-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 466989
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 237407
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 30293
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24578
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0xxp6404xvwc1.js",
+          "transferSize": 9581,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yk_qhfrpsc03.js",
+          "transferSize": 17814,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24205,
+          "wastedPercent": 34.07843102750453
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-home-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 466989
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 237407
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 30293
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24578
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0xxp6404xvwc1.js",
+          "transferSize": 9581,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yk_qhfrpsc03.js",
+          "transferSize": 17814,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24431,
+          "wastedPercent": 34.396501662941915
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-home-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 35,
+          "transferSize": 466989
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 237407
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 3,
+          "transferSize": 42786
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 30293
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24578
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0xxp6404xvwc1.js",
+          "transferSize": 9581,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hpl1n4k0nxhf.js",
+          "transferSize": 13872,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yk_qhfrpsc03.js",
+          "transferSize": 17814,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24431,
+          "wastedPercent": 34.396501662941915
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-services-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 461743
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 271656
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 27861
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24617
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13zfni_z.0m77.js",
+          "transferSize": 21735,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25338,
+          "wastedPercent": 35.67362345364
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-services-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 461743
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 271656
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 27861
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24617
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13zfni_z.0m77.js",
+          "transferSize": 21735,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25338,
+          "wastedPercent": 35.67362345364
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-services-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 461743
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 271656
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 27861
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24617
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13zfni_z.0m77.js",
+          "transferSize": 21735,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25338,
+          "wastedPercent": 35.67362345364
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-services-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 423180
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 232322
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 28596
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24653
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yjv059-6qm_o.js",
+          "transferSize": 22298,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25350,
+          "wastedPercent": 35.690780790821265
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-services-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 423180
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 232322
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 28596
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24653
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yjv059-6qm_o.js",
+          "transferSize": 22298,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 23911,
+          "wastedPercent": 33.664455276541084
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-services-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 33,
+          "transferSize": 423180
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 232322
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 28596
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 24653
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 2,
+          "transferSize": 5684
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0yjv059-6qm_o.js",
+          "transferSize": 22298,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25350,
+          "wastedPercent": 35.690780790821265
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-projects-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 559295
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 255970
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29418
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 28351
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/173igmky28e7q.js",
+          "transferSize": 6049,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25112,
+          "wastedPercent": 35.35555281820261
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-projects-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 559295
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 255970
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29418
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 28351
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/173igmky28e7q.js",
+          "transferSize": 6049,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25112,
+          "wastedPercent": 35.35555281820261
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "before-projects-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 559295
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 18,
+          "transferSize": 255970
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29418
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 3,
+          "transferSize": 28351
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/173igmky28e7q.js",
+          "transferSize": 6049,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "transferSize": 39897,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+          "totalBytes": 39517,
+          "wastedBytes": 29409,
+          "wastedPercent": 74.42066922764195
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25112,
+          "wastedPercent": 35.35555281820261
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-projects-mobile-1",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 520748
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 216631
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29475
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 29086
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ws3d~ntd9hq~.js",
+          "transferSize": 6607,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25124,
+          "wastedPercent": 35.372710155383885
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-projects-mobile-2",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 520748
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 216631
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29475
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 29086
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ws3d~ntd9hq~.js",
+          "transferSize": 6607,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 24045,
+          "wastedPercent": 33.852746053812446
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    },
+    {
+      "name": "after-projects-mobile-3",
+      "resources": [
+        {
+          "resourceType": "total",
+          "label": "Total",
+          "requestCount": 64,
+          "transferSize": 520748
+        },
+        {
+          "resourceType": "script",
+          "label": "Script",
+          "requestCount": 17,
+          "transferSize": 216631
+        },
+        {
+          "resourceType": "image",
+          "label": "Image",
+          "requestCount": 33,
+          "transferSize": 113631
+        },
+        {
+          "resourceType": "font",
+          "label": "Font",
+          "requestCount": 8,
+          "transferSize": 113423
+        },
+        {
+          "resourceType": "document",
+          "label": "Document",
+          "requestCount": 1,
+          "transferSize": 29475
+        },
+        {
+          "resourceType": "stylesheet",
+          "label": "Stylesheet",
+          "requestCount": 4,
+          "transferSize": 29086
+        },
+        {
+          "resourceType": "other",
+          "label": "Other",
+          "requestCount": 1,
+          "transferSize": 18502
+        },
+        {
+          "resourceType": "media",
+          "label": "Media",
+          "requestCount": 0,
+          "transferSize": 0
+        },
+        {
+          "resourceType": "third-party",
+          "label": "Third-party",
+          "requestCount": 0,
+          "transferSize": 0
+        }
+      ],
+      "scripts": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0v_a03_37ubdy.js",
+          "transferSize": 2414,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0wkac84eipimq.js",
+          "transferSize": 9372,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "transferSize": 37578,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "transferSize": 71407,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0gpklpza7t7cg.js",
+          "transferSize": 9631,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/turbopack-0zupqrw.9igdc.js",
+          "transferSize": 4553,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0hhw3xgmprga1.js",
+          "transferSize": 1845,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0630xw2hegg6t.js",
+          "transferSize": 13269,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ajdpnw2vf.o~.js",
+          "transferSize": 5163,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/11zd69-ln~wy3.js",
+          "transferSize": 12353,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/13ohm5763uvjn.js",
+          "transferSize": 9756,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0u8-0528g-vx0.js",
+          "transferSize": 12575,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/153ozn52n_xzh.js",
+          "transferSize": 4454,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0ws3d~ntd9hq~.js",
+          "transferSize": 6607,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/09fn69zkvw3.6.js",
+          "transferSize": 13884,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        },
+        {
+          "url": "http://localhost:3100/_vercel/speed-insights/script.js",
+          "transferSize": 885,
+          "priority": "Low"
+        }
+      ],
+      "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+      "unusedJs": [
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+          "totalBytes": 71027,
+          "wastedBytes": 25124,
+          "wastedPercent": 35.372710155383885
+        },
+        {
+          "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+          "totalBytes": 37198,
+          "wastedBytes": 20933,
+          "wastedPercent": 56.274153882187605
+        }
+      ]
+    }
+  ],
+  "runs": {
+    "before": [
+      {
+        "name": "before-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:39:36.554Z",
+        "finished": "2026-10-09T17:39:47.703Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1520.87595,
+        "lcp": 4105.6692,
+        "speedIndex": 1520.87595,
+        "tbt": 12.500000000000227,
+        "cls": 0,
+        "transferBytes": 497679,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3943,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:39:47.704Z",
+        "finished": "2026-10-09T17:39:58.194Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1524.2775,
+        "lcp": 4168.462500000001,
+        "speedIndex": 1524.2775,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 497679,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4011.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:39:58.195Z",
+        "finished": "2026-10-09T17:40:08.461Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1526.18115,
+        "lcp": 4321.635249999999,
+        "speedIndex": 1526.18115,
+        "tbt": 4.5,
+        "cls": 0,
+        "transferBytes": 497679,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3985.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:08.462Z",
+        "finished": "2026-10-09T17:40:18.433Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 88,
+        "fcp": 1516.31115,
+        "lcp": 3906.2482,
+        "speedIndex": 1516.31115,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 461743,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4290,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:18.434Z",
+        "finished": "2026-10-09T17:40:28.370Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1514.34465,
+        "lcp": 3972.6262000000006,
+        "speedIndex": 1514.34465,
+        "tbt": 1,
+        "cls": 0,
+        "transferBytes": 461743,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4294,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:28.371Z",
+        "finished": "2026-10-09T17:40:38.644Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1514.75955,
+        "lcp": 4024.639325000001,
+        "speedIndex": 1514.75955,
+        "tbt": 5,
+        "cls": 0,
+        "transferBytes": 461743,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4003,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:38.645Z",
+        "finished": "2026-10-09T17:40:49.247Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 86,
+        "fcp": 1521.8688,
+        "lcp": 4116.092800000002,
+        "speedIndex": 1521.8688,
+        "tbt": 1,
+        "cls": 0,
+        "transferBytes": 559295,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4148.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:49.247Z",
+        "finished": "2026-10-09T17:40:59.871Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1524.15885,
+        "lcp": 4058.2118000000014,
+        "speedIndex": 1524.15885,
+        "tbt": 0.5,
+        "cls": 0,
+        "transferBytes": 559295,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4273,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:40:59.871Z",
+        "finished": "2026-10-09T17:41:10.794Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 86,
+        "fcp": 1518.3096,
+        "lcp": 4113.5676,
+        "speedIndex": 1518.3096,
+        "tbt": 5,
+        "cls": 0,
+        "transferBytes": 559295,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4271.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T17:41:10.795Z",
+        "finished": "2026-10-09T17:41:20.834Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 86,
+        "fcp": 1517.8921500000001,
+        "lcp": 4127.8562,
+        "speedIndex": 1517.8921500000001,
+        "tbt": 4.000000000000455,
+        "cls": 0,
+        "transferBytes": 487583,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4235.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T17:41:20.834Z",
+        "finished": "2026-10-09T17:41:30.855Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 86,
+        "fcp": 1514.29245,
+        "lcp": 4203.82075,
+        "speedIndex": 1514.29245,
+        "tbt": 2.5,
+        "cls": 0,
+        "transferBytes": 496258,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4264,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T17:41:30.855Z",
+        "finished": "2026-10-09T17:41:40.766Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1512.68895,
+        "lcp": 3673.9186000000004,
+        "speedIndex": 1512.68895,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 404842,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4321,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T17:41:40.767Z",
+        "finished": "2026-10-09T17:41:51.035Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 373.93065,
+        "lcp": 1018.5742,
+        "speedIndex": 824.916645935587,
+        "tbt": 0,
+        "cls": 0.01023018319532827,
+        "transferBytes": 901350,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4318,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T17:41:51.035Z",
+        "finished": "2026-10-09T17:42:01.156Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 99,
+        "fcp": 376.1082,
+        "lcp": 1001.4776,
+        "speedIndex": 638.3349762655189,
+        "tbt": 0,
+        "cls": 0.011621591130807667,
+        "transferBytes": 663840,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4348.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T17:42:01.157Z",
+        "finished": "2026-10-09T17:42:12.330Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 98,
+        "fcp": 378.51225,
+        "lcp": 1144.683,
+        "speedIndex": 626.8019879231508,
+        "tbt": 0,
+        "cls": 0.011498689608726284,
+        "transferBytes": 808352,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4264.5,
+          "credits": {}
+        }
+      }
+    ],
+    "after": [
+      {
+        "name": "after-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T18:02:51.126Z",
+        "finished": "2026-10-09T18:03:04.864Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 83,
+        "fcp": 1549.0751999999998,
+        "lcp": 4421.1504,
+        "speedIndex": 2851.68484977265,
+        "tbt": 68,
+        "cls": 0,
+        "transferBytes": 466989,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2880,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T18:03:04.865Z",
+        "finished": "2026-10-09T18:03:17.255Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1554.4927500000001,
+        "lcp": 4104.321250000001,
+        "speedIndex": 1817.7633676134308,
+        "tbt": 21.5,
+        "cls": 0,
+        "transferBytes": 466989,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2707,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T18:03:17.256Z",
+        "finished": "2026-10-09T18:03:29.131Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1544.5837500000002,
+        "lcp": 4076.8062499999996,
+        "speedIndex": 1544.5837500000002,
+        "tbt": 23.5,
+        "cls": 0,
+        "transferBytes": 466989,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2845.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T18:03:29.132Z",
+        "finished": "2026-10-09T18:03:41.665Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1543.959,
+        "lcp": 3932.112000000001,
+        "speedIndex": 1614.0089907254646,
+        "tbt": 27,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2706,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T18:03:41.667Z",
+        "finished": "2026-10-09T18:03:55.153Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 84,
+        "fcp": 1598.1442499999998,
+        "lcp": 4283.288500000001,
+        "speedIndex": 2908.951148485255,
+        "tbt": 52,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2753,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T18:03:55.155Z",
+        "finished": "2026-10-09T18:04:07.310Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 88,
+        "fcp": 1538.4645,
+        "lcp": 3857.286,
+        "speedIndex": 1569.1563212415285,
+        "tbt": 31.5,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2725,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T18:04:07.311Z",
+        "finished": "2026-10-09T18:04:22.913Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 89,
+        "fcp": 1430.5851,
+        "lcp": 3735.4467999999997,
+        "speedIndex": 1606.275037150508,
+        "tbt": 23.5,
+        "cls": 0,
+        "transferBytes": 520748,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2593,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T18:04:22.915Z",
+        "finished": "2026-10-09T18:04:38.824Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 82,
+        "fcp": 1610.1285,
+        "lcp": 4787.9665,
+        "speedIndex": 2798.946825122541,
+        "tbt": 26,
+        "cls": 0,
+        "transferBytes": 520748,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2399.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T18:04:38.825Z",
+        "finished": "2026-10-09T18:04:53.008Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1588.8969,
+        "lcp": 3969.5292000000004,
+        "speedIndex": 1614.6838905543923,
+        "tbt": 23,
+        "cls": 0,
+        "transferBytes": 520748,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2415,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T18:04:53.008Z",
+        "finished": "2026-10-09T18:05:10.007Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 51,
+        "fcp": 1571.1204,
+        "lcp": 5037.3272,
+        "speedIndex": 4145.5297002978905,
+        "tbt": 2268.233,
+        "cls": 0,
+        "transferBytes": 456891,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 1346.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T18:05:10.008Z",
+        "finished": "2026-10-09T18:05:31.748Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 63,
+        "fcp": 1391.2721,
+        "lcp": 3519.4523500000005,
+        "speedIndex": 2556.444816169792,
+        "tbt": 1831.1819750000002,
+        "cls": 0,
+        "transferBytes": 465565,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 970.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T18:05:31.827Z",
+        "finished": "2026-10-09T18:05:51.559Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 60,
+        "fcp": 1562.3215500000001,
+        "lcp": 4143.0954,
+        "speedIndex": 2979.225980957249,
+        "tbt": 1366.9523,
+        "cls": 0,
+        "transferBytes": 404842,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 875.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T18:05:51.562Z",
+        "finished": "2026-10-09T18:06:09.496Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 462.1568,
+        "lcp": 653.2352,
+        "speedIndex": 1431.3422789288675,
+        "tbt": 9.921600000000012,
+        "cls": 0.010231956747284996,
+        "transferBytes": 870660,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 2381,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T18:06:09.499Z",
+        "finished": "2026-10-09T18:06:26.256Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 531.35755,
+        "lcp": 1354.92925,
+        "speedIndex": 1740.603989182185,
+        "tbt": 213.0000000000001,
+        "cls": 0.011718561395707974,
+        "transferBytes": 625277,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 1170.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T18:06:26.259Z",
+        "finished": "2026-10-09T18:06:45.039Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 91,
+        "fcp": 537.97765,
+        "lcp": 1424.9590249999997,
+        "speedIndex": 1853.559870769238,
+        "tbt": 109.49999999999932,
+        "cls": 0.022649881473323263,
+        "transferBytes": 769805,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 1189,
+          "credits": {}
+        }
+      }
+    ],
+    "candidate": [
+      {
+        "name": "after-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:46:05.774Z",
+        "finished": "2026-10-09T17:46:17.710Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 84,
+        "fcp": 1548.3033,
+        "lcp": 4424.606599999999,
+        "speedIndex": 1714.7578913431216,
+        "tbt": 44,
+        "cls": 0,
+        "transferBytes": 466988,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3710.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:46:17.710Z",
+        "finished": "2026-10-09T17:46:28.485Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1523.1981,
+        "lcp": 4154.163500000001,
+        "speedIndex": 1523.1981,
+        "tbt": 12.000000000000455,
+        "cls": 0,
+        "transferBytes": 466988,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3764.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:46:28.492Z",
+        "finished": "2026-10-09T17:46:39.527Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1527.7465499999998,
+        "lcp": 4164.74425,
+        "speedIndex": 1527.7465499999998,
+        "tbt": 15,
+        "cls": 0,
+        "transferBytes": 466988,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3682,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:46:39.529Z",
+        "finished": "2026-10-09T17:46:50.368Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1522.9578000000001,
+        "lcp": 3931.262999999999,
+        "speedIndex": 1522.9578000000001,
+        "tbt": 7,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3796.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:46:50.369Z",
+        "finished": "2026-10-09T17:47:01.348Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 88,
+        "fcp": 1532.8746,
+        "lcp": 3822.8328,
+        "speedIndex": 1532.8746,
+        "tbt": 54,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3112,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:47:01.349Z",
+        "finished": "2026-10-09T17:47:12.254Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1522.9564500000001,
+        "lcp": 3928.2607499999995,
+        "speedIndex": 1522.9564500000001,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 423180,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3423.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:47:12.255Z",
+        "finished": "2026-10-09T17:47:25.022Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 92,
+        "fcp": 1380.2576,
+        "lcp": 3274.3864,
+        "speedIndex": 1380.2576,
+        "tbt": 14.5,
+        "cls": 0,
+        "transferBytes": 520749,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3627.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:47:25.023Z",
+        "finished": "2026-10-09T17:47:37.188Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1534.1913,
+        "lcp": 4020.588400000001,
+        "speedIndex": 1534.1913,
+        "tbt": 12.5,
+        "cls": 0,
+        "transferBytes": 520749,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3907,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:47:37.188Z",
+        "finished": "2026-10-09T17:47:49.484Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1542.078,
+        "lcp": 3966.13,
+        "speedIndex": 1542.078,
+        "tbt": 10.5,
+        "cls": 0,
+        "transferBytes": 520749,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3376,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T17:47:49.485Z",
+        "finished": "2026-10-09T17:48:00.445Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 86,
+        "fcp": 1521.8101499999998,
+        "lcp": 4148.85025,
+        "speedIndex": 1521.8101499999998,
+        "tbt": 8,
+        "cls": 0,
+        "transferBytes": 456888,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3964.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T17:48:00.446Z",
+        "finished": "2026-10-09T17:48:11.358Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 86,
+        "fcp": 1522.97175,
+        "lcp": 4088.286249999999,
+        "speedIndex": 1522.97175,
+        "tbt": 12.5,
+        "cls": 0,
+        "transferBytes": 465564,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3842,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T17:48:11.359Z",
+        "finished": "2026-10-09T17:48:22.012Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1518.4989,
+        "lcp": 3699.6652000000013,
+        "speedIndex": 1518.4989,
+        "tbt": 12.5,
+        "cls": 0,
+        "transferBytes": 404841,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3916,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T17:48:22.013Z",
+        "finished": "2026-10-09T17:48:33.419Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 419.45305,
+        "lcp": 1025.9373999999998,
+        "speedIndex": 873.69930895008,
+        "tbt": 0,
+        "cls": 0.010231433910157316,
+        "transferBytes": 870659,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3572.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T17:48:33.420Z",
+        "finished": "2026-10-09T17:48:44.521Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 99,
+        "fcp": 422.2861,
+        "lcp": 1009.7147999999999,
+        "speedIndex": 684.7688806843731,
+        "tbt": 0,
+        "cls": 0.011621547356542528,
+        "transferBytes": 625277,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3917,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T17:48:44.521Z",
+        "finished": "2026-10-09T17:48:57.550Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 98,
+        "fcp": 440.14209999999997,
+        "lcp": 1133.5228000000002,
+        "speedIndex": 708.8912735204108,
+        "tbt": 0,
+        "cls": 0.011499309763377598,
+        "transferBytes": 769806,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3877.5,
+          "credits": {}
+        }
+      }
+    ]
+  },
+  "fonts": {
+    "before": [
+      {
+        "file": "02263ebadd758ea4.0qg7j5o.yrclm.woff2",
+        "bytes": 4036,
+        "sha256": "b2529fba93fd07a50ffb8fc3d103eb04b0c298d4f6564d2833c44fde286de7e4"
+      },
+      {
+        "file": "0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2",
+        "bytes": 22320,
+        "sha256": "a0d054c4af557de20afd6ca59f47ab353bcaec49c63ff04b6c9d39d0f8910557"
+      },
+      {
+        "file": "151f074d78c0031d.0hdqp.ao76ew_.woff2",
+        "bytes": 7268,
+        "sha256": "ef23e7e57c4e64231239608c8bdd069599af93728ef6230fc4d87be3b5ec459b"
+      },
+      {
+        "file": "1a69062cfe6f77f8.07r2ragk8ph~z.woff2",
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      {
+        "file": "21c1dee959b18079.07jqaw7268ozj.woff2",
+        "bytes": 11588,
+        "sha256": "ca01bc88e9b2bfae3a373baddd098c4be0ef9a5b96f5836361f5b9b409297bea"
+      },
+      {
+        "file": "23b7a97ae3b5c134.0o14nraug8u5s.woff2",
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      {
+        "file": "28868e710e86be81.p.0rx81dn62y51_.woff2",
+        "bytes": 18924,
+        "sha256": "054c266fbb441ee059365dba0885d206f67ca05b375de869b88e02ebfccc9b9d"
+      },
+      {
+        "file": "2956efe007516702.0osx2brc3z96o.woff2",
+        "bytes": 7096,
+        "sha256": "103854ed0d7d3336025c9f9586f503b09cbd0c7db4e4a8157a2bf442eafe12d5"
+      },
+      {
+        "file": "2e95a7d252b9825a.0dgq8lqrj3gc_.woff2",
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      {
+        "file": "2fe89d53234c61d4.0k_.i63k_i_qa.woff2",
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      {
+        "file": "32687112bd2dd8db.0gspg~~t9nou8.woff2",
+        "bytes": 6772,
+        "sha256": "d699664b145bfeeccc66a4cce7fa55e14eb63efd7ec6b0b2ec52e25dd98f3917"
+      },
+      {
+        "file": "3e29d6c8df211d66.0s54-9j8fqoaz.woff2",
+        "bytes": 5128,
+        "sha256": "a62fc04dad82f6038fc95f48932a7958a5804042a1620fa92c8b44d4973422f8"
+      },
+      {
+        "file": "3ee1b1187b5e60bc.0o3xiofc54cuk.woff2",
+        "bytes": 4616,
+        "sha256": "049c578e11c5dbb49fd101ee67445409a156a38ac3e0b26e6945e9a886ce3f71"
+      },
+      {
+        "file": "59b15b4bcd7b1eb5.0x08jh8vondwt.woff2",
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      {
+        "file": "5e05ae5b48faa55e.0m9hhkgdlzukj.woff2",
+        "bytes": 4336,
+        "sha256": "311098be73eac339128f0b5a6e33d72645b6f87488541fdf467c402152d297fd"
+      },
+      {
+        "file": "658fb2a9c2a0ea5d.0do1o-n_dmm3f.woff2",
+        "bytes": 4416,
+        "sha256": "fe88a1e1a9cdb5b50308f09aaf573987f4ba2177bc6faa5feeb82a47df277bbb"
+      },
+      {
+        "file": "68757d6cddeff913.0hkrq11n-dhos.woff2",
+        "bytes": 8848,
+        "sha256": "77f03e26f981c582bdba3a7abed4baa2d3149211c01366bb3ab3ba7622ec4ae5"
+      },
+      {
+        "file": "6a793dba767aa497.0w_k.lkp_pqj6.woff2",
+        "bytes": 5156,
+        "sha256": "c847c0e7594820a9eb323aa24e588a529028daa182062577055eeb488f547061"
+      },
+      {
+        "file": "6ff74e33ebd7bca3.0_n_qwbzcushi.woff2",
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      {
+        "file": "7c125d9da13f978a.03gs.40dtl4ho.woff2",
+        "bytes": 9788,
+        "sha256": "c590f625acd1a18021f23486445b03b8435879b406db1003d3fdd7804e9319fb"
+      },
+      {
+        "file": "99e609270109b47d.16-z~2sp29ex6.woff2",
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      {
+        "file": "9a4838fcda0d1bca.0787d67~10694.woff2",
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      {
+        "file": "a46a75cfd765634f.05w.dojgtyxj~.woff2",
+        "bytes": 11568,
+        "sha256": "2665f5fbbb334780fa135c7f1dc6e2459061a2d6d44c32b7c1fdbc34cde65ede"
+      },
+      {
+        "file": "a7afbb44bec2bb18.0juuwbcf7uz~t.woff2",
+        "bytes": 5500,
+        "sha256": "d524dc8ff6dbf7ed69772f3b2ff4affaf5a89b5762b270e36c3f21da0d4e39f5"
+      },
+      {
+        "file": "bb1a7daf057744c1.0.7tm11uf-kr2.woff2",
+        "bytes": 4584,
+        "sha256": "17d298d439d5ed0dda81a45a408cf58f1cc07f3e09a515ca7d1a4ca66b20ba66"
+      },
+      {
+        "file": "c752d4f65d3e00e0.006uzf-gzuf5l.woff2",
+        "bytes": 5228,
+        "sha256": "192ab4bf51d62cddfccd0a676b5e393a49b5f8bb8d339a49c1bd0589994fef65"
+      },
+      {
+        "file": "cb74272c1a4b1482.0hx--h4h8.no_.woff2",
+        "bytes": 11608,
+        "sha256": "aadf248432e8a7368af4b2780385a2375b7381e84d8a1b609a45ddeab1bfc5a6"
+      },
+      {
+        "file": "cf54ce4ee2f7915c.16e4nux6or3il.woff2",
+        "bytes": 7252,
+        "sha256": "41d845d90290bb548c15d163f8e76f710027a6ed80acbd65c627e57961734a47"
+      },
+      {
+        "file": "e390973e931a41c5.08hd0g.321csk.woff2",
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      {
+        "file": "e532fa1b9921e1cd.0~wrfy7sm-h4g.woff2",
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      {
+        "file": "eb34f5373173429c.0hpya677b0oli.woff2",
+        "bytes": 10132,
+        "sha256": "2a017e5a210426255a96431aa96e957847c5b813ae9765f91a39dabc10042318"
+      },
+      {
+        "file": "ecc49aa4bef31f74.0b09bhu34_n_x.woff2",
+        "bytes": 10048,
+        "sha256": "5260b8fd2ffbe4aee20c987fc0fe51b3340c213e19fae76c51e3530708030821"
+      },
+      {
+        "file": "effe91970fc4db64.07ig5l8azj~hy.woff2",
+        "bytes": 10060,
+        "sha256": "a76f53ca6612e7b3828eec2311098675b7f9849ae4169a8bcef6302aec02a6c0"
+      },
+      {
+        "file": "nippo_bold-s.p.0k6yc-cy498jn.woff2",
+        "bytes": 14880,
+        "sha256": "7e56d2e80637d98664ea8bf6c0e5e97a3a5c2adae19f797bd5da417f44379e74"
+      },
+      {
+        "file": "nippo_medium-s.p.06d-prhqn8ii3.woff2",
+        "bytes": 15708,
+        "sha256": "c793aaa1eb9ad82b0bcf58c695c486842b9259f705280d524358c147536dbb37"
+      }
+    ],
+    "after": [
+      {
+        "file": "02263ebadd758ea4.0qg7j5o.yrclm.woff2",
+        "bytes": 4036,
+        "sha256": "b2529fba93fd07a50ffb8fc3d103eb04b0c298d4f6564d2833c44fde286de7e4"
+      },
+      {
+        "file": "0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2",
+        "bytes": 22320,
+        "sha256": "a0d054c4af557de20afd6ca59f47ab353bcaec49c63ff04b6c9d39d0f8910557"
+      },
+      {
+        "file": "151f074d78c0031d.0hdqp.ao76ew_.woff2",
+        "bytes": 7268,
+        "sha256": "ef23e7e57c4e64231239608c8bdd069599af93728ef6230fc4d87be3b5ec459b"
+      },
+      {
+        "file": "1a69062cfe6f77f8.07r2ragk8ph~z.woff2",
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      {
+        "file": "21c1dee959b18079.07jqaw7268ozj.woff2",
+        "bytes": 11588,
+        "sha256": "ca01bc88e9b2bfae3a373baddd098c4be0ef9a5b96f5836361f5b9b409297bea"
+      },
+      {
+        "file": "23b7a97ae3b5c134.0o14nraug8u5s.woff2",
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      {
+        "file": "28868e710e86be81.p.0rx81dn62y51_.woff2",
+        "bytes": 18924,
+        "sha256": "054c266fbb441ee059365dba0885d206f67ca05b375de869b88e02ebfccc9b9d"
+      },
+      {
+        "file": "2956efe007516702.0osx2brc3z96o.woff2",
+        "bytes": 7096,
+        "sha256": "103854ed0d7d3336025c9f9586f503b09cbd0c7db4e4a8157a2bf442eafe12d5"
+      },
+      {
+        "file": "2e95a7d252b9825a.0dgq8lqrj3gc_.woff2",
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      {
+        "file": "2fe89d53234c61d4.0k_.i63k_i_qa.woff2",
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      {
+        "file": "32687112bd2dd8db.0gspg~~t9nou8.woff2",
+        "bytes": 6772,
+        "sha256": "d699664b145bfeeccc66a4cce7fa55e14eb63efd7ec6b0b2ec52e25dd98f3917"
+      },
+      {
+        "file": "3e29d6c8df211d66.0s54-9j8fqoaz.woff2",
+        "bytes": 5128,
+        "sha256": "a62fc04dad82f6038fc95f48932a7958a5804042a1620fa92c8b44d4973422f8"
+      },
+      {
+        "file": "3ee1b1187b5e60bc.0o3xiofc54cuk.woff2",
+        "bytes": 4616,
+        "sha256": "049c578e11c5dbb49fd101ee67445409a156a38ac3e0b26e6945e9a886ce3f71"
+      },
+      {
+        "file": "59b15b4bcd7b1eb5.0x08jh8vondwt.woff2",
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      {
+        "file": "5e05ae5b48faa55e.0m9hhkgdlzukj.woff2",
+        "bytes": 4336,
+        "sha256": "311098be73eac339128f0b5a6e33d72645b6f87488541fdf467c402152d297fd"
+      },
+      {
+        "file": "658fb2a9c2a0ea5d.0do1o-n_dmm3f.woff2",
+        "bytes": 4416,
+        "sha256": "fe88a1e1a9cdb5b50308f09aaf573987f4ba2177bc6faa5feeb82a47df277bbb"
+      },
+      {
+        "file": "68757d6cddeff913.0hkrq11n-dhos.woff2",
+        "bytes": 8848,
+        "sha256": "77f03e26f981c582bdba3a7abed4baa2d3149211c01366bb3ab3ba7622ec4ae5"
+      },
+      {
+        "file": "6a793dba767aa497.0w_k.lkp_pqj6.woff2",
+        "bytes": 5156,
+        "sha256": "c847c0e7594820a9eb323aa24e588a529028daa182062577055eeb488f547061"
+      },
+      {
+        "file": "6ff74e33ebd7bca3.0_n_qwbzcushi.woff2",
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      {
+        "file": "7c125d9da13f978a.03gs.40dtl4ho.woff2",
+        "bytes": 9788,
+        "sha256": "c590f625acd1a18021f23486445b03b8435879b406db1003d3fdd7804e9319fb"
+      },
+      {
+        "file": "99e609270109b47d.16-z~2sp29ex6.woff2",
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      {
+        "file": "9a4838fcda0d1bca.0787d67~10694.woff2",
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      {
+        "file": "a46a75cfd765634f.05w.dojgtyxj~.woff2",
+        "bytes": 11568,
+        "sha256": "2665f5fbbb334780fa135c7f1dc6e2459061a2d6d44c32b7c1fdbc34cde65ede"
+      },
+      {
+        "file": "a7afbb44bec2bb18.0juuwbcf7uz~t.woff2",
+        "bytes": 5500,
+        "sha256": "d524dc8ff6dbf7ed69772f3b2ff4affaf5a89b5762b270e36c3f21da0d4e39f5"
+      },
+      {
+        "file": "bb1a7daf057744c1.0.7tm11uf-kr2.woff2",
+        "bytes": 4584,
+        "sha256": "17d298d439d5ed0dda81a45a408cf58f1cc07f3e09a515ca7d1a4ca66b20ba66"
+      },
+      {
+        "file": "c752d4f65d3e00e0.006uzf-gzuf5l.woff2",
+        "bytes": 5228,
+        "sha256": "192ab4bf51d62cddfccd0a676b5e393a49b5f8bb8d339a49c1bd0589994fef65"
+      },
+      {
+        "file": "cb74272c1a4b1482.0hx--h4h8.no_.woff2",
+        "bytes": 11608,
+        "sha256": "aadf248432e8a7368af4b2780385a2375b7381e84d8a1b609a45ddeab1bfc5a6"
+      },
+      {
+        "file": "cf54ce4ee2f7915c.16e4nux6or3il.woff2",
+        "bytes": 7252,
+        "sha256": "41d845d90290bb548c15d163f8e76f710027a6ed80acbd65c627e57961734a47"
+      },
+      {
+        "file": "e390973e931a41c5.08hd0g.321csk.woff2",
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      {
+        "file": "e532fa1b9921e1cd.0~wrfy7sm-h4g.woff2",
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      {
+        "file": "eb34f5373173429c.0hpya677b0oli.woff2",
+        "bytes": 10132,
+        "sha256": "2a017e5a210426255a96431aa96e957847c5b813ae9765f91a39dabc10042318"
+      },
+      {
+        "file": "ecc49aa4bef31f74.0b09bhu34_n_x.woff2",
+        "bytes": 10048,
+        "sha256": "5260b8fd2ffbe4aee20c987fc0fe51b3340c213e19fae76c51e3530708030821"
+      },
+      {
+        "file": "effe91970fc4db64.07ig5l8azj~hy.woff2",
+        "bytes": 10060,
+        "sha256": "a76f53ca6612e7b3828eec2311098675b7f9849ae4169a8bcef6302aec02a6c0"
+      },
+      {
+        "file": "nippo_bold-s.p.0k6yc-cy498jn.woff2",
+        "bytes": 14880,
+        "sha256": "7e56d2e80637d98664ea8bf6c0e5e97a3a5c2adae19f797bd5da417f44379e74"
+      },
+      {
+        "file": "nippo_medium-s.p.06d-prhqn8ii3.woff2",
+        "bytes": 15708,
+        "sha256": "c793aaa1eb9ad82b0bcf58c695c486842b9259f705280d524358c147536dbb37"
+      }
+    ],
+    "removed": [],
+    "added": []
+  },
+  "validation": {
+    "layoutPages": 34,
+    "layoutDifferences": 0,
+    "flows": [
+      {
+        "name": "initial-traffic",
+        "route": "/tr",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/hizmetler",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/blog",
+        "rsc": 0
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "hover",
+        "rsc": 6
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "focus",
+        "rsc": 5
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "save-data",
+        "rsc": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "tr",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "en",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "ru",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "mobile-menu",
+        "navigated": "/tr/projeler",
+        "scrollLockReleased": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 390,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 1280,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 430,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1000,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1001,
+        "animations": [
+          "reveal-fade",
+          "reveal-fade",
+          "reveal-fade"
+        ]
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/hizmetler",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/fiyatlandirma",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/iletisim",
+        "visibleHero": true
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/font-lab",
+        "status": 404
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/projeler-v2",
+        "status": 404
+      },
+      {
+        "name": "project-preview",
+        "mobileView": true
+      },
+      {
+        "name": "light-theme",
+        "dark": "rgba(20, 20, 20, 0.55)",
+        "light": "rgba(255, 255, 255, 0.58)"
+      }
+    ],
+    "criticalFlows": [
+      {
+        "name": "project-catalog",
+        "locale": "tr",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "tr",
+        "cards": 6,
+        "equalHeight": 370,
+        "columns": 2
+      },
+      {
+        "name": "project-catalog",
+        "locale": "en",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "en",
+        "cards": 6,
+        "equalHeight": 352,
+        "columns": 2
+      },
+      {
+        "name": "project-catalog",
+        "locale": "ru",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "ru",
+        "cards": 6,
+        "equalHeight": 405,
+        "columns": 2
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 390,
+        "dpr": 1,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+        "width": "256",
+        "bytes": 13072,
+        "length": "214.25973355292325px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 430,
+        "dpr": 2,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "width": "640",
+        "bytes": 57322,
+        "length": "202.25973355292325px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 1280,
+        "dpr": 2,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "width": "640",
+        "bytes": 57322,
+        "length": "271.4097335529232px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "sprite-dpr-resize",
+        "before": {
+          "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+          "length": "214.25973355292325px"
+        },
+        "after": {
+          "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+          "length": "214.25973355292325px"
+        },
+        "geometryPreserved": true
+      },
+      {
+        "name": "terminal-visibility",
+        "initialOffscreenMutations": 0,
+        "visibleMutations": 7,
+        "pauseResume": true,
+        "visibilityEventPauseResume": true,
+        "reducedMotionLines": 21
+      }
+    ],
+    "nativeReveal": [
+      {
+        "name": "native-animations",
+        "width": 390,
+        "thresholds": [
+          0,
+          0,
+          0.05118053779006004
+        ],
+        "intermediate": {
+          "state": "visible",
+          "observed": "true",
+          "opacity": 0.401556,
+          "transform": "matrix(1, 0, 0, 1, 0, 16.7564)",
+          "duration": "0.9s",
+          "delay": "0.1s",
+          "ease": "cubic-bezier(0.16, 0.84, 0.32, 1)"
+        },
+        "once": true,
+        "variants": [
+          {
+            "selector": ".note-media",
+            "delay": "0.2s"
+          },
+          {
+            "selector": ".contact-actions",
+            "delay": "0.2s"
+          },
+          {
+            "selector": ".contact-socials",
+            "delay": "0.25s"
+          },
+          {
+            "selector": ".contact-form",
+            "delay": "0.3s"
+          }
+        ],
+        "phase": "candidate; native JS and normal CSS unchanged by final fallback keyframes fix"
+      },
+      {
+        "name": "native-animations",
+        "width": 1280,
+        "thresholds": [
+          0,
+          0,
+          0.04694315046072006
+        ],
+        "intermediate": {
+          "state": "visible",
+          "observed": "true",
+          "opacity": 0.710012,
+          "transform": "matrix(1, 0, 0, 1, 0, 8.11967)",
+          "duration": "0.9s",
+          "delay": "0.1s",
+          "ease": "cubic-bezier(0.16, 0.84, 0.32, 1)"
+        },
+        "once": true,
+        "variants": [
+          {
+            "selector": ".note-media",
+            "delay": "0.2s"
+          },
+          {
+            "selector": ".contact-actions",
+            "delay": "0.2s"
+          },
+          {
+            "selector": ".contact-socials",
+            "delay": "0.25s"
+          },
+          {
+            "selector": ".contact-form",
+            "delay": "0.3s"
+          }
+        ],
+        "phase": "candidate; native JS and normal CSS unchanged by final fallback keyframes fix"
+      },
+      {
+        "name": "reduced-motion-static",
+        "count": 5,
+        "phase": "candidate; native JS and normal CSS unchanged by final fallback keyframes fix"
+      },
+      {
+        "name": "reduced-motion-dynamic",
+        "contentVisible": true,
+        "phase": "candidate; native JS and normal CSS unchanged by final fallback keyframes fix"
+      },
+      {
+        "name": "native-no-javascript",
+        "route": "/tr",
+        "states": [
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 87,
+            "links": 2
+          },
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 52,
+            "links": 0
+          },
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 15,
+            "links": 3
+          },
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 0,
+            "links": 8
+          },
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 186,
+            "links": 1
+          }
+        ]
+      },
+      {
+        "name": "native-no-javascript",
+        "route": "/tr/nasil-calisiyoruz",
+        "states": [
+          {
+            "opacity": "1",
+            "transform": "none",
+            "text": 122,
+            "links": 1
+          }
+        ]
+      },
+      {
+        "name": "native-fail-open",
+        "failure": "throw",
+        "visible": 5
+      },
+      {
+        "name": "native-fail-open",
+        "failure": "silent",
+        "visible": 5
+      },
+      {
+        "name": "native-fail-open",
+        "failure": "hydrate",
+        "visible": 5
+      },
+      {
+        "name": "native-client-navigation-cleanup",
+        "target": "/tr/iletisim",
+        "leakedObservers": 0,
+        "wrappers": 3
+      },
+      {
+        "name": "native-process-footer",
+        "wrappers": 1
+      }
+    ],
+    "gpu": {
+      "before": 540,
+      "after": 540,
+      "errors": [],
+      "lazyCanvas": true,
+      "controls": true,
+      "offscreenPause": true,
+      "contextLossFallbackCards": 15,
+      "noJs": true,
+      "shortLandscape": true
+    },
+    "lint": {
+      "errors": 0,
+      "existingWarnings": 10
+    },
+    "typecheck": true,
+    "translationsChecked": 630,
+    "projectScrollTests": 4,
+    "build": true
+  },
+  "releaseTarget": {
+    "method": "git push origin main",
+    "github": "omergungor11/piton-studios",
+    "productionBranch": "main",
+    "vercelProject": "piton-studios",
+    "projectId": "prj_OuruE1zdrWG4QeKx3JiWB2ifTjGx",
+    "teamId": "team_vFz3wugG2OWHH5SiYQsk9Ggt",
+    "url": "https://www.pitonstudios.com"
+  },
+  "behaviorNote": "Native Reveal enforces actual intersectionRatio >= 0.2. Previous Motion initial viewport callback could reveal a smaller intersection; intended 20% threshold now consistently applies."
+}

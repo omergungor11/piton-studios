@@ -24,10 +24,10 @@
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
 | 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112) | 18 | 18 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
-| 20 | Performans (TASK-104..106, 113) | 4 | 4 | 0 | 0 | 0 |
-| **Total** | | **112** | **111** | **0** | **0** | **0** |
+| 20 | Performans (TASK-104..106, 113..114) | 5 | 5 | 0 | 0 | 0 |
+| **Total** | | **113** | **112** | **0** | **0** | **0** |
 
-**Progress**: 111/112 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
+**Progress**: 112/113 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -240,3 +240,4 @@
 | TASK-105 | Canlı siteyi mobil / masaüstü ve temel sayfa türlerinde ölç; tekrarlı sonuçları, kaynak yükünü ve geliştirme önceliklerini raporla | M | COMPLETED |
 | TASK-106 | Ajanlarla kalan CSS, ön indirme ve ilk ekran yüklerini azalt; aynı üretim profilinde önce/sonra ve kullanıcı akışlarını doğrula | L | COMPLETED |
 | TASK-113 | Kritik yükteki veri/çeviri, font ve dekorasyon trafiğini azalt; anasayfa/hizmetler/projeler LCP'sini tekrarlı üretim ölçümleriyle doğrula | L | COMPLETED |
+| TASK-114 | Başlangıç animasyon motorunu küçült; native Reveal davranışını ve tekrarlı performansı doğrula, commit ve push yap | M | COMPLETED |

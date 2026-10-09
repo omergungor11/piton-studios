@@ -1,41 +1,27 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
-import { type ReactNode } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
+import styles from './motion/native-reveal.module.css';
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const fadeIn: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-};
-
-const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
-  visible: { opacity: 1, scale: 1 },
-};
-
-const slideLeft: Variants = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const slideRight: Variants = {
-  hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0 },
-};
-
-// Smooth, slightly slow cinematic easing shared across reveals.
-const EASE = [0.16, 0.84, 0.32, 1] as const;
-
-const VARIANTS = { fadeUp, fadeIn, scaleIn, slideLeft, slideRight } as const;
+const HIDDEN_TRANSFORMS = {
+  fadeUp: 'translateY(28px)',
+  fadeIn: 'none',
+  scaleIn: 'scale(0.96)',
+  slideLeft: 'translateX(40px)',
+  slideRight: 'translateX(-40px)',
+} as const;
 
 interface RevealProps {
   children: ReactNode;
-  variant?: keyof typeof VARIANTS;
+  variant?: keyof typeof HIDDEN_TRANSFORMS;
   delay?: number;
   duration?: number;
   className?: string;
@@ -51,63 +37,99 @@ export function Reveal({
   duration = 0.9,
   className,
   once = true,
-  as = 'div',
-}: RevealProps) {
-  const Component = (as === 'li' ? motion.li : motion.div) as typeof motion.div;
+  as: Component = 'div',
+}: RevealProps): ReactElement {
+  const elementRef = useRef<HTMLElement | null>(null);
+  const [visible, setVisible] = useState(false);
+  const setElement = useCallback((element: HTMLElement | null) => {
+    elementRef.current = element;
+  }, []);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    let disposed = false;
+    let revealed = false;
+    let observer: IntersectionObserver | null = null;
+    let failOpenTimer: number | undefined;
+    const clearTimer = () => {
+      window.clearTimeout(failOpenTimer);
+      failOpenTimer = undefined;
+    };
+    const stopObserving = () => {
+      observer?.disconnect();
+      observer = null;
+      clearTimer();
+    };
+    const showContent = () => {
+      if (disposed) return;
+      revealed = true;
+      setVisible(true);
+    };
+
+    if (typeof window.matchMedia !== 'function') {
+      showContent();
+      return;
+    }
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const observe = () => {
+      stopObserving();
+      if (reducedMotion.matches || typeof IntersectionObserver === 'undefined' || (once && revealed)) {
+        showContent();
+        return;
+      }
+
+      try {
+        observer = new IntersectionObserver(([entry]) => {
+          if (disposed) return;
+          clearTimer();
+          // Baslangic bildirimi esigin altinda da gelebilir; erken acilmasin.
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+            showContent();
+            if (once) stopObserving();
+          } else if (!once) {
+            setVisible(false);
+          }
+        }, { threshold: 0.2 });
+        observer.observe(element);
+        element.setAttribute('data-native-reveal-observed', 'true');
+        // Gozlemci hic bildirim vermezse icerik sakli kalmasin.
+        failOpenTimer = window.setTimeout(() => {
+          stopObserving();
+          showContent();
+        }, 3000);
+      } catch {
+        stopObserving();
+        showContent();
+      }
+    };
+
+    observe();
+    reducedMotion.addEventListener('change', observe);
+    return () => {
+      disposed = true;
+      stopObserving();
+      reducedMotion.removeEventListener('change', observe);
+      element.removeAttribute('data-native-reveal-observed');
+    };
+  }, [Component, once]);
+
+  const style = {
+    '--native-reveal-duration': `${duration}s`,
+    '--native-reveal-delay': `${delay}s`,
+    '--native-reveal-transform': HIDDEN_TRANSFORMS[variant],
+  } as CSSProperties;
+
   return (
     <Component
-      variants={VARIANTS[variant]}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount: 0.2 }}
-      transition={{ duration, delay, ease: EASE }}
-      className={className}
+      ref={setElement}
+      className={`${styles.root}${className ? ` ${className}` : ''}`}
+      data-native-reveal-state={visible ? 'visible' : 'pending'}
+      style={style}
     >
       {children}
     </Component>
-  );
-}
-
-interface StaggerProps {
-  children: ReactNode;
-  className?: string;
-  staggerDelay?: number;
-  once?: boolean;
-}
-
-export function Stagger({
-  children,
-  className,
-  staggerDelay = 0.1,
-  once = true,
-}: StaggerProps) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount: 0.15 }}
-      transition={{ staggerChildren: staggerDelay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-export function StaggerItem({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      transition={{ duration: 0.75, ease: EASE }}
-      className={className}
-    >
-      {children}
-    </motion.div>
   );
 }

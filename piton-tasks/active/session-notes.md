@@ -1,5 +1,13 @@
 # Session Notes
 
+## 2026-10-09 — Rapora göre geliştirme ve push (TASK-114)
+
+- Kullanıcı geliştirme ve push istedi. Paket ajanı native Reveal'ı uyguladı, ayrı ajan React/SSR/motion/cleanup incelemesini yaptı. Ana ajan CSS fallback kimlik matrisi sorununu tarayıcı testinde bulup from/to none ile düzeltti; proje spring ve mevcut TASK-104..113/görsel düzenleri korunur.
+- 45 Lighthouse: önce 15, aday 15, nihai 15. JS %11,7/%14,5/%15,4, toplam transfer %6,2/%8,4/%6,9 azaldı. Harici CPU/GPU yükü nedeniyle son benchmark 4264,5 → 2415; RU/blog CPU uyarısı, EN/RU/blog ve bazı masaüstü skorları ölçüm açısından karşılaştırılamaz. Kayıtlar silinmedi; güvenilir skor artışı çıkarımı yapılmadı. Skor tekrarı için optional kullanıcı tercihi soruldu; main push çalışması devam eder.
+- 34 düzen karşılaştırması sıfır fark; nihai iki genişlikte 8 rotalık client navigation stilleri aynı. 23 genel, 11 portfolyo, 11 native akış (normal JS/CSS aynı kalan dört kontrol adayda, diğer yedi finalde) başarılı. Fallback IO throw/silent/hydrate, no-JS ikon linkleri, observer cleanup ve süreç CTA'sı çalışır.
+- GPU 540/540 ekran dışında sabit; gerçek context loss fallback 15 kart, kısa yatay telefon/JS kapalı ilk ekran ve dört scroll testi başarılı. Lint 0 hata/10 mevcut uyarı, typecheck, 630 çeviri kontrolü, üç Turbopack build 868 sayfa geçti. Fonts/preload/source binary'leri korunur; sistem TLS geçici bayrağı her build'de kullanıldı.
+- Plan/JSON kalıcı, raw tmp/startup-motion-2026-10-09/. Vercel gerçek piton-studios proje/team ve main Git bağlantısı doğrulandı; eski .vercel/video-portfolio linki değiştirilmedi/kullanılmadı. Önceki 10 yerel commit ve TASK-114 main push için hazırlanır; yayın doğrulaması ayrı kayıtla tamamlanır. Diğer süreçlere dokunulmadı.
+
 ## 2026-10-09 — Kritik ilk yüklemeye devam (TASK-113)
 
 - Kullanıcının “devam edelim” isteğiyle üç ajan hizmet server slotu, projelerin küçük locale props'u ve font adayını geliştirdi. Ana ajan SCENES/slot/DeliveryFlow entegrasyonu, terminal/sprite, ölçüm ve son incelemeyi yaptı. TASK-107..112 düzenleri ve 75 px proje önizlemesi korundu.
