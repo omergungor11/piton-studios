@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-09 — Başlangıç animasyon motoru (TASK-114)
+- **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 
 - Ajan geliştirmesi ve bağımsız inceleme: altı Reveal çağrısı CSS + IntersectionObserver; beş varyant, 0,9 sn/easing/delay, once ve div/li API'si korunur. Gerçek %20 eşik, statik/dinamik reduced-motion, no-JS ve IO/hydration wrapper fallback'ları; tüm gözlemci/dinleyici/zamanlayıcı cleanup. Kullanılmayan Stagger export'ları kaldırıldı.
 - CSS fallback iki uçta explicit transform none kullanır; implicit başlangıcın sonradan kimlik matrisi/containing block bırakması tarayıcı testinde bulundu ve düzeltildi. Proje spring, font preload ve 35 font binary'si korunur.

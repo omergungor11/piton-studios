@@ -1,6 +1,7 @@
 # Piton - Project Memory
 
 ## Başlangıç animasyon yükü (2026-10-09, TASK-114)
+- **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 - Reveal native CSS/IO; aynı beş varyant, 0,9 sn/easing/delay, once ve div/li. Gerçek ratio >= .2 şartı; no-JS/reduced-motion/fail-open ve cleanup. Ortak data-reveal gözlemcisiyle karışmaması için data-native-reveal-state/observed kullanılır. Kullanılmayan Stagger/StaggerItem silindi; Framer bağımlılığı proje spring/hook için halen gereklidir.
 - CSS fallback keyframe **from ve to** ikisinde transform none: yalnız to kullanmak fill-forwards kimlik matrisi ve containing block bırakıyordu. Bu düzeltmeyi sadeleştirerek kaldırmayın. Normal hareket/stiller JS source'u değişmez; IO yok/hata/sessiz ve hydrate engelindeki native wrapper fallback test edildi.
 - fa0c98c başlangıç, 45 Lighthouse (15 aday ayrı): JS home %11,7, hizmetler %14,5, projeler %15,4 azaldı; toplam %6,2/%8,4/%6,9. Mobil ana CLS 0. Son koşu harici CPU/GPU yükünde benchmark medyanı 4264,5 → 2415, RU/blog CPU uyarısı; güvenilir skor artışı iddia edilmez. Yeni skor için makine sakin olmalı; başka projelerin/testlerin veya kullanıcının süreçlerini kapatmayın.

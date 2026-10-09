@@ -5216,5 +5216,126 @@
     "teamId": "team_vFz3wugG2OWHH5SiYQsk9Ggt",
     "url": "https://www.pitonstudios.com"
   },
-  "behaviorNote": "Native Reveal enforces actual intersectionRatio >= 0.2. Previous Motion initial viewport callback could reveal a smaller intersection; intended 20% threshold now consistently applies."
+  "behaviorNote": "Native Reveal enforces actual intersectionRatio >= 0.2. Previous Motion initial viewport callback could reveal a smaller intersection; intended 20% threshold now consistently applies.",
+  "release": {
+    "verifiedAt": "2026-10-09T18:23:35.676936+00:00",
+    "codeCommit": "acc4992af1d85af197146d402c60f2377ffd68bc",
+    "gitBranch": "main",
+    "remote": "https://github.com/omergungor11/piton-studios",
+    "deploymentId": "dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7",
+    "deploymentUrl": "https://piton-studios-qlpkqg7nj-pitonworks-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "aliases": [
+      "www.pitonstudios.com",
+      "pitonstudios.com",
+      "piton-studios-pitonworks-projects.vercel.app",
+      "piton-studios-git-main-pitonworks-projects.vercel.app"
+    ],
+    "liveFlows": [
+      {
+        "name": "root",
+        "route": "/",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/en",
+        "h1": "piton",
+        "overflow": false,
+        "native": 5,
+        "services": 6,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "tr",
+        "route": "/tr",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/tr",
+        "h1": "piton",
+        "overflow": false,
+        "native": 5,
+        "services": 6,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "en",
+        "route": "/en",
+        "status": 304,
+        "url": "https://www.pitonstudios.com/en",
+        "h1": "piton",
+        "overflow": false,
+        "native": 5,
+        "services": 6,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "ru",
+        "route": "/ru",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/ru",
+        "h1": "piton",
+        "overflow": false,
+        "native": 5,
+        "services": 6,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "services",
+        "route": "/tr/hizmetler",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/tr/hizmetler",
+        "h1": "Neler Sunuyoruz?",
+        "overflow": false,
+        "native": 1,
+        "services": 18,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "projects",
+        "route": "/tr/projeler",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/tr/projeler",
+        "h1": "Seçilmiş çalışmalar.",
+        "overflow": false,
+        "native": 1,
+        "services": 0,
+        "projects": 31,
+        "canvas": 0
+      },
+      {
+        "name": "process",
+        "route": "/tr/nasil-calisiyoruz",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/tr/nasil-calisiyoruz",
+        "h1": "Belirsizlik yok — altı adımda fikirden yayına.",
+        "overflow": false,
+        "native": 1,
+        "services": 0,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "contact",
+        "route": "/tr/iletisim",
+        "status": 200,
+        "url": "https://www.pitonstudios.com/tr/iletisim",
+        "h1": "Projenizikonuşalım.",
+        "overflow": false,
+        "native": 3,
+        "services": 0,
+        "projects": 0,
+        "canvas": 0
+      },
+      {
+        "name": "live-mobile-menu",
+        "destination": "/tr/projeler",
+        "projects": 31,
+        "scrollLockReleased": true
+      }
+    ],
+    "livePerformanceScoreDeferred": "Concurrent external CPU/GPU activity reduced local Lighthouse CPU benchmark; a quiet-machine score repeat remains necessary."
+  }
 }

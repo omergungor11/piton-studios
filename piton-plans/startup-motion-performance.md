@@ -97,3 +97,19 @@ Kullanıcı main push'u yetkilendirdi. GitHub omergungor11/piton-studios, main �
 Yerel .vercel/project.json eski video-portfolio projesini gösterir; bu dosya
 yazılmadı. Hedef Git bağlantısı ve üretim dalı API'den doğrulandı; yayın Git
 entegre akışından izlenir. Push/deployment sonucu bu ölçümlerin yerine geçmez.
+
+## Yayın doğrulaması
+
+Kod commit'i `acc4992af1d85af197146d402c60f2377ffd68bc`, önceki 10 yerel
+commit ile GitHub main'e pushlandı. Vercel üretim yayını
+`dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY; www.pitonstudios.com ve
+pitonstudios.com alias'ları bu commit'e bağlandı.
+
+[Canlı site](https://www.pitonstudios.com) üzerinde 9 kontrol geçti: kök URL'nin
+EN'e yönlendirmesi, TR/EN/RU anasayfa, 18 hizmet/31 proje, süreç ve iletişim,
+mobil menüden proje listesine gezinme/scroll lock cleanup. Sayfa hatası veya
+yatay taşma yok; yeni native wrapper'lar canlı HTML'de doğrulandı.
+
+Canlı Lighthouse skor tekrarı aynı bilgisayardaki harici CPU/GPU yükü nedeniyle
+ertelendi; yayın hazır olması puan artışı iddiası değildir. Yayın alan kullanıcı
+verisi/p75 henüz ölçülmedi. Bu doğrulama kaydı yalnız dokümantasyon güncellemesidir.

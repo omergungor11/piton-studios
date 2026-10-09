@@ -1,6 +1,7 @@
 # Session Notes
 
 ## 2026-10-09 — Rapora göre geliştirme ve push (TASK-114)
+- **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 
 - Kullanıcı geliştirme ve push istedi. Paket ajanı native Reveal'ı uyguladı, ayrı ajan React/SSR/motion/cleanup incelemesini yaptı. Ana ajan CSS fallback kimlik matrisi sorununu tarayıcı testinde bulup from/to none ile düzeltti; proje spring ve mevcut TASK-104..113/görsel düzenleri korunur.
 - 45 Lighthouse: önce 15, aday 15, nihai 15. JS %11,7/%14,5/%15,4, toplam transfer %6,2/%8,4/%6,9 azaldı. Harici CPU/GPU yükü nedeniyle son benchmark 4264,5 → 2415; RU/blog CPU uyarısı, EN/RU/blog ve bazı masaüstü skorları ölçüm açısından karşılaştırılamaz. Kayıtlar silinmedi; güvenilir skor artışı çıkarımı yapılmadı. Skor tekrarı için optional kullanıcı tercihi soruldu; main push çalışması devam eder.
