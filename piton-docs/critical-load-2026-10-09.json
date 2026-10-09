@@ -1,0 +1,3905 @@
+{
+  "task": "TASK-113",
+  "date": "2026-10-09",
+  "baseCommit": "31c9023",
+  "published": false,
+  "build": {
+    "framework": "Next.js 16.2.4",
+    "bundler": "Turbopack",
+    "command": "NEXT_TURBOPACK_EXPERIMENTAL_USE_SYSTEM_TLS_CERTS=1 pnpm build",
+    "pages": 868
+  },
+  "methodology": {
+    "url": "http://localhost:3100",
+    "lighthouse": "13.5.0",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "totalRuns": 60,
+    "primaryRuns": 30,
+    "primaryPhases": [
+      "before",
+      "verified"
+    ],
+    "fontTrialPhases": [
+      "after",
+      "final"
+    ],
+    "sequentialChromeOnly": true,
+    "realUserData": false,
+    "sourceHashes": [
+      {
+        "path": "src/app/[locale]/home-client.tsx",
+        "sha256": "a8603786ba4a0fd08ad47fea0d05fb56bc10030b5096048444897c678b86eab2"
+      },
+      {
+        "path": "src/app/[locale]/page.tsx",
+        "sha256": "0a9d1e7cd507c7f8a1476136ae34a72f953b31b912aeb6c15f2a3a16b5ac7fa1"
+      },
+      {
+        "path": "src/app/[locale]/projects/page-client.tsx",
+        "sha256": "ad514594fcbde2d580a4be483177419fdd7cd91372d447c7ab18deaf83704212"
+      },
+      {
+        "path": "src/app/[locale]/projects/page.tsx",
+        "sha256": "a43eeb6b5bf64246d6c955a22c0eafd29925031a369d8dc0b92c2dc7fc5d574b"
+      },
+      {
+        "path": "src/app/globals.css",
+        "sha256": "f3bcabc6df9d9559dee2a0a30da76fede9e10f41af682842724e11d739ac3ce1"
+      },
+      {
+        "path": "src/components/chrome.tsx",
+        "sha256": "7ed9ec4a3186f720a67b04b271ffb4964815d5e162e3c4c67bf8a2e98921d335"
+      },
+      {
+        "path": "src/components/delivery-flow.tsx",
+        "sha256": "e9110a456144bd054caba47bfb70e6dadfb21c7401eb4f17662830f339ecdd6a"
+      },
+      {
+        "path": "src/components/scenes/services.tsx",
+        "sha256": "4769aed329240e358b49e316887404b5ea07b09302c717dce7e4ebf405f878cf"
+      },
+      {
+        "path": "src/components/scenes/service-grid.tsx",
+        "sha256": "7bc6ea606fa975b8e2823c6fd84fb160d2c71cc478ce41f6990f456dd7498961"
+      },
+      {
+        "path": "src/components/snake-border.tsx",
+        "sha256": "358d151add7c1be95811bfba0763f8bd864235d7667cf9c2cfcb602f9a638c0a"
+      },
+      {
+        "path": "src/components/terminal-code.tsx",
+        "sha256": "cc29a4dfcb2d51f642f7c151f9e9fcdfaf9090d33335dd84b5b135585894e45f"
+      },
+      {
+        "path": "src/lib/data.ts",
+        "sha256": "bc805122603b4921571071dc52ef674779a67f023c4a541de44f7018f3732628"
+      },
+      {
+        "path": "src/lib/fonts.ts",
+        "sha256": "9a6f3e2c6e055d16d150b3a5e0f297dee06188b7beb0b87ea74e87050e4066e2"
+      },
+      {
+        "path": "src/lib/scenes.ts",
+        "sha256": "e05f2a93bd3c691afe2be7f103056680563422d1a00d98dcc028b3d711dfcac6"
+      }
+    ]
+  },
+  "profiles": {
+    "mobile": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "cli",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "desktop": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "cli",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    }
+  },
+  "comparison": [
+    {
+      "name": "home",
+      "before": {
+        "score": 84,
+        "fcp": 1670.4328500000001,
+        "lcp": 4444.045399999999,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 553373,
+        "scores": [
+          84,
+          84,
+          84
+        ]
+      },
+      "after": {
+        "score": 85,
+        "fcp": 1524.20985,
+        "lcp": 4319.385,
+        "tbt": 10.5,
+        "cls": 0,
+        "transferBytes": 497676,
+        "scores": [
+          86,
+          85,
+          85
+        ]
+      },
+      "transferReductionPct": 10.065001364360025
+    },
+    {
+      "name": "services",
+      "before": {
+        "score": 87,
+        "fcp": 1513.5636,
+        "lcp": 4022.8453999999997,
+        "tbt": 5,
+        "cls": 0,
+        "transferBytes": 461437,
+        "scores": [
+          87,
+          87,
+          87
+        ]
+      },
+      "after": {
+        "score": 87,
+        "fcp": 1524.14925,
+        "lcp": 4016.7487500000007,
+        "tbt": 19,
+        "cls": 0,
+        "transferBytes": 461740,
+        "scores": [
+          87,
+          87,
+          87
+        ]
+      },
+      "transferReductionPct": -0.06566443523167843
+    },
+    {
+      "name": "projects",
+      "before": {
+        "score": 85,
+        "fcp": 1667.6169,
+        "lcp": 4335.202224999999,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 753948,
+        "scores": [
+          85,
+          85,
+          85
+        ]
+      },
+      "after": {
+        "score": 87,
+        "fcp": 1542.3297000000002,
+        "lcp": 4026.0704000000005,
+        "tbt": 14.5,
+        "cls": 0,
+        "transferBytes": 559293,
+        "scores": [
+          87,
+          87,
+          87
+        ]
+      },
+      "transferReductionPct": 25.818093555523724
+    }
+  ],
+  "resources": [
+    {
+      "name": "home-mobile-1",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 36,
+            "transferSize": 553379
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 20,
+            "transferSize": 304833
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 44232
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42792
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29597
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24329,
+            "wastedPercent": 34.253523853098
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 35,
+            "transferSize": 497676
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 19,
+            "transferSize": 268905
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42786
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29558
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24502
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24407,
+            "wastedPercent": 34.36350678374716
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "services-mobile-1",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 33,
+            "transferSize": 461437
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 271312
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 27900
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24616
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 5684
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25338,
+            "wastedPercent": 35.67362345364
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 33,
+            "transferSize": 461740
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 271656
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 27861
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24614
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 5684
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "main.page-main > section.ip-panel > header.ip-head > p.ip-desc",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25338,
+            "wastedPercent": 35.67362345364
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "projects-mobile-1",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 65,
+            "transferSize": 754008
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 19,
+            "transferSize": 291683
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 33,
+            "transferSize": 257041
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 44969
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 28390
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25194,
+            "wastedPercent": 35.471254861245534
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 64,
+            "transferSize": 559293
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 255970
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 33,
+            "transferSize": 113631
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 29416
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 28351
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=384&q=75",
+            "bytes": 24630,
+            "priority": "Low"
+          }
+        ],
+        "lcpNode": "div.snake-wrap-inner > section.df > header.df-head > p.df-desc",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25194,
+            "wastedPercent": 35.471254861245534
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "home-en-mobile",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 35,
+            "transferSize": 541708
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 20,
+            "transferSize": 304833
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 7,
+            "transferSize": 104164
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42786
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 41826
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29597
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24329,
+            "wastedPercent": 34.253523853098
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 34,
+            "transferSize": 487585
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 19,
+            "transferSize": 268905
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 7,
+            "transferSize": 104164
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42786
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29558
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 23670
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24407,
+            "wastedPercent": 34.36350678374716
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "home-ru-mobile",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 36,
+            "transferSize": 556234
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 20,
+            "transferSize": 304833
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 110011
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 50505
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42786
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29597
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24329,
+            "wastedPercent": 34.253523853098
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 35,
+            "transferSize": 496254
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 19,
+            "transferSize": 268905
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 110011
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 3,
+            "transferSize": 42786
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29558
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 26492
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "div.hero-stack > div.hero-main > div > img.hero-logo",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24407,
+            "wastedPercent": 34.36350678374716
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "blog-mobile",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 33,
+            "transferSize": 404884
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 219682
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29107
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 18486
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 5684
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "body > main.page-main > section.sp-hero > h1.sp-hero-title",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24058,
+            "wastedPercent": 33.8721030496067
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 33,
+            "transferSize": 404841
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 219682
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29068
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 18482
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 5684
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [],
+        "lcpNode": "body > main.page-main > section.sp-hero > h1.sp-hero-title",
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24058,
+            "wastedPercent": 33.8721030496067
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "home-desktop",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 39,
+            "transferSize": 957044
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 22,
+            "transferSize": 543509
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 207781
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 44232
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29597
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/113_lnzve3u2a.js",
+            "totalBytes": 236367,
+            "wastedBytes": 120669,
+            "wastedPercent": 51.05161631042054
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 21658,
+            "wastedPercent": 30.492107624896615
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 38,
+            "transferSize": 901347
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 21,
+            "transferSize": 507581
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 207781
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 29558
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24502
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/113_lnzve3u2a.js",
+            "totalBytes": 236367,
+            "wastedBytes": 120669,
+            "wastedPercent": 51.05161631042054
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 28980,
+            "wastedPercent": 73.33543521368657
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 21458,
+            "wastedPercent": 30.21143118587995
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "services-desktop",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 35,
+            "transferSize": 663534
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 271312
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 207781
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 27900
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24616
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 24094,
+            "wastedPercent": 33.92225526598272
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 35,
+            "transferSize": 663837
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 271656
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 207781
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 27861
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 24614
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25338,
+            "wastedPercent": 35.67362345364
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    },
+    {
+      "name": "projects-desktop",
+      "before": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 72,
+            "transferSize": 835088
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 40,
+            "transferSize": 338121
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 19,
+            "transferSize": 291683
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 44969
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 28390
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25194,
+            "wastedPercent": 35.471254861245534
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      },
+      "after": {
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 72,
+            "transferSize": 808350
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 41,
+            "transferSize": 362688
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 18,
+            "transferSize": 255970
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 8,
+            "transferSize": 113423
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 29416
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 3,
+            "transferSize": 28351
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 1,
+            "transferSize": 18502
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ],
+        "sprite": [
+          {
+            "url": "http://localhost:3100/assets/brand/piton-crawl/sprite.webp",
+            "bytes": 167980,
+            "priority": "High"
+          },
+          {
+            "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=384&q=75",
+            "bytes": 24630,
+            "priority": "Low"
+          }
+        ],
+        "unusedJs": [
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0bw.hl9.v7-0i.js",
+            "totalBytes": 39517,
+            "wastedBytes": 29409,
+            "wastedPercent": 74.42066922764195
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0jzc.d.wboctr.js",
+            "totalBytes": 71027,
+            "wastedBytes": 25112,
+            "wastedPercent": 35.35555281820261
+          },
+          {
+            "url": "http://localhost:3100/_next/static/chunks/0rw2efqpzlz24.js",
+            "totalBytes": 37198,
+            "wastedBytes": 20933,
+            "wastedPercent": 56.274153882187605
+          }
+        ]
+      }
+    }
+  ],
+  "runs": {
+    "before": [
+      {
+        "name": "before-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:40:29.804Z",
+        "finished": "2026-10-09T16:40:42.461Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 84,
+        "fcp": 1667.28405,
+        "lcp": 4444.045399999999,
+        "speedIndex": 1667.28405,
+        "tbt": 10.499999999999545,
+        "cls": 0,
+        "transferBytes": 553379,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3996.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:40:42.461Z",
+        "finished": "2026-10-09T16:40:52.966Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 84,
+        "fcp": 1670.4328500000001,
+        "lcp": 4516.05475,
+        "speedIndex": 1670.4328500000001,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 553373,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4075.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:40:52.967Z",
+        "finished": "2026-10-09T16:41:03.570Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 84,
+        "fcp": 1671.9592499999999,
+        "lcp": 4441.279,
+        "speedIndex": 1671.9592499999999,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 553373,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4060,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:03.571Z",
+        "finished": "2026-10-09T16:41:13.890Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1513.5636,
+        "lcp": 4022.8453999999997,
+        "speedIndex": 1513.5636,
+        "tbt": 5,
+        "cls": 0,
+        "transferBytes": 461437,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4083,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:13.891Z",
+        "finished": "2026-10-09T16:41:24.217Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1512.9447,
+        "lcp": 3972.2596,
+        "speedIndex": 1512.9447,
+        "tbt": 5,
+        "cls": 0,
+        "transferBytes": 461437,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4138,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:24.218Z",
+        "finished": "2026-10-09T16:41:34.664Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1513.66005,
+        "lcp": 4023.4900749999997,
+        "speedIndex": 1513.66005,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 461437,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4149,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:34.665Z",
+        "finished": "2026-10-09T16:41:45.962Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1694.8314,
+        "lcp": 4255.7752,
+        "speedIndex": 1694.8314,
+        "tbt": 10.5,
+        "cls": 0,
+        "transferBytes": 754008,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3921,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:45.962Z",
+        "finished": "2026-10-09T16:41:56.820Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1667.5648500000002,
+        "lcp": 4335.202224999999,
+        "speedIndex": 1667.5648500000002,
+        "tbt": 2.9999999999995453,
+        "cls": 0,
+        "transferBytes": 753948,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4122,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:41:56.820Z",
+        "finished": "2026-10-09T16:42:07.608Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1667.6169,
+        "lcp": 4335.79765,
+        "speedIndex": 1667.6169,
+        "tbt": 3.5,
+        "cls": 0,
+        "transferBytes": 753948,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4095,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T16:42:07.608Z",
+        "finished": "2026-10-09T16:42:17.893Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 86,
+        "fcp": 1513.7379,
+        "lcp": 4177.1861499999995,
+        "speedIndex": 1513.7379,
+        "tbt": 2.0000000000004547,
+        "cls": 0,
+        "transferBytes": 541708,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4151.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T16:42:17.893Z",
+        "finished": "2026-10-09T16:42:28.124Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 83,
+        "fcp": 1662.1393500000001,
+        "lcp": 4526.301925000001,
+        "speedIndex": 1662.1393500000001,
+        "tbt": 4,
+        "cls": 0,
+        "transferBytes": 556234,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4335.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T16:42:28.125Z",
+        "finished": "2026-10-09T16:42:38.128Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1515.33825,
+        "lcp": 3673.4510000000005,
+        "speedIndex": 1515.33825,
+        "tbt": 1.5,
+        "cls": 0,
+        "transferBytes": 404884,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4340.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T16:42:38.128Z",
+        "finished": "2026-10-09T16:42:48.622Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 412.65715,
+        "lcp": 1096.8761999999997,
+        "speedIndex": 853.0404419336784,
+        "tbt": 0,
+        "cls": 0.010230152495302009,
+        "transferBytes": 957044,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4395.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T16:42:48.622Z",
+        "finished": "2026-10-09T16:42:59.121Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 98,
+        "fcp": 394.44315,
+        "lcp": 1045.9242,
+        "speedIndex": 664.9738729375351,
+        "tbt": 0,
+        "cls": 0.011621575470693259,
+        "transferBytes": 663534,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4146,
+          "credits": {}
+        }
+      },
+      {
+        "name": "before-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T16:42:59.122Z",
+        "finished": "2026-10-09T16:43:10.401Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 97,
+        "fcp": 433.24525,
+        "lcp": 1224.3270000000007,
+        "speedIndex": 652.0218723280293,
+        "tbt": 0,
+        "cls": 0.011498641698079229,
+        "transferBytes": 835088,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4340.5,
+          "credits": {}
+        }
+      }
+    ],
+    "after": [
+      {
+        "name": "after-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:46:57.487Z",
+        "finished": "2026-10-09T16:47:08.204Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1674.47385,
+        "lcp": 4141.289749999999,
+        "speedIndex": 1707.1195880846958,
+        "tbt": 14.5,
+        "cls": 0,
+        "transferBytes": 497375,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4153.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:47:08.204Z",
+        "finished": "2026-10-09T16:47:18.563Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1671.1653000000001,
+        "lcp": 4271.830599999999,
+        "speedIndex": 1671.1653000000001,
+        "tbt": 4.5,
+        "cls": 0,
+        "transferBytes": 497375,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4170,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:47:18.563Z",
+        "finished": "2026-10-09T16:47:28.897Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1669.2454500000001,
+        "lcp": 4273.990899999999,
+        "speedIndex": 1669.2454500000001,
+        "tbt": 10.5,
+        "cls": 0,
+        "transferBytes": 497375,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4211,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:47:28.898Z",
+        "finished": "2026-10-09T16:47:39.026Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 86,
+        "fcp": 1673.8161,
+        "lcp": 4046.2241499999996,
+        "speedIndex": 1673.8161,
+        "tbt": 21,
+        "cls": 0,
+        "transferBytes": 461439,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4203,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:47:39.026Z",
+        "finished": "2026-10-09T16:47:49.169Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1668.2750999999998,
+        "lcp": 4031.9126499999998,
+        "speedIndex": 1668.2750999999998,
+        "tbt": 9,
+        "cls": 0,
+        "transferBytes": 461439,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4262.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:47:49.171Z",
+        "finished": "2026-10-09T16:48:02.213Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1689.3917999999999,
+        "lcp": 3881.5223999999994,
+        "speedIndex": 1689.3917999999999,
+        "tbt": 14.5,
+        "cls": 0,
+        "transferBytes": 461439,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3783,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:02.214Z",
+        "finished": "2026-10-09T16:48:13.356Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1677.4026,
+        "lcp": 4179.805200000001,
+        "speedIndex": 1677.4026,
+        "tbt": 11.5,
+        "cls": 0,
+        "transferBytes": 558987,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4186.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:13.356Z",
+        "finished": "2026-10-09T16:48:24.479Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1677.1929,
+        "lcp": 4179.3858,
+        "speedIndex": 1677.1929,
+        "tbt": 11,
+        "cls": 0,
+        "transferBytes": 558987,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4217.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:24.479Z",
+        "finished": "2026-10-09T16:48:35.516Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1675.9693499999998,
+        "lcp": 4176.938700000001,
+        "speedIndex": 1675.9693499999998,
+        "tbt": 4,
+        "cls": 0,
+        "transferBytes": 558987,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4255,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:35.516Z",
+        "finished": "2026-10-09T16:48:45.834Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 87,
+        "fcp": 1516.7259,
+        "lcp": 4049.7258999999995,
+        "speedIndex": 1516.7259,
+        "tbt": 1.9999999999997726,
+        "cls": 0,
+        "transferBytes": 468058,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4267.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:45.835Z",
+        "finished": "2026-10-09T16:48:56.173Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 86,
+        "fcp": 1518.1826999999998,
+        "lcp": 4110.8045,
+        "speedIndex": 1518.1826999999998,
+        "tbt": 5.5,
+        "cls": 0,
+        "transferBytes": 476725,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4266,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T16:48:56.173Z",
+        "finished": "2026-10-09T16:49:06.481Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1671.6552,
+        "lcp": 3688.6552,
+        "speedIndex": 1671.6552,
+        "tbt": 8.5,
+        "cls": 0,
+        "transferBytes": 404550,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4243.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T16:49:06.481Z",
+        "finished": "2026-10-09T16:49:17.229Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 456.9746,
+        "lcp": 1022.6328000000004,
+        "speedIndex": 897.5464775227277,
+        "tbt": 0,
+        "cls": 0.010285818645997773,
+        "transferBytes": 901046,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3184.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T16:49:17.230Z",
+        "finished": "2026-10-09T16:49:27.699Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 99,
+        "fcp": 417.7477,
+        "lcp": 1003.6635999999999,
+        "speedIndex": 666.997511694907,
+        "tbt": 0,
+        "cls": 0.01162160213940294,
+        "transferBytes": 663536,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4290.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "after-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T16:49:27.699Z",
+        "finished": "2026-10-09T16:49:39.432Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 98,
+        "fcp": 430.7812,
+        "lcp": 1181.0416000000002,
+        "speedIndex": 710.0371940198243,
+        "tbt": 0,
+        "cls": 0.011498660614257035,
+        "transferBytes": 808044,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4236,
+          "credits": {}
+        }
+      }
+    ],
+    "final": [
+      {
+        "name": "final-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:55:43.051Z",
+        "finished": "2026-10-09T16:55:53.889Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1671.16905,
+        "lcp": 4153.281749999999,
+        "speedIndex": 1671.16905,
+        "tbt": 9,
+        "cls": 0,
+        "transferBytes": 497384,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4141.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:55:53.890Z",
+        "finished": "2026-10-09T16:56:04.201Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1672.51755,
+        "lcp": 4281.535099999999,
+        "speedIndex": 1672.51755,
+        "tbt": 6,
+        "cls": 0,
+        "transferBytes": 497384,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4139,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:04.202Z",
+        "finished": "2026-10-09T16:56:14.471Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1670.1837,
+        "lcp": 4289.867399999999,
+        "speedIndex": 1670.1837,
+        "tbt": 10,
+        "cls": 0,
+        "transferBytes": 497384,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4131.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:14.472Z",
+        "finished": "2026-10-09T16:56:24.716Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1669.81665,
+        "lcp": 4035.224974999999,
+        "speedIndex": 1669.81665,
+        "tbt": 10.999999999999773,
+        "cls": 0,
+        "transferBytes": 461446,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4119.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:24.717Z",
+        "finished": "2026-10-09T16:56:34.963Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 86,
+        "fcp": 1672.92285,
+        "lcp": 4039.384275,
+        "speedIndex": 1672.92285,
+        "tbt": 10,
+        "cls": 0,
+        "transferBytes": 461446,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4097.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:34.963Z",
+        "finished": "2026-10-09T16:56:45.179Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 86,
+        "fcp": 1674.43605,
+        "lcp": 4041.654075000001,
+        "speedIndex": 1674.43605,
+        "tbt": 10,
+        "cls": 0,
+        "transferBytes": 461446,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4097.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:45.180Z",
+        "finished": "2026-10-09T16:56:56.290Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 85,
+        "fcp": 1674.43485,
+        "lcp": 4231.5797999999995,
+        "speedIndex": 1674.43485,
+        "tbt": 4,
+        "cls": 0,
+        "transferBytes": 558992,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4075,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:56:56.290Z",
+        "finished": "2026-10-09T16:57:07.329Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 86,
+        "fcp": 1683.77895,
+        "lcp": 4130.168425,
+        "speedIndex": 1683.77895,
+        "tbt": 4.5,
+        "cls": 0,
+        "transferBytes": 558992,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4074,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T16:57:07.329Z",
+        "finished": "2026-10-09T16:57:18.314Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 86,
+        "fcp": 1685.8311,
+        "lcp": 4082.831099999998,
+        "speedIndex": 1685.8311,
+        "tbt": 11,
+        "cls": 0,
+        "transferBytes": 558992,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4058,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T16:57:18.314Z",
+        "finished": "2026-10-09T16:57:28.523Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 87,
+        "fcp": 1518.30735,
+        "lcp": 4070.3073499999996,
+        "speedIndex": 1518.30735,
+        "tbt": 12,
+        "cls": 0,
+        "transferBytes": 468067,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4101,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T16:57:28.523Z",
+        "finished": "2026-10-09T16:57:38.755Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 86,
+        "fcp": 1520.40615,
+        "lcp": 4114.510249999999,
+        "speedIndex": 1520.40615,
+        "tbt": 2,
+        "cls": 0,
+        "transferBytes": 476732,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3064.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T16:57:38.758Z",
+        "finished": "2026-10-09T16:57:48.985Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1669.6461000000002,
+        "lcp": 3685.6460999999995,
+        "speedIndex": 1669.6461000000002,
+        "tbt": 8,
+        "cls": 0,
+        "transferBytes": 404547,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4136.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T16:57:48.986Z",
+        "finished": "2026-10-09T16:57:59.614Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 420.26725,
+        "lcp": 1027.0229999999995,
+        "speedIndex": 897.5291006419855,
+        "tbt": 0,
+        "cls": 0.010285759106552887,
+        "transferBytes": 901055,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4047,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T16:57:59.615Z",
+        "finished": "2026-10-09T16:58:09.983Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 99,
+        "fcp": 421.3717,
+        "lcp": 1008.4956000000002,
+        "speedIndex": 667.6038743806337,
+        "tbt": 0,
+        "cls": 0.01162152673480771,
+        "transferBytes": 663543,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4092.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "final-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T16:58:09.983Z",
+        "finished": "2026-10-09T16:58:21.593Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 98,
+        "fcp": 432.27925,
+        "lcp": 1183.0389999999989,
+        "speedIndex": 678.1051219602571,
+        "tbt": 0,
+        "cls": 0.01149865286172514,
+        "transferBytes": 808049,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4082.5,
+          "credits": {}
+        }
+      }
+    ],
+    "verified": [
+      {
+        "name": "verified-home-mobile-1",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:01:18.730Z",
+        "finished": "2026-10-09T17:01:30.118Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 86,
+        "fcp": 1524.20985,
+        "lcp": 4114.5596000000005,
+        "speedIndex": 1565.0557650642338,
+        "tbt": 17,
+        "cls": 0,
+        "transferBytes": 497676,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3983.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-home-mobile-2",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:01:30.118Z",
+        "finished": "2026-10-09T17:01:40.627Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1523.931,
+        "lcp": 4319.385,
+        "speedIndex": 1523.931,
+        "tbt": 10.5,
+        "cls": 0,
+        "transferBytes": 497676,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4114,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-home-mobile-3",
+        "url": "http://localhost:3100/tr",
+        "device": "mobile",
+        "started": "2026-10-09T17:01:40.628Z",
+        "finished": "2026-10-09T17:01:51.223Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 85,
+        "fcp": 1528.37055,
+        "lcp": 4326.284250000001,
+        "speedIndex": 1528.37055,
+        "tbt": 7.5,
+        "cls": 0,
+        "transferBytes": 497676,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3988,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-services-mobile-1",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:01:51.224Z",
+        "finished": "2026-10-09T17:02:01.678Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1522.7628,
+        "lcp": 4041.6441999999997,
+        "speedIndex": 1522.7628,
+        "tbt": 15,
+        "cls": 0,
+        "transferBytes": 461740,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4131,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-services-mobile-2",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:01.679Z",
+        "finished": "2026-10-09T17:02:12.178Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1524.14925,
+        "lcp": 4016.7487500000007,
+        "speedIndex": 1524.14925,
+        "tbt": 22,
+        "cls": 0,
+        "transferBytes": 461740,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4048.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-services-mobile-3",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:12.179Z",
+        "finished": "2026-10-09T17:02:22.749Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 87,
+        "fcp": 1527.1965,
+        "lcp": 4009.7620000000006,
+        "speedIndex": 1527.1965,
+        "tbt": 19,
+        "cls": 0,
+        "transferBytes": 461740,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4079,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-projects-mobile-1",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:22.750Z",
+        "finished": "2026-10-09T17:02:34.295Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1535.3028,
+        "lcp": 4026.0704000000005,
+        "speedIndex": 1535.3028,
+        "tbt": 14.5,
+        "cls": 0,
+        "transferBytes": 559293,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4099,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-projects-mobile-2",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:34.296Z",
+        "finished": "2026-10-09T17:02:46.467Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1542.3297000000002,
+        "lcp": 4030.4395999999983,
+        "speedIndex": 1542.3297000000002,
+        "tbt": 8,
+        "cls": 0,
+        "transferBytes": 559293,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3720.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-projects-mobile-3",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:46.468Z",
+        "finished": "2026-10-09T17:02:59.287Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 87,
+        "fcp": 1551.8829,
+        "lcp": 3984.1772,
+        "speedIndex": 1551.8829,
+        "tbt": 20,
+        "cls": 0,
+        "transferBytes": 559293,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3619.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-home-en-mobile",
+        "url": "http://localhost:3100/en",
+        "device": "mobile",
+        "started": "2026-10-09T17:02:59.288Z",
+        "finished": "2026-10-09T17:03:10.361Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/en",
+        "score": 86,
+        "fcp": 1520.9493000000002,
+        "lcp": 4166.932399999999,
+        "speedIndex": 1520.9493000000002,
+        "tbt": 31.999999999999545,
+        "cls": 0,
+        "transferBytes": 487585,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3895,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-home-ru-mobile",
+        "url": "http://localhost:3100/ru",
+        "device": "mobile",
+        "started": "2026-10-09T17:03:10.361Z",
+        "finished": "2026-10-09T17:03:20.979Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/ru",
+        "score": 86,
+        "fcp": 1520.68755,
+        "lcp": 4164.979249999999,
+        "speedIndex": 1520.68755,
+        "tbt": 9.5,
+        "cls": 0,
+        "transferBytes": 496254,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3934,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-blog-mobile",
+        "url": "http://localhost:3100/tr/blog",
+        "device": "mobile",
+        "started": "2026-10-09T17:03:20.982Z",
+        "finished": "2026-10-09T17:03:31.474Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/blog",
+        "score": 89,
+        "fcp": 1524.1984499999999,
+        "lcp": 3697.2646000000004,
+        "speedIndex": 1524.1984499999999,
+        "tbt": 7.5,
+        "cls": 0,
+        "transferBytes": 404841,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4033,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-home-desktop",
+        "url": "http://localhost:3100/tr",
+        "device": "desktop",
+        "started": "2026-10-09T17:03:31.475Z",
+        "finished": "2026-10-09T17:03:42.356Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr",
+        "score": 98,
+        "fcp": 418.0162,
+        "lcp": 1024.0216,
+        "speedIndex": 885.3169692492891,
+        "tbt": 0,
+        "cls": 0.01023191193127339,
+        "transferBytes": 901347,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4019.5,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-services-desktop",
+        "url": "http://localhost:3100/tr/hizmetler",
+        "device": "desktop",
+        "started": "2026-10-09T17:03:42.357Z",
+        "finished": "2026-10-09T17:03:53.214Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/hizmetler",
+        "score": 98,
+        "fcp": 384.94890000000004,
+        "lcp": 1073.2651999999998,
+        "speedIndex": 657.0881210538487,
+        "tbt": 0,
+        "cls": 0.011622263991381904,
+        "transferBytes": 663837,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 4004,
+          "credits": {}
+        }
+      },
+      {
+        "name": "verified-projects-desktop",
+        "url": "http://localhost:3100/tr/projeler",
+        "device": "desktop",
+        "started": "2026-10-09T17:03:53.214Z",
+        "finished": "2026-10-09T17:04:05.451Z",
+        "lighthouseVersion": "13.5.0",
+        "finalUrl": "http://localhost:3100/tr/projeler",
+        "score": 97,
+        "fcp": 412.44975,
+        "lcp": 1189.933,
+        "speedIndex": 810.8173573116669,
+        "tbt": 0,
+        "cls": 0.011541778500223953,
+        "transferBytes": 808350,
+        "warnings": [],
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3860,
+          "credits": {}
+        }
+      }
+    ]
+  },
+  "fonts": {
+    "before": [
+      {
+        "file": "02263ebadd758ea4.0qg7j5o.yrclm.woff2",
+        "bytes": 4036,
+        "sha256": "b2529fba93fd07a50ffb8fc3d103eb04b0c298d4f6564d2833c44fde286de7e4"
+      },
+      {
+        "file": "0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2",
+        "bytes": 22320,
+        "sha256": "a0d054c4af557de20afd6ca59f47ab353bcaec49c63ff04b6c9d39d0f8910557"
+      },
+      {
+        "file": "151f074d78c0031d.0hdqp.ao76ew_.woff2",
+        "bytes": 7268,
+        "sha256": "ef23e7e57c4e64231239608c8bdd069599af93728ef6230fc4d87be3b5ec459b"
+      },
+      {
+        "file": "1a69062cfe6f77f8.07r2ragk8ph~z.woff2",
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      {
+        "file": "21c1dee959b18079.07jqaw7268ozj.woff2",
+        "bytes": 11588,
+        "sha256": "ca01bc88e9b2bfae3a373baddd098c4be0ef9a5b96f5836361f5b9b409297bea"
+      },
+      {
+        "file": "23b7a97ae3b5c134.0o14nraug8u5s.woff2",
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      {
+        "file": "28868e710e86be81.p.0rx81dn62y51_.woff2",
+        "bytes": 18924,
+        "sha256": "054c266fbb441ee059365dba0885d206f67ca05b375de869b88e02ebfccc9b9d"
+      },
+      {
+        "file": "2956efe007516702.0osx2brc3z96o.woff2",
+        "bytes": 7096,
+        "sha256": "103854ed0d7d3336025c9f9586f503b09cbd0c7db4e4a8157a2bf442eafe12d5"
+      },
+      {
+        "file": "2e95a7d252b9825a.0dgq8lqrj3gc_.woff2",
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      {
+        "file": "2fe89d53234c61d4.0k_.i63k_i_qa.woff2",
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      {
+        "file": "32687112bd2dd8db.0gspg~~t9nou8.woff2",
+        "bytes": 6772,
+        "sha256": "d699664b145bfeeccc66a4cce7fa55e14eb63efd7ec6b0b2ec52e25dd98f3917"
+      },
+      {
+        "file": "3e29d6c8df211d66.0s54-9j8fqoaz.woff2",
+        "bytes": 5128,
+        "sha256": "a62fc04dad82f6038fc95f48932a7958a5804042a1620fa92c8b44d4973422f8"
+      },
+      {
+        "file": "3ee1b1187b5e60bc.0o3xiofc54cuk.woff2",
+        "bytes": 4616,
+        "sha256": "049c578e11c5dbb49fd101ee67445409a156a38ac3e0b26e6945e9a886ce3f71"
+      },
+      {
+        "file": "59b15b4bcd7b1eb5.0x08jh8vondwt.woff2",
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      {
+        "file": "5e05ae5b48faa55e.0m9hhkgdlzukj.woff2",
+        "bytes": 4336,
+        "sha256": "311098be73eac339128f0b5a6e33d72645b6f87488541fdf467c402152d297fd"
+      },
+      {
+        "file": "658fb2a9c2a0ea5d.0do1o-n_dmm3f.woff2",
+        "bytes": 4416,
+        "sha256": "fe88a1e1a9cdb5b50308f09aaf573987f4ba2177bc6faa5feeb82a47df277bbb"
+      },
+      {
+        "file": "68757d6cddeff913.0hkrq11n-dhos.woff2",
+        "bytes": 8848,
+        "sha256": "77f03e26f981c582bdba3a7abed4baa2d3149211c01366bb3ab3ba7622ec4ae5"
+      },
+      {
+        "file": "6a793dba767aa497.0w_k.lkp_pqj6.woff2",
+        "bytes": 5156,
+        "sha256": "c847c0e7594820a9eb323aa24e588a529028daa182062577055eeb488f547061"
+      },
+      {
+        "file": "6ff74e33ebd7bca3.0_n_qwbzcushi.woff2",
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      {
+        "file": "7c125d9da13f978a.03gs.40dtl4ho.woff2",
+        "bytes": 9788,
+        "sha256": "c590f625acd1a18021f23486445b03b8435879b406db1003d3fdd7804e9319fb"
+      },
+      {
+        "file": "99e609270109b47d.16-z~2sp29ex6.woff2",
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      {
+        "file": "9a4838fcda0d1bca.0787d67~10694.woff2",
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      {
+        "file": "a46a75cfd765634f.05w.dojgtyxj~.woff2",
+        "bytes": 11568,
+        "sha256": "2665f5fbbb334780fa135c7f1dc6e2459061a2d6d44c32b7c1fdbc34cde65ede"
+      },
+      {
+        "file": "a7afbb44bec2bb18.0juuwbcf7uz~t.woff2",
+        "bytes": 5500,
+        "sha256": "d524dc8ff6dbf7ed69772f3b2ff4affaf5a89b5762b270e36c3f21da0d4e39f5"
+      },
+      {
+        "file": "bb1a7daf057744c1.0.7tm11uf-kr2.woff2",
+        "bytes": 4584,
+        "sha256": "17d298d439d5ed0dda81a45a408cf58f1cc07f3e09a515ca7d1a4ca66b20ba66"
+      },
+      {
+        "file": "c752d4f65d3e00e0.006uzf-gzuf5l.woff2",
+        "bytes": 5228,
+        "sha256": "192ab4bf51d62cddfccd0a676b5e393a49b5f8bb8d339a49c1bd0589994fef65"
+      },
+      {
+        "file": "cb74272c1a4b1482.0hx--h4h8.no_.woff2",
+        "bytes": 11608,
+        "sha256": "aadf248432e8a7368af4b2780385a2375b7381e84d8a1b609a45ddeab1bfc5a6"
+      },
+      {
+        "file": "cf54ce4ee2f7915c.16e4nux6or3il.woff2",
+        "bytes": 7252,
+        "sha256": "41d845d90290bb548c15d163f8e76f710027a6ed80acbd65c627e57961734a47"
+      },
+      {
+        "file": "e390973e931a41c5.08hd0g.321csk.woff2",
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      {
+        "file": "e532fa1b9921e1cd.0~wrfy7sm-h4g.woff2",
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      {
+        "file": "eb34f5373173429c.0hpya677b0oli.woff2",
+        "bytes": 10132,
+        "sha256": "2a017e5a210426255a96431aa96e957847c5b813ae9765f91a39dabc10042318"
+      },
+      {
+        "file": "ecc49aa4bef31f74.0b09bhu34_n_x.woff2",
+        "bytes": 10048,
+        "sha256": "5260b8fd2ffbe4aee20c987fc0fe51b3340c213e19fae76c51e3530708030821"
+      },
+      {
+        "file": "effe91970fc4db64.07ig5l8azj~hy.woff2",
+        "bytes": 10060,
+        "sha256": "a76f53ca6612e7b3828eec2311098675b7f9849ae4169a8bcef6302aec02a6c0"
+      },
+      {
+        "file": "nippo_bold-s.p.0k6yc-cy498jn.woff2",
+        "bytes": 14880,
+        "sha256": "7e56d2e80637d98664ea8bf6c0e5e97a3a5c2adae19f797bd5da417f44379e74"
+      },
+      {
+        "file": "nippo_medium-s.p.06d-prhqn8ii3.woff2",
+        "bytes": 15708,
+        "sha256": "c793aaa1eb9ad82b0bcf58c695c486842b9259f705280d524358c147536dbb37"
+      }
+    ],
+    "after": [
+      {
+        "file": "02263ebadd758ea4.0qg7j5o.yrclm.woff2",
+        "bytes": 4036,
+        "sha256": "b2529fba93fd07a50ffb8fc3d103eb04b0c298d4f6564d2833c44fde286de7e4"
+      },
+      {
+        "file": "0c89a48fa5027cee.p.0rd3rjvnnhw7n.woff2",
+        "bytes": 22320,
+        "sha256": "a0d054c4af557de20afd6ca59f47ab353bcaec49c63ff04b6c9d39d0f8910557"
+      },
+      {
+        "file": "151f074d78c0031d.0hdqp.ao76ew_.woff2",
+        "bytes": 7268,
+        "sha256": "ef23e7e57c4e64231239608c8bdd069599af93728ef6230fc4d87be3b5ec459b"
+      },
+      {
+        "file": "1a69062cfe6f77f8.07r2ragk8ph~z.woff2",
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      {
+        "file": "21c1dee959b18079.07jqaw7268ozj.woff2",
+        "bytes": 11588,
+        "sha256": "ca01bc88e9b2bfae3a373baddd098c4be0ef9a5b96f5836361f5b9b409297bea"
+      },
+      {
+        "file": "23b7a97ae3b5c134.0o14nraug8u5s.woff2",
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      {
+        "file": "28868e710e86be81.p.0rx81dn62y51_.woff2",
+        "bytes": 18924,
+        "sha256": "054c266fbb441ee059365dba0885d206f67ca05b375de869b88e02ebfccc9b9d"
+      },
+      {
+        "file": "2956efe007516702.0osx2brc3z96o.woff2",
+        "bytes": 7096,
+        "sha256": "103854ed0d7d3336025c9f9586f503b09cbd0c7db4e4a8157a2bf442eafe12d5"
+      },
+      {
+        "file": "2e95a7d252b9825a.0dgq8lqrj3gc_.woff2",
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      {
+        "file": "2fe89d53234c61d4.0k_.i63k_i_qa.woff2",
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      {
+        "file": "32687112bd2dd8db.0gspg~~t9nou8.woff2",
+        "bytes": 6772,
+        "sha256": "d699664b145bfeeccc66a4cce7fa55e14eb63efd7ec6b0b2ec52e25dd98f3917"
+      },
+      {
+        "file": "3e29d6c8df211d66.0s54-9j8fqoaz.woff2",
+        "bytes": 5128,
+        "sha256": "a62fc04dad82f6038fc95f48932a7958a5804042a1620fa92c8b44d4973422f8"
+      },
+      {
+        "file": "3ee1b1187b5e60bc.0o3xiofc54cuk.woff2",
+        "bytes": 4616,
+        "sha256": "049c578e11c5dbb49fd101ee67445409a156a38ac3e0b26e6945e9a886ce3f71"
+      },
+      {
+        "file": "59b15b4bcd7b1eb5.0x08jh8vondwt.woff2",
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      {
+        "file": "5e05ae5b48faa55e.0m9hhkgdlzukj.woff2",
+        "bytes": 4336,
+        "sha256": "311098be73eac339128f0b5a6e33d72645b6f87488541fdf467c402152d297fd"
+      },
+      {
+        "file": "658fb2a9c2a0ea5d.0do1o-n_dmm3f.woff2",
+        "bytes": 4416,
+        "sha256": "fe88a1e1a9cdb5b50308f09aaf573987f4ba2177bc6faa5feeb82a47df277bbb"
+      },
+      {
+        "file": "68757d6cddeff913.0hkrq11n-dhos.woff2",
+        "bytes": 8848,
+        "sha256": "77f03e26f981c582bdba3a7abed4baa2d3149211c01366bb3ab3ba7622ec4ae5"
+      },
+      {
+        "file": "6a793dba767aa497.0w_k.lkp_pqj6.woff2",
+        "bytes": 5156,
+        "sha256": "c847c0e7594820a9eb323aa24e588a529028daa182062577055eeb488f547061"
+      },
+      {
+        "file": "6ff74e33ebd7bca3.0_n_qwbzcushi.woff2",
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      {
+        "file": "7c125d9da13f978a.03gs.40dtl4ho.woff2",
+        "bytes": 9788,
+        "sha256": "c590f625acd1a18021f23486445b03b8435879b406db1003d3fdd7804e9319fb"
+      },
+      {
+        "file": "99e609270109b47d.16-z~2sp29ex6.woff2",
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      {
+        "file": "9a4838fcda0d1bca.0787d67~10694.woff2",
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      {
+        "file": "a46a75cfd765634f.05w.dojgtyxj~.woff2",
+        "bytes": 11568,
+        "sha256": "2665f5fbbb334780fa135c7f1dc6e2459061a2d6d44c32b7c1fdbc34cde65ede"
+      },
+      {
+        "file": "a7afbb44bec2bb18.0juuwbcf7uz~t.woff2",
+        "bytes": 5500,
+        "sha256": "d524dc8ff6dbf7ed69772f3b2ff4affaf5a89b5762b270e36c3f21da0d4e39f5"
+      },
+      {
+        "file": "bb1a7daf057744c1.0.7tm11uf-kr2.woff2",
+        "bytes": 4584,
+        "sha256": "17d298d439d5ed0dda81a45a408cf58f1cc07f3e09a515ca7d1a4ca66b20ba66"
+      },
+      {
+        "file": "c752d4f65d3e00e0.006uzf-gzuf5l.woff2",
+        "bytes": 5228,
+        "sha256": "192ab4bf51d62cddfccd0a676b5e393a49b5f8bb8d339a49c1bd0589994fef65"
+      },
+      {
+        "file": "cb74272c1a4b1482.0hx--h4h8.no_.woff2",
+        "bytes": 11608,
+        "sha256": "aadf248432e8a7368af4b2780385a2375b7381e84d8a1b609a45ddeab1bfc5a6"
+      },
+      {
+        "file": "cf54ce4ee2f7915c.16e4nux6or3il.woff2",
+        "bytes": 7252,
+        "sha256": "41d845d90290bb548c15d163f8e76f710027a6ed80acbd65c627e57961734a47"
+      },
+      {
+        "file": "e390973e931a41c5.08hd0g.321csk.woff2",
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      {
+        "file": "e532fa1b9921e1cd.0~wrfy7sm-h4g.woff2",
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      {
+        "file": "eb34f5373173429c.0hpya677b0oli.woff2",
+        "bytes": 10132,
+        "sha256": "2a017e5a210426255a96431aa96e957847c5b813ae9765f91a39dabc10042318"
+      },
+      {
+        "file": "ecc49aa4bef31f74.0b09bhu34_n_x.woff2",
+        "bytes": 10048,
+        "sha256": "5260b8fd2ffbe4aee20c987fc0fe51b3340c213e19fae76c51e3530708030821"
+      },
+      {
+        "file": "effe91970fc4db64.07ig5l8azj~hy.woff2",
+        "bytes": 10060,
+        "sha256": "a76f53ca6612e7b3828eec2311098675b7f9849ae4169a8bcef6302aec02a6c0"
+      },
+      {
+        "file": "nippo_bold-s.p.0k6yc-cy498jn.woff2",
+        "bytes": 14880,
+        "sha256": "7e56d2e80637d98664ea8bf6c0e5e97a3a5c2adae19f797bd5da417f44379e74"
+      },
+      {
+        "file": "nippo_medium-s.p.06d-prhqn8ii3.woff2",
+        "bytes": 15708,
+        "sha256": "c793aaa1eb9ad82b0bcf58c695c486842b9259f705280d524358c147536dbb37"
+      }
+    ],
+    "removed": [],
+    "added": []
+  },
+  "validation": {
+    "layoutPages": 34,
+    "layoutDifferences": 0,
+    "flows": [
+      {
+        "name": "initial-traffic",
+        "route": "/tr",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/hizmetler",
+        "rsc": 0
+      },
+      {
+        "name": "initial-traffic",
+        "route": "/tr/blog",
+        "rsc": 0
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "hover",
+        "rsc": 5
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "focus",
+        "rsc": 5
+      },
+      {
+        "name": "intent-prefetch",
+        "mode": "save-data",
+        "rsc": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "tr",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "en",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "services-catalog",
+        "locale": "ru",
+        "cards": 18,
+        "categories": [
+          1,
+          6,
+          2,
+          3,
+          1,
+          1,
+          3,
+          1
+        ],
+        "artDimensions": {
+          "w": 149,
+          "h": 93
+        },
+        "offscreenArt": 0
+      },
+      {
+        "name": "mobile-menu",
+        "navigated": "/tr/projeler",
+        "scrollLockReleased": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 390,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "client-navigation",
+        "width": 1280,
+        "routes": 8,
+        "stylesMatchHardLoad": true
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 430,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1000,
+        "animations": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "name": "hero-breakpoint",
+        "width": 1001,
+        "animations": [
+          "reveal-fade",
+          "reveal-fade",
+          "reveal-fade"
+        ]
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/hizmetler",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/fiyatlandirma",
+        "visibleHero": true
+      },
+      {
+        "name": "javascript-disabled",
+        "route": "/tr/iletisim",
+        "visibleHero": true
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/font-lab",
+        "status": 404
+      },
+      {
+        "name": "development-route-production",
+        "route": "/tr/projeler-v2",
+        "status": 404
+      },
+      {
+        "name": "project-preview",
+        "mobileView": true
+      },
+      {
+        "name": "light-theme",
+        "dark": "rgba(20, 20, 20, 0.55)",
+        "light": "rgba(255, 255, 255, 0.58)"
+      }
+    ],
+    "criticalFlows": [
+      {
+        "name": "project-catalog",
+        "locale": "tr",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "tr",
+        "cards": 6,
+        "equalHeight": 370,
+        "columns": 2
+      },
+      {
+        "name": "project-catalog",
+        "locale": "en",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "en",
+        "cards": 6,
+        "equalHeight": 352,
+        "columns": 2
+      },
+      {
+        "name": "project-catalog",
+        "locale": "ru",
+        "rows": 31,
+        "previews": 39,
+        "filters": [
+          29,
+          13,
+          1,
+          1,
+          2,
+          11
+        ],
+        "examples": 6,
+        "mobileSourcesCorrect": true
+      },
+      {
+        "name": "home-services",
+        "locale": "ru",
+        "cards": 6,
+        "equalHeight": 405,
+        "columns": 2
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 390,
+        "dpr": 1,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+        "width": "256",
+        "bytes": 13072,
+        "length": "214.25973355292325px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 430,
+        "dpr": 2,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "width": "640",
+        "bytes": 57322,
+        "length": "202.25973355292325px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "responsive-sprite",
+        "viewport": 1280,
+        "dpr": 2,
+        "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "width": "640",
+        "bytes": 57322,
+        "length": "271.4097335529232px",
+        "segments": 36,
+        "background": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "sprite-dpr-resize",
+        "before": {
+          "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=256&q=75\")",
+          "length": "214.25973355292325px"
+        },
+        "after": {
+          "source": "url(\"http://localhost:3100/_next/image?url=%2Fassets%2Fbrand%2Fpiton-crawl%2Fsprite.webp&w=640&q=75\")",
+          "length": "214.25973355292325px"
+        },
+        "geometryPreserved": true
+      },
+      {
+        "name": "terminal-visibility",
+        "initialOffscreenMutations": 0,
+        "visibleMutations": 26,
+        "pauseResume": true,
+        "visibilityEventPauseResume": true,
+        "reducedMotionLines": 21
+      }
+    ],
+    "lint": {
+      "errors": 0,
+      "existingWarnings": 10
+    },
+    "typecheck": true,
+    "translationsChecked": 630,
+    "projectScrollTests": 4,
+    "build": true,
+    "gpu": {
+      "initialMobileCanvas": false,
+      "lazyCanvas": true,
+      "hudNavigation": true,
+      "offscreenDrawBefore": 1035,
+      "offscreenDrawAfter": 1035,
+      "contextLossFallback": true,
+      "fallbackCards": 15,
+      "noJavaScript": true,
+      "landscapeOverflow": false,
+      "errors": []
+    }
+  },
+  "fontTrialConclusion": "Latin-only preload removed 19,224 transferred font bytes from EN/RU, but TR services FCP regressed by about 160 ms. Latin Extended preload was restored; only the variable font declaration remains."
+}

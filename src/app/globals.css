@@ -3885,7 +3885,7 @@ html[data-theme="light"] .mobile-menu-item:active {
   offset-distance: calc((var(--sp, 0) + var(--i) * var(--step, 0)) * 100%);
   /* Her dilim kendi noktasinin tegetine doner — bukulmeyi bu saglar */
   offset-rotate: auto;
-  background-image: url("/assets/brand/piton-crawl/sprite.webp");
+  background-image: var(--snake-sprite-source, none);
   background-repeat: no-repeat;
   /* Tum sprite yilan boyuna olceklenir; dilim kendi yatay parcasini gosterir */
   background-size: var(--len) var(--spriteh);

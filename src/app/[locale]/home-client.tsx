@@ -1,8 +1,8 @@
 "use client";
 
 import { useLenis } from "lenis/react";
-import { useState, useEffect, useRef, useCallback } from "react";
-import { SCENES } from "@/lib/data";
+import { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { SCENES } from "@/lib/scenes";
 import type { ProjectCloudItem } from "@/components/projects-v2/project-cloud-canvas";
 import BgStage from "@/components/bg-stage";
 import Cursor from "@/components/cursor";
@@ -21,16 +21,16 @@ const ThreeScene = dynamic(() => import("@/components/three-scene"), {
 import HeroScene from "@/components/scenes/hero";
 import SparkScene from "@/components/scenes/spark";
 import ManifestoScene from "@/components/scenes/manifesto";
-import ServicesScene from "@/components/scenes/services";
 import ProjectCloudSection from "@/components/projects-v2/project-cloud-section";
 import ContactScene from "@/components/scenes/contact";
 
 interface HomeClientProps {
   /** Projeler sahnesindeki 3B bulut icin server'da cevrilmis secili projeler. */
   projectCloud: ProjectCloudItem[];
+  services: ReactNode;
 }
 
-export default function HomeClient({ projectCloud }: HomeClientProps) {
+export default function HomeClient({ projectCloud, services }: HomeClientProps) {
   const [showThree, setShowThree] = useState(false);
   const [tweaksOpen, setTweaksOpen] = useState(false);
   const [theme, setThemeState] = useState("dark");
@@ -178,7 +178,7 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
           else if (s.id === "services")
             inner = (
               <SnakeBorder radius={28}>
-                <ServicesScene />
+                {services}
               </SnakeBorder>
             );
           else if (s.id === "work")

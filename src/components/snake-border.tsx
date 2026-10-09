@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { getImageProps } from 'next/image';
 
 /**
  * Kutunun kenarinda gezen yilan.
@@ -73,6 +74,38 @@ export default function SnakeBorder({
     if (!inner || !layer || !box) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    let disposed = false;
+    let spriteRequest = 0;
+    let lastSpriteSize = '';
+    const loadSprite = (len: number) => {
+      const sizes = `${Math.ceil(len)}px`;
+      const key = `${sizes}:${window.devicePixelRatio}`;
+      if (key === lastSpriteSize) return;
+      lastSpriteSize = key;
+      const request = ++spriteRequest;
+      const { props } = getImageProps({
+        src: '/assets/brand/piton-crawl/sprite.webp',
+        width: 1200,
+        height: 1350,
+        alt: '',
+        sizes,
+      });
+      // Tarayici boyut/DPR'a uygun kaynagi secer; metin/fontlarla yarismasin.
+      const image = new window.Image();
+      image.fetchPriority = 'low';
+      image.decoding = 'async';
+      image.sizes = props.sizes ?? sizes;
+      image.srcset = props.srcSet ?? '';
+      image.src = props.src;
+      void image.decode().then(() => {
+        if (disposed || request !== spriteRequest) return;
+        layer.style.setProperty('--snake-sprite-source', `url("${image.currentSrc}")`);
+      }).catch(() => {
+        // Sonraki gorunurluk/olcu degisiminde basarisiz istek yeniden denenebilir.
+        if (request === spriteRequest) lastSpriteSize = '';
+      });
+    };
+
     const writeGeometry = () => {
       const w = box.offsetWidth;
       const h = box.offsetHeight;
@@ -102,6 +135,7 @@ export default function SnakeBorder({
         '--step',
         String(perimeter > 0 ? (segW * SEG_STEP) / perimeter : 0)
       );
+      loadSprite(len);
     };
 
     let raf = 0;
@@ -133,6 +167,11 @@ export default function SnakeBorder({
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
     };
+    const onResize = () => {
+      // Kutu olculeri sabit kalsa da ekran/DPR degisince uygun sprite secilsin.
+      if (visible) writeGeometry();
+      onScroll();
+    };
 
     const ro = new ResizeObserver(() => {
       if (!visible) return;
@@ -156,13 +195,14 @@ export default function SnakeBorder({
     io.observe(box);
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('resize', onResize, { passive: true });
 
     return () => {
+      disposed = true;
       ro.disconnect();
       io.disconnect();
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
+      window.removeEventListener('resize', onResize);
       if (raf) cancelAnimationFrame(raf);
     };
   }, [radius, laps, size]);

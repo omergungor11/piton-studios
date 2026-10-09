@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-09 — Kritik ilk yükleme verisi ve dekorasyon (TASK-113)
+
+- Üç ajanla anasayfa hizmet kartları sunucu slotuna, projeler 31 satır / 39 önizleme / altı alan ve teslim örneği için küçük yerelleştirilmiş props'a taşındı. Tam hizmet/proje verisi ve ilgili çeviri katalogları ilk istemci yükünden çıkarıldı; sahne metadata'sı ayrı modülde.
+- Yılan kenarı sprite'ı boyut/DPR'a uygun Next image kaynağından Low öncelikle yüklenir: mobil ölçümde High 167.980 → Low 24.630 B. 36 dilim, altı kare ve geometri korunur; resize/DPR değişimi ve async cleanup doğrulandı. Görünmeyen/gizli sekmedeki terminal durur, görünürken devam eder; reduced-motion'da 21 satır statiktir.
+- Space Grotesk variable bildirimiyle font-face 45 → 36; 35 WOFF2 içeriği aynı. Latin-only preload denemesi Türkçe ilk boyamayı yaklaşık 160 ms geciktirdiği için geri alındı; Latin Extended, Nippo/IBM ve lisanslar korunur.
+- Başlangıç `31c9023`, varsayılan Turbopack üretim: 30 nihai önce/sonra + 30 ara deney Lighthouse. TR mobil medyan anasayfa 84 → 85, projeler 85 → 87, hizmetler 87 → 87; RU anasayfa tek kontrol 83 → 86. LCP anasayfa 4,44 → 4,32 sn, projeler 4,34 → 4,03 sn; transfer %10,1 / %25,8 azaldı. Mobil ana matris CLS 0; masaüstü 97–98.
+- 34 düzen karşılaştırmasında fark yok, 23 genel ve 11 özel akış başarılı. Üç dilde metin/filtre/önizleme/teslim adımları, terminal pause/resume ve sprite çözünürlükleri doğrulandı. GPU ekran dışında 1035/1035 sabit; gerçek WebGL kaybında 15 kartlı fallback. Dört mevcut scroll testi, lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü ve build (868 sayfa) geçti.
+- Plan/sonuç `piton-plans/critical-load-performance.md`, kalıcı JSON `piton-docs/critical-load-2026-10-09.json`; ham 60 rapor/betik/görseller `tmp/critical-load-2026-10-09/`. Google font bağlantı hatası için tüm derlemelerde geçici sistem TLS sertifika bayrağı kullanıldı; config/.env/lock değişmedi. Yerel ölçüm canlı 43 ile doğrudan karşılaştırılmaz. Push/deploy yapılmadı.
+
 ## 2026-10-09 — Öne çıkan projeler scroll mesafesi kısaltıldı (TASK-112)
 
 - Anasayfa proje önizlemesinde kart başına scroll mesafesi 150 px'den 75 px'e indirildi; ilk dört proje yaklaşık yarı sticky mesafede tamamlanır.

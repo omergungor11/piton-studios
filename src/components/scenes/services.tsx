@@ -1,32 +1,18 @@
-'use client';
-
-import { useEffect, useRef, type CSSProperties } from 'react';
-import { useTranslations } from 'next-intl';
+import type { CSSProperties, ReactElement } from 'react';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/components/navigation/intent-link';
 import { SERVICES } from '@/lib/data';
 import SERVICE_ICONS from '@/components/service-icons';
+import ServiceGrid from './service-grid';
 
 const FEATURED = ['web-design', 'web-app', 'automation', 'ai-integration', 'google-ads', 'cloud-ecosystem'];
 
-export default function ServicesScene() {
-  const t = useTranslations('services');
-  const ts = useTranslations('servicesList');
-  const tp = useTranslations('servicesPage');
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const equalize = () => {
-      const grid = gridRef.current;
-      if (!grid) return;
-      const cards = Array.from(grid.querySelectorAll('.svc')) as HTMLElement[];
-      cards.forEach((c) => { c.style.height = 'auto'; });
-      const maxH = Math.max(...cards.map((c) => c.offsetHeight));
-      cards.forEach((c) => { c.style.height = `${maxH}px`; });
-    };
-    equalize();
-    window.addEventListener('resize', equalize);
-    return () => window.removeEventListener('resize', equalize);
-  }, []);
+export default async function ServicesScene(): Promise<ReactElement> {
+  const [t, ts, tp] = await Promise.all([
+    getTranslations('services'),
+    getTranslations('servicesList'),
+    getTranslations('servicesPage'),
+  ]);
 
   return (
     <div className="svc-glass glass">
@@ -35,7 +21,7 @@ export default function ServicesScene() {
         <span className="t">{t('title')}</span>
         <span>[{SERVICES.length} {t('count', { count: SERVICES.length }).replace(String(SERVICES.length), '').trim()}]</span>
       </div>
-      <div className="svc-grid" ref={gridRef}>
+      <ServiceGrid>
         {SERVICES.filter((s) => FEATURED.includes(s.slug)).map((s, i) => {
           // Anasayfada 6 one cikan hizmet gosteriliyor; numaralar data.ts'teki global
           // sirayi degil, bu listedeki sirayi yansitmali (01-06).
@@ -76,7 +62,7 @@ export default function ServicesScene() {
             </Link>
           );
         })}
-      </div>
+      </ServiceGrid>
       <Link href="/services" className="svc-all-btn" data-cursor="hover" data-cursor-label="+">
         <span>{t('viewAll')}</span>
         <span className="svc-all-arrow">↗</span>

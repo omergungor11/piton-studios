@@ -5,7 +5,6 @@ import '@/styles/delivery-flow.css';
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/components/navigation/intent-link";
-import { WORKS } from "@/lib/data";
 
 /**
  * Teslim Akisi — projeler sayfasindaki interaktif surec seridi.
@@ -18,39 +17,27 @@ import { WORKS } from "@/lib/data";
  * ray o dugume kadar dolar. Klavyeyle de gezilebilir (focus ayni isi yapar).
  */
 
-type Step = {
-  id: string;
-  /** Bu adimi temsil eden projenin slug'i — WORKS icinde olmali */
-  example: string;
-};
-
-const STEPS: Step[] = [
-  { id: "discovery", example: "emlak-sync" },
-  { id: "design", example: "fur-crm" },
-  { id: "build", example: "nexos-investment" },
-  { id: "test", example: "deprem-erken-uyari" },
-  { id: "launch", example: "odeme-takip-botu" },
-  { id: "grow", example: "ambalaj-cini" },
+const STEPS = [
+  { id: "discovery" },
+  { id: "design" },
+  { id: "build" },
+  { id: "test" },
+  { id: "launch" },
+  { id: "grow" },
 ];
 
-export default function DeliveryFlow() {
+interface DeliveryFlowProps {
+  examples: Readonly<Record<string, { slug: string; title: string; kind: string }>>;
+}
+
+export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
   const t = useTranslations("delivery");
-  const tw = useTranslations("works");
   const [active, setActive] = useState(0);
 
   const step = STEPS[active];
-  const work = WORKS.find((w) => w.slug === step.example);
-  const workTitle = work
-    ? tw.has(`${work.slug}.title`)
-      ? tw(`${work.slug}.title`)
-      : work.title
-    : null;
-  // kind da cevirilerden okunur — data.ts'teki sabitler Ingilizce
-  const workKind = work
-    ? tw.has(`${work.slug}.kind`)
-      ? tw(`${work.slug}.kind`)
-      : work.kind
-    : null;
+  const work = examples[step.id];
+  const workTitle = work?.title;
+  const workKind = work?.kind;
 
   const items = t.raw(`steps.${step.id}.items`) as string[];
 

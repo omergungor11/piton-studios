@@ -48,11 +48,7 @@ export interface Story {
   client?: string;
 }
 
-export interface Scene {
-  id: string;
-  label: string;
-  hash: string;
-}
+export { SCENES, type Scene } from './scenes';
 
 export interface PreviewData extends Work {
   x?: number;
@@ -1893,15 +1889,6 @@ export function getAllServiceSlugs(): string[] {
 
 export const MANIFESTO =
   "We make cinematic identities for studios that believe pace, restraint, and a little grain still matter.";
-
-export const SCENES: Scene[] = [
-  { id: "hero",  label: "Ana Sayfa",    hash: "hero"  },
-  { id: "spark", label: "Hemen Başla",  hash: "spark" },
-  { id: "work", label: "Projeler", hash: "projects" },
-  { id: "note",  label: "Hakkımızda",   hash: "note"  },
-  { id: "services", label: "Hizmetler", hash: "services" },
-  { id: "contact", label: "İletişim", hash: "contact" },
-];
 
 export const STORIES: Story[] = [
   {

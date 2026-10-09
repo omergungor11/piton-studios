@@ -2,27 +2,56 @@
 
 import '@/styles/projects.css';
 
-import { useState, type CSSProperties } from 'react';
+import { useState, type CSSProperties, type ReactElement } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/components/navigation/intent-link';
-import { WORKS } from '@/lib/data';
-import { PROJECT_LIST_WORKS } from '@/lib/project-list';
-import { AREA_KEYS, isInArea, type AreaKey } from '@/lib/studio-stats';
+import type { AreaKey } from '@/lib/studio-stats';
 import PageShell from '@/components/page-shell';
 import DeliveryFlow from '@/components/delivery-flow';
 import SnakeBorder from '@/components/snake-border';
 import SparkScene from '@/components/scenes/spark';
 
-// Yil yerine calisma alani: yil bir projenin ne oldugunu anlatmiyor, alan anlatiyor.
-// Alanlar ortusmeli — bir proje hem web hem otomasyon olabilir.
-const AREA_COUNTS = Object.fromEntries(
-  AREA_KEYS.map((k) => [k, PROJECT_LIST_WORKS.filter((w) => isInArea(w, k)).length])
-) as Record<AreaKey, number>;
-const PREVIEW_WORKS = WORKS.filter((w) => w.previews?.desktop);
+export interface ProjectListingRow {
+  n: string;
+  slug: string;
+  title: string;
+  client: string;
+  kind: string;
+  year: string;
+  preview?: string;
+  areas: readonly AreaKey[];
+}
+
+export interface ProjectShowcaseItem {
+  n: string;
+  slug: string;
+  title: string;
+  desktop: string;
+  mobile?: string;
+}
+
+export interface ProjectArea {
+  key: AreaKey;
+  label: string;
+  count: number;
+}
+
+export interface DeliveryExample {
+  slug: string;
+  title: string;
+  kind: string;
+}
+
+interface ProjectsPageClientProps {
+  projects: readonly ProjectListingRow[];
+  previews: readonly ProjectShowcaseItem[];
+  areas: readonly ProjectArea[];
+  deliveryExamples: Readonly<Record<string, DeliveryExample>>;
+}
 
 // Ekran goruntusu olmayan projede tabloda sayi tekrar etmesin — baslik bas harfleri daha okunur.
-function initials(title: string) {
+function initials(title: string): string {
   return title
     .split(/[\s·—-]+/)
     .filter(Boolean)
@@ -34,15 +63,18 @@ function initials(title: string) {
 
 type ShowcaseView = 'desktop' | 'mobile';
 
-export default function ProjectsPageClient() {
+export default function ProjectsPageClient({
+  projects,
+  previews,
+  areas,
+  deliveryExamples,
+}: ProjectsPageClientProps): ReactElement {
   const [activeArea, setActiveArea] = useState<AreaKey | 'All'>('All');
   const [showcaseView, setShowcaseView] = useState<ShowcaseView>('desktop');
   const t = useTranslations('projectsPage');
-  const tw = useTranslations('works');
-  const ta = useTranslations('areas');
 
   const filteredWorks =
-    activeArea === 'All' ? PROJECT_LIST_WORKS : PROJECT_LIST_WORKS.filter((w) => isInArea(w, activeArea));
+    activeArea === 'All' ? projects : projects.filter((work) => work.areas.includes(activeArea));
 
   return (
     <PageShell>
@@ -85,12 +117,11 @@ export default function ProjectsPageClient() {
         </div>
 
         <div className="pp-showcase-scroll">
-          {PREVIEW_WORKS.map((w) => {
+          {previews.map((w) => {
             const src =
-              showcaseView === 'mobile' && w.previews?.mobile
-                ? w.previews.mobile
-                : w.previews!.desktop!;
-            const title = tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title;
+              showcaseView === 'mobile' && w.mobile
+                ? w.mobile
+                : w.desktop;
             return (
               <Link
                 key={w.n}
@@ -100,11 +131,11 @@ export default function ProjectsPageClient() {
                 data-cursor-label="View ↗"
               >
                 <div className="pp-showcase-screen">
-                  <Image src={src} alt={title} fill sizes="(max-width: 640px) 200px, 260px" loading="lazy" />
+                  <Image src={src} alt={w.title} fill sizes="(max-width: 640px) 200px, 260px" loading="lazy" />
                 </div>
                 <div className="pp-showcase-meta">
                   <span className="pp-showcase-n">[{w.n}]</span>
-                  <span className="pp-showcase-title">{title}</span>
+                  <span className="pp-showcase-title">{w.title}</span>
                 </div>
               </Link>
             );
@@ -114,7 +145,7 @@ export default function ProjectsPageClient() {
 
       {/* Teslim akisi — surecin interaktif seridi */}
       <SnakeBorder radius={24}>
-        <DeliveryFlow />
+        <DeliveryFlow examples={deliveryExamples} />
       </SnakeBorder>
 
       {/* Year filter */}
@@ -126,15 +157,15 @@ export default function ProjectsPageClient() {
         >
           {t('filterAll')}
         </button>
-        {AREA_KEYS.map((key) => (
+        {areas.map((area) => (
           <button
-            key={key}
-            className={`sp-filter-btn ${activeArea === key ? 'active' : ''}`}
-            onClick={() => setActiveArea(key)}
+            key={area.key}
+            className={`sp-filter-btn ${activeArea === area.key ? 'active' : ''}`}
+            onClick={() => setActiveArea(area.key)}
             data-cursor="hover"
           >
-            {ta(`${key}.label`)}
-            <span className="sp-filter-count">{AREA_COUNTS[key]}</span>
+            {area.label}
+            <span className="sp-filter-count">{area.count}</span>
           </button>
         ))}
       </section>
@@ -154,9 +185,7 @@ export default function ProjectsPageClient() {
             <span className="pp-hide-mobile">{t('colDiscipline')}</span>
             <span>{t('colYear')}</span>
           </div>
-          {filteredWorks.map((w) => {
-            const rowTitle = tw.has(`${w.slug}.title`) ? tw(`${w.slug}.title`) : w.title;
-            return (
+          {filteredWorks.map((w) => (
             <Link
               key={w.n}
               href={{ pathname: '/projects/[slug]', params: { slug: w.slug } }}
@@ -166,25 +195,24 @@ export default function ProjectsPageClient() {
             >
               <span className="pp-row-n">[{w.n}]</span>
               <span className="pp-row-thumb" aria-hidden="true">
-                {w.previews?.desktop ? (
+                {w.preview ? (
                   <Image
-                    src={w.previews.desktop}
+                    src={w.preview}
                     alt=""
                     fill
                     sizes="(max-width: 1000px) 56px, 96px"
                     loading="lazy"
                   />
                 ) : (
-                  <span className="pp-row-thumb-empty">{initials(rowTitle)}</span>
+                  <span className="pp-row-thumb-empty">{initials(w.title)}</span>
                 )}
               </span>
-              <span className="pp-row-title">{rowTitle}</span>
+              <span className="pp-row-title">{w.title}</span>
               <span className="pp-row-meta pp-hide-mobile">{w.client}</span>
-              <span className="pp-row-meta pp-hide-mobile">{tw.has(`${w.slug}.kind`) ? tw(`${w.slug}.kind`) : w.kind}</span>
+              <span className="pp-row-meta pp-hide-mobile">{w.kind}</span>
               <span className="pp-row-year">{w.year}</span>
             </Link>
-            );
-          })}
+          ))}
         </div>
       </section>
 

@@ -7,14 +7,12 @@ import { buildPageMetadata, organizationJsonLd, websiteJsonLd } from "@/lib/seo"
 import type { Locale } from "@/lib/site";
 import { buildProjectCloudItems } from "@/lib/project-cloud";
 import HomeClient from "./home-client";
+import ServicesScene from "@/components/scenes/services";
 
 const NAMESPACES = [
   "hero",
   "spark",
   "manifesto",
-  "services",
-  "servicesList",
-  "servicesPage",
   "projectCloud",
   "contact",
   "nav",
@@ -49,7 +47,7 @@ export default async function Page({ params }: Props) {
   return (
     <NextIntlClientProvider messages={pickMessages(messages, NAMESPACES)}>
       <JsonLd data={[organizationJsonLd(), websiteJsonLd(locale as Locale)]} />
-      <HomeClient projectCloud={projectCloud} />
+      <HomeClient projectCloud={projectCloud} services={<ServicesScene />} />
     </NextIntlClientProvider>
   );
 }

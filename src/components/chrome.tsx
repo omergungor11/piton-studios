@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/components/navigation/intent-link';
-import { SCENES } from '@/lib/data';
+import { SCENES } from '@/lib/scenes';
 import LanguageSwitcher from '@/components/language-switcher';
 import NavMegaMenu from '@/components/nav-mega-menu';
 import MobileMenuSections from '@/components/mobile-menu-sections';

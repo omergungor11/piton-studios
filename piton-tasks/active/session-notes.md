@@ -1,5 +1,15 @@
 # Session Notes
 
+## 2026-10-09 — Kritik ilk yüklemeye devam (TASK-113)
+
+- Kullanıcının “devam edelim” isteğiyle üç ajan hizmet server slotu, projelerin küçük locale props'u ve font adayını geliştirdi. Ana ajan SCENES/slot/DeliveryFlow entegrasyonu, terminal/sprite, ölçüm ve son incelemeyi yaptı. TASK-107..112 düzenleri ve 75 px proje önizlemesi korundu.
+- Hizmet/proje kataloglarının istemci yükü çıkarıldı; sprite responsive Low öncelikli, terminal görünürlükte çalışır. Variable font bildirimi kaldı. Latin-only preload'un TR FCP'yi yaklaşık 160 ms geciktirdiği ölçülünce Latin Extended geri alındı; son sürüm üzerinden yeniden tam matris ölçüldü.
+- 30 nihai önce/sonra + 30 ara deney, toplam 60 Lighthouse. TR mobil medyan anasayfa 84 → 85, projeler 85 → 87, hizmetler 87 → 87; LCP anasayfa 4,44 → 4,32 sn, projeler 4,34 → 4,03 sn. Transfer %10,1 / %25,8 azaldı; CLS 0. RU tek kontrol 83 → 86, EN 86 → 86, blog 89 → 89; son masaüstü 98/98/97.
+- Son sürüm 17 rota × iki genişlikte sıfır stil/boyut farkı. 23 genel, 11 özel akış, üç dilde 31 proje / 39 preview / altı alan / altı teslim örneği ve altı anasayfa hizmeti doğrulandı. Sprite üç çözünürlükte altı kare, DPR değişiminde aynı geometri; terminal pause/resume ve statik reduced-motion başarılı.
+- GPU çizimi ekran dışında 1035/1035 sabit, gerçek context loss sonrası 15 kartlı fallback; JS kapalı mobil/landscape ve dört mevcut scroll testi geçti. 35 WOFF2 hash'i aynı, font-face 45 → 36. Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü ve Turbopack build (868 sayfa) başarılı.
+- İlk flagsiz font indirme bağlantı hatasına karşı her üretim sürümü aynı geçici sistem TLS sertifika bayrağıyla derlendi. Paket/lock/.env/config değişmedi. Rapor `piton-plans/critical-load-performance.md`, JSON `piton-docs/critical-load-2026-10-09.json`; ham 60 kayıt/betik/görsel `tmp/critical-load-2026-10-09/` içinde.
+- Yalnız bu oturumun 3100 sunucuları ve test Chrome süreçleri kapatıldı. Push/deploy yok; yeni yerel sonuç canlı 43 ile doğrudan karşılaştırılmaz. LCP'de kalan yaklaşık 4 sn için animasyon motoru/kritik CSS/font sırası ölçülerek ele alınmalı.
+
 ## 2026-10-09 — Ajanlarla performans geliştirmesi (TASK-106)
 
 - Kullanıcının “geliştirmeleri yapalım” isteğiyle üç ajan CSS, niyetle prefetch ve hizmet kataloğunu ele aldı; ana ajan import/ortam koşulu entegrasyonunu ve tüm ölçümleri yaptı. Paket/lock/.env değişikliği yok.

@@ -38,9 +38,37 @@ interface Progress { lineIdx: number; charIdx: number }
 export default function TerminalCode() {
   const [prog, setProg] = useState<Progress>({ lineIdx: 0, charIdx: 0 });
   const [restarting, setRestarting] = useState(false);
+  const [environment, setEnvironment] = useState({ visible: false, reduced: false });
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
+  const lineIdx = environment.reduced ? LINES.length - 1 : prog.lineIdx;
+
+  // Dekoratif yazici gorunmeyen bolumde veya arka plan sekmesinde is yapmaz.
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let inView = false;
+    const update = () => setEnvironment({
+      visible: inView && !document.hidden,
+      reduced: media.matches,
+    });
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      update();
+    });
+    observer.observe(wrapper);
+    document.addEventListener('visibilitychange', update);
+    media.addEventListener('change', update);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', update);
+      media.removeEventListener('change', update);
+    };
+  }, []);
 
   useEffect(() => {
+    if (!environment.visible || environment.reduced) return;
     if (restarting) {
       const t = setTimeout(() => {
         setProg({ lineIdx: 0, charIdx: 0 });
@@ -66,13 +94,13 @@ export default function TerminalCode() {
     }, delay);
 
     return () => clearTimeout(t);
-  }, [prog, restarting]);
+  }, [prog, restarting, environment.visible, environment.reduced]);
 
   // auto-scroll to current line
   useEffect(() => {
     const el = bodyRef.current;
     if (el) el.scrollTop = el.scrollHeight;
-  }, [prog.lineIdx]);
+  }, [lineIdx]);
 
   const renderLine = (line: Line, revealChars: number, isCurrentLine: boolean) => {
     let rem = revealChars;
@@ -89,7 +117,7 @@ export default function TerminalCode() {
   };
 
   return (
-    <div className="term-wrap">
+    <div className="term-wrap" ref={wrapperRef}>
       <div className="term-bar">
         <span className="term-dot term-dot-r" />
         <span className="term-dot term-dot-y" />
@@ -99,8 +127,8 @@ export default function TerminalCode() {
 
       <div className="term-body" ref={bodyRef}>
         {LINES.map((line, li) => {
-          if (li > prog.lineIdx) return null;
-          const isCurrent = li === prog.lineIdx && !restarting;
+          if (li > lineIdx) return null;
+          const isCurrent = li === lineIdx && !restarting && !environment.reduced;
           const revealChars = isCurrent
             ? prog.charIdx
             : line.reduce((s, tk) => s + tk.t.length, 0);
@@ -119,7 +147,7 @@ export default function TerminalCode() {
       <div className="term-status">
         <span>TypeScript</span>
         <span>UTF-8</span>
-        <span>Ln {prog.lineIdx + 1}</span>
+        <span>Ln {lineIdx + 1}</span>
       </div>
     </div>
   );

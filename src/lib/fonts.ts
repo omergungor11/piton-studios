@@ -14,11 +14,13 @@ export const nippo = localFont({
 
 /**
  * Ana font. Basliklar 600-700, govde 400-500, nav/buton 500-600.
- * `latin-ext` Turkce glifler (i, I, g, s, c, o, u) icin zorunlu.
+ * Latin ve Latin Extended on yuklenir; Turkce glifler ek bir kesif turu beklemez.
+ * `subsets` preload secimidir; diger CSS unicode-range yuzleri de korunur.
+ * Degisken font, mevcut 400-700 agirliklarini tek font-face araliginda sunar.
  */
 export const spaceGrotesk = Space_Grotesk({
   subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500', '600', '700'],
+  weight: 'variable',
   variable: '--font-space-grotesk',
   display: 'swap',
   // Space Grotesk'te Kiril yok — /ru govde metni kacinilmaz olarak yedege duser.
