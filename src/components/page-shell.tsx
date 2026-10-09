@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import Cursor from '@/components/cursor';
@@ -67,6 +68,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
       className={`mm-nav-row ${isActive(item.href) ? 'is-active' : ''}`}
       style={{ '--delay': `${order * 40}ms` } as React.CSSProperties}
       onClick={() => setMenuOpen(false)}
+      prefetch={false}
     >
       <span className="mm-nav-label">{item.label}</span>
       <span className="mm-nav-arrow">→</span>
@@ -83,7 +85,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
 
       <header className="chrome">
         <Link href="/" className="lockup glass" data-cursor="hover" data-cursor-label="Home">
-          <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+          <Image src="/logo.webp" alt="" width={36} height={36} className="mark-logo" aria-hidden="true" />
           <span className="mark">piton</span>
         </Link>
 
@@ -149,7 +151,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
         <div className="mobile-menu-panel glass strong" data-lenis-prevent>
           <div className="mobile-menu-header">
             <div className="mm-brand">
-              <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+              <Image src="/logo.webp" alt="" width={30} height={30} className="mark-logo" aria-hidden="true" />
               <span>piton</span>
             </div>
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
@@ -172,7 +174,7 @@ export default function PageShell({ children, immersive = false }: PageShellProp
           </nav>
 
           <div className="mm-cta">
-            <Link href="/contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)} prefetch={false}>
               <span>{t('contact')}</span>
               <span>↗</span>
             </Link>

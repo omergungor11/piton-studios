@@ -46,14 +46,15 @@ function RouteReset() {
 }
 
 /** Menu vb. acikken sayfa kaydirmasini durdurur. */
-export function useScrollLock(locked: boolean) {
+export function useScrollLock(locked: boolean, { desktopOnly = false }: { desktopOnly?: boolean } = {}) {
   const lenis = useLenis();
   useEffect(() => {
     if (!lenis) return;
+    if (desktopOnly && window.matchMedia('(max-width: 1000px), (prefers-reduced-motion: reduce)').matches) return;
     if (locked) lenis.stop();
     else lenis.start();
     return () => lenis.start();
-  }, [locked, lenis]);
+  }, [locked, lenis, desktopOnly]);
 }
 
 /**

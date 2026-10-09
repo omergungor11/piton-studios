@@ -47,5 +47,8 @@ export const ibmPlexMono = IBM_Plex_Mono({
   style: ['normal', 'italic'],
   variable: '--font-ibm-plex-mono',
   display: 'swap',
+  // 18 agirlik/stil/alfabe dosyasini her sayfada onceden indirmek yerine,
+  // tarayici yalnizca gorunen metnin ihtiyac duydugu dosyalari yukler.
+  preload: false,
   fallback: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
 });

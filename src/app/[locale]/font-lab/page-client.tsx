@@ -116,7 +116,7 @@ export default function FontLab() {
             <div className={styles.sampleNav} aria-hidden="true">Projeler <span>Hizmetler</span> İletişim ↗</div>
           </div>
           <div className={styles.hero}>
-            <HeroScene clock="" />
+            <HeroScene />
           </div>
           <div className={styles.previewFoot}>
             <p>Hero ve logo aynı fontla gösteriliyor. Diğer metinler mevcut fontlarında.</p>

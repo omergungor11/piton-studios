@@ -33,7 +33,6 @@ interface HomeClientProps {
 
 export default function HomeClient({ projectCloud }: HomeClientProps) {
   const [showThree, setShowThree] = useState(false);
-  const [clock, setClock] = useState("");
   const [tweaksOpen, setTweaksOpen] = useState(false);
   const [theme, setThemeState] = useState("dark");
   const [activeIdx, setActiveIdx] = useState(0);
@@ -44,25 +43,6 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
   const setTheme = useCallback((t: string) => {
     setThemeState(t);
     document.documentElement.setAttribute("data-theme", t);
-  }, []);
-
-  // Clock
-  useEffect(() => {
-    const tick = () => {
-      const d = new Date();
-      setClock(
-        new Intl.DateTimeFormat("en-GB", {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
-          timeZone: "Europe/Istanbul",
-        }).format(d)
-      );
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
   }, []);
 
   // Theme init
@@ -78,6 +58,9 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
   // Mount the decorative Three.js background once the browser is idle,
   // so its bundle/CPU cost never competes with critical first-paint content.
   useEffect(() => {
+    // Telefonlarda CSS arka plan yeterli; dekoratif WebGL ilk yuklemeye eklenmez.
+    if (!window.matchMedia('(min-width: 1001px) and (pointer: fine)').matches ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ric = window.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 300));
     const cancelRic = window.cancelIdleCallback ?? clearTimeout;
     const id = ric(() => setShowThree(true));
@@ -178,14 +161,14 @@ export default function HomeClient({ projectCloud }: HomeClientProps) {
       <FloatingGlass />
       <div className="grain" />
       <Cursor />
-      <TopChrome clock={clock} activeIdx={activeIdx} onNav={onNav} />
+      <TopChrome activeIdx={activeIdx} onNav={onNav} />
       <BottomChrome activeIdx={activeIdx} progress={progress} />
 
       <main className="scenes">
         {SCENES.map((s, i) => {
           const state = revealed.has(i) ? "reveal" : "";
           let inner = null;
-          if (s.id === "hero") inner = <HeroScene clock={clock} />;
+          if (s.id === "hero") inner = <HeroScene />;
           else if (s.id === "spark")
             inner = (
               <SnakeBorder radius={18}>

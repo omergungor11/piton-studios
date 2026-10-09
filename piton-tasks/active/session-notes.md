@@ -1,5 +1,14 @@
 # Session Notes
 
+## 2026-10-09 — Mobil Lighthouse (TASK-104)
+
+- Kullanıcı mobil skoru 43 bildirdi. Canlı tekrar ölçümleri URL / yönlendirmeye göre 32 (EN, kök URL'den) ve 71 (doğrudan TR); bildirilen skorun birebir tekrarı olarak kullanılmaz.
+- Yerel aynı webpack üretim profilinde 59 → 83 (üç son ölçüm). TBT 630 → 10 ms, LCP 7,1 → 4,4–4,5 sn, CLS 0. Görseller 1.288 → 42 KB; font 22 → 8 istek; JS 602 → 283 KB. Varsayılan Turbopack ek kontrolü 81, TBT 10 ms.
+- Mobil intro / hero beklemesi kaldırıldı; gerçek logo optimize edilir. Dekoratif mobil WebGL açılmaz, proje WebGL / dokular bölüme yaklaşınca yüklenir ve ekran dışında / gizli sekmede durur. Menü prefetch, font preload ve görünmeyen sprite trafiği azaltıldı.
+- Mobil / masaüstü / üç dil / proje kontrolleri / menü / reduced-motion / Save-Data / WebGL kaybı / JS kapalı ilk ekran doğrulandı. Turbopack'te ekran dışı GPU draw sayısı iki örnekte 900 / 900 (sabit); sayfa hatası yok.
+- Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü, iki üretim build başarılı (868 sayfa). Ölçüm yöntemi ve sınırları `piton-plans/mobile-performance.md`; ham raporlar ve ekran görüntüleri `tmp/lighthouse/` altında.
+- Canlı yayın / push yapılmadı. Deploy sonrası aynı mobil profilde canlı URL'ler yeniden ölçülmeli. Kullanıcının diğer projelerindeki sunuculara dokunulmadı; yalnız bu oturumun 3100 portundaki üretim test sunucusu kullanıldı.
+
 ## 2026-04-19 / 2026-04-20 — Session 1
 
 ### Completed

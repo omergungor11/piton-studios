@@ -65,4 +65,4 @@ export default function RevealObserver() {
  * Gozlemci 3 sn icinde baglanmazsa (JS hatasi) sinif kaldirilir, icerik gorunur kalir.
  */
 export const REVEAL_BOOT_SCRIPT =
-  "(function(){var d=document.documentElement;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('reveal-ready');try{if(!sessionStorage.getItem('piton-preloader-seen'))d.classList.add('is-preloading')}catch(e){}setTimeout(function(){d.classList.remove('is-preloading')},2500);setTimeout(function(){if(!window.__revealMounted)d.classList.remove('reveal-ready')},3000)})();";
+  "(function(){var d=document.documentElement;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('reveal-ready');try{if(window.matchMedia('(min-width: 1001px)').matches&&!sessionStorage.getItem('piton-preloader-seen'))d.classList.add('is-preloading')}catch(e){}setTimeout(function(){d.classList.remove('is-preloading')},2500);setTimeout(function(){if(!window.__revealMounted)d.classList.remove('reveal-ready')},3000)})();";

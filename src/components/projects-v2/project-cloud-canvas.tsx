@@ -28,6 +28,7 @@ interface ProgressRef {
 }
 
 interface ProjectCloudCanvasProps {
+  visible?: boolean;
   projects: ProjectCloudItem[];
   /** Kaydirmanin one getirdigi proje sayisi; kalanlar helisin arka kollarinda kalir. */
   scrollCount?: number;
@@ -451,7 +452,7 @@ export default function ProjectCloudCanvas(props: ProjectCloudCanvasProps) {
       }}
       dpr={compact ? 2 : [1, 1.5]}
       performance={{ min: compact ? 1 : 0.8, max: 1, debounce: 450 }}
-      frameloop="always"
+      frameloop={props.visible === false ? 'never' : 'always'}
       gl={{
         antialias: true,
         alpha: true,

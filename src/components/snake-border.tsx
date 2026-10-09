@@ -105,7 +105,7 @@ export default function SnakeBorder({
     };
 
     let raf = 0;
-    let visible = true;
+    let visible = false;
     // Ayni degeri tekrar yazmak bedava degil — son yazilanlari tutup atliyoruz
     let lastSp = '';
     let lastFrame = '';
@@ -134,10 +134,8 @@ export default function SnakeBorder({
       if (!raf) raf = requestAnimationFrame(update);
     };
 
-    writeGeometry();
-    update();
-
     const ro = new ResizeObserver(() => {
+      if (!visible) return;
       writeGeometry();
       onScroll();
     });
@@ -147,9 +145,13 @@ export default function SnakeBorder({
     const io = new IntersectionObserver(
       ([e]) => {
         visible = e.isIntersecting;
-        if (visible) onScroll();
+        if (visible) {
+          // Yol yazilmadan katman CSS ile gizlidir; sprite ilk ekranla yarismasin.
+          writeGeometry();
+          onScroll();
+        }
       },
-      { rootMargin: '200px' }
+      { rootMargin: '0px' }
     );
     io.observe(box);
 

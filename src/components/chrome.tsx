@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { SCENES } from '@/lib/data';
@@ -10,12 +11,11 @@ import MobileMenuSections from '@/components/mobile-menu-sections';
 import { useScrollLock } from '@/components/motion/smooth-scroll';
 
 interface TopChromeProps {
-  clock: string;
   activeIdx: number;
   onNav: (idx: number) => void;
 }
 
-export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav }: TopChromeProps) {
+export function TopChrome({ activeIdx: _activeIdx, onNav: _onNav }: TopChromeProps) {
   const t = useTranslations('nav');
   // nav namespace'inde "Sektorler" yok; ortak etiket common'dan.
   const tc = useTranslations('common');
@@ -50,6 +50,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
       className="mm-nav-row"
       style={{ '--delay': `${order * 40}ms` } as React.CSSProperties}
       onClick={() => setMenuOpen(false)}
+      prefetch={false}
     >
       <span className="mm-nav-label">{item.label}</span>
       <span className="mm-nav-arrow">→</span>
@@ -60,7 +61,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
     <>
       <header className="chrome">
         <div className="lockup glass">
-          <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+          <Image src="/logo.webp" alt="" width={36} height={36} className="mark-logo" aria-hidden="true" />
           <span className="mark">piton</span>
         </div>
 
@@ -121,7 +122,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
         <div className="mobile-menu-panel glass strong" data-lenis-prevent>
           <div className="mobile-menu-header">
             <div className="mm-brand">
-              <img src="/logo.webp" alt="" className="mark-logo" aria-hidden="true" />
+              <Image src="/logo.webp" alt="" width={30} height={30} className="mark-logo" aria-hidden="true" />
               <span>piton</span>
             </div>
             <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close">✕</button>
@@ -144,7 +145,7 @@ export function TopChrome({ clock: _clock, activeIdx: _activeIdx, onNav: _onNav 
           </nav>
 
           <div className="mm-cta">
-            <Link href="/contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" className="mm-cta-btn" onClick={() => setMenuOpen(false)} prefetch={false}>
               <span>{t('contact')}</span>
               <span>↗</span>
             </Link>

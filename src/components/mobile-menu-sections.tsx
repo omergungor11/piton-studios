@@ -31,11 +31,11 @@ export default function MobileMenuSections({ onNavigate, keys, delayStart = 0 }:
             <span className="mm-group-caret" aria-hidden="true">+</span>
           </summary>
           <div className="mm-group-list">
-            <Link href={col.href} className="mm-group-all" onClick={onNavigate}>
+            <Link href={col.href} className="mm-group-all" onClick={onNavigate} prefetch={false}>
               {t('menu.viewAll')} →
             </Link>
             {col.items.map((item) => (
-              <Link key={item.slug} href={item.href} className="mm-group-link" onClick={onNavigate}>
+              <Link key={item.slug} href={item.href} className="mm-group-link" onClick={onNavigate} prefetch={false}>
                 {item.label}
               </Link>
             ))}

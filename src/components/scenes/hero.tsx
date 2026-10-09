@@ -1,21 +1,11 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion';
 import SplitWords from '@/components/motion/split-words';
 
-const HeroLogo3D = dynamic(() => import('@/components/hero-logo-3d'), {
-  ssr: false,
-  loading: () => <img src="/logo.webp" alt="Piton" className="hero-logo" />,
-});
-
-interface HeroSceneProps {
-  clock: string;
-}
-
-export default function HeroScene({ clock: _clock }: HeroSceneProps) {
+export default function HeroScene() {
   const t = useTranslations('hero');
 
   const chips = t.raw('chips') as string[];
@@ -23,24 +13,33 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
   return (
     <div className="hero-stack">
       <div className="hero-main glass strong">
-        <Reveal variant="fadeIn" duration={0.8}>
-          <HeroLogo3D />
-        </Reveal>
+        <div data-reveal="fade-hero" style={{ '--reveal-delay': '0ms' } as CSSProperties}>
+          <Image
+            src="/logo.webp"
+            alt="Piton"
+            width={720}
+            height={716}
+            sizes="(max-width: 500px) 52vw, (max-width: 900px) 260px, (max-width: 1308px) 26vw, 340px"
+            preload
+            fetchPriority="high"
+            className="hero-logo"
+          />
+        </div>
         <SplitWords as="h1" hero text={t('title1')} />
         <div className="sub" data-reveal="fade-hero" style={{ '--reveal-delay': '350ms' } as CSSProperties}>
           {t('subtitle')}
         </div>
-        <Stagger staggerDelay={0.1} className="row-foot">
-          {chips.map((chip) => (
-            <StaggerItem key={chip}>
+        <div className="row-foot">
+          {chips.map((chip, index) => (
+            <div key={chip} data-reveal="fade-hero" style={{ '--i': index } as CSSProperties}>
               <span className={`chip ${chip === 'ONLINE' || chip === 'ОНЛАЙН' ? 'accent' : ''}`}>
                 {chip === 'ONLINE' || chip === 'ОНЛАЙН' ? `● ${chip}` : chip}
               </span>
-            </StaggerItem>
+            </div>
           ))}
-        </Stagger>
+        </div>
       </div>
-      <Reveal variant="fadeUp" delay={0.6}>
+      <div data-reveal="fade-hero" style={{ '--reveal-delay': '600ms' } as CSSProperties}>
         <div className="hero-stats glass" aria-label={t('statsLabel')}>
           {(['projects', 'sectors', 'services', 'languages'] as const).map((key) => (
             <div className="hero-stat" key={key}>
@@ -49,7 +48,7 @@ export default function HeroScene({ clock: _clock }: HeroSceneProps) {
             </div>
           ))}
         </div>
-      </Reveal>
+      </div>
     </div>
   );
 }

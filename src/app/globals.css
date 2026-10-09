@@ -7762,7 +7762,20 @@ html.reveal-ready [data-reveal="fade-hero"] {
 html.is-preloading [data-reveal="words-hero"] .rw-i,
 html.is-preloading [data-reveal="fade-hero"] { animation-play-state: paused; }
 
+/* Mobil ilk ekran sunucu HTML'iyle gorunur; hidrasyon ve intro beklenmez. */
+@media (max-width: 1000px) {
+  .preloader { display: none; }
+  #hero [data-reveal="fade-hero"],
+  #hero [data-reveal="words-hero"] .rw-i {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .preloader { display: none; }
   [data-reveal], [data-reveal] .rw-i, [data-reveal="mask"] > * {
     opacity: 1 !important; transform: none !important; filter: none !important;
     clip-path: none !important; animation: none !important; transition: none !important;

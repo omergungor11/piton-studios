@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { useScrollLock } from '@/components/motion/smooth-scroll';
 
 type Phase = 'loading' | 'exit' | 'done';
@@ -18,7 +19,9 @@ export default function Preloader() {
   // Count 0 → 100 over LOAD_MS, then trigger the exit animation.
   useEffect(() => {
     if (phase !== 'loading') return;
-    if (sessionStorage.getItem(SEEN_KEY)) {
+    // Mobilde ilk ekran ve kaydirma hidrasyonu / intro animasyonunu beklemez.
+    if (window.matchMedia('(max-width: 1000px), (prefers-reduced-motion: reduce)').matches ||
+        sessionStorage.getItem(SEEN_KEY)) {
       const skip = requestAnimationFrame(() => setPhase('done'));
       return () => cancelAnimationFrame(skip);
     }
@@ -46,7 +49,7 @@ export default function Preloader() {
   }, [phase]);
 
   // Lenis body overflow'unu dinlemez; kaydirma ayrica durdurulur.
-  useScrollLock(phase !== 'done');
+  useScrollLock(phase !== 'done', { desktopOnly: true });
 
   // Hero reveal animasyonlari (html.is-preloading ile duraklatilmis) preloader kapanirken oynasin.
   useEffect(() => {
@@ -55,6 +58,7 @@ export default function Preloader() {
 
   // Lock scroll while the intro is on screen.
   useEffect(() => {
+    if (window.matchMedia('(max-width: 1000px), (prefers-reduced-motion: reduce)').matches) return;
     if (phase === 'done') {
       document.body.style.overflow = '';
       return;
@@ -68,7 +72,7 @@ export default function Preloader() {
   return (
     <div className={`preloader ${phase === 'exit' ? 'is-exit' : ''}`} aria-hidden="true">
       <div className="preloader-stage">
-        <img src="/logo.webp" alt="" className="preloader-logo" />
+        <Image src="/logo.webp" alt="" width={720} height={716} sizes="(max-width: 1200px) 30vw, 360px" className="preloader-logo" />
       </div>
       <div className="preloader-meta">
         <div className="preloader-count">{String(count).padStart(3, '0')}</div>

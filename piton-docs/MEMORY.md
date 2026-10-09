@@ -1,5 +1,13 @@
 # Piton - Project Memory
 
+## Mobil performans (2026-10-09)
+- TASK-104: yerel webpack üretim derlemesinde Lighthouse mobil 59 → 83 (üç son ölçüm 83/83/83). LCP 7,1 → 4,4–4,5 sn; TBT 630 → 10 ms; CLS 0. Görsel transferi 1.288 → 42 KB, JS 602 → 283 KB, font isteği 22 → 8. FCP 1,5 → 1,8 sn; canlı skor bu yerel sonuçla aynı kabul edilmez.
+- Hero doğrudan boyutlu / öncelikli `next/image` kullanır; GLB hazır olmadığı için gereksiz Three.js / R3F / Drei logo import'u kaldırıldı. Hero mobilde SSR ile hemen görünür. Intro perde ve Lenis kaydırma kilidi 1000 px ve altında veya reduced-motion'da çalışmaz; masaüstü intro korunur.
+- Dekoratif Three.js arka planı yalnızca 1001+ px, ince işaretçi ve normal hareket tercihinde açılır. Proje bulutunun WebGL yoklaması / paket / 15 dokusu bölüm 400 px yakına gelmeden yüklenmez; sticky mesafesi checking aşamasında da ayrılır. Canvas ekran dışında veya sekme gizliyken `frameloop="never"` kullanır.
+- IBM Plex Mono `preload: false`; alfabe / ağırlık / stil dosyaları korunur, yalnız kullanılanlar yüklenir. Mobil menü ve HTML proje fallback linklerinde gereksiz route prefetch kapalı. Yılan kenarı geometrisi görünür olunca hazırlanır; mobil ilk ekranda sprite isteği yok. Kullanılmayan saat kaldırıldı; tüm anasayfayı her saniye yeniden çizdiren zamanlayıcı yok.
+- Varsayılan `pnpm build` (Turbopack) da başarılı: yerel mobil 81, LCP 4,7 sn, TBT 10 ms, CLS 0. Webpack / Turbopack sonuçları ayrı tutulur; canlı deploy sonrası aynı URL ve profille yeniden ölçülmelidir.
+- 390×844, 430×932, 844×390 ve 1280×800; mobil menü, proje gezinmesi, üç dil, reduced-motion / Save-Data / WebGL context loss fallback ve JS kapalı mobil ilk ekran doğrulandı. Sayfa hatası yok. Rapor / yeniden ölçüm yöntemi `piton-plans/mobile-performance.md`; ham JSON / HTML / ekran görüntüleri gitignore'daki `tmp/lighthouse/` altında.
+
 ## Proje sıralaması (2026-10-08)
 - TASK-103: `naiben` #01 olarak eklendi; mevcut proje numaraları bir sıra ilerledi. `WORKS` 53, Seçilmiş Projeler 31 kayıt içerir; gizleme slug tabanlı kalır. Anasayfa `PROJECT_CLOUD_SELECTION` Naiben ile başlar; Radyo Juke seçkiden çıkarıldı, portfolyo kaydı korunur. Bulut 15 kart / 7 gezilebilir proje olarak kaldı. Canlı adres `https://neiden-konsept.vercel.app/`; masaüstü 1440×810 ve mobil 430×928 WebP önizlemeleri canlı siteden alındı. TR/EN/RU açıklamaları Neiden referansından yeniden geliştirilen ön yüz konsepti kapsamını belirtir.
 - TASK-094: `WORKS` içinde Kabizzu #01, Velis LTD #10 olarak yer değiştirdi. Projeler sayfasının görsel şeridi, tablosu ve ItemList JSON-LD sırası aynı kaynaktan güncellenir. Anasayfa proje bulutunun seçili slug sırası ayrıdır.

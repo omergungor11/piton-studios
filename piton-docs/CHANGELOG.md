@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-09 — Mobil ilk yükleme ve Lighthouse (TASK-104)
+
+- Hero'da hazır olmayan GLB için indirilen 3B logo modülü kaldırıldı. Boyutlu, responsive ve yüksek öncelikli `next/image` hero logosu kullanılır; nav / mobil menü / intro logoları da optimize edilir. Mobil hero SSR ile görünür; intro perde / scroll kilidi ve ilk ekran reveal gecikmesi kaldırıldı. Masaüstü intro korunur.
+- Dekoratif WebGL arka planı telefonlarda açılmaz. Proje bulutunun WebGL yoklaması, paketi ve 15 dokusu yalnız bölüme yaklaşınca yüklenir; checking aşamasında sticky alan korunur. Canvas ekran dışına çıktığında veya sekme gizlendiğinde çizim durur.
+- IBM Plex Mono'nun tüm varyantlarını preload etmek yerine gerekli dosyalar yüklenir. Kapalı mobil menü / fallback linklerinde route prefetch kapalı; yılan sprite'ı görünür olunca indirilir. Kullanılmayan saat zamanlayıcısı kaldırıldı.
+- Aynı yerel webpack üretim profilinde mobil Lighthouse **59 → 83** (üç son ölçüm 83/83/83); LCP **7,1 → 4,4–4,5 sn**, TBT **630 → 10 ms**, CLS **0,002 → 0**. JS **602 → 283 KB**, font **233 → 111 KB**, görsel **1.288 → 42 KB**. FCP **1,5 → 1,8 sn**. Varsayılan Turbopack üretim kontrolü: **81**, LCP 4,7 sn, TBT 10 ms.
+- 390×844 / 430×932 / kısa yatay / masaüstü, üç dil, mobil menü, proje kontrolleri, reduced-motion / Save-Data / gerçek WebGL context loss fallback ve JS kapalı ilk ekran doğrulandı. Ekran dışında GPU çizim sayısı sabit kalır. Sayfa hatası yok.
+- Lint 0 hata / 10 mevcut uyarı, typecheck, 630 çeviri kontrolü, webpack ve varsayılan üretim build başarılı (868 sayfa). Ölçümler / sınırlar / yeniden çalıştırma yöntemi `piton-plans/mobile-performance.md`; canlı skor deploy sonrası ayrıca ölçülmelidir.
+
 ## 2026-10-08 — Naiben ilk sırada, Radyo Juke slider'dan çıkarıldı (TASK-103)
 
 - Naiben portfolyoya #01 olarak eklendi; mevcut projeler bir sıra ilerledi. Projeler sayfasındaki görsel şeridi, seçilmiş işler tablosu ve ItemList JSON-LD Naiben ile başlar. Ana kaynak 53, görünür tablo 31 proje içerir.

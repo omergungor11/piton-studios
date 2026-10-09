@@ -111,13 +111,14 @@ function ProjectFallback({ hint, projects, onFocus }: ProjectFallbackProps) {
     <div className={styles.fallback} aria-label={hint}>
       <p className={styles.fallbackHint}>{hint}</p>
       <div className={styles.fallbackRail} role="list">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <Link
             key={project.id}
             href={{ pathname: '/projects/[slug]', params: { slug: project.slug } }}
             className={`${styles.fallbackCard} ${project.format === 'portrait' ? styles.fallbackCardPortrait : ''}`}
             onFocus={() => onFocus(project.slug)}
             onMouseEnter={() => onFocus(project.slug)}
+            prefetch={false}
             role="listitem"
             data-cursor="hover"
           >
@@ -127,7 +128,6 @@ function ProjectFallback({ hint, projects, onFocus }: ProjectFallbackProps) {
                 alt={project.title}
                 fill
                 sizes="(max-width: 767px) 76vw, 420px"
-                priority={index === 0}
               />
             </span>
             <span className={styles.fallbackMeta}>
@@ -174,6 +174,7 @@ export default function ProjectCloudSection({
   const edgeHitAtRef = useRef(0);
   const pageScrollOffsetRef = useRef(0);
   const [mode, setMode] = useState<ExperienceMode>('checking');
+  const [sceneVisible, setSceneVisible] = useState(false);
   const [activeSlug, setActiveSlug] = useState(projects[0]?.slug ?? '');
   const [scrollIndex, setScrollIndex] = useState(0);
 
@@ -203,14 +204,41 @@ export default function ProjectCloudSection({
 
   useEffect(() => {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    const evaluate = () => setMode(supportsImmersiveScene() ? 'webgl' : 'fallback');
-    evaluate();
-
+    let activated = false;
+    const evaluate = () => {
+      if (activated) setMode(supportsImmersiveScene() ? 'webgl' : 'fallback');
+    };
+    // Ekran disindaki sahne icin WebGL yoklamasi, paket ve 15 doku yuklemesi yapma.
+    // Ayrilan sticky alan, yukleme baslayinca sayfa yuksekliginin degismesini onler.
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || activated) return;
+      activated = true;
+      evaluate();
+      observer.disconnect();
+    }, { rootMargin: '400px' });
+    if (trackRef.current) observer.observe(trackRef.current);
     reducedMotionQuery.addEventListener('change', evaluate);
-
     return () => {
+      observer.disconnect();
       reducedMotionQuery.removeEventListener('change', evaluate);
+    };
+  }, []);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setSceneVisible(entry.isIntersecting && !document.hidden);
+    });
+    const onVisibilityChange = () => {
+      const rect = stage.getBoundingClientRect();
+      setSceneVisible(!document.hidden && rect.bottom > 0 && rect.top < window.innerHeight);
+    };
+    observer.observe(stage);
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', onVisibilityChange);
     };
   }, []);
 
@@ -437,7 +465,7 @@ export default function ProjectCloudSection({
   return (
     <section
       ref={trackRef}
-      className={`${styles.track} ${mode === 'fallback' ? styles.trackFallback : ''} ${isHome ? styles.trackHome : ''} ${isHome && mode === 'webgl' ? styles.trackPreview : ''}`}
+      className={`${styles.track} ${mode === 'fallback' ? styles.trackFallback : ''} ${isHome ? styles.trackHome : ''} ${isHome && mode !== 'fallback' ? styles.trackPreview : ''}`}
       style={isHome ? { '--cloud-preview-distance': `${previewDistance}px` } as CSSProperties : undefined}
       aria-labelledby={titleId}
     >
@@ -488,6 +516,7 @@ export default function ProjectCloudSection({
                 onSelect={openProject}
                 onContextLost={() => setMode('fallback')}
                 stars={!isHome}
+                visible={sceneVisible}
               />
             </div>
           </ExperienceBoundary>
