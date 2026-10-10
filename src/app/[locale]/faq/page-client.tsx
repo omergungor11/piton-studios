@@ -1,6 +1,8 @@
 'use client';
 
 import '@/styles/faq.css';
+import '@/styles/page-scoped/detail-cta.css';
+import '@/styles/page-scoped/faq-motion.css';
 
 import { useMemo, useState, type CSSProperties } from 'react';
 import { useTranslations, useLocale } from 'next-intl';

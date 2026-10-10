@@ -1,5 +1,7 @@
 'use client';
 
+import '@/styles/page-scoped/contact-info.css';
+
 import { type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/components/navigation/intent-link';

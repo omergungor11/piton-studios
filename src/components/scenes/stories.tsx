@@ -1,5 +1,7 @@
 'use client';
 
+import '@/styles/page-scoped/legacy-stories.css';
+
 import { useState, useCallback, type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/components/navigation/intent-link';

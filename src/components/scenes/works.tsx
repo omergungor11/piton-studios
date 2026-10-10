@@ -1,5 +1,7 @@
 'use client';
 
+import '@/styles/page-scoped/legacy-works.css';
+
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { WORKS, type Work, type PreviewData } from '@/lib/data';

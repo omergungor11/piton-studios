@@ -1,0 +1,78 @@
+/* faq-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* ---------- FAQ (SSS sayfasi) ---------- */
+/* Native <details>/<summary> kullaniliyor: JS olmadan acilir, klavye ile
+   gezilebilir ve cevap metni kapaliyken bile DOM'da durur — crawler'lar ve
+   dil modelleri sayfanin tamamini gorur. Kosullu render YOK. */
+.faq-meta-dot { opacity: 0.5; }
+
+/* Hero altindaki "en cok sorulanlar" cipleri */
+.faq-chip {
+  transition: border-color 240ms ease, color 240ms ease, background 240ms ease, transform 240ms ease;
+}
+.faq-chip:hover {
+  transform: translateY(-2px);
+}
+
+/* Arama */
+.faq-search-input {
+  transition: border-color 240ms ease, box-shadow 240ms ease;
+}
+
+/* Kategori atlama navigasyonu — sticky */
+.faq-jump-link {
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+/* Kategori bolumleri */
+
+/* Soru karti */
+.faq-item {
+  transition: border-color 260ms ease, transform 260ms ease;
+}
+
+.faq-summary {
+  transition: background 200ms ease;
+}
+/* Varsayilan ucgen marker gizleniyor; yerine kendi +/- gostergemiz var */
+.faq-anchor {
+  opacity: 0; transition: opacity 200ms ease, color 200ms ease;
+}
+.faq-item:hover .faq-anchor,
+.faq-anchor:focus-visible { opacity: 1; }
+
+/* +/- gostergesi */
+.faq-toggle {
+  transition: transform 320ms cubic-bezier(.2,.8,.2,1);
+}
+.faq-toggle::before,
+.faq-toggle::after {
+  transform: translate(-50%, -50%);
+  transition: opacity 260ms ease;
+}
+.faq-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item[open] .faq-toggle { transform: rotate(180deg); }
+.faq-item[open] .faq-toggle::after { opacity: 0; }
+
+/* Cevap */
+
+/* Ic linkler */
+.faq-related-link {
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
+}
+
+@media (max-width: 1000px) {
+  .faq-anchor { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-chip,
+  .faq-item,
+  .faq-toggle,
+  .faq-jump-link,
+  .faq-related-link,
+  .faq-search-input {
+    transition: none;
+  }
+  .faq-chip:hover { transform: none; }
+}

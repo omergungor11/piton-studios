@@ -1,0 +1,34 @@
+/* globals.css'e dahil edilir; ozgul seciciler masaustu hareketini korur. */
+@media (max-width: 1000px) {
+  /* Sabit marka ve bolum sayaci ilk boyamada gorunsun. */
+  .chrome > .lockup,
+  .bottom-chrome > .scene-indicator {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Logo golgesi ve boyutlari ayni kalir; surekli yuzdurme yerine sabit durur. */
+  .hero-stack .hero-logo {
+    animation: none;
+    transform: none;
+  }
+
+  /* Renkli katmanlari saklamadan, her karede drift/composite isini durdur. */
+  .bg-stage .aurora,
+  .bg-stage .aurora-blob {
+    animation: none;
+    will-change: auto;
+  }
+
+  /* Her blob kendi animasyonunun ilk karesindeki sabit olcegini korur. */
+  .bg-stage .aurora-1 { transform: none; }
+  .bg-stage .aurora-2 { transform: scale(1.05); }
+  .bg-stage .aurora-3 { transform: scale(0.95); }
+  .bg-stage .aurora-4 { transform: scale(1.1); }
+}
+
+/* Hareket azaltma tercihindeki mevcut, donusumsuz statik gorunumu koru. */
+@media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
+  .bg-stage .aurora-blob { transform: none; }
+}

@@ -1,5 +1,11 @@
 # Piton - Project Memory
 
+## Mobil ilk ekran (2026-10-10, TASK-115)
+- Mobil (≤1000 px) ilk boyama kuralları `src/styles/mobile-first-paint.css` (globals.css'in 2. satırında import). Masaüstü animasyon testleri `.chrome > .lockup` floatIn, logo heroLogoFloat, blob auroraDrift1-4 bekler.
+- Sayfaya özgü stiller `src/styles/page-scoped/*.css` — yeni sayfa stili globals.css'e değil kullanan sayfa/component'e import edilir. `legacy-works/stories.css` yalnız eski `scenes/works.tsx`/`stories.tsx` için.
+- Hero logosu `quality={60}`; Next 16 `images.qualities` listesinde olmayan değer reddedilir — kalite eklerken `next.config.ts`'i de güncelleyin.
+- Test betiklerinde görsel tipi kontrolü tarayıcı Accept başlığıyla yapılmalı (yoksa Next JPEG döner); no-JS ölçümü `load` anında yapılmalı (DOMContentLoaded CSS'i beklemez).
+
 ## Başlangıç animasyon yükü (2026-10-09, TASK-114)
 - **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 - Reveal native CSS/IO; aynı beş varyant, 0,9 sn/easing/delay, once ve div/li. Gerçek ratio >= .2 şartı; no-JS/reduced-motion/fail-open ve cleanup. Ortak data-reveal gözlemcisiyle karışmaması için data-native-reveal-state/observed kullanılır. Kullanılmayan Stagger/StaggerItem silindi; Framer bağımlılığı proje spring/hook için halen gereklidir.

@@ -1,0 +1,42 @@
+/* pricing-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+/* ============================================================
+   PRICING (/fiyatlandirma · /en/pricing · /ru/pricing)
+   globals.css sonuna, FAQ blogunun ardina eklenecek.
+   ============================================================ */
+
+/* Paket kartlari */
+.pricing-card:hover { transform: translateY(-2px); }
+
+/* Kart sahnesi — hizmet sayfalarindaki .sv-stage kutusunun aynisi */
+
+/* Aylik buyume hizmetleri (SEO & GEO, Google Ads, Meta) */
+.pricing-growth-link {
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+/* AI otomasyon karti */
+.pricing-roi-link {
+  transition: border-color 200ms ease;
+}
+
+/* Fiyati ne etkiler */
+
+/* SSS baglantilari */
+.pricing-faq-link {
+  transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+.pricing-faq-link:hover {
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card,
+  .pricing-factor,
+  .pricing-faq-link,
+  .pricing-growth-link,
+  .pricing-roi-link {
+    transition: none;
+  }
+  .pricing-card:hover,
+  .pricing-faq-link:hover { transform: none; }
+}

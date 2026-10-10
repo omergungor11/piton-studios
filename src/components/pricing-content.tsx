@@ -1,4 +1,5 @@
 import '@/styles/pricing.css';
+import '@/styles/page-scoped/pricing-motion.css';
 import type { CSSProperties } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/components/navigation/intent-link';

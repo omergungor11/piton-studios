@@ -1,0 +1,59 @@
+/* impact-panel-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* Projects page — Showreel */
+/* Projects page — etki paneli (interaktif sonuc grafigi) */
+.ip-glow {
+  opacity: 0.55;
+  transition: opacity 400ms ease;
+}
+.ip-panel:hover .ip-glow { opacity: 0.9; }
+
+/* Boyut secici */
+.ip-dim {
+  transition: background 220ms ease, border-color 220ms ease, transform 320ms cubic-bezier(.2,.8,.2,1);
+}
+.ip-dim.is-active {
+  transform: translateX(4px);
+}
+.ip-dim-icon {
+  transition: color 220ms ease, border-color 220ms ease;
+}
+
+/* Grafik */
+.ip-tick {
+  transition: fill 200ms ease;
+}
+
+.ip-gap {
+  opacity: 0.13;
+  animation: ip-fade 520ms ease both;
+}
+.ip-line.is-us {
+  animation: ip-draw 720ms cubic-bezier(.2,.8,.2,1) both;
+}
+.ip-line.is-typical {
+  animation: ip-fade 520ms ease both;
+}
+.ip-dot { transition: r 180ms ease; }
+.ip-dot.is-active.is-us { filter: drop-shadow(0 0 6px var(--accent)); }
+.ip-scrub {
+  opacity: 0.5;
+  transition: transform 260ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Okuma paneli */
+
+.ip-detail {
+  animation: ip-fade 420ms ease both;
+}
+
+@media (max-width: 900px) {
+  /* Boyut listesi yatay seride donusur */
+  .ip-dim.is-active { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ip-gap, .ip-line.is-us, .ip-line.is-typical, .ip-detail { animation: none; }
+  .ip-scrub, .ip-dim { transition: none; }
+  .ip-glow { transition: none; }
+}

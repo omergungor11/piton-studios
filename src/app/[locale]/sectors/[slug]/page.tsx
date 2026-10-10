@@ -1,4 +1,5 @@
 import '@/styles/sectors.css';
+import '@/styles/page-scoped/sectors-motion.css';
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";

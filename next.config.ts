@@ -115,6 +115,10 @@ function ruSegmentRedirects(): Redirect[] {
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  images: {
+    // Hero logosu 60; diger gorseller mevcut varsayilan kaliteyi korur.
+    qualities: [60, 75],
+  },
   async redirects() {
     // Sira onemli: ilk eslesen kural uygulanir — ozelden genele.
     return [

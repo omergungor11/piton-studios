@@ -1,4 +1,5 @@
 import '@/styles/blog.css';
+import '@/styles/page-scoped/blog-motion.css';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';

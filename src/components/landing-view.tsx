@@ -1,4 +1,5 @@
 import '@/styles/sectors.css';
+import '@/styles/page-scoped/sectors-motion.css';
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import { Link } from "@/components/navigation/intent-link";

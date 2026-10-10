@@ -1,4 +1,5 @@
 import '@/styles/blog.css';
+import '@/styles/page-scoped/blog-motion.css';
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';

@@ -1,4 +1,5 @@
 import '@/styles/sectors.css';
+import '@/styles/page-scoped/sectors-motion.css';
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { NextIntlClientProvider } from "next-intl";

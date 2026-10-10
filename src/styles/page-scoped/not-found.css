@@ -1,0 +1,77 @@
+/* not-found: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* ========== 404 NOT FOUND ========== */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg, #0A0A0A);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+.not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  padding: 24px;
+}
+
+.not-found-canvas {
+  /* 90vw + kapsayicinin 2x24px padding'i 100vw'yi asiyordu; kapsayici sinirlasin */
+  max-width: 100%;
+  height: auto;
+  font-family: var(--font-mono, ui-monospace, Menlo, monospace);
+}
+
+.not-found-sub {
+  font-family: var(--font-mono, ui-monospace, Menlo, monospace);
+  font-weight: 500;
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--muted, rgba(242,239,233,0.55));
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.not-found-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink, #F2EFE9);
+  border: 1px solid var(--glass-border, rgba(255,255,255,0.16));
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  background: var(--glass-bg, rgba(20,20,20,0.55));
+}
+
+.not-found-link:hover {
+  border-color: var(--accent, oklch(0.58 0.19 24));
+  color: var(--accent, oklch(0.58 0.19 24));
+  background: var(--accent-soft, oklch(0.58 0.19 24 / 0.22));
+}
+/* Dile ozel 404: kisa aciklama + onerilen sayfa cipleri */
+h1.not-found-sub { margin: 0; color: var(--ink, #F2EFE9); }
+.not-found-hint {
+  margin: -8px 0 0; max-width: 46ch;
+  font-size: 15px; line-height: 1.6;
+  color: var(--muted, rgba(242,239,233,0.55));
+}
+.not-found-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.not-found-chip {
+  padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--line, rgba(255,255,255,0.12));
+  color: var(--ink-soft, rgba(242,239,233,0.8));
+  font-size: 14px; text-decoration: none;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.not-found-chip:hover { border-color: var(--accent, oklch(0.58 0.19 24)); color: var(--ink, #F2EFE9); }

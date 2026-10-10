@@ -1,5 +1,12 @@
 # Session Notes
 
+## 2026-10-10 — Mobil ilk ekran yükünü tamamlama (TASK-115)
+
+- Önceki oturumdan commit'lenmemiş TASK-115 değişiklikleri (mobil ilk boyama CSS'i, page-scoped stiller, hero q60) devralındı. Kullanıcı önce bu işin bitirilmesini seçti.
+- Son kod değişikliği ilk "after" ölçümünden sonra olduğu için final build yeniden ölçüldü (`final-*`). CSS ≈%16,5 azaldı; anasayfa LCP 4,18 → 3,97 sn. Hizmetlerin tek 4,13 sn koşusu gürültüydü (tekrarlar 3,71/3,70).
+- `check-first-paint.mjs` daha önce hiç yeşil olmamıştı: Node fetch Accept başlığı, DOMContentLoaded'da CSS'siz ölçüm ve menü panel geçişi düzeltildi; 11 kayıt geçti. Layout 34/0 fark, flow + critical flow geçti.
+- Lint/typecheck/content/build geçti. Commit yerel; main push (= Vercel prod deploy) kullanıcı onayına bırakıldı.
+
 ## 2026-10-09 — Rapora göre geliştirme ve push (TASK-114)
 - **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 

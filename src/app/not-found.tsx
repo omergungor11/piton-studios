@@ -1,3 +1,4 @@
+import '@/styles/page-scoped/not-found.css';
 import Link from 'next/link';
 import FuzzyText from '@/components/fuzzy-text';
 import { spaceGrotesk, ibmPlexMono } from '@/lib/fonts';

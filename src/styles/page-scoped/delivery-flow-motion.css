@@ -1,0 +1,35 @@
+/* delivery-flow-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* Projects page — teslim akisi (interaktif surec seridi) */
+
+/* Adim seridi */
+.df-rail-fill {
+  transition: width 420ms cubic-bezier(.2,.8,.2,1);
+}
+.df-node-dot {
+  transition: border-color 240ms ease, background 240ms ease, transform 300ms cubic-bezier(.2,.8,.2,1);
+}
+.df-node.is-active .df-node-dot {
+  transform: scale(1.3);
+}
+.df-node-n {
+  transition: color 240ms ease;
+}
+.df-node-name {
+  transition: color 240ms ease;
+}
+
+/* Adim karti */
+.df-card {
+  animation: df-in 420ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* Ornek proje baglantisi */
+.df-example {
+  transition: background 220ms ease, border-color 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .df-card { animation: none; }
+  .df-rail-fill, .df-node-dot { transition: none; }
+}

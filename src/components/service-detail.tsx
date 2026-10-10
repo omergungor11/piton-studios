@@ -1,6 +1,8 @@
 'use client';
 
 import '@/styles/service-detail.css';
+import '@/styles/page-scoped/service-detail-motion.css';
+import '@/styles/page-scoped/detail-cta.css';
 
 import { useState } from 'react';
 import type { CSSProperties } from 'react';

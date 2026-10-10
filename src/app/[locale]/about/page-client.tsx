@@ -1,6 +1,7 @@
 'use client';
 
 import '@/styles/about.css';
+import '@/styles/page-scoped/about-motion.css';
 
 import { type CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';

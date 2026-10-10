@@ -20,6 +20,7 @@ export default function HeroScene() {
             width={720}
             height={716}
             sizes="(max-width: 500px) 52vw, (max-width: 900px) 260px, (max-width: 1308px) 26vw, 340px"
+            quality={60}
             preload
             fetchPriority="high"
             className="hero-logo"

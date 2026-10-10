@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-10 — Mobil ilk ekran yükü (TASK-115)
+
+- Mobilde (≤1000 px) üst marka, sahne sayacı ve hero logosu ilk boyamada animasyonsuz/görünür; aurora drift ve sürekli composite işi durduruldu (`src/styles/mobile-first-paint.css`). Masaüstü floatIn/heroLogoFloat/auroraDrift korunur, reduced-motion statik görünümü aynı.
+- Sayfaya özgü ve eski stiller `globals.css`'ten `src/styles/page-scoped/` altında 15 dosyaya taşındı, kullanan sayfa/component import eder (−1969/+198 satır). Hero logosu `quality={60}` (`next.config.ts` `images.qualities: [60, 75]`). Font dosyaları değişmedi; kayıpsız kazanç kanıtlanmadı.
+- Aynı yerel üretim profilinde CSS transferi anasayfa 30,3 → 25,3 KB, hizmetler 28,6 → 23,8 KB, blog 29,1 → 24,1 KB (≈%16,5); anasayfa görseli 42,8 → 38,1 KB. TR anasayfa mobil medyan 86 → 87, LCP 4,18 → 3,97 sn; hizmetler LCP 3,77 → 3,70 sn (3 koşu), RU 87 → 87, blog 89 → 89, masaüstü 98 (CLS 0,0102 önceden de aynı).
+- 34 sayfa × genişlik düzen karşılaştırmasında fark yok; 23 genel + kritik akışlar ve no-JS ilk boyama (7 rota/genişlik, dinamik reduced-motion, tema, menü/scroll ilerleme) geçti. Test betiğindeki üç hata düzeltildi (Accept başlığı, CSS yüklenmeden ölçüm, menü panel geçişi); site kodunda regresyon yok. Lint 0 hata, typecheck, 630 çeviri kontrolü, build geçti.
+- Plan `piton-plans/mobile-first-paint-performance.md`; ham ölçümler `tmp/mobile-first-paint-2026-10-10/`.
+
 ## 2026-10-09 — Başlangıç animasyon motoru (TASK-114)
 - **Yayın doğrulandı**: `acc4992` önceki 10 yerel commit ile main'e pushlandı; Vercel `dpl_9T5xDqZd6NLk4zbfQB9VxfgQnrc7` READY, www.pitonstudios.com/pitonstudios.com alias'ları bağlı. Canlı kök/TR/EN/RU anasayfa ve temel sayfalar + mobil menü, 9 kontrol geçti; hata/taşma yok. Lighthouse canlı skor tekrarı harici CPU/GPU yükü nedeniyle ertelendi; yalnız bu oturumun test süreçleri kapandı. Ayrıntı/9 canlı kayıt kalıcı startup-motion JSON release alanında.
 

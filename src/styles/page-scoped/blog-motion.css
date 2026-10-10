@@ -1,0 +1,40 @@
+/* blog-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+/* Sehir/cozum sayfalari: sektor sayfasindaki inline paragraf stili sinifa tasindi */
+
+/* ============================================================
+   BLOG — liste, etiket, yazi
+   ============================================================ */
+
+/* Etiket cubugu */
+.blog-tag {
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+/* Yazi listesi */
+.blog-card-link {
+  transition: padding-left .25s ease;
+}
+/* Sahnesi olan yazida kart iki sutun: solda gorsel, sagda metin. */
+.blog-card-dot { opacity: .5; }
+
+/* Yazi sayfasi */
+.blog-back {
+  transition: color .18s ease;
+}
+
+/* MDX icerigi */
+
+/* Tablolar — dar ekranda kendi icinde kaydirilir */
+
+/* Kod — rehype-pretty-code ciktisi */
+
+/* Baslik hiyerarsisi — h4/h5/h6 ve anchor hedefleri */
+
+/* Icindekiler */
+.blog-toc-list > li > a {
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* SSS */
+
+/* Ilgili yazilar */

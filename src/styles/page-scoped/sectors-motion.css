@@ -1,0 +1,51 @@
+/* sectors-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+/* ---------- Sektorler (/sectors, /sectors/[slug]) ---------- */
+/* Prefix: .sec-  — globals.css'te cakisma yok (grep ile dogrulandi).
+   Hero ve CTA mevcut .sp-hero / .sp-cta siniflarini yeniden kullanir;
+   burada yalnizca sektor sayfalarina ozgu bloklar durur. */
+
+/* Bolum basligi — mono isaret + baslik + opsiyonel "tumunu gor" linki */
+.sec-head-link {
+  transition: color 220ms ease;
+}
+
+/* --- Indeks: sektor kartlari --- */
+.sec-card:hover {
+  transform: translateY(-6px);
+}
+.sec-card-arrow {
+  transition: transform 300ms ease, color 300ms ease;
+}
+.sec-card:hover .sec-card-arrow { transform: translate(3px, -3px); }
+
+/* --- Detay: sektorun dertleri --- */
+
+/* --- Detay: neler yapiyoruz --- */
+
+/* --- Detay: proje grid'i --- */
+.sec-project-card:hover {
+  transform: translateY(-6px);
+}
+.sec-project-shot img {
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+.sec-project-card:hover .sec-project-shot img { transform: scale(1.04); }
+
+/* --- Detay: hizmet kartlari --- */
+.sec-service-card:hover {
+  transform: translateY(-6px);
+}
+.sec-service-arrow {
+  transition: transform 300ms ease, color 300ms ease;
+}
+.sec-service-card:hover .sec-service-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* --- Detay: SSS linkleri + blog --- */
+.sec-faq-link {
+  transition: border-color 240ms ease, color 240ms ease, background 240ms ease;
+}
+.sec-post-link {
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
+}

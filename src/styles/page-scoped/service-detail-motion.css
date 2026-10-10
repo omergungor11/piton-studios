@@ -1,0 +1,107 @@
+/* service-detail-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* Service inline variant */
+.sd-partners { margin-bottom: 0; }
+
+/* ========== SERVICE DETAIL PAGE ========== */
+
+/* ---- Scroll fade-in animation ---- */
+.sd-section-fade {
+  animation: sd-fade-up 600ms cubic-bezier(.2,.8,.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 30%;
+}
+
+/* ---- Section chrome ---- */
+
+/* ---- Hero ---- */
+.sd-hero-icon {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 12px var(--accent-soft));
+}
+
+/* ---- Stats ---- */
+.sd-stat:hover { transform: translateY(-3px); }
+/* Sozcuk iceren degerler (bkz. service-detail.tsx): sayilar icin ayarlanmis
+   olcek metinde kutuyu asiyor — daha kucuk ve satir arasi biraz acik. */
+
+/* ---- Features ---- */
+.sd-feature-card:hover {
+  transform: translateY(-6px);
+}
+/* Large ghost number behind content */
+.sd-feature-bg-n { opacity: 0.04;
+  transition: opacity 400ms ease;
+}
+.sd-feature-card:hover .sd-feature-bg-n { opacity: 0.07; }
+/* Accent glow pseudo-element effect */
+.sd-feature-glow {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.sd-feature-card:hover .sd-feature-glow { opacity: 1; }
+
+/* ---- Process timeline ---- */
+.sd-timeline-circle {
+  transition: border-color 300ms ease, background 300ms ease;
+}
+/* Pulse ring on hover */
+.sd-timeline-pulse {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.sd-timeline-item:hover .sd-timeline-pulse {
+  opacity: 0.5; transform: scale(1);
+}
+/* Dotted connector line */
+
+/* ---- Tools ---- */
+.sd-tool-badge {
+  transition: background 250ms ease, color 250ms ease,
+              border-color 250ms ease, transform 250ms ease;
+}
+.sd-tool-badge:hover { transform: translateY(-2px);
+}
+.sd-tool-dot {
+  transition: background 250ms ease;
+}
+
+/* ---- FAQ Accordion ---- */
+.sd-faq-question {
+  transition: background 200ms ease, color 200ms ease;
+}
+.sd-faq-idx {
+  transition: color 300ms ease;
+}
+.sd-faq-chevron {
+  transition: transform 350ms cubic-bezier(.2,.8,.2,1), color 300ms ease;
+}
+.sd-faq-item.is-open .sd-faq-chevron {
+  transform: rotate(180deg);
+}
+.sd-faq-answer {
+  transition: max-height 420ms cubic-bezier(.2,.8,.2,1), padding 300ms ease;
+}
+
+/* ---- Info boxes ---- */
+
+/* ---- Related services ---- */
+.sd-related-card:hover {
+  transform: translateY(-6px);
+}
+/* Category color stripe at the top of each card */
+.sd-related-stripe {
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 400ms cubic-bezier(.2,.8,.2,1);
+}
+.sd-related-card:hover .sd-related-stripe { transform: scaleX(1); }
+.sd-related-icon { opacity: 0.7;
+}
+.sd-related-arrow {
+  transition: transform 300ms ease, color 300ms ease, opacity 300ms ease;
+  opacity: 0;
+}
+.sd-related-card:hover .sd-related-arrow {
+  opacity: 1; transform: translate(3px, -3px);
+}

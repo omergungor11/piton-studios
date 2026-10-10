@@ -1,6 +1,7 @@
 "use client";
 
 import '@/styles/delivery-flow.css';
+import '@/styles/page-scoped/delivery-flow-motion.css';
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";

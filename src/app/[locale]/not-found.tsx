@@ -1,3 +1,4 @@
+import '@/styles/page-scoped/not-found.css';
 import type { CSSProperties } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';

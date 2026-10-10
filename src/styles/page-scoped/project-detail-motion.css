@@ -1,0 +1,28 @@
+/* project-detail-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* ========== PROJECT DETAIL PAGE ========== */
+/* Mobile preview — portrait frame */
+/* Desktop/Mobile toggle inside hero */
+.pd-hero-video video {
+  filter: contrast(1.05) saturate(0.92);
+}
+
+/* Metadata bar */
+.pd-live-link {
+  transition: opacity 200ms;
+}
+.pd-live-link:hover { opacity: 0.7; }
+
+/* Teknik vaka calismasi (works.{slug}.caseStudy) */
+.pd-nav-link {
+  transition: opacity 200ms;
+}
+.pd-nav-link:hover { opacity: 0.7; }
+.pd-nav-arrow { transition: color 200ms;
+}
+.pd-nav-link-title {
+  transition: color 200ms;
+}
+.pd-nav-all {
+  transition: color 200ms, border-color 200ms;
+}

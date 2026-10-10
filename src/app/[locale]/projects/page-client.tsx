@@ -1,6 +1,7 @@
 'use client';
 
 import '@/styles/projects.css';
+import '@/styles/page-scoped/projects-motion.css';
 
 import { useState, type CSSProperties, type ReactElement } from 'react';
 import { useTranslations } from 'next-intl';

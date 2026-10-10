@@ -1,0 +1,19 @@
+/* projects-motion: scoped rules moved unchanged from globals.css. Import with the owning view. */
+
+/* Projects page — Screenshot Showcase */
+.pp-showcase-item {
+  transition: opacity 200ms;
+}
+.pp-showcase-item:hover { opacity: 0.85; }
+
+/* Projects page — table */
+.pp-table-row {
+  transition: background 200ms ease, padding-left 400ms cubic-bezier(.2,.8,.2,1);
+}
+.pp-row-thumb {
+  transition: border-color 200ms ease, transform 400ms cubic-bezier(.2,.8,.2,1);
+}
+.pp-table-row:hover .pp-row-thumb { transform: scale(1.06); }
+@media (prefers-reduced-motion: reduce) {
+  .pp-table-row:hover .pp-row-thumb { transform: none; }
+}
