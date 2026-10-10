@@ -29,3 +29,18 @@ const HIDDEN_PROJECT_SLUGS = new Set([
 export const PROJECT_LIST_WORKS: Work[] = WORKS.filter(
   (work) => !HIDDEN_PROJECT_SLUGS.has(work.slug)
 );
+
+// Projeler sayfasındaki ekran görüntüsü şeridi (desktop/mobil) görünürlüğü;
+// tablo ve detay sayfaları bundan etkilenmez.
+export const SHOWCASE_HIDDEN_SLUGS: ReadonlySet<string> = new Set([
+  'halas-exchange',
+  'arslan-estates',
+  'arslan-group',
+  'ozge-ozler',
+  'rnv-trading',
+  'kardesler-taxi',
+  'homes-in-mediterranean',
+  'all-pro-cyprus',
+  'ekh-yapi',
+  'pampas-investment',
+]);

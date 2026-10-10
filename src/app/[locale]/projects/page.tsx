@@ -6,7 +6,7 @@ import { pickMessages } from "@/lib/pick-messages";
 import { buildPageMetadata, absoluteUrl, listingPageJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/json-ld";
 import { WORKS, type Work } from "@/lib/data";
-import { PROJECT_LIST_WORKS } from "@/lib/project-list";
+import { PROJECT_LIST_WORKS, SHOWCASE_HIDDEN_SLUGS } from "@/lib/project-list";
 import { AREA_KEYS, isInArea } from "@/lib/studio-stats";
 import { getLocalizedProject } from "@/lib/content-i18n";
 import type { Locale } from "@/lib/site";
@@ -76,7 +76,7 @@ export default async function Page({ params }: Props): Promise<ReactElement> {
   }));
   const previews: ProjectShowcaseItem[] = WORKS.flatMap((work): ProjectShowcaseItem[] => {
     const desktop = work.previews?.desktop;
-    if (!desktop) return [];
+    if (!desktop || SHOWCASE_HIDDEN_SLUGS.has(work.slug)) return [];
     return [{
       n: work.n,
       slug: work.slug,

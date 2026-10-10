@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-10 — Projeler ekran görüntüsü şeridi sadeleştirildi (TASK-117)
+
+- Projeler sayfası "Seçilmiş çalışmalar" desktop/mobil şeridinden 10 proje çıkarıldı: Halas Exchange, Arslan Estates, Arslan Group, Özge Özler, RNV Trading, Kardeşler Taxi, Homes in Mediterranean, All Pro Cyprus, EKH Yapı, Pampas Investment. Liste `SHOWCASE_HIDDEN_SLUGS` (`src/lib/project-list.ts`); tablo görünürlüğü ayrı `HIDDEN_PROJECT_SLUGS` ile yönetilir, detay sayfaları değişmedi. Şerit 39 → 29 proje, TR/EN/RU iki görünümde doğrulandı.
+
 ## 2026-10-10 — Teslim akışında mobil adım geçişi (TASK-116)
 
 - Projeler sayfası "Nasıl çalışıyoruz" şeridi mobilde ekrana sığmadığı için 05 Devreye alma / 06 Büyütme sağda kalıyordu. Seçili adım şeritte otomatik ortalanır, böylece sonraki adım görünür hale gelir. İlk sürümdeki ← 0N / 06 → butonları kullanıcı isteğiyle kaldırıldı. Hover ile adım değişimi yalnız farede; dokunmatik kaydırma adımı değiştirmez.
