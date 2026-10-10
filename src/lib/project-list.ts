@@ -43,4 +43,6 @@ export const SHOWCASE_HIDDEN_SLUGS: ReadonlySet<string> = new Set([
   'all-pro-cyprus',
   'ekh-yapi',
   'pampas-investment',
+  'arslan-coin-center',
+  'aydin-transfer',
 ]);

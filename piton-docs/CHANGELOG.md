@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-10 — Proje sırası: Mindloop grubu öne alındı (TASK-118)
+
+- WORKS sırasında Mindloop, Dental Health, Securify, Araç Takip, Füze Güdüm, Lithos, Vanguard, Jack Portfolio ve Veldara 3 Monkeys'in arkasına taşındı; `n` 01–53 yeniden numaralandı (Mindloop 34 → 13). Her yerde gizli diğer projeler sonda kaldı. İçerik değişmedi (blok bazında birebir doğrulandı); ilk 6 proje aynı.
+- Arslan Coin Center ve Aydın Transfer de ekran görüntüsü şeridinden çıkarıldı (şerit 27 proje). Production build ve TR/EN/RU iki görünüm testi geçti.
+
 ## 2026-10-10 — Projeler ekran görüntüsü şeridi sadeleştirildi (TASK-117)
 
 - Projeler sayfası "Seçilmiş çalışmalar" desktop/mobil şeridinden 10 proje çıkarıldı: Halas Exchange, Arslan Estates, Arslan Group, Özge Özler, RNV Trading, Kardeşler Taxi, Homes in Mediterranean, All Pro Cyprus, EKH Yapı, Pampas Investment. Liste `SHOWCASE_HIDDEN_SLUGS` (`src/lib/project-list.ts`); tablo görünürlüğü ayrı `HIDDEN_PROJECT_SLUGS` ile yönetilir, detay sayfaları değişmedi. Şerit 39 → 29 proje, TR/EN/RU iki görünümde doğrulandı.
