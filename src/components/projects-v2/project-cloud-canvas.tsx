@@ -19,6 +19,8 @@ export interface ProjectCloudItem {
   kind: string;
   year: string;
   image: string;
+  /** WebGL dokusu: `image`in optimize edilmis adresi (fallback kartlari `image`i next/image ile kullanir). */
+  texture: string;
   format: 'landscape' | 'portrait';
   accent: 'red' | 'cyan';
 }
@@ -85,7 +87,7 @@ function ProjectMockup({
   const imageMaterialRef = useRef<THREE.MeshBasicMaterial>(null);
   const topAccentMaterialRef = useRef<THREE.MeshBasicMaterial>(null);
   const bottomAccentMaterialRef = useRef<THREE.MeshBasicMaterial>(null);
-  const sourceTexture = useTexture(project.image);
+  const sourceTexture = useTexture(project.texture);
   const maxAnisotropy = useThree((state) => state.gl.capabilities.getMaxAnisotropy());
   const accent = ACCENTS[project.accent];
   const baseTilt = ((index % 5) - 2) * 0.026;
@@ -353,28 +355,30 @@ function Cloud({
 
   return (
     <group ref={cloudRef}>
+      {/* Her kart kendi dokusu gelince belirir; 15 dokunun tamamini beklemez. */}
       {projects.map((project, index) => (
-        <ProjectMockup
-          key={project.id}
-          project={project}
-          index={index}
-          projectCount={projects.length}
-          scrollCount={Math.max(1, Math.min(scrollCount ?? projects.length, projects.length))}
-          compact={compact}
-          isActive={activeSlug === project.slug}
-          isHovered={focusedSlug === project.slug}
-          hasFocusedCard={focusedSlug !== null}
-          progressRef={progressRef}
-          onFocus={(slug) => {
-            setFocusedSlug(slug);
-            onFocus(slug);
-          }}
-          onBlur={() => {
-            setFocusedSlug(null);
-            onFocus(null);
-          }}
-          onSelect={onSelect}
-        />
+        <Suspense key={project.id} fallback={null}>
+          <ProjectMockup
+            project={project}
+            index={index}
+            projectCount={projects.length}
+            scrollCount={Math.max(1, Math.min(scrollCount ?? projects.length, projects.length))}
+            compact={compact}
+            isActive={activeSlug === project.slug}
+            isHovered={focusedSlug === project.slug}
+            hasFocusedCard={focusedSlug !== null}
+            progressRef={progressRef}
+            onFocus={(slug) => {
+              setFocusedSlug(slug);
+              onFocus(slug);
+            }}
+            onBlur={() => {
+              setFocusedSlug(null);
+              onFocus(null);
+            }}
+            onSelect={onSelect}
+          />
+        </Suspense>
       ))}
     </group>
   );

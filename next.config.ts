@@ -118,6 +118,18 @@ const nextConfig: NextConfig = {
   images: {
     // Hero logosu 60; diger gorseller mevcut varsayilan kaliteyi korur.
     qualities: [60, 75],
+    // Optimize edilmis gorseller deploy basina ayri URL alir (dpl), uzun TTL guvenli.
+    minimumCacheTTL: 2678400,
+  },
+  async headers() {
+    // public/ varsayilani max-age=0: tarayici her ziyarette her gorseli yeniden sorar.
+    // Dosya adlari hash'siz; ayni adla degisen gorsel en gec bir gunde yenilenir.
+    return [
+      {
+        source: "/assets/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=2592000" }],
+      },
+    ];
   },
   async redirects() {
     // Sira onemli: ilk eslesen kural uygulanir — ozelden genele.

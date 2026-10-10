@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-10 — Görsel yükleme hızı: proje bulutu ve cache (TASK-123)
+
+- Anasayfa 3B proje bulutu 15 ham ekran görüntüsünü (1440px, ~1.250 KB) texture olarak indiriyordu. Texture'lar artık Next image optimizer'dan geliyor (`texture` alanı, `getImageProps`; yatay w=1080, dikey w=640): ~530 KB. Fallback kartları `image` (ham yol) ile next/image kullanmaya devam eder.
+- Her kart ayrı `Suspense`: kartlar dokusu geldikçe belirir, 15'inin tamamı beklenmez.
+- Sahne etkinleştirme ~2 ekran önceden (`rootMargin` 400px → 1600px); three.js paketi sayfa boştayken önceden indirilir (hareket azaltma / veri tasarrufunda indirilmez).
+- Cache: `/assets/*` için `max-age=86400, stale-while-revalidate=2592000` (önceden `max-age=0`, her ziyarette her görsel yeniden soruluyordu); `images.minimumCacheTTL` 31 gün (optimize URL'ler deploy başına ayrı).
+- Doğrulama: production build'de gerçek Chrome'da canvas çiziliyor, 15 doku optimize adresten. Not: headless Chrome'un yazılımsal WebGL'i bu sahnede güvenilir değil (canlıda da canvas açmıyor), ölçüm gerçek Chrome ile yapıldı.
+
 ## 2026-10-10 — Hizmetler menüsü sırası (TASK-122)
 
 - Hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım, ardından Web Tasarım ve diğerleri eski göreli sırasıyla. `SERVICES` (`data.ts`) yeniden sıralandı ve `n` 01–18 yeniden numaralandı (içerik birebir aynı); menü listesi `SERVICE_SLUGS` aynı sıraya alındı.

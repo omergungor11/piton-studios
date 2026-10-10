@@ -209,17 +209,30 @@ export default function ProjectCloudSection({
     const evaluate = () => {
       if (activated) setMode(supportsImmersiveScene() ? 'webgl' : 'fallback');
     };
-    // Ekran disindaki sahne icin WebGL yoklamasi, paket ve 15 doku yuklemesi yapma.
+    // Ekran disindaki sahne icin WebGL yoklamasi ve 15 doku yuklemesi yapma; sahneye ~iki ekran
+    // kala basla ki ziyaretci geldiginde kartlar hazir olsun.
     // Ayrilan sticky alan, yukleme baslayinca sayfa yuksekliginin degismesini onler.
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting || activated) return;
       activated = true;
       evaluate();
       observer.disconnect();
-    }, { rootMargin: '400px' });
+    }, { rootMargin: '1600px 0px' });
     if (trackRef.current) observer.observe(trackRef.current);
     reducedMotionQuery.addEventListener('change', evaluate);
+    // three.js paketini sayfa bostayken indir (yalniz indirme; WebGL baslatilmaz).
+    // Hareket azaltma / veri tasarrufunda sahne zaten acilmaz, indirme de yapilmaz.
+    const prefetch = () => {
+      if (reducedMotionQuery.matches || (navigator as NavigatorWithConnection).connection?.saveData) return;
+      void import('@/components/projects-v2/project-cloud-canvas');
+    };
+    const hasIdle = typeof window.requestIdleCallback === 'function'; // Safari'de yok
+    const idle = hasIdle
+      ? window.requestIdleCallback(prefetch, { timeout: 4000 })
+      : window.setTimeout(prefetch, 2500);
     return () => {
+      if (hasIdle) window.cancelIdleCallback(idle);
+      else window.clearTimeout(idle);
       observer.disconnect();
       reducedMotionQuery.removeEventListener('change', evaluate);
     };

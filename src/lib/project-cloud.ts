@@ -1,3 +1,4 @@
+import { getImageProps } from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { WORKS } from '@/lib/data';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';
@@ -28,6 +29,17 @@ export const PROJECT_CLOUD_SELECTION = [
   { slug: 'arac-takip-yolo', format: 'landscape' },
 ] as const;
 
+/**
+ * Doku adresi: ham 1440px dosya yerine Next image optimizer (~3x kucuk, tarayici cache'li).
+ * getImageProps src olarak 2x adayini verir: 540 -> w=1080 (masaustu en buyuk kart icin yeter),
+ * portrait 320 -> w=640 (kaynak 430px, buyutulmez).
+ */
+function textureUrl(src: string, portrait: boolean): string {
+  return getImageProps(portrait
+    ? { src, alt: '', width: 320, height: 691 }
+    : { src, alt: '', width: 540, height: 304 }).props.src;
+}
+
 /** Server tarafinda calisir: secili projeleri locale'e gore cevrilmis bulut kayitlarina donusturur. */
 export async function buildProjectCloudItems(locale: string): Promise<ProjectCloudItem[]> {
   const tw = await getTranslations({ locale, namespace: 'works' });
@@ -36,6 +48,7 @@ export async function buildProjectCloudItems(locale: string): Promise<ProjectClo
     const work = WORKS.find((candidate) => candidate.slug === slug);
     if (!work) return [];
 
+    const image = `/assets/previews/${format === 'portrait' ? 'mobile' : 'desktop'}/${work.slug}.webp`;
     return [{
       id: work.slug,
       number: work.n,
@@ -43,7 +56,8 @@ export async function buildProjectCloudItems(locale: string): Promise<ProjectClo
       title: tw.has(`${work.slug}.title`) ? tw(`${work.slug}.title`) : work.title,
       kind: tw.has(`${work.slug}.kind`) ? tw(`${work.slug}.kind`) : work.kind,
       year: work.year,
-      image: `/assets/previews/${format === 'portrait' ? 'mobile' : 'desktop'}/${work.slug}.webp`,
+      image,
+      texture: textureUrl(image, format === 'portrait'),
       format,
       accent: index % 2 === 0 ? 'red' : 'cyan',
     }];
