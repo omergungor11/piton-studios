@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-10 — Anasayfa öne çıkan projeler güncellendi (TASK-121)
+
+- 3B proje bulutu (`PROJECT_CLOUD_SELECTION`) projeler sayfası ekran görüntüsü şeridinin ilk 15'iyle eşlendi: Naiben, Kabizzu, FurCRM, BT Elevator, Gel Gez Gör, Nexos, Alp Sigorta, Ambalaj Cini, Velair, Velis, 3 Monkeys, Mindloop, Dental Health, Securify, Araç Takip. Pinnacle, Sammy's Hotel, Beton Store, Virginia, Lithos ve Vanguard bulutan çıktı. 3. ve 5. kart (FurCRM, Gel Gez Gör) dikey kalır; Araç Takip'in mobil önizlemesi olmadığı için yatay.
+- Production build'de TR/EN 1280 ve 390 px: 15 texture yüklendi, hata yok.
+- Ayrı bulgu: EN anasayfada alt sahne göstergesi "06 · Projeler" (Türkçe) gösteriyor; incelenmeli.
+
 ## 2026-10-10 — Proje tablosundan 6 proje kaldırıldı (TASK-120)
 
 - Projeler sayfası "Seçilmiş Projeler" tablosundan Özge Özler, RNV Trading, Homes in Mediterranean, Aydın Transfer, All Pro Cyprus ve Pampas Investment çıkarıldı (`HIDDEN_PROJECT_SLUGS`); tablo 31 → 25. Sayfanın JSON-LD listesi aynı kaynaktan gelir. Detay sayfaları açık kalır (200).

@@ -3,7 +3,8 @@ import { WORKS } from '@/lib/data';
 import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-canvas';
 
 /**
- * 3B proje bulutunda gosterilen secili projeler. Sira helis uzerindeki sirayi belirler;
+ * 3B proje bulutunda gosterilen secili projeler: projeler sayfasindaki ekran goruntusu
+ * seridinin ilk 15'i (WORKS sirasi). Sira helis uzerindeki sirayi belirler;
  * `format` hangi preview'in (desktop 1440x810 / mobile 430x928) texture olacagini secer.
  * Ilk 7'si kaydirmayla one gelir (project-cloud-section DEFAULT_SCROLL_COUNT); kalan 8
  * helisin arka kollarinda dekor + hover/tiklama ile erisilebilir durur.
@@ -11,20 +12,20 @@ import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-ca
  */
 export const PROJECT_CLOUD_SELECTION = [
   { slug: 'naiben', format: 'landscape' },
-  { slug: 'fur-crm', format: 'landscape' },
-  { slug: 'pinnacle-yatirim', format: 'portrait' },
-  { slug: 'gel-gez-gor', format: 'landscape' },
-  { slug: 'sammys-hotel', format: 'portrait' },
+  { slug: 'kabizzu', format: 'landscape' },
+  { slug: 'fur-crm', format: 'portrait' },
+  { slug: 'bt-elevator', format: 'landscape' },
+  { slug: 'gel-gez-gor', format: 'portrait' },
   { slug: 'nexos-investment', format: 'landscape' },
   { slug: 'alp-sigorta', format: 'landscape' },
+  { slug: 'ambalaj-cini', format: 'landscape' },
+  { slug: 'velair-experience', format: 'landscape' },
   { slug: 'velis-ltd', format: 'landscape' },
-  { slug: 'bt-elevator', format: 'landscape' },
-  { slug: 'beton-store', format: 'landscape' },
-  { slug: 'virginia-ice-cream', format: 'landscape' },
+  { slug: '3monkeys-bozuyuk', format: 'landscape' },
   { slug: 'mindloop', format: 'landscape' },
+  { slug: 'dental-health', format: 'landscape' },
   { slug: 'securify', format: 'landscape' },
-  { slug: 'lithos', format: 'landscape' },
-  { slug: 'vanguard', format: 'landscape' },
+  { slug: 'arac-takip-yolo', format: 'landscape' },
 ] as const;
 
 /** Server tarafinda calisir: secili projeleri locale'e gore cevrilmis bulut kayitlarina donusturur. */
