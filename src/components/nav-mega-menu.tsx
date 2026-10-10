@@ -7,21 +7,22 @@ import { Link } from '@/components/navigation/intent-link';
 type Href = ComponentProps<typeof Link>['href'];
 
 /**
- * SERVICES (src/lib/data.ts) sirasi. data.ts buyuk oldugu icin her sayfanin istemci
+ * Menu sirasi (2026-10-10: AI entegrasyonu, ERP & CRM, Ozel Yazilim basta); SERVICES
+ * (src/lib/data.ts) sirasindan bagimsizdir. data.ts buyuk oldugu icin her sayfanin istemci
  * paketine girmesin diye slug'lar burada tutulur — hizmet eklenirse buraya da ekleyin.
  * Etiketler: messages → common.menu.services.{slug}.
  */
 const SERVICE_SLUGS = [
-  'web-design',
+  'ai-integration',
+  'erp-crm',
   'custom-software',
+  'web-design',
   'web-app',
   'mobile-app',
   'progressive-web-app',
   'ecommerce',
-  'erp-crm',
   'automation',
   'whatsapp-chatbot',
-  'ai-integration',
   'ai-consulting',
   'data-engineering',
   'cloud-ecosystem',

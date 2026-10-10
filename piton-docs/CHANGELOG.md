@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-10 — Hizmetler menüsü sırası (TASK-122)
+
+- Masaüstü mega menü ve mobil menüde hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım, ardından Web Tasarım ve diğerleri eski göreli sırasıyla. Tek kaynak `SERVICE_SLUGS` (`nav-mega-menu.tsx`); artık `SERVICES` sırasından bağımsız. Hizmetler sayfası ve footer sırası değişmedi.
+- Production build'de TR/EN, anasayfa ve iç sayfa, masaüstü ve mobil menüde doğrulandı.
+
 ## 2026-10-10 — Anasayfa öne çıkan projeler güncellendi (TASK-121)
 
 - 3B proje bulutu (`PROJECT_CLOUD_SELECTION`) projeler sayfası ekran görüntüsü şeridinin ilk 15'iyle eşlendi: Naiben, Kabizzu, FurCRM, BT Elevator, Gel Gez Gör, Nexos, Alp Sigorta, Ambalaj Cini, Velair, Velis, 3 Monkeys, Mindloop, Dental Health, Securify, Araç Takip. Pinnacle, Sammy's Hotel, Beton Store, Virginia, Lithos ve Vanguard bulutan çıktı. 3. ve 5. kart (FurCRM, Gel Gez Gör) dikey kalır; Araç Takip'in mobil önizlemesi olmadığı için yatay.

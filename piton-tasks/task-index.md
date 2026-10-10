@@ -23,11 +23,11 @@
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
 | 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112, 116, 119) | 20 | 20 | 0 | 0 | 0 |
-| 19 | Proje Sırası & Görünürlük (TASK-094..095, 103, 117..118, 120..121) | 7 | 7 | 0 | 0 | 0 |
+| 19 | Proje Sırası & Görünürlük (TASK-094..095, 103, 117..118, 120..122) | 8 | 8 | 0 | 0 | 0 |
 | 20 | Performans (TASK-104..106, 113..115) | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **120** | **119** | **0** | **0** | **0** |
+| **Total** | | **121** | **120** | **0** | **0** | **0** |
 
-**Progress**: 119/120 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
+**Progress**: 120/121 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -248,3 +248,4 @@
 | TASK-119 | Proje adları ve iç sayfa kırmızı başlık vurgularını Nippo'ya geçir | S | COMPLETED |
 | TASK-120 | Proje tablosundan 6 projeyi kaldır | S | COMPLETED |
 | TASK-121 | Anasayfa öne çıkan projeleri projeler sayfası şeridiyle eşle | S | COMPLETED |
+| TASK-122 | Hizmetler menüsünde AI Entegrasyonu, ERP & CRM, Özel Yazılım başa | S | COMPLETED |
