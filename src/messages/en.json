@@ -510,6 +510,8 @@
     "title": "From idea to a <accent>working system</accent>, in six steps.",
     "desc": "Website, custom software or automation — we follow the same flow. What each step produces and what it needs from you is stated up front, so nothing arrives as a surprise.",
     "trackLabel": "Delivery steps",
+    "prevStep": "Previous step",
+    "nextStep": "Next step",
     "labelWhat": "What happens",
     "labelOutput": "Output",
     "labelYou": "What we need from you",

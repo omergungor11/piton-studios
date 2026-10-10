@@ -148,6 +148,23 @@
 }
 .df-example-arrow { margin-left: auto; font-size: 15px; color: var(--accent); }
 
+/* Mobil adim gecisi: masaustunde serit sigdigi icin gizli */
+.df-stepper { display: none; }
+.df-step-btn {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: var(--glass-bg-strong); color: var(--ink);
+  font-size: 16px; cursor: pointer;
+}
+.df-step-btn:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
+.df-step-btn:disabled { opacity: 0.35; cursor: default; }
+.df-step-count {
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.2em; color: var(--muted);
+  font-weight: 500;
+}
+
 @media (max-width: 900px) {
   .df { padding: 24px 20px; }
   .df-card { padding: 20px 18px; }
@@ -166,6 +183,11 @@
     min-width: 100%;
   }
   .df-rail { left: 58px; right: 58px; }
+  .df-track-wrap { margin-bottom: 14px; }
+  .df-stepper {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 18px;
+  }
   .df-node-name { font-size: 12px; }
   .df-example-arrow { margin-left: 0; }
 }

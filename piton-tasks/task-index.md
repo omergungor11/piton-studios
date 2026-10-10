@@ -22,12 +22,12 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112) | 18 | 18 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112, 116) | 19 | 19 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103) | 3 | 3 | 0 | 0 | 0 |
 | 20 | Performans (TASK-104..106, 113..115) | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **114** | **113** | **0** | **0** | **0** |
+| **Total** | | **115** | **114** | **0** | **0** | **0** |
 
-**Progress**: 113/114 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
+**Progress**: 114/115 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -242,3 +242,4 @@
 | TASK-113 | Kritik yükteki veri/çeviri, font ve dekorasyon trafiğini azalt; anasayfa/hizmetler/projeler LCP'sini tekrarlı üretim ölçümleriyle doğrula | L | COMPLETED |
 | TASK-114 | Başlangıç animasyon motorunu küçült; native Reveal davranışını ve tekrarlı performansı doğrula, commit ve push yap | M | COMPLETED |
 | TASK-115 | Paralel agentlarla mobil ilk ekran animasyonlarını, ortak CSS ve font/görsel yükünü azalt; üretim karşılaştırması ve akışları doğrula, push yap | L | COMPLETED |
+| TASK-116 | Projeler sayfası teslim akışında mobil adım geçişi (otomatik ortalama + önceki/sonraki) | S | COMPLETED |

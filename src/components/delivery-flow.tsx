@@ -3,7 +3,7 @@
 import '@/styles/delivery-flow.css';
 import '@/styles/page-scoped/delivery-flow-motion.css';
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/components/navigation/intent-link";
 
@@ -16,6 +16,8 @@ import { Link } from "@/components/navigation/intent-link";
  *
  * Etkilesim: dugum uzerinde hover (masaustu) / tap (mobil) -> kart degisir,
  * ray o dugume kadar dolar. Klavyeyle de gezilebilir (focus ayni isi yapar).
+ * Mobilde serit yatay kayar: secili dugum ortalanir ve onceki/sonraki
+ * butonlari ekranin disinda kalan adimlara (05, 06) gecisi saglar.
  */
 
 const STEPS = [
@@ -34,6 +36,22 @@ interface DeliveryFlowProps {
 export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
   const t = useTranslations("delivery");
   const [active, setActive] = useState(0);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const nodeRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // Serit tasiyorsa (mobil) secili dugumu ortala; yalnizca yatay kaydirir.
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    const node = nodeRefs.current[active];
+    if (!wrap || !node || wrap.scrollWidth <= wrap.clientWidth) return;
+    const w = wrap.getBoundingClientRect();
+    const n = node.getBoundingClientRect();
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    wrap.scrollBy({
+      left: n.left + n.width / 2 - (w.left + w.width / 2),
+      behavior: reduce ? "auto" : "smooth",
+    });
+  }, [active]);
 
   const step = STEPS[active];
   const work = examples[step.id];
@@ -55,7 +73,7 @@ export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
       </header>
 
       {/* Adim seridi */}
-      <div className="df-track-wrap">
+      <div className="df-track-wrap" ref={wrapRef}>
         <div className="df-track" role="tablist" aria-label={t("trackLabel")}>
           <div className="df-rail" aria-hidden="true">
             <span
@@ -67,11 +85,17 @@ export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
           {STEPS.map((s, i) => (
             <button
               key={s.id}
+              ref={(el) => {
+                nodeRefs.current[i] = el;
+              }}
               type="button"
               role="tab"
               aria-selected={i === active}
               className={`df-node ${i === active ? "is-active" : ""} ${i < active ? "is-done" : ""}`}
-              onPointerEnter={() => setActive(i)}
+              onPointerEnter={(e) => {
+                // Dokunmatikte kaydirma baslangici adimi degistirmesin.
+                if (e.pointerType === "mouse") setActive(i);
+              }}
               onFocus={() => setActive(i)}
               onClick={() => setActive(i)}
               data-cursor="hover"
@@ -84,6 +108,31 @@ export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Mobil adim gecisi — serit ekrana sigmadiginda gorunur (CSS) */}
+      <div className="df-stepper">
+        <button
+          type="button"
+          className="df-step-btn"
+          onClick={() => setActive((a) => a - 1)}
+          disabled={active === 0}
+          aria-label={t("prevStep")}
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <span className="df-step-count" aria-hidden="true">
+          {String(active + 1).padStart(2, "0")} / {String(STEPS.length).padStart(2, "0")}
+        </span>
+        <button
+          type="button"
+          className="df-step-btn"
+          onClick={() => setActive((a) => a + 1)}
+          disabled={active === STEPS.length - 1}
+          aria-label={t("nextStep")}
+        >
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
 
       {/* Adim karti — key ile her degisimde yeniden mount, gecis animasyonu icin */}

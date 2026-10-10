@@ -1,7 +1,13 @@
 # Changelog
 
+## 2026-10-10 — Teslim akışında mobil adım geçişi (TASK-116)
+
+- Projeler sayfası "Nasıl çalışıyoruz" şeridi mobilde ekrana sığmadığı için 05 Devreye alma / 06 Büyütme sağda kalıyordu. Seçili adım şeritte otomatik ortalanır; mobilde (≤900 px) şeridin altında ← 0N / 06 → adım butonları var (masaüstünde gizli). Hover ile adım değişimi yalnız farede; dokunmatik kaydırma adımı değiştirmez.
+- `prevStep` / `nextStep` 3 dilde eklendi. 390 px'te 01→06 ileri/geri ve 04 seçilince 05'in görünmesi, 1280 px'te değişmeyen şerit tarayıcı testiyle doğrulandı.
+
 ## 2026-10-10 — Mobil ilk ekran yükü (TASK-115)
 
+- **Yayın doğrulandı**: `db6a5fd` main'e pushlandı, Vercel başarılı; canlı TR/EN/RU ve temel sayfalar 200, hero q=60 yayında, 390 px'te 4 rotada taşma yok.
 - Mobilde (≤1000 px) üst marka, sahne sayacı ve hero logosu ilk boyamada animasyonsuz/görünür; aurora drift ve sürekli composite işi durduruldu (`src/styles/mobile-first-paint.css`). Masaüstü floatIn/heroLogoFloat/auroraDrift korunur, reduced-motion statik görünümü aynı.
 - Sayfaya özgü ve eski stiller `globals.css`'ten `src/styles/page-scoped/` altında 15 dosyaya taşındı, kullanan sayfa/component import eder (−1969/+198 satır). Hero logosu `quality={60}` (`next.config.ts` `images.qualities: [60, 75]`). Font dosyaları değişmedi; kayıpsız kazanç kanıtlanmadı.
 - Aynı yerel üretim profilinde CSS transferi anasayfa 30,3 → 25,3 KB, hizmetler 28,6 → 23,8 KB, blog 29,1 → 24,1 KB (≈%16,5); anasayfa görseli 42,8 → 38,1 KB. TR anasayfa mobil medyan 86 → 87, LCP 4,18 → 3,97 sn; hizmetler LCP 3,77 → 3,70 sn (3 koşu), RU 87 → 87, blog 89 → 89, masaüstü 98 (CLS 0,0102 önceden de aynı).
