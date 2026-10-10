@@ -248,4 +248,4 @@
 | TASK-119 | Proje adları ve iç sayfa kırmızı başlık vurgularını Nippo'ya geçir | S | COMPLETED |
 | TASK-120 | Proje tablosundan 6 projeyi kaldır | S | COMPLETED |
 | TASK-121 | Anasayfa öne çıkan projeleri projeler sayfası şeridiyle eşle | S | COMPLETED |
-| TASK-122 | Hizmetler menüsünde AI Entegrasyonu, ERP & CRM, Özel Yazılım başa | S | COMPLETED |
+| TASK-122 | Hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım başa (menü, sayfa, numaralar) | S | COMPLETED |

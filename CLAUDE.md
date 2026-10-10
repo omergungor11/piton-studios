@@ -94,9 +94,10 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   > JSON-LD: FAQPage + WebPage(`speakable`) + BreadcrumbList + Organization.
   > `/llms.txt` (llmstxt.org bicimi) ve `robots.ts`'teki 14 AI crawler izni de bu isin parcasi.
 - **Hizmet / sektör / çözüm yapısı ve yerel URL'ler** (2026-09-15, plan: `piton-plans/hub-restructure-plan.md`):
-  - **18 hizmet** (`SERVICES`, sıra önemli): Web Tasarım, Özel Yazılım, Web Uygulama, Mobil Uygulama, PWA, E-ticaret,
-    ERP & CRM, Otomasyon, WhatsApp & Chatbot, AI Entegrasyonu, AI Danışmanlık, Veri Müh., Cloud, Google Ads, Meta
-    Reklamları, SEO & GEO, Bakım & Destek, Eğitim & Danışmanlık (`how-to-do`). Agentic AI kaldırıldı.
+  - **18 hizmet** (`SERVICES`, sıra önemli; 2026-10-10'dan beri): AI Entegrasyonu, ERP & CRM, Özel Yazılım, Web Tasarım,
+    Web Uygulama, Mobil Uygulama, PWA, E-ticaret, Otomasyon, WhatsApp & Chatbot, AI Danışmanlık, Veri Müh., Cloud,
+    Google Ads, Meta Reklamları, SEO & GEO, Bakım & Destek, Eğitim & Danışmanlık (`how-to-do`). Agentic AI kaldırıldı.
+    Sıra değişirse `n` numaraları ve `nav-mega-menu.tsx` `SERVICE_SLUGS` aynı sıraya getirilir.
     Hizmet eklerken: `data.ts` + 3 dilde `servicesList` + `service-icons.tsx` + `nav-mega-menu.tsx` SERVICE_SLUGS
     + `common.menu.services` + `src/lib/slugs.ts`. Kaldırılan hizmet → `next.config.ts` REMOVED_SERVICES.
   - **Sektörler = hub** (13, Sanayi ve Mühendislik dahil): "<Sektör> web sitesi" değil, o sektör için tüm ilgili

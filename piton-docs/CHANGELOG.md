@@ -2,8 +2,9 @@
 
 ## 2026-10-10 — Hizmetler menüsü sırası (TASK-122)
 
-- Masaüstü mega menü ve mobil menüde hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım, ardından Web Tasarım ve diğerleri eski göreli sırasıyla. Tek kaynak `SERVICE_SLUGS` (`nav-mega-menu.tsx`); artık `SERVICES` sırasından bağımsız. Hizmetler sayfası ve footer sırası değişmedi.
-- Production build'de TR/EN, anasayfa ve iç sayfa, masaüstü ve mobil menüde doğrulandı.
+- Hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım, ardından Web Tasarım ve diğerleri eski göreli sırasıyla. `SERVICES` (`data.ts`) yeniden sıralandı ve `n` 01–18 yeniden numaralandı (içerik birebir aynı); menü listesi `SERVICE_SLUGS` aynı sıraya alındı.
+- Etkisi: masaüstü/mobil menü, `/hizmetler` kartları ve kategori filtre sırası (AI ilk), hizmet detay numaraları, anasayfa 6 hizmet kartı (AI Entegrasyonu başa geçti), llms.txt. Footer hizmetleri listelemediği için değişmedi.
+- Production build'de TR/EN menü (masaüstü + mobil), hizmetler sayfası, anasayfa ve detay sayfası doğrulandı.
 
 ## 2026-10-10 — Anasayfa öne çıkan projeler güncellendi (TASK-121)
 
