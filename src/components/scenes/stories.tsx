@@ -11,7 +11,6 @@ import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
 const FEATURED = SERVICES.slice(0, 5);
 
 export default function StoriesScene() {
-  const t = useTranslations('storiesSection');
   const ts = useTranslations('servicesList');
   const [idx, setIdx] = useState(0);
   const n = FEATURED.length;

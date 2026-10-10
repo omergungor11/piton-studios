@@ -22,18 +22,11 @@ interface PageShellProps {
 }
 
 export default function PageShell({ children, immersive = false }: PageShellProps) {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   // Lenis body overflow'unu dinlemez: menu acikken sayfa kaydirmasi ayrica durdurulur.
   useScrollLock(menuOpen);
   const pathname = usePathname();
   const t = useTranslations('common');
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     const onResize = () => {

@@ -126,6 +126,8 @@ export default function SnakeScroll() {
         document.body.classList.add('is-snake-dragging');
         scrollToPointer(e.clientY);
       }}
+      // Belgenin kendisini kaydirir; aria-controls ile gosterilecek tek bir oge yok.
+      // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
       role="scrollbar"
       aria-label="Sayfa kaydirma"
       aria-orientation="vertical"
