@@ -24,6 +24,12 @@ const HIDDEN_PROJECT_SLUGS = new Set([
   'emlak-sync',
   'dolmus-kontrol',
   'ekh-yapi',
+  'ozge-ozler',
+  'rnv-trading',
+  'homes-in-mediterranean',
+  'aydin-transfer',
+  'all-pro-cyprus',
+  'pampas-investment',
 ]);
 
 export const PROJECT_LIST_WORKS: Work[] = WORKS.filter(

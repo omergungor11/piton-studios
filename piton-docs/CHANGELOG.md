@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-10 — Proje tablosundan 6 proje kaldırıldı (TASK-120)
+
+- Projeler sayfası "Seçilmiş Projeler" tablosundan Özge Özler, RNV Trading, Homes in Mediterranean, Aydın Transfer, All Pro Cyprus ve Pampas Investment çıkarıldı (`HIDDEN_PROJECT_SLUGS`); tablo 31 → 25. Sayfanın JSON-LD listesi aynı kaynaktan gelir. Detay sayfaları açık kalır (200).
+
 ## 2026-10-10 — Nippo: proje adları ve kırmızı başlık vurguları (TASK-119)
 
 - Projeler sayfasında ekran görüntüsü şeridindeki proje adları (500) ve tablo başlıkları (700) Nippo'ya geçti.
