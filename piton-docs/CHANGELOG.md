@@ -2,8 +2,8 @@
 
 ## 2026-10-10 — Teslim akışında mobil adım geçişi (TASK-116)
 
-- Projeler sayfası "Nasıl çalışıyoruz" şeridi mobilde ekrana sığmadığı için 05 Devreye alma / 06 Büyütme sağda kalıyordu. Seçili adım şeritte otomatik ortalanır; mobilde (≤900 px) şeridin altında ← 0N / 06 → adım butonları var (masaüstünde gizli). Hover ile adım değişimi yalnız farede; dokunmatik kaydırma adımı değiştirmez.
-- `prevStep` / `nextStep` 3 dilde eklendi. 390 px'te 01→06 ileri/geri ve 04 seçilince 05'in görünmesi, 1280 px'te değişmeyen şerit tarayıcı testiyle doğrulandı.
+- Projeler sayfası "Nasıl çalışıyoruz" şeridi mobilde ekrana sığmadığı için 05 Devreye alma / 06 Büyütme sağda kalıyordu. Seçili adım şeritte otomatik ortalanır, böylece sonraki adım görünür hale gelir. İlk sürümdeki ← 0N / 06 → butonları kullanıcı isteğiyle kaldırıldı. Hover ile adım değişimi yalnız farede; dokunmatik kaydırma adımı değiştirmez.
+- 390 px'te sıralı dokunuşla 01→06 ilerleme ve 04 seçilince 05'in görünmesi, 1280 px'te değişmeyen şerit tarayıcı testiyle doğrulandı.
 
 ## 2026-10-10 — Mobil ilk ekran yükü (TASK-115)
 

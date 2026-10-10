@@ -463,8 +463,6 @@
     "title": "Fikirden <accent>çalışan sisteme</accent>, altı adımda.",
     "desc": "Web sitesi de olsa, özel yazılım da olsa, otomasyon da olsa aynı akışı izliyoruz. Her adımın ne ürettiği ve sizden ne istediği belli; sürpriz çıkmasın diye.",
     "trackLabel": "Teslim adımları",
-    "prevStep": "Önceki adım",
-    "nextStep": "Sonraki adım",
     "labelWhat": "Ne yapılır",
     "labelOutput": "Çıktı",
     "labelYou": "Sizden gereken",

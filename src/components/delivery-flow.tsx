@@ -16,8 +16,8 @@ import { Link } from "@/components/navigation/intent-link";
  *
  * Etkilesim: dugum uzerinde hover (masaustu) / tap (mobil) -> kart degisir,
  * ray o dugume kadar dolar. Klavyeyle de gezilebilir (focus ayni isi yapar).
- * Mobilde serit yatay kayar: secili dugum ortalanir ve onceki/sonraki
- * butonlari ekranin disinda kalan adimlara (05, 06) gecisi saglar.
+ * Mobilde serit yatay kayar: secili dugum ortalanir, boylece ekranin disinda
+ * kalan sonraki adim (05, 06) gorunur hale gelir.
  */
 
 const STEPS = [
@@ -108,31 +108,6 @@ export default function DeliveryFlow({ examples }: DeliveryFlowProps) {
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Mobil adim gecisi — serit ekrana sigmadiginda gorunur (CSS) */}
-      <div className="df-stepper">
-        <button
-          type="button"
-          className="df-step-btn"
-          onClick={() => setActive((a) => a - 1)}
-          disabled={active === 0}
-          aria-label={t("prevStep")}
-        >
-          <span aria-hidden="true">←</span>
-        </button>
-        <span className="df-step-count" aria-hidden="true">
-          {String(active + 1).padStart(2, "0")} / {String(STEPS.length).padStart(2, "0")}
-        </span>
-        <button
-          type="button"
-          className="df-step-btn"
-          onClick={() => setActive((a) => a + 1)}
-          disabled={active === STEPS.length - 1}
-          aria-label={t("nextStep")}
-        >
-          <span aria-hidden="true">→</span>
-        </button>
       </div>
 
       {/* Adim karti — key ile her degisimde yeniden mount, gecis animasyonu icin */}
