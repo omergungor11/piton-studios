@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-10 — Nippo: proje adları ve kırmızı başlık vurguları (TASK-119)
+
+- Projeler sayfasında ekran görüntüsü şeridindeki proje adları (500) ve tablo başlıkları (700) Nippo'ya geçti.
+- Kırmızı başlık vurguları (`.em`) iç sayfalarda da anasayfa/fiyatlar ile aynı stile alındı: Nippo 700, italik değil. Kapsam: sayfa hero başlıkları (`sp-hero-title`), CTA başlıkları, teslim akışı ("çalışan sisteme"), proje detay özeti, etki paneli, Hakkında rakam/zaman çizelgesi/yetkinlik başlıkları ve referanslar. Kullanılmayan eski slider/stories stilleri değişmedi.
+- Production build'de 14 rota × 390/1280 px: başlık içindeki tüm kırmızı vurgular Nippo 700 normal, taşma yok. Not: dev server (Turbopack) `globals.css` değişikliğini yeniden başlatmaya rağmen eski hâliyle sundu; doğrulama production build ile yapıldı.
+- Ayrı bulgu: canlıda ve yerelde rastgele bir sayfada aralıklı React #418 (hydration metin uyuşmazlığı) görülüyor; bu değişiklikten önce de var, ayrıca incelenmeli.
+
 ## 2026-10-10 — Proje sırası: Mindloop grubu öne alındı (TASK-118)
 
 - WORKS sırasında Mindloop, Dental Health, Securify, Araç Takip, Füze Güdüm, Lithos, Vanguard, Jack Portfolio ve Veldara 3 Monkeys'in arkasına taşındı; `n` 01–53 yeniden numaralandı (Mindloop 34 → 13). Her yerde gizli diğer projeler sonda kaldı. İçerik değişmedi (blok bazında birebir doğrulandı); ilk 6 proje aynı.

@@ -49,6 +49,7 @@
   font-weight: 600;
 }
 .pp-showcase-title {
+  font-family: var(--font-nippo), var(--font-sans);
   font-size: 14px; color: var(--ink); font-weight: 500;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -116,7 +117,7 @@ html[data-theme="light"] .pp-row-thumb { background: rgba(0,0,0,0.03); }
 .pp-table-row:hover .pp-row-thumb-empty { color: var(--ink-soft); }
 .pp-table-row:hover .pp-row-thumb { border-color: var(--accent); }
 .pp-row-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-nippo), var(--font-sans);
   font-size: clamp(19px, 2.4vw, 30px);
   text-transform: none; letter-spacing: 0;
   color: var(--ink); line-height: 1;

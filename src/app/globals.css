@@ -1987,7 +1987,7 @@ html[data-theme="light"] .pt-badge:hover { background: rgba(0,0,0,0.05); }
   color: var(--ink);
   margin-bottom: 18px;
 }
-.sp-hero-title .em { font-style: italic; color: var(--accent); }
+.sp-hero-title .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); }
 .sp-hero-sub {
   font-size: 15px; line-height: 1.7;
   color: var(--ink-soft);
@@ -2048,7 +2048,7 @@ html[data-theme="light"] .sp-filter-btn:hover { background: rgba(0,0,0,0.05); }
   line-height: 1.1; letter-spacing: 0;
   text-transform: none; color: var(--ink);
 }
-.sp-cta h3 .em { font-style: italic; color: var(--accent); }
+.sp-cta h3 .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); }
 .sp-cta p { font-size: 15px; color: var(--muted); margin-top: 8px; }
 .sp-cta-btn {
   display: inline-flex; align-items: center; gap: 10px;
@@ -2907,7 +2907,7 @@ html[data-theme="light"] .prc-cta { background: rgba(0, 0, 0, 0.04); }
   margin: 0 0 12px;
   color: var(--ink);
 }
-.testimonials-head h3 .em { font-style: italic; color: var(--accent); }
+.testimonials-head h3 .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); }
 .testimonials-sub {
   font-size: 14px;
   line-height: 1.6;

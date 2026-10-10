@@ -31,7 +31,7 @@
   font-size: clamp(22px, 2.5vw, 28px);
   line-height: 1.15; letter-spacing: 0; margin: 0 0 10px;
 }
-.ip-title .em { font-style: italic; color: var(--accent); }
+.ip-title .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); }
 .ip-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
 
 .ip-body {

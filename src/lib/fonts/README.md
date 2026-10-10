@@ -8,6 +8,9 @@
 - Anasayfa başlık vurguları: “Konuşalım”, “Piton?”, “altı adımda” ve “projelerden” (700, normal stil).
 - Anasayfa bölüm etiketleri: Öne Çıkan Projeler, Not, Hizmetler, Nasıl Çalışıyoruz, İletişim ve Spark CTA üst etiketi (500).
 - Spark istatistik etiketleri: “Tamamlanan Proje” ve “Yıllık Deneyim” (500).
+- Projeler sayfası çalışma adları: ekran görüntüsü şeridi (500) ve proje tablosu başlıkları (700).
+- Projeler sayfası teslim akışı başlık vurgusu “çalışan sisteme” (700, normal stil).
+- İç sayfa kırmızı başlık vurguları (`.em`, 700, normal stil): sayfa hero başlıkları (`sp-hero-title`), CTA başlıkları (`sp-cta h3`), proje detay özeti, etki paneli, Hakkında rakam/zaman çizelgesi/yetkinlik başlıkları ve referanslar. Yeni kırmızı başlık vurgusu da aynı stili kullanır.
 - Kayıtlı `AboutScene` bileşenindeki “ürünler” vurgusu 700, üst etiket 500 kullanır; bu bölüm anasayfada gösterilmez.
 
 Font ikilileri public Git deposuna eklenmez. `pnpm dev` ve `pnpm build`,

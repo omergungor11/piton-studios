@@ -106,7 +106,7 @@
   text-transform: none; color: var(--ink);
   margin-bottom: 28px;
 }
-.pd-body-title .em { font-style: italic; color: var(--accent); text-transform: none; }
+.pd-body-title .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); text-transform: none; }
 .pd-body-text p {
   font-size: 15px; line-height: 1.8;
   color: var(--ink-soft); margin-bottom: 18px;

@@ -172,7 +172,7 @@ html[data-theme="light"] .ap-client:hover { background: rgba(0,0,0,0.05); }
   line-height: 1.15; letter-spacing: 0;
   color: var(--ink); margin: 0 0 12px;
 }
-.sn-title .em, .st-title .em, .cm-title .em { font-style: italic; color: var(--accent); }
+.sn-title .em, .st-title .em, .cm-title .em { font-family: var(--font-nippo), var(--font-sans); font-weight: 700; font-style: normal; color: var(--accent); }
 .sn-desc, .st-desc, .cm-desc {
   font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; max-width: 70ch;
 }

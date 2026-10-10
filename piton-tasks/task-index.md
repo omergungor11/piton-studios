@@ -22,12 +22,12 @@
 | 15 | Liste Görselleri & Blog Sayfalama (TASK-080..082) | 3 | 3 | 0 | 0 | 0 |
 | 16 | Marka Adı & Tipografi (TASK-083..084, 086..088) | 5 | 5 | 0 | 0 | 0 |
 | 17 | Mobil Alt Kontroller (TASK-085) | 1 | 1 | 0 | 0 | 0 |
-| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112, 116) | 19 | 19 | 0 | 0 | 0 |
+| 18 | Anasayfa Vurguları & Proje Etkileşimi (TASK-089..093, 096..102, 107..112, 116, 119) | 20 | 20 | 0 | 0 | 0 |
 | 19 | Proje Sırası & Görünürlük (TASK-094..095, 103, 117..118) | 5 | 5 | 0 | 0 | 0 |
 | 20 | Performans (TASK-104..106, 113..115) | 6 | 6 | 0 | 0 | 0 |
-| **Total** | | **117** | **116** | **0** | **0** | **0** |
+| **Total** | | **118** | **117** | **0** | **0** | **0** |
 
-**Progress**: 116/117 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
+**Progress**: 117/118 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -245,3 +245,4 @@
 | TASK-116 | Projeler sayfası teslim akışında mobil adım geçişi (otomatik ortalama + önceki/sonraki) | S | COMPLETED |
 | TASK-117 | Projeler sayfası ekran görüntüsü şeridinden 10 projeyi kaldır | S | COMPLETED |
 | TASK-118 | Mindloop ve sonrasını 13. sıraya taşı, Arslan Coin Center ve Aydın Transfer'i şeritten kaldır | S | COMPLETED |
+| TASK-119 | Proje adları ve iç sayfa kırmızı başlık vurgularını Nippo'ya geçir | S | COMPLETED |
