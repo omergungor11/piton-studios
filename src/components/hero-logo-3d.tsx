@@ -79,11 +79,14 @@ export default function HeroLogo3D() {
   }, []);
 
   if (!modelAvailable) {
+    // 3B model yuklenene kadarki yer tutucu; boyutu CSS'ten gelir, next/image optimizasyonu gerekmiyor.
+    // eslint-disable-next-line @next/next/no-img-element
     return <img src="/logo.webp" alt="Piton" className="hero-logo" />;
   }
 
   return (
     <div className="hero-logo hero-logo-3d">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/logo.webp"
         alt="Piton"

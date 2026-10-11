@@ -62,8 +62,6 @@ export const PARTNERS = [
   { id: 'anthropic', name: 'Anthropic',         group: 'tech',      icon: <AnthropicIcon /> },
 ] as const;
 
-type PartnerId = typeof PARTNERS[number]['id'];
-
 /* ── Ana bileşen ─────────────────────────────────────────────────── */
 
 export default function PartnerBadges({ variant = 'trust-bar', filter }: Props) {
