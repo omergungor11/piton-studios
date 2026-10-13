@@ -16,6 +16,7 @@ export const BLOG_ART_KEYS = [
   'erp-vs-excel',
   'fast-website',
   'google-ads-vs-seo',
+  'google-ai-search-controls',
   'multilingual-site',
   'nextjs-vs-wordpress',
   'project-process',
