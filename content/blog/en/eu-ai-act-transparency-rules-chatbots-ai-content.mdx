@@ -1,0 +1,264 @@
+---
+title: "The EU AI Act is in force: what changed for your website chatbot and AI content?"
+description: "When do the transparency rules in force since 2 August 2026 apply to businesses outside the EU? Chatbot disclosure, AI image labels, fines and a checklist."
+date: 2026-10-16
+tags: ["ai", "chatbot", "regulation"]
+author: "Piton"
+draft: false
+translationKey: eu-ai-act-transparency
+sources:
+  - title: "EUR-Lex — Digital Omnibus on AI, Official Journal (OJ L 2026/1744)"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601744"
+  - title: "EU AI Act — Article 50: Transparency obligations for providers and deployers of certain AI systems"
+    url: "https://artificialintelligenceact.eu/article/50/"
+  - title: "EU AI Act — Article 2: Scope"
+    url: "https://artificialintelligenceact.eu/article/2/"
+  - title: "EU AI Act — Article 99: Penalties"
+    url: "https://artificialintelligenceact.eu/article/99/"
+  - title: "Lewis Silkin — The Digital Omnibus on AI enters into force today (27 July 2026)"
+    url: "https://www.lewissilkin.com/insights/2026/07/27/the-digital-omnibus-on-ai-enters-into-force-today-102nedo"
+  - title: "Jones Walker — Yes, August 2 Still Matters: most transparency obligations remain"
+    url: "https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html"
+  - title: "Eurostat — Use of artificial intelligence in enterprises (2025)"
+    url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises"
+  - title: "DHA — TurkStat: share of enterprises using AI technologies rose (AI Statistics 2025, in Turkish)"
+    url: "https://www.dha.com.tr/teknoloji/tuik-yapay-zeka-teknolojileri-kullanan-girisim-orani-artti-2730034"
+faq:
+  - q: "Does the EU AI Act apply to a business based in Türkiye?"
+    a: "It depends. Article 2 of the Act also covers providers and deployers established outside the EU when the output of the AI system is used in the EU. A website merely being accessible from the EU is not enough on its own; a chatbot serving customers in the EU, or AI content aimed at them, can trigger the scope."
+  - q: "What do I need to do for the chatbot on my website?"
+    a: "Unless it is already obvious from the context, you must tell users clearly and noticeably that they are talking to an AI, at the latest at the first interaction. In practice that means a short note visible as the chat window opens, and a name or avatar that makes clear the assistant is AI."
+  - q: "Do I have to label blog posts I wrote with AI?"
+    a: "Article 50 has no general labelling duty for ordinary marketing and blog text. The obligation applies to text published to inform the public on matters of public interest, and even there an exception applies when the text has undergone human review and someone holds editorial responsibility for publication."
+  - q: "What did the Digital Omnibus delay?"
+    a: "The Digital Omnibus, in force since 27 July 2026, postponed the rules for high-risk systems: the new date is 2 December 2027 for Annex III systems and 2 August 2028 for systems embedded in Annex I products. The Article 50 transparency rules were not postponed and have applied since 2 August 2026."
+  - q: "What is the penalty for non-compliance?"
+    a: "Article 50 breaches fall in the tier of administrative fines of up to €15 million or 3% of total worldwide annual turnover, whichever is higher. For SMEs and start-ups, the lower of the two amounts is the cap. These are ceilings, not automatic fines."
+---
+
+Since 2 August 2026, anyone in the EU talking to an AI has to be told so: it is a legal requirement,
+not a design choice. The transparency rules of the EU AI Act took effect, and the last-minute Digital
+Omnibus package left them untouched while postponing the rules for high-risk systems. We gave the
+short answer on what a website chatbot can do [in our FAQ](/en/faq#faq-chatbot-on-site); this post
+explains what the new rules cover, when they apply to a business outside the EU that sells to or
+serves customers in the EU, and what needs to change in practice.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "The Article 50 transparency rules have applied since 2 August 2026; the Digital Omnibus did not postpone them.",
+    "The Act also covers businesses outside the EU when AI output is used in the EU; a site merely being accessible is not enough on its own.",
+    "Chatbots must tell users clearly that they are AI, at the latest at the first interaction.",
+    "Realistic AI images, audio and video must be labelled; there is no general labelling duty for ordinary marketing text.",
+    "Fines reach up to €15 million or 3% of turnover; for SMEs the lower amount is the cap.",
+  ]}
+/>
+
+<Callout type="info" title="This post is not legal advice">
+  The information below is based on the text of the Act and on analyses published by law firms. Your
+  role and the scope depend on the specific facts; for a binding assessment, consult a lawyer.
+</Callout>
+
+## What took effect on 2 August 2026
+
+The EU AI Act (Regulation 2024/1689) applies in stages. 2 August 2026 was set as the start date for
+the broadest package of obligations. After a political agreement in May 2026, the
+[Digital Omnibus was published in the Official Journal on 24 July 2026](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601744)
+and [entered into force on 27 July](https://www.lewissilkin.com/insights/2026/07/27/the-digital-omnibus-on-ai-enters-into-force-today-102nedo).
+The package pushed some dates back but left the transparency rules in place.
+
+| Obligation | Original date | Current date |
+|---|---|---|
+| Article 50 transparency rules (chatbot disclosure, deepfake labels) | 2 August 2026 | 2 August 2026 (unchanged) |
+| Machine-readable marking of AI content, systems on the market before 2 August 2026 | 2 August 2026 | 2 December 2026 |
+| Annex III high-risk systems (recruitment, credit scoring, education, etc.) | 2 August 2026 | 2 December 2027 |
+| Annex I high-risk systems (AI embedded in regulated products) | 2 August 2027 | 2 August 2028 |
+
+<StatGrid
+  items={[
+    { value: "2 Aug 2026", label: "Date the transparency rules began to apply", note: "ARTICLE 50" },
+    { value: "2 Dec 2026", label: "Marking deadline for legacy systems", note: "DIGITAL OMNIBUS" },
+    { value: "2 Dec 2027", label: "New date for Annex III high-risk systems", note: "DIGITAL OMNIBUS" },
+  ]}
+/>
+
+## When it applies to a business in Türkiye
+
+The Act does not only apply to companies established in the EU. [Under Article 2](https://artificialintelligenceact.eu/article/2/),
+it also covers providers and deployers established outside the EU **when the output of the AI system
+is used in the EU**. As [Jones Walker's analysis](https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html)
+stresses, a website merely being accessible from the EU is not a trigger on its own; what matters is
+the business's role and the specific facts.
+
+In practice, ask yourself the question in these scenarios:
+
+- An e-commerce site selling to customers in the EU has an AI chat assistant.
+- As a hotel, clinic or tour operator, you answer guests from the EU through a multilingual chatbot.
+- You use realistic AI images or video in ads and campaigns aimed at the EU market.
+- You offer an AI product you built yourself to customers in the EU.
+
+## Provider or deployer: work out your role
+
+The Act distributes obligations by role. The same business can be a provider for one system and a
+deployer for another.
+
+| Role | Who | Main obligation under Article 50 |
+|---|---|---|
+| Provider | Develops the AI system or places it on the market under its own name | Design the chatbot so it is clear it is AI; mark generated content in a machine-readable way |
+| Deployer | A business using the system in its own operations | Label deepfake images, audio and video; disclose AI text published in the public interest; inform people if emotion recognition is used |
+
+A business embedding an off-the-shelf chat tool on its site is usually a deployer; but if it offers
+the tool to customers under its own brand or builds it from scratch, provider obligations come into
+play too. Pinning down your role decides which rows of the list below are yours.
+
+## The four obligations in Article 50
+
+[Article 50](https://artificialintelligenceact.eu/article/50/) covers four separate situations. The
+common rule across all of them is the same: information must be given **clearly, distinguishably and
+at the latest at the first interaction or exposure**, and must meet accessibility requirements.
+
+<BlogFigure name="eu-ai-act-transparency" alt="Diagram of three content types: at the top a chat window reaches the user with a highlighted disclosure badge next to its first message; in the middle a generated image goes live with a label added on top; at the bottom a text skips the label stop and goes straight to publication because it passed human review." caption="The chatbot introduces itself in the first message and a realistic image is labelled; text that passes human editorial review falls under the exception." />
+
+| Situation | Who is obliged | What to do | Exception |
+|---|---|---|---|
+| Systems interacting directly with people (chatbots, voice assistants) | Provider | The user must know they are interacting with an AI | Where it is already obvious from context |
+| Systems generating synthetic audio, images, video or text | Provider | Output must be marked in a machine-readable way | Tools that only assist with standard editing |
+| Emotion recognition and biometric categorisation | Deployer | People exposed must be informed | Lawful law-enforcement uses |
+| Deepfake images, audio, video and AI text published in the public interest | Deployer | State that the content is AI-generated | Limited notice for artistic, satirical and fictional works; text under human editorial control |
+
+## What to do for your website chatbot in practice
+
+Chatbot disclosure is the most concrete and easiest part of the rules to implement. The goal is for
+the user to understand from the very first message that they are not talking to a human.
+
+- **Opening message:** say that the assistant is AI in the first line shown when the chat window
+  opens. This should be part of the first message, not a footnote that scrolls away.
+- **Name and avatar:** do not give the assistant a real employee's name and photo; use a name or badge
+  that makes clear it is AI.
+- **Handover to a human:** when the conversation passes to a customer agent, say so clearly as well,
+  so the user knows which message came from whom.
+- **All channels:** the rule is not limited to the window on your site; an automated assistant
+  running on WhatsApp must give the same notice if it serves users in the EU. For the WhatsApp setup,
+  see our [WhatsApp Business API guide](/en/blog/what-is-whatsapp-business-api).
+- **Accessibility:** the notice must be readable by screen readers and must not rely on an icon or a
+  colour alone.
+
+<Callout type="tip" title="Disclosure does not reduce trust; it prevents false expectations">
+  When users know from the start that they are talking to an AI, they accept a handover to a human
+  more easily when the assistant cannot help. The best setup turns the notice into a short welcome
+  line saying what the assistant can do and when it will connect them to a person.
+</Callout>
+
+## AI-generated images, video and text
+
+On the content side, the rules are narrower than most businesses assume, but clearer.
+
+- **Realistic images, audio and video:** content resembling real people, places, objects or events
+  that could be perceived as authentic counts as a deepfake and must be disclosed as AI-generated. An
+  AI spokesperson resembling a real person in a campaign, or a generated photo that looks like a real
+  venue, falls into this group.
+- **Evidently artistic or fictional works:** the notice is limited to indicating that such content
+  exists, in a way that does not hamper the display of the work.
+- **Text:** the obligation only applies to text published to inform the public on matters of public
+  interest. Product descriptions, campaign copy and corporate blog posts fall outside this general
+  labelling duty; and for public-interest text, an exception applies when there is human review and
+  editorial responsibility.
+
+<Callout type="warn" title="The tool provider's marking does not replace your disclosure">
+  The machine-readable mark an image tool adds to its output is the provider's obligation. The visible
+  disclosure duty of the business publishing that content as a deepfake is separate and its own. Steps
+  such as cropping or re-saving an image can also strip these marks.
+</Callout>
+
+## How large are the penalties
+
+[Article 99](https://artificialintelligenceact.eu/article/99/) defines fines in three tiers. Breaches
+of the Article 50 transparency rules sit in the middle tier.
+
+<BarChart
+  title="Maximum fine tiers under the EU AI Act"
+  caption="Million euro. In each tier the higher of the amount or the stated share of worldwide annual turnover applies; for SMEs, the lower."
+  unit=" m €"
+  max={40}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Prohibited practices", value: 35, note: "or 7% of turnover" },
+    { label: "Other obligations, incl. Article 50", value: 15, note: "or 3% of turnover", highlight: true },
+    { label: "Incorrect information to authorities", value: 7.5, note: "or 1% of turnover" },
+  ]}
+/>
+
+These are ceilings; the actual amount depends on the nature and duration of the breach and the size
+of the business. But next to these ceilings, the changes the transparency rules require usually come
+down to an opening message and a few labels.
+
+## Where AI is used: Türkiye and the EU
+
+Usage data helps show how many businesses the rules concern.
+[According to Eurostat](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises),
+19.95% of EU enterprises with 10 or more employees used at least one AI technology in 2025, up from
+roughly 13.5% a year earlier. The most common use was text analysis (11.75%), followed by generating
+images, video and audio (9.55%) and natural language generation and speech synthesis (8.76%).
+
+According to TurkStat's first [AI Statistics 2025](https://www.dha.com.tr/teknoloji/tuik-yapay-zeka-teknolojileri-kullanan-girisim-orani-artti-2730034)
+release, the share in Türkiye is 7.5%. The gap shows at every size.
+
+<BarChart
+  title="Share of enterprises using AI, 2025"
+  caption="Enterprises with 10 or more employees, percent. Sources: Eurostat and TurkStat."
+  unit="%"
+  max={60}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "EU, 10-49 employees", value: 17 },
+    { label: "Türkiye, 10-49 employees", value: 6.6, highlight: true },
+    { label: "EU, 50-249 employees", value: 30.4 },
+    { label: "Türkiye, 50-249 employees", value: 9.6, highlight: true },
+    { label: "EU, 250+ employees", value: 55 },
+    { label: "Türkiye, 250+ employees", value: 24.1, highlight: true },
+  ]}
+/>
+
+The rate in Türkiye is low but rising fast: in 2021, 2.7% of enterprises used AI. Marketing and sales
+lead the purposes of use at 46.5%, which shows that customer-facing uses, exactly what the
+transparency rules target, carry the most weight.
+
+<TrendChart
+  title="Share of enterprises using AI in Türkiye"
+  caption="By number of employees, percent. Source: TurkStat."
+  unit="%"
+  max={30}
+  labels={["2021", "2025"]}
+  dataTableLabel="Show data as a table"
+  series={[
+    { name: "250+ employees", points: [9.6, 24.1] },
+    { name: "50-249 employees", points: [3.6, 9.6], muted: true },
+    { name: "10-49 employees", points: [2.3, 6.6], muted: true },
+  ]}
+/>
+
+## Checklist
+
+1. **Take an inventory.** List every place you use AI: on the site, on WhatsApp, in email and in ads.
+2. **Mark the EU link.** Identify which of these uses reach customers or users in the EU.
+3. **Write down your role.** For each system, note whether you are the provider or the deployer.
+4. **Update your chatbots.** Add an AI notice to the opening message, mark handovers to a human, and
+   remove names and avatars that imitate a real person.
+5. **Set image rules.** Write a labelling standard the team uses for realistic AI images and video.
+6. **Ask your suppliers.** Ask whether the AI tools you use mark output in a machine-readable way, and
+   about the 2 December 2026 timeline for legacy systems.
+7. **Keep a record.** Log the changes you made and why, with dates; it is the first place to look when
+   a question comes in.
+
+## Conclusion
+
+The part of the EU AI Act that concerns the widest audience is not the high-risk rules but the
+transparency rules in force since 2 August 2026. For a business in Türkiye serving customers in the
+EU, this mostly means something simple: the chatbot introduces itself in its first message, realistic
+AI images are labelled, and who carries which obligation is written down. The changes are small, but
+the risk ceiling when they are skipped is high.
+
+If you want to set up your website assistant in line with these rules or review your current setup,
+see our [AI integration](/en/services/ai-integration) and [WhatsApp & chatbot](/en/services/whatsapp-chatbot)
+service pages, read our [AI automation for small businesses](/en/blog/ai-automation-roi-for-smbs)
+post for the cost and return calculation, or [get in touch](/en/contact) directly.

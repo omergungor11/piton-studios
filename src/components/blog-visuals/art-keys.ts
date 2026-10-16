@@ -14,6 +14,7 @@ export const BLOG_ART_KEYS = [
   'b2b-landing-page-lead-generation',
   'ecommerce-cro',
   'erp-vs-excel',
+  'eu-ai-act-transparency',
   'fast-website',
   'google-ads-vs-seo',
   'google-ai-search-controls',
