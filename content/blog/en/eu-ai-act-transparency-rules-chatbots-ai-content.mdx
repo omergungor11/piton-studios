@@ -23,6 +23,8 @@ sources:
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises"
   - title: "DHA — TurkStat: share of enterprises using AI technologies rose (AI Statistics 2025, in Turkish)"
     url: "https://www.dha.com.tr/teknoloji/tuik-yapay-zeka-teknolojileri-kullanan-girisim-orani-artti-2730034"
+  - title: "Bloomberg HT — TurkStat: AI use in Türkiye nearly doubled (AI Statistics 2026, in Turkish)"
+    url: "https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100"
 faq:
   - q: "Does the EU AI Act apply to a business based in Türkiye?"
     a: "It depends. Article 2 of the Act also covers providers and deployers established outside the EU when the output of the AI system is used in the EU. A website merely being accessible from the EU is not enough on its own; a chatbot serving customers in the EU, or AI content aimed at them, can trigger the scope."
@@ -219,21 +221,23 @@ release, the share in Türkiye is 7.5%. The gap shows at every size.
   ]}
 />
 
-The rate in Türkiye is low but rising fast: in 2021, 2.7% of enterprises used AI. Marketing and sales
-lead the purposes of use at 46.5%, which shows that customer-facing uses, exactly what the
+The rate in Türkiye is low but rising fast: in 2021, 2.7% of enterprises used AI. According to
+[TurkStat's 2026 data](https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100),
+published on 2 October 2026, the share rose to 14% in one year, and marketing and sales lead the
+purposes of use at 51% (46.5% in 2025). This shows that customer-facing uses, exactly what the
 transparency rules target, carry the most weight.
 
 <TrendChart
   title="Share of enterprises using AI in Türkiye"
   caption="By number of employees, percent. Source: TurkStat."
   unit="%"
-  max={30}
-  labels={["2021", "2025"]}
+  max={48}
+  labels={["2021", "2025", "2026"]}
   dataTableLabel="Show data as a table"
   series={[
-    { name: "250+ employees", points: [9.6, 24.1] },
-    { name: "50-249 employees", points: [3.6, 9.6], muted: true },
-    { name: "10-49 employees", points: [2.3, 6.6], muted: true },
+    { name: "250+ employees", points: [9.6, 24.1, 37.1] },
+    { name: "50-249 employees", points: [3.6, 9.6, 17], muted: true },
+    { name: "10-49 employees", points: [2.3, 6.6, 12.8], muted: true },
   ]}
 />
 

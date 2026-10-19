@@ -12,6 +12,7 @@ export const BLOG_ART_KEYS = [
   'ai-automation-roi',
   'ai-impact-on-web-design-and-coding',
   'b2b-landing-page-lead-generation',
+  'chatgpt-ads',
   'ecommerce-cro',
   'erp-vs-excel',
   'eu-ai-act-transparency',

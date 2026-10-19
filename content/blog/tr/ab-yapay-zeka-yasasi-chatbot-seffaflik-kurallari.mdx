@@ -23,6 +23,8 @@ sources:
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises"
   - title: "DHA — TÜİK: Yapay zekâ teknolojileri kullanan girişim oranı arttı (Yapay Zeka İstatistikleri-2025)"
     url: "https://www.dha.com.tr/teknoloji/tuik-yapay-zeka-teknolojileri-kullanan-girisim-orani-artti-2730034"
+  - title: "Bloomberg HT — TÜİK: Türkiye'de yapay zekâ kullanımı yaklaşık iki kat arttı (Yapay Zekâ İstatistikleri 2026)"
+    url: "https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100"
 faq:
   - q: "AB Yapay Zekâ Yasası Türkiye'deki bir işletmeyi bağlar mı?"
     a: "Duruma bağlı. Yasanın 2. maddesi, AB dışında kurulu sağlayıcı ve kullanıcıları da, yapay zekâ sisteminin ürettiği çıktı AB'de kullanılıyorsa kapsama alıyor. Sitenizin AB'den yalnızca erişilebilir olması tek başına yeterli değil; AB'deki müşterilere hizmet veren bir chatbot veya onlara yönelik AI içerik ise kapsamı tetikleyebilir."
@@ -222,20 +224,22 @@ verisine göre Türkiye'de bu oran %7,5. Fark her ölçekte görülüyor.
 />
 
 Türkiye'de oran düşük ama hızla artıyor: 2021'de yapay zekâ kullanan işletmelerin payı %2,7'ydi.
-Kullanım amaçlarında pazarlama ve satış %46,5 ile başı çekiyor; bu da müşteriyle doğrudan temas eden,
-yani şeffaflık kurallarının tam hedefindeki kullanımların ağırlıkta olduğunu gösteriyor.
+TÜİK'in 2 Ekim 2026'da yayımladığı [2026 verisine göre](https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100)
+oran bir yılda %14'e çıktı ve kullanım amaçlarında pazarlama ve satış %51 ile başı çekiyor (2025'te
+%46,5). Bu da müşteriyle doğrudan temas eden, yani şeffaflık kurallarının tam hedefindeki
+kullanımların ağırlıkta olduğunu gösteriyor.
 
 <TrendChart
   title="Türkiye'de yapay zekâ kullanan işletmelerin oranı"
   caption="Çalışan sayısına göre, yüzde. Kaynak: TÜİK."
   unit="%"
-  max={30}
-  labels={["2021", "2025"]}
+  max={48}
+  labels={["2021", "2025", "2026"]}
   dataTableLabel="Veriyi tablo olarak göster"
   series={[
-    { name: "250+ çalışan", points: [9.6, 24.1] },
-    { name: "50-249 çalışan", points: [3.6, 9.6], muted: true },
-    { name: "10-49 çalışan", points: [2.3, 6.6], muted: true },
+    { name: "250+ çalışan", points: [9.6, 24.1, 37.1] },
+    { name: "50-249 çalışan", points: [3.6, 9.6, 17], muted: true },
+    { name: "10-49 çalışan", points: [2.3, 6.6, 12.8], muted: true },
   ]}
 />
 
