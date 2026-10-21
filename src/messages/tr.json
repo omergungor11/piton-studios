@@ -661,6 +661,42 @@
     }
   },
   "works": {
+    "evolve": {
+      "title": "Evolve",
+      "kind": "Web Tasarım · Teknoloji Ajansı",
+      "summary": "Next.js ile yeniden geliştirilen teknoloji ajansı konsepti — WebGL küre, kaydırmaya bağlı metot sahnesi ve 307 rotada etkileşimli tanı akışı.",
+      "body": [
+        "Evolve, WeEvolveIT tasarım referansını Next.js App Router ve React ile yeniden geliştirdiğimiz teknoloji ajansı konsepti. Three.js ile çizilen noktalı WebGL küre, kaydırmaya bağlı beş aşamalı yatay metot sahnesi, sürüklenebilir yorum şeridi ve parçacık efektli adım adım tanı akışı tek sitede birleşiyor; 307 içerik rotası statik sayfa olarak üretiliyor.",
+        "Hareketler GSAP, Lenis ve Matter.js ile düzenlenebilir React bileşenleri olarak yazıldı; footer'daki manifesto fizikle sürüklenebiliyor. Masaüstü ve mobil ölçümler referansla bire bir karşılaştırıldı, tüm rotalar ve form akışı otomatik testlerle doğrulandı. Çalışma, özgün WeEvolveIT tasarımını referans alan bir ön yüz geliştirme konsepti olarak Evolve adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "coffi": {
+      "title": "Coffi",
+      "kind": "Web Tasarım · Kahve Markası",
+      "summary": "Next.js ile yeniden geliştirilen kahve markası konsepti — video hero, beş soruluk kahve testi, Rive ve Lottie animasyonları ve 89 iç sayfa.",
+      "body": [
+        "Coffi, Delta Cafés tasarım referansını Next.js ile yeniden geliştirdiğimiz kahve markası konsepti. Video hero, ürün şeridi, marka tarihi, kahve döngüsü, journal ve sürdürülebilirlik bölümlerinin yanında 36 ürün detayı ve journal yazıları dahil 89 iç sayfa önceden oluşturuluyor; beş soruluk kahve testi kullanıcıyı yedi profilden birine eşleştiriyor.",
+        "Lenis kaydırma, GSAP ScrollTrigger geçişleri, Rive ve Lottie animasyonları, Chart.js grafikleri ve fizikli fotoğraf/halat sahnesi React istemci bileşenleriyle yönetiliyor. Ürün filtreleri, sürüklenebilir şeritler ve mobil alt menüler masaüstü ve mobilde test edildi. Çalışma, özgün Delta Cafés tasarımını referans alan bir ön yüz geliştirme konsepti olarak Coffi adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "karga": {
+      "title": "Karga",
+      "kind": "Web Tasarım · Fotoğraf Portfolyosu",
+      "summary": "Next.js ile yeniden geliştirilen fotoğrafçı portfolyosu konsepti — döner panjurlu hero, panjurlu sayfa geçişleri ve kaydırmaya bağlı fotoğraf hareketleri.",
+      "body": [
+        "Karga, Louver tasarım referansını Next.js ile sıfırdan yeniden geliştirdiğimiz fotoğrafçı portfolyosu konsepti. Masaüstünde 20, mobilde 10 döner panelden oluşan panjurlu hero otomatik geçiş, sürükleme, swipe ve klavyeyle kontrol ediliyor; Work arşivi, kategori filtreleri ve 12 proje detayı panjurlu sayfa geçişleriyle bağlanıyor.",
+        "Harf animasyonları, fotoğraf kırpma ve zoom, paralaks, manyetik butonlar ve takipçi imleç harici animasyon kütüphanesi olmadan React ve CSS Modules ile yazıldı. Azaltılmış hareket tercihi ve üç kırılımlı responsive düzen baştan hesaba katıldı. Çalışma, Louver tasarımını referans alan bir ön yüz geliştirme konsepti olarak Karga adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "neuneu": {
+      "title": "Neuneu",
+      "kind": "Web Tasarım · Dijital Stüdyo",
+      "summary": "Webflow'dan Next.js'e taşınan dijital stüdyo konsepti — büyük tipografi, süreç ve portfolyo sahneleri, tüm varlıklar yerelde.",
+      "body": [
+        "Neuneu, Neutomni'nin Webflow üzerinde yayında olan sitesini referans alarak Next.js'e taşıdığımız dijital stüdyo konsepti. Büyük ölçekli tipografi, süreç, portfolyo, referanslar ve fiyatlandırma bölümleri ayrı React bileşenlerine bölündü; fontlar, görseller, videolar ve animasyon betikleri yerelde barındırılıyor, Webflow'a veya harici CDN'e bağımlılık kalmıyor.",
+        "Varlıkları toplayan ve içeriği bölümlere ayıran betiklerle taşıma tekrarlanabilir hâle getirildi. Masaüstü ve mobilde bölüm yükseklikleri referansla karşılaştırıldı, yatay taşma ve menüden bölüme kaydırma doğrulandı. Çalışma, özgün Neutomni tasarımını referans alan bir ön yüz geliştirme konsepti olarak Neuneu adıyla Vercel'de yayınlandı."
+      ]
+    },
     "naiben": {
       "title": "naiben",
       "kind": "Web Tasarım · Yaratıcı Stüdyo",
@@ -3317,7 +3353,7 @@
     },
     "industries": {
       "q": "Hangi sektörlerde deneyiminiz var?",
-      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 50 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
+      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 57 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
       "detail": [
         "2021-2022 döneminde kurumsal site ve marka işleri, 2022-2023'te e-ticaret ve emlak/turizm, 2024'te finans ve taşımacılık, 2025'te AI/ML ve SaaS ağırlıklı projeler öne çıktı.",
         "Sektöre özel derin mevzuat bilgisi gerektiren regüle alanlarda (sağlık, hukuk gibi) proje öncesi ek araştırma yapılır; bu durum keşif süresini biraz uzatabilir."

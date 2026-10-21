@@ -12,6 +12,10 @@ import type { ProjectCloudItem } from '@/components/projects-v2/project-cloud-ca
  * Tum WORKS'u yuklememek performans butcesinin parcasi (bkz. piton-plans/projects-v2-*).
  */
 export const PROJECT_CLOUD_SELECTION = [
+  { slug: 'evolve', format: 'landscape' },
+  { slug: 'coffi', format: 'landscape' },
+  { slug: 'karga', format: 'landscape' },
+  { slug: 'neuneu', format: 'landscape' },
   { slug: 'naiben', format: 'landscape' },
   { slug: 'kabizzu', format: 'landscape' },
   { slug: 'fur-crm', format: 'portrait' },
@@ -23,10 +27,6 @@ export const PROJECT_CLOUD_SELECTION = [
   { slug: 'velair-experience', format: 'landscape' },
   { slug: 'velis-ltd', format: 'landscape' },
   { slug: '3monkeys-bozuyuk', format: 'landscape' },
-  { slug: 'mindloop', format: 'landscape' },
-  { slug: 'dental-health', format: 'landscape' },
-  { slug: 'securify', format: 'landscape' },
-  { slug: 'arac-takip-yolo', format: 'landscape' },
 ] as const;
 
 /**

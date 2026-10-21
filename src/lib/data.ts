@@ -91,6 +91,94 @@ export function getAdjacentProjects(slug: string): { prev: Project | null; next:
 export const WORKS: Work[] = [
   {
     n: "01",
+    slug: "evolve",
+    title: "Evolve",
+    client: "Piton",
+    kind: "Web Design · Tech Agency",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "Three.js", "GSAP", "Matter.js", "Lenis"],
+    image: "story-04.jpg",
+    summary: "Tech agency site rebuilt in Next.js — WebGL globe, scroll-driven method scene and an interactive diagnosis flow across 307 routes.",
+    body: [
+      "Evolve, WeEvolveIT tasarım referansını Next.js App Router ve React ile yeniden geliştirdiğimiz teknoloji ajansı konsepti. Three.js ile çizilen noktalı WebGL küre, kaydırmaya bağlı beş aşamalı yatay metot sahnesi, sürüklenebilir yorum şeridi ve parçacık efektli adım adım tanı akışı tek sitede birleşiyor; 307 içerik rotası statik sayfa olarak üretiliyor.",
+      "Hareketler GSAP, Lenis ve Matter.js ile düzenlenebilir React bileşenleri olarak yazıldı; footer'daki manifesto fizikle sürüklenebiliyor. Masaüstü ve mobil ölçümler referansla bire bir karşılaştırıldı, tüm rotalar ve form akışı otomatik testlerle doğrulandı. Çalışma, özgün WeEvolveIT tasarımını referans alan bir ön yüz geliştirme konsepti olarak Evolve adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, WebGL, scroll animation",
+    url: "https://evolve-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/evolve.webp',
+      mobile: '/assets/previews/mobile/evolve.webp',
+    },
+  },
+  {
+    n: "02",
+    slug: "coffi",
+    title: "Coffi",
+    client: "Piton",
+    kind: "Web Design · Coffee Brand",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "GSAP", "Rive", "Lottie", "Chart.js"],
+    image: "story-04.jpg",
+    summary: "Coffee brand site rebuilt in Next.js — video hero, a five-question coffee quiz, Rive and Lottie animations and 89 inner pages.",
+    body: [
+      "Coffi, Delta Cafés tasarım referansını Next.js ile yeniden geliştirdiğimiz kahve markası konsepti. Video hero, ürün şeridi, marka tarihi, kahve döngüsü, journal ve sürdürülebilirlik bölümlerinin yanında 36 ürün detayı ve journal yazıları dahil 89 iç sayfa önceden oluşturuluyor; beş soruluk kahve testi kullanıcıyı yedi profilden birine eşleştiriyor.",
+      "Lenis kaydırma, GSAP ScrollTrigger geçişleri, Rive ve Lottie animasyonları, Chart.js grafikleri ve fizikli fotoğraf/halat sahnesi React istemci bileşenleriyle yönetiliyor. Ürün filtreleri, sürüklenebilir şeritler ve mobil alt menüler masaüstü ve mobilde test edildi. Çalışma, özgün Delta Cafés tasarımını referans alan bir ön yüz geliştirme konsepti olarak Coffi adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, motion design, interactive content",
+    url: "https://coffi-konsept.vercel.app/en",
+    previews: {
+      desktop: '/assets/previews/desktop/coffi.webp',
+      mobile: '/assets/previews/mobile/coffi.webp',
+    },
+  },
+  {
+    n: "03",
+    slug: "karga",
+    title: "Karga",
+    client: "Piton",
+    kind: "Web Design · Photography Portfolio",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "React", "CSS Modules", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Photographer portfolio rebuilt in Next.js — rotating louvre hero, louvre page transitions and scroll-driven photo motion.",
+    body: [
+      "Karga, Louver tasarım referansını Next.js ile sıfırdan yeniden geliştirdiğimiz fotoğrafçı portfolyosu konsepti. Masaüstünde 20, mobilde 10 döner panelden oluşan panjurlu hero otomatik geçiş, sürükleme, swipe ve klavyeyle kontrol ediliyor; Work arşivi, kategori filtreleri ve 12 proje detayı panjurlu sayfa geçişleriyle bağlanıyor.",
+      "Harf animasyonları, fotoğraf kırpma ve zoom, paralaks, manyetik butonlar ve takipçi imleç harici animasyon kütüphanesi olmadan React ve CSS Modules ile yazıldı. Azaltılmış hareket tercihi ve üç kırılımlı responsive düzen baştan hesaba katıldı. Çalışma, Louver tasarımını referans alan bir ön yüz geliştirme konsepti olarak Karga adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, page transitions, responsive UI",
+    url: "https://karga-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/karga.webp',
+      mobile: '/assets/previews/mobile/karga.webp',
+    },
+  },
+  {
+    n: "04",
+    slug: "neuneu",
+    title: "Neuneu",
+    client: "Piton",
+    kind: "Web Design · Digital Studio",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "React", "Webflow Migration", "Animation"],
+    image: "story-04.jpg",
+    summary: "Webflow studio site moved to Next.js — bold typography, process and portfolio scenes, with every asset served locally.",
+    body: [
+      "Neuneu, Neutomni'nin Webflow üzerinde yayında olan sitesini referans alarak Next.js'e taşıdığımız dijital stüdyo konsepti. Büyük ölçekli tipografi, süreç, portfolyo, referanslar ve fiyatlandırma bölümleri ayrı React bileşenlerine bölündü; fontlar, görseller, videolar ve animasyon betikleri yerelde barındırılıyor, Webflow'a veya harici CDN'e bağımlılık kalmıyor.",
+      "Varlıkları toplayan ve içeriği bölümlere ayıran betiklerle taşıma tekrarlanabilir hâle getirildi. Masaüstü ve mobilde bölüm yükseklikleri referansla karşılaştırıldı, yatay taşma ve menüden bölüme kaydırma doğrulandı. Çalışma, özgün Neutomni tasarımını referans alan bir ön yüz geliştirme konsepti olarak Neuneu adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Webflow to Next.js migration, front-end development",
+    url: "https://neuneu-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/neuneu.webp',
+      mobile: '/assets/previews/mobile/neuneu.webp',
+    },
+  },
+  {
+    n: "05",
     slug: "naiben",
     title: "naiben",
     client: "Piton",
@@ -112,7 +200,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "02",
+    n: "06",
     slug: "kabizzu",
     title: "Kabizzu",
     client: "Piton",
@@ -134,7 +222,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "03",
+    n: "07",
     slug: "fur-crm",
     title: "FurCRM",
     client: "FurCRM",
@@ -156,7 +244,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "04",
+    n: "08",
     slug: "bt-elevator",
     title: "BT Elevator",
     client: "BT Elevator",
@@ -177,7 +265,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "05",
+    n: "09",
     slug: "gel-gez-gor",
     title: "Gel Gez Gör",
     client: "Gel Gez Gör",
@@ -199,7 +287,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "06",
+    n: "10",
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
@@ -220,7 +308,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "07",
+    n: "11",
     slug: "alp-sigorta",
     title: "Alp Sigorta",
     client: "Alp Sigorta",
@@ -241,7 +329,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "08",
+    n: "12",
     slug: "pampas-investment",
     title: "Pampas Investment",
     client: "Pampas Investment",
@@ -263,7 +351,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "09",
+    n: "13",
     slug: "ambalaj-cini",
     title: "Ambalaj Cini",
     client: "Ambalaj Cini",
@@ -286,7 +374,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "10",
+    n: "14",
     slug: "velair-experience",
     title: "VELAIR",
     client: "VELAIR",
@@ -308,7 +396,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "11",
+    n: "15",
     slug: "velis-ltd",
     title: "Velis LTD",
     client: "Velis Ticaret LTD",
@@ -330,7 +418,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "12",
+    n: "16",
     slug: "3monkeys-bozuyuk",
     title: "3 Monkeys Bozüyük",
     client: "Piton",
@@ -352,7 +440,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "17",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -374,7 +462,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "18",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -395,7 +483,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "15",
+    n: "19",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -416,7 +504,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "16",
+    n: "20",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton",
@@ -436,7 +524,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "17",
+    n: "21",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton",
@@ -456,7 +544,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "18",
+    n: "22",
     slug: "lithos",
     title: "Lithos",
     client: "Lithos",
@@ -478,7 +566,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "19",
+    n: "23",
     slug: "vanguard",
     title: "Vanguard",
     client: "Vanguard",
@@ -500,7 +588,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "24",
     slug: "jack-portfolio",
     title: "Jack — 3D Creator",
     client: "Jack Portfolio",
@@ -522,7 +610,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "21",
+    n: "25",
     slug: "veldara",
     title: "Veldara",
     client: "Veldara",
@@ -544,7 +632,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "22",
+    n: "26",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -566,7 +654,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "23",
+    n: "27",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -588,7 +676,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "24",
+    n: "28",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -610,7 +698,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "25",
+    n: "29",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -632,7 +720,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "26",
+    n: "30",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -650,7 +738,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "27",
+    n: "31",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -668,7 +756,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "28",
+    n: "32",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -689,7 +777,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "33",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -710,7 +798,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "30",
+    n: "34",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -731,7 +819,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "31",
+    n: "35",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -752,7 +840,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "32",
+    n: "36",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -774,7 +862,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "37",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -791,7 +879,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "34",
+    n: "38",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -812,7 +900,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "35",
+    n: "39",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -833,7 +921,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "36",
+    n: "40",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -853,7 +941,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "37",
+    n: "41",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -875,7 +963,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "38",
+    n: "42",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -897,7 +985,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "39",
+    n: "43",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -919,7 +1007,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "40",
+    n: "44",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -940,7 +1028,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "41",
+    n: "45",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -962,7 +1050,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "42",
+    n: "46",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -982,7 +1070,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "43",
+    n: "47",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton",
@@ -999,7 +1087,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "44",
+    n: "48",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton",
@@ -1016,7 +1104,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "45",
+    n: "49",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton",
@@ -1033,7 +1121,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "46",
+    n: "50",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton",
@@ -1050,7 +1138,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "47",
+    n: "51",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton",
@@ -1067,7 +1155,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "48",
+    n: "52",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -1084,7 +1172,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "49",
+    n: "53",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -1101,7 +1189,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "50",
+    n: "54",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -1118,7 +1206,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "51",
+    n: "55",
     slug: "emlak-sync",
     title: "Emlak Sync",
     client: "Emlak Sync",
@@ -1135,7 +1223,7 @@ export const WORKS: Work[] = [
     scope: "Listing sync, portal integrations, automation",
   },
   {
-    n: "52",
+    n: "56",
     slug: "dolmus-kontrol",
     title: "Dolmuş Güzergah Kontrol",
     client: "Piton",
@@ -1152,7 +1240,7 @@ export const WORKS: Work[] = [
     scope: "Automation, data processing, reporting",
   },
   {
-    n: "53",
+    n: "57",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",

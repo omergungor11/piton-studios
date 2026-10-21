@@ -250,3 +250,4 @@
 | TASK-121 | Anasayfa öne çıkan projeleri projeler sayfası şeridiyle eşle | S | COMPLETED |
 | TASK-122 | Hizmet sırası: AI Entegrasyonu, ERP & CRM, Özel Yazılım başa (menü, sayfa, numaralar) | S | COMPLETED |
 | TASK-123 | Görsel yükleme hızı: proje bulutu optimize texture, kademeli yükleme, `/assets` cache | S | COMPLETED |
+| TASK-124 | Evolve, Coffi, Karga, Neuneu konsept projelerini portfolyonun başına ekle (önizleme, canlı link, 3 dil, 3B bulut) | S | COMPLETED |

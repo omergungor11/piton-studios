@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-21 — Dört yeni konsept proje (TASK-124)
+
+- WORKS başına eklendi: Evolve (#01, WeEvolveIT referansı), Coffi (#02, Delta Cafés), Karga (#03, Louver), Neuneu (#04, Neutomni). Diğer projeler 05–57 olarak yeniden numaralandı.
+- Naiben deseniyle: `client: "Piton"`, rol Front-end Development; metinler referans tasarımı açıkça anar, referans markası müşteri olarak yazılmaz. tr/en/ru `works` çevirileri, canlı Vercel linkleri.
+- Canlı sitelerden önizlemeler: desktop 1440x810, mobil 860x1856 (webp).
+- 3B proje bulutu: dört proje başa alındı; Mindloop, Dental Health, Securify, Araç Takip buluttan çıktı (seçki 15'te kaldı).
+- SSS portföy sayısı 50 → 57 (3 dil).
+- Doğrulama: content:check 642/0, typecheck, build; production sunucusunda 4 detay sayfası (tr/en/ru) ve projeler şeridi kontrol edildi.
+
 ## 2026-10-10 — Görsel yükleme hızı: proje bulutu ve cache (TASK-123)
 
 - Anasayfa 3B proje bulutu 15 ham ekran görüntüsünü (1440px, ~1.250 KB) texture olarak indiriyordu. Texture'lar artık Next image optimizer'dan geliyor (`texture` alanı, `getImageProps`; yatay w=1080, dikey w=640): ~530 KB. Fallback kartları `image` (ham yol) ile next/image kullanmaya devam eder.
