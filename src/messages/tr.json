@@ -3124,51 +3124,6 @@
         "Gerçek zamanlı güzergah bilgisi, kullanıcı dostu arayüz ve mobil uyumlu tasarım ile şehir içi ulaşımı kolaylaştırdık."
       ],
       "role": "Full-stack / Tasarım"
-    },
-    "orchid-tent": {
-      "title": "Orchid Tent",
-      "sub": "Londra merkezli çadır ve etkinlik kiralama.",
-      "body": [
-        "Londra merkezli Orchid Tent için çadır ve etkinlik kiralama hizmeti sunan kurumsal bir web sitesi tasarladık. Şık tasarım ve kolay navigasyon ile potansiyel müşterilerin hızlıca bilgi edinmesini sağladık.",
-        "Etkinlik galerisi, fiyat teklifi formu ve responsive tasarım ile Londra'daki etkinlik sektöründe güçlü bir dijital varlık oluşturduk."
-      ],
-      "role": "Tasarım / Geliştirme"
-    },
-    "gabfest-2025": {
-      "title": "Gabfest 2025",
-      "sub": "Konferans ve etkinlik web sitesi.",
-      "body": [
-        "Gabfest 2025 konferansı için WordPress altyapısında modern ve bilgilendirici bir etkinlik web sitesi tasarladık. Program, konuşmacılar ve kayıt bilgilerini düzenli bir şekilde sunduk.",
-        "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık."
-      ],
-      "role": "Tasarım / Geliştirme"
-    },
-    "aydin-transfer": {
-      "title": "Aydın Transfer",
-      "sub": "Havalimanı ve şehir içi transfer hizmeti.",
-      "body": [
-        "Aydın Transfer için havalimanı ve şehir içi transfer hizmeti sunan kurumsal bir web sitesi tasarladık. Kolay rezervasyon akışı, fiyat hesaplama ve iletişim formları ile müşteri deneyimini optimize ettik.",
-        "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık."
-      ],
-      "role": "Tasarım / Geliştirme"
-    },
-    "cyprokey": {
-      "title": "Cyprokey",
-      "sub": "Kıbrıs gayrimenkul platformu.",
-      "body": [
-        "Cyprokey için Kuzey Kıbrıs gayrimenkul piyasasına yönelik modern bir emlak platformu tasarladık. İlan yönetimi, gelişmiş filtreleme ve harita entegrasyonu ile alıcı ve satıcıları buluşturduk.",
-        "SEO optimizasyonu ve kullanıcı dostu arayüz ile emlak aramaları için güçlü bir dijital varlık oluşturduk."
-      ],
-      "role": "Tasarım / Geliştirme"
-    },
-    "salih-defterali": {
-      "title": "Salih Defterali",
-      "sub": "Kişisel portfolyo ve workstation sitesi.",
-      "body": [
-        "Salih Defterali için kişisel portfolyo ve çalışma alanı web sitesi tasarladık. Projeleri, yetenekleri ve iş deneyimini sergileyen minimal ve etkileyici bir dijital varlık oluşturduk.",
-        "Temiz tipografi, akıcı animasyonlar ve responsive tasarım ile profesyonel bir ilk izlenim oluşturmayı hedefledik."
-      ],
-      "role": "Tasarım / Geliştirme"
     }
   },
   "faqPage": {

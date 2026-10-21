@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Hikâyeler temizlendi, proje gezintisi düzeltildi (TASK-125)
+
+- STORIES'ten silindi: Salih Defterali, Cyprokey, Gabfest 2025, Orchid Tent ve WORKS'te zaten olan mükerrer Aydın Transfer (3 dil çevirileriyle). Sayfaları artık 404, sitemap'te yok. Kalan tek hikâye: Bozüyük Dolmuşçular Derneği (`/projeler/dolmus`).
+- Detay sayfasındaki önceki/sonraki artık yalnızca projeler tablosundaki projeler arasında döner (`getAdjacentProjects` → `project-list.ts`). Tablodan gizli projelerin ve hikâyenin detay sayfasında gezinti gösterilmez.
+
 ## 2026-10-21 — Dört yeni konsept proje (TASK-124)
 
 - WORKS başına eklendi: Evolve (#01, WeEvolveIT referansı), Coffi (#02, Delta Cafés), Karga (#03, Louver), Neuneu (#04, Neutomni). Diğer projeler 05–57 olarak yeniden numaralandı.

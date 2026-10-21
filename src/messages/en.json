@@ -3175,51 +3175,6 @@
         "Real-time route information, user-friendly interface, and mobile-responsive design made city transportation easier."
       ],
       "role": "Full-stack / Design"
-    },
-    "orchid-tent": {
-      "title": "Orchid Tent",
-      "sub": "London-based tent and event rental company.",
-      "body": [
-        "We designed a corporate website for Orchid Tent, a London-based tent and event rental service. Elegant design and easy navigation allowed potential clients to quickly find information.",
-        "Event gallery, quote request form, and responsive design created a strong digital presence in London's event industry."
-      ],
-      "role": "Design / Development"
-    },
-    "gabfest-2025": {
-      "title": "Gabfest 2025",
-      "sub": "Conference and event website.",
-      "body": [
-        "We designed a modern and informative event website for the Gabfest 2025 conference on WordPress. We presented the program, speakers, and registration information in an organized manner.",
-        "We built a dynamic structure providing up-to-date information before, during, and after the event. Mobile-responsive design ensured easy access from any device."
-      ],
-      "role": "Design / Development"
-    },
-    "aydin-transfer": {
-      "title": "Aydin Transfer",
-      "sub": "Airport and city transfer service.",
-      "body": [
-        "We designed a corporate website for Aydin Transfer offering airport and city transfer services. Easy booking flow, price calculator, and contact forms optimized the customer experience.",
-        "Mobile-responsive design and fast load times ensured passengers could easily book transfers anytime."
-      ],
-      "role": "Design / Development"
-    },
-    "cyprokey": {
-      "title": "Cyprokey",
-      "sub": "Cyprus real estate platform.",
-      "body": [
-        "For Cyprokey we designed a modern property platform for the Northern Cyprus real estate market, bringing buyers and sellers together through listing management, advanced filtering and map integration.",
-        "SEO optimisation and a user-friendly interface turned it into a strong digital presence for property search."
-      ],
-      "role": "Design / Development"
-    },
-    "salih-defterali": {
-      "title": "Salih Defterali",
-      "sub": "Personal portfolio and workstation site.",
-      "body": [
-        "We designed a personal portfolio and workspace site for Salih Defterali — a minimal, striking digital presence showcasing projects, skills and professional experience.",
-        "Clean typography, fluid animation and responsive layout were used to create a confident first impression."
-      ],
-      "role": "Design / Development"
     }
   },
   "faqPage": {

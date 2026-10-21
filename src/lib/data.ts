@@ -70,24 +70,6 @@ export function getAllProjectSlugs(): string[] {
   return [...new Set([...WORKS.map((w) => w.slug), ...STORIES.map((s) => s.slug)])];
 }
 
-export function getAllProjects(): Project[] {
-  return [
-    ...WORKS.map((w) => ({ ...w, type: "work" as const })),
-    ...STORIES.map((s) => ({ ...s, type: "story" as const })),
-  ];
-}
-
-export function getAdjacentProjects(slug: string): { prev: Project | null; next: Project | null } {
-  // Hikayeler de donguye dahil: aksi halde hicbir sayfadan link almiyorlardi (yetim sayfa).
-  const all = getAllProjects().filter((p, i, list) => list.findIndex((x) => x.slug === p.slug) === i);
-  const idx = all.findIndex((p) => p.slug === slug);
-  if (idx === -1) return { prev: null, next: null };
-  return {
-    prev: idx > 0 ? all[idx - 1] : all[all.length - 1],
-    next: idx < all.length - 1 ? all[idx + 1] : all[0],
-  };
-}
-
 export const WORKS: Work[] = [
   {
     n: "01",
@@ -1993,80 +1975,5 @@ export const STORIES: Story[] = [
       "Gerçek zamanlı güzergah bilgisi, kullanıcı dostu arayüz ve mobil uyumlu tasarım ile şehir içi ulaşımı kolaylaştırdık.",
     ],
     client: "Bozüyük Dolmuşçular Derneği",
-  },
-  {
-    no: "02",
-    slug: "orchid-tent",
-    title: "Orchid Tent",
-    sub: "Londra merkezli çadır ve etkinlik kiralama.",
-    year: "2025",
-    role: "Design / Development",
-    tags: ["Corporate", "Events", "London"],
-    image: "story-02.jpg",
-    body: [
-      "Londra merkezli Orchid Tent için çadır ve etkinlik kiralama hizmeti sunan kurumsal bir web sitesi tasarladık. Şık tasarım ve kolay navigasyon ile potansiyel müşterilerin hızlıca bilgi edinmesini sağladık.",
-      "Etkinlik galerisi, fiyat teklifi formu ve responsive tasarım ile Londra'daki etkinlik sektöründe güçlü bir dijital varlık oluşturduk.",
-    ],
-    client: "Orchid Tent",
-  },
-  {
-    no: "03",
-    slug: "gabfest-2025",
-    title: "Gabfest 2025",
-    sub: "Konferans ve etkinlik web sitesi.",
-    year: "2025",
-    role: "Design / Development",
-    tags: ["WordPress", "Event", "Conference"],
-    image: "story-03.jpg",
-    body: [
-      "Gabfest 2025 konferansı için WordPress altyapısında modern ve bilgilendirici bir etkinlik web sitesi tasarladık. Program, konuşmacılar ve kayıt bilgilerini düzenli bir şekilde sunduk.",
-      "Etkinlik öncesi, sırası ve sonrasında güncel bilgi akışı sağlayan dinamik bir yapı kurduk. Mobil uyumlu tasarım ile katılımcıların her cihazdan kolayca erişmesini sağladık.",
-    ],
-    client: "Gabfest",
-  },
-  {
-    no: "04",
-    slug: "aydin-transfer",
-    title: "Aydın Transfer",
-    sub: "Havalimanı ve şehir içi transfer hizmeti.",
-    year: "2025",
-    role: "Design / Development",
-    tags: ["Corporate", "Transfer", "Booking"],
-    image: "story-05.jpg",
-    body: [
-      "Aydın Transfer için havalimanı ve şehir içi transfer hizmeti sunan kurumsal bir web sitesi tasarladık. Kolay rezervasyon akışı, fiyat hesaplama ve iletişim formları ile müşteri deneyimini optimize ettik.",
-      "Mobil uyumlu tasarım ve hızlı yüklenme süreleri ile yolcuların her an kolayca transfer rezervasyonu yapabilmesini sağladık.",
-    ],
-    client: "Aydın Transfer",
-  },
-  {
-    no: "05",
-    slug: "cyprokey",
-    title: "Cyprokey",
-    sub: "Kıbrıs gayrimenkul platformu.",
-    year: "2025",
-    role: "Design / Development",
-    tags: ["Real Estate", "Platform", "KKTC"],
-    image: "cyprokey.jpg",
-    body: [
-      "Cyprokey için Kuzey Kıbrıs gayrimenkul piyasasına yönelik modern bir emlak platformu tasarladık. İlan yönetimi, gelişmiş filtreleme ve harita entegrasyonu ile alıcı ve satıcıları buluşturduk.",
-      "SEO optimizasyonu ve kullanıcı dostu arayüz ile emlak aramaları için güçlü bir dijital varlık oluşturduk.",
-    ],
-    client: "Cyprokey",
-  },
-  {
-    no: "06",
-    slug: "salih-defterali",
-    title: "Salih Defterali",
-    sub: "Kişisel portfolyo ve workstation sitesi.",
-    year: "2026",
-    role: "Design / Development",
-    tags: ["Portfolio", "Personal", "Web Design"],
-    image: "reel-b.jpg",
-    body: [
-      "Salih Defterali için kişisel portfolyo ve çalışma alanı web sitesi tasarladık. Projeleri, yetenekleri ve iş deneyimini sergileyen minimal ve etkileyici bir dijital varlık oluşturduk.",
-      "Temiz tipografi, akıcı animasyonlar ve responsive tasarım ile profesyonel bir ilk izlenim oluşturmayı hedefledik.",
-    ],
-    client: "Salih Defterali",
   },
 ];
