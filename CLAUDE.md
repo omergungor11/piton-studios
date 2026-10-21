@@ -144,7 +144,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   > açılınca). Analytics/Speed Insights çerezsiz. Yeni çerez, izleme pikseli, harici script veya
   > üçüncü taraf servis eklenirse **çerez politikası + gizlilik metni (3 dil) + `LEGAL.updated`**
   > birlikte güncellenmeli; zorunlu olmayan çerez eklenirse onay banner'ı gerekir.
-- **Ceviriler**: `pnpm content:check` 615 kontrol / 0 sorun (works 57, stories 1, servicesList,
+- **Ceviriler**: `pnpm content:check` 624 kontrol / 0 sorun (works 57, stories 1, servicesList,
   faqItems 75, locationItems, solutionItems, serviceVisuals, `blog.pagination` × 3 dil).
   **Her yeni icerikten sonra calistirin** — eksik ceviri varsa exit 1.
 - **E-posta altyapisi (2026-09-15)**: gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi;
