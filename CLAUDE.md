@@ -37,7 +37,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   Organization/WebSite JSON-LD'de `alternateName` — arama motorlari eski adla eslestirsin diye, silmeyin.
   > Turkce ek uyumu: "Piton'da / Piton'dan / Piton'dur" (Studios'ta/tan/tur degil); Ingilizce iyelik "Piton's".
   > `social-production/` altindaki eski sosyal medya ciktilari tarihsel kayittir, eski adla kaldi.
-- **50 proje** WORKS array'inde (2026-09-14: VELAIR — 3B özel jet deneyimi, canlı link + desktop/mobil önizleme — #09 sırasına EKH Yapı'nın yerine alındı, EKH Yapı #50'ye kaydı) — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
+- **57 proje** WORKS array'inde (2026-10-21: Evolve, Coffi, Karga, Neuneu #01–04'e eklendi — Naiben gibi referans sitelerin Next.js yeniden yapımı, `client: "Piton"`, metinde referans adı açıkça geçer; gerçek marka müşteri olarak yazılmaz. 2026-09-14: VELAIR — 3B özel jet deneyimi, canlı link + desktop/mobil önizleme — #09 sırasına EKH Yapı'nın yerine alındı, EKH Yapı #50'ye kaydı) — freelancer klasöründen 13 + 5 canlı self-development (FurCRM slider #2, canlı linkler `url` alanıyla) + Work-Restored taramasından 5; nexos-investment mükerrer girdisi silindi. 2026-07-27: tüm kulüp/nightlife projeleri kaldırıldı (WORKS'ten 10, STORIES'ten 5 — detay: piton-docs/MEMORY.md). 2026-07-29: 7 proje daha kaldırıldı (lider-emlak, gemini-tracker, ai-dating-app, manager-oto-servis, sevgili-yogurt, osyb-hap, avie-global) — `n` alanları 01–49 olarak yeniden numaralandı. İlk 6 proje slider'da
 - **Case study'ler güçlendirildi**: Nexos (flagship full-stack anlatım), Ambalaj Cini (%30 büyüme), Sammys (özel rezervasyon), Radyo Juke (özel entegrasyon)
 - **Saiber ortaklığı**: 18 projede `collaborator: "Saiber"` — detay sayfasında "İş Birliği" metası olarak görünüyor (liste: piton-docs/MEMORY.md)
 - **Anasayfa**: Hero → Spark CTA → Projects → Manifesto (Neden Piton) → Services → Process → About → Contact (8 scene; 2026-09-05'te Projects one alindi)
@@ -144,7 +144,7 @@ uzerine kurulu, 3 dilli (tr/en/ru), hizli yuklenen modern bir portfolyo sitesi.
   > açılınca). Analytics/Speed Insights çerezsiz. Yeni çerez, izleme pikseli, harici script veya
   > üçüncü taraf servis eklenirse **çerez politikası + gizlilik metni (3 dil) + `LEGAL.updated`**
   > birlikte güncellenmeli; zorunlu olmayan çerez eklenirse onay banner'ı gerekir.
-- **Ceviriler**: `pnpm content:check` 615 kontrol / 0 sorun (works 50, stories 6, servicesList,
+- **Ceviriler**: `pnpm content:check` 624 kontrol / 0 sorun (works 57, stories 1, servicesList,
   faqItems 75, locationItems, solutionItems, serviceVisuals, `blog.pagination` × 3 dil).
   **Her yeni icerikten sonra calistirin** — eksik ceviri varsa exit 1.
 - **E-posta altyapisi (2026-09-15)**: gelen kutusu `hi@pitonstudios.com` (Zoho Mail, AB veri merkezi;
