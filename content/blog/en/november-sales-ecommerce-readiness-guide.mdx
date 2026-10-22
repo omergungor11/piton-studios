@@ -1,0 +1,253 @@
+---
+title: "Five weeks to the November sales: how to get your online store ready for the peak"
+description: "Speed, infrastructure, payments, the 30-day price rule and shipping for the November sales. A timeline and checklist for online stores, with data from Türkiye."
+date: 2026-10-22
+tags: ["e-commerce", "performance", "campaigns"]
+author: "Piton"
+draft: false
+translationKey: november-sales-readiness
+sources:
+  - title: "CNBC-e — TurkStat Household ICT Usage Survey 2026: six in ten people order online (in Turkish)"
+    url: "https://www.cnbce.com/haberler/turkiyede-internetten-alisveriste-rekor-her-10-kisiden-6si-online-siparis-veriyor-h34434"
+  - title: "Alomaliye — The Outlook of E-Commerce in Türkiye 2025 report published (Ministry of Trade, ETBİS; in Turkish)"
+    url: "https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/"
+  - title: "Bigpara — Türkiye's e-commerce map updated (ETBİS 2023-2025 comparison; in Turkish)"
+    url: "https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/"
+  - title: "MediaCat — What Black Friday brought (iyzico and Gemius data, November 2025; in Turkish)"
+    url: "https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/"
+  - title: "Uşak Haber — November peaked at 20% of e-commerce orders (fiCommerce data; in Turkish)"
+    url: "https://www.usakhabergazetesi.com.tr/kasim-ayi-e-ticarette-yuzde-20-ile-zirve-yapti"
+  - title: "Shopify — Shopify merchants achieve record-breaking $14.6 billion in Black Friday-Cyber Monday sales"
+    url: "https://www.shopify.com/investors/press-releases/shopify-merchants-achieve-record-breaking-146-billion-black"
+  - title: "web.dev — Milliseconds make millions (Google, 55 and Deloitte)"
+    url: "https://web.dev/case-studies/milliseconds-make-millions"
+  - title: "Forbes Türkiye — Ministry of Trade warning on discounted sales (in Turkish)"
+    url: "https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi"
+  - title: "Diken — Ministry warning on discounted sales: the last 30 days' price must be the basis (in Turkish)"
+    url: "https://www.diken.com.tr/?p=1606389"
+faq:
+  - q: "When should we start preparing for the November sales?"
+    a: "Infrastructure and code changes should start at least 4-5 weeks before the campaign. No major changes are made in the last two weeks; that time is for load testing, payment and shipping rehearsals and a final check of campaign pages. In 2026, Black Friday falls on Friday 27 November."
+  - q: "How should the old price be shown in a discount?"
+    a: "According to Türkiye's Ministry of Trade, the discount should be calculated from the lowest price applied in the 30 days before the discount starts, and the previous price should be shown in the ad. The campaign's start and end dates, and any stock limit, should also be stated clearly."
+  - q: "What happens if the site goes down on campaign day?"
+    a: "The loss is not only those hours' sales: ad budget is wasted, orders stuck at payment load customer service, and brand trust suffers. That is why caching, the CDN, a payment fallback and monitoring alerts should be tested before the campaign, with a written plan for who does what when something breaks."
+  - q: "Does site speed really make a difference during a campaign?"
+    a: "Yes. In a study backed by Google and carried out by Deloitte, a 0.1-second improvement in mobile site speed raised the conversion rate of retail sites by 8.4% and the average order value by 9.2%. On the days with the most traffic, that difference goes straight to revenue."
+  - q: "Do we still need a bank transfer option?"
+    a: "In Türkiye, yes. According to ETBİS data, 62.5% of e-commerce payments in 2025 were made by card and 29.2% by bank transfer or EFT. If the card infrastructure has problems during the campaign, bank transfer becomes the backup channel that saves the order."
+---
+
+In Türkiye, November is the month when online stores carry a load unlike the rest of the year.
+Traffic, orders and payment volume are squeezed into a few weeks, and an unprepared site slows down or
+stops on the very day it gets the most visitors. In 2026, Black Friday falls on Friday 27 November,
+which leaves roughly five weeks from today. This post uses Turkish data to show how large the
+November load is, what needs to be prepared in advance for speed, infrastructure, payments, pricing
+rules and shipping, and a week-by-week timeline. You can find a short summary of payment
+infrastructure options [in our FAQ](/en/faq#faq-payment-integration).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "E-commerce volume in the November 2025 campaign period was 41.5% higher than in the same period a year earlier.",
+    "The share of people in Türkiye who shop online reached 60% for the first time in 2026.",
+    "A 0.1-second speed-up on a mobile site can raise retail conversion by 8.4%; on peak days that difference turns into revenue.",
+    "Discounts must be based on the lowest price of the previous 30 days, with dates and any stock limit stated clearly.",
+    "Code and infrastructure changes should be frozen two weeks before the campaign, leaving the last weeks for testing and rehearsal.",
+  ]}
+/>
+
+## Why November is the hardest month of the year
+
+According to the Ministry of Trade's [Outlook of E-Commerce in Türkiye 2025 report](https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/),
+e-commerce volume in the November 2025 campaign period was 41.5% higher than in the same period a year
+earlier, and the number of goods and services sold rose 11.6%. A single company's data shows the same
+intensity: [according to the e-commerce logistics company fiCommerce](https://www.usakhabergazetesi.com.tr/kasim-ayi-e-ticarette-yuzde-20-ile-zirve-yapti),
+November made up 20% of the year's total order volume, orders rose 45% compared with October, and
+the busiest day was 28 November.
+
+On the payments side, [iyzico's November 2025 data](https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/)
+shows that it processed 1,000 transactions per second on Friday 28 November, that transaction volume
+rose 22% year on year, and that the average basket was 2,656 TL. According to Gemius, e-commerce
+platforms had 52 million visitors in total between 1 and 15 November.
+
+<StatGrid
+  items={[
+    { value: "41.5%", label: "Year-on-year rise in e-commerce volume in the November 2025 campaign period", note: "ETBİS" },
+    { value: "60%", label: "Share of individuals shopping online, 2026", note: "TURKSTAT" },
+    { value: "20%", label: "November's share of annual order volume (single-company data)", note: "FICOMMERCE" },
+  ]}
+/>
+
+## The market has grown, and so have expectations
+
+The market the campaign plays out in grows every year. [According to ETBİS data](https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/),
+total e-commerce volume rose from 1.85 trillion TL in 2023 to 4.57 trillion TL in 2025. The number of
+businesses selling online reached 634,000, which means more competitors in November too.
+
+<TrendChart
+  title="Total e-commerce volume in Türkiye"
+  caption="Trillion TL, current prices (not adjusted for inflation). Source: Ministry of Trade, ETBİS."
+  max={8}
+  labels={["2023", "2024", "2025"]}
+  dataTableLabel="Show data as a table"
+  series={[
+    { name: "Total e-commerce volume", points: [1.85, 3, 4.57] },
+  ]}
+/>
+
+Demand is widening as well. According to TurkStat's [Household ICT Usage Survey 2026](https://www.cnbce.com/haberler/turkiyede-internetten-alisveriste-rekor-her-10-kisiden-6si-online-siparis-veriyor-h34434),
+the share of people ordering goods or services online rose from 55.7% in 2025 to 60% in 2026, and
+internet use reached 92.3%. Many of the visitors who reach your site in November have already had a
+fast checkout and fast delivery elsewhere; that experience sets the bar.
+
+## Infrastructure: can it handle the traffic peak
+
+Campaign traffic is planned for the peak, not the average. A global example shows the scale:
+[Shopify reported](https://www.shopify.com/investors/press-releases/shopify-merchants-achieve-record-breaking-146-billion-black)
+that its merchants together reached $5.1 million in sales per minute on Black Friday 2025, with the
+peak at 12:01 PM US Eastern time. Load does not spread evenly across the day; it piles up at certain
+moments. On your site, too, the riskiest moment is usually the first hour after the campaign email or
+notification goes out.
+
+Before the campaign, test the following:
+
+- **Caching and CDN:** product listings, categories and campaign pages should be served from cache
+  instead of hitting the database on every visit.
+- **Load testing:** test with several times a normal day's traffic, especially on the cart and
+  checkout steps. A home page that loads is not enough proof.
+- **Third-party scripts:** extra scripts such as live chat, heatmaps and ad tags slow pages at the
+  peak; remove the ones you do not need before the campaign.
+- **Monitoring and alerts:** set alerts for error rate, payment success and page time, and decide in
+  advance who responds when an alert fires.
+
+<Callout type="warn" title="Freeze changes two weeks before the campaign">
+  A new feature shipped the day before the campaign carries the risk of an untested bug into the
+  busiest day. Freeze code and infrastructure changes two weeks before the campaign and allow only bug
+  fixes during that time.
+</Callout>
+
+## Speed goes straight to revenue
+
+The effect of speed is measured, not guessed. In the
+[Milliseconds Make Millions study](https://web.dev/case-studies/milliseconds-make-millions), backed by
+Google and carried out by 55 and Deloitte, more than 30 million sessions on 37 brand sites were
+analysed. An improvement of just 0.1 seconds in mobile site speed produced these results:
+
+<BarChart
+  title="Effect of a 0.1-second mobile speed-up"
+  caption="Percentage increase. 37 European and US brand sites, over 30 million sessions, late 2019. Source: Google, 55 and Deloitte."
+  unit="%"
+  max={25}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Retail: conversion rate", value: 8.4, highlight: true },
+    { label: "Retail: average order value", value: 9.2, highlight: true },
+    { label: "Travel: conversion rate", value: 10.1 },
+    { label: "Users reaching the form page (lead gen)", value: 21.6 },
+  ]}
+/>
+
+During a campaign the effect grows, because the same slowness hits the days with the most visitors.
+What to do about image sizes, fonts and heavy scripts is covered in detail in our
+[fast website guide](/en/blog/how-to-build-a-fast-website); campaign pages are not exempt from those
+rules.
+
+## Payments: do not rely on a single channel
+
+ETBİS data shows that payment habits in Türkiye are distinctive. In 2025,
+[62.5% of e-commerce payments were made by card and 29.2% by bank transfer or EFT](https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/);
+cash on delivery accounted for 3.5%. 3D Secure was used in 64.1% of card payments. The share of bank
+transfers rose within a year.
+
+<BarChart
+  title="Share of payment methods in e-commerce"
+  caption="Total e-commerce, percent. Other methods accounted for 4.8% in 2025. Source: Ministry of Trade, ETBİS."
+  unit="%"
+  max={70}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Card, 2024", value: 66 },
+    { label: "Card, 2025", value: 62.5, highlight: true },
+    { label: "Bank transfer / EFT, 2024", value: 26 },
+    { label: "Bank transfer / EFT, 2025", value: 29.2, highlight: true },
+    { label: "Cash on delivery, 2025", value: 3.5 },
+  ]}
+/>
+
+The practical takeaways:
+
+- **A backup payment channel:** if the card infrastructure has a problem, bank transfer or a second
+  virtual POS should be ready so the order is not lost.
+- **Wallets and fast checkout:** in iyzico's November data, digital wallet payments
+  [reached 30% of all transactions](https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/); saved
+  cards and wallets shorten the payment step.
+- **Showing instalments:** instalment options should be clear on the product page; a difference
+  first seen at checkout makes people abandon the cart.
+
+## Prices and discounts: the 30-day rule
+
+The legal side of a campaign is the part most often skipped. According to Türkiye's Ministry of
+Trade, [the discount should be based on the lowest price applied in the 30 days before the discount starts](https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi),
+and the previous price should be shown in the ad. The campaign's start and end dates, the quantity it
+covers and any stock limit should be stated clearly and understandably; misleading wording or visuals
+about discounted products and rates should not be used.
+
+Enforcement is real: in the first half of 2025, the Advertising Board
+[reviewed 12,499 files, found violations in 753 and imposed 141 million TL in fines](https://www.diken.com.tr/?p=1606389).
+
+<Callout type="key" title="Keep price history in the system">
+  The most reliable way to follow the 30-day rule is to store each product's price history in the
+  system and calculate the "previous price" on the campaign label automatically from that record. An
+  old price entered by hand leaves both room for error and a record that is hard to defend in an
+  inspection.
+</Callout>
+
+## Shipping and the delivery promise
+
+According to ETBİS data, average delivery time
+[fell from 46.2 hours in 2023 to 42.2 hours in 2025](https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/).
+Customers get used to that speed, but carriers are also overloaded in November. The delivery time on
+product pages should be updated for the campaign period, and stock and warehouse capacity should be
+set against the order forecast. If you sell the same product on marketplaces and on your own site,
+stock synchronisation stops the same item from being sold on both channels and one order being
+cancelled.
+
+## Preparation timeline
+
+<BlogFigure name="november-sales-readiness" alt="Three-phase timeline: on the left, the preparation phase with a load-test gauge and check marks; in the middle, the campaign peak with rising traffic bars and a constantly monitored pulse line; on the right, a report and bar chart for post-campaign analysis. A line of light connects the phases from left to right." caption="Preparation, peak and analysis: changes freeze before the peak, the peak is for monitoring and response only, and results are reviewed once the campaign ends." />
+
+| When | What to do |
+|---|---|
+| 5 weeks out | Review last year's data, set the campaign scope and the stock forecast |
+| 4 weeks out | Speed improvements, cache and CDN settings, removing unneeded scripts |
+| 3 weeks out | Campaign pages, discount labels based on price history, a payment fallback |
+| 2 weeks out | Code freeze; load testing, payment and returns rehearsal, monitoring alerts |
+| Campaign week | Monitoring and bug fixes only; daily check-ins with support and shipping |
+| After the campaign | Analyse sales, conversion, returns and error logs; notes for next year |
+
+## Common mistakes
+
+- **Launching the campaign page on the last day.** Search engines and ad approvals need time; a
+  permanent campaign URL can be reused every year.
+- **Testing only the home page.** What really stresses the system is the cart, the stock check and
+  the payment step.
+- **Depending on a single payment provider.** An outage at the peak is a direct loss of sales on a
+  site with no backup.
+- **Calculating the discount rate by hand.** Breaching the 30-day rule risks both fines and lost
+  trust.
+- **Running the campaign without measurement.** Spending without knowing which channel brought sales
+  leaves next year's budget to guesswork.
+
+## Conclusion
+
+November is an exam for an online store. The data shows the load grows every year: campaign volume
+rose 41.5%, and the share of people shopping online reached 60%. Most of the work needed to pass the
+exam is technical but simple: improve speed, set up a payment fallback, record price history and
+freeze changes on time. What makes the difference is having all of it done before the peak.
+
+If you would like help preparing your site on this timeline, see our [e-commerce](/en/services/ecommerce),
+[maintenance & support](/en/services/maintenance-support) and
+[cloud infrastructure](/en/services/cloud-infrastructure) service pages, read our
+[e-commerce conversion rate post](/en/blog/ecommerce-conversion-rate-optimization) for after the
+campaign, or [get in touch](/en/contact) directly.

@@ -1,0 +1,244 @@
+---
+title: "Kasım indirimlerine 5 hafta: e-ticaret sitenizi zirveye nasıl hazırlarsınız?"
+description: "Kasım kampanya dönemi için hız, altyapı, ödeme, 30 gün fiyat kuralı ve kargo hazırlığı. Türkiye verileriyle e-ticaret siteleri için takvim ve kontrol listesi."
+date: 2026-10-22
+tags: ["e-ticaret", "performans", "kampanya"]
+author: "Piton"
+draft: false
+translationKey: november-sales-readiness
+sources:
+  - title: "CNBC-e — TÜİK Hanehalkı Bilişim Teknolojileri Kullanım Araştırması 2026: her 10 kişiden 6'sı online sipariş veriyor"
+    url: "https://www.cnbce.com/haberler/turkiyede-internetten-alisveriste-rekor-her-10-kisiden-6si-online-siparis-veriyor-h34434"
+  - title: "Alomaliye — Türkiye'de E-Ticaretin Görünümü Raporu 2025 yayımlandı (Ticaret Bakanlığı, ETBİS)"
+    url: "https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/"
+  - title: "Bigpara — Türkiye'nin e-ticaret haritası güncellendi (ETBİS 2023-2025 karşılaştırması)"
+    url: "https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/"
+  - title: "MediaCat — Black Friday ne getirdi ne götürdü? (iyzico ve Gemius verileri, Kasım 2025)"
+    url: "https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/"
+  - title: "Uşak Haber — Kasım ayı e-ticarette yüzde 20 ile zirve yaptı (fiCommerce verileri)"
+    url: "https://www.usakhabergazetesi.com.tr/kasim-ayi-e-ticarette-yuzde-20-ile-zirve-yapti"
+  - title: "Shopify — Shopify merchants achieve record-breaking $14.6 billion in Black Friday-Cyber Monday sales"
+    url: "https://www.shopify.com/investors/press-releases/shopify-merchants-achieve-record-breaking-146-billion-black"
+  - title: "web.dev — Milliseconds make millions (Google, 55 ve Deloitte)"
+    url: "https://web.dev/case-studies/milliseconds-make-millions"
+  - title: "Forbes Türkiye — Ticaret Bakanlığı'ndan indirimli satış uyarısı"
+    url: "https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi"
+  - title: "Diken — Bakanlıktan 'indirimli satış' uyarısı: son 30 günlük fiyat esas alınmalı"
+    url: "https://www.diken.com.tr/?p=1606389"
+faq:
+  - q: "Kasım kampanyası için hazırlığa ne zaman başlamalı?"
+    a: "Altyapı ve kod değişiklikleri için en geç kampanyadan 4-5 hafta önce başlamak gerekir. Son iki haftada büyük değişiklik yapılmaz; bu süre yük testi, ödeme ve kargo provası ve kampanya sayfalarının son kontrolüne ayrılır. 2026'da Black Friday 27 Kasım Cuma'ya denk geliyor."
+  - q: "İndirimde eski fiyat nasıl gösterilmeli?"
+    a: "Ticaret Bakanlığı'nın uyarısına göre indirim oranı, indirimin başladığı tarihten önceki 30 gün içinde uygulanan en düşük fiyat esas alınarak hesaplanmalı ve önceki fiyat reklamda gösterilmeli. Kampanyanın başlangıç ve bitiş tarihi, varsa stok sınırı da açıkça yazılmalı."
+  - q: "Kampanya günü sitem çökerse ne olur?"
+    a: "Kayıp yalnızca o saatlerin satışı değildir; reklam bütçesi boşa yanar, ödeme yarıda kalan siparişler müşteri hizmetine yük olur ve marka güveni zarar görür. Bu yüzden önbellek, CDN, ödeme yedeği ve izleme alarmı kampanyadan önce test edilmeli, sorun anında kimin ne yapacağı yazılı olmalı."
+  - q: "Site hızı kampanyada gerçekten fark yaratır mı?"
+    a: "Evet. Google'ın desteklediği ve Deloitte'un yürüttüğü bir çalışmada mobil site hızındaki 0,1 saniyelik iyileşme perakende sitelerde dönüşüm oranını %8,4, ortalama sepet tutarını %9,2 artırdı. Trafiğin en yüksek olduğu günlerde bu fark doğrudan ciroya yansır."
+  - q: "Havale ve EFT seçeneği hâlâ gerekli mi?"
+    a: "Türkiye'de gerekli. ETBİS verilerine göre 2025'te e-ticaret ödemelerinin %62,5'i kartla, %29,2'si havale ve EFT ile yapıldı. Kampanya döneminde kart altyapısında sorun çıkarsa havale ve EFT seçeneği siparişi kurtaran yedek kanal olur."
+---
+
+Türkiye'de Kasım, e-ticaret sitelerinin yılın geri kalanından farklı bir yük taşıdığı ay. Trafik,
+sipariş ve ödeme hacmi birkaç haftaya sıkışıyor; hazırlıksız bir site en çok ziyaretçi aldığı gün
+yavaşlıyor ya da duruyor. 2026'da Black Friday 27 Kasım Cuma'ya denk geliyor, yani bugünden itibaren
+yaklaşık beş hafta var. Bu yazıda Türkiye verileriyle Kasım yükünün büyüklüğünü, hız, altyapı,
+ödeme, fiyat kuralları ve kargo tarafında neyin önceden hazırlanması gerektiğini ve haftalara bölünmüş
+bir takvimi anlatıyoruz. Ödeme altyapısı seçeneklerinin kısa özetini [SSS sayfamızda](/tr/sss#faq-payment-integration) bulabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "2025 Kasım kampanya döneminde e-ticaret hacmi bir önceki yılın aynı dönemine göre %41,5 arttı.",
+    "Türkiye'de internetten alışveriş yapanların oranı 2026'da ilk kez %60'a ulaştı.",
+    "Mobil sitede 0,1 saniyelik hızlanma perakendede dönüşümü %8,4 artırabiliyor; zirve günlerinde bu fark ciroya dönüşür.",
+    "İndirim, önceki 30 günün en düşük fiyatı esas alınarak gösterilmeli; tarih ve stok sınırı açıkça yazılmalı.",
+    "Kod ve altyapı değişiklikleri kampanyadan iki hafta önce dondurulmalı; son haftalar test ve prova için ayrılmalı.",
+  ]}
+/>
+
+## Kasım neden yılın en zor ayı
+
+Ticaret Bakanlığı'nın [Türkiye'de E-Ticaretin Görünümü 2025 raporuna göre](https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/)
+Kasım 2025 kampanya döneminde e-ticaret hacmi bir önceki yılın aynı dönemine göre %41,5, satılan mal
+ve hizmet adedi %11,6 arttı. Tek bir şirketin verisi de aynı yoğunluğu gösteriyor:
+[e-ticaret lojistik şirketi fiCommerce'in verisine göre](https://www.usakhabergazetesi.com.tr/kasim-ayi-e-ticarette-yuzde-20-ile-zirve-yapti)
+Kasım, yılın toplam sipariş hacminin %20'sini oluşturdu; sipariş sayısı Ekim'e göre %45 arttı ve en
+yoğun gün 28 Kasım oldu.
+
+Ödeme tarafında [iyzico'nun Kasım 2025 verisi](https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/)
+28 Kasım Cuma günü saniyede 1.000 işleme ulaşıldığını, işlem hacminin bir önceki yıla göre %22
+arttığını ve ortalama sepetin 2.656 TL olduğunu gösteriyor. Gemius'a göre 1-15 Kasım arasında
+e-ticaret platformlarının toplam ziyaretçi sayısı 52 milyona ulaştı.
+
+<StatGrid
+  items={[
+    { value: "%41,5", label: "Kasım 2025 kampanya döneminde e-ticaret hacmindeki yıllık artış", note: "ETBİS" },
+    { value: "%60", label: "İnternetten alışveriş yapan bireylerin oranı, 2026", note: "TÜİK" },
+    { value: "%20", label: "Kasım'ın yıllık sipariş hacmindeki payı (tek şirket verisi)", note: "FICOMMERCE" },
+  ]}
+/>
+
+## Pazar büyüdü, beklenti de
+
+Kampanyanın oynandığı pazar her yıl büyüyor. [ETBİS verilerine göre](https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/)
+toplam e-ticaret hacmi 2023'te 1,85 trilyon TL'den 2025'te 4,57 trilyon TL'ye çıktı. E-ticaret yapan
+işletme sayısı 634 bine ulaştı; yani Kasım'da rakip sayısı da artıyor.
+
+<TrendChart
+  title="Türkiye'de toplam e-ticaret hacmi"
+  caption="Trilyon TL, cari fiyatlarla (enflasyondan arındırılmamış). Kaynak: Ticaret Bakanlığı, ETBİS."
+  max={8}
+  labels={["2023", "2024", "2025"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "Toplam e-ticaret hacmi", points: [1.85, 3, 4.57] },
+  ]}
+/>
+
+Talep tarafı da genişliyor. TÜİK'in [Hanehalkı Bilişim Teknolojileri Kullanım Araştırması 2026](https://www.cnbce.com/haberler/turkiyede-internetten-alisveriste-rekor-her-10-kisiden-6si-online-siparis-veriyor-h34434)
+sonuçlarına göre internetten mal veya hizmet sipariş edenlerin oranı 2025'te %55,7'den 2026'da %60'a
+çıktı; internet kullanımı %92,3'e ulaştı. Kasım'da sitenize gelen ziyaretçinin önemli bir kısmı başka
+sitelerde hızlı ödeme ve hızlı teslimat deneyimi yaşamış biri; beklenti çıtası bu deneyimle belirleniyor.
+
+## Altyapı: trafik tepesini kaldırabilecek mi
+
+Kampanya trafiği ortalamaya göre değil, tepeye göre planlanır. Ölçeği göstermek için global bir örnek:
+[Shopify, Black Friday 2025'te](https://www.shopify.com/investors/press-releases/shopify-merchants-achieve-record-breaking-146-billion-black)
+mağazalarının toplamda dakikada 5,1 milyon dolarlık satışa ulaştığını açıkladı; tepe, Black Friday
+günü ABD doğu saatiyle 12.01'de görüldü. Yük gün boyunca eşit dağılmıyor, belirli anlarda yığılıyor.
+Sizin sitenizde de en riskli an genellikle kampanya e-postasının veya bildiriminin gittiği ilk saattir.
+
+Kampanyadan önce şunlar test edilmeli:
+
+- **Önbellek ve CDN:** ürün listesi, kategori ve kampanya sayfaları önbellekten sunulmalı; her
+  ziyarette veritabanına gidilmemeli.
+- **Yük testi:** normal günün trafiğinin birkaç katıyla, özellikle sepet ve ödeme adımlarında
+  denenmeli. Ana sayfanın açılması yeterli kanıt değildir.
+- **Üçüncü taraf scriptler:** canlı destek, ısı haritası ve reklam etiketleri gibi ek scriptler
+  zirvede sayfayı yavaşlatır; gereksiz olanlar kampanya öncesi kaldırılmalı.
+- **İzleme ve alarm:** hata oranı, ödeme başarısı ve sayfa süresi için alarm kurulmalı; alarm
+  geldiğinde kimin müdahale edeceği önceden belli olmalı.
+
+<Callout type="warn" title="Kampanyadan iki hafta önce değişiklikleri dondurun">
+  Kampanyadan bir gün önce yayına alınan yeni özellik, test edilmemiş bir hata riskini en yoğun güne
+  taşır. Kod ve altyapı değişikliklerini kampanyadan iki hafta önce dondurun; bu sürede yalnızca
+  hata düzeltmesi yapın.
+</Callout>
+
+## Hız doğrudan ciroya yansır
+
+Hızın etkisi tahmin değil, ölçülmüş bir şey. Google'ın desteklediği, 55 ve Deloitte'un yürüttüğü
+[Milliseconds Make Millions çalışmasında](https://web.dev/case-studies/milliseconds-make-millions)
+37 marka sitesinde 30 milyondan fazla oturum incelendi. Mobil site hızındaki yalnızca 0,1 saniyelik
+iyileşme şu sonuçları verdi:
+
+<BarChart
+  title="Mobil sitede 0,1 saniyelik hızlanmanın etkisi"
+  caption="Yüzde artış. 37 Avrupa ve ABD marka sitesi, 30 milyondan fazla oturum, 2019 sonu. Kaynak: Google, 55 ve Deloitte."
+  unit="%"
+  max={25}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Perakende: dönüşüm oranı", value: 8.4, highlight: true },
+    { label: "Perakende: ortalama sepet tutarı", value: 9.2, highlight: true },
+    { label: "Seyahat: dönüşüm oranı", value: 10.1 },
+    { label: "Form sayfasına ulaşan kullanıcı (lead)", value: 21.6 },
+  ]}
+/>
+
+Kampanya döneminde bu etki büyür, çünkü aynı yavaşlık en çok ziyaretçinin geldiği günlere denk gelir.
+Görsel boyutları, yazı tipleri ve ağır scriptler için yapılacaklar [hızlı web sitesi rehberimizde](/tr/blog/hizli-web-sitesi-nasil-yapilir)
+ayrıntılı olarak anlatılıyor; kampanya sayfaları da bu kurallardan muaf değil.
+
+## Ödeme: tek kanala güvenmeyin
+
+ETBİS verileri Türkiye'deki ödeme alışkanlığının kendine özgü olduğunu gösteriyor. 2025'te
+e-ticaret ödemelerinin [%62,5'i kartla, %29,2'si havale ve EFT ile](https://www.alomaliye.com/2026/05/12/turkiyede-e-ticaretin-gorunumu-raporu-2025-yayimlandi/)
+yapıldı; kapıda ödemenin payı %3,5. Kartla ödemelerin %64,1'inde 3D Secure kullanıldı. Havale ve
+EFT'nin payı bir yılda arttı.
+
+<BarChart
+  title="E-ticarette ödeme yöntemlerinin payı"
+  caption="Toplam e-ticaret, yüzde. 2025 için diğer yöntemlerin payı %4,8. Kaynak: Ticaret Bakanlığı, ETBİS."
+  unit="%"
+  max={70}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Kart, 2024", value: 66 },
+    { label: "Kart, 2025", value: 62.5, highlight: true },
+    { label: "Havale / EFT, 2024", value: 26 },
+    { label: "Havale / EFT, 2025", value: 29.2, highlight: true },
+    { label: "Kapıda ödeme, 2025", value: 3.5 },
+  ]}
+/>
+
+Bundan çıkan pratik sonuçlar:
+
+- **Yedek ödeme kanalı:** kart altyapısında sorun çıkarsa siparişi kaybetmemek için havale ve EFT
+  ya da ikinci bir sanal POS hazır olmalı.
+- **Cüzdan ve hızlı ödeme:** iyzico'nun Kasım verisinde dijital cüzdanla yapılan ödemeler
+  [tüm işlemlerin %30'una ulaştı](https://mediacat.com/black-friday-ne-getirdi-ne-goturdu/);
+  kayıtlı kart ve cüzdan seçenekleri ödeme adımını kısaltır.
+- **Taksit gösterimi:** taksit seçenekleri ürün sayfasında net olmalı; ödeme adımında ilk kez
+  karşılaşılan bir fark sepeti terk ettirir.
+
+## Fiyat ve indirim: 30 gün kuralı
+
+Kampanyanın hukuki tarafı en sık atlanan kısım. Ticaret Bakanlığı'nın uyarısına göre
+[indirim oranı, indirimin başladığı tarihten önceki 30 gün içinde uygulanan en düşük fiyat esas alınarak](https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi)
+belirlenmeli ve önceki fiyat reklamda gösterilmeli. Kampanyanın başlangıç ve bitiş tarihi, kapsadığı
+ürün miktarı ve varsa stok sınırı açık ve anlaşılır biçimde yazılmalı; indirimli ürünler ve oranlar
+hakkında yanıltıcı ifade veya görsel kullanılmamalı.
+
+Denetim gerçek: Reklam Kurulu 2025'in ilk yarısında [12.499 dosya inceledi, 753 dosyada aykırılık buldu ve toplam 141 milyon TL ceza verdi](https://www.diken.com.tr/?p=1606389).
+
+<Callout type="key" title="Fiyat geçmişini sistemde tutun">
+  30 gün kuralına uymanın en güvenilir yolu, her ürünün fiyat geçmişini sistemde saklamak ve
+  kampanya etiketindeki "önceki fiyatı" bu kayıttan otomatik hesaplamaktır. Elle girilen eski fiyat
+  hem hata hem de denetimde savunulması zor bir kayıt bırakır.
+</Callout>
+
+## Kargo ve teslimat sözü
+
+ETBİS verilerine göre ortalama kargo teslim süresi [2023'te 46,2 saatten 2025'te 42,2 saate](https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/turkiyenin-e-ticaret-haritasi-guncellendi-e-ticarette-ikinci-el-ruzgari_ID100701633/)
+indi. Müşteri bu hıza alışıyor; ama Kasım'da kargo firmaları da yoğunluk yaşıyor. Ürün sayfasında
+yazılan teslim süresi kampanya dönemine göre güncellenmeli, stok ve depo kapasitesi sipariş tahminine
+göre ayarlanmalı. Pazaryerinde ve kendi sitenizde aynı ürünü satıyorsanız stok senkronizasyonu,
+aynı ürünün iki kanalda birden satılıp bir siparişin iptal edilmesini önler.
+
+## Hazırlık takvimi
+
+<BlogFigure name="november-sales-readiness" alt="Üç aşamalı zaman çizelgesi: solda hazırlık aşamasında yük testi göstergesi ve onay işaretleri; ortada kampanya zirvesinde yükselen trafik çubukları ve sürekli izlenen nabız çizgisi; sağda kampanya sonrası analiz için rapor ve çubuk grafik. Aşamalar soldan sağa bir ışık çizgisiyle bağlı." caption="Hazırlık, zirve ve analiz: değişiklikler zirveden önce donar, zirvede yalnızca izleme ve müdahale yapılır, sonuçlar kampanya bitince değerlendirilir." />
+
+| Zaman | Yapılacaklar |
+|---|---|
+| 5 hafta kala | Geçen yılın verisini inceleyin, kampanya kapsamını ve stok tahminini belirleyin |
+| 4 hafta kala | Hız iyileştirmeleri, önbellek ve CDN ayarları, gereksiz scriptlerin kaldırılması |
+| 3 hafta kala | Kampanya sayfaları, fiyat geçmişine dayalı indirim etiketleri, ödeme yedeği |
+| 2 hafta kala | Kod dondurma; yük testi, ödeme ve iade provası, izleme alarmları |
+| Kampanya haftası | Yalnızca izleme ve hata düzeltme; destek ve kargo ekibiyle günlük kontrol |
+| Kampanya sonrası | Satış, dönüşüm, iade ve hata kayıtlarının analizi; gelecek yıl için not |
+
+## Yaygın hatalar
+
+- **Kampanya sayfasını son gün açmak.** Arama motorlarının ve reklam onaylarının zamana ihtiyacı
+  var; kalıcı bir kampanya adresi her yıl yeniden kullanılabilir.
+- **Yalnızca ana sayfayı test etmek.** Sistemi asıl zorlayan sepet, stok kontrolü ve ödeme adımıdır.
+- **Tek ödeme sağlayıcısına bağlı kalmak.** Zirvede yaşanan bir kesinti, yedeği olmayan sitede
+  doğrudan satış kaybıdır.
+- **İndirim oranını elle hesaplamak.** 30 gün kuralına aykırılık hem ceza hem de güven kaybı riski
+  taşır.
+- **Ölçümsüz kampanya.** Hangi kanalın satış getirdiğini bilmeden yapılan harcama, gelecek yılın
+  bütçesini tahmine bırakır.
+
+## Sonuç
+
+Kasım, e-ticaret sitesi için bir sınav dönemi. Veriler yükün her yıl büyüdüğünü gösteriyor: kampanya
+hacmi %41,5 arttı, online alışveriş yapanların oranı %60'a ulaştı. Bu sınavı geçmek için gereken
+işlerin çoğu teknik ama basit: hızı iyileştirmek, ödemede yedek kurmak, fiyat geçmişini kayıt altına
+almak ve değişiklikleri zamanında dondurmak. Fark yaratan şey, bunların zirveden önce bitmiş olması.
+
+Sitenizi bu takvime göre hazırlamak için destek isterseniz [e-ticaret](/tr/hizmetler/e-ticaret),
+[bakım ve destek](/tr/hizmetler/bakim-ve-destek) ve [bulut altyapı](/tr/hizmetler/bulut-altyapi)
+hizmet sayfalarımıza bakabilir, kampanya sonrası için [e-ticaret dönüşüm oranı yazımızı](/tr/blog/e-ticaret-donusum-orani-optimizasyonu)
+okuyabilir ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).
