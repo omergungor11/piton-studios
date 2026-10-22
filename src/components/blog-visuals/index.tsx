@@ -27,6 +27,7 @@ export const BLOG_ART: Record<BlogArtKey, ComponentType<ArtProps>> = {
   'google-ai-search-controls': dynamic(() => import('./art/google-ai-search-controls')),
   'multilingual-site': dynamic(() => import('./art/multilingual-site')),
   'nextjs-vs-wordpress': dynamic(() => import('./art/nextjs-vs-wordpress')),
+  'november-sales-readiness': dynamic(() => import('./art/november-sales-readiness')),
   'project-process': dynamic(() => import('./art/project-process')),
   'pwa-vs-native-app': dynamic(() => import('./art/pwa-vs-native-app')),
   'seo-to-geo': dynamic(() => import('./art/seo-to-geo')),
@@ -53,6 +54,7 @@ export const BLOG_FIGURES: Record<string, ComponentType<ArtProps>> = {
   'google-ai-search-controls': dynamic(() => import('./art/google-ai-search-controls-figure')),
   'multilingual-site': dynamic(() => import('./art/multilingual-site-figure')),
   'nextjs-vs-wordpress': dynamic(() => import('./art/nextjs-vs-wordpress-figure')),
+  'november-sales-readiness': dynamic(() => import('./art/november-sales-readiness-figure')),
   'website-redesign-seo-migration': dynamic(() => import('./art/website-redesign-seo-migration-figure')),
   'whatsapp-business-api': dynamic(() => import('./art/whatsapp-business-api-figure')),
 };

@@ -21,6 +21,7 @@ export const BLOG_ART_KEYS = [
   'google-ai-search-controls',
   'multilingual-site',
   'nextjs-vs-wordpress',
+  'november-sales-readiness',
   'project-process',
   'pwa-vs-native-app',
   'seo-to-geo',
