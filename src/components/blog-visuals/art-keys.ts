@@ -31,6 +31,7 @@ export const BLOG_ART_KEYS = [
   'website-maintenance',
   'website-redesign-seo-migration',
   'whatsapp-business-api',
+  'whatsapp-service-message-pricing',
 ] as const;
 
 export type BlogArtKey = (typeof BLOG_ART_KEYS)[number];

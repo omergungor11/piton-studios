@@ -37,6 +37,7 @@ export const BLOG_ART: Record<BlogArtKey, ComponentType<ArtProps>> = {
   'website-maintenance': dynamic(() => import('./art/website-maintenance')),
   'website-redesign-seo-migration': dynamic(() => import('./art/website-redesign-seo-migration')),
   'whatsapp-business-api': dynamic(() => import('./art/whatsapp-business-api')),
+  'whatsapp-service-message-pricing': dynamic(() => import('./art/whatsapp-service-message-pricing')),
 };
 
 /**
@@ -57,4 +58,5 @@ export const BLOG_FIGURES: Record<string, ComponentType<ArtProps>> = {
   'november-sales-readiness': dynamic(() => import('./art/november-sales-readiness-figure')),
   'website-redesign-seo-migration': dynamic(() => import('./art/website-redesign-seo-migration-figure')),
   'whatsapp-business-api': dynamic(() => import('./art/whatsapp-business-api-figure')),
+  'whatsapp-service-message-pricing': dynamic(() => import('./art/whatsapp-service-message-pricing-figure')),
 };
