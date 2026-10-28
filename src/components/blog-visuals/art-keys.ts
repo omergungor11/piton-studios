@@ -27,6 +27,7 @@ export const BLOG_ART_KEYS = [
   'seo-to-geo',
   'shopify-vs-custom-ecommerce',
   'site-builder-vs-professional-website',
+  'turkiye-ai-action-plan',
   'website-cost',
   'website-maintenance',
   'website-redesign-seo-migration',
