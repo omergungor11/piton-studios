@@ -17,6 +17,7 @@ export const BLOG_ART_KEYS = [
   'erp-vs-excel',
   'eu-ai-act-transparency',
   'fast-website',
+  'google-ads-ai-max-migration',
   'google-ads-vs-seo',
   'google-ai-search-controls',
   'multilingual-site',

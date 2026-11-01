@@ -1,0 +1,214 @@
+---
+title: "Google Ads is moving to AI Max: what changed in your Search campaigns?"
+description: "Search campaigns using broad match and automated assets moved to AI Max, with DSA next. What changed, what the data says and what SMBs should check."
+date: 2026-11-01
+tags: ["google ads", "digital marketing", "ai"]
+author: "Piton"
+draft: false
+translationKey: google-ads-ai-max-migration
+sources:
+  - title: "Google — Unlock next-level performance with AI Max for Search campaigns"
+    url: "https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/"
+  - title: "Search Engine Roundtable — Google Ads to migrate ACA and campaign-level broad match to AI Max on September 1"
+    url: "https://seroundtable.com/google-ads-migrate-ai-max-sep1-41829.html"
+  - title: "PPC Land — Google delays DSA to AI Max automigration to February 2027"
+    url: "https://ppc.land/google-delays-dsa-to-ai-max-automigration-to-february-2027/"
+  - title: "PPC Land — Google's AI Max for Search campaigns deliver meh results, industry tests reveal"
+    url: "https://ppc.land/googles-ai-max-for-search-campaigns-deliver-meh-results-industry-tests-reveal/"
+  - title: "PPC Land — Google Ads forces some CPAs to double starting August 17"
+    url: "https://ppc.land/google-ads-forces-some-cpas-to-double-starting-august-17/"
+  - title: "Relevant Audience — Google Ads deprecations: 2026 to 2027 timeline"
+    url: "https://www.relevantaudience.com/google-ads-en/google-ads-deprecations-2026-2027-timeline/"
+faq:
+  - q: "What is AI Max for Search?"
+    a: "A feature set Google added to Search campaigns. It combines matching to searches beyond your keywords (search term matching), adapting ad text to your site (text customisation) and sending users to the most relevant page on your site (final URL expansion). It was announced as a beta in May 2025."
+  - q: "Which campaigns were moved to AI Max automatically?"
+    a: "From 1 September 2026, Search campaigns using automatically created assets (ACA) or the campaign-level broad match setting began to be upgraded to AI Max. Automatic migration for Dynamic Search Ads (DSA) was postponed to February 2027, and creating new DSA campaigns will be removed in January 2027."
+  - q: "Does AI Max really improve performance?"
+    a: "Google says advertisers who turn on AI Max typically see 14% more conversions at a similar CPA or ROAS, and 27% for campaigns that mostly use exact and phrase match. Independent tests show more mixed results. It is not sound to draw a general conclusion without measuring it in your own account through the search terms report."
+  - q: "Can I turn AI Max off?"
+    a: "The sources we reviewed do not describe a separate opt-out for the automatic migration. AI Max does include controls such as brand exclusions, URL exclusions and locations of interest. Checking campaign settings and search terms regularly after the migration is the most practical way to stay in control."
+  - q: "What should a small business do now?"
+    a: "First check which campaigns were migrated, then review the search terms report weekly and add irrelevant terms as negative keywords. Making sure conversion tracking works correctly is essential too, since the AI learns what to optimise for from that data."
+---
+
+For a long time, running a Google Ads Search campaign meant choosing keywords, writing ad copy and picking
+the landing page. In 2026, part of all three moved to AI: from 1 September, Search campaigns using broad
+match or automatically created assets began moving to AI Max for Search automatically, and Dynamic Search
+Ads will follow in February 2027. This post explains what AI Max does, which campaigns are affected, what
+Google's claims and independent tests say, and what a small advertiser should check to stay in control.
+If you want the basic difference between Google Ads and SEO, see the [short answer on our FAQ page](/en/faq#faq-google-ads-vs-seo).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "From 1 September 2026, Search campaigns using automated assets (ACA) or campaign-level broad match began to be upgraded to AI Max.",
+    "Automatic migration for Dynamic Search Ads comes in February 2027; creating new DSA campaigns ends in January 2027.",
+    "Google says AI Max brings 14% more conversions at similar cost; independent tests paint a more cautious picture.",
+    "You still have controls: brand and URL exclusions, negative keywords and the search terms report.",
+    "Checking search terms and conversion tracking in the first weeks after the migration keeps budget from going to irrelevant searches.",
+  ]}
+/>
+
+## What is AI Max for Search?
+
+Google [announced AI Max in May 2025](https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/)
+and opened it to all advertisers as a beta. It is not a new campaign type but a feature set added to
+existing Search campaigns. It has three main parts:
+
+| Feature | What it does | Older equivalent |
+|---|---|---|
+| Search term matching | Expands your existing keywords with broad match and keywordless technology | Broad match, DSA targeting |
+| Text customisation | Adapts ad headlines and descriptions to your site and the search | Automatically created assets (ACA) |
+| Final URL expansion | Sends the user to the page on your site that best fits the search | DSA page selection |
+
+In the same announcement Google added controls: brand controls at campaign and ad group level, locations
+of interest at ad group level exclusively in AI Max campaigns, URL controls, and visibility in the search
+terms report of which headline and which page were shown.
+
+## What changed, and when?
+
+AI Max was optional in its first year. In 2026 Google began switching off older settings and migrating
+campaigns automatically. [According to the advertiser email reported by Search Engine Roundtable](https://seroundtable.com/google-ads-migrate-ai-max-sep1-41829.html),
+campaigns using automatically created assets get search term matching and text customisation turned on
+by default, while campaigns using campaign-level broad match get search term matching. Google says
+settings are configured to "closely mirror your legacy setup".
+
+| Date | Change | Source |
+|---|---|---|
+| 15 June 2026 | DSA campaign creation temporarily restored | PPC Land |
+| 17 August 2026 | Budget-limited target CPA/ROAS campaigns start delivering closer to target | PPC Land |
+| 1 September 2026 | Campaigns using ACA and campaign-level broad match begin upgrading to AI Max | Search Engine Roundtable |
+| Late September 2026 | Campaign-level language targeting removed from Search and AI Max campaigns | Relevant Audience |
+| January 2027 | Creating new DSA campaigns removed | PPC Land |
+| February 2027 | Remaining DSA campaigns move to Performance Max or AI-powered Search; call-only ads stop serving | PPC Land, Relevant Audience |
+
+[According to PPC Land](https://ppc.land/google-delays-dsa-to-ai-max-automigration-to-february-2027/),
+the DSA migration was first planned for September 2026, and Google postponed it to February 2027. Migrated
+DSA campaigns come with search term matching, text customisation and final URL expansion on by default.
+
+<Callout type="warn" title="Check bilingual accounts separately">
+  [According to the timeline compiled by Relevant Audience](https://www.relevantaudience.com/google-ads-en/google-ads-deprecations-2026-2027-timeline/),
+  campaign-level language targeting was removed from Search and AI Max campaigns at the end of September
+  2026. Businesses that separate Turkish and English ads by language in separate campaigns in the same
+  account should check in the search terms report whether ads reach the right audience.
+</Callout>
+
+## What does Google promise?
+
+According to Google's announcement, advertisers who turn on AI Max typically see **14% more conversions or
+conversion value** at a similar CPA or ROAS. For campaigns that mostly use exact and phrase match, the
+figure rises to 27%; Google bases this on internal data from non-retail campaigns with more than 70% of
+conversions from exact or phrase match. PPC Land reports that Google revised the figure to "an average of
+7% more conversions" with the Shopping expansion in May 2026.
+
+<StatGrid
+  items={[
+    { value: "14%", label: "Average extra conversions Google reported in 2025, at similar cost", note: "GOOGLE" },
+    { value: "7%", label: "Average extra conversions as revised in May 2026", note: "PPC LAND" },
+    { value: "99%", label: "Share of AI Max impressions with no conversions in one agency test", note: "PPC LAND" },
+  ]}
+/>
+
+<BarChart
+  title="Average extra conversions Google reports for AI Max"
+  caption="Extra conversions or conversion value at similar CPA/ROAS, percent. Source: Google (2025), PPC Land (2026 revision)."
+  unit="%"
+  max={30}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "All campaigns (2025)", value: 14 },
+    { label: "Mostly exact/phrase match (2025)", value: 27, highlight: true },
+    { label: "Average, revised (May 2026)", value: 7 },
+  ]}
+/>
+
+These are Google's own averages. An average does not mean your account will get the same result; in
+campaigns tightly managed with exact and phrase match especially, more traffic can also mean more
+irrelevant traffic.
+
+## What do independent tests say?
+
+Early industry data is more cautious. [In a test shared by Ezra Sackett of Monks](https://ppc.land/googles-ai-max-for-search-campaigns-deliver-meh-results-industry-tests-reveal/),
+around 30,000 search terms matched by AI Max features were reviewed across multiple client accounts: 99%
+of impressions produced no conversions, 31% of search terms exceeded 25 characters, and fewer than half of
+the terms appeared to be matched to a keyword.
+
+PPC Land also reports that independent tests across more than 250 retail campaigns found roughly 35% lower
+ROAS for AI Max than for traditional match types, and that in one advertiser's four-month comparison the
+cost per conversion was $100.37 with AI Max and $43.97 with phrase match.
+
+<BarChart
+  title="Cost per conversion in a single account"
+  caption="Four-month period, US dollars. Data from a single advertiser, not generalisable. Source: PPC Land (data from Xavier Mantica)."
+  unit=" $"
+  max={120}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "AI Max", value: 100.37, highlight: true },
+    { label: "Phrase match", value: 43.97 },
+  ]}
+/>
+
+These tests are not a verdict either: samples are small, sectors differ and results depend heavily on how
+the campaign is set up. The shared message is that AI Max is not a self-running solution. Broader matching
+can bring new customers, but if it is not monitored, part of the budget goes to irrelevant searches.
+
+## How does AI Max work?
+
+<BlogFigure name="google-ads-ai-max-migration" alt="On the left, a classic Search campaign: a few keyword chips, a single ad text and a single landing page. In the middle, a clock and an arrow pointing right. On the right, AI Max: search queries multiplying from one keyword, a stack of changing headline rows and four different landing pages. At the bottom, a dashed control area with a shield and cross marks." caption="Before and after: AI Max expands a keyword to new searches, adapts the ad text and chooses the landing page itself. Controls such as brand and URL exclusions stay with the advertiser." />
+
+In a classic Search campaign the advertiser makes three decisions: which searches to appear on, what to say
+and where to send the user. AI Max adds AI to each of these. Search term matching shows your ad on searches
+it sees as close in meaning to your keyword. Text customisation generates new headlines from your site's
+content and the search. Final URL expansion can send the user to a page on your site other than the one you
+chose.
+
+That means your site's content is now raw material for your ads. Old prices, discontinued products or
+outdated campaign pages can end up in ad copy and as landing pages. The link between site maintenance and
+ad performance has never been this direct.
+
+## What to check after the migration
+
+| Check | Why | How often |
+|---|---|---|
+| Which campaigns were migrated? | Those using ACA and broad match were upgraded automatically | Once, now |
+| Search terms report | To add irrelevant searches as negative keywords | Weekly |
+| Brand and URL exclusions | To avoid showing on competitor brands or pages you don't want | Once, then quarterly |
+| Ad copy | To confirm generated headlines are accurate and on brand | Weekly |
+| Landing pages | To make sure pages chosen by final URL expansion are up to date | Monthly |
+| Conversion tracking | The AI learns what to optimise for from this data | Once, then monthly |
+| Target CPA/ROAS | Budget-limited campaigns now deliver closer to target | Once, now |
+
+<Callout type="tip" title="Bad conversion data means the AI learns badly">
+  AI Max and smart bidding learn what a "good" result is from your conversion data. If actions that bring
+  real business, such as form submissions, calls and WhatsApp clicks, are not measured correctly, the
+  system optimises toward the wrong goal. The first step of the migration should be validating
+  measurement, not changing ad settings.
+</Callout>
+
+## Common mistakes
+
+- **Not noticing the migration.** An upgraded campaign keeps running under the same name; the change only
+  shows when you look at the search terms.
+- **Never looking at the search terms report.** The cost of broader matching is irrelevant searches, and
+  they only show up in this report.
+- **Leaving the target CPA as it was.** Budget-limited campaigns now deliver closer to the target you set;
+  in a campaign that has long run below target, costs can rise.
+- **Not keeping the site up to date.** Text customisation and final URL expansion use your site's content;
+  an old page can become part of the ad.
+- **Still relying on call-only ads.** Call-only ads stop serving in February 2027; businesses that win
+  customers by phone should move to call assets now.
+
+## Conclusion
+
+AI Max changes how Search campaigns are run in Google Ads: part of the keyword, ad copy and landing page
+decisions now sits with AI. Google's averages are positive and independent tests are more cautious, but
+both point the same way: what decides the result is how well the campaign is set up and how regularly it
+is reviewed. Without accurate conversion tracking, an up-to-date site and weekly search term checks, the
+AI spends the budget as it sees fit.
+
+If you want to review together how the migration affected your campaigns, take a look at our
+[Google Ads](/en/services/google-ads), [SEO and GEO](/en/services/seo-geo) and
+[maintenance and support](/en/services/maintenance-support) services, read our
+[Google Ads vs SEO post](/en/blog/google-ads-vs-seo), or [get in touch](/en/contact) directly.
