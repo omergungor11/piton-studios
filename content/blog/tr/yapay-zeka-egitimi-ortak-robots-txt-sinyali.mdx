@@ -1,0 +1,222 @@
+---
+title: "Yapay zekâ eğitimine tek satırla hayır: Google, OpenAI ve Microsoft'un ortak sinyali"
+description: "Google, OpenAI, Anthropic ve Microsoft yapay zekâ eğitimi için ortak bir robots.txt sinyali destekleyecek. Ne değişiyor, Arama etkileniyor mu, ne yapmalı?"
+date: 2026-11-04
+tags: ["seo", "geo", "yapay zeka"]
+author: "Piton"
+draft: false
+translationKey: shared-ai-training-control
+sources:
+  - title: "Search Engine Roundtable — Google adopts new AI training control"
+    url: "https://www.seroundtable.com/google-ai-training-control-42430.html"
+  - title: "IETF — Machine-Readable Training Preference Signal (draft-kelley-aipref-training-preference-signal-00)"
+    url: "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/"
+  - title: "Microsoft Bing Blog — Your content, your choice: clearer preferences for training and grounding"
+    url: "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/"
+  - title: "Engadget — Google, OpenAI, Anthropic and Microsoft commit to a new AI crawling control"
+    url: "https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/"
+  - title: "iTech Post — Google, OpenAI and Anthropic unite to introduce new AI scraping controls"
+    url: "https://www.itechpost.com/articles/237707/20261103/google-openai-anthropic-unite-introduce-new-ai-scraping-controls.htm"
+  - title: "Cloudflare — The crawl-to-click gap: Cloudflare data on AI bots, training, and referrals"
+    url: "https://blog.cloudflare.com/crawlers-click-ai-bots-training/"
+  - title: "Longpre ve ark. — Consent in Crisis: The Rapid Decline of the AI Data Commons"
+    url: "https://arxiv.org/abs/2407.14933"
+faq:
+  - q: "Yapay zekâ eğitimi için ortak sinyal nedir?"
+    a: "robots.txt dosyasına eklenen tek bir kullanıcı-aracısı grubuyla, sitenizin içeriğinin yapay zekâ modellerinin eğitiminde kullanılmasını istemediğinizi birden fazla sağlayıcıya aynı anda bildirmenizi sağlayan bir yöntem. Anthropic'ten Kevin Kelley'nin IETF'e sunduğu bir taslağa dayanıyor; Google, OpenAI, Anthropic ve Microsoft desteklemeyi taahhüt etti."
+  - q: "Bu sinyal sitemin Google aramasında görünmesini etkiler mi?"
+    a: "Hayır. Taslak, sinyalin bir tarama talimatı olmadığını açıkça yazıyor; Engadget'in aktarımına göre de içeriğin Google aramasında görünmesini engellemiyor. Google, sinyali eğitim tarafında Google-Extended'ı engellemek gibi yorumlayacak; arama dizinine ekleme ayrı kalıyor."
+  - q: "Ne zaman yürürlüğe giriyor?"
+    a: "Anthropic desteğe başladı, OpenAI önümüzdeki aylarda uygulayacağını söyledi. Google 2027'nin başında, Microsoft 1 Şubat 2027'de desteklemeye başlayacak. Kuralı şimdi eklemek zarar vermez; destekleyen sağlayıcılar okumaya başladıkça devreye girer."
+  - q: "Eğitimi engellersem yapay zekâ yanıtlarında görünmeye devam eder miyim?"
+    a: "Eğitim ve yanıt üretirken kaynak gösterme (grounding) ayrı kullanımlar. Microsoft bunlar için ayrı tercihler sunuyor; Google, Google-Extended'a açıkça izin veren sitelerin Gemini uygulamalarında grounding ile yanıtlarda görünebileceğini belirtiyor. Hangi kullanıma izin verdiğinizi her sağlayıcının belgesinden kontrol etmek gerekir."
+  - q: "Daha önce toplanan içerik ne olacak?"
+    a: "Sinyal geriye dönük çalışmıyor; Engadget'in aktarımına göre geçmişte yapılmış taramayı geri almıyor. Ayrıca bir lisans, ödeme veya telif izni de oluşturmuyor. Yalnızca bundan sonraki eğitim kullanımı için bir tercih bildirimi."
+---
+
+Bir web sitesinin içeriği bugün en az üç farklı iş için okunuyor: arama dizini, yapay zekâ modellerinin
+eğitimi ve yapay zekâ yanıtlarında kaynak olarak gösterilme. Şimdiye kadar eğitimi durdurmak isteyen bir site
+sahibinin her şirketin botunu tek tek tanıması ve robots.txt dosyasına ayrı ayrı yazması gerekiyordu. 30 Ekim
+2026'da Google, Microsoft ve diğer büyük sağlayıcılar bunun yerine tek bir ortak sinyali destekleyeceklerini
+açıkladı. Bu yazıda sinyalin nasıl çalıştığını, neyi kapsayıp neyi kapsamadığını, verilerin yapay zekâ
+taramasının boyutu hakkında ne söylediğini ve siteniz için bir karar nasıl verileceğini anlatıyoruz.
+Yapay zekâ yanıtlarında görünürlüğün ne demek olduğunu [SSS sayfamızda](/tr/sss#faq-llm-visibility) kısaca açıkladık.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "robots.txt'e eklenen tek bir grup, içeriğin yapay zekâ eğitiminde kullanılmasını istemediğinizi birden fazla sağlayıcıya birlikte bildiriyor.",
+    "Google, OpenAI, Anthropic ve Microsoft destek sözü verdi; Google 2027 başında, Microsoft 1 Şubat 2027'de başlıyor.",
+    "Sinyal tarama talimatı değil: arama dizinine eklenmeyi etkilemiyor, geçmiş taramayı da geri almıyor.",
+    "Cloudflare verisine göre yapay zekâ taramasının %80'i eğitim amaçlı; eğitim botlarının siteye geri gönderdiği ziyaret çok az.",
+    "Karar her içerik türü için ayrı verilmeli: eğitim, arama ve yapay zekâ yanıtlarında kaynak gösterilme ayrı ayrı yönetiliyor.",
+  ]}
+/>
+
+## Ne açıklandı?
+
+[Search Engine Roundtable'ın haberine göre](https://www.seroundtable.com/google-ai-training-control-42430.html)
+Google, IETF'in AI Preferences (AIPREF) çalışma grubunda geliştirilen eğitim tercihi önerisini gönüllü olarak
+benimseyeceğini duyurdu. Google'ın ifadesiyle bu yöntem, sitelerin "yapay zekâ eğitimi tercihlerini birden fazla
+sağlayıcıya tek adımda" bildirmesini sağlayacak.
+
+Önerinin teknik metni [IETF'te bireysel bir taslak olarak](https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/)
+yayımlandı. Yazarı Anthropic'ten Kevin Kelley; teşekkür bölümünde Google, OpenAI, Microsoft ve Meta'dan isimler
+yer alıyor. Taslak henüz IETF tarafından kabul edilmiş bir standart değil, ama büyük sağlayıcıların ortak
+taahhüdü onu fiilen uygulanan bir kurala dönüştürüyor.
+
+| Sağlayıcı | Destek durumu | Kaynak |
+|---|---|---|
+| Anthropic | Desteğe başladı | Engadget |
+| OpenAI | Önümüzdeki aylarda | Engadget |
+| Google | 2027 başında | Search Engine Roundtable |
+| Microsoft | 1 Şubat 2027 | Microsoft Bing Blog |
+| Meta | Destek açıkladı, uygulamayı teyit etmedi | iTech Post |
+
+## Sinyal nasıl çalışıyor?
+
+Taslak yeni bir dosya veya yeni bir dil getirmiyor. robots.txt'in bilinen kullanıcı-aracısı grubunu kullanıyor;
+fark, grubun adının bir bot değil bir kullanım amacı olması. [Microsoft'un duyurusundaki](https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/)
+ve taslaktaki örnek şöyle:
+
+```txt
+# Tüm site için yapay zekâ eğitimine hayır, basın kiti hariç
+User-Agent: __usage_ai-training
+Disallow: /
+Allow: /press-kit/
+```
+
+Taslağın önemli birkaç kuralı var. Tüm botlar için yazılmış genel grup (yıldız işaretli satır) bu sinyal
+yerine geçmiyor; tercihinizi bildirmek için grubu açıkça yazmanız gerekiyor. Belirli bir yol için yazılan
+kural, genel kuraldan önce geliyor. Ve en önemlisi taslak, bu belirtecin "bir tarama talimatı olmadığını"
+yazıyor: botların sitenizi taramasını değil, taranan içeriğin eğitimde kullanılmasını ilgilendiriyor.
+
+<StatGrid
+  items={[
+    { value: "%80", label: "Son 12 ayda yapay zekâ taramasının eğitim amaçlı payı", note: "CLOUDFLARE" },
+    { value: "%28+", label: "C4 veri setindeki kritik kaynaklardan bir yılda tamamen kısıtlananlar", note: "CONSENT IN CRISIS" },
+    { value: "1 Şubat 2027", label: "Microsoft'un ortak sinyali okumaya başlayacağı tarih", note: "MICROSOFT" },
+  ]}
+/>
+
+## Arama etkileniyor mu?
+
+Hayır, ve bu ayrım kararın merkezinde. [Engadget'in aktarımına göre](https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/)
+yeni grup taramayı tamamen durdurmuyor ve içeriğin Google aramasında görünmesini engellemiyor. Google,
+sinyali eğitim tarafında Gemini modelleri için içerik toplayan Google-Extended'ı engellemek gibi yorumlayacak.
+Google'dan John Mueller'in Search Engine Roundtable'a aktarılan açıklamasına göre bu yorum, Google-Extended
+için ayrıca bir kural yazılmamışsa geçerli; şirkete özel mevcut kontroller de çalışmaya devam ediyor.
+
+<BlogFigure name="shared-ai-training-control" alt="Solda bir site ve vurgulu satırı olan robots.txt belgesi. Belgeden sağdaki üç şeride ışık çizgileri gidiyor. Üstte arama sonucu ve onay işareti, ortada bir yapay zekâ modeli küpü ve çarpı işareti, altta bir sohbet balonu ve kesik çizgili, ayrı yönetilen bir işaret." caption="Aynı içerik, üç ayrı kullanım: ortak eğitim sinyali yalnızca model eğitimini durdurur. Arama dizini etkilenmez, yapay zekâ yanıtlarında kaynak gösterilme her sağlayıcının kendi kontrolüyle yönetilir." />
+
+Üç kullanımın kontrolleri şu anda şöyle dağılıyor:
+
+| Kullanım | Ortak eğitim sinyali etkiler mi? | Ayrı kontrol |
+|---|---|---|
+| Arama dizini ve sonuçları | Hayır | noindex, robots.txt'te arama botu kuralları |
+| Yapay zekâ modeli eğitimi | Evet | Şirkete özel botlar (Google-Extended, GPTBot, ClaudeBot) de çalışmaya devam ediyor |
+| Yapay zekâ yanıtlarında kaynak gösterilme | Doğrudan değil | Google'da Search Console'daki üretken yapay zekâ kontrolü, Bing'de sayfa düzeyinde grounding tercihi |
+
+Google'ın arama sonuçlarındaki AI Bakışı ve AI Modu için sunduğu ayrı kontrolü
+[Google'ın yeni yapay zekâ kontrolü yazımızda](/tr/blog/google-yapay-zeka-kontrolu-ai-bakisi-ai-modu) anlattık.
+
+<Callout type="warn" title="Geçmiş taramayı geri almıyor, lisans da değil">
+  Sinyal yalnızca bundan sonraki kullanım için bir tercih bildirimi. Engadget'in aktarımına göre geçmişte
+  toplanmış içeriği geri almıyor; iTech Post'a göre de bir lisans, ödeme veya telif izni oluşturmuyor.
+  İçeriğinizin ticari kullanımı için sözleşme istiyorsanız bu ayrı bir konu.
+</Callout>
+
+## Microsoft daha ayrıntılı bir ayrım yapıyor
+
+Microsoft'un duyurusu, eğitim ile yanıt üretirken kaynak gösterme (grounding) için ayrı sayfa düzeyinde
+tercihler getiriyor. Grounding için üç seçenek var: varsayılan izin, yalnızca Microsoft'un kendi ürünlerinde
+kullanıma izin ve tamamen engelleme. Microsoft bu yeni tercihlerin eski NoArchive ve NoCache etiketlerinin
+yerini alacağını, 1 Mart 2027'den sonra bu etiketlerin eğitim veya grounding tercihi olarak okunmayacağını
+belirtiyor. Bu etiketleri bugün kullanan siteler için 15 Aralık 2026'da Bing Webmaster Tools'ta geçici bir
+geçiş ayarı açılıyor.
+
+## Veriler ne söylüyor?
+
+Kararı anlamlı kılan, yapay zekâ taramasının boyutu ve geri dönüşü. [Cloudflare'in ağ verisine göre](https://blog.cloudflare.com/crawlers-click-ai-bots-training/)
+son 12 ayda yapay zekâ taramasının %80'i eğitim, %18'i arama ve yalnızca %2'si kullanıcı eylemleri içindi.
+Eğitimin payı Temmuz 2024'te %72 iken Temmuz 2025'te %79'a çıktı.
+
+<BarChart
+  title="Yapay zekâ taramasının amaca göre dağılımı"
+  caption="Son 12 ay, yüzde. Kaynak: Cloudflare (Ağustos 2025)."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Eğitim", value: 80, highlight: true },
+    { label: "Arama", value: 18 },
+    { label: "Kullanıcı eylemleri", value: 2 },
+  ]}
+/>
+
+Aynı rapor, botların taradığı sayfa sayısını siteye gönderdikleri ziyaretlerle karşılaştırıyor. Temmuz 2025'te
+OpenAI her yönlendirdiği ziyaret başına 1.091, Perplexity 195, Microsoft 40,7 sayfa taradı. Anthropic'te bu oran
+38.000'di; ölçeği diğerlerini okunmaz kılacağı için grafiğe almadık.
+
+<BarChart
+  title="Yönlendirilen her ziyaret başına taranan sayfa"
+  caption="Temmuz 2025. Anthropic'in oranı (38.000) ölçek nedeniyle grafiğe dahil edilmedi. Kaynak: Cloudflare."
+  max={1200}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "OpenAI", value: 1091, highlight: true },
+    { label: "Perplexity", value: 195 },
+    { label: "Microsoft", value: 40.7 },
+  ]}
+/>
+
+Site sahipleri buna zaten tepki veriyor. [Consent in Crisis araştırmasına göre](https://arxiv.org/abs/2407.14933)
+2023-2024 arasındaki tek bir yılda, yaygın kullanılan C4 eğitim veri setindeki en aktif ve kritik kaynakların
+%28'inden fazlası robots.txt ile yapay zekâ kullanımına tamamen kapatıldı. Ortak sinyal, bu kararı her şirketin
+botunu ayrı ayrı izlemek zorunda kalmadan vermeyi kolaylaştırıyor.
+
+## Siteniz için karar rehberi
+
+| Durum | Eğitim | Arama | Yapay zekâ yanıtlarında kaynak |
+|---|---|---|---|
+| Kurumsal tanıtım sitesi, hizmet sayfaları | Açık bırakmak genelde mantıklı | Açık | Açık |
+| Blog, rehber, özgün içerik üreten site | Bilinçli karar verin | Açık | Açık |
+| Ücretli içerik, rapor, kurs | Kapatmayı düşünün | Kısmen | Duruma göre |
+| Ürün katalogu ve e-ticaret | Genelde açık | Açık | Açık |
+| Basın kiti, logo, resmî açıklamalar | Açık | Açık | Açık |
+
+Tanıtım ve satış amaçlı içerik için görünürlük çoğu zaman engellemekten daha değerli: yapay zekâ
+modellerinin markanızı ve hizmetlerinizi doğru tanıması, onların yanıtlarında yer almanın bir parçası.
+Özgün araştırma, ücretli içerik veya emeği yoğun rehberler için ise eğitimi kapatmak meşru bir tercih.
+
+<Callout type="tip" title="Önce envanter, sonra kural">
+  robots.txt'e kural eklemeden önce sitenizde hangi içerik türlerinin olduğunu ve hangi yolların altında
+  durduğunu çıkarın. Ortak sinyal yol bazında çalıştığı için, örneğin blogu kapatıp basın kitini açık bırakmak
+  ancak içerik düzgün klasörlere ayrılmışsa mümkün olur.
+</Callout>
+
+## Yaygın hatalar
+
+- **Eğitimi kapatırken aramayı da kapatmak.** Arama botunu engelleyen bir kural, sitenizi arama sonuçlarından
+  çıkarabilir. Ortak sinyal ayrı bir gruptur; arama botu kurallarınıza dokunmayın.
+- **Genel kuralın yeterli olduğunu sanmak.** Taslağa göre tüm botlar için yazılan genel grup bu sinyalin yerine
+  geçmiyor; grubu açıkça yazmak gerekiyor.
+- **Şirkete özel kuralları gözden geçirmemek.** Google-Extended, GPTBot veya ClaudeBot için yazdığınız kurallar
+  çalışmaya devam ediyor. Google, Google-Extended için ayrı bir kural yazdıysanız ortak sinyali onun yerine
+  koymuyor; iki kural birbiriyle çelişmesin.
+- **Desteğin hemen başladığını varsaymak.** Google ve Microsoft 2027'de başlıyor; o zamana kadar mevcut kontroller
+  geçerli.
+- **Kararı bir kez verip unutmak.** Yeni sağlayıcılar ve yeni kontroller geldikçe robots.txt dosyasının yılda en
+  az bir kez gözden geçirilmesi gerekir.
+
+## Sonuç
+
+Ortak eğitim sinyali, site sahiplerinin yıllardır istediği bir şeyi getiriyor: yapay zekâ eğitimine tek bir
+yerden, tek bir kuralla karar verebilmek. Ama sinyal yalnızca eğitimi ilgilendiriyor; arama ve yapay zekâ
+yanıtlarında kaynak gösterilme ayrı yönetilmeye devam ediyor. Doğru karar, içerik türüne göre değişiyor ve
+teknik kısmı tek satır olsa da sonuçları görünürlüğünüzü doğrudan etkiliyor.
+
+Sitenizin robots.txt dosyasını ve yapay zekâ görünürlüğünü birlikte gözden geçirmek isterseniz
+[SEO ve GEO](/tr/hizmetler/seo-geo) ve [bakım ve destek](/tr/hizmetler/bakim-ve-destek) hizmet sayfalarımıza
+bakabilir, [yapay zekâ çağında arama görünürlüğü yazımızı](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo)
+okuyabilir ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

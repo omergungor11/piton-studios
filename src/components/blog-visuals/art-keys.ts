@@ -26,6 +26,7 @@ export const BLOG_ART_KEYS = [
   'project-process',
   'pwa-vs-native-app',
   'seo-to-geo',
+  'shared-ai-training-control',
   'shopify-vs-custom-ecommerce',
   'site-builder-vs-professional-website',
   'turkiye-accessibility-circular',
