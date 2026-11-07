@@ -19,6 +19,7 @@ export const BLOG_ART_KEYS = [
   'fast-website',
   'google-ads-ai-max-migration',
   'google-ads-vs-seo',
+  'google-ai-content-quality',
   'google-ai-search-controls',
   'multilingual-site',
   'nextjs-vs-wordpress',
