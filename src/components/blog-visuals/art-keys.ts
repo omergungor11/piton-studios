@@ -30,6 +30,7 @@ export const BLOG_ART_KEYS = [
   'shared-ai-training-control',
   'shopify-vs-custom-ecommerce',
   'site-builder-vs-professional-website',
+  'soft-navigation-core-web-vitals',
   'turkiye-accessibility-circular',
   'turkiye-ai-action-plan',
   'website-cost',
