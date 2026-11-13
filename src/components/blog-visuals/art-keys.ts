@@ -21,6 +21,7 @@ export const BLOG_ART_KEYS = [
   'google-ads-vs-seo',
   'google-ai-content-quality',
   'google-ai-search-controls',
+  'google-november-2026-core-update',
   'multilingual-site',
   'nextjs-vs-wordpress',
   'november-sales-readiness',
