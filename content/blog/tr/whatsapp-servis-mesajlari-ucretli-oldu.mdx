@@ -1,0 +1,217 @@
+---
+title: "WhatsApp API'de müşteri yanıtları artık ücretli: 1 Ekim değişikliği ve maliyeti düşürmenin yolları"
+description: "Meta 1 Ekim 2026'dan itibaren WhatsApp servis mesajlarını ücretlendiriyor. Ne değişti, ücretsiz kalanlar ve chatbot maliyetini kontrol altında tutmanın yolları."
+date: 2026-10-25
+tags: ["whatsapp", "chatbot", "otomasyon"]
+author: "Piton"
+draft: false
+translationKey: whatsapp-service-message-pricing
+sources:
+  - title: "Meta for Developers — Pricing on the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+  - title: "Teknoblog — WhatsApp Business Platform'da müşteri yanıtları 1 Ekim'de ücretleniyor (25 Eylül 2026)"
+    url: "https://www.teknoblog.com/whatsapp-business-platform-mesaj-ucreti-ekim-2026/"
+  - title: "Teknoblog — WhatsApp Business hizmet mesajı ücreti (26 Eylül 2026)"
+    url: "https://www.teknoblog.com/whatsapp-business-hizmet-mesaji-ucreti/"
+  - title: "Chatfuel — WhatsApp pricing changes on 1 October"
+    url: "https://chatfuel.com/docs/whatsapp-pricing-2026"
+  - title: "Darwin AI — WhatsApp Business Platform pricing changes: service messages billed starting October 2026"
+    url: "https://help.getdarwin.ai/en/articles/16516839-whatsapp-business-platform-pricing-changes-service-messages-billed-starting-october-2026"
+  - title: "Whapi.Cloud — WhatsApp API faturası 1 Ekim 2026 sonrası nasıl hesaplanır?"
+    url: "https://whapi.cloud/blog/tr/how-to-calculate-whatsapp-api-bill-after-october-1-2026-with-examples"
+  - title: "CNBC-e — TÜİK açıkladı: Türkler internette en çok bu uygulamaları kullanıyor"
+    url: "https://www.cnbce.com/teknoloji/tuik-acikladi-turkler-internette-en-cok-bu-uygulamalari-kullaniyor-h34433"
+faq:
+  - q: "1 Ekim 2026'da WhatsApp'ta tam olarak ne değişti?"
+    a: "WhatsApp Business Platform (API) üzerinden gönderilen servis mesajları, yani müşteri yazdıktan sonraki 24 saat içinde şablonsuz gönderilen yanıtlar, teslim edilen mesaj başına ücretlendirilmeye başladı. Bu mesajlar Kasım 2024'ten beri ücretsizdi. Aynı pencerede gönderilen hizmet amaçlı (utility) şablonlar da artık ücretli."
+  - q: "Ücretsiz servis mesajı hakkı var mı?"
+    a: "Evet. Meta'ya göre her işletme telefon numarası ayda 1.000 teslim edilen servis mesajını ücretsiz gönderebiliyor; ücret 1.001'inci mesajdan itibaren başlıyor. Kullanılmayan hak bir sonraki aya devretmiyor."
+  - q: "Telefondaki WhatsApp Business uygulamasını kullanıyorum, ben de etkileniyor muyum?"
+    a: "Hayır. Değişiklik yalnızca API'ye bağlı numaraları kapsıyor. Mesajlara yalnızca telefondaki WhatsApp Business uygulamasından cevap veren işletmeler için duyurulmuş genel bir ücret yok."
+  - q: "Türkiye için mesaj başı ücret ne kadar?"
+    a: "Ücret, alıcının telefon numarasının kayıtlı olduğu ülkeye göre Meta'nın tarife tablosundan belirleniyor; servis mesajlarında hacim indirimi yok. Türkiye tek başına bir pazar olarak listeleniyor ve güncel oran Meta'nın resmî fiyat sayfasındaki tarife tablosunda yer alıyor. Çözüm ortağınız buna kendi hizmet bedelini ekleyebilir."
+  - q: "Chatbot maliyetini nasıl düşürebilirim?"
+    a: "En etkili yol, aynı bilgiyi daha az mesajla vermek: tek yanıtı üç ayrı balona bölen bir bot üç kez ücret öder. Ayrıca sık sorulan soruları tek ve eksiksiz yanıtlara dönüştürmek, gereksiz onay ve teşekkür mesajlarını kaldırmak ve mesaj hacmini panelden aylık izlemek maliyeti doğrudan düşürür."
+---
+
+WhatsApp'tan gelen soruları bir chatbot veya canlı destek paneliyle yanıtlıyorsanız, Ekim ayından
+itibaren faturanızda yeni bir kalem var. Meta, 1 Ekim 2026'dan itibaren WhatsApp Business Platform
+üzerinden gönderilen müşteri yanıtlarını, yani servis mesajlarını, mesaj başına ücretlendiriyor. Bu
+yanıtlar yaklaşık iki yıldır ücretsizdi. Bu yazıda neyin değiştiğini, neyin ücretsiz kaldığını,
+faturanın nasıl hesaplandığını ve chatbot maliyetini kontrol altında tutmak için neler yapılabileceğini
+Meta'nın kendi dokümantasyonuna dayanarak anlatıyoruz. API'nin temellerini merak ediyorsanız önce
+[WhatsApp Business API rehberimize](/tr/blog/whatsapp-business-api-nedir) göz atabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "1 Ekim 2026'dan itibaren API üzerinden gönderilen servis mesajları teslim edilen mesaj başına ücretli; Kasım 2024'ten beri ücretsizdi.",
+    "Her işletme telefon numarası ayda 1.000 servis mesajını ücretsiz gönderebiliyor; hak bir sonraki aya devretmiyor.",
+    "Tıkla-WhatsApp reklamlarından gelen konuşmalarda açılan ücretsiz pencere 7 güne kadar sürebiliyor.",
+    "Ücret teslim edilen her mesaj için ayrı alınıyor; tek yanıtı birkaç balona bölen bir bot daha fazla öder.",
+    "Telefondaki WhatsApp Business uygulamasıyla yanıt veren işletmeler bu değişiklikten etkilenmiyor.",
+  ]}
+/>
+
+## Ne değişti?
+
+[Meta'nın fiyatlandırma sayfasına göre](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing)
+1 Kasım 2024'te ücretsiz hâle getirilen servis mesajları 1 Ekim 2026'dan itibaren yeniden
+ücretlendiriliyor. Servis mesajı, bir müşteri size yazdıktan sonra açılan 24 saatlik **müşteri hizmeti
+penceresi** içinde, şablon kullanmadan gönderdiğiniz serbest yanıttır. Bu yanıtı bir insanın, kural
+tabanlı bir botun veya bir yapay zekâ asistanının göndermesi fark etmiyor.
+
+İkinci değişiklik hizmet amaçlı (utility) şablonlarda. Sipariş durumu, randevu hatırlatması veya
+teslimat bildirimi gibi şablonlar artık müşteri hizmeti penceresi içinde gönderildiğinde de ücretli.
+[Teknoblog'un aktardığına göre](https://www.teknoblog.com/whatsapp-business-platform-mesaj-ucreti-ekim-2026/)
+bu mesajlar pencere içinde olsa bile otomatik olarak ücretsiz sayılmıyor.
+
+Değişmeyenler de önemli. Müşterinin size gönderdiği mesajlar ücretsiz. Pazarlama şablonları zaten her
+zaman ücretliydi; pencere dışında gönderilen utility ve kimlik doğrulama şablonlarının ücretlendirmesi
+de aynı kaldı. [Chatfuel'in notuna göre](https://chatfuel.com/docs/whatsapp-pricing-2026) Instagram ve
+Messenger otomasyonları bu değişiklikten etkilenmiyor.
+
+<StatGrid
+  items={[
+    { value: "1.000", label: "İşletme numarası başına aylık ücretsiz servis mesajı", note: "META" },
+    { value: "24 saat", label: "Şablonsuz yanıt gönderilebilen müşteri hizmeti penceresi", note: "META" },
+    { value: "7 gün", label: "Tıkla-WhatsApp reklamından açılan ücretsiz pencerenin azami süresi", note: "META" },
+  ]}
+/>
+
+## Neden bu kadar çok işletmeyi ilgilendiriyor
+
+Türkiye'de WhatsApp, müşterinin işletmeye ulaşmak için ilk denediği kanallardan biri. TÜİK'in
+[Hanehalkı Bilişim Teknolojileri Kullanım Araştırması 2026](https://www.cnbce.com/teknoloji/tuik-acikladi-turkler-internette-en-cok-bu-uygulamalari-kullaniyor-h34433)
+sonuçlarına göre internet kullanıcılarının %90'ı WhatsApp kullanıyor; bu oran YouTube ve Instagram'ın
+da üzerinde. Müşteri yazdıkça işletmenin yanıt hacmi de büyüyor, artık bu hacmin her mesajı bir maliyet
+satırı.
+
+<BarChart
+  title="Türkiye'de en çok kullanılan sosyal medya ve mesajlaşma uygulamaları"
+  caption="İnternet kullanan 16-74 yaş bireyler, yüzde, 2026. Kaynak: TÜİK Hanehalkı Bilişim Teknolojileri Kullanım Araştırması."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "WhatsApp", value: 90, highlight: true },
+    { label: "YouTube", value: 77.6 },
+    { label: "Instagram", value: 71.1 },
+  ]}
+/>
+
+En çok etkilenenler, WhatsApp'ı müşteri hizmeti kanalı olarak yoğun kullanan işletmeler: sipariş
+sorularını bot ile yanıtlayan e-ticaret siteleri, randevuları WhatsApp'tan yöneten klinikler ve
+güzellik salonları, rezervasyon ve bilgi talebi alan oteller ve turizm şirketleri. Bu işletmelerde
+yanıtların büyük kısmı servis mesajı; ayda birkaç yüz konuşmayı aşan her hesap, aylık ücretsiz hakkın
+sınırına hızla yaklaşıyor.
+
+## Ne ücretsiz kalıyor
+
+Değişikliğin iki önemli istisnası var.
+
+**Aylık 1.000 ücretsiz servis mesajı.** Meta'ya göre her işletme telefon numarasının ayda 1.000 teslim
+edilen servis mesajlık ücretsiz bir hakkı var. Ücret 1.001'inci mesajdan itibaren başlıyor ve
+kullanılmayan hak bir sonraki aya devretmiyor. Hak numara başına tanımlandığı için iki ayrı numara
+kullanan bir işletmenin toplam ücretsiz hakkı ayda 2.000 mesaj.
+
+**Tıkla-WhatsApp reklamları.** Müşteri size Facebook veya Instagram'daki bir Tıkla-WhatsApp
+reklamından, Android ya da iOS uygulamasıyla yazdığında ve siz müşteri hizmeti penceresi içinde yanıt
+verdiğinizde ücretsiz bir giriş penceresi açılıyor. Meta'nın sayfasına göre bu pencere 7 güne kadar
+açık kalabiliyor ve bu sürede pazarlama, utility, kimlik doğrulama ve servis mesajları ücretlendirilmiyor.
+Sitenizdeki bir WhatsApp butonu veya QR kod bu pencereyi açmıyor.
+
+<Callout type="info" title="Yapay zekâ asistanı mesajları ayrı hesaplanıyor">
+  Meta'nın kendi işletme asistanı (Meta Business Agent) üzerinden gönderilen mesajlar ücretsiz pencere
+  içinde de ücretli. Kendi chatbot'unuzu kullanıyorsanız mesajlarınız servis mesajı olarak
+  ücretlendiriliyor ve aylık 1.000 mesajlık hak bunlar için geçerli.
+</Callout>
+
+## Fatura nasıl hesaplanıyor
+
+Meta'nın kuralları birkaç noktada net:
+
+- **Teslim edilen mesaj başına ücret.** Meta yalnızca teslim edilen mesajları ücretlendiriyor; okunup
+  okunmaması fark etmiyor.
+- **Ülkeye göre tarife.** Ücret, alıcının numarasının kayıtlı olduğu pazara göre belirleniyor. Türkiye
+  tarife tablosunda tek başına bir pazar olarak yer alıyor. Servis mesajlarında hacim indirimi yok;
+  hacim kademeleri yalnızca utility ve kimlik doğrulama mesajlarında uygulanıyor.
+- **Çözüm ortağı payı.** Meta'nın tarifesine, API erişimini sağlayan çözüm ortağı kendi hizmet bedelini
+  ekleyebiliyor. [Whapi.Cloud'un örnek hesabında](https://whapi.cloud/blog/tr/how-to-calculate-whatsapp-api-bill-after-october-1-2026-with-examples)
+  bu pay %15 olarak varsayılmış; gerçek oran sağlayıcıya göre değişir.
+- **Fiyat güncelleme takvimi.** Meta fiyatları yalnızca her çeyreğin ilk günü değiştirebiliyor ve
+  tarife değişikliklerini en az bir ay önceden duyuruyor. Bir sonraki olası tarih 1 Ocak 2027.
+
+Bu yazıda Türkiye için mesaj başı bir rakam vermiyoruz, çünkü tarife Meta'nın resmî tablosunda
+yayımlanıyor ve çeyrekten çeyreğe değişebiliyor. Bütçe yaparken o ayki tabloyu ve sağlayıcınızın
+bedelini birlikte kullanın.
+
+<Callout type="warn" title="Ödeme yöntemi tanımlı değilse yanıtlar durur">
+  Meta'ya göre servis mesajlarının kesintisiz çalışması için mesajlaşma hesabında bir ödeme yöntemi
+  tanımlı olmalı. Ödeme yöntemi olmayan hesaplarda servis mesajlarının teslimi, ücretli hâle geldikleri
+  anda durur. Chatbot'unuz Ekim başından beri sessizse önce buna bakın.
+</Callout>
+
+## Yanıt uzunluğu değil, mesaj sayısı önemli
+
+Ücret mesaj başına alındığı için maliyeti belirleyen şey konuşmanın kaç mesaja bölündüğü.
+[Darwin AI'ın örneğinde](https://help.getdarwin.ai/en/articles/16516839-whatsapp-business-platform-pricing-changes-service-messages-billed-starting-october-2026)
+de belirtildiği gibi üç balona bölünmüş bir yanıt üç kez ücretlendiriliyor. Aşağıdaki senaryo, ayda
+800 müşteri konuşması alan bir işletmede konuşma başına yanıt sayısının faturalanan mesaj sayısını nasıl
+değiştirdiğini gösteriyor.
+
+<BarChart
+  title="Senaryo: konuşma başına yanıt sayısına göre faturalanan servis mesajı"
+  caption="Senaryo modeli: ayda 800 konuşma, tek işletme numarası, aylık 1.000 ücretsiz mesaj düşüldükten sonra. Kurallar: Meta fiyatlandırma sayfası."
+  max={3500}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Konuşma başına 5 yanıt", value: 3000 },
+    { label: "Konuşma başına 3 yanıt", value: 1400, highlight: true },
+    { label: "Konuşma başına 2 yanıt", value: 600, highlight: true },
+  ]}
+/>
+
+Beş yanıttan iki yanıta inmek bu senaryoda faturalanan mesajı 3.000'den 600'e düşürüyor; ilk 1.000
+mesaj ücretsiz olduğu için tasarruf orantıdan da büyük. Aynı bilgiyi daha az mesajla vermek, bir
+chatbot'un tasarımında artık doğrudan bir maliyet kararı.
+
+## Chatbot ve iş akışlarında yapılacaklar
+
+<BlogFigure name="whatsapp-service-message-pricing" alt="Üç şeritli pencere şeması: üstte müşterinin mesajıyla açılan 24 saatlik pencerede ilk yanıtlar onay işaretiyle ücretsiz, devamı jetonla ücretli gösteriliyor; ortada bir reklam kartından açılan daha uzun pencerede bütün yanıtlar onay işaretli; altta pencere dışında gönderilen şablon belgesi jetonla ücretli." caption="Müşteri yazınca açılan 24 saatlik pencerede aylık 1.000 mesaj ücretsiz, sonrası ücretli; Tıkla-WhatsApp reklamından gelen konuşmada pencere 7 güne kadar ücretsiz; pencere dışındaki şablonlar her zaman ücretli." />
+
+Bu kurallar, mevcut bir WhatsApp chatbot'unda birkaç somut değişikliği gerektiriyor:
+
+| Durum | Ne yapılmalı |
+|---|---|
+| Bot yanıtı birkaç balona bölüyor | Bilgiyi tek ve eksiksiz bir mesajda verin; gerekiyorsa liste veya buton kullanın |
+| Her mesajdan sonra "başka bir şey var mı?" soruluyor | Ayrı onay mesajını kaldırın, soruyu asıl yanıtın sonuna ekleyin |
+| Sipariş ve kargo bildirimleri müşteri yazınca da gönderiliyor | Hangi bildirimin gerçekten gerekli olduğunu belirleyin; aynı bilgiyi iki kez göndermeyin |
+| Reklamlar müşteriyi web sitesine, oradan WhatsApp'a gönderiyor | Konuşma odaklı kampanyalarda Tıkla-WhatsApp reklam biçimini değerlendirin |
+| Hacim izlenmiyor | Aylık servis mesajı sayısını numara bazında takip edin, 1.000 sınırına yaklaşıldığını görün |
+| Ödeme yöntemi tanımlı değil | Mesajlaşma hesabına ödeme yöntemi ekleyin |
+
+## Yaygın hatalar
+
+- **"Bizi etkilemez" demek.** Chatbot veya canlı destek paneli API'ye bağlıysa her yanıt artık sayılıyor;
+  telefondaki uygulamayla API karıştırılmamalı.
+- **Uzun yanıtı parçalara bölmek.** Okunabilirlik için yapılan bölme, faturada mesaj sayısını katlıyor.
+- **Ücretsiz pencereyi yanlış anlamak.** Sitedeki WhatsApp butonu, QR kod veya kayıtlı numara ücretsiz
+  giriş penceresi açmıyor; bu yalnızca Tıkla-WhatsApp reklamlarından gelen konuşmalar için geçerli.
+- **Sağlayıcı bedelini unutmak.** Meta'nın tarifesi faturanın tamamı değil; çözüm ortağının payını da
+  hesaba katın.
+- **Çeyrek başını kaçırmak.** Tarifeler çeyrek başlarında değişebiliyor; bütçeyi yılda bir kez değil,
+  çeyrekte bir kez kontrol edin.
+
+## Sonuç
+
+Servis mesajlarının yeniden ücretli olması WhatsApp'ı pahalı bir kanal yapmıyor; ama her mesajı bir
+maliyet kalemine dönüştürüyor. Aylık 1.000 ücretsiz mesaj küçük hacimli işletmeler için önemli bir
+tampon. Hacmi yüksek olanlar için fark, chatbot'un ne kadar az mesajla ne kadar eksiksiz yanıt
+verdiğinde ortaya çıkıyor. Müşteri hâlâ en çok WhatsApp'tan yazıyor; değişen şey, yanıt akışının artık
+maliyet gözüyle de tasarlanması gerektiği.
+
+Mevcut WhatsApp akışınızı bu kurallara göre gözden geçirmek isterseniz [WhatsApp ve chatbot](/tr/hizmetler/whatsapp-chatbot)
+ve [otomasyon](/tr/hizmetler/otomasyon) hizmet sayfalarımıza bakabilir, Tıkla-WhatsApp kampanyaları
+için [Meta reklamları](/tr/hizmetler/meta-reklamlari) sayfamızı inceleyebilir ya da doğrudan
+[iletişime geçebilirsiniz](/tr/iletisim).

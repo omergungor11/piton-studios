@@ -1,0 +1,237 @@
+---
+title: "Core Web Vitals now measure in-app navigations: what changed for SPA sites?"
+description: "Chrome has added in-app route changes (soft navigations) to CrUX data. What changes for Next.js and React sites, and what should you do?"
+date: 2026-11-10
+tags: ["performance", "seo", "next.js"]
+author: "Piton"
+draft: false
+translationKey: soft-navigation-core-web-vitals
+sources:
+  - title: "web.dev — Experimental soft navigation metrics now available in CrUX"
+    url: "https://web.dev/blog/crux-experimental-soft-navs/"
+  - title: "Chrome for Developers — Chrome UX Report release notes"
+    url: "https://developer.chrome.com/docs/crux/release-notes"
+  - title: "Chrome for Developers — Measuring soft navigations"
+    url: "https://developer.chrome.com/docs/web-platform/soft-navigations"
+  - title: "Relevant Audience — Chrome adds soft navigation Core Web Vitals to CrUX"
+    url: "https://www.relevantaudience.com/seo/chrome-crux-experimental-soft-navigation-core-web-vitals/"
+faq:
+  - q: "What is a soft navigation?"
+    a: "In a single-page application (SPA), when a user clicks a link, the browser doesn't load a new HTML document; JavaScript changes the page content and the URL in the address bar instead. By Chrome's definition, the navigation must be started by a user action, the URL must visibly change and there must be a new visible paint."
+  - q: "Does this change affect Google rankings?"
+    a: "Chrome's announcement does not mention rankings. The new metrics are experimental, and the existing Core Web Vitals values have not changed. Chrome aims to make the metrics stable in May 2027, subject to feedback, and then switch Search Console to the new data."
+  - q: "Where can I see my site's soft navigation data?"
+    a: "From October 2026, it is available as experimental fields in the CrUX BigQuery dataset, the CrUX API and the CrUX History API, and the CrUX Vis tool has been updated. If you run real user monitoring on your site, you can also collect the browser's new soft navigation entries from Chrome 151 onwards."
+  - q: "Are Safari and Firefox users measured?"
+    a: "No. According to Chrome's documentation, the feature is on by default in Chrome and Edge 151, while Firefox and Safari don't support it. Since CrUX only collects data from Chrome users anyway, this data doesn't show the experience of Safari-heavy audiences."
+  - q: "Will my SPA look better with this measurement?"
+    a: "In most cases, yes on LCP: in the first data, the share of Android sites with mostly soft navigations that have good LCP rose from 26% to 87%. But Chrome notes this is not because SPAs are faster, but because fast in-app navigations are now counted. On INP, SPA-heavy sites still trail multi-page sites."
+---
+
+Most sites built with Next.js, React or similar frameworks handle page changes after the first load with JavaScript,
+without loading a new document. Until now, Chrome's real user data (CrUX) didn't see these changes: LCP measured only
+the first load, while INP and CLS were assigned to a single page visit for the whole session. On 13 October 2026,
+Chrome added experimental Core Web Vitals to CrUX that also cover these in-app route changes, known as soft
+navigations. This post explains what changed, what the first data shows and how to check your own site. We briefly
+explain how we handle performance in our projects [on our FAQ page](/en/faq#faq-performance).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "From the September 2026 dataset, CrUX publishes experimental versions of LCP, INP and CLS that also cover in-app navigations.",
+    "The measurement is on by default in Chrome and Edge 151; Firefox and Safari don't support it.",
+    "Across all sites, the share passing all three metrics rises from 55.9% to 59.5% when soft navigations are included.",
+    "The existing Core Web Vitals values have not changed; Chrome aims to make the new metrics stable in May 2027 and switch Search Console to them.",
+    "No ranking impact has been announced, but SPA sites can now see in real user data which navigation is slow.",
+  ]}
+/>
+
+## What changed?
+
+[According to the announcement on web.dev](https://web.dev/blog/crux-experimental-soft-navs/), Chrome added three new
+experimental fields to CrUX together with the Soft Navigations API in the browser: versions of LCP, INP and CLS that
+also cover in-app navigations. The data is in BigQuery, the CrUX API and the CrUX History API from the dataset
+released in October 2026. Chrome says it expects to add soft navigation metrics for navigation types and FCP in the
+next CrUX release.
+
+[According to Chrome's documentation](https://developer.chrome.com/docs/web-platform/soft-navigations), the feature is
+on by default in Chrome 151 and Edge 151, and is not supported in Firefox or Safari. The existing Core Web Vitals
+values have not changed; the new metrics sit next to them as separate fields.
+
+| | Classic measurement | Measurement including soft navigations |
+|---|---|---|
+| LCP | First page load only | Each in-app navigation's own LCP as well |
+| INP and CLS | The whole session is assigned to the first page visit | The classic page visit ends at the first soft navigation, and each navigation counts separately |
+| Status | Stable, used in Search Console | Experimental, May 2027 target |
+| Browser | Chrome | Chrome and Edge 151+ |
+
+## What is a soft navigation?
+
+On a classic site, every link click makes the browser load a new HTML document. In a single-page application (SPA),
+the browser stays on the page after the first load; JavaScript draws the new content and changes the URL in the
+address bar. For the user it is still a page change, but from the browser's point of view no new page was loaded.
+
+Chrome looks for three conditions to count a navigation as a soft navigation: it must be started by a user action,
+the URL the user sees must change, and there must be a visible paint after the interaction. The documentation also
+says plainly that this heuristic approach can produce false positives and false negatives. It notes that many
+JavaScript frameworks use this model, but each in a different way.
+
+<BlogFigure name="soft-navigation-core-web-vitals" alt="Two lanes. At the top, a browser and three screen views lined up to the right; only the first has a clock and a tick, while the other two are dashed and unmeasured. At the bottom, the same three views, each with its own clock and a tick." caption="In the classic measurement, only the first load of a single-page application is measured as LCP, and later navigations are invisible. In the measurement including soft navigations, each in-app navigation counts with its own measurement." />
+
+## Why did it matter?
+
+The classic measurement was misleading for SPAs in two ways. First, in-app navigations never made it into LCP, even
+though they are often fast; the site's LCP was just the first load, its heaviest moment. Second, because every
+interaction and layout shift during the session was assigned to one page visit, INP and CLS could balloon in long
+sessions.
+
+[According to Chrome's documentation](https://developer.chrome.com/docs/web-platform/soft-navigations), in the new
+approach the INP and CLS measurement of the classic page visit ends when the first soft navigation happens, and each
+navigation starts its own measurement. The navigation's LCP is calculated only from content newly painted after
+that interaction.
+
+<Callout type="warn" title="Experimental data, no statement on rankings">
+  Chrome's announcement does not mention Google Search rankings. The new metrics are experimental; Chrome aims to
+  make them stable in May 2027, "subject to feedback", and then switch Search Console to the new data. There is no
+  new ranking threshold today, but it is clear that Search Console reports will be updated with this data later.
+</Callout>
+
+## What does the first data show?
+
+[According to the CrUX release notes](https://developer.chrome.com/docs/crux/release-notes), the September 2026
+dataset covers 18,376,044 sites. When soft navigations are included, the share of sites rated good rises on all four
+measures, with the biggest jump on LCP.
+
+<StatGrid
+  items={[
+    { value: "70%", label: "Sites where fewer than 5% of page views are soft navigations", note: "CHROME" },
+    { value: "26% → 87%", label: "Good LCP share for Android sites with mostly soft navigations", note: "CHROME" },
+    { value: "May 2027", label: "Target for making the metrics stable and moving Search Console to them", note: "CHROME" },
+  ]}
+/>
+
+<BarChart
+  title="Share of sites rated good, classic and including soft navigations"
+  caption="September 2026 CrUX dataset, 18,376,044 sites, percent. Source: Chrome UX Report release notes."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "LCP, classic", value: 68.3 },
+    { label: "LCP, incl. soft navs", value: 72.1, highlight: true },
+    { label: "CLS, classic", value: 81.7 },
+    { label: "CLS, incl. soft navs", value: 85.1, highlight: true },
+    { label: "INP, classic", value: 85.4 },
+    { label: "INP, incl. soft navs", value: 87.4, highlight: true },
+    { label: "All three, classic", value: 55.9 },
+    { label: "All three, incl. soft navs", value: 59.5, highlight: true },
+  ]}
+/>
+
+The overall picture looks like a small change, because most sites are not SPAs. [According to Chrome's data](https://web.dev/blog/crux-experimental-soft-navs/),
+on about 70% of sites fewer than 5% of page views are soft navigations. The share of sites where more than half of
+page views are soft navigations is 7.0% on Android and 10.6% on desktop. Among the 1,000 most visited sites, that
+share rises to 35% on Android and 42% on desktop.
+
+<BarChart
+  title="Sites where more than half of page views are soft navigations"
+  caption="Percent. Source: web.dev (October 2026)."
+  unit="%"
+  max={50}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "All sites, Android", value: 7 },
+    { label: "All sites, desktop", value: 10.6 },
+    { label: "Top 1,000 sites, Android", value: 35 },
+    { label: "Top 1,000 sites, desktop", value: 42, highlight: true },
+  ]}
+/>
+
+The real difference is on SPA-heavy sites. On Android sites where 75-100% of page views are soft navigations, the
+share of sites with good LCP is 26% in the classic measurement and 87% in the measurement including soft navigations.
+
+<BarChart
+  title="Good LCP on Android sites with mostly soft navigations"
+  caption="Sites where 75-100% of page views are soft navigations, Android, percent. Source: web.dev (October 2026)."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Classic measurement", value: 26 },
+    { label: "Including soft navigations", value: 87, highlight: true },
+  ]}
+/>
+
+Chrome stresses that this jump is not because SPAs are generally faster than multi-page sites: fast in-app
+navigations are now being counted. On CLS, SPA-heavy sites come level with multi-page sites on desktop and nearly
+match them on Android. On INP, although the Android pass rate roughly doubles, in Chrome's words SPA-heavy sites
+still trail multi-page sites in good INP overall.
+
+## What does it mean for your site?
+
+| How your site is built | Expected effect | Priority |
+|---|---|---|
+| Classic multi-page site (WordPress theme, server-rendered pages) | Almost no change | Keep monitoring your current Core Web Vitals |
+| Corporate site built with Next.js or React that changes pages on the client | LCP probably improves, INP and CLS become visible per navigation | Check the new fields in CrUX |
+| Highly interactive SPA such as a dashboard, app or e-commerce filters | The biggest change is here; slow navigations now show up in the data | Set up per-navigation measurement |
+| Mobile audience that is mostly on Safari | CrUX doesn't show this audience | Set up your own real user monitoring |
+
+We covered the general principles of building a fast site with Next.js in [our fast website post](/en/blog/how-to-build-a-fast-website),
+and choosing a framework in [our Next.js vs WordPress post](/en/blog/nextjs-vs-wordpress).
+
+## How to check your own site
+
+If your site has enough traffic to appear in CrUX, you can query the new experimental fields through the CrUX API,
+the CrUX History API or BigQuery, and look at them visually with the CrUX Vis tool. Low-traffic sites may have no
+CrUX data, in which case you need your own measurement.
+
+Chrome's documentation has several practical warnings for this:
+
+- The browser produces a separate performance entry for each soft navigation; collecting them with an observer is
+  recommended, because buffered entries are limited to the first 50.
+- A navigation's LCP is read from the post-interaction paint entries, not from the standard LCP entry.
+- Because only newly painted content counts, content that stays unchanged on screen can make the navigation's LCP
+  differ from a cold load.
+- Chrome's web-vitals library reports server response time (TTFB) as 0 for soft navigations.
+- These metrics don't arrive from browsers other than Chromium, or from Chrome before 151.
+
+<Callout type="tip" title="Start with the most used navigations">
+  Don't try to improve every navigation at once. Once measurement is in place, find the two or three most clicked
+  navigations (for example, from a product list to a product page, or from the menu to a service page) and look at
+  their INP and LCP first. A large data request or a heavy component loaded during the navigation is among the
+  common causes.
+</Callout>
+
+## Checklist
+
+| Step | What to do |
+|---|---|
+| 1. Identify the structure | Do your page changes load a new page, or happen on the client? |
+| 2. Look at CrUX | Compare the new experimental LCP, INP and CLS fields with the classic values |
+| 3. Check your audience | Look at the Chrome and Safari share in analytics; if Safari dominates, CrUX falls short |
+| 4. Set up measurement | Add soft navigation entries to your own real user monitoring |
+| 5. Find slow navigations | List the worst INP and LCP values per navigation |
+| 6. Prepare for May 2027 | Fix issues now, assuming Search Console will switch to the new data |
+
+## Common mistakes
+
+- **Treating the new values as a ranking metric.** The metrics are experimental, and Chrome said nothing about
+  rankings.
+- **Taking better LCP to mean a faster site.** Chrome says plainly that the jump for SPAs comes from what is being
+  measured; the first load is just as fast as before.
+- **Overlooking INP.** SPA-heavy sites trail multi-page sites on INP; heavy JavaScript running during a navigation is
+  a typical cause.
+- **Relying only on Chrome data.** Safari and Firefox users are not in this measurement.
+- **Assuming every navigation will be counted.** Chrome's definition looks for a user action, a visible URL change
+  and a new paint, and the documentation also says this approach can produce false positives and false negatives.
+
+## Conclusion
+
+Soft navigation metrics bring something SPA sites have lacked for years: the real experience of users moving around
+the site, not just the first load. The data is experimental and no ranking impact has been announced, but Chrome's
+goal is to switch Search Console to this data in May 2027. If you have a site built with Next.js or React, now is a
+good time to find out how your navigations look.
+
+If you'd like to review your site's performance against the new metrics, see our [web design](/en/services/web-design),
+[web app](/en/services/web-app) and [maintenance & support](/en/services/maintenance-support) service pages, or simply
+[get in touch](/en/contact).

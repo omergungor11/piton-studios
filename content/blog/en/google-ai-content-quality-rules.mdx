@@ -1,0 +1,264 @@
+---
+title: "Google and AI content: the spam update is done and the rules are clearer"
+description: "Google's September 2026 spam update is complete, and its AI content and authorship guidance was updated. What changed, and what should your site do?"
+date: 2026-11-07
+tags: ["seo", "geo", "ai", "content"]
+author: "Piton"
+draft: false
+translationKey: google-ai-content-quality
+sources:
+  - title: "Google Search Status Dashboard — September 2026 spam update"
+    url: "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu"
+  - title: "Search Engine Roundtable — Google September 2026 spam update is done rolling out"
+    url: "https://www.seroundtable.com/google-september-2026-spam-update-done-42235.html"
+  - title: "Google Search Central — Guidance on using generative AI content on your website"
+    url: "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+  - title: "Google Search Central — Creating helpful, reliable, people-first content"
+    url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+  - title: "Google Search Central — Spam policies for Google web search"
+    url: "https://developers.google.com/search/docs/essentials/spam-policies"
+  - title: "Search Engine Roundtable — Google warns against deceptive authorship information"
+    url: "https://www.seroundtable.com/google-warns-against-deceptive-authorship-information-42238.html"
+  - title: "Search Engine Roundtable — Google warns tools on user-generated spam guidance"
+    url: "https://www.seroundtable.com/google-user-generated-spam-guidance-tools-42378.html"
+  - title: "Search Engine Roundtable — Over 80% of Google searches have AI Overviews"
+    url: "https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html"
+  - title: "Search Engine Roundtable — AI Overviews & AI Mode 0.9% click-through rate, opt out study says"
+    url: "https://www.seroundtable.com/google-ai-overviews-mode-ctr-42421.html"
+faq:
+  - q: "Does Google penalise content written with AI?"
+    a: "Content being written with AI is not a problem on its own. According to Google's guidance, the problem is using generative AI to produce many pages without adding value for users, which may violate the spam policy on scaled content abuse. Google also asks for AI output to be checked by hand before it is published."
+  - q: "When did the September 2026 spam update finish?"
+    a: "According to the Google Search Status Dashboard, the update started on 24 September 2026 and was complete on 8 October 2026. It applied in all languages and locations. Google did not say which spam policies it targeted; Search Engine Roundtable reports that it did not target link spam."
+  - q: "What are the four attributes Google looks at for content quality?"
+    a: "Google's current helpful content guidance says Search Quality raters evaluate four fundamental attributes of the main content: effort, originality, talent or skill, and accuracy. Using generative AI to produce large amounts of text without manual oversight is given in the guidance as an example of little to no effort."
+  - q: "Can I use AI for an author's name and photo?"
+    a: "No. Google's guidance explicitly describes fabricating creator profiles with AI-generated headshots, made-up names or false credentials as a form of deception. Instead, it encourages accurate authorship information, such as a real byline, wherever readers would expect it."
+  - q: "Do we have to tell readers that we used AI?"
+    a: "Google does not make it a requirement, but it recommends it. Its guidance says that if you automatically generate content, you should consider explaining how it was created in a way that makes sense for your audience. Such disclosures are most useful where a reader might ask how the content was made."
+---
+
+Between late September and early October, Google took several steps that affect every site producing content
+with AI. A spam update that took two weeks finished, the AI content guidance was rewritten, the helpful content
+guidance gained a definition of "main content" and four quality attributes, and fabricated author profiles were
+explicitly called deception. This post sets out what changed using Google's own documentation, shows why it
+matters more now that AI Overviews are so widespread, and suggests a workflow for producing content with AI.
+We briefly explain how content and copy are handled in our projects [on our FAQ page](/en/faq#faq-content-and-copy).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "The September 2026 spam update started on 24 September and finished on 8 October; earlier 2026 spam updates were done within a few days.",
+    "Google wants AI content checked by hand before publishing, and that includes titles, meta descriptions, structured data and alt text.",
+    "The helpful content guidance defines main content and lists four attributes: effort, originality, talent or skill, and accuracy.",
+    "Creating author profiles with AI-generated photos, made-up names or false credentials is now explicitly deception.",
+    "Depending on the measurement tool, between 62% and more than 80% of Google searches show an AI Overview, which makes original, accurate content even more decisive.",
+  ]}
+/>
+
+## What changed?
+
+The changes arrived over a few weeks, across different documents. We compiled the dates from Google's status
+dashboard, the "last updated" lines of the documents and Search Engine Roundtable's reports.
+
+| Date | Change | Source |
+|---|---|---|
+| 24 Sep 2026 | September 2026 spam update started | Google Search Status Dashboard |
+| 1 Oct 2026 | Manual fact-check rule added to the AI content guidance | Google Search Central |
+| First week of Oct 2026 | Main content definition, four attributes and authorship warning added to the helpful content guidance | Google Search Central, Search Engine Roundtable |
+| 8 Oct 2026 | Spam update complete | Google Search Status Dashboard |
+| 26 Oct 2026 | Indexing advice added for tools that host user-created pages | Search Engine Roundtable |
+
+None of this is a brand new ranking rule. Principles Google already taught its raters and presented at developer
+events are now written in plain sentences in documentation anyone can read. But having them in writing makes it
+much clearer how a site that produces content with AI will be judged.
+
+## The September 2026 spam update
+
+[According to the Google Search Status Dashboard](https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu),
+the update was released on 24 September 2026, applying "globally and to all languages", and was complete on
+8 October 2026. Google had said in advance that the rollout might take up to two weeks. [According to Search Engine Roundtable](https://www.seroundtable.com/google-september-2026-spam-update-done-42235.html),
+this was clearly longer than the earlier 2026 spam updates. The update did not target link spam, and Google did
+not share how many queries were affected.
+
+<BarChart
+  title="Rollout length of 2026 spam updates"
+  caption="Calendar days, counting the first and last day. March 24-25, June 24-26, August 18-21, September 24 - October 8. Source: Search Engine Roundtable, Google Search Status Dashboard."
+  max={16}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "March 2026", value: 2 },
+    { label: "June 2026", value: 3 },
+    { label: "August 2026", value: 4 },
+    { label: "September 2026", value: 15, highlight: true },
+  ]}
+/>
+
+Google did not say which policies the update targeted, so it is not possible to say "this is why" a particular
+site dropped. Google's general advice for spam updates still applies: a site whose traffic changed after an
+update should review the spam policies.
+
+<Callout type="info" title="Are manual actions increasing?">
+  In October, some SEO consultants said they were seeing more manual action notices for thin and scaled content.
+  These are individual observations and Google has not confirmed them. If your site is verified in Search Console,
+  manual action notices arrive there, so it is enough to have the account set up and notifications switched on.
+</Callout>
+
+## What Google says about AI content
+
+[Google's AI content guidance](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content) was
+updated on 1 October 2026. Its most important sentence says it is "critical" to check and review all
+AI-generated content by hand for accuracy and trustworthiness before publishing. The guidance also explains why:
+generative models don't retrieve facts, they predict a likely sequence of words based on their training data, so
+their output may contain inaccuracies, also known as hallucinations.
+
+The detail that is easy to miss is that the rule is not limited to the body text. According to the guidance, the
+same review applies to the page title, meta description, structured data and image alt text. Hundreds of product
+descriptions or meta tags written by AI in bulk sit right in the middle of that scope.
+
+The line is drawn by the [spam policies](https://developers.google.com/search/docs/essentials/spam-policies).
+Google defines scaled content abuse as generating many pages for the primary purpose of manipulating search
+rankings rather than helping users. Its examples explicitly include using generative AI tools to generate many
+pages without adding value for users. So what decides it is not the tool, but the scale and the value added. We
+explain separately why AI can produce wrong information [on our FAQ page](/en/faq#faq-hallucination).
+
+<StatGrid
+  items={[
+    { value: "2 weeks", label: "Rollout length of the September 2026 spam update", note: "GOOGLE" },
+    { value: "4", label: "Fundamental attributes evaluated in the main content", note: "GOOGLE" },
+    { value: "80%+", label: "Share of Google searches showing an AI Overview", note: "SEMRUSH" },
+  ]}
+/>
+
+## Main content and the four attributes
+
+[The helpful content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+now defines "main content" as any part of the page that directly helps it achieve its purpose: primary text and
+media, interactive features, user contributions, tabbed or expandable sections, and page titles and headings.
+According to the guidance, the quality of the main content is one of the most critical factors in assessing page
+quality.
+
+<BlogFigure name="google-ai-content-quality" alt="On the left, a draft document comes out of an AI cube. The document passes through four check panels in the middle in turn: lines of text for effort, a single glowing dot for originality, a badge for skill and a tick for accuracy. On the right, a signed and approved page is live, while below it a pile of faded pages that failed the checks is set aside with a cross." caption="An AI draft is a starting point. A page that passes the four attributes in Google's guidance and has a real author goes live; pages produced in bulk without review carry the risk of scaled content abuse." />
+
+According to the guidance, Search Quality raters are trained to evaluate these four attributes of the main content:
+
+| Attribute | Google's definition (summary) | What it means in practice |
+|---|---|---|
+| Effort | How much human work went into the content or the systems powering it | Unreviewed AI text is the guidance's example of "little to no effort" |
+| Originality | Whether it offers unique information or perspectives not already available elsewhere | Add your own data, project experience and photos |
+| Talent or skill | Whether it shows the talent, skill or expertise needed for a satisfying experience | Written or reviewed by someone who knows the subject |
+| Accuracy | On informational pages, content should be factually accurate | On health, money or legal topics it must be highly accurate and consistent with expert consensus |
+
+Search Engine Roundtable referred to the four attributes with a shorthand built from their initials, but Google
+does not use any acronym in the guidance. What matters are the attributes themselves: in all four, AI is only a
+drafting tool, and the final word belongs to a person who knows the subject.
+
+## Authorship: a fabricated profile is deception
+
+The sentence added to the "who created the content" section is clear. [As Search Engine Roundtable also reported](https://www.seroundtable.com/google-warns-against-deceptive-authorship-information-42238.html),
+the new text says that fabricating creator profiles with AI-generated headshots, made-up names or false
+credentials is a form of deception. Google writes that any form of deception makes a page untrustworthy to both
+users and its automated quality systems, and is a signal of a low-quality page.
+
+The same guidance also recommends the opposite: accurate authorship information, such as a byline, wherever
+readers would expect it. It also asks whether the use of automation or AI is clear to visitors, and notes that
+such disclosures are useful for content where readers might wonder how it was created.
+
+<Callout type="warn" title="Fake experts, fake reviews">
+  Inventing authors with titles like "expert dietitian" or "senior lawyer" is now deception named in Google's own
+  guidance. The same logic applies to fake customer reviews and made-up case studies: they put both trust and
+  search visibility at risk.
+</Callout>
+
+## Tools where users create pages
+
+The user-generated spam guidance, updated on 26 October, now explicitly covers tools that let users publish
+shared pages, generated content or web apps. [As reported by Search Engine Roundtable](https://www.seroundtable.com/google-user-generated-spam-guidance-tools-42378.html),
+Google recommends keeping pages created for sharing, collaboration or utility out of Search by default, with
+noindex or robots.txt. If your site has a feature where customers can create quote, report or AI output pages,
+letting those pages into the index should be a deliberate decision.
+
+## Why it matters more now
+
+Because an AI summary now often sits above the search results. [According to measurements compiled by Search Engine Roundtable](https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html),
+the share of Google searches showing an AI Overview passed 80% in Semrush's data. That figure was about 50% in
+June of the previous year and about 15% a year before that.
+
+<TrendChart
+  title="Share of Google searches showing an AI Overview"
+  caption="Approximate values, percent. The 2024 and June 2025 values are approximate shares as reported by Search Engine Roundtable. Source: Semrush, Search Engine Roundtable (October 2026)."
+  unit="%"
+  max={100}
+  labels={["2024", "June 2025", "October 2026"]}
+  dataTableLabel="Show data as a table"
+  series={[
+    { name: "Searches with an AI Overview", points: [15, 50, 80] },
+  ]}
+/>
+
+The share varies with the tool and the query type. seoClarity reported AI Overviews on more than 62% of queries,
+and between 55% and 84% depending on the industry, while SE Ranking saw them on 82.5% of US brand searches. The
+figures are measured in different ways and can't be compared one to one, but they point the same way.
+
+<BarChart
+  title="AI Overview share, by measurement"
+  caption="Percent. Each tool uses a different query set and method; SE Ranking measures US brand searches only. Source: Search Engine Roundtable (October 2026)."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "seoClarity", value: 62 },
+    { label: "Semrush", value: 80, highlight: true },
+    { label: "SE Ranking (US brand)", value: 82.5 },
+  ]}
+/>
+
+On clicks, the data is still thin. In a single-site test by Cyrus Shepard, which Search Engine Roundtable also
+called "super limited", removing the site from AI Overviews and AI Mode gave an estimated click-through rate of
+about 0.9% for AI impressions. The interesting part is that regular organic clicks also fell when the AI features
+were switched off. A one-site experiment proves nothing in general, but it suggests that appearing as a source in
+AI summaries can't be considered separately from classic rankings. We covered Google's control for these features
+in [our post on Google's new AI search control](/en/blog/google-ai-search-controls-ai-overviews-ai-mode).
+
+## A workflow for producing content with AI
+
+| Step | What to do | Attribute it covers |
+|---|---|---|
+| 1. Topic and purpose | Write down who the page is for and which question it answers | Effort |
+| 2. Your own material | Project experience, your own photos, your own data | Originality |
+| 3. Draft | Use AI for the structure and a first draft | Effort (as a tool) |
+| 4. Expert review | Someone who knows the subject edits and approves the text | Talent or skill |
+| 5. Verification | Check every number, date and claim against its source, including title, meta and alt text | Accuracy |
+| 6. Author and disclosure | A real author name; state AI use where it helps the reader | Trust |
+
+<Callout type="tip" title="Start small, then scale">
+  Instead of opening a new content section in bulk, start with a few pages, watch impressions and clicks in
+  Search Console, then expand. The spam policies are about scale; publishing hundreds of similar pages at once is
+  the fastest way to skip quality control.
+</Callout>
+
+## Common mistakes
+
+- **Publishing AI output as it is.** Google's guidance is clear: checking by hand before publishing is critical.
+  A made-up statistic or a wrong date lowers the credibility of the whole page.
+- **Checking only the body text.** Bulk-generated titles, meta descriptions, structured data and alt text are
+  subject to the same rule.
+- **Duplicating the same page with a different city or product name.** Many pages that add no value for users fit
+  the definition of scaled content abuse.
+- **Using a fabricated author profile.** An AI photo, a made-up name or a false credential is now explicitly
+  deception.
+- **Leaving user-created pages open to indexing.** Noindex by default is recommended for sharing and utility pages.
+- **Rewriting the whole site in a panic after an update.** Google did not disclose the targets; first see which
+  pages were affected in Search Console, then decide.
+
+## Conclusion
+
+Google's October documentation doesn't ban AI. It asks that content produced with AI gets a person's effort,
+original material, expertise and verification on top. The September spam update and the spread of AI Overviews
+across most searches suggest that pages lacking those four attributes will have less chance both in rankings and
+in AI answers. Producing content fast has become easy; what is valuable is producing it accurately and originally.
+
+If you'd like to review your site's content against Google's new guidance, see our [SEO & GEO](/en/services/seo-geo),
+[AI integration](/en/services/ai-integration) and [maintenance & support](/en/services/maintenance-support) service
+pages, read our [post on search visibility in the AI era](/en/blog/search-visibility-in-the-ai-era-seo-to-geo),
+or simply [get in touch](/en/contact).

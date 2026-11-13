@@ -1,0 +1,214 @@
+---
+title: "Google Ads AI Max'a geçiş: arama kampanyalarınızda ne değişti?"
+description: "Geniş eşleme ve otomatik öğe kullanan arama kampanyaları AI Max'a taşındı, DSA sırada. Ne değişti, veriler ne diyor, KOBİ'ler neyi kontrol etmeli?"
+date: 2026-11-01
+tags: ["google ads", "dijital pazarlama", "yapay zeka"]
+author: "Piton"
+draft: false
+translationKey: google-ads-ai-max-migration
+sources:
+  - title: "Google — Unlock next-level performance with AI Max for Search campaigns"
+    url: "https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/"
+  - title: "Search Engine Roundtable — Google Ads to migrate ACA and campaign-level broad match to AI Max on September 1"
+    url: "https://seroundtable.com/google-ads-migrate-ai-max-sep1-41829.html"
+  - title: "PPC Land — Google delays DSA to AI Max automigration to February 2027"
+    url: "https://ppc.land/google-delays-dsa-to-ai-max-automigration-to-february-2027/"
+  - title: "PPC Land — Google's AI Max for Search campaigns deliver meh results, industry tests reveal"
+    url: "https://ppc.land/googles-ai-max-for-search-campaigns-deliver-meh-results-industry-tests-reveal/"
+  - title: "PPC Land — Google Ads forces some CPAs to double starting August 17"
+    url: "https://ppc.land/google-ads-forces-some-cpas-to-double-starting-august-17/"
+  - title: "Relevant Audience — Google Ads deprecations: 2026 to 2027 timeline"
+    url: "https://www.relevantaudience.com/google-ads-en/google-ads-deprecations-2026-2027-timeline/"
+faq:
+  - q: "AI Max for Search nedir?"
+    a: "Google'ın arama kampanyalarına eklediği bir özellik paketi. Anahtar kelimelerin ötesindeki aramalarla eşleşme (arama terimi eşleştirme), reklam metinlerini sayfanıza göre uyarlama (metin özelleştirme) ve kullanıcıyı sitenizdeki en uygun sayfaya gönderme (son URL genişletme) özelliklerini bir araya getiriyor. Mayıs 2025'te beta olarak duyuruldu."
+  - q: "Hangi kampanyalar otomatik olarak AI Max'a taşındı?"
+    a: "1 Eylül 2026'dan itibaren otomatik oluşturulan öğeleri (ACA) veya kampanya düzeyinde geniş eşleme ayarını kullanan arama kampanyaları AI Max'a yükseltilmeye başlandı. Dinamik Arama Ağı Reklamları (DSA) için otomatik geçiş Şubat 2027'ye ertelendi; Ocak 2027'de yeni DSA kampanyası oluşturma kaldırılıyor."
+  - q: "AI Max performansı gerçekten artırıyor mu?"
+    a: "Google, AI Max'ı açan reklamverenlerin benzer CPA veya ROAS'ta genellikle %14 daha fazla dönüşüm aldığını söylüyor; ağırlıklı olarak tam ve sıralı eşleme kullanan kampanyalarda bu oran %27. Bağımsız testler daha karışık sonuçlar veriyor. Kendi hesabınızda arama terimi raporuyla ölçmeden genel bir sonuca varmak doğru olmaz."
+  - q: "AI Max'ı kapatabilir miyim?"
+    a: "İncelediğimiz kaynaklar otomatik geçiş için ayrı bir vazgeçme seçeneği tarif etmiyor. Ancak AI Max içinde marka hariç tutma, URL hariç tutma ve ilgi duyulan konumlar gibi kontroller var. Geçişten sonra kampanya ayarlarını ve arama terimlerini düzenli kontrol etmek, kontrolü elde tutmanın en pratik yolu."
+  - q: "Küçük bir işletme şimdi ne yapmalı?"
+    a: "Önce hangi kampanyalarının taşındığını kontrol etmeli, ardından arama terimi raporunu haftalık incelemeli ve alakasız terimleri negatif anahtar kelime olarak eklemeli. Dönüşüm takibinin doğru çalıştığından emin olmak da şart; yapay zekâ neyi optimize edeceğini bu veriden öğreniyor."
+---
+
+Google Ads'te arama kampanyası yönetmek uzun süre anahtar kelime seçmek, reklam metni yazmak ve hedef
+sayfayı belirlemek demekti. 2026'da bu üçünün de bir kısmı yapay zekâya devredildi: 1 Eylül'den itibaren
+geniş eşleme veya otomatik oluşturulan öğeler kullanan arama kampanyaları otomatik olarak AI Max for
+Search'e taşınmaya başladı; Dinamik Arama Ağı Reklamları da Şubat 2027'de aynı yolu izleyecek. Bu yazıda
+AI Max'ın ne yaptığını, hangi kampanyaların etkilendiğini, Google'ın iddiaları ile bağımsız testlerin ne
+dediğini ve küçük bir reklamverenin kontrolü elde tutmak için neleri kontrol etmesi gerektiğini anlatıyoruz.
+Google Ads ile SEO arasındaki temel farkı merak ediyorsanız [SSS sayfamızdaki kısa cevaba](/tr/sss#faq-google-ads-vs-seo) bakabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "1 Eylül 2026'dan itibaren otomatik öğe (ACA) veya kampanya düzeyinde geniş eşleme kullanan arama kampanyaları AI Max'a yükseltilmeye başlandı.",
+    "Dinamik Arama Ağı Reklamları için otomatik geçiş Şubat 2027'de; yeni DSA kampanyası oluşturma Ocak 2027'de kalkıyor.",
+    "Google, AI Max'ın benzer maliyette %14 daha fazla dönüşüm getirdiğini söylüyor; bağımsız testler daha temkinli bir tablo çiziyor.",
+    "Kontroller hâlâ sizde: marka ve URL hariç tutma, negatif anahtar kelimeler ve arama terimi raporu.",
+    "Geçişten sonraki ilk haftalarda arama terimlerini ve dönüşüm takibini kontrol etmek, bütçenin alakasız aramalara gitmesini önler.",
+  ]}
+/>
+
+## AI Max for Search nedir?
+
+Google, AI Max'ı [Mayıs 2025'te duyurdu](https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/)
+ve tüm reklamverenlere beta olarak açtı. Yeni bir kampanya türü değil, mevcut arama kampanyalarına
+eklenen bir özellik paketi. Üç ana parçası var:
+
+| Özellik | Ne yapar | Eski karşılığı |
+|---|---|---|
+| Arama terimi eşleştirme | Mevcut anahtar kelimelerinizi geniş eşleme ve anahtar kelimesiz teknolojiyle genişletir | Geniş eşleme, DSA hedeflemesi |
+| Metin özelleştirme | Reklam başlık ve açıklamalarını sitenize ve aramaya göre uyarlar | Otomatik oluşturulan öğeler (ACA) |
+| Son URL genişletme | Kullanıcıyı sitenizde aramaya en uygun sayfaya gönderir | DSA'nın sayfa seçimi |
+
+Google aynı duyuruda bazı kontroller de ekledi: kampanya ve reklam grubu düzeyinde marka kontrolleri,
+yalnızca AI Max kampanyalarında reklam grubu düzeyinde ilgi duyulan konumlar, URL kontrolleri ve arama
+terimi raporunda hangi başlık ile hangi sayfanın gösterildiğinin görünmesi.
+
+## Neler değişti, ne zaman?
+
+AI Max ilk yıl isteğe bağlıydı. 2026'da Google eski ayarları kapatıp kampanyaları otomatik taşımaya
+başladı. [Search Engine Roundtable'ın aktardığı reklamveren e-postasına göre](https://seroundtable.com/google-ads-migrate-ai-max-sep1-41829.html)
+otomatik oluşturulan öğeleri kullanan kampanyalarda arama terimi eşleştirme ve metin özelleştirme,
+kampanya düzeyinde geniş eşleme kullananlarda ise arama terimi eşleştirme varsayılan olarak açılıyor.
+Google ayarların "eski kurulumu yakından yansıtacak" şekilde yapılandırıldığını belirtiyor.
+
+| Tarih | Değişiklik | Kaynak |
+|---|---|---|
+| 15 Haziran 2026 | DSA kampanyası oluşturma geçici olarak yeniden açıldı | PPC Land |
+| 17 Ağustos 2026 | Bütçesi sınırlı hedef CPA/ROAS kampanyaları hedefe daha yakın teslimata geçti | PPC Land |
+| 1 Eylül 2026 | ACA ve kampanya düzeyinde geniş eşleme kullanan kampanyalar AI Max'a yükseltilmeye başlandı | Search Engine Roundtable |
+| Eylül 2026 sonu | Arama ve AI Max kampanyalarında kampanya düzeyinde dil hedeflemesi kaldırıldı | Relevant Audience |
+| Ocak 2027 | Yeni DSA kampanyası oluşturma kaldırılıyor | PPC Land |
+| Şubat 2027 | Kalan DSA kampanyaları Performance Max veya AI destekli aramaya taşınıyor; yalnızca arama reklamları (call-only) yayından kalkıyor | PPC Land, Relevant Audience |
+
+[PPC Land'in haberine göre](https://ppc.land/google-delays-dsa-to-ai-max-automigration-to-february-2027/)
+DSA geçişi başta Eylül 2026 için planlanmıştı; Google bunu Şubat 2027'ye erteledi. Taşınan DSA
+kampanyalarında arama terimi eşleştirme, metin özelleştirme ve son URL genişletme varsayılan olarak açık geliyor.
+
+<Callout type="warn" title="İki dilli hesaplar için ayrı kontrol">
+  [Relevant Audience'ın derlediği takvime göre](https://www.relevantaudience.com/google-ads-en/google-ads-deprecations-2026-2027-timeline/)
+  arama ve AI Max kampanyalarında kampanya düzeyindeki dil hedeflemesi Eylül 2026 sonunda kaldırıldı.
+  Türkçe ve İngilizce reklamları aynı hesapta ayrı kampanyalarla dile göre ayıran işletmeler, reklamların
+  doğru kitleye gidip gitmediğini arama terimi raporundan kontrol etmeli.
+</Callout>
+
+## Google ne vaat ediyor?
+
+Google'ın duyurusuna göre AI Max'ı açan reklamverenler benzer CPA veya ROAS'ta genellikle **%14 daha fazla
+dönüşüm veya dönüşüm değeri** görüyor. Ağırlıklı olarak tam ve sıralı eşleme kullanan kampanyalarda bu
+oran %27'ye çıkıyor; Google bunu dönüşümlerinin %70'inden fazlası tam veya sıralı eşlemeden gelen,
+perakende dışı kampanyaların iç verisine dayandırıyor. PPC Land, Google'ın Mayıs 2026'da Shopping
+genişlemesiyle bu rakamı "ortalama %7 daha fazla dönüşüm" olarak güncellediğini aktarıyor.
+
+<StatGrid
+  items={[
+    { value: "%14", label: "Google'ın 2025'te açıkladığı ortalama ek dönüşüm, benzer maliyette", note: "GOOGLE" },
+    { value: "%7", label: "Mayıs 2026'da güncellenen ortalama ek dönüşüm", note: "PPC LAND" },
+    { value: "%99", label: "Bir ajans testinde dönüşüm getirmeyen AI Max gösterimlerinin payı", note: "PPC LAND" },
+  ]}
+/>
+
+<BarChart
+  title="Google'ın AI Max için açıkladığı ortalama ek dönüşüm"
+  caption="Benzer CPA/ROAS'ta ek dönüşüm veya dönüşüm değeri, yüzde. Kaynak: Google (2025), PPC Land (2026 güncellemesi)."
+  unit="%"
+  max={30}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Tüm kampanyalar (2025)", value: 14 },
+    { label: "Ağırlıklı tam/sıralı eşleme (2025)", value: 27, highlight: true },
+    { label: "Ortalama, güncel (Mayıs 2026)", value: 7 },
+  ]}
+/>
+
+Bu rakamlar Google'ın kendi ortalamaları. Bir ortalama, sizin hesabınızın da aynı sonucu alacağını göstermez;
+özellikle tam ve sıralı eşlemeyle sıkı yönetilen kampanyalarda daha fazla trafik, daha fazla alakasız
+trafik de anlamına gelebilir.
+
+## Bağımsız testler ne diyor?
+
+Sektörden gelen ilk veriler daha temkinli. [Monks'tan Ezra Sackett'in paylaştığı testte](https://ppc.land/googles-ai-max-for-search-campaigns-deliver-meh-results-industry-tests-reveal/)
+birden fazla müşteri hesabında AI Max özellikleriyle eşleşen yaklaşık 30.000 arama terimi incelendi:
+gösterimlerin %99'u hiç dönüşüm getirmedi, arama terimlerinin %31'i 25 karakteri aşıyordu ve terimlerin
+yarısından azı bir anahtar kelimeyle eşleşmiş görünüyordu.
+
+PPC Land ayrıca 250'den fazla perakende kampanyasında yapılan bağımsız testlerde AI Max'ın geleneksel
+eşleme türlerine göre yaklaşık %35 daha düşük ROAS verdiğini ve tek bir reklamverenin dört aylık
+karşılaştırmasında dönüşüm başı maliyetin AI Max'ta 100,37 dolar, sıralı eşlemede 43,97 dolar olduğunu aktarıyor.
+
+<BarChart
+  title="Tek hesapta dönüşüm başı maliyet karşılaştırması"
+  caption="Dört aylık dönem, ABD doları. Tek bir reklamverenin verisi, genelleştirilemez. Kaynak: PPC Land (Xavier Mantica verisi)."
+  unit=" $"
+  max={120}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "AI Max", value: 100.37, highlight: true },
+    { label: "Sıralı eşleme", value: 43.97 },
+  ]}
+/>
+
+Bu testler de genel bir hüküm değil: örneklemler küçük, sektörler farklı ve sonuçlar kampanyanın
+kuruluşuna çok bağlı. Ortak mesaj şu: AI Max kendi kendine çalışan bir çözüm değil. Daha geniş eşleşme
+yeni müşteri getirebilir, ama denetlenmezse bütçenin bir kısmını alakasız aramalara harcar.
+
+## AI Max nasıl çalışıyor?
+
+<BlogFigure name="google-ads-ai-max-migration" alt="Solda klasik arama kampanyası: birkaç anahtar kelime çipi, tek bir reklam metni ve tek hedef sayfa. Ortada bir saat ve sağa giden ok. Sağda AI Max: tek anahtar kelimeden çoğalan arama sorguları, üst üste değişen başlık satırları ve dört farklı hedef sayfa. Altta kesik çizgili kontrol alanında kalkan ve çarpı işaretleri." caption="Geçiş öncesi ve sonrası: AI Max anahtar kelimeyi yeni aramalara genişletir, reklam metnini uyarlar ve hedef sayfayı kendisi seçer. Marka ve URL hariç tutma gibi kontroller reklamverende kalır." />
+
+Klasik bir arama kampanyasında reklamveren üç kararı kendisi verir: hangi aramada görüneceği, ne yazacağı
+ve kullanıcıyı nereye göndereceği. AI Max bu kararların her birine yapay zekâ ekliyor. Arama terimi
+eşleştirme, anahtar kelimenize anlamca yakın gördüğü aramalarda reklamınızı gösterir. Metin özelleştirme,
+sitenizdeki içerikten ve aramadan yola çıkarak yeni başlıklar üretir. Son URL genişletme ise kullanıcıyı
+belirlediğiniz sayfa yerine sitenizdeki başka bir sayfaya gönderebilir.
+
+Bu, sitenizin içeriğinin artık reklamın da hammaddesi olduğu anlamına geliyor. Eski fiyatlar, kaldırılmış
+ürünler veya güncel olmayan kampanya sayfaları reklam metnine ve hedef sayfaya girebilir. Sitenin bakımı
+ile reklam performansı arasındaki bağ hiç bu kadar doğrudan olmamıştı.
+
+## Geçişten sonra neleri kontrol etmelisiniz?
+
+| Kontrol | Neden | Ne sıklıkla |
+|---|---|---|
+| Hangi kampanyalar taşındı? | ACA ve geniş eşleme kullananlar otomatik yükseltildi | Bir kez, hemen |
+| Arama terimi raporu | Alakasız aramaları negatif anahtar kelimeye eklemek için | Haftalık |
+| Marka ve URL hariç tutma | Rakip markalarda veya istemediğiniz sayfalarda görünmemek için | Bir kez, sonra çeyreklik |
+| Reklam metinleri | Üretilen başlıkların doğru ve marka diline uygun olduğunu görmek için | Haftalık |
+| Hedef sayfalar | Son URL genişletmenin seçtiği sayfaların güncel olduğundan emin olmak için | Aylık |
+| Dönüşüm takibi | Yapay zekâ neyi optimize edeceğini bu veriden öğrenir | Bir kez, sonra aylık |
+| Hedef CPA/ROAS | Bütçesi sınırlı kampanyalarda teslimat hedefe yaklaştı | Bir kez, hemen |
+
+<Callout type="tip" title="Dönüşüm verisi kötüyse yapay zekâ da kötü öğrenir">
+  AI Max ve akıllı teklif stratejileri neyin "iyi" sonuç olduğunu dönüşüm verinizden öğrenir. Form
+  gönderimi, arama ve WhatsApp tıklaması gibi gerçek iş getiren eylemler doğru ölçülmüyorsa, sistem
+  yanlış hedefe doğru optimize eder. Geçişin ilk adımı reklam ayarı değil, ölçümün doğrulanması olmalı.
+</Callout>
+
+## Yaygın hatalar
+
+- **Geçişi fark etmemek.** Otomatik yükseltilen bir kampanya aynı adla çalışmaya devam eder; değişiklik
+  ancak arama terimlerine bakınca görünür.
+- **Arama terimi raporuna hiç bakmamak.** Daha geniş eşleşmenin bedeli alakasız aramalardır ve bunlar
+  yalnızca bu raporda görünür.
+- **Hedef CPA'yı eski hâlinde bırakmak.** Bütçesi sınırlı kampanyalar artık yazdığınız hedefe daha yakın
+  teslim ediyor; uzun süre hedefin altında giden bir kampanyada maliyet yükselebilir.
+- **Siteyi güncel tutmamak.** Metin özelleştirme ve son URL genişletme sitenizdeki içeriği kullanır; eski
+  sayfa reklamın parçası olabilir.
+- **Call-only reklamlara güvenmeye devam etmek.** Yalnızca arama reklamları Şubat 2027'de yayından kalkıyor;
+  telefonla müşteri kazanan işletmeler arama öğelerine şimdiden geçmeli.
+
+## Sonuç
+
+AI Max, Google Ads'te arama kampanyalarının yönetim biçimini değiştiriyor: anahtar kelime, reklam metni
+ve hedef sayfa kararlarının bir kısmı artık yapay zekâda. Google'ın ortalamaları olumlu, bağımsız testler
+daha temkinli; ikisi de aynı sonuca işaret ediyor: sonucu belirleyen, kampanyanın ne kadar iyi kurulduğu
+ve düzenli denetlendiği. Doğru dönüşüm takibi, güncel bir site ve haftalık arama terimi kontrolü olmadan
+yapay zekâ bütçeyi kendi bildiği gibi harcar.
+
+Kampanyalarınızın geçişten nasıl etkilendiğini birlikte incelemek isterseniz [Google Ads](/tr/hizmetler/google-ads),
+[SEO ve GEO](/tr/hizmetler/seo-geo) ve [bakım ve destek](/tr/hizmetler/bakim-ve-destek) hizmet sayfalarımıza
+bakabilir, [Google Ads mi SEO mu yazımızı](/tr/blog/google-ads-mi-seo-mu) okuyabilir ya da doğrudan
+[iletişime geçebilirsiniz](/tr/iletisim).

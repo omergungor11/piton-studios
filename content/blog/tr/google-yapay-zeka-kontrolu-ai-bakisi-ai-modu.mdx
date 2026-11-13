@@ -1,0 +1,264 @@
+---
+title: "Google'ın yeni yapay zekâ kontrolü: siteniz AI Bakışı ve AI Modu'nda görünsün mü?"
+description: "Search Console'daki yeni yapay zekâ kontrolü ve performans raporu ne yapar, tıklamalara etkisi ne, hangi işletme dışarıda kalmalı? Verilerle karar rehberi."
+date: 2026-10-13
+tags: ["seo", "geo", "google", "yapay zeka"]
+author: "Piton"
+draft: false
+translationKey: google-ai-search-controls
+sources:
+  - title: "Google — Türkiye'de AI Modu ve AI Bakışı Dönemi Başlıyor (18 Şubat 2026)"
+    url: "https://blog.google/intl/tr-tr/urun-duyurulari/turkiyede-ai-modu-ve-ai-bakisi-donemi-basliyor/"
+  - title: "Google — New controls and insights for website owners in Search"
+    url: "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+  - title: "Search Console Help — Search generative AI control"
+    url: "https://support.google.com/webmasters/answer/16908024?hl=en"
+  - title: "Search Console Help — Generative AI performance report (Search)"
+    url: "https://support.google.com/webmasters/answer/16984139?hl=en"
+  - title: "Google Search Central — Introducing Search Generative AI performance reports in Search Console"
+    url: "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports"
+  - title: "Google Search Central — Optimizing for generative AI search"
+    url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+  - title: "Pew Research Center — Google users are less likely to click on links when an AI summary appears"
+    url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+  - title: "Ahrefs — Update: AI Overviews Reduce Clicks by 58%"
+    url: "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/"
+faq:
+  - q: "Search Console'daki yapay zekâ kontrolü nedir?"
+    a: "Search Console'da Ayarlar altındaki \"Search generative AI\" bölümünde yer alan bir tercih. Sitenizin bağlantılarının ve içeriğinin AI Bakışı (AI Overviews), AI Modu ve Discover'daki yapay zekâ özelliklerinde kullanılıp kullanılmayacağını belirler. 31 Ağustos 2026 itibarıyla dünyadaki tüm sitelere açıldı; varsayılan ayar \"dahil et\"."
+  - q: "Yapay zekâ özelliklerinden çıkarsam normal Google sıralamam düşer mi?"
+    a: "Google'ın yardım sayfasına göre hayır: bu kontrol, Arama'nın diğer bölümlerinde sıralama veya dahil edilme sinyali olarak kullanılmıyor. Klasik sonuçlarda yerinizi korursunuz; yalnızca AI Bakışı ve AI Modu'ndan gelen gösterim ve trafiği kaybedersiniz."
+  - q: "Bu kontrol, içeriğimin yapay zekâ modellerini eğitmek için kullanılmasını da engeller mi?"
+    a: "Hayır. Google, bu ayarın model eğitimini etkilemediğini açıkça yazıyor; eğitim kullanımını sınırlamak için ayrı bir mekanizma olan Google-Extended gösteriliyor. Siteyi Arama'dan tamamen çıkarmanın yolu ise noindex."
+  - q: "Yapay zekâ performans raporu tıklamaları gösteriyor mu?"
+    a: "Şu an hayır. Rapor yalnızca gösterim sayısını, hangi sayfalarınızın ve hangi ülkelerde, hangi cihazlarda yapay zekâ cevaplarında göründüğünü gösteriyor. Tıklama ve sorgu verisi yok; trafik etkisini normal performans raporu ve analitik aracınızla birlikte okumanız gerekiyor."
+  - q: "Küçük bir işletme olarak yapay zekâ özelliklerinden çıkmalı mıyım?"
+    a: "Çoğu hizmet ve yerel işletme için hayır. Kullanıcı sizi zaten bir sağlayıcı ararken buluyorsa, AI cevabında kaynak olarak geçmek görünürlüktür. Çıkmayı ancak içeriğin kendisi ürün olduğunda, yani gelir doğrudan sayfanın okunmasından geliyorsa ciddi şekilde düşünmek gerekir; o durumda bile önce raporla birkaç haftalık veri toplanmalı."
+---
+
+18 Şubat 2026'dan beri Türkiye'de Google'da arama yapan biri, birçok soruda sonuç listesinden önce
+bir yapay zekâ özeti görüyor: AI Bakışı (AI Overviews) ve sohbet tarzındaki AI Modu artık Türkçe.
+Ağustos sonunda Google bir adım daha attı ve site sahiplerine ilk kez **bu özelliklerde görünüp
+görünmemeyi seçme** imkânı verdi, yanında da ayrı bir performans raporu açtı. GEO'nun ne olduğuna dair
+kısa cevabı [SSS sayfamızda](/tr/sss#faq-what-is-geo) verdik; bu yazı yeni kontrolün tam olarak ne
+yaptığını, tıklamalar hakkında verilerin ne söylediğini ve hangi işletmenin hangi ayarı seçmesi
+gerektiğini anlatıyor.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "31 Ağustos 2026'dan beri her site, Search Console'dan AI Bakışı, AI Modu ve Discover'daki yapay zekâ özelliklerinden çıkabiliyor.",
+    "Çıkmak normal sıralamayı etkilemiyor ama o özelliklerden gelen tüm gösterim ve trafik sıfırlanıyor.",
+    "Kontrol model eğitimini kapsamıyor; onun için Google-Extended, Arama'dan tamamen çıkmak için noindex gerekiyor.",
+    "Yeni performans raporu yalnızca gösterim sayıyor; tıklama ve sorgu verisi henüz yok.",
+    "Bağımsız veriler AI özeti olan aramalarda tıklamanın belirgin düştüğünü gösteriyor; buna rağmen çoğu işletme için doğru ayar dahil kalmak.",
+  ]}
+/>
+
+## Türkiye'de ne değişti
+
+Google, [18 Şubat 2026 tarihli duyurusunda](https://blog.google/intl/tr-tr/urun-duyurulari/turkiyede-ai-modu-ve-ai-bakisi-donemi-basliyor/)
+Türkiye'deki aramanın Gemini 3 model ailesiyle çalışan iki yeni deneyime geçtiğini açıkladı. **AI
+Bakışı**, sonuç sayfasının en üstünde sorunun özet cevabını ve kaynak bağlantılarını gösteriyor. **AI
+Modu** ise uzun, çok adımlı soruların sohbet hâlinde sorulduğu ayrı bir sekme. İkisi de kademeli olarak
+açıldı ve Android, iOS uygulamasıyla web'de kullanılabiliyor.
+
+Ölçek küçük değil. Google'ın [site sahiplerine yönelik duyurusuna](https://blog.google/products-and-platforms/products/search/new-controls-website-owners/)
+göre AI Overviews aylık 2,5 milyarı aşkın kullanıcıya, AI Modu aylık 1 milyarı aşkın kullanıcıya ulaşmış durumda.
+
+<StatGrid
+  items={[
+    { value: "2,5 mr+", label: "AI Overviews'un aylık aktif kullanıcısı", note: "GOOGLE" },
+    { value: "1 mr+", label: "AI Modu'nun aylık kullanıcısı", note: "GOOGLE" },
+    { value: "%18", label: "Pew örnekleminde AI özeti çıkan aramaların payı", note: "PEW RESEARCH" },
+  ]}
+/>
+
+## Tıklamalara ne oluyor: veriler
+
+Yapay zekâ özetinin tıklamaları nasıl etkilediğine dair en çok atıf alan iki bağımsız çalışma aynı
+yönü gösteriyor. [Pew Research Center](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/),
+ABD'de 900 yetişkinin Mart 2025'teki gerçek tarama verisini inceledi. AI özeti çıkan sayfalarda
+kullanıcılar ziyaretlerin %8'inde bir sonuca tıklarken, özetsiz sayfalarda bu oran %15'ti. Özetin
+içindeki bağlantıya tıklama ise ziyaretlerin yalnızca %1'inde görüldü.
+
+<BarChart
+  title="AI özeti olan ve olmayan aramalarda tıklama"
+  caption="Ziyaretlerin yüzdesi. ABD, Mart 2025, 900 yetişkinin tarama verisi."
+  unit="%"
+  max={30}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Özetsiz sayfada bir sonuca tıklama", value: 15, note: "Klasik sonuçlar" },
+    { label: "Özetli sayfada bir sonuca tıklama", value: 8, note: "AI özeti var", highlight: true },
+    { label: "Özetin içindeki bağlantıya tıklama", value: 1, note: "Kaynak bağlantısı" },
+    { label: "Özetli sayfada oturumu bitirme", value: 26, note: "Özetsizde %16" },
+  ]}
+/>
+
+[Ahrefs](https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/) ise 300.000 anahtar kelimenin
+Search Console verisini Aralık 2023 ile Aralık 2025 arasında karşılaştırdı. AI özeti çıkan
+kelimelerde birinci sıradaki sayfanın masaüstü tıklama oranı %7,3'ten %1,6'ya indi. Özet çıkmayan
+bilgi amaçlı kelimelerde de düşüş var, ama çok daha sınırlı: %7,6'dan %3,9'a.
+
+<TrendChart
+  title="Birinci sıradaki sayfanın tıklama oranı"
+  caption="Masaüstü, 300.000 anahtar kelime, Search Console verisi."
+  unit="%"
+  max={8}
+  labels={["Aralık 2023", "Aralık 2025"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "AI özeti çıkan kelimeler", points: [7.3, 1.6] },
+    { name: "AI özeti çıkmayan kelimeler", points: [7.6, 3.9], muted: true },
+  ]}
+/>
+
+Etki yalnızca zirvede değil. Aynı çalışmada, AI özeti çıktığında tahmin edilen tıklama kaybı
+sıralamanın aşağısına indikçe azalıyor ama onuncu sırada bile sıfırlanmıyor.
+
+<BarChart
+  title="AI özeti varken sıralamaya göre tahmini tıklama kaybı"
+  caption="Yüzde. Masaüstü, Aralık 2023 ile Aralık 2025 karşılaştırması."
+  unit="%"
+  max={60}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "1. sıra", value: 58, highlight: true },
+    { label: "2. sıra", value: 50.8 },
+    { label: "3. sıra", value: 46.4 },
+    { label: "5. sıra", value: 32.6 },
+    { label: "10. sıra", value: 19.4 },
+  ]}
+/>
+
+<Callout type="info" title="Bu rakamlar bir korelasyon, Türkiye ölçümü değil">
+  İki çalışma da ABD verisine dayanıyor ve Ahrefs'in kendi notuna göre ilişkiyi gösteriyor,
+  nedenselliği kanıtlamıyor; iki yıllık sürede arama davranışındaki başka değişimler de payını
+  alıyor. Türkiye'deki etkiyi görmenin en güvenilir yolu kendi Search Console verinizdir. Aşağıda
+  anlattığımız rapor tam olarak bunun için var.
+</Callout>
+
+## Search Console'daki yeni kontrol: üç seçenek
+
+Kontrol, Search Console'da **Ayarlar → Search generative AI** altında duruyor. Google haziranda
+duyurdu, önce İngiltere'deki bir grup sitede açtı, [31 Ağustos 2026 itibarıyla](https://support.google.com/webmasters/answer/16908024?hl=en)
+dünyadaki tüm sitelere açtı.
+
+| Seçenek | Ne olur | Ne zaman uygun |
+|---|---|---|
+| Bağlantılarımı ve içeriğimi dahil et (varsayılan) | Siteniz AI cevaplarında kaynak bağlantısı olabilir ve cevabı besleyebilir | Çoğu işletme |
+| Bağlantılarımı ve içeriğimi hariç tut | Bu özelliklerde görünmez, bağlantı verilmez, cevabı beslemez; buradan gösterim ve trafik gelmez | Gelirin doğrudan içerikten geldiği yayıncılar |
+| Üst mülkten devral | Alt mülk, kendi ayarı olan en yakın üst mülkü izler | Birden çok alt alan adı veya dizin |
+
+Değişiklik genelde birkaç gün içinde uygulanıyor; içeriğin hariç tutulması çoğu zaman 1-2 gün sürüyor,
+önbellek nedeniyle bazı sayfalarda daha uzun olabiliyor. Bir ayrıntı daha: alt mülk üst mülkten farklı
+bir ayar seçerse alan adı mülkünün sahibine bildirim gidiyor.
+
+## Kontrol neyi etkiler, neyi etkilemez
+
+En sık karıştırılan nokta, bu ayarın tek bir şalter olduğunu sanmak. Aslında Google'ın içeriği
+kullandığı üç ayrı yol var ve her birinin kendi anahtarı bulunuyor.
+
+<BlogFigure name="google-ai-search-controls" alt="Üç ayrı yol şeması: soldaki tek bir site, sağdaki üç hedefe dallanıyor. Üstteki klasik sonuç listesine giden yol her zaman açık; ortadaki yapay zekâ cevabına giden yol bir anahtar üzerinden geçiyor ve kapatılabiliyor; alttaki model eğitimine giden yol ise ayrı bir anahtara bağlı." caption="Search Console'daki ayar yalnızca ortadaki yolu kapatır. Klasik sonuçlar etkilenmez, model eğitimi için ayrı bir tercih gerekir." />
+
+| Hedef | Yeni kontrol etkiler mi | Asıl araç |
+|---|---|---|
+| AI Bakışı, AI Modu, Discover'daki yapay zekâ özellikleri | Evet | Search Console → Search generative AI |
+| Klasik arama sonuçlarındaki sıralama | Hayır, sinyal olarak kullanılmıyor | Normal SEO çalışması |
+| Yapay zekâ modellerinin eğitimi | Hayır | Google-Extended |
+| Arama'dan tamamen çıkmak | Hayır | noindex |
+| Merchant Center ve Google Ads tercihleri | Hayır, onları geçersiz kılmaz | Kendi panelleri |
+
+Google iki sınırı da açıkça yazıyor. Siteniz hariç olsa bile **başka sitelerin benzer içeriği AI
+cevaplarında görünmeye devam ediyor**. Hariç tutulan site de sorguların ve sayfa dilinin anlaşılması
+gibi genel arama işlevlerinde kullanılmayı sürdürebiliyor.
+
+## Yapay zekâ performans raporu ne gösteriyor
+
+Kontrolle birlikte gelen [Generative AI performance raporu](https://support.google.com/webmasters/answer/16984139?hl=en),
+Performans bölümünün altında ayrı bir sekme olarak açılıyor. İlk kez "AI cevaplarında görünüyor
+muyuz" sorusuna tahmin değil, Google'ın kendi verisiyle cevap veriyor.
+
+- **Ölçtüğü:** gösterim, yani sitenizin bağlantısının AI Bakışı veya AI Modu'nda kaç kez göründüğü.
+  Aynı cevapta birden çok bağlantınız varsa grafik bunu tek gösterim sayıyor.
+- **Kırılımlar:** sayfa, ülke, tarih ve cihaz. "Web: multimodal" filtresiyle Google Lens ve görsel
+  aramalardan gelen gösterimler ayrı görülebiliyor.
+- **Olmayan:** tıklama, tıklama oranı, ortalama konum ve sorgu verisi. Google daha fazla metrik
+  ekleneceğini söylüyor.
+- **Görünmüyorsa:** siteniz henüz yeterli yapay zekâ gösterimi almamış ya da özelliklerden hariç
+  tutulmuş olabilir.
+
+<Callout type="tip" title="Raporu tek başına değil, yan yana okuyun">
+  Aynı sayfalar için yapay zekâ gösterimini, normal performans raporundaki tıklamayı ve analitik
+  aracınızdaki dönüşümü aynı tabloya koyun. Gösterimi yüksek ama tıklaması düşen sayfa, AI cevabının
+  soruyu sizin yerinize kapattığı sayfadır; o sayfada kullanıcıyı siteye çağıracak bir sonraki adım
+  eksiktir.
+</Callout>
+
+## Dışarıda kalmak mantıklı mı: karar rehberi
+
+Bu sorunun tek doğru cevabı yok, ama işletme tipine göre ağırlık belirgin. Aşağıdaki tablo bir
+kural değil, başlangıç noktası.
+
+| İşletme tipi | Önerilen ayar | Gerekçe |
+|---|---|---|
+| Hizmet firması, B2B, kurumsal site | Dahil kal | Kullanıcı sağlayıcı arıyor; kaynak olarak anılmak görünürlük |
+| Yerel işletme (klinik, restoran, servis) | Dahil kal | Google, işletme profilinin de AI cevaplarında görünmeye yardım ettiğini söylüyor |
+| E-ticaret | Dahil kal | Ürün görünürlüğü ayrıca Merchant Center'a bağlı; ayar onu geçersiz kılmıyor |
+| Rehber ağırlıklı içerik sitesi, reklam geliri | Veriyle karar ver | Gelir sayfanın okunmasından geliyor; önce birkaç haftalık rapor verisi |
+| Ücretli içerik, abonelik | Değerlendir | İçeriğin kendisi ürün; özetlenmesi doğrudan gelir kaybı olabilir |
+
+<Callout type="warn" title="Çıkmak rakibinizi de çıkarmıyor">
+  Hariç tutma kararı yalnızca sizin sitenizi etkiler. Aynı soruyu cevaplayan rakip sayfalar AI
+  cevabında kalmaya devam eder. Hizmet satan bir işletme için bu, cevabın sizin değil onların
+  bağlantısıyla bitmesi demek.
+</Callout>
+
+## Görünür kalmak için Google ne diyor
+
+Google'ın Mayıs 2026'da yayımladığı [yapay zekâ araması rehberi](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),
+piyasadaki birçok "AI SEO" önerisini doğrudan yanıtlıyor. Rehbere göre bu özellikler Arama'nın temel
+sıralama ve kalite sistemleri üzerine kurulu; temel kural hâlâ SEO.
+
+- **Gerekli olanlar:** sayfanın dizine eklenmiş ve snippet ile gösterilmeye uygun olması, sitenin bu
+  özelliklere dahil olması, taranabilir içerik, anlamlı HTML, iyi sayfa deneyimi ve özgün, birinci
+  elden içerik.
+- **Gerekmeyenler:** yapay zekâya özel metin dosyaları, özel işaretleme veya Markdown kopyaları
+  (Google Arama bunları yok sayıyor, başka servisler kullanabilir), içeriği küçük parçalara bölmek,
+  "yapay zekâ için" yeniden yazmak, yapay marka anışları toplamak.
+- **Kaçınılması gerekenler:** sorgu varyasyonları için seri sayfa üretmek. Google bunu ölçekli
+  içerik kötüye kullanımı spam politikasına aykırı sayıyor.
+
+Yapılandırılmış veri bu özellikler için zorunlu değil, ama zengin sonuçlar için hâlâ değerli. İçerik
+yapısının ayrıntılarını [SEO'dan GEO'ya yazımızda](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo),
+teknik temeli [hızlı web sitesi nasıl yapılır](/tr/blog/hizli-web-sitesi-nasil-yapilir) yazısında
+anlattık.
+
+## 30 günlük uygulama planı
+
+1. **Ayarı kontrol edin.** Search Console'da Ayarlar → Search generative AI altında hangi seçeneğin
+   aktif olduğuna ve alt mülklerin farklı bir şey seçip seçmediğine bakın.
+2. **Raporu açın ve 4 hafta veri toplayın.** Hangi sayfaların, hangi ülkelerde ve cihazlarda AI
+   cevaplarında göründüğünü dışa aktarın.
+3. **Üç kaynağı birleştirin.** Yapay zekâ gösterimi, normal arama tıklaması ve dönüşümü sayfa bazında
+   aynı tabloya koyun.
+4. **Gösterimi yüksek, tıklaması düşen sayfaları düzeltin.** Cevabın kapatamayacağı bir sonraki adımı
+   (teklif formu, hesaplayıcı, örnek proje, iletişim) sayfanın üst kısmına taşıyın.
+5. **Uygunluğu doğrulayın.** Önemli sayfaların dizinde olduğunu, nosnippet ile kapatılmadığını ve
+   mobilde hızlı açıldığını kontrol edin.
+6. **Kararı veriyle verin.** Hariç tutmayı düşünüyorsanız bunu ancak bu 4 haftalık verinin ardından
+   ve gelirinizin içerikten mi yoksa müşteri talebinden mi geldiğini netleştirdikten sonra yapın.
+
+## Sonuç
+
+Google'ın yeni kontrolü, yapay zekâ cevaplarında görünüp görünmemeyi ilk kez site sahibinin kararına
+bırakıyor. Veriler AI özeti olan aramalarda tıklamanın belirgin düştüğünü gösteriyor; ama çıkmak
+normal sıralamayı korurken o yüzeydeki tüm görünürlüğü rakiplere bırakıyor. Hizmet, yerel işletme ve
+e-ticaret sitelerinin çoğu için doğru hamle dahil kalmak, yeni raporla hangi sayfaların AI
+cevaplarında kullanıldığını ölçmek ve o sayfaları kullanıcıyı siteye çağıracak şekilde güçlendirmek.
+
+Sitenizin AI cevaplarında nasıl göründüğünü birlikte okumak isterseniz [SEO & GEO](/tr/hizmetler/seo-geo)
+ve [bakım ve destek](/tr/hizmetler/bakim-ve-destek) hizmet sayfalarımıza bakabilir, başlangıç bantları
+için [fiyatlandırma sayfasını](/tr/fiyatlandirma) inceleyebilir ya da doğrudan
+[iletişime geçebilirsiniz](/tr/iletisim).

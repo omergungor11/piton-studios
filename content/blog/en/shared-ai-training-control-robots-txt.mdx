@@ -1,0 +1,224 @@
+---
+title: "Saying no to AI training in one line: the shared signal from Google, OpenAI and Microsoft"
+description: "Google, OpenAI, Anthropic and Microsoft will support a shared robots.txt signal for AI training. What changes, whether Search is affected and what to do."
+date: 2026-11-04
+tags: ["seo", "geo", "ai"]
+author: "Piton"
+draft: false
+translationKey: shared-ai-training-control
+sources:
+  - title: "Search Engine Roundtable — Google adopts new AI training control"
+    url: "https://www.seroundtable.com/google-ai-training-control-42430.html"
+  - title: "IETF — Machine-Readable Training Preference Signal (draft-kelley-aipref-training-preference-signal-00)"
+    url: "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/"
+  - title: "Microsoft Bing Blog — Your content, your choice: clearer preferences for training and grounding"
+    url: "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/"
+  - title: "Engadget — Google, OpenAI, Anthropic and Microsoft commit to a new AI crawling control"
+    url: "https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/"
+  - title: "iTech Post — Google, OpenAI and Anthropic unite to introduce new AI scraping controls"
+    url: "https://www.itechpost.com/articles/237707/20261103/google-openai-anthropic-unite-introduce-new-ai-scraping-controls.htm"
+  - title: "Cloudflare — The crawl-to-click gap: Cloudflare data on AI bots, training, and referrals"
+    url: "https://blog.cloudflare.com/crawlers-click-ai-bots-training/"
+  - title: "Longpre et al. — Consent in Crisis: The Rapid Decline of the AI Data Commons"
+    url: "https://arxiv.org/abs/2407.14933"
+faq:
+  - q: "What is the shared signal for AI training?"
+    a: "A way to tell several providers at once, with a single user-agent group in your robots.txt file, that you do not want your site's content used to train AI models. It is based on a draft submitted to the IETF by Kevin Kelley of Anthropic; Google, OpenAI, Anthropic and Microsoft have committed to supporting it."
+  - q: "Does this signal affect my site appearing in Google Search?"
+    a: "No. The draft states plainly that the signal is not a crawling directive, and according to Engadget it does not stop content from appearing in Google Search. Google will interpret it on the training side as if Google-Extended were disallowed; inclusion in the search index stays separate."
+  - q: "When does it take effect?"
+    a: "Anthropic has started supporting it, and OpenAI said it will implement it in the coming months. Google will start in early 2027 and Microsoft on 1 February 2027. Adding the rule now does no harm; it takes effect as supporting providers start reading it."
+  - q: "If I block training, will I still appear in AI answers?"
+    a: "Training and citing sources while generating answers (grounding) are separate uses. Microsoft offers separate preferences for them, and Google says sites that explicitly allow Google-Extended can appear in responses via grounding in Gemini Apps. Check each provider's documentation for which use you are allowing."
+  - q: "What about content that was already collected?"
+    a: "The signal does not work retroactively; according to Engadget it does not undo past crawling. It also does not create a licence, payment or copyright permission. It is only a statement of preference for training use from now on."
+---
+
+A website's content is read today for at least three different jobs: the search index, training AI models
+and being cited as a source in AI answers. Until now, a site owner who wanted to stop training had to know
+each company's bot and list them one by one in robots.txt. On 30 October 2026, Google, Microsoft and other
+major providers announced they would support a single shared signal instead. This post explains how the
+signal works, what it covers and what it doesn't, what the data says about the scale of AI crawling, and how
+to make a decision for your site. We briefly explain what visibility in AI answers means on our
+[FAQ page](/en/faq#faq-llm-visibility).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "A single group added to robots.txt tells several providers together that you don't want your content used for AI training.",
+    "Google, OpenAI, Anthropic and Microsoft have committed to support it; Google starts in early 2027, Microsoft on 1 February 2027.",
+    "The signal is not a crawling directive: it does not affect inclusion in the search index and does not undo past crawling.",
+    "According to Cloudflare data, 80% of AI crawling is for training, and training bots send very few visits back to the site.",
+    "The decision should be made per content type: training, search and being cited in AI answers are managed separately.",
+  ]}
+/>
+
+## What was announced?
+
+[According to Search Engine Roundtable](https://www.seroundtable.com/google-ai-training-control-42430.html),
+Google announced it would voluntarily adopt the training preference proposal developed in the IETF's AI
+Preferences (AIPREF) working group. In Google's words, it will help websites "express their AI training
+preferences across multiple AI providers in a single step".
+
+The technical text was published [as an individual IETF draft](https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/).
+Its author is Kevin Kelley of Anthropic, and the acknowledgements include people from Google, OpenAI,
+Microsoft and Meta. The draft is not yet a standard adopted by the IETF, but the joint commitment of the major
+providers turns it into a rule that will be applied in practice.
+
+| Provider | Support status | Source |
+|---|---|---|
+| Anthropic | Has started supporting it | Engadget |
+| OpenAI | In the coming months | Engadget |
+| Google | Early 2027 | Search Engine Roundtable |
+| Microsoft | 1 February 2027 | Microsoft Bing Blog |
+| Meta | Expressed support, has not confirmed it will honour it | iTech Post |
+
+## How does the signal work?
+
+The draft introduces no new file and no new grammar. It uses robots.txt's familiar user-agent group; the
+difference is that the group is named after a purpose of use rather than a bot. The example in
+[Microsoft's announcement](https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/)
+and the draft looks like this:
+
+```txt
+# No AI training for the whole site, except the press kit
+User-Agent: __usage_ai-training
+Disallow: /
+Allow: /press-kit/
+```
+
+The draft has a few important rules. The general group written for all bots (the asterisk line) does not
+stand in for this signal; you have to write the group explicitly to state your preference. A rule for a
+specific path takes precedence over a general one. Most importantly, the draft says the token "is not a
+directive for crawling behavior": it concerns whether crawled content is used for training, not whether
+bots crawl your site.
+
+<StatGrid
+  items={[
+    { value: "80%", label: "Share of AI crawling for training over the past 12 months", note: "CLOUDFLARE" },
+    { value: "28%+", label: "Critical sources in the C4 dataset fully restricted within one year", note: "CONSENT IN CRISIS" },
+    { value: "1 Feb 2027", label: "Date Microsoft starts reading the shared signal", note: "MICROSOFT" },
+  ]}
+/>
+
+## Is Search affected?
+
+No, and that distinction is at the centre of the decision. [According to Engadget](https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/),
+the new group does not stop crawling altogether and does not prevent content from showing up in Google
+Search. Google will interpret the signal on the training side as blocking Google-Extended, which collects
+content for Gemini models. According to John Mueller of Google, as quoted by Search Engine Roundtable, this
+applies when Google-Extended is not explicitly specified, and existing company-specific controls continue to work.
+
+<BlogFigure name="shared-ai-training-control" alt="On the left, a site and a robots.txt document with a highlighted line. Light lines run from the document to three lanes on the right. At the top, a search result and a tick, in the middle an AI model cube and a cross, at the bottom a chat bubble and a dashed marker managed separately." caption="Same content, three separate uses: the shared training signal stops only model training. The search index is not affected, and being cited in AI answers is managed through each provider's own controls." />
+
+The controls for the three uses currently break down like this:
+
+| Use | Affected by the shared training signal? | Separate control |
+|---|---|---|
+| Search index and results | No | noindex, search bot rules in robots.txt |
+| AI model training | Yes | Company-specific bots (Google-Extended, GPTBot, ClaudeBot) keep working too |
+| Being cited in AI answers | Not directly | Google: the generative AI control in Search Console; Bing: page-level grounding preference |
+
+We covered Google's separate control for AI Overviews and AI Mode in search results in our
+[post on Google's new AI control](/en/blog/google-ai-search-controls-ai-overviews-ai-mode).
+
+<Callout type="warn" title="It doesn't undo past crawling, and it isn't a licence">
+  The signal is only a statement of preference for future use. According to Engadget it does not undo
+  content collected in the past, and according to iTech Post it does not create a licence, payment or
+  copyright permission. If you want a contract for commercial use of your content, that is a separate matter.
+</Callout>
+
+## Microsoft draws a finer line
+
+Microsoft's announcement brings separate page-level preferences for training and for citing sources while
+generating answers (grounding). Grounding has three options: allow by default, allow only in Microsoft's own
+products, and block entirely. Microsoft says these new preferences replace the old NoArchive and NoCache tags,
+and that after 1 March 2027 those tags will no longer be read as training or grounding preferences. For sites
+using these tags today, a temporary transition setting opens in Bing Webmaster Tools on 15 December 2026.
+
+## What does the data say?
+
+What makes the decision meaningful is the scale of AI crawling and what it gives back.
+[According to Cloudflare's network data](https://blog.cloudflare.com/crawlers-click-ai-bots-training/),
+over the past 12 months 80% of AI crawling was for training, 18% for search and only 2% for user actions.
+Training's share rose from 72% in July 2024 to 79% in July 2025.
+
+<BarChart
+  title="AI crawling by purpose"
+  caption="Past 12 months, percent. Source: Cloudflare (August 2025)."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Training", value: 80, highlight: true },
+    { label: "Search", value: 18 },
+    { label: "User actions", value: 2 },
+  ]}
+/>
+
+The same report compares the number of pages bots crawl with the visits they send back. In July 2025,
+OpenAI crawled 1,091 pages per referred visit, Perplexity 195 and Microsoft 40.7. For Anthropic the ratio
+was 38,000; we left it out of the chart because its scale would make the others unreadable.
+
+<BarChart
+  title="Pages crawled per referred visit"
+  caption="July 2025. Anthropic's ratio (38,000) is left out because of scale. Source: Cloudflare."
+  max={1200}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "OpenAI", value: 1091, highlight: true },
+    { label: "Perplexity", value: 195 },
+    { label: "Microsoft", value: 40.7 },
+  ]}
+/>
+
+Site owners are already reacting. [According to the Consent in Crisis study](https://arxiv.org/abs/2407.14933),
+in a single year between 2023 and 2024 more than 28% of the most actively maintained, critical sources in
+the widely used C4 training dataset were fully restricted from AI use through robots.txt. The shared signal
+makes that decision easier without having to track each company's bot separately.
+
+## A decision guide for your site
+
+| Situation | Training | Search | Cited in AI answers |
+|---|---|---|---|
+| Corporate brochure site, service pages | Leaving it open usually makes sense | Open | Open |
+| Blog, guides, site producing original content | Decide deliberately | Open | Open |
+| Paid content, reports, courses | Consider closing it | Partly | Depends |
+| Product catalogue and e-commerce | Usually open | Open | Open |
+| Press kit, logos, official statements | Open | Open | Open |
+
+For promotional and sales content, visibility is usually worth more than blocking: AI models knowing your
+brand and services correctly is part of appearing in their answers. For original research, paid content or
+labour-intensive guides, closing training is a legitimate choice.
+
+<Callout type="tip" title="Inventory first, then the rule">
+  Before adding a rule to robots.txt, list which content types your site has and which paths they sit under.
+  Because the shared signal works per path, closing the blog while leaving the press kit open is only
+  possible if content is organised into clean folders.
+</Callout>
+
+## Common mistakes
+
+- **Closing search while closing training.** A rule that blocks the search bot can remove your site from
+  search results. The shared signal is a separate group; leave your search bot rules alone.
+- **Assuming the general rule is enough.** According to the draft, the general group for all bots does not
+  stand in for this signal; you have to write the group explicitly.
+- **Not reviewing company-specific rules.** Rules you wrote for Google-Extended, GPTBot or ClaudeBot keep
+  working. If you wrote a separate rule for Google-Extended, Google does not replace it with the shared
+  signal; make sure the two rules don't contradict each other.
+- **Assuming support starts immediately.** Google and Microsoft start in 2027; until then the existing
+  controls apply.
+- **Deciding once and forgetting.** As new providers and new controls arrive, the robots.txt file should be
+  reviewed at least once a year.
+
+## Conclusion
+
+The shared training signal delivers something site owners have wanted for years: deciding on AI training in
+one place, with one rule. But the signal only concerns training; search and being cited in AI answers are
+still managed separately. The right decision depends on the content type, and although the technical part is
+one line, its consequences directly affect your visibility.
+
+If you want to review your site's robots.txt and AI visibility together, take a look at our
+[SEO and GEO](/en/services/seo-geo) and [maintenance and support](/en/services/maintenance-support) services,
+read our [post on search visibility in the AI era](/en/blog/search-visibility-in-the-ai-era-seo-to-geo),
+or [get in touch](/en/contact) directly.

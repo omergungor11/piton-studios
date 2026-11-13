@@ -1,0 +1,235 @@
+---
+title: "Core Web Vitals artık sayfa içi geçişleri de ölçüyor: SPA siteler için ne değişti?"
+description: "Chrome, tek sayfa uygulamalarındaki sayfa içi geçişleri (soft navigation) CrUX verisine ekledi. Next.js ve React siteleri için ne değişiyor, ne yapmalı?"
+date: 2026-11-10
+tags: ["performans", "seo", "next.js"]
+author: "Piton"
+draft: false
+translationKey: soft-navigation-core-web-vitals
+sources:
+  - title: "web.dev — Experimental soft navigation metrics now available in CrUX"
+    url: "https://web.dev/blog/crux-experimental-soft-navs/"
+  - title: "Chrome for Developers — Chrome UX Report release notes"
+    url: "https://developer.chrome.com/docs/crux/release-notes"
+  - title: "Chrome for Developers — Measuring soft navigations"
+    url: "https://developer.chrome.com/docs/web-platform/soft-navigations"
+  - title: "Relevant Audience — Chrome adds soft navigation Core Web Vitals to CrUX"
+    url: "https://www.relevantaudience.com/seo/chrome-crux-experimental-soft-navigation-core-web-vitals/"
+faq:
+  - q: "Soft navigation nedir?"
+    a: "Tek sayfa uygulamalarında (SPA) kullanıcı bir bağlantıya tıkladığında tarayıcının yeni bir HTML belgesi yüklemek yerine sayfa içeriğini ve adres çubuğundaki URL'yi JavaScript ile değiştirmesidir. Chrome'un tanımına göre geçiş bir kullanıcı eylemiyle başlamalı, URL görünür biçimde değişmeli ve ekranda yeni bir çizim olmalı."
+  - q: "Bu değişiklik Google sıralamasını etkiler mi?"
+    a: "Chrome'un duyurusu sıralamadan söz etmiyor. Yeni ölçümler deneysel ve mevcut Core Web Vitals değerleri değişmedi. Chrome, ölçümleri Mayıs 2027'de geri bildirime bağlı olarak kararlı hale getirmeyi ve ardından Search Console'u yeni veriye geçirmeyi hedefliyor."
+  - q: "Sitemin soft navigation verisini nereden görebilirim?"
+    a: "Ekim 2026'dan itibaren CrUX'un BigQuery veri seti, CrUX API ve CrUX History API'de deneysel alanlar olarak yer alıyor; CrUX Vis aracı da güncellendi. Sitenizde gerçek kullanıcı ölçümü yapıyorsanız Chrome 151 ve sonrasında tarayıcının yeni soft navigation kayıtlarını da toplayabilirsiniz."
+  - q: "Safari ve Firefox kullanıcıları ölçülüyor mu?"
+    a: "Hayır. Chrome'un belgesine göre özellik Chrome ve Edge 151 ile varsayılan olarak açık; Firefox ve Safari desteklemiyor. CrUX zaten yalnızca Chrome kullanıcılarından veri topladığı için bu veriler Safari ağırlıklı kitlelerin deneyimini göstermez."
+  - q: "SPA sitem bu ölçümle daha mı iyi görünecek?"
+    a: "Çoğu durumda LCP tarafında evet: ilk verilerde ağırlıklı olarak soft navigation kullanan Android sitelerde iyi LCP oranı %26'dan %87'ye çıktı. Ama Chrome bunun SPA'ların daha hızlı olmasından değil, hızlı sayfa içi geçişlerin artık hesaba katılmasından kaynaklandığını belirtiyor. INP'de SPA ağırlıklı siteler hâlâ çok sayfalı sitelerin gerisinde."
+---
+
+Next.js, React veya benzeri çerçevelerle kurulan sitelerin çoğu, ilk yüklemeden sonra sayfa geçişlerini yeni bir
+belge yüklemeden JavaScript ile yapar. Bugüne kadar Chrome'un gerçek kullanıcı verisi (CrUX) bu geçişleri görmüyordu:
+LCP yalnızca ilk yüklemeyi ölçüyor, INP ve CLS ise tüm oturum boyunca tek bir sayfa ziyaretine yazılıyordu. 13 Ekim
+2026'da Chrome, bu "sayfa içi geçişleri" (soft navigation) de kapsayan deneysel Core Web Vitals ölçümlerini CrUX'a
+ekledi. Bu yazıda neyin değiştiğini, ilk verilerin ne gösterdiğini ve kendi sitenizi nasıl kontrol edeceğinizi
+anlatıyoruz. Performansı projelerde nasıl ele aldığımızı [SSS sayfamızda](/tr/sss#faq-performance) kısaca açıkladık.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "CrUX, Eylül 2026 veri setinden itibaren LCP, INP ve CLS'nin sayfa içi geçişleri de kapsayan deneysel sürümlerini yayımlıyor.",
+    "Ölçüm Chrome ve Edge 151 ile varsayılan olarak açık; Firefox ve Safari desteklemiyor.",
+    "Tüm siteler genelinde üç metrikte de iyi olan sitelerin oranı soft navigation dahil edildiğinde %55,9'dan %59,5'e çıkıyor.",
+    "Mevcut Core Web Vitals değerleri değişmedi; Chrome yeni ölçümleri Mayıs 2027'de kararlı hale getirip Search Console'u bunlara geçirmeyi hedefliyor.",
+    "Sıralamaya etkisi açıklanmadı; ama SPA siteler için hangi geçişin yavaş olduğu artık gerçek kullanıcı verisinde görülebiliyor.",
+  ]}
+/>
+
+## Ne değişti?
+
+[web.dev'deki duyuruya göre](https://web.dev/blog/crux-experimental-soft-navs/) Chrome, tarayıcıdaki Soft Navigations
+API'si ile birlikte CrUX'a üç yeni deneysel alan ekledi: LCP, INP ve CLS'nin sayfa içi geçişleri de kapsayan
+sürümleri. Veriler Ekim 2026'da yayımlanan veri setinden itibaren BigQuery'de, CrUX API'de ve CrUX History API'de
+yer alıyor. Chrome, bir sonraki CrUX sürümünde gezinme türleri ve FCP için de soft navigation ölçümleri eklemeyi
+beklediğini belirtiyor.
+
+[Chrome'un belgesine göre](https://developer.chrome.com/docs/web-platform/soft-navigations) özellik Chrome 151 ve
+Edge 151'de varsayılan olarak açık, Firefox ve Safari'de ise desteklenmiyor. Mevcut Core Web Vitals değerleri
+değişmedi; yeni ölçümler onların yanında ayrı alanlar olarak duruyor.
+
+| | Klasik ölçüm | Soft navigation dahil ölçüm |
+|---|---|---|
+| LCP | Yalnızca ilk sayfa yüklemesi | Her sayfa içi geçişin kendi LCP'si de |
+| INP ve CLS | Tüm oturum ilk sayfa ziyaretine yazılır | İlk soft navigation'da klasik sayfa ziyareti biter, her geçiş ayrı sayılır |
+| Durum | Kararlı, Search Console'da kullanılıyor | Deneysel, Mayıs 2027 hedefi |
+| Tarayıcı | Chrome | Chrome ve Edge 151+ |
+
+## Soft navigation nedir?
+
+Klasik bir sitede her bağlantı tıklaması tarayıcıya yeni bir HTML belgesi yükletir. Tek sayfa uygulamalarında
+(SPA) ise ilk yüklemeden sonra tarayıcı sayfada kalır; JavaScript yeni içeriği çizer ve adres çubuğundaki URL'yi
+değiştirir. Kullanıcı için bu da bir sayfa geçişidir, ama tarayıcı açısından yeni bir sayfa yüklenmemiştir.
+
+Chrome bir geçişi soft navigation saymak için üç koşul arıyor: geçiş bir kullanıcı eylemiyle başlamalı, kullanıcının
+gördüğü URL değişmeli ve etkileşimin ardından ekranda görünür bir çizim olmalı. Belge bu sezgisel yaklaşımın yanlış
+pozitif ve yanlış negatif sonuçlar verebileceğini de açıkça yazıyor. Ayrıca birçok JavaScript çerçevesinin bu modeli
+kullandığını, ama her birinin farklı bir şekilde kullandığını belirtiyor.
+
+<BlogFigure name="soft-navigation-core-web-vitals" alt="İki şerit. Üstte bir tarayıcı ve sağa doğru dizilmiş üç ekran görünümü; yalnızca ilkinde bir saat ve onay işareti var, diğer ikisi kesik çizgili ve ölçülmemiş. Altta aynı üç görünüm, her birinin kendi saati ve onay işareti var." caption="Klasik ölçümde tek sayfa uygulamasının yalnızca ilk yüklemesi LCP olarak ölçülür, sonraki geçişler görünmez. Soft navigation dahil ölçümde her sayfa içi geçiş kendi ölçümüyle sayılır." />
+
+## Bu neden önemliydi?
+
+Klasik ölçüm SPA'lar için iki yönden yanıltıcıydı. Birincisi, sayfa içi geçişler çoğu zaman hızlı olmasına rağmen
+LCP'ye hiç girmiyordu; sitenin LCP'si yalnızca en ağır an olan ilk yüklemeden ibaretti. İkincisi, kullanıcının oturum
+boyunca yaptığı tüm etkileşimler ve kaymalar tek bir sayfa ziyaretine yazıldığı için INP ve CLS uzun oturumlarda
+şişebiliyordu.
+
+[Chrome'un belgesine göre](https://developer.chrome.com/docs/web-platform/soft-navigations) yeni yaklaşımda ilk soft
+navigation gerçekleştiğinde klasik sayfa ziyaretinin INP ve CLS ölçümü sona eriyor; her geçiş kendi ölçümüyle
+başlıyor. Geçişin LCP'si ise yalnızca o etkileşimden sonra ekrana yeni çizilen içerikten hesaplanıyor.
+
+<Callout type="warn" title="Deneysel veri, sıralama hakkında açıklama yok">
+  Chrome'un duyurusu Google arama sıralamasından söz etmiyor. Yeni ölçümler deneysel; Chrome bunları Mayıs 2027'de
+  "geri bildirime bağlı olarak" kararlı hale getirmeyi ve ardından Search Console'u yeni veriye geçirmeyi hedefliyor.
+  Bugün sıralama için yeni bir eşik yok, ama Search Console raporlarının ileride bu veriyle güncelleneceği belli.
+</Callout>
+
+## İlk veriler ne gösteriyor?
+
+[CrUX sürüm notlarına göre](https://developer.chrome.com/docs/crux/release-notes) Eylül 2026 veri seti 18.376.044
+siteyi kapsıyor. Soft navigation dahil edildiğinde dört göstergenin hepsinde iyi değerlendirilen sitelerin oranı
+artıyor; en büyük sıçrama LCP'de.
+
+<StatGrid
+  items={[
+    { value: "%70", label: "Sayfa görüntülemelerinin %5'inden azı soft navigation olan siteler", note: "CHROME" },
+    { value: "%26 → %87", label: "Ağırlıklı soft navigation kullanan Android sitelerde iyi LCP oranı", note: "CHROME" },
+    { value: "Mayıs 2027", label: "Ölçümlerin kararlı hale gelmesi ve Search Console'a geçişi için hedef", note: "CHROME" },
+  ]}
+/>
+
+<BarChart
+  title="İyi değerlendirilen sitelerin oranı, klasik ve soft navigation dahil"
+  caption="Eylül 2026 CrUX veri seti, 18.376.044 site, yüzde. Kaynak: Chrome UX Report sürüm notları."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "LCP, klasik", value: 68.3 },
+    { label: "LCP, soft nav dahil", value: 72.1, highlight: true },
+    { label: "CLS, klasik", value: 81.7 },
+    { label: "CLS, soft nav dahil", value: 85.1, highlight: true },
+    { label: "INP, klasik", value: 85.4 },
+    { label: "INP, soft nav dahil", value: 87.4, highlight: true },
+    { label: "Üçü birden, klasik", value: 55.9 },
+    { label: "Üçü birden, soft nav dahil", value: 59.5, highlight: true },
+  ]}
+/>
+
+Genel tablo küçük bir değişim gibi görünüyor, çünkü sitelerin çoğu SPA değil. [Chrome'un verisine göre](https://web.dev/blog/crux-experimental-soft-navs/)
+sitelerin yaklaşık %70'inde sayfa görüntülemelerinin %5'inden azı soft navigation. Sayfa görüntülemelerinin yarısından
+fazlası soft navigation olan sitelerin oranı Android'de %7,0, masaüstünde %10,6. En çok ziyaret edilen 1.000 sitede
+ise bu oran Android'de %35, masaüstünde %42'ye çıkıyor.
+
+<BarChart
+  title="Sayfa görüntülemelerinin yarısından fazlası soft navigation olan siteler"
+  caption="Yüzde. Kaynak: web.dev (Ekim 2026)."
+  unit="%"
+  max={50}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Tüm siteler, Android", value: 7 },
+    { label: "Tüm siteler, masaüstü", value: 10.6 },
+    { label: "İlk 1.000 site, Android", value: 35 },
+    { label: "İlk 1.000 site, masaüstü", value: 42, highlight: true },
+  ]}
+/>
+
+Asıl fark SPA ağırlıklı sitelerde. Sayfa görüntülemelerinin %75-100'ü soft navigation olan Android sitelerde, iyi LCP'ye
+sahip sitelerin oranı klasik ölçümde %26 iken soft navigation dahil ölçümde %87.
+
+<BarChart
+  title="Ağırlıklı soft navigation kullanan Android sitelerde iyi LCP"
+  caption="Sayfa görüntülemelerinin %75-100'ü soft navigation olan siteler, Android, yüzde. Kaynak: web.dev (Ekim 2026)."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Klasik ölçüm", value: 26 },
+    { label: "Soft navigation dahil", value: 87, highlight: true },
+  ]}
+/>
+
+Chrome bu sıçramanın SPA'ların çok sayfalı sitelerden genel olarak daha hızlı olmasından kaynaklanmadığını özellikle
+vurguluyor: hızlı sayfa içi geçişler artık hesaba katılıyor. CLS'de SPA ağırlıklı siteler masaüstünde çok sayfalı
+sitelerle aynı seviyeye geliyor, Android'de neredeyse yakalıyor. INP'de ise Android'deki geçme oranı yaklaşık iki
+katına çıksa da Chrome'un ifadesiyle SPA ağırlıklı siteler genel olarak iyi INP'de çok sayfalı sitelerin gerisinde
+kalmaya devam ediyor.
+
+## Sizin siteniz için ne anlama geliyor?
+
+| Sitenizin yapısı | Beklenen etki | Öncelik |
+|---|---|---|
+| Klasik çok sayfalı site (WordPress tema, sunucuda üretilen sayfalar) | Neredeyse hiç değişmez | Mevcut Core Web Vitals'ı izlemeye devam edin |
+| Next.js veya React ile kurulmuş, geçişleri istemci tarafında yapan kurumsal site | LCP muhtemelen iyileşir, INP ve CLS geçiş geçiş görünür hale gelir | Yeni alanları CrUX'ta kontrol edin |
+| Panel, uygulama, e-ticaret filtreleri gibi yoğun etkileşimli SPA | En büyük değişim burada; yavaş geçişler artık veride görünür | Geçiş bazında ölçüm kurun |
+| Safari ağırlıklı mobil kitle | CrUX bu kitleyi göstermez | Kendi gerçek kullanıcı ölçümünüzü kurun |
+
+Next.js ile hızlı site kurmanın genel ilkelerini [hızlı web sitesi yazımızda](/tr/blog/hizli-web-sitesi-nasil-yapilir),
+çerçeve seçimini ise [Next.js mi WordPress mi yazımızda](/tr/blog/nextjs-mi-wordpress-mi) anlattık.
+
+## Kendi sitenizi nasıl kontrol edersiniz?
+
+Sitenizin trafiği CrUX'a girecek kadar yüksekse yeni deneysel alanları CrUX API, CrUX History API veya BigQuery
+üzerinden sorgulayabilir, CrUX Vis aracıyla görsel olarak inceleyebilirsiniz. Trafiği düşük sitelerde CrUX verisi
+çıkmayabilir; bu durumda kendi ölçümünüz gerekir.
+
+Chrome'un belgesi bunun için birkaç pratik uyarı içeriyor:
+
+- Tarayıcı her soft navigation için ayrı bir performans kaydı üretiyor; bu kayıtların bir gözlemciyle toplanması
+  öneriliyor, çünkü tamponda tutulan kayıtlar ilk 50 ile sınırlı.
+- Geçişin LCP'si standart LCP kaydından değil, etkileşim sonrası çizim kayıtlarından okunuyor.
+- Yalnızca yeni çizilen içerik sayıldığı için, ekranda değişmeden kalan içerik geçişin LCP'sini soğuk bir
+  yüklemeden farklı gösterebilir.
+- Chrome'un web-vitals kütüphanesi soft navigation'larda sunucu yanıt süresini (TTFB) 0 olarak raporluyor.
+- Chromium dışındaki tarayıcılarda ve Chrome 151 öncesinde bu ölçümler gelmiyor.
+
+<Callout type="tip" title="Önce en çok kullanılan geçişler">
+  Her geçişi aynı anda iyileştirmeye çalışmayın. Ölçüm kurduktan sonra en çok tıklanan iki üç geçişi (örneğin
+  ürün listesinden ürün detayına, menüden hizmet sayfasına) bulun ve önce onların INP ve LCP'sine bakın. Geçişte
+  yüklenen büyük bir veri isteği veya ağır bir bileşen sık görülen nedenler arasındadır.
+</Callout>
+
+## Kontrol listesi
+
+| Adım | Ne yapılır? |
+|---|---|
+| 1. Yapıyı belirleyin | Sitenizin geçişleri yeni sayfa mı yüklüyor, istemci tarafında mı yapıyor? |
+| 2. CrUX'a bakın | Yeni deneysel LCP, INP ve CLS alanlarını klasik değerlerle karşılaştırın |
+| 3. Kitleyi kontrol edin | Analytics'te Chrome ve Safari payına bakın; Safari ağırlıklıysa CrUX eksik kalır |
+| 4. Ölçüm kurun | Kendi gerçek kullanıcı ölçümünüze soft navigation kayıtlarını ekleyin |
+| 5. Yavaş geçişleri bulun | Geçiş bazında en kötü INP ve LCP değerlerini listeleyin |
+| 6. Mayıs 2027'ye hazırlanın | Search Console'un yeni veriye geçeceğini varsayarak sorunları şimdiden giderin |
+
+## Yaygın hatalar
+
+- **Yeni değerleri sıralama metriği sanmak.** Ölçümler deneysel ve Chrome sıralama hakkında bir şey söylemedi.
+- **Daha iyi LCP'yi daha hızlı site sanmak.** Chrome, SPA'lardaki sıçramanın ölçüm kapsamından kaynaklandığını
+  açıkça yazıyor; ilk yükleme hâlâ aynı hızda.
+- **INP'yi gözden kaçırmak.** SPA ağırlıklı siteler INP'de çok sayfalı sitelerin gerisinde; geçişte çalışan ağır
+  JavaScript işleri tipik bir neden.
+- **Yalnızca Chrome verisine güvenmek.** Safari ve Firefox kullanıcıları bu ölçümde yok.
+- **Her geçişin sayılacağını varsaymak.** Chrome'un tanımı kullanıcı eylemi, görünür URL değişikliği ve yeni çizim
+  arıyor; belge bu yaklaşımın yanlış pozitif ve yanlış negatif sonuçlar verebileceğini de yazıyor.
+
+## Sonuç
+
+Soft navigation ölçümleri, SPA siteler için yıllardır eksik olan bir şeyi getiriyor: kullanıcının sitede gezinirken
+yaşadığı gerçek deneyimi, yalnızca ilk yüklemeyi değil. Veriler deneysel ve sıralamaya etkisi açıklanmadı, ama
+Chrome'un hedefi Mayıs 2027'de Search Console'u bu veriye geçirmek. Next.js veya React ile kurulmuş bir siteniz varsa,
+geçişlerinizin nasıl göründüğünü şimdiden öğrenmek için iyi bir zaman.
+
+Sitenizin performansını yeni ölçümlere göre gözden geçirmek isterseniz [web tasarım](/tr/hizmetler/web-tasarim),
+[web uygulama](/tr/hizmetler/web-uygulama) ve [bakım ve destek](/tr/hizmetler/bakim-ve-destek) hizmet sayfalarımıza
+bakabilir ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).
