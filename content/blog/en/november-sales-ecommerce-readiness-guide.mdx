@@ -1,6 +1,6 @@
 ---
 title: "Five weeks to the November sales: how to get your online store ready for the peak"
-description: "Speed, infrastructure, payments, the 30-day price rule and shipping for the November sales. A timeline and checklist for online stores, with data from Türkiye."
+description: "Speed, infrastructure, payments, discount price rules and shipping for the November sales. A timeline and checklist for online stores, with data from Türkiye."
 date: 2026-10-22
 tags: ["e-commerce", "performance", "campaigns"]
 author: "Piton"
@@ -25,11 +25,13 @@ sources:
     url: "https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi"
   - title: "Diken — Ministry warning on discounted sales: the last 30 days' price must be the basis (in Turkish)"
     url: "https://www.diken.com.tr/?p=1606389"
+  - title: "Ministry of Trade (Türkiye) — Amendments to the Regulation on Commercial Advertising and Unfair Commercial Practices (1 July 2026, in Turkish)"
+    url: "https://ticaret.gov.tr/haberler/ticaret-bakanligi-tarafindan-ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeliginde-yapilan-degisikliklerle-tuketicilerin-aldatici-reklam-ve-ticari-uygulamalara-karsi-korunmasi-guclendiriliyor"
 faq:
   - q: "When should we start preparing for the November sales?"
     a: "Infrastructure and code changes should start at least 4-5 weeks before the campaign. No major changes are made in the last two weeks; that time is for load testing, payment and shipping rehearsals and a final check of campaign pages. In 2026, Black Friday falls on Friday 27 November."
   - q: "How should the old price be shown in a discount?"
-    a: "According to Türkiye's Ministry of Trade, the discount should be calculated from the lowest price applied in the 30 days before the discount starts, and the previous price should be shown in the ad. The campaign's start and end dates, and any stock limit, should also be stated clearly."
+    a: "According to Türkiye's Ministry of Trade, the discount should be calculated from the lowest price applied in the 30 days before the discount starts, and the previous price should be shown in the ad. Under the regulation amendment in force since 1 August 2026, however, the previous price in a discount ad is the lowest price of the last ten days. The campaign's start and end dates, and any stock limit, should also be stated clearly."
   - q: "What happens if the site goes down on campaign day?"
     a: "The loss is not only those hours' sales: ad budget is wasted, orders stuck at payment load customer service, and brand trust suffers. That is why caching, the CDN, a payment fallback and monitoring alerts should be tested before the campaign, with a written plan for who does what when something breaks."
   - q: "Does site speed really make a difference during a campaign?"
@@ -52,7 +54,7 @@ infrastructure options [in our FAQ](/en/faq#faq-payment-integration).
     "E-commerce volume in the November 2025 campaign period was 41.5% higher than in the same period a year earlier.",
     "The share of people in Türkiye who shop online reached 60% for the first time in 2026.",
     "A 0.1-second speed-up on a mobile site can raise retail conversion by 8.4%; on peak days that difference turns into revenue.",
-    "Discounts must be based on the lowest price of the previous 30 days, with dates and any stock limit stated clearly.",
+    "Since 1 August 2026, the previous price in a discount ad is the lowest price of the last 10 days; keep at least 30 days of price history and state dates and any stock limit clearly.",
     "Code and infrastructure changes should be frozen two weeks before the campaign, leaving the last weeks for testing and rehearsal.",
   ]}
 />
@@ -185,7 +187,7 @@ The practical takeaways:
 - **Showing instalments:** instalment options should be clear on the product page; a difference
   first seen at checkout makes people abandon the cart.
 
-## Prices and discounts: the 30-day rule
+## Prices and discounts: the previous price rule
 
 The legal side of a campaign is the part most often skipped. According to Türkiye's Ministry of
 Trade, [the discount should be based on the lowest price applied in the 30 days before the discount starts](https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi),
@@ -193,11 +195,16 @@ and the previous price should be shown in the ad. The campaign's start and end d
 covers and any stock limit should be stated clearly and understandably; misleading wording or visuals
 about discounted products and rates should not be used.
 
+The rule has been updated since that warning. [According to the Ministry's announcement of 1 July 2026](https://ticaret.gov.tr/haberler/ticaret-bakanligi-tarafindan-ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeliginde-yapilan-degisikliklerle-tuketicilerin-aldatici-reklam-ve-ticari-uygulamalara-karsi-korunmasi-guclendiriliyor),
+under the regulation amendment in force since 1 August 2026, the previous price in a discount ad is the lowest
+price applied in the last ten days before the discount starts. We cover the details, and the changes to review
+rules, in our [post on Türkiye's e-commerce review and discount rules](/en/blog/turkiye-ecommerce-review-discount-ad-rules).
+
 Enforcement is real: in the first half of 2025, the Advertising Board
 [reviewed 12,499 files, found violations in 753 and imposed 141 million TL in fines](https://www.diken.com.tr/?p=1606389).
 
 <Callout type="key" title="Keep price history in the system">
-  The most reliable way to follow the 30-day rule is to store each product's price history in the
+  The most reliable way to follow the previous price rule is to store each product's price history in the
   system and calculate the "previous price" on the campaign label automatically from that record. An
   old price entered by hand leaves both room for error and a record that is hard to defend in an
   inspection.
@@ -234,7 +241,7 @@ cancelled.
   the payment step.
 - **Depending on a single payment provider.** An outage at the peak is a direct loss of sales on a
   site with no backup.
-- **Calculating the discount rate by hand.** Breaching the 30-day rule risks both fines and lost
+- **Calculating the discount rate by hand.** Breaching the previous price rule risks both fines and lost
   trust.
 - **Running the campaign without measurement.** Spending without knowing which channel brought sales
   leaves next year's budget to guesswork.

@@ -1,6 +1,6 @@
 ---
 title: "Kasım indirimlerine 5 hafta: e-ticaret sitenizi zirveye nasıl hazırlarsınız?"
-description: "Kasım kampanya dönemi için hız, altyapı, ödeme, 30 gün fiyat kuralı ve kargo hazırlığı. Türkiye verileriyle e-ticaret siteleri için takvim ve kontrol listesi."
+description: "Kasım kampanya dönemi için hız, altyapı, ödeme, indirim kuralları ve kargo hazırlığı. Türkiye verileriyle e-ticaret siteleri için takvim ve kontrol listesi."
 date: 2026-10-22
 tags: ["e-ticaret", "performans", "kampanya"]
 author: "Piton"
@@ -25,11 +25,13 @@ sources:
     url: "https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi"
   - title: "Diken — Bakanlıktan 'indirimli satış' uyarısı: son 30 günlük fiyat esas alınmalı"
     url: "https://www.diken.com.tr/?p=1606389"
+  - title: "Ticaret Bakanlığı — Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliğinde yapılan değişiklikler (1 Temmuz 2026)"
+    url: "https://ticaret.gov.tr/haberler/ticaret-bakanligi-tarafindan-ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeliginde-yapilan-degisikliklerle-tuketicilerin-aldatici-reklam-ve-ticari-uygulamalara-karsi-korunmasi-guclendiriliyor"
 faq:
   - q: "Kasım kampanyası için hazırlığa ne zaman başlamalı?"
     a: "Altyapı ve kod değişiklikleri için en geç kampanyadan 4-5 hafta önce başlamak gerekir. Son iki haftada büyük değişiklik yapılmaz; bu süre yük testi, ödeme ve kargo provası ve kampanya sayfalarının son kontrolüne ayrılır. 2026'da Black Friday 27 Kasım Cuma'ya denk geliyor."
   - q: "İndirimde eski fiyat nasıl gösterilmeli?"
-    a: "Ticaret Bakanlığı'nın uyarısına göre indirim oranı, indirimin başladığı tarihten önceki 30 gün içinde uygulanan en düşük fiyat esas alınarak hesaplanmalı ve önceki fiyat reklamda gösterilmeli. Kampanyanın başlangıç ve bitiş tarihi, varsa stok sınırı da açıkça yazılmalı."
+    a: "Ticaret Bakanlığı'nın uyarısına göre indirim oranı, indirimin başladığı tarihten önceki 30 gün içinde uygulanan en düşük fiyat esas alınarak hesaplanmalı ve önceki fiyat reklamda gösterilmeli. 1 Ağustos 2026'da yürürlüğe giren yönetmelik değişikliğine göre ise indirim reklamında önceki fiyat, son on günün en düşük fiyatı. Kampanyanın başlangıç ve bitiş tarihi, varsa stok sınırı da açıkça yazılmalı."
   - q: "Kampanya günü sitem çökerse ne olur?"
     a: "Kayıp yalnızca o saatlerin satışı değildir; reklam bütçesi boşa yanar, ödeme yarıda kalan siparişler müşteri hizmetine yük olur ve marka güveni zarar görür. Bu yüzden önbellek, CDN, ödeme yedeği ve izleme alarmı kampanyadan önce test edilmeli, sorun anında kimin ne yapacağı yazılı olmalı."
   - q: "Site hızı kampanyada gerçekten fark yaratır mı?"
@@ -51,7 +53,7 @@ bir takvimi anlatıyoruz. Ödeme altyapısı seçeneklerinin kısa özetini [SSS
     "2025 Kasım kampanya döneminde e-ticaret hacmi bir önceki yılın aynı dönemine göre %41,5 arttı.",
     "Türkiye'de internetten alışveriş yapanların oranı 2026'da ilk kez %60'a ulaştı.",
     "Mobil sitede 0,1 saniyelik hızlanma perakendede dönüşümü %8,4 artırabiliyor; zirve günlerinde bu fark ciroya dönüşür.",
-    "İndirim, önceki 30 günün en düşük fiyatı esas alınarak gösterilmeli; tarih ve stok sınırı açıkça yazılmalı.",
+    "İndirim reklamında önceki fiyat, 1 Ağustos 2026'dan beri son 10 günün en düşük fiyatı; fiyat geçmişini en az 30 gün saklayın, tarih ve stok sınırını açıkça yazın.",
     "Kod ve altyapı değişiklikleri kampanyadan iki hafta önce dondurulmalı; son haftalar test ve prova için ayrılmalı.",
   ]}
 />
@@ -182,7 +184,7 @@ Bundan çıkan pratik sonuçlar:
 - **Taksit gösterimi:** taksit seçenekleri ürün sayfasında net olmalı; ödeme adımında ilk kez
   karşılaşılan bir fark sepeti terk ettirir.
 
-## Fiyat ve indirim: 30 gün kuralı
+## Fiyat ve indirim: önceki fiyat kuralı
 
 Kampanyanın hukuki tarafı en sık atlanan kısım. Ticaret Bakanlığı'nın uyarısına göre
 [indirim oranı, indirimin başladığı tarihten önceki 30 gün içinde uygulanan en düşük fiyat esas alınarak](https://www.forbes.com.tr/ekonomi/ticaret-bakanligi-ndan-indirimli-satis-uyarisi)
@@ -190,10 +192,15 @@ belirlenmeli ve önceki fiyat reklamda gösterilmeli. Kampanyanın başlangıç 
 ürün miktarı ve varsa stok sınırı açık ve anlaşılır biçimde yazılmalı; indirimli ürünler ve oranlar
 hakkında yanıltıcı ifade veya görsel kullanılmamalı.
 
+Bu uyarıdan sonra kural güncellendi. [Bakanlığın 1 Temmuz 2026 duyurusuna göre](https://ticaret.gov.tr/haberler/ticaret-bakanligi-tarafindan-ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeliginde-yapilan-degisikliklerle-tuketicilerin-aldatici-reklam-ve-ticari-uygulamalara-karsi-korunmasi-guclendiriliyor)
+1 Ağustos 2026'da yürürlüğe giren yönetmelik değişikliğiyle indirim reklamlarında önceki fiyat, indirimin
+başlangıç tarihinden önceki son on gün içinde uygulanan en düşük fiyat olarak gösteriliyor. Ayrıntıları ve yorum
+kurallarındaki değişiklikleri [e-ticaret yorum ve indirim kuralları yazımızda](/tr/blog/e-ticaret-yorum-indirim-kurallari-1-agustos) anlattık.
+
 Denetim gerçek: Reklam Kurulu 2025'in ilk yarısında [12.499 dosya inceledi, 753 dosyada aykırılık buldu ve toplam 141 milyon TL ceza verdi](https://www.diken.com.tr/?p=1606389).
 
 <Callout type="key" title="Fiyat geçmişini sistemde tutun">
-  30 gün kuralına uymanın en güvenilir yolu, her ürünün fiyat geçmişini sistemde saklamak ve
+  Önceki fiyat kuralına uymanın en güvenilir yolu, her ürünün fiyat geçmişini sistemde saklamak ve
   kampanya etiketindeki "önceki fiyatı" bu kayıttan otomatik hesaplamaktır. Elle girilen eski fiyat
   hem hata hem de denetimde savunulması zor bir kayıt bırakır.
 </Callout>
@@ -226,7 +233,7 @@ aynı ürünün iki kanalda birden satılıp bir siparişin iptal edilmesini ön
 - **Yalnızca ana sayfayı test etmek.** Sistemi asıl zorlayan sepet, stok kontrolü ve ödeme adımıdır.
 - **Tek ödeme sağlayıcısına bağlı kalmak.** Zirvede yaşanan bir kesinti, yedeği olmayan sitede
   doğrudan satış kaybıdır.
-- **İndirim oranını elle hesaplamak.** 30 gün kuralına aykırılık hem ceza hem de güven kaybı riski
+- **İndirim oranını elle hesaplamak.** Önceki fiyat kuralına aykırılık hem ceza hem de güven kaybı riski
   taşır.
 - **Ölçümsüz kampanya.** Hangi kanalın satış getirdiğini bilmeden yapılan harcama, gelecek yılın
   bütçesini tahmine bırakır.

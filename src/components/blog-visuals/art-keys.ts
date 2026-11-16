@@ -34,6 +34,7 @@ export const BLOG_ART_KEYS = [
   'soft-navigation-core-web-vitals',
   'turkiye-accessibility-circular',
   'turkiye-ai-action-plan',
+  'turkiye-ecommerce-review-discount-rules',
   'website-cost',
   'website-maintenance',
   'website-redesign-seo-migration',
