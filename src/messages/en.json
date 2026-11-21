@@ -662,6 +662,78 @@
     }
   },
   "works": {
+    "daily-food": {
+      "title": "Daily Food",
+      "kind": "Web Design · Food Export",
+      "summary": "Dairy export site concept rebuilt in Next.js — scroll-driven video scenes, draggable 3D packaging and 28 country pages.",
+      "body": [
+        "Daily Food is a food export concept we rebuilt in the Next.js App Router using Dairy Food Bulgaria as the design reference. The home page runs on scroll-driven video scenes, counters and section transitions; product tabs switch between videos, the packaging section has draggable 3D models and the export section an interactive globe. Alongside the products, packaging, catalogue, facility and contact pages there are export pages for 28 countries.",
+        "Catalogue filters, expanding packaging and FAQ panels, the mobile menu and page-to-page animations were handled for desktop and mobile together, with a control to pause motion included from the start. The contact and price-estimate forms run in demo mode: the estimate is calculated in the browser and no form data is sent. Published on Vercel under the Daily Food name, this is a front-end development concept based on the original Dairy Food Bulgaria design."
+      ]
+    },
+    "maurice": {
+      "title": "Maurice",
+      "kind": "Web Design · Creative Portfolio",
+      "summary": "Creative portfolio concept rebuilt in Next.js — liquid typography, a koi animation that reacts to touch and a waveform music player.",
+      "body": [
+        "Maurice is a concept we rebuilt in Next.js using Maurice Moynihan's creative portfolio as the reference. The home page combines liquid typography, scroll-driven section transitions and menu cards that open on hover; desktop gets a custom cursor and draggable fish food, mobile a koi animation that reacts to touch. At the end of the page an ASCII texture opens into an underwater scene.",
+        "The build covers the home page and 26 subpages in desktop and mobile layouts. The advertising archive links to case pages; the music page has track selection, seeking on the waveform and playback controls. Images, audio and video are served locally and analytics are disabled. It is published on Vercel as a front-end development concept based on the original Maurice Moynihan portfolio."
+      ]
+    },
+    "cinetic": {
+      "title": "Cinetic",
+      "kind": "Web Design · Film Production",
+      "summary": "Production studio concept rebuilt in Next.js — intro film, draggable gallery and category films that change as you scroll.",
+      "body": [
+        "Cinetic is a film production studio concept we rebuilt in the Next.js App Router and TypeScript using Cinetic Creatives as the design reference. The home page brings together the intro film, a draggable gallery, three category films that change as you scroll and an interactive footer logo.",
+        "The project archive has category selection, pagination and video scrubbing over the thumbnail; About, Services, Cinema and project details open on their own routes. The intro and category films and the project covers are served locally. It is published on Vercel as a front-end development concept based on the original Cinetic Creatives design."
+      ]
+    },
+    "blue": {
+      "title": "Blue",
+      "kind": "Web Design · LED Display Technology",
+      "summary": "LED display and digital experience company concept moved to Next.js — GSAP and Lenis scroll animation across 58 routes.",
+      "body": [
+        "Blue is an LED display and digital experience company concept we moved to the Next.js App Router using Blue Square X as the design reference. Its 58 routes — home, products, solution pages, work, blog and contact among them — live in a single Next.js application.",
+        "Scroll animation runs on GSAP ScrollTrigger and Lenis; slider, tab and form behaviour was written as separate scripts for the concept. The forms work as demos. Published on Vercel under the Blue name, this is a front-end development concept based on the original Blue Square X design."
+      ]
+    },
+    "jefferson": {
+      "title": "Jefferson",
+      "kind": "Web Design · Athlete Portfolio",
+      "summary": "Athlete website concept rebuilt in Next.js — hero with a video reflection, animated career statistics and draggable galleries.",
+      "body": [
+        "Jefferson is an athlete portfolio concept we rebuilt in Next.js using Justin Jefferson's website as the reference. Its scroll-driven storytelling is built on a video reflection in the hero, animated career statistics, draggable galleries and a Journal you navigate by dragging or swiping.",
+        "Nine routes — on-field, off-field, foundation, partnerships, Journal and inquiries among them — were tested in Chromium and WebKit on desktop and mobile viewports; drag and swipe gestures, galleries, video dialogs and Journal deep links were checked separately. It is published on Vercel as an independent front-end development concept based on the original site's design."
+      ]
+    },
+    "favori": {
+      "title": "Favori",
+      "kind": "Web Design · Luxury Jewellery",
+      "summary": "Luxury jewellery experience concept ported to Next.js — tiger-to-ring particle morph, draggable gemstone scenes and a horizontal collection.",
+      "body": [
+        "Favori is a luxury jewellery concept we ported to the Next.js App Router and TypeScript using Loro Labs' TIGRIS experience as the reference. It opens with tiger particles morphing into a ring, followed by a scroll-driven manifesto, a horizontal collection, a macro ring scene and ruby and diamond scenes controlled by dragging or the arrow keys.",
+        "Pages and dialogs were rebuilt as React server components; to stay faithful in look and motion, the reference's published WebGL, GSAP and Lenis engine is kept locally. Detail dialogs for six products and a demo appointment flow are working; mobile portrait imagery, the reduced-motion preference and a fallback without WebGL are covered. Section heights were compared with the reference at 1440×1000 desktop and 390×844 mobile. Published on Vercel under the Favori name, this is a concept based on the original TIGRIS design."
+      ]
+    },
+    "31-for-31": {
+      "title": "31 for 31",
+      "kind": "Web Design · Film Archive",
+      "summary": "Film list experience rebuilt in Next.js — a Three.js tape shelf and VHS player, horizontal and vertical scroll scenes and a personal watchlist.",
+      "body": [
+        "31 for 31 is a film archive concept we rebuilt in Next.js using Meredith McGrade's 31-for-31.com experience as the reference. Its 31 films are presented across three sections; GSAP ScrollTrigger and Lenis drive vertical and horizontal scrolling, pinned scenes and typography animation. In Three.js a moving hand, a ghost, a tape shelf and a VHS player are drawn from seven GLB models; the shelf is dragged on desktop and the tapes are swiped on mobile.",
+        "Sorting and filtering, watch tracking, swapping in your own films, ratings and a PNG tape label are part of the experience. The watchlist is stored in the browser; syncing across devices by anonymous link or code and the ratings run through a small API. The original design and content belong to Meredith McGrade, and the source site's design credits are kept. It is published on Vercel as a front-end development concept."
+      ]
+    },
+    "horizonte": {
+      "title": "Horizonte",
+      "kind": "Web Design · Real Estate",
+      "summary": "Residential development concept built in Next.js — a 360-frame scroll-driven hero, an interactive master plan and 54 home detail pages.",
+      "body": [
+        "Horizonte is a residential development concept we built in the Next.js App Router, React, TypeScript and GSAP using Horizonte Village as the design reference. It opens with a choice between villas and residences behind organic masks; on desktop a 360-frame camera sequence advances on a canvas as you scroll, and on mobile the landscape moves horizontally. Letter-by-letter transitions, a masked gallery, draggable location cards and drawn map routes make up the main experience.",
+        "The draggable master plan shows 23 villas and 4 residence blocks with SVG boundaries; there is isometric floor selection, filters by room and floor type and 54 separate home detail pages. Floor plans can be switched, zoomed and dragged. This is a front-end concept: it has no sales CRM and the forms do not submit a real enquiry. It is published on Vercel as a concept based on the original Horizonte Village design."
+      ]
+    },
     "evolve": {
       "title": "Evolve",
       "kind": "Web Design · Tech Agency",
@@ -3359,7 +3431,7 @@
     },
     "industries": {
       "q": "Which industries do you have experience in?",
-      "a": "The portfolio includes 57 projects across construction/engineering, real estate, tourism, finance, transportation, e-commerce, food/packaging, and SaaS/AI-ML. The leading sector shifts year to year with demand, but the way of working, process, and team have stayed the same since 2021.",
+      "a": "The portfolio includes 65 projects across construction/engineering, real estate, tourism, finance, transportation, e-commerce, food/packaging, and SaaS/AI-ML. The leading sector shifts year to year with demand, but the way of working, process, and team have stayed the same since 2021.",
       "detail": [
         "2021-2022 leaned toward corporate sites and branding, 2022-2023 toward e-commerce and real estate/tourism, 2024 toward finance and transportation, and 2025 toward AI/ML and SaaS projects.",
         "For regulated fields requiring deep sector-specific compliance knowledge, such as healthcare or legal, extra research is done before the project starts — this can extend the discovery timeline slightly."

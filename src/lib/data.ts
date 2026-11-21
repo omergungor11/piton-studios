@@ -73,6 +73,182 @@ export function getAllProjectSlugs(): string[] {
 export const WORKS: Work[] = [
   {
     n: "01",
+    slug: "daily-food",
+    title: "Daily Food",
+    client: "Piton",
+    kind: "Web Design · Food Export",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "3D Models", "Scroll Video", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Dairy export site concept rebuilt in Next.js — scroll-driven video scenes, draggable 3D packaging and 28 country pages.",
+    body: [
+      "Daily Food, Dairy Food Bulgaria tasarım referansını Next.js App Router ile yeniden geliştirdiğimiz gıda ihracatı konsepti. Ana sayfada kaydırmaya bağlı video sahneleri, sayaçlar ve bölüm geçişleri yer alıyor; ürün sekmelerinde video geçişleri, ambalaj bölümünde sürüklenebilir 3B modeller ve ihracat bölümünde etkileşimli küre kullanılıyor. Ürünler, ambalaj, katalog, tesis ve iletişim sayfalarının yanında 28 ülkeye ait ihracat sayfası bulunuyor.",
+      "Katalog filtreleri, açılır ambalaj ve SSS panelleri, mobil menü ve sayfalar arası animasyonlar masaüstü ve mobil için birlikte ele alındı; hareketi duraklatma kontrolü baştan eklendi. İletişim ve fiyat tahmini formları demo modunda çalışıyor: tahmin tarayıcıda hesaplanıyor, form verisi gönderilmiyor. Çalışma, özgün Dairy Food Bulgaria tasarımını referans alan bir ön yüz geliştirme konsepti olarak Daily Food adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, scroll video, 3D product models",
+    url: "https://daily-food-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/daily-food.webp',
+      mobile: '/assets/previews/mobile/daily-food.webp',
+    },
+  },
+  {
+    n: "02",
+    slug: "maurice",
+    title: "Maurice",
+    client: "Piton",
+    kind: "Web Design · Creative Portfolio",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "Canvas", "Audio Player", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Creative portfolio concept rebuilt in Next.js — liquid typography, a koi animation that reacts to touch and a waveform music player.",
+    body: [
+      "Maurice, Maurice Moynihan'ın yaratıcı portfolyosunu referans alarak Next.js ile yeniden geliştirdiğimiz konsept. Ana sayfada sıvı tipografi, kaydırmaya bağlı bölüm geçişleri ve imleçle açılan menü kartları yer alıyor; masaüstünde özel imleç ve sürüklenebilir yem, mobilde dokunmaya tepki veren koi animasyonu kullanılıyor. Sayfanın sonunda ASCII dokusu bir sualtı sahnesine açılıyor.",
+      "Çalışma ana sayfayı ve 26 alt sayfayı masaüstü ve mobil düzenleriyle kapsıyor. Reklam arşivi vaka sayfalarına bağlanıyor; müzik sayfasında parça seçimi, dalga biçimi üzerinden oynatma konumunu değiştirme ve oynatma kontrolleri bulunuyor. Görsel, ses ve videolar yerelden sunuluyor, analitik devre dışı. Çalışma, özgün Maurice Moynihan portfolyosunu referans alan bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, canvas effects, audio player",
+    url: "https://maurice-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/maurice.webp',
+      mobile: '/assets/previews/mobile/maurice.webp',
+    },
+  },
+  {
+    n: "03",
+    slug: "cinetic",
+    title: "Cinetic",
+    client: "Piton",
+    kind: "Web Design · Film Production",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "TypeScript", "Video", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Production studio concept rebuilt in Next.js — intro film, draggable gallery and category films that change as you scroll.",
+    body: [
+      "Cinetic, Cinetic Creatives tasarım referansını Next.js App Router ve TypeScript ile yeniden geliştirdiğimiz film prodüksiyon stüdyosu konsepti. Ana sayfa giriş filmini, sürüklenebilir galeriyi, kaydırmayla geçiş yapan üç kategori filmini ve etkileşimli alt logoyu bir araya getiriyor.",
+      "Proje arşivinde kategori seçimi, sayfalama ve küçük resim üzerinden video sarma bulunuyor; Hakkında, Hizmetler, Sinema ve proje detayları kendi rotalarında açılıyor. Giriş ve kategori filmleri ile proje kapakları yerelden sunuluyor. Çalışma, özgün Cinetic Creatives tasarımını referans alan bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, video interaction, project archive",
+    url: "https://cinetic-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/cinetic.webp',
+      mobile: '/assets/previews/mobile/cinetic.webp',
+    },
+  },
+  {
+    n: "04",
+    slug: "blue",
+    title: "Blue",
+    client: "Piton",
+    kind: "Web Design · LED Display Technology",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "GSAP", "Lenis", "Animation", "Responsive"],
+    image: "story-04.jpg",
+    summary: "LED display and digital experience company concept moved to Next.js — GSAP and Lenis scroll animation across 58 routes.",
+    body: [
+      "Blue, Blue Square X tasarım referansını Next.js App Router'a taşıdığımız LED ekran ve dijital deneyim şirketi konsepti. Ana sayfa, ürünler, çözüm sayfaları, işler, blog ve iletişim dahil 58 rota tek bir Next.js uygulamasında toplanıyor.",
+      "Kaydırma animasyonları GSAP ScrollTrigger ve Lenis ile çalışıyor; slider, sekme ve form davranışları konsept için ayrı betiklerle yazıldı. Formlar demo olarak çalışıyor. Çalışma, özgün Blue Square X tasarımını referans alan bir ön yüz geliştirme konsepti olarak Blue adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, scroll animation, multi-page site",
+    url: "https://blue-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/blue.webp',
+      mobile: '/assets/previews/mobile/blue.webp',
+    },
+  },
+  {
+    n: "05",
+    slug: "jefferson",
+    title: "Jefferson",
+    client: "Piton",
+    kind: "Web Design · Athlete Portfolio",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "React", "Scroll Storytelling", "Video", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Athlete website concept rebuilt in Next.js — hero with a video reflection, animated career statistics and draggable galleries.",
+    body: [
+      "Jefferson, Justin Jefferson'ın web sitesini referans alarak Next.js ile yeniden geliştirdiğimiz sporcu portfolyosu konsepti. Kaydırmayla ilerleyen anlatım; hero'daki video yansıması, animasyonlu kariyer istatistikleri, sürüklenebilir galeriler ve sürükleyerek ya da kaydırarak gezilen Journal bölümü üzerine kurulu.",
+      "Saha içi, saha dışı, vakıf, iş birlikleri, Journal ve iletişim dahil dokuz rota Chromium ve WebKit'te masaüstü ve mobil görünümlerde test edildi; sürükleme ve kaydırma hareketleri, galeriler, video pencereleri ve Journal derin bağlantıları ayrıca kontrol edildi. Çalışma, özgün sitenin tasarımını referans alan bağımsız bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, scroll storytelling, draggable galleries",
+    url: "https://jefferson-sooty-psi.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/jefferson.webp',
+      mobile: '/assets/previews/mobile/jefferson.webp',
+    },
+  },
+  {
+    n: "06",
+    slug: "favori",
+    title: "Favori",
+    client: "Piton",
+    kind: "Web Design · Luxury Jewellery",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "TypeScript", "WebGL", "GSAP", "Lenis"],
+    image: "story-04.jpg",
+    summary: "Luxury jewellery experience concept ported to Next.js — tiger-to-ring particle morph, draggable gemstone scenes and a horizontal collection.",
+    body: [
+      "Favori, Loro Labs'in TIGRIS deneyimini referans alarak Next.js App Router ve TypeScript'e aktardığımız lüks mücevher konsepti. Açılışta kaplan parçacıkları bir yüzüğe dönüşüyor; ardından kaydırmaya bağlı manifesto, yatay koleksiyon, makro yüzük sahnesi ve sürükleme ya da yön tuşlarıyla kontrol edilen yakut ve elmas sahneleri geliyor.",
+      "Sayfa ve pencereler React sunucu bileşenleri olarak yeniden kuruldu; görsel ve hareket sadakati için referansın yayımlanmış WebGL, GSAP ve Lenis motoru yerelde korundu. Altı ürünün detay pencereleri ve demo randevu akışı çalışıyor; mobil portre görselleri, azaltılmış hareket tercihi ve WebGL'siz yedek davranış ele alındı. Bölüm yükseklikleri 1440×1000 masaüstü ve 390×844 mobil görünümde referansla karşılaştırıldı. Çalışma, özgün TIGRIS tasarımını referans alan bir konsept olarak Favori adıyla Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, WebGL scenes, scroll animation",
+    url: "https://favori-konsept.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/favori.webp',
+      mobile: '/assets/previews/mobile/favori.webp',
+    },
+  },
+  {
+    n: "07",
+    slug: "31-for-31",
+    title: "31 for 31",
+    client: "Piton",
+    kind: "Web Design · Film Archive",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "Three.js", "GSAP", "Lenis", "Lottie", "SQLite"],
+    image: "story-04.jpg",
+    summary: "Film list experience rebuilt in Next.js — a Three.js tape shelf and VHS player, horizontal and vertical scroll scenes and a personal watchlist.",
+    body: [
+      "31 for 31, Meredith McGrade'ın 31-for-31.com deneyimini referans alarak Next.js ile yeniden geliştirdiğimiz film arşivi konsepti. 31 film üç bölüm arası geçişle sunuluyor; GSAP ScrollTrigger ve Lenis ile dikey ve yatay kaydırma, sabitlenen sahneler ve tipografi animasyonları çalışıyor. Three.js tarafında hareketli el, hayalet, kaset rafı ve VHS oynatıcı yedi GLB modelle çiziliyor; masaüstünde raf sürükleniyor, mobilde kasetler kaydırılıyor.",
+      "Sıralama ve filtreleme, izleme takibi, kişisel film değiştirme, oylar ve PNG kaset etiketi deneyimin parçası. İzleme listesi tarayıcıda saklanıyor; anonim bağlantı ya da kodla cihazlar arası senkronizasyon ve oylar küçük bir API üzerinden çalışıyor. Özgün tasarım ve içerik Meredith McGrade'a ait, kaynak sitedeki tasarım kredileri korunuyor. Çalışma bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, WebGL, scroll animation, list sync API",
+    url: "https://31-nine-gules.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/31-for-31.webp',
+      mobile: '/assets/previews/mobile/31-for-31.webp',
+    },
+  },
+  {
+    n: "08",
+    slug: "horizonte",
+    title: "Horizonte",
+    client: "Piton",
+    kind: "Web Design · Real Estate",
+    year: "2026",
+    role: "Front-end Development",
+    tags: ["Next.js", "TypeScript", "GSAP", "Canvas", "Responsive"],
+    image: "story-04.jpg",
+    summary: "Residential development concept built in Next.js — a 360-frame scroll-driven hero, an interactive master plan and 54 home detail pages.",
+    body: [
+      "Horizonte, Horizonte Village tasarım referansını Next.js App Router, React, TypeScript ve GSAP ile geliştirdiğimiz konut projesi konsepti. Açılışta organik maskelerle villa ya da rezidans seçiliyor; masaüstünde 360 karelik kamera dizisi kaydırmayla canvas üzerinde ilerliyor, mobilde manzara yatay akıyor. Harf bazında geçişler, maske galerisi, sürüklenebilir konum kartları ve çizilen harita rotaları ana deneyimi oluşturuyor.",
+      "Sürüklenebilir genel plan SVG sınırlarıyla 23 villa ve 4 rezidans bloğunu gösteriyor; izometrik kat seçimi, oda ve kat türü filtreleri ile 54 ayrı konut detay sayfası var. Kat planları değiştirilebiliyor, büyütülüp sürüklenebiliyor. Bu bir ön yüz konsepti: satış CRM'i içermiyor, formlar gerçek bir kayıt göndermiyor. Çalışma, özgün Horizonte Village tasarımını referans alan bir konsept olarak Vercel'de yayınlandı.",
+    ],
+    scope: "Front-end development, scroll-driven canvas, interactive master plan",
+    url: "https://horizonte-opal.vercel.app/",
+    previews: {
+      desktop: '/assets/previews/desktop/horizonte.webp',
+      mobile: '/assets/previews/mobile/horizonte.webp',
+    },
+  },
+  {
+    n: "09",
     slug: "evolve",
     title: "Evolve",
     client: "Piton",
@@ -94,7 +270,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "02",
+    n: "10",
     slug: "coffi",
     title: "Coffi",
     client: "Piton",
@@ -116,7 +292,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "03",
+    n: "11",
     slug: "karga",
     title: "Karga",
     client: "Piton",
@@ -138,7 +314,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "04",
+    n: "12",
     slug: "neuneu",
     title: "Neuneu",
     client: "Piton",
@@ -160,7 +336,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "05",
+    n: "13",
     slug: "naiben",
     title: "naiben",
     client: "Piton",
@@ -182,7 +358,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "06",
+    n: "14",
     slug: "kabizzu",
     title: "Kabizzu",
     client: "Piton",
@@ -204,7 +380,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "07",
+    n: "15",
     slug: "fur-crm",
     title: "FurCRM",
     client: "FurCRM",
@@ -226,7 +402,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "08",
+    n: "16",
     slug: "bt-elevator",
     title: "BT Elevator",
     client: "BT Elevator",
@@ -247,7 +423,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "09",
+    n: "17",
     slug: "gel-gez-gor",
     title: "Gel Gez Gör",
     client: "Gel Gez Gör",
@@ -269,7 +445,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "10",
+    n: "18",
     slug: "nexos-investment",
     title: "Nexos Investment",
     client: "Nexos Investment",
@@ -290,7 +466,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "11",
+    n: "19",
     slug: "alp-sigorta",
     title: "Alp Sigorta",
     client: "Alp Sigorta",
@@ -311,7 +487,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "12",
+    n: "20",
     slug: "pampas-investment",
     title: "Pampas Investment",
     client: "Pampas Investment",
@@ -333,7 +509,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "13",
+    n: "21",
     slug: "ambalaj-cini",
     title: "Ambalaj Cini",
     client: "Ambalaj Cini",
@@ -356,7 +532,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "14",
+    n: "22",
     slug: "velair-experience",
     title: "VELAIR",
     client: "VELAIR",
@@ -378,7 +554,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "15",
+    n: "23",
     slug: "velis-ltd",
     title: "Velis LTD",
     client: "Velis Ticaret LTD",
@@ -400,7 +576,7 @@ export const WORKS: Work[] = [
     }
   },
   {
-    n: "16",
+    n: "24",
     slug: "3monkeys-bozuyuk",
     title: "3 Monkeys Bozüyük",
     client: "Piton",
@@ -422,7 +598,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "17",
+    n: "25",
     slug: "mindloop",
     title: "Mindloop",
     client: "Mindloop",
@@ -444,7 +620,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "18",
+    n: "26",
     slug: "dental-health",
     title: "Dental Health",
     client: "Dental Health",
@@ -465,7 +641,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "19",
+    n: "27",
     slug: "securify",
     title: "Securify",
     client: "Securify",
@@ -486,7 +662,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "20",
+    n: "28",
     slug: "arac-takip-yolo",
     title: "Araç Takip Sistemi",
     client: "Piton",
@@ -506,7 +682,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "21",
+    n: "29",
     slug: "fuze-gudum-simulasyonu",
     title: "Füze Güdüm Görselleştirme",
     client: "Piton",
@@ -526,7 +702,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "22",
+    n: "30",
     slug: "lithos",
     title: "Lithos",
     client: "Lithos",
@@ -548,7 +724,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "23",
+    n: "31",
     slug: "vanguard",
     title: "Vanguard",
     client: "Vanguard",
@@ -570,7 +746,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "24",
+    n: "32",
     slug: "jack-portfolio",
     title: "Jack — 3D Creator",
     client: "Jack Portfolio",
@@ -592,7 +768,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "25",
+    n: "33",
     slug: "veldara",
     title: "Veldara",
     client: "Veldara",
@@ -614,7 +790,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "26",
+    n: "34",
     slug: "radyo-juke",
     title: "Radyo Juke",
     client: "Radyo Juke",
@@ -636,7 +812,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "27",
+    n: "35",
     slug: "ozge-ozler",
     title: "Özge Özler",
     client: "Özge Özler",
@@ -658,7 +834,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "28",
+    n: "36",
     slug: "rnv-trading",
     title: "RNV Trading",
     client: "RNV Trading",
@@ -680,7 +856,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "29",
+    n: "37",
     slug: "pinnacle-yatirim",
     title: "Pinnacle Yatırım",
     client: "Pinnacle Yatırım",
@@ -702,7 +878,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "30",
+    n: "38",
     slug: "jet-transfer-cyprus",
     title: "Jet Transfer Cyprus",
     client: "Jet Transfer Cyprus",
@@ -720,7 +896,7 @@ export const WORKS: Work[] = [
     scope: "Web design, transportation, booking",
   },
   {
-    n: "31",
+    n: "39",
     slug: "boon-fresh",
     title: "Boon Fresh",
     client: "Boon Fresh",
@@ -738,7 +914,7 @@ export const WORKS: Work[] = [
     scope: "Web design, e-commerce, delivery",
   },
   {
-    n: "32",
+    n: "40",
     slug: "halas-exchange",
     title: "Halas Exchange",
     client: "Halas Exchange",
@@ -759,7 +935,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "33",
+    n: "41",
     slug: "arslan-estates",
     title: "Arslan Estates",
     client: "Arslan Estates",
@@ -780,7 +956,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "34",
+    n: "42",
     slug: "arslan-coin-center",
     title: "Arslan Coin Center",
     client: "Arslan Coin Center",
@@ -801,7 +977,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "35",
+    n: "43",
     slug: "arslan-group",
     title: "Arslan Group",
     client: "Arslan Group",
@@ -822,7 +998,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "36",
+    n: "44",
     slug: "homes-in-mediterranean",
     title: "Homes in Mediterranean",
     client: "Homes in Mediterranean",
@@ -844,7 +1020,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "37",
+    n: "45",
     slug: "sosyal-piton",
     title: "Sosyal Piton",
     client: "Sosyal Piton",
@@ -861,7 +1037,7 @@ export const WORKS: Work[] = [
     scope: "Web design, agency, portfolio",
   },
   {
-    n: "38",
+    n: "46",
     slug: "kibris-lefkosa-taksi",
     title: "Kıbrıs Lefkoşa Taksi",
     client: "Kıbrıs Lefkoşa Taksi",
@@ -882,7 +1058,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "39",
+    n: "47",
     slug: "aydin-transfer",
     title: "Aydın Transfer",
     client: "Aydın Transfer",
@@ -903,7 +1079,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "40",
+    n: "48",
     slug: "kardesler-taxi",
     title: "Kardeşler Taxi",
     client: "Kardeşler Taxi",
@@ -923,7 +1099,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "41",
+    n: "49",
     slug: "sammys-hotel",
     title: "Sammys Hotel",
     client: "Sammys Hotel",
@@ -945,7 +1121,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "42",
+    n: "50",
     slug: "all-pro-cyprus",
     title: "All Pro Cyprus",
     client: "All Pro Cyprus",
@@ -967,7 +1143,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "43",
+    n: "51",
     slug: "alert-muhendislik",
     title: "Alert Mühendislik",
     client: "Alert Mühendislik",
@@ -989,7 +1165,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "44",
+    n: "52",
     slug: "beton-store",
     title: "Beton Store",
     client: "Beton Store",
@@ -1010,7 +1186,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "45",
+    n: "53",
     slug: "virginia-ice-cream",
     title: "Virginia Ice Cream",
     client: "Virginia Ice Cream",
@@ -1032,7 +1208,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "46",
+    n: "54",
     slug: "welcome-pickups",
     title: "Welcome Pickups",
     client: "Welcome Pickups",
@@ -1052,7 +1228,7 @@ export const WORKS: Work[] = [
     },
   },
   {
-    n: "47",
+    n: "55",
     slug: "odeme-takip-botu",
     title: "Ödeme Takip Botu",
     client: "Piton",
@@ -1069,7 +1245,7 @@ export const WORKS: Work[] = [
     scope: "Automation, backend, Telegram integration",
   },
   {
-    n: "48",
+    n: "56",
     slug: "deprem-erken-uyari",
     title: "Deprem Erken Uyarı",
     client: "Piton",
@@ -1086,7 +1262,7 @@ export const WORKS: Work[] = [
     scope: "Deep learning, time series, research",
   },
   {
-    n: "49",
+    n: "57",
     slug: "trafik-levha-okuma",
     title: "Trafik Levha Okuma",
     client: "Piton",
@@ -1103,7 +1279,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, classification pipeline, research",
   },
   {
-    n: "50",
+    n: "58",
     slug: "yuz-duygu-analizi",
     title: "Yüz Duygu Analizi",
     client: "Piton",
@@ -1120,7 +1296,7 @@ export const WORKS: Work[] = [
     scope: "Computer vision, real-time analysis, research",
   },
   {
-    n: "51",
+    n: "59",
     slug: "hava-goruntu-segmentasyonu",
     title: "Hava Görüntüsü Segmentasyonu",
     client: "Piton",
@@ -1137,7 +1313,7 @@ export const WORKS: Work[] = [
     scope: "Semantic segmentation, satellite imagery, research",
   },
   {
-    n: "52",
+    n: "60",
     slug: "contentflow-ai",
     title: "ContentFlow AI",
     client: "ContentFlow AI",
@@ -1154,7 +1330,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, AI content, prototype",
   },
   {
-    n: "53",
+    n: "61",
     slug: "social-pro",
     title: "Social Pro",
     client: "Social Pro",
@@ -1171,7 +1347,7 @@ export const WORKS: Work[] = [
     scope: "SaaS product, social media management, prototype",
   },
   {
-    n: "54",
+    n: "62",
     slug: "holly-trader",
     title: "Holly Trader",
     client: "Holly Trader",
@@ -1188,7 +1364,7 @@ export const WORKS: Work[] = [
     scope: "Fintech tool, analytics, prototype",
   },
   {
-    n: "55",
+    n: "63",
     slug: "emlak-sync",
     title: "Emlak Sync",
     client: "Emlak Sync",
@@ -1205,7 +1381,7 @@ export const WORKS: Work[] = [
     scope: "Listing sync, portal integrations, automation",
   },
   {
-    n: "56",
+    n: "64",
     slug: "dolmus-kontrol",
     title: "Dolmuş Güzergah Kontrol",
     client: "Piton",
@@ -1222,7 +1398,7 @@ export const WORKS: Work[] = [
     scope: "Automation, data processing, reporting",
   },
   {
-    n: "57",
+    n: "65",
     slug: "ekh-yapi",
     title: "EKH Yapı",
     client: "EKH Yapı",

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-21 — Sekiz yeni konsept proje (TASK-126)
+
+- WORKS başına eklendi: Daily Food (#01, Dairy Food Bulgaria referansı), Maurice (#02, Maurice Moynihan), Cinetic (#03, Cinetic Creatives), Blue (#04, Blue Square X), Jefferson (#05, jjettas.com), Favori (#06, TIGRIS / Loro Labs), 31 for 31 (#07, 31-for-31.com), Horizonte (#08, Horizonte Village). Diğer projeler 09–65 olarak yeniden numaralandı.
+- Naiben deseniyle: `client: "Piton"`, rol Front-end Development; metinler referans tasarımı açıkça anar, rakamlar proje README'lerinden alındı. tr/en/ru `works` çevirileri, canlı Vercel linkleri.
+- Altı proje bu oturumda Vercel'e deploy edildi (jefferson, cinetic-konsept, favori-konsept, daily-food-konsept, blue-konsept, maurice-konsept); 31 ve Horizonte zaten yayındaydı. `jefferson.vercel.app` başkasına ait olduğu için adres `jefferson-sooty-psi.vercel.app`.
+- Canlı sitelerden önizlemeler: desktop 1440x810, mobil 860x1856 (webp). Horizonte masaüstü karesi açılıştaki villa seçiminden sonraki hero'dur.
+- 3B proje bulutu seçkisine dokunulmadı (ilk 15 eski hâliyle).
+- SSS portföy sayısı 57 → 65 (3 dil).
+- Doğrulama: content:check 651/0, typecheck, lint, build.
+
 ## 2026-10-21 — Hikâyeler temizlendi, proje gezintisi düzeltildi (TASK-125)
 
 - STORIES'ten silindi: Salih Defterali, Cyprokey, Gabfest 2025, Orchid Tent ve WORKS'te zaten olan mükerrer Aydın Transfer (3 dil çevirileriyle). Sayfaları artık 404, sitemap'te yok. Kalan tek hikâye: Bozüyük Dolmuşçular Derneği (`/projeler/dolmus`).
