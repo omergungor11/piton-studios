@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI reklamı — tasarım yönleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --red:#B71727; --s:.36; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:#1b1c1f; color:#e9e7e2; font-family:"Space Grotesk",system-ui,sans-serif; padding:40px 32px 64px; }
+  h1 { font-size:22px; font-weight:600; }
+  .lead { margin-top:8px; color:#9b9c9f; font-size:15px; max-width:780px; line-height:1.5; }
+  .row { display:flex; gap:36px; flex-wrap:wrap; margin-top:36px; }
+  .opt { width:calc(1080px * var(--s)); }
+  .opt h2 { font-size:17px; font-weight:600; margin-bottom:12px; }
+  .opt h2 b { color:#ff6b78; margin-right:8px; }
+  .stage { width:calc(1080px * var(--s)); height:calc(1920px * var(--s)); overflow:hidden; border-radius:14px; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .poster { width:1080px; height:1920px; transform:scale(var(--s)); transform-origin:0 0; position:relative; overflow:hidden; }
+  .note { margin-top:14px; font-size:13.5px; line-height:1.55; color:#b4b5b8; }
+  .note strong { color:#e9e7e2; font-weight:600; }
+
+  /* ortak parçalar (1080×1920 koordinatında) */
+  .brand { position:absolute; left:72px; top:84px; display:flex; align-items:center; gap:18px; font-size:34px; font-weight:700; letter-spacing:-.01em; }
+  .brand img { width:64px; height:64px; }
+  .hl { position:absolute; left:72px; right:72px; font-weight:700; letter-spacing:-.035em; line-height:1.02; }
+  .laptop { position:absolute; }
+  .laptop .scr { border-radius:22px 22px 0 0; padding:16px 16px 0; background:#16171a; }
+  .laptop .scr img { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top; border-radius:8px 8px 0 0; }
+  .laptop .base { height:22px; margin:0 -56px; border-radius:0 0 22px 22px; background:linear-gradient(#d9dadd,#a9abb0); position:relative; }
+  .laptop .base::after { content:""; position:absolute; left:50%; top:0; width:150px; height:9px; transform:translateX(-50%); border-radius:0 0 10px 10px; background:#8f9196; }
+  .phone { position:absolute; border-radius:64px; padding:14px; background:#16171a; }
+  .phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; border-radius:52px; }
+  .phone::after { content:""; position:absolute; left:50%; top:30px; width:30%; height:30px; transform:translateX(-50%); border-radius:20px; background:#000; }
+
+  /* A — Açık stüdyo */
+  .a { background:#f3f1ec; color:#111214; }
+  .a .hl { top:230px; font-size:112px; }
+  .a .hl em { font-style:normal; color:var(--red); }
+  .a .sub { position:absolute; left:72px; right:160px; top:610px; font-size:38px; line-height:1.35; color:#55575c; }
+  .a .laptop { left:96px; top:850px; width:790px; filter:drop-shadow(0 40px 60px rgba(20,20,30,.22)); }
+  .a .phone { right:64px; top:930px; width:300px; height:620px; border-radius:50px; padding:11px; box-shadow:0 40px 70px rgba(20,20,30,.3); }
+  .a .phone img { border-radius:40px; }
+  .a .phone::after { top:24px; height:24px; }
+  .a .price { position:absolute; left:72px; bottom:230px; padding:26px 40px; border-radius:999px; background:#111214; color:#fff; font-size:44px; font-weight:600; letter-spacing:-.01em; }
+  .a .price b { color:#ff5c6c; font-weight:700; }
+  .a .cta { position:absolute; left:72px; right:72px; bottom:110px; display:flex; justify-content:space-between; font-size:34px; font-weight:500; color:#55575c; }
+  .a .cta span:last-child { color:var(--red); font-weight:700; }
+
+  /* B — Koyu sahne */
+  .b { background:#0a0b0d; color:#f4f2ee; }
+  .b::before { content:""; position:absolute; left:50%; top:1080px; width:1300px; height:1000px; transform:translate(-50%,-50%); background:radial-gradient(closest-side,rgba(183,23,39,.5),transparent); }
+  .b .brand { left:0; right:0; justify-content:center; }
+  .b .hl { top:250px; font-size:104px; text-align:center; }
+  .b .hl em { font-style:normal; color:#ff5c6c; }
+  .b .price { position:absolute; left:50%; top:640px; transform:translateX(-50%); white-space:nowrap; padding:20px 36px; border-radius:999px; border:2px solid rgba(255,255,255,.28); font-size:38px; font-weight:500; }
+  .b .price b { font-weight:700; }
+  .b .scene { position:absolute; inset:0; perspective:2400px; }
+  .b .laptop { left:140px; top:860px; width:800px; transform:rotateY(-14deg) rotateX(5deg); filter:drop-shadow(0 60px 80px rgba(0,0,0,.7)); }
+  .b .laptop .scr { background:#2a2c31; }
+  .b .phone { left:90px; top:990px; width:290px; height:600px; border-radius:48px; padding:10px; background:#2a2c31; transform:rotateY(14deg) rotateX(4deg); box-shadow:0 50px 90px rgba(0,0,0,.75); }
+  .b .phone img { border-radius:39px; }
+  .b .phone::after { top:22px; height:22px; }
+  .b .cta { position:absolute; left:72px; right:72px; bottom:120px; height:120px; border-radius:999px; background:#f4f2ee; color:#0a0b0d; display:flex; align-items:center; justify-content:center; gap:20px; font-size:40px; font-weight:700; }
+
+  /* C — Telefon öncelikli */
+  .c { background:var(--red); color:#fff; }
+  .c .brand { top:76px; }
+  .c .hl { top:200px; font-size:100px; }
+  .c .phone { left:50%; top:590px; width:640px; height:1330px; transform:translateX(-50%); border-radius:84px; padding:18px; background:#0e0f11; box-shadow:0 60px 110px rgba(60,0,8,.6); }
+  .c .phone img { border-radius:68px; }
+  .c .phone::after { top:38px; height:36px; }
+  .c .sticker { position:absolute; right:44px; top:1010px; width:340px; padding:30px 32px; border-radius:36px; background:#fff; color:#111214; transform:rotate(5deg); box-shadow:0 30px 60px rgba(60,0,8,.45); }
+  .c .sticker small { display:block; font-size:28px; font-weight:500; color:#55575c; }
+  .c .sticker b { display:block; margin-top:4px; font-size:66px; font-weight:700; letter-spacing:-.03em; line-height:1; }
+  .c .sticker b span { font-size:38px; }
+  .c .sticker i { display:block; margin-top:8px; font-style:normal; font-size:26px; font-weight:500; color:#55575c; }
+  .c .mini { position:absolute; left:40px; top:1420px; width:400px; border-radius:22px; overflow:hidden; background:#0e0f11; padding:10px; transform:rotate(-4deg); box-shadow:0 30px 60px rgba(60,0,8,.5); }
+  .c .mini img { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top; border-radius:14px; }
+</style>
+</head>
+<body>
+  <h1>AI entegrasyon reklamı — 3 tasarım yönü</h1>
+  <p class="lead">Kareler 1080×1920 (Reels/Story) tasarımının küçültülmüş hâli. Videoda mockup içindeki Nexos sitesi gerçek kayıtla kayar; aşağıda her yönün hareket akışı yazılı. Metinler taslak, seçimden sonra ince ayar yapılır.</p>
+
+  <div class="row">
+    <section class="opt">
+      <h2><b>A</b>Açık stüdyo</h2>
+      <div class="stage"><div class="poster a">
+        <div class="brand"><img src="../../../public/email/logo.png" alt="" />Piton</div>
+        <div class="hl">İşletmenize <em>yapay zekâyı</em> entegre edelim.</div>
+        <p class="sub">Web siteniz, teklifleriniz ve müşteri yanıtlarınız tek sistemde.</p>
+        <div class="laptop"><div class="scr"><img src="captures/desktop-0.jpg" alt="" /></div><div class="base"></div></div>
+        <div class="phone"><img src="captures/mobile-0.jpg" alt="" /></div>
+        <div class="price"><b>30.000 TL</b>'den başlayan fiyatlarla</div>
+        <div class="cta"><span>pitonstudios.com</span><span>Ücretsiz ön görüşme →</span></div>
+      </div></div>
+      <p class="note"><strong>His:</strong> sade, güven veren, kurumsal; kalabalık reklam akışında beyaz alanla ayrışır.<br /><strong>Hareket:</strong> başlık satır satır gelir → laptop alttan yükselir, site kaymaya başlar → telefon yandan girer, mobil görünüm kayar → fiyat hapı ve CTA.</p>
+    </section>
+
+    <section class="opt">
+      <h2><b>B</b>Koyu sahne</h2>
+      <div class="stage"><div class="poster b">
+        <div class="brand"><img src="../../../public/email/logo.png" alt="" />Piton</div>
+        <div class="hl">İşletmenize <em>yapay zekâyı</em> entegre edelim.</div>
+        <div class="price"><b>30.000 TL</b>'den başlayan fiyatlarla</div>
+        <div class="scene">
+          <div class="laptop"><div class="scr"><img src="captures/desktop-0.jpg" alt="" /></div><div class="base"></div></div>
+          <div class="phone"><img src="captures/mobile-0.jpg" alt="" /></div>
+        </div>
+        <div class="cta">Ücretsiz ön görüşme →</div>
+      </div></div>
+      <p class="note"><strong>His:</strong> premium, teknoloji odaklı; cihazlar hafif 3B açıyla tek ışıkta durur.<br /><strong>Hareket:</strong> karanlıkta başlık belirir → kırmızı ışık açılır, cihazlar derinlikten öne gelir ve yavaşça döner → iki ekranda site eş zamanlı kayar → CTA butonu dolar.</p>
+    </section>
+
+    <section class="opt">
+      <h2><b>C</b>Telefon öncelikli</h2>
+      <div class="stage"><div class="poster c">
+        <div class="brand"><img src="../../../public/email/logo.png" alt="" />Piton</div>
+        <div class="hl">İşletmenize yapay zekâyı entegre edelim.</div>
+        <div class="phone"><img src="captures/mobile-0.jpg" alt="" /></div>
+        <div class="mini"><img src="captures/desktop-0.jpg" alt="" /></div>
+        <div class="sticker"><small>Başlangıç</small><b>30.000 <span>TL</span></b><i>'den başlayan fiyatlarla</i></div>
+      </div></div>
+      <p class="note"><strong>His:</strong> cesur, Reels'e özgü; marka kırmızısı akışta kaydırmayı durdurur, site ekranın yarısından fazlasını kaplar.<br /><strong>Hareket:</strong> dev telefonda site hemen kaymaya başlar (ilk saniyede hareket) → fiyat etiketi yapışır → masaüstü kartı büyüyüp öne geçer → son karede CTA.</p>
+    </section>
+  </div>
+</body>
+</html>

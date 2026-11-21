@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<title>Piton — AI entegrasyon reklamı (koyu sahne)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet" />
+<style>
+  /* Biçim: ?format=story (1080×1920, varsayılan) | ?format=feed (1080×1350)
+     Story'de kritik metin Reels arayüzünün dışında kalır: üst 270px ve alt ~%35 boş/dekoratif. */
+  :root {
+    --w:1080px; --h:1920px;
+    --brandTop:288px; --hlTop:384px; --hlSize:100px;
+    --priceTop:742px; --priceSize:38px;
+    --ctaTop:852px; --ctaH:108px; --ctaSize:42px;
+    --lapLeft:-10px; --lapTop:774px; --lapW:1170px;
+    --phLeft:0px; --phTop:953px; --phW:400px;
+    --glowY:1260px;
+  }
+  body.feed {
+    --h:1350px;
+    --brandTop:56px; --hlTop:136px; --hlSize:82px;
+    --priceTop:418px; --priceSize:33px;
+    --ctaTop:508px; --ctaH:92px; --ctaSize:36px;
+    --lapLeft:70px; --lapTop:485px; --lapW:975px;
+    --phLeft:90px; --phTop:597px; --phW:290px;
+    --glowY:860px;
+  }
+  * { box-sizing:border-box; margin:0; }
+  html, body { width:var(--w); height:var(--h); overflow:hidden; background:#0a0b0d; }
+  #video { position:relative; width:var(--w); height:var(--h); overflow:hidden; background:#0a0b0d; color:#f4f2ee; font-family:"Space Grotesk",system-ui,sans-serif; }
+
+  #glow { position:absolute; left:50%; top:var(--glowY); width:1500px; height:1150px; transform:translate(-50%,-50%); background:radial-gradient(closest-side,rgba(183,23,39,.58),rgba(183,23,39,.16) 55%,transparent); opacity:0; }
+
+  #brand { position:absolute; left:0; right:0; top:var(--brandTop); display:flex; align-items:center; justify-content:center; gap:16px; font-size:32px; font-weight:700; letter-spacing:-.01em; opacity:0; }
+  #brand img { width:56px; height:56px; }
+
+  #hl { position:absolute; left:60px; right:60px; top:var(--hlTop); text-align:center; font-size:var(--hlSize); font-weight:700; letter-spacing:-.035em; line-height:1.04; }
+  #hl .w { display:inline-block; opacity:0; will-change:transform,opacity; }
+  #hl .red { color:#ff5c6c; }
+
+  #price { position:absolute; left:50%; top:var(--priceTop); transform:translateX(-50%); white-space:nowrap; padding:.5em .95em; border-radius:999px; border:2px solid rgba(255,255,255,.28); background:rgba(10,11,13,.5); font-size:var(--priceSize); font-weight:500; opacity:0; }
+  #price b { font-weight:700; }
+
+  #cta { position:absolute; left:50%; top:var(--ctaTop); height:var(--ctaH); padding:0 .9em 0 .5em; border-radius:999px; background:#f4f2ee; color:#0a0b0d; display:flex; align-items:center; gap:.42em; white-space:nowrap; font-size:var(--ctaSize); font-weight:700; letter-spacing:-.01em; opacity:0; box-shadow:0 24px 60px rgba(0,0,0,.5); }
+  #cta svg { height:68%; width:auto; flex:none; }
+
+  #scene { position:absolute; inset:0; perspective:2400px; perspective-origin:50% 62%; }
+  /* Cihazlar: gerçekçi çerçeveler (devices/ — MacBook Pro 16 + iPhone 17 Pro, ekranı şeffaf PNG).
+     Ekran konumu çerçeve ölçüsünün yüzdesidir: MacBook 4893×3164 içinde 816,528 3262×2109; iPhone 1508×3278 içinde 151,328 1206×2623.
+     --lapW / --phW çerçeve genişliğidir (ekran: MacBook'ta %66,7'si, iPhone'da %80'i). */
+  .dev { position:absolute; opacity:0; will-change:transform; }
+  .dev .frame { position:relative; display:block; width:100%; height:auto; }
+  .dev .screen { position:absolute; object-fit:cover; object-position:top center; background:#000; }
+  #laptop { left:var(--lapLeft); top:var(--lapTop); width:var(--lapW); filter:drop-shadow(0 50px 60px rgba(0,0,0,.6)); }
+  #laptop .screen { left:16.55%; top:16.5%; width:66.9%; height:67%; }
+  #phone { left:var(--phLeft); top:var(--phTop); width:var(--phW); filter:drop-shadow(0 40px 50px rgba(0,0,0,.7)); }
+  #phone .screen { left:9.6%; top:9.8%; width:80.8%; height:80.4%; border-radius:12% / 5.6%; }
+</style>
+</head>
+<body>
+<main id="video">
+  <div id="glow"></div>
+  <div id="scene">
+    <div id="laptop" class="dev"><img id="dimg" class="screen" alt="" /><img class="frame" src="devices/macbook-pro-16.png" alt="" /></div>
+    <div id="phone" class="dev"><img id="mimg" class="screen" alt="" /><img class="frame" src="devices/iphone-17-pro.png" alt="" /></div>
+  </div>
+  <div id="brand"><img src="../../../public/email/logo.png" alt="" />Piton</div>
+  <h1 id="hl"><span class="w">İşletmenize</span><br /><span class="w red">yapay</span> <span class="w red">zekâyı</span><br /><span class="w">entegre</span> <span class="w">edelim.</span></h1>
+  <div id="price"><b>30.000 TL</b>'den başlayan fiyatlarla</div>
+  <div id="cta">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#25D366" /><path d="M24 11.5c-6.9 0-12.5 5.4-12.5 12.1 0 2.3.7 4.5 1.9 6.400l-1.9 6.5 6.9-1.8c1.700.9 3.600 1.400 5.600 1.400 6.900 0 12.500-5.400 12.500-12.100S30.900 11.500 24 11.500z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" /><path d="M19.700 18.300c.900 2.900 2.900 5.600 6.300 7.400l1.900-1.700 3 1.500c-.300 1.900-1.900 2.900-3.700 2.600-4.900-.900-8.900-4.700-10-9.400-.400-1.800.700-3.300 2.500-3.500l1.400 2.900-1.400 1.200z" fill="#fff" /></svg>
+    WhatsApp'tan yazın
+  </div>
+</main>
+<script>
+  const FORMAT = new URLSearchParams(location.search).get("format") === "feed" ? "feed" : "story";
+  document.body.classList.toggle("feed", FORMAT === "feed");
+
+  const DURATION = 13;       // saniye
+  const FRAMES = 228;        // capture-site-scroll.cjs kare sayısı (30 fps'te 7,6 sn)
+  const SCROLL_START = 2.2;  // sitenin kaymaya başladığı an
+  const SHIFT = FORMAT === "feed" ? 104 : 132; // CTA gelirken cihazların aşağı kayması (px)
+
+  const $ = (id) => document.getElementById(id);
+  const clamp = (v) => Math.min(1, Math.max(0, v));
+  const seg = (t, a, b) => clamp((t - a) / (b - a));
+  const out = (p) => 1 - Math.pow(1 - p, 3);
+  const inOut = (p) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2);
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const words = [...document.querySelectorAll("#hl .w")];
+  const frameSrc = (dir, i) => `frames/${dir}/f-${String(i).padStart(4, "0")}.jpg`;
+
+  function setFrame(img, dir, t, start) {
+    const i = Math.round(seg(t, start, start + FRAMES / 30) * (FRAMES - 1));
+    const src = frameSrc(dir, i);
+    if (img.dataset.src === src) return Promise.resolve();
+    img.dataset.src = src;
+    img.src = src;
+    return img.decode().catch(() => {});
+  }
+
+  // Tüm sahne t'nin saf fonksiyonudur; render script'i kare kare çağırır.
+  window.renderAt = function renderAt(t) {
+    $("brand").style.opacity = out(seg(t, 0.1, 0.7));
+
+    words.forEach((w, i) => {
+      const p = out(seg(t, 0.35 + i * 0.11, 0.9 + i * 0.11));
+      w.style.opacity = p;
+      w.style.transform = `translateY(${(1 - p) * 44}px)`;
+    });
+
+    $("glow").style.opacity = inOut(seg(t, 1.1, 2.5)) * (0.92 + 0.08 * Math.sin(t * 1.1));
+
+    const pp = out(seg(t, 1.6, 2.2));
+    $("price").style.opacity = pp;
+    $("price").style.transform = `translateX(-50%) translateY(${(1 - pp) * 22}px)`;
+
+    const end = 1;                             // cihazlar baştan itibaren CTA'nın altında durur
+    const drift = inOut(seg(t, 2.3, 9.8));     // yavaş dönüş
+    const float = Math.sin(t * 0.9) * 6;
+
+    const lp = out(seg(t, 1.2, 2.4));
+    $("laptop").style.opacity = clamp(lp * 1.4);
+    $("laptop").style.transform =
+      `translate3d(0,${(1 - lp) * 150 + end * SHIFT + float}px,${(1 - lp) * -420}px) ` +
+      `rotateY(${lerp(-16, -5, lp) + drift * 4}deg) rotateX(${lerp(6, 1.5, lp)}deg)`;
+
+    const hp = out(seg(t, 1.55, 2.7));
+    $("phone").style.opacity = clamp(hp * 1.4);
+    $("phone").style.transform =
+      `translate3d(0,${(1 - hp) * 190 + end * SHIFT - float}px,${(1 - hp) * -300}px) ` +
+      `rotateY(${lerp(18, 6, hp) - drift * 4}deg) rotateX(${lerp(5, 1, hp)}deg)`;
+
+    const cp = out(seg(t, 2.0, 2.6));          // başlık → fiyat → CTA sırasıyla, baştan görünür
+    const pulse = t > 10.9 ? 1 + 0.014 * Math.sin((t - 10.9) * 5) : 1;
+    $("cta").style.opacity = cp;
+    $("cta").style.transform = `translateX(-50%) scale(${lerp(0.9, 1, cp) * pulse})`;
+
+    return Promise.all([
+      setFrame($("dimg"), "desktop", t, SCROLL_START),
+      setFrame($("mimg"), "mobile", t, SCROLL_START + 0.35),
+    ]);
+  };
+  window.DURATION = DURATION;
+
+  // Tarayıcıda açılınca önizleme olarak oynat (?t=sn verilirse o karede durur)
+  const fixed = new URLSearchParams(location.search).get("t");
+  if (fixed !== null) renderAt(Number(fixed));
+  else if (!navigator.webdriver) {
+    const t0 = performance.now();
+    (function loop() {
+      renderAt(((performance.now() - t0) / 1000) % (DURATION + 0.8));
+      requestAnimationFrame(loop);
+    })();
+  }
+</script>
+</body>
+</html>
