@@ -15,6 +15,7 @@ export type ArtProps = { label: string };
 export const BLOG_ART: Record<BlogArtKey, ComponentType<ArtProps>> = {
   'accessible-web-design-forms': dynamic(() => import('./art/accessible-web-design-forms')),
   'agency-vs-freelancer': dynamic(() => import('./art/agency-vs-freelancer')),
+  'agentic-commerce': dynamic(() => import('./art/agentic-commerce')),
   'ai-automation-roi': dynamic(() => import('./art/ai-automation-roi')),
   'ai-impact-on-web-design-and-coding': dynamic(() => import('./art/ai-impact-on-web-design-and-coding')),
   'b2b-landing-page-lead-generation': dynamic(() => import('./art/b2b-landing-page-lead-generation')),
@@ -55,6 +56,7 @@ export const BLOG_ART: Record<BlogArtKey, ComponentType<ArtProps>> = {
  */
 export const BLOG_FIGURES: Record<string, ComponentType<ArtProps>> = {
   'accessible-web-design-forms': dynamic(() => import('./art/accessible-web-design-forms-figure')),
+  'agentic-commerce': dynamic(() => import('./art/agentic-commerce-figure')),
   'ai-automation-roi': dynamic(() => import('./art/ai-automation-roi-figure')),
   'b2b-landing-page-lead-generation': dynamic(() => import('./art/b2b-landing-page-lead-generation-figure')),
   'chatgpt-ads': dynamic(() => import('./art/chatgpt-ads-figure')),
