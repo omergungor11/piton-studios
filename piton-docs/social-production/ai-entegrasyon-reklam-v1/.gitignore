@@ -1,0 +1,7 @@
+# Üretilen çıktı: site kareleri (~70 MB) ve render ara kareleri script'lerle yeniden üretilir
+frames/
+out/.frames-*/
+# Cihaz çerçeveleri (MacBook Pro 16 + iPhone 17 Pro) Apple Design Resources lisanslıdır; public repoya konmaz.
+# Yeniden almak için: github.com/blaineam/monkr → static/devices/{macbook-pro-16,iphone-17-pro}/silver.png
+# (sips -Z 2000 → devices/macbook-pro-16.png, sips -Z 1700 → devices/iphone-17-pro.png)
+devices/

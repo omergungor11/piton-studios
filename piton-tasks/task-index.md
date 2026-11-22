@@ -27,7 +27,7 @@
 | 20 | Performans (TASK-104..106, 113..115, 123) | 7 | 7 | 0 | 0 | 0 |
 | **Total** | | **122** | **121** | **0** | **0** | **0** |
 
-**Progress**: 121/122 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
+**Progress**: 122/123 (TASK-075 teklif sihirbazı kullanıcı kararıyla REVERTED)
 
 > ⚠️ **Phase 0-1'de yanlis COMPLETED isaretli tasklar var.** 2026-07-29'da kod tabani
 > tarandiginda su tasklarin hicbir zaman uygulanmadigi tespit edildi. Duzeltilmis
@@ -252,3 +252,4 @@
 | TASK-123 | Görsel yükleme hızı: proje bulutu optimize texture, kademeli yükleme, `/assets` cache | S | COMPLETED |
 | TASK-124 | Evolve, Coffi, Karga, Neuneu konsept projelerini portfolyonun başına ekle (önizleme, canlı link, 3 dil, 3B bulut) | S | COMPLETED |
 | TASK-125 | Salih Defterali, Cyprokey, Gabfest 2025, Orchid Tent ve mükerrer Aydın Transfer hikâyesini kaldır; önceki/sonraki gezintisini tablodaki projelerle sınırla | S | COMPLETED |
+| TASK-126 | Daily Food, Maurice, Cinetic, Blue, Jefferson, Favori, 31 for 31, Horizonte konsept projelerini portfolyonun başına ekle (Vercel deploy, önizleme, canlı link, 3 dil) | S | COMPLETED |

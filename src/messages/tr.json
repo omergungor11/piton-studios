@@ -661,6 +661,78 @@
     }
   },
   "works": {
+    "daily-food": {
+      "title": "Daily Food",
+      "kind": "Web Tasarım · Gıda İhracatı",
+      "summary": "Next.js ile yeniden geliştirilen süt ürünleri ihracat sitesi konsepti — kaydırmaya bağlı video sahneleri, sürüklenebilir 3B ambalajlar ve 28 ülke sayfası.",
+      "body": [
+        "Daily Food, Dairy Food Bulgaria tasarım referansını Next.js App Router ile yeniden geliştirdiğimiz gıda ihracatı konsepti. Ana sayfada kaydırmaya bağlı video sahneleri, sayaçlar ve bölüm geçişleri yer alıyor; ürün sekmelerinde video geçişleri, ambalaj bölümünde sürüklenebilir 3B modeller ve ihracat bölümünde etkileşimli küre kullanılıyor. Ürünler, ambalaj, katalog, tesis ve iletişim sayfalarının yanında 28 ülkeye ait ihracat sayfası bulunuyor.",
+        "Katalog filtreleri, açılır ambalaj ve SSS panelleri, mobil menü ve sayfalar arası animasyonlar masaüstü ve mobil için birlikte ele alındı; hareketi duraklatma kontrolü baştan eklendi. İletişim ve fiyat tahmini formları demo modunda çalışıyor: tahmin tarayıcıda hesaplanıyor, form verisi gönderilmiyor. Çalışma, özgün Dairy Food Bulgaria tasarımını referans alan bir ön yüz geliştirme konsepti olarak Daily Food adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "maurice": {
+      "title": "Maurice",
+      "kind": "Web Tasarım · Yaratıcı Portfolyo",
+      "summary": "Next.js ile yeniden geliştirilen yaratıcı portfolyo konsepti — sıvı tipografi, dokunmaya tepki veren koi animasyonu ve dalga biçimli müzik oynatıcı.",
+      "body": [
+        "Maurice, Maurice Moynihan'ın yaratıcı portfolyosunu referans alarak Next.js ile yeniden geliştirdiğimiz konsept. Ana sayfada sıvı tipografi, kaydırmaya bağlı bölüm geçişleri ve imleçle açılan menü kartları yer alıyor; masaüstünde özel imleç ve sürüklenebilir yem, mobilde dokunmaya tepki veren koi animasyonu kullanılıyor. Sayfanın sonunda ASCII dokusu bir sualtı sahnesine açılıyor.",
+        "Çalışma ana sayfayı ve 26 alt sayfayı masaüstü ve mobil düzenleriyle kapsıyor. Reklam arşivi vaka sayfalarına bağlanıyor; müzik sayfasında parça seçimi, dalga biçimi üzerinden oynatma konumunu değiştirme ve oynatma kontrolleri bulunuyor. Görsel, ses ve videolar yerelden sunuluyor, analitik devre dışı. Çalışma, özgün Maurice Moynihan portfolyosunu referans alan bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı."
+      ]
+    },
+    "cinetic": {
+      "title": "Cinetic",
+      "kind": "Web Tasarım · Film Prodüksiyon",
+      "summary": "Next.js ile yeniden geliştirilen prodüksiyon stüdyosu konsepti — giriş filmi, sürüklenebilir galeri ve kaydırmayla geçen kategori filmleri.",
+      "body": [
+        "Cinetic, Cinetic Creatives tasarım referansını Next.js App Router ve TypeScript ile yeniden geliştirdiğimiz film prodüksiyon stüdyosu konsepti. Ana sayfa giriş filmini, sürüklenebilir galeriyi, kaydırmayla geçiş yapan üç kategori filmini ve etkileşimli alt logoyu bir araya getiriyor.",
+        "Proje arşivinde kategori seçimi, sayfalama ve küçük resim üzerinden video sarma bulunuyor; Hakkında, Hizmetler, Sinema ve proje detayları kendi rotalarında açılıyor. Giriş ve kategori filmleri ile proje kapakları yerelden sunuluyor. Çalışma, özgün Cinetic Creatives tasarımını referans alan bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı."
+      ]
+    },
+    "blue": {
+      "title": "Blue",
+      "kind": "Web Tasarım · LED Ekran Teknolojisi",
+      "summary": "Next.js'e taşınan LED ekran ve dijital deneyim şirketi konsepti — GSAP ve Lenis ile kaydırma animasyonları, 58 rota.",
+      "body": [
+        "Blue, Blue Square X tasarım referansını Next.js App Router'a taşıdığımız LED ekran ve dijital deneyim şirketi konsepti. Ana sayfa, ürünler, çözüm sayfaları, işler, blog ve iletişim dahil 58 rota tek bir Next.js uygulamasında toplanıyor.",
+        "Kaydırma animasyonları GSAP ScrollTrigger ve Lenis ile çalışıyor; slider, sekme ve form davranışları konsept için ayrı betiklerle yazıldı. Formlar demo olarak çalışıyor. Çalışma, özgün Blue Square X tasarımını referans alan bir ön yüz geliştirme konsepti olarak Blue adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "jefferson": {
+      "title": "Jefferson",
+      "kind": "Web Tasarım · Sporcu Portfolyosu",
+      "summary": "Next.js ile yeniden geliştirilen sporcu sitesi konsepti — video yansımalı hero, animasyonlu kariyer istatistikleri ve sürüklenebilir galeriler.",
+      "body": [
+        "Jefferson, Justin Jefferson'ın web sitesini referans alarak Next.js ile yeniden geliştirdiğimiz sporcu portfolyosu konsepti. Kaydırmayla ilerleyen anlatım; hero'daki video yansıması, animasyonlu kariyer istatistikleri, sürüklenebilir galeriler ve sürükleyerek ya da kaydırarak gezilen Journal bölümü üzerine kurulu.",
+        "Saha içi, saha dışı, vakıf, iş birlikleri, Journal ve iletişim dahil dokuz rota Chromium ve WebKit'te masaüstü ve mobil görünümlerde test edildi; sürükleme ve kaydırma hareketleri, galeriler, video pencereleri ve Journal derin bağlantıları ayrıca kontrol edildi. Çalışma, özgün sitenin tasarımını referans alan bağımsız bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı."
+      ]
+    },
+    "favori": {
+      "title": "Favori",
+      "kind": "Web Tasarım · Lüks Mücevher",
+      "summary": "Next.js'e aktarılan lüks mücevher deneyimi konsepti — kaplandan yüzüğe parçacık dönüşümü, sürüklenebilir taş sahneleri ve yatay koleksiyon.",
+      "body": [
+        "Favori, Loro Labs'in TIGRIS deneyimini referans alarak Next.js App Router ve TypeScript'e aktardığımız lüks mücevher konsepti. Açılışta kaplan parçacıkları bir yüzüğe dönüşüyor; ardından kaydırmaya bağlı manifesto, yatay koleksiyon, makro yüzük sahnesi ve sürükleme ya da yön tuşlarıyla kontrol edilen yakut ve elmas sahneleri geliyor.",
+        "Sayfa ve pencereler React sunucu bileşenleri olarak yeniden kuruldu; görsel ve hareket sadakati için referansın yayımlanmış WebGL, GSAP ve Lenis motoru yerelde korundu. Altı ürünün detay pencereleri ve demo randevu akışı çalışıyor; mobil portre görselleri, azaltılmış hareket tercihi ve WebGL'siz yedek davranış ele alındı. Bölüm yükseklikleri 1440×1000 masaüstü ve 390×844 mobil görünümde referansla karşılaştırıldı. Çalışma, özgün TIGRIS tasarımını referans alan bir konsept olarak Favori adıyla Vercel'de yayınlandı."
+      ]
+    },
+    "31-for-31": {
+      "title": "31 for 31",
+      "kind": "Web Tasarım · Film Arşivi",
+      "summary": "Next.js ile yeniden geliştirilen film listesi deneyimi — Three.js kaset rafı ve VHS oynatıcı, yatay/dikey kaydırma sahneleri ve kişisel izleme listesi.",
+      "body": [
+        "31 for 31, Meredith McGrade'ın 31-for-31.com deneyimini referans alarak Next.js ile yeniden geliştirdiğimiz film arşivi konsepti. 31 film üç bölüm arası geçişle sunuluyor; GSAP ScrollTrigger ve Lenis ile dikey ve yatay kaydırma, sabitlenen sahneler ve tipografi animasyonları çalışıyor. Three.js tarafında hareketli el, hayalet, kaset rafı ve VHS oynatıcı yedi GLB modelle çiziliyor; masaüstünde raf sürükleniyor, mobilde kasetler kaydırılıyor.",
+        "Sıralama ve filtreleme, izleme takibi, kişisel film değiştirme, oylar ve PNG kaset etiketi deneyimin parçası. İzleme listesi tarayıcıda saklanıyor; anonim bağlantı ya da kodla cihazlar arası senkronizasyon ve oylar küçük bir API üzerinden çalışıyor. Özgün tasarım ve içerik Meredith McGrade'a ait, kaynak sitedeki tasarım kredileri korunuyor. Çalışma bir ön yüz geliştirme konsepti olarak Vercel'de yayınlandı."
+      ]
+    },
+    "horizonte": {
+      "title": "Horizonte",
+      "kind": "Web Tasarım · Gayrimenkul",
+      "summary": "Next.js ile geliştirilen konut projesi konsepti — kaydırmayla ilerleyen 360 karelik hero, etkileşimli genel plan ve 54 konut detay sayfası.",
+      "body": [
+        "Horizonte, Horizonte Village tasarım referansını Next.js App Router, React, TypeScript ve GSAP ile geliştirdiğimiz konut projesi konsepti. Açılışta organik maskelerle villa ya da rezidans seçiliyor; masaüstünde 360 karelik kamera dizisi kaydırmayla canvas üzerinde ilerliyor, mobilde manzara yatay akıyor. Harf bazında geçişler, maske galerisi, sürüklenebilir konum kartları ve çizilen harita rotaları ana deneyimi oluşturuyor.",
+        "Sürüklenebilir genel plan SVG sınırlarıyla 23 villa ve 4 rezidans bloğunu gösteriyor; izometrik kat seçimi, oda ve kat türü filtreleri ile 54 ayrı konut detay sayfası var. Kat planları değiştirilebiliyor, büyütülüp sürüklenebiliyor. Bu bir ön yüz konsepti: satış CRM'i içermiyor, formlar gerçek bir kayıt göndermiyor. Çalışma, özgün Horizonte Village tasarımını referans alan bir konsept olarak Vercel'de yayınlandı."
+      ]
+    },
     "evolve": {
       "title": "Evolve",
       "kind": "Web Tasarım · Teknoloji Ajansı",
@@ -3308,7 +3380,7 @@
     },
     "industries": {
       "q": "Hangi sektörlerde deneyiminiz var?",
-      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 57 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
+      "a": "Portfolyoda inşaat/mühendislik, emlak, turizm, finans, taşımacılık, e-ticaret, gıda/ambalaj ve SaaS/AI-ML sektörlerinden 65 proje bulunur. Öne çıkan sektör yıldan yıla talebe göre değişse de çalışma biçimi, süreç ve ekip 2021'den bu yana aynı kalmıştır.",
       "detail": [
         "2021-2022 döneminde kurumsal site ve marka işleri, 2022-2023'te e-ticaret ve emlak/turizm, 2024'te finans ve taşımacılık, 2025'te AI/ML ve SaaS ağırlıklı projeler öne çıktı.",
         "Sektöre özel derin mevzuat bilgisi gerektiren regüle alanlarda (sağlık, hukuk gibi) proje öncesi ek araştırma yapılır; bu durum keşif süresini biraz uzatabilir."
