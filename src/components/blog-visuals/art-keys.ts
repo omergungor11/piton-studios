@@ -14,6 +14,7 @@ export const BLOG_ART_KEYS = [
   'ai-impact-on-web-design-and-coding',
   'b2b-landing-page-lead-generation',
   'chatgpt-ads',
+  'e-archive-invoice-2027',
   'ecommerce-cro',
   'erp-vs-excel',
   'eu-ai-act-transparency',
