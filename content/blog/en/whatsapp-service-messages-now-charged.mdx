@@ -1,0 +1,215 @@
+---
+title: "WhatsApp API replies are no longer free: the 1 October change and how to keep costs down"
+description: "From 1 October 2026 Meta charges for WhatsApp service messages. What changed, what stays free and how to keep your chatbot costs under control."
+date: 2026-10-25
+tags: ["whatsapp", "chatbot", "automation"]
+author: "Piton"
+draft: false
+translationKey: whatsapp-service-message-pricing
+sources:
+  - title: "Meta for Developers — Pricing on the WhatsApp Business Platform"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+  - title: "Teknoblog — Customer replies on the WhatsApp Business Platform become billable on 1 October (25 Sep 2026, in Turkish)"
+    url: "https://www.teknoblog.com/whatsapp-business-platform-mesaj-ucreti-ekim-2026/"
+  - title: "Teknoblog — WhatsApp Business service message charges (26 Sep 2026, in Turkish)"
+    url: "https://www.teknoblog.com/whatsapp-business-hizmet-mesaji-ucreti/"
+  - title: "Chatfuel — WhatsApp pricing changes on 1 October"
+    url: "https://chatfuel.com/docs/whatsapp-pricing-2026"
+  - title: "Darwin AI — WhatsApp Business Platform pricing changes: service messages billed starting October 2026"
+    url: "https://help.getdarwin.ai/en/articles/16516839-whatsapp-business-platform-pricing-changes-service-messages-billed-starting-october-2026"
+  - title: "Whapi.Cloud — How to calculate your WhatsApp API bill after 1 October 2026 (in Turkish)"
+    url: "https://whapi.cloud/blog/tr/how-to-calculate-whatsapp-api-bill-after-october-1-2026-with-examples"
+  - title: "CNBC-e — TURKSTAT: the apps people in Türkiye use most online (in Turkish)"
+    url: "https://www.cnbce.com/teknoloji/tuik-acikladi-turkler-internette-en-cok-bu-uygulamalari-kullaniyor-h34433"
+faq:
+  - q: "What exactly changed on WhatsApp on 1 October 2026?"
+    a: "Service messages sent through the WhatsApp Business Platform (API), meaning free-form replies sent within 24 hours of a customer's message, are now charged per delivered message. They had been free since November 2024. Utility templates sent inside that window are now charged as well."
+  - q: "Is there a free allowance for service messages?"
+    a: "Yes. According to Meta, each business phone number can send 1,000 delivered service messages per month for free, and charges start from the 1,001st message. Unused messages do not roll over to the next month."
+  - q: "I use the WhatsApp Business app on my phone. Am I affected?"
+    a: "No. The change only covers numbers connected to the API. No general charge has been announced for businesses that reply only from the WhatsApp Business app on their phone."
+  - q: "How much does a message cost in Türkiye?"
+    a: "The price comes from Meta's rate card and depends on the country where the recipient's number is registered; service messages have no volume discounts. Türkiye is listed as a market of its own, and the current rate is in the rate card on Meta's official pricing page. Your solution provider may add its own fee on top."
+  - q: "How can I lower my chatbot's costs?"
+    a: "The most effective step is to give the same information in fewer messages: a bot that splits one reply into three bubbles pays three times. Turning frequent questions into single, complete answers, dropping unnecessary confirmation and thank-you messages, and tracking monthly message volume in your dashboard also cut costs directly."
+---
+
+If you answer WhatsApp questions with a chatbot or a live chat dashboard, your bill has a new line
+from October. Since 1 October 2026, Meta charges per message for customer replies sent through the
+WhatsApp Business Platform, known as service messages. These replies had been free for about two years.
+This post explains what changed, what stays free, how the bill is calculated and what you can do to
+keep chatbot costs under control, based on Meta's own documentation. If you are new to the API, start
+with our [WhatsApp Business API guide](/en/blog/what-is-whatsapp-business-api).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "From 1 October 2026, service messages sent through the API are charged per delivered message; they had been free since November 2024.",
+    "Each business phone number can send 1,000 service messages a month for free, and unused messages do not roll over.",
+    "The free window opened by conversations from Click to WhatsApp ads can stay open for up to 7 days.",
+    "Every delivered message is charged separately, so a bot that splits one reply into several bubbles pays more.",
+    "Businesses that reply from the WhatsApp Business app on their phone are not affected.",
+  ]}
+/>
+
+## What changed?
+
+According to [Meta's pricing page](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing),
+service messages, which became free on 1 November 2024, are charged again from 1 October 2026. A
+service message is a free-form reply you send without a template inside the 24-hour **customer service
+window** that opens when a customer writes to you. It makes no difference whether a person, a rule-based
+bot or an AI assistant sends it.
+
+The second change concerns utility templates. Templates such as order status, appointment reminders or
+delivery notices are now charged even when sent inside the customer service window.
+[As Teknoblog reports](https://www.teknoblog.com/whatsapp-business-platform-mesaj-ucreti-ekim-2026/),
+these messages are no longer automatically free just because the window is open.
+
+What stays the same matters too. Messages customers send to you are free. Marketing templates were
+always charged, and utility and authentication templates sent outside the window are billed as before.
+[According to Chatfuel](https://chatfuel.com/docs/whatsapp-pricing-2026), Instagram and Messenger
+automations are not affected by this change.
+
+<StatGrid
+  items={[
+    { value: "1,000", label: "Free service messages per business number per month", note: "META" },
+    { value: "24 hours", label: "Customer service window for free-form replies", note: "META" },
+    { value: "7 days", label: "Maximum length of the free window opened by a Click to WhatsApp ad", note: "META" },
+  ]}
+/>
+
+## Why it matters to so many businesses
+
+In Türkiye, WhatsApp is one of the first channels customers try when they want to reach a business.
+According to TURKSTAT's [ICT Usage Survey in Households 2026](https://www.cnbce.com/teknoloji/tuik-acikladi-turkler-internette-en-cok-bu-uygulamalari-kullaniyor-h34433),
+90% of internet users use WhatsApp, more than YouTube or Instagram. The more customers write, the more
+replies a business sends, and now every one of those replies is a cost line.
+
+<BarChart
+  title="Most used social media and messaging apps in Türkiye"
+  caption="Internet users aged 16-74, percent, 2026. Source: TURKSTAT ICT Usage Survey in Households."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "WhatsApp", value: 90, highlight: true },
+    { label: "YouTube", value: 77.6 },
+    { label: "Instagram", value: 71.1 },
+  ]}
+/>
+
+The businesses hit hardest are those that use WhatsApp heavily as a customer service channel: online
+stores that answer order questions with a bot, clinics and beauty salons that manage appointments on
+WhatsApp, and hotels and travel companies that handle bookings and information requests. Most of their
+replies are service messages, and any account with more than a few hundred conversations a month
+quickly approaches the free monthly allowance.
+
+## What stays free
+
+There are two important exceptions.
+
+**1,000 free service messages a month.** According to Meta, each business phone number has a free
+allowance of 1,000 delivered service messages a month. Charges start from the 1,001st message, and
+unused messages do not roll over. Because the allowance is per number, a business using two numbers
+gets 2,000 free messages a month in total.
+
+**Click to WhatsApp ads.** When a customer writes to you from a Click to WhatsApp ad on Facebook or
+Instagram, using the Android or iOS app, and you reply within the customer service window, a free entry
+point window opens. Meta's page says this window can stay open for up to 7 days, and marketing,
+utility, authentication and service messages are not charged during that time. A WhatsApp button on
+your website or a QR code does not open this window.
+
+<Callout type="info" title="AI assistant messages are counted separately">
+  Messages sent through Meta's own business assistant (Meta Business Agent) are charged even inside the
+  free window. If you run your own chatbot, its messages are charged as service messages and the
+  monthly 1,000-message allowance applies to them.
+</Callout>
+
+## How the bill is calculated
+
+Meta's rules are clear on a few points:
+
+- **Charged per delivered message.** Meta only charges for delivered messages; whether they are read
+  makes no difference.
+- **Rates by country.** The price depends on the market where the recipient's number is registered.
+  Türkiye appears in the rate card as a market of its own. Service messages have no volume discounts;
+  volume tiers apply only to utility and authentication messages.
+- **The provider's share.** The solution provider that gives you API access may add its own fee to
+  Meta's rate. [Whapi.Cloud's worked example](https://whapi.cloud/blog/tr/how-to-calculate-whatsapp-api-bill-after-october-1-2026-with-examples)
+  assumes 15%; the real share varies by provider.
+- **When prices change.** Meta can only change prices on the first day of each quarter and announces
+  rate card changes at least one month in advance. The next possible date is 1 January 2027.
+
+We do not give a per-message figure for Türkiye in this post, because the rate is published in Meta's
+official rate card and can change from quarter to quarter. When you budget, use that month's rate card
+together with your provider's fee.
+
+<Callout type="warn" title="Without a payment method, replies stop">
+  According to Meta, the messaging account needs a payment method for service messages to keep working.
+  On accounts without one, service message delivery stops as soon as those messages become billable.
+  If your chatbot has gone quiet since early October, check this first.
+</Callout>
+
+## The number of messages matters, not their length
+
+Because the charge is per message, cost depends on how many messages a conversation is split into.
+As [Darwin AI's example](https://help.getdarwin.ai/en/articles/16516839-whatsapp-business-platform-pricing-changes-service-messages-billed-starting-october-2026)
+points out, a reply split into three bubbles is charged three times. The scenario below shows how the
+number of replies per conversation changes the number of billed messages for a business that receives
+800 customer conversations a month.
+
+<BarChart
+  title="Scenario: billed service messages by replies per conversation"
+  caption="Scenario model: 800 conversations a month, one business number, after the 1,000 free monthly messages. Rules: Meta pricing page."
+  max={3500}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "5 replies per conversation", value: 3000 },
+    { label: "3 replies per conversation", value: 1400, highlight: true },
+    { label: "2 replies per conversation", value: 600, highlight: true },
+  ]}
+/>
+
+Going from five replies to two cuts billed messages in this scenario from 3,000 to 600. Because the
+first 1,000 messages are free, the saving is even larger than the proportion suggests. Giving the same
+information in fewer messages is now a direct cost decision in chatbot design.
+
+## What to change in your chatbot and workflows
+
+<BlogFigure name="whatsapp-service-message-pricing" alt="Three-lane window diagram: at the top, a 24-hour window opened by the customer's message, where the first replies carry check marks as free and later ones carry coins as charged; in the middle, a longer window opened from an ad card, where every reply carries a check mark; at the bottom, a template document sent outside the window with a coin as charged." caption="In the 24-hour window opened when a customer writes, 1,000 messages a month are free and the rest are charged; a conversation from a Click to WhatsApp ad is free for up to 7 days; templates outside the window are always charged." />
+
+These rules call for a few concrete changes in an existing WhatsApp chatbot:
+
+| Situation | What to do |
+|---|---|
+| The bot splits replies into several bubbles | Give the information in one complete message; use a list or buttons if needed |
+| Every message is followed by "anything else?" | Drop the separate confirmation and add the question to the end of the main reply |
+| Order and shipping notices also go out when the customer writes | Decide which notices are really needed; do not send the same information twice |
+| Ads send customers to the website, then on to WhatsApp | Consider the Click to WhatsApp ad format for conversation-focused campaigns |
+| Volume is not tracked | Track monthly service messages per number and see when you approach the 1,000 limit |
+| No payment method is set | Add a payment method to the messaging account |
+
+## Common mistakes
+
+- **Assuming "this doesn't affect us".** If your chatbot or live chat dashboard is connected to the API,
+  every reply now counts; do not confuse the phone app with the API.
+- **Splitting long replies.** Splitting for readability multiplies the message count on the bill.
+- **Misreading the free window.** A WhatsApp button on your site, a QR code or a saved number does not
+  open the free entry point window; it only applies to conversations from Click to WhatsApp ads.
+- **Forgetting the provider's fee.** Meta's rate is not the whole bill; include your solution
+  provider's share.
+- **Missing the start of the quarter.** Rates can change at the start of each quarter, so check your
+  budget every quarter, not once a year.
+
+## Conclusion
+
+Charging for service messages again does not make WhatsApp an expensive channel, but it turns every
+message into a cost item. The 1,000 free messages a month are a meaningful buffer for low-volume
+businesses. For high-volume ones, the difference comes from how completely a chatbot answers with how
+few messages. Customers still write on WhatsApp more than anywhere else; what has changed is that reply
+flows now need to be designed with cost in mind too.
+
+If you want to review your current WhatsApp flow against these rules, see our
+[WhatsApp and chatbot](/en/services/whatsapp-chatbot) and [automation](/en/services/automation)
+service pages, look at [Meta ads](/en/services/meta-ads) for Click to WhatsApp campaigns, or
+[contact us](/en/contact) directly.

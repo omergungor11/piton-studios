@@ -1,0 +1,226 @@
+---
+title: "Türkiye Yapay Zekâ Eylem Planı 2026-2030: KOBİ'ler için ne anlama geliyor?"
+description: "Yapay Zekâ Eylem Planı'nda KOBİ'leri ilgilendiren başlıklar: AI kuponları, GPU erişimi, eğitim ve düzenleme. TÜİK verileriyle bugünkü durum ve hazırlık."
+date: 2026-10-28
+tags: ["yapay zeka", "kobi", "mevzuat"]
+author: "Piton"
+draft: false
+translationKey: turkiye-ai-action-plan
+sources:
+  - title: "Alomaliye — Türkiye Yapay Zekâ Eylem Planı (2026-2030) ile ilgili 2026/9 sayılı Cumhurbaşkanlığı Genelgesi"
+    url: "https://www.alomaliye.com/2026/08/18/turkiye-yapay-zeka-eylem-plani-2026-2030/"
+  - title: "Webrazzi — 2026-2030 Yapay Zekâ Eylem Planı'nın tüm detayları"
+    url: "https://webrazzi.com/2026/08/18/turkiye-nin-2026-2030-yapay-zek-eylem-plani-yururluge-girdi/"
+  - title: "Teknoblog — Türkiye yapay zekâ eylem planını açıkladı"
+    url: "https://www.teknoblog.com/turkiye-yapay-zeka-eylem-planini-acikladi/"
+  - title: "QNB Invest — Türkiye'nin Yapay Zekâ Eylem Planı: 2030'a uzanan yeni yol haritası"
+    url: "https://www.qnbinvest.com.tr/investodak/qnbarastirma/turkiyenin-yapay-zek-eylem-plani-2030a-uzanan-yeni-yol-haritasi"
+  - title: "Bloomberg HT — Türkiye'de yapay zekâ kullanımı yaklaşık iki kat arttı (TÜİK Yapay Zekâ İstatistikleri 2026)"
+    url: "https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100"
+faq:
+  - q: "Türkiye Yapay Zekâ Eylem Planı ne zaman yürürlüğe girdi?"
+    a: "Plan, 18 Ağustos 2026 tarihli Resmî Gazete'de yayımlanan 2026/9 sayılı Cumhurbaşkanlığı Genelgesi ile yürürlüğe girdi. 2026-2030 dönemini kapsıyor ve 2021-2025 Ulusal Yapay Zekâ Stratejisi'nin devamı niteliğinde. Koordinasyon Sanayi ve Teknoloji Bakanlığı'nda."
+  - q: "Planda KOBİ'lere yönelik doğrudan bir destek var mı?"
+    a: "Evet. Plan, ilk 12 ayda KOBİ'lere en az 1.000 yapay zekâ kuponu verilmesini hedefliyor; desteklenen projelerin en az yarısının saha pilotuna ulaşması bekleniyor. İncelediğimiz kaynaklarda kuponların tutarı ve başvuru koşulları yer almıyor; bunlar ilgili kurumların duyurularıyla netleşecek."
+  - q: "Herkes İçin GPU programı nedir?"
+    a: "Girişimlerin, KOBİ'lerin ve araştırmacıların yapay zekâ modellerini eğitmek veya çalıştırmak için ihtiyaç duyduğu hesaplama gücüne erişimini hedefleyen bir program. Başlangıçta yılda en az 2 milyon GPU-saat sunulması, 2028 sonunda bunun yılda en az 20 milyon GPU-saate çıkarılması planlanıyor."
+  - q: "Türkiye'de işletmelerin ne kadarı yapay zekâ kullanıyor?"
+    a: "TÜİK'in 2026 verilerine göre 10 ve daha fazla çalışanı olan girişimlerin %14'ü yapay zekâ teknolojisi kullanıyor; bu oran bir yılda %7,5'ten yükseldi. Ancak fark büyük: 10-49 çalışanlı girişimlerde oran %12,8, 250 ve üzeri çalışanlı girişimlerde %37,1."
+  - q: "KOBİ'ler şimdi ne yapmalı?"
+    a: "Destek çağrılarını beklerken yapılabilecek en verimli iş, yapay zekânın gerçekten zaman veya maliyet kazandıracağı bir iki süreci belirlemek ve bu süreçlerin verisini düzenlemek. Bu ön hazırlık, kupon veya hibe çağrısı açıldığında başvuruyu somut bir proje önerisine dönüştürür."
+---
+
+Ağustos ayında yürürlüğe giren Türkiye Yapay Zekâ Eylem Planı, 2030'a kadar devletin yapay zekâ
+alanında neye yatırım yapacağını ve hangi hedefleri izleyeceğini belirliyor. Haberlerin çoğu veri
+merkezleri, büyük dil modelleri ve trilyon liralık hedef üzerinde durdu. Bir KOBİ için asıl soru daha
+yakın: bu plan işletmeme ne getiriyor ve şimdiden ne yapmalıyım? Bu yazıda planın KOBİ'leri doğrudan
+ilgilendiren başlıklarını, TÜİK verileriyle işletmelerin bugün nerede durduğunu ve destek çağrıları
+açılmadan önce yapılabilecek hazırlığı anlatıyoruz. Yapay zekânın işletmelerde hangi işlerde
+kullanıldığına dair kısa özeti [SSS sayfamızda](/tr/sss#faq-ai-use-cases) bulabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Plan 18 Ağustos 2026'da yürürlüğe girdi; dört eksen altında 16 öncelikli eylem içeriyor ve 2030'a kadar uzanıyor.",
+    "KOBİ'ler için en somut başlık, ilk 12 ayda en az 1.000 işletmeye verilmesi hedeflenen yapay zekâ kuponları.",
+    "Türkiye'de girişimlerin %14'ü yapay zekâ kullanıyor; küçük işletmelerde oran %12,8, büyüklerde %37,1.",
+    "Yapay zekâ kullanmayan girişimlerin en sık gösterdiği engel uzmanlık eksikliği (%72,3); plan eğitim ve erişim tarafında bu boşluğu hedefliyor.",
+    "Destek çağrılarını beklemeden süreç seçimi ve veri düzeni üzerinde çalışmak, çağrı açıldığında başvuruyu kolaylaştırır.",
+  ]}
+/>
+
+## Plan nedir, neden şimdi önemli?
+
+Plan, [18 Ağustos 2026 tarihli Resmî Gazete'de yayımlanan 2026/9 sayılı Cumhurbaşkanlığı Genelgesi](https://www.alomaliye.com/2026/08/18/turkiye-yapay-zeka-eylem-plani-2026-2030/)
+ile yürürlüğe girdi. 2021-2025 Ulusal Yapay Zekâ Stratejisi'nin devamı niteliğinde ve koordinasyonu
+Sanayi ve Teknoloji Bakanlığı'nda. Genelge, yapay zekâ farkındalığının artırılmasını ve nitelikli insan
+kaynağının yetiştirilmesini temel hedefler arasında sayıyor.
+
+[Webrazzi'nin aktardığı ayrıntılara göre](https://webrazzi.com/2026/08/18/turkiye-nin-2026-2030-yapay-zek-eylem-plani-yururluge-girdi/)
+plan "Fark Et", "İstifade Et", "Üret" ve "Yönet" adlı dört eksen etrafında kurulu; her eksende dört
+olmak üzere toplam 16 öncelikli eylem var. Uygulamayı Ulusal Yapay Zekâ Kurulu izleyecek; ilerleme
+herkese açık bir portalda yayımlanacak, ilk rapor 12 ay içinde, sonrakiler yıllık olarak gelecek. Yani
+hedeflerin ne kadarının gerçekleştiği, önümüzdeki yıllarda takip edilebilir olacak.
+
+<StatGrid
+  items={[
+    { value: "16", label: "Dört eksen altında öncelikli eylem sayısı", note: "EYLEM PLANI" },
+    { value: "1.000", label: "İlk 12 ayda KOBİ'lere hedeflenen asgari yapay zekâ kuponu", note: "EYLEM PLANI" },
+    { value: "%14", label: "Yapay zekâ kullanan girişimlerin oranı, 2026", note: "TÜİK" },
+  ]}
+/>
+
+## Başlangıç noktası: işletmeler ne kadar yapay zekâ kullanıyor?
+
+Planın hedeflerini anlamlı kılan şey başlangıç noktası. TÜİK'in [Yapay Zekâ İstatistikleri 2026](https://bloomberght.com/turkiye-de-yapay-zeka-kullanimi-yaklasik-iki-kat-artti-3790100)
+sonuçlarına göre 10 ve daha fazla çalışanı olan girişimlerde yapay zekâ kullanımı 2021'de %2,7 idi;
+2025'te %7,5'e, 2026'da %14'e çıktı. Artış hızlı ama oran hâlâ düşük: her yedi girişimden yalnızca
+biri herhangi bir yapay zekâ teknolojisi kullanıyor.
+
+<TrendChart
+  title="Türkiye'de yapay zekâ kullanan girişimlerin oranı"
+  caption="10 ve daha fazla çalışanı olan girişimler, yüzde. Kaynak: TÜİK Yapay Zekâ İstatistikleri."
+  unit="%"
+  max={20}
+  labels={["2021", "2025", "2026"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "Yapay zekâ kullanan girişimler", points: [2.7, 7.5, 14] },
+  ]}
+/>
+
+Kullanan işletmelerin yapay zekâyı en çok hangi işte kullandığı da belli: pazarlama veya satış (%51),
+araştırma ve geliştirme (%46,3) ve üretim veya hizmet süreçleri (%43,4). Bu işletmelerin %46,5'i
+çözümü harici sağlayıcılara geliştirtirken %32,1'i kendi çalışanlarıyla geliştiriyor.
+
+## KOBİ ile büyük şirket arasındaki açık
+
+Ortalama tabloyu büyük şirketler yukarı çekiyor. Aynı TÜİK verisinde 250 ve üzeri çalışanı olan
+girişimlerin %37,1'i yapay zekâ kullanırken bu oran 50-249 çalışanlı girişimlerde %17, 10-49
+çalışanlı girişimlerde %12,8. Planın KOBİ'lere ayrı destek öngörmesi bu açık düşünüldüğünde anlam kazanıyor.
+
+<BarChart
+  title="Çalışan sayısına göre yapay zekâ kullanan girişimler"
+  caption="Yüzde, 2026. Kaynak: TÜİK Yapay Zekâ İstatistikleri."
+  unit="%"
+  max={40}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "10-49 çalışan", value: 12.8, highlight: true },
+    { label: "50-249 çalışan", value: 17, highlight: true },
+    { label: "250 ve üzeri çalışan", value: 37.1 },
+  ]}
+/>
+
+## Planda KOBİ'leri doğrudan ilgilendiren başlıklar
+
+Planın büyük kısmı kamu, altyapı ve araştırma odaklı. KOBİ'nin günlük işine dokunabilecek başlıklar
+şunlar ([Webrazzi](https://webrazzi.com/2026/08/18/turkiye-nin-2026-2030-yapay-zek-eylem-plani-yururluge-girdi/)
+ve [Teknoblog](https://www.teknoblog.com/turkiye-yapay-zeka-eylem-planini-acikladi/) aktarımlarından):
+
+| Başlık | Hedef | KOBİ için anlamı |
+|---|---|---|
+| Yapay zekâ kuponları | İlk 12 ayda en az 1.000 KOBİ'ye; projelerin en az yarısı saha pilotuna | Bir yapay zekâ projesinin ilk denemesi için doğrudan destek |
+| Herkes İçin GPU | Yılda en az 2 milyon GPU-saat, 2028 sonunda en az 20 milyon | Model eğitmek veya çalıştırmak için hesaplama gücüne erişim |
+| Yapay zekâ okuryazarlığı | İki yılda 5 milyon kişi, 81 ilde atölyeler | Çalışanların temel eğitimi için ücretsiz bir kaynak |
+| Uygulama uzmanları | 2027 sonuna kadar 100 bin uygulamalı yapay zekâ profesyoneli | İşe alınabilecek veya birlikte çalışılabilecek kişi havuzunun büyümesi |
+| Açık kamu verisi | En az 2.000 veri seti, en az 100'ü API ile | Ürün ve analizlerde kullanılabilecek yeni veri kaynakları |
+| Düzenleyici deney alanları | En az 5 öncelikli sektörde | Finans, sağlık, enerji, mobilite ve telekomda yeni ürünleri kontrollü ortamda deneme imkânı |
+
+[Teknoblog'un aktardığına göre](https://www.teknoblog.com/turkiye-yapay-zeka-eylem-planini-acikladi/)
+kupon desteği özellikle sağlık, enerji ve akıllı üretim alanındaki KOBİ'lerin teknolojiye erişimini
+hedefliyor. Kupon programında desteklenen pilotların en az üçte birinin kalıcı ürün veya hizmete
+dönüşmesi de hedefler arasında; yani destek, sonuç üretebilecek projelere yönelecek.
+
+<Callout type="info" title="Başvuru koşulları henüz netleşmedi">
+  İncelediğimiz kaynaklarda kuponların tutarı, başvuru takvimi ve uygunluk koşulları yer almıyor.
+  Bu ayrıntılar ilgili kurumların çağrı duyurularıyla belli olacak. Çağrı metni yayımlanmadan bir
+  destek tutarına göre bütçe planlamayın.
+</Callout>
+
+## Önünüzdeki asıl engel: uzmanlık
+
+TÜİK verisi, yapay zekâ kullanmayan işletmelerin neden kullanmadığını da gösteriyor. En sık gösterilen
+neden ilgili uzmanlık eksikliği (%72,3); onu hukuki belirsizlikler (%66,4) ve veri koruma ile gizlilik
+kaygıları (%65,4) izliyor. Yapay zekâ kullanmayan ama kullanmayı düşünen girişimlerin oranı %8,3.
+
+<BarChart
+  title="Yapay zekâ kullanmayan girişimlerin gösterdiği engeller"
+  caption="Yapay zekâ kullanmayan girişimler içinde, yüzde, 2026. En sık gösterilen üç neden. Kaynak: TÜİK Yapay Zekâ İstatistikleri."
+  unit="%"
+  max={80}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Uzmanlık eksikliği", value: 72.3, highlight: true },
+    { label: "Hukuki belirsizlikler", value: 66.4 },
+    { label: "Veri koruma ve gizlilik kaygıları", value: 65.4 },
+  ]}
+/>
+
+Planın okuryazarlık programı ve uzman yetiştirme hedefleri ilk engeli, düzenleyici deney alanları ve
+risk temelli kurallar ikinci engeli hedefliyor. Ancak bu hedeflerin sonuçları yıllara yayılacak. Kısa
+vadede uzmanlık açığını kapatmanın yolu, işletmenin kendi sürecini bilen biriyle yapay zekâ tarafını
+bilen birini aynı masaya oturtmak.
+
+## Veri ve uyum tarafı
+
+TÜİK'e göre yapay zekâ kullanan girişimlerin %16,6'sı bu teknolojilerle kişisel veri işliyor.
+Müşteri yazışmaları, başvuru formları veya çağrı kayıtları bir yapay zekâ aracına giriyorsa KVKK
+kapsamındaki yükümlülükler, yani aydınlatma, açık rıza gereken durumlar ve yurt dışına aktarım,
+projenin baştan parçası olmalı. Avrupa'ya hizmet veren işletmeler için ayrıca
+[AB Yapay Zekâ Yasası'nın şeffaflık kuralları](/tr/blog/ab-yapay-zeka-yasasi-chatbot-seffaflik-kurallari)
+yürürlükte.
+
+Plan yüksek etkili yapay zekâ sistemleri için algoritmik etki değerlendirmesi, model kartı ve güvenlik
+testi istenmesini öngörüyor. Bu kuralların ayrıntıları henüz yayımlanmadı; ama hangi verinin hangi
+amaçla kullanıldığını kayıt altına almak, ileride gelecek her türlü uyum talebine karşı en ucuz hazırlık.
+
+<Callout type="warn" title="Ücretsiz araçlara müşteri verisi yüklemeyin">
+  Çalışanların müşteri bilgilerini kişisel hesaplarla açılmış genel yapay zekâ araçlarına yapıştırması,
+  KOBİ'lerde en sık görülen veri riski. Hangi aracın hangi veriyle kullanılabileceğini yazılı bir
+  kurala bağlayın; kurumsal sözleşmesi ve veri işleme şartları belli olan araçları tercih edin.
+</Callout>
+
+## KOBİ için hazırlık yol haritası
+
+<BlogFigure name="turkiye-ai-action-plan" alt="Planın dört ekseni dört panel olarak gösteriliyor: farkındalık için belge ve parlayan düğüm, kullanım için gösterge ve çubuklar, üretim için küp, yönetişim için kalkan. Dört panelden çıkan ışık çizgileri ortadaki işletme paneline akıyor; işletme panelinden yükselen bir çizgi sağdaki büyüme grafiğine ulaşıyor." caption="Planın dört ekseni (Fark Et, İstifade Et, Üret, Yönet) işletmeye eğitim, destek, altyapı ve kurallar olarak ulaşıyor; bunları sonuca çeviren, işletmenin kendi süreç ve veri hazırlığı." />
+
+Destek çağrıları açılmadan yapılabilecek hazırlık, kuponun ya da hibenin değerini belirler:
+
+| Adım | Ne yapılır | Çıktı |
+|---|---|---|
+| 1. Süreç seçimi | En çok zaman alan, tekrar eden 2-3 işi listeleyin | Önceliklendirilmiş süreç listesi |
+| 2. Ölçüm | Bu işlerin bugün kaç saat ve hangi hata oranıyla yapıldığını kaydedin | Başlangıç değerleri |
+| 3. Veri düzeni | İlgili verinin nerede, hangi formatta ve kimde olduğunu çıkarın | Veri envanteri |
+| 4. Uyum notu | Kişisel veri içeriyor mu, hangi araçlar kullanılabilir, yazın | Kısa iç kural metni |
+| 5. Eğitim | Ekipten en az bir kişiyi temel yapay zekâ eğitimine yönlendirin | İç sorumlu |
+| 6. Pilot planı | Tek süreç için ölçülebilir hedefi olan küçük bir pilot tasarlayın | Başvuruya hazır proje özeti |
+
+Ölçüm ve geri dönüş hesabı için [KOBİ'ler için yapay zekâ otomasyonu ve ROI yazımız](/tr/blog/kobiler-icin-yapay-zeka-otomasyonu-roi)
+adım adım bir yöntem sunuyor.
+
+## Yaygın hatalar
+
+- **Desteği beklemek için projeyi ertelemek.** Kupon tutarı ve takvimi belli değil; süreç seçimi ve
+  veri düzeni gibi hazırlık işleri destekten bağımsız olarak değer üretir.
+- **Aracı seçip sorunu sonra aramak.** Hangi yapay zekâ aracının kullanılacağı, çözülecek iş
+  belirlendikten sonra seçilir.
+- **Ölçmeden başlamak.** Başlangıç değeri olmayan bir pilotun işe yarayıp yaramadığı gösterilemez;
+  kalıcı ürüne dönüşme hedefi de buna dayanıyor.
+- **Uyumu sona bırakmak.** Kişisel veri içeren bir projede KVKK kontrolü baştan yapılmazsa proje
+  canlıya çıkmadan geri döner.
+- **Tek kişiye bağlı kalmak.** Yapay zekâ bilgisini tek bir çalışanda toplamak, o kişi ayrıldığında
+  projeyi durdurur.
+
+## Sonuç
+
+Yapay Zekâ Eylem Planı, KOBİ'ler için ilk kez sayısal hedefi olan bir destek çerçevesi çiziyor: kuponlar,
+hesaplama gücüne erişim ve geniş bir eğitim programı. Başlangıç noktası ise mütevazı; küçük
+işletmelerin yalnızca %12,8'i yapay zekâ kullanıyor ve en büyük engel uzmanlık. Planın hedefleri
+yıllara yayılırken fark yaratacak olan, işletmenin hangi süreçte yapay zekâdan ne beklediğini bugünden
+netleştirmesi.
+
+Bu hazırlığı birlikte yapmak isterseniz [yapay zekâ danışmanlığı](/tr/hizmetler/yapay-zeka-danismanligi),
+[yapay zekâ entegrasyonu](/tr/hizmetler/yapay-zeka-entegrasyonu) ve
+[eğitim ve danışmanlık](/tr/hizmetler/egitim-ve-danismanlik) hizmet sayfalarımıza bakabilir ya da
+doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

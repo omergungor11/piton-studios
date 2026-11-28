@@ -1,0 +1,221 @@
+---
+title: "Türkiye's accessibility circular: first deadline passed, e-commerce is next"
+description: "Circular 2025/10 requires banks, hospitals, operators and e-commerce sites in Türkiye to be accessible. Who is covered, when deadlines end, where to start."
+date: 2026-10-31
+tags: ["accessibility", "regulation", "e-commerce"]
+author: "Piton"
+draft: false
+translationKey: turkiye-accessibility-circular
+sources:
+  - title: "Erdem & Erdem — Presidential Circular No. 2025/10 on the accessibility of websites and mobile applications published (Turkish)"
+    url: "https://www.erdem-erdem.av.tr/bilgi-bankasi/web-siteleri-ve-mobil-uygulamalarin-erisilebilirligi-hakkinda-2025-10-sayili-cumhurbaskanligi-genelgesi-yayimlandi"
+  - title: "Legal 500 (KST Law) — Monitoring framework for digital accessibility standards announced for Türkiye"
+    url: "https://www.legal500.com/intelligence/turkey/media-telecoms-it-entertainment/monitoring-framework-for-digital-accessibility-standards-announced-for-t%C3%BCrkiye"
+  - title: "Posta — What the now-mandatory digital accessibility covers (Turkish)"
+    url: "https://www.posta.com.tr/bilim-teknoloji/zorunlu-hale-gelen-dijital-erisilebilirlik-neleri-kapsiyor-2894080"
+  - title: "Hukuki Haber — Accessibility is now mandatory: new rules for public websites and mobile apps (Turkish)"
+    url: "https://www.hukukihaber.net/erisilebilirlik-artik-bir-zorunluluk-kamu-web-siteleri-ve-mobil-uygulamalara-yeni-duzenleme"
+  - title: "WebAIM — The WebAIM Million, 2026 report"
+    url: "https://webaim.org/projects/million/"
+  - title: "WebAIM — The WebAIM Million, 2024 report"
+    url: "https://webaim.org/projects/million/2024"
+  - title: "World Health Organization — Disability and health fact sheet"
+    url: "https://www.who.int/news-room/fact-sheets/detail/disability-and-health"
+faq:
+  - q: "What is Türkiye's accessibility circular and when was it published?"
+    a: "Presidential Circular No. 2025/10 on the accessibility of websites and mobile applications was published in the Official Gazette on 21 June 2025. It requires a wide group, from public bodies and banks to private hospitals and e-commerce sites, to make their digital services accessible to people with disabilities."
+  - q: "Which standard does the circular use?"
+    a: "The Ministry of Family and Social Services' Accessibility Checklist for Websites and Mobile Applications (Level A) and W3C's WCAG 2.2. One of the sources we reviewed cites WCAG 2.1, while the others say 2.2, so the circular text in the Official Gazette is the final reference."
+  - q: "When does the deadline end for e-commerce sites?"
+    a: "The circular gives e-commerce service providers under Law No. 6563 two years. The period runs from publication, so by our calculation it ends in June 2027. The one-year period for other private organisations, such as banks, private hospitals, private schools and large operators, ended in June 2026."
+  - q: "Is there a penalty for not complying?"
+    a: "According to the sources we reviewed, the circular does not set a direct fine. Compliance is checked through an annual monitoring plan, and organisations found accessible may use an Accessibility Logo for two years. One legal commentary notes that compliance may later be used as a criterion in audits and public spending decisions."
+  - q: "Is an automated accessibility scan enough?"
+    a: "No. Automated tools find structural errors such as low contrast, missing alternative text or unlabelled form fields, but they cannot confirm that a task can be completed end to end with a keyboard or that descriptions make sense. Scans need to be paired with keyboard, screen reader and mobile task tests."
+---
+
+For a long time, web accessibility in Türkiye sat under "nice to have". Presidential Circular No. 2025/10,
+published in June 2025, changed that: alongside public bodies, banks, private hospitals, private
+schools, transport companies, large operators and e-commerce sites are required to make their digital
+services accessible to people with disabilities. The one-year period given to most organisations ended
+in June 2026; the two-year period for e-commerce ends in June 2027. This post covers who the circular
+applies to, how it is monitored, where websites stand today and where to start in the time left. A
+short answer on what accessibility means is on our [FAQ page](/en/faq#faq-accessibility).
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Circular 2025/10 was published on 21 June 2025; it uses the Ministry's Level A checklist and WCAG 2.2 as its standard.",
+    "For public bodies, banks, private hospitals, private schools, transport companies and operators with over 200,000 subscribers, the one-year period ended in June 2026.",
+    "E-commerce service providers were given two years; the period ends in June 2027.",
+    "WebAIM's 2026 scan found WCAG failures on 95.9% of the top 1 million home pages, with an average of 56.1 errors per page.",
+    "Most errors come from six recurring issues, which makes it clear where to start.",
+  ]}
+/>
+
+## What does the circular say?
+
+According to [Erdem & Erdem's summary](https://www.erdem-erdem.av.tr/bilgi-bankasi/web-siteleri-ve-mobil-uygulamalarin-erisilebilirligi-hakkinda-2025-10-sayili-cumhurbaskanligi-genelgesi-yayimlandi),
+the circular was published in Official Gazette No. 32933 on 21 June 2025. Websites and mobile
+applications are assessed against two references: the "Accessibility Checklist for Websites and Mobile
+Applications – Level A" published by the Ministry of Family and Social Services, and W3C's WCAG 2.2.
+
+What makes the circular significant is that it is not limited to the public sector.
+[KST Law's analysis on Legal 500](https://www.legal500.com/intelligence/turkey/media-telecoms-it-entertainment/monitoring-framework-for-digital-accessibility-standards-announced-for-t%C3%BCrkiye)
+lists the organisations covered and their deadlines in detail:
+
+| Organisation type | Deadline (from publication) |
+|---|---|
+| Public bodies, universities, municipalities and their companies, public economic enterprises | 1 year |
+| Professional organisations with public institution status | 1 year |
+| Banks and private hospitals | 1 year |
+| Private schools opened with Ministry of National Education permission | 1 year |
+| Road, rail, air and sea passenger transport companies, Type A travel agencies | 1 year |
+| Electronic communications companies with over 200,000 subscribers | 1 year |
+| E-commerce service providers under Law No. 6563 | 2 years |
+
+Deadlines run from the publication date. By our calculation, the one-year period ended on 21 June 2026
+and the two-year period ends on 21 June 2027. For an e-commerce site, that leaves roughly eight months.
+
+<StatGrid
+  items={[
+    { value: "95.9%", label: "Home pages with detected WCAG failures, 2026", note: "WEBAIM" },
+    { value: "56.1", label: "Average detected errors per home page", note: "WEBAIM" },
+    { value: "16%", label: "Share of the world's population with a significant disability", note: "WHO" },
+  ]}
+/>
+
+## Who monitors it, and how?
+
+The circular sets up a monitoring structure. As Erdem & Erdem reports, there is a Monitoring Commission
+chaired by the Minister of Family and Social Services and an Advisory Commission chaired by a deputy
+minister, with public and civil society representatives. Each organisation in scope also forms its own
+review commission, which technically reviews its websites and apps and reports the results to the
+Monitoring Commission.
+
+According to the Legal 500 analysis, the Monitoring Commission decides which websites and apps are
+audited through an annual monitoring plan. Organisations found accessible earn the right to display
+an "Accessibility Logo" on their digital platforms for two years.
+
+<BlogFigure name="turkiye-accessibility-circular" alt="Four stages from left to right: a document, a checklist on a website with tick and cross marks, a grid of sites with some squares highlighted, and an approved seal with a clock beneath it. The stages are connected by light lines." caption="From circular to logo: the organisation reviews its own site through its review commission, the Monitoring Commission audits sample sites under an annual plan, and an organisation found accessible uses the logo for two years." />
+
+<Callout type="info" title="No direct fine is defined">
+  The sources we reviewed do not mention a fine tied to the circular. [A commentary on Hukuki Haber](https://www.hukukihaber.net/erisilebilirlik-artik-bir-zorunluluk-kamu-web-siteleri-ve-mobil-uygulamalara-yeni-duzenleme)
+  notes that, even without a direct sanction, compliance may later be used as a criterion in audits
+  and public spending decisions. The absence of a fine is a chance to plan the work, not to postpone it.
+</Callout>
+
+## Where do websites stand today?
+
+No comprehensive Türkiye-specific scan has been published; the most reliable general picture is
+WebAIM's yearly automated scan of the top 1 million home pages. [The 2026 report](https://webaim.org/projects/million/)
+detected at least one WCAG failure on 95.9% of home pages. The rate was 97.8% in 2019 and improved in
+small steps for six years to 94.8% in 2025; in 2026 that trend reversed.
+
+The number of errors per page rose too. The average went from 51 in 2025 to 56.1 in 2026, an increase
+of 10.1%. [The 2024 report](https://webaim.org/projects/million/2024) gives 56.8 for 2024 and 50 for
+2023; the picture is fluctuating, not improving.
+
+<BarChart
+  title="Average detected errors per home page"
+  caption="Top 1 million home pages, automated scan. Source: WebAIM Million 2024 and 2026 reports."
+  max={60}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "2023", value: 50 },
+    { label: "2024", value: 56.8 },
+    { label: "2025", value: 51 },
+    { label: "2026", value: 56.1, highlight: true },
+  ]}
+/>
+
+## Most errors come from six issues
+
+The good news is that the errors are not scattered. According to WebAIM, the six error types below
+account for 96% of all errors detected. The most common is low-contrast text, found on 83.9% of home
+pages in 2026.
+
+<BarChart
+  title="Most common WCAG failures"
+  caption="Share of home pages with the failure, percent, 2026. Source: WebAIM Million 2026."
+  unit="%"
+  max={100}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Low-contrast text", value: 83.9, highlight: true },
+    { label: "Missing image alternative text", value: 53.1 },
+    { label: "Missing form input labels", value: 51 },
+    { label: "Empty links", value: 46.3 },
+    { label: "Empty buttons", value: 30.6 },
+    { label: "Missing document language", value: 13.5 },
+  ]}
+/>
+
+The eight-year series shows which problems got fixed and which persist. Missing document language fell
+from 33.1% to 13.5%; it is a one-line fix, so it dropped quickly. Missing alternative text fell from
+68% to 53.1%. Low contrast, however, has barely moved, and missing form labels have been rising again
+since 2023.
+
+<TrendChart
+  title="Two common failures over time"
+  caption="Share of home pages with the failure, percent. Source: WebAIM Million 2026."
+  unit="%"
+  max={100}
+  labels={["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"]}
+  dataTableLabel="Show data as a table"
+  series={[
+    { name: "Low-contrast text", points: [85.3, 86.3, 86.4, 83.9, 83.6, 81, 79.1, 83.9] },
+    { name: "Missing alternative text", points: [68, 66, 60.6, 55.4, 58.2, 54.5, 55.5, 53.1], muted: true },
+  ]}
+/>
+
+Each of these six errors directly affects the path to purchase on an e-commerce site: an unreadable
+price, a product photo the screen reader announces only as "image", a search box with no name, an
+add-to-cart icon read out as just "button". For the form side, see our
+[accessible form design guide](/en/blog/accessible-web-design-forms).
+
+## Where to start in the time left
+
+For e-commerce sites, the work that can be done before June 2027 is, with the right order, a fix plan
+rather than a redesign project:
+
+| Step | What to do | Output |
+|---|---|---|
+| 1. Scope | List the home, category, product, cart, checkout, account and contact flows | List of pages and flows to audit |
+| 2. Automated scan | Scan these pages with an accessibility tool | Errors grouped by type |
+| 3. Quick fixes | Document language, alternative text, accessible names for empty links and buttons | Most errors closed |
+| 4. Design fixes | Contrast in the colour palette, visible focus ring, adequate touch targets | Updated design system |
+| 5. Task tests | Finding a product, adding to cart and checking out with keyboard and screen reader | Results per flow |
+| 6. Process | A checklist for new content and campaign pages | Errors do not come back |
+
+<Callout type="tip" title="Fix shared components first">
+  Most errors are not on individual pages but in components repeated on every page: the main menu,
+  product cards, filters and forms. Fixing one component removes the same error from hundreds of
+  pages at once. If you use a theme or an off-the-shelf platform, this is also the stage where it
+  becomes clear whether a problem comes from the theme or from your own additions.
+</Callout>
+
+## Common mistakes
+
+- **Assuming an accessibility plugin makes you compliant.** A toolbar added to the page offers contrast
+  or text size buttons; it does not fix missing labels, a menu that cannot be used with a keyboard or a
+  button with no name.
+- **Relying only on automated scans.** A scan finds structural errors; it does not show whether checkout
+  can be completed with a keyboard.
+- **Fixing only the home page.** What gets audited, and where users get things done, is usually the
+  product, cart and checkout pages.
+- **Forgetting the mobile app.** The circular covers mobile applications as well as websites.
+- **Doing it once and stopping.** Every new campaign page, banner or product image can bring old errors
+  back; the checklist has to be part of the content process.
+
+## Conclusion
+
+The circular turned accessibility in Türkiye into a time-bound obligation for a broad group of private
+organisations for the first time. For most of them, the deadline has passed; e-commerce sites have
+until June 2027. WebAIM's data shows both how widespread the problem is and where to start: 96% of
+errors come from six recurring issues, and most of them are fixed in shared components.
+
+If you want to map your current site's accessibility together, take a look at our
+[web design](/en/services/web-design), [e-commerce](/en/services/ecommerce) and
+[maintenance and support](/en/services/maintenance-support) services, or
+[get in touch](/en/contact) directly.

@@ -1,0 +1,259 @@
+---
+title: "Google's new AI control: should your site appear in AI Overviews and AI Mode?"
+description: "What the new Search Console AI control and performance report do, how AI answers affect clicks, and which businesses should opt out. A data-backed guide."
+date: 2026-10-13
+tags: ["seo", "geo", "google", "ai"]
+author: "Piton"
+draft: false
+translationKey: google-ai-search-controls
+sources:
+  - title: "Google — AI Mode and AI Overviews launch in Türkiye (18 February 2026, Turkish)"
+    url: "https://blog.google/intl/tr-tr/urun-duyurulari/turkiyede-ai-modu-ve-ai-bakisi-donemi-basliyor/"
+  - title: "Google — New controls and insights for website owners in Search"
+    url: "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+  - title: "Search Console Help — Search generative AI control"
+    url: "https://support.google.com/webmasters/answer/16908024?hl=en"
+  - title: "Search Console Help — Generative AI performance report (Search)"
+    url: "https://support.google.com/webmasters/answer/16984139?hl=en"
+  - title: "Google Search Central — Introducing Search Generative AI performance reports in Search Console"
+    url: "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports"
+  - title: "Google Search Central — Optimizing for generative AI search"
+    url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+  - title: "Pew Research Center — Google users are less likely to click on links when an AI summary appears"
+    url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+  - title: "Ahrefs — Update: AI Overviews Reduce Clicks by 58%"
+    url: "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/"
+faq:
+  - q: "What is the generative AI control in Search Console?"
+    a: "It is a setting under Settings → \"Search generative AI\" in Search Console. It decides whether your site's links and content can be used in AI Overviews, AI Mode and the generative AI features in Discover. It became available to every website worldwide on 31 August 2026, and the default is \"include\"."
+  - q: "If I opt out of AI features, will my regular Google rankings drop?"
+    a: "According to Google's help page, no: the control is not used as a ranking or inclusion signal for other parts of Search. You keep your position in the classic results and only lose the impressions and traffic that AI Overviews and AI Mode would have sent."
+  - q: "Does this control also stop my content being used to train AI models?"
+    a: "No. Google states plainly that the setting does not affect model training; for that it points to a separate mechanism, Google-Extended. To remove a page from Search entirely, the tool is still noindex."
+  - q: "Does the generative AI performance report show clicks?"
+    a: "Not at the moment. The report only shows impressions, along with which pages appear in AI answers and in which countries and on which devices. There is no click or query data yet, so traffic impact has to be read alongside the regular performance report and your analytics."
+  - q: "As a small business, should I opt out of AI features?"
+    a: "For most service and local businesses, no. If people find you while looking for a provider, being cited as a source in an AI answer is visibility. Opting out deserves serious thought only when the content itself is the product, meaning revenue comes directly from the page being read; even then, collect a few weeks of report data first."
+---
+
+Since 18 February 2026, people searching Google in Türkiye see an AI summary above the results for
+many questions: AI Overviews and the conversational AI Mode now work in Turkish. At the end of August
+Google went a step further and, for the first time, let site owners **choose whether to appear in
+these features at all**, along with a dedicated performance report. We gave the short answer to what
+GEO is [in our FAQ](/en/faq#faq-what-is-geo); this post explains exactly what the new control does,
+what the data says about clicks, and which setting each kind of business should pick.
+
+<KeyTakeaways
+  title="Summary"
+  items={[
+    "Since 31 August 2026, every site can opt out of AI Overviews, AI Mode and Discover's AI features from Search Console.",
+    "Opting out does not affect regular rankings, but all impressions and traffic from those features drop to zero.",
+    "The control does not cover model training; that needs Google-Extended, and leaving Search entirely needs noindex.",
+    "The new performance report only counts impressions; there is no click or query data yet.",
+    "Independent data shows clicks fall noticeably on searches with an AI summary, yet staying included is the right setting for most businesses.",
+  ]}
+/>
+
+## What changed in Türkiye
+
+In its [announcement of 18 February 2026](https://blog.google/intl/tr-tr/urun-duyurulari/turkiyede-ai-modu-ve-ai-bakisi-donemi-basliyor/),
+Google said search in Türkiye was moving to two new experiences powered by the Gemini 3 model family.
+**AI Overviews** shows a summary answer with source links at the top of the results page. **AI Mode**
+is a separate tab for long, multi-step questions asked as a conversation. Both rolled out gradually
+and are available in the Android and iOS apps and on the web.
+
+The scale is not small. According to Google's [announcement for website owners](https://blog.google/products-and-platforms/products/search/new-controls-website-owners/),
+AI Overviews reaches more than 2.5 billion monthly active users and AI Mode more than 1 billion monthly users.
+
+<StatGrid
+  items={[
+    { value: "2.5bn+", label: "Monthly active users of AI Overviews", note: "GOOGLE" },
+    { value: "1bn+", label: "Monthly users of AI Mode", note: "GOOGLE" },
+    { value: "18%", label: "Share of searches with an AI summary in Pew's sample", note: "PEW RESEARCH" },
+  ]}
+/>
+
+## What happens to clicks: the data
+
+The two most cited independent studies on how AI summaries affect clicks point the same way.
+[Pew Research Center](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
+analysed real browsing data from 900 US adults in March 2025. On pages with an AI summary, users
+clicked a result on 8% of visits; on pages without one, the figure was 15%. Clicks on a link inside
+the summary itself happened on just 1% of visits.
+
+<BarChart
+  title="Clicks on searches with and without an AI summary"
+  caption="Share of visits. US, March 2025, browsing data from 900 adults."
+  unit="%"
+  max={30}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Clicked a result, no summary", value: 15, note: "Classic results" },
+    { label: "Clicked a result, with summary", value: 8, note: "AI summary shown", highlight: true },
+    { label: "Clicked a link inside the summary", value: 1, note: "Source link" },
+    { label: "Ended the session, with summary", value: 26, note: "16% without" },
+  ]}
+/>
+
+[Ahrefs](https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/) compared Search Console data for
+300,000 keywords between December 2023 and December 2025. For keywords that trigger an AI summary,
+the desktop click-through rate of the top-ranking page fell from 7.3% to 1.6%. Informational keywords
+without a summary declined too, but far less: from 7.6% to 3.9%.
+
+<TrendChart
+  title="Click-through rate of the top-ranking page"
+  caption="Desktop, 300,000 keywords, Search Console data."
+  unit="%"
+  max={8}
+  labels={["Dec 2023", "Dec 2025"]}
+  dataTableLabel="Show data as a table"
+  series={[
+    { name: "Keywords with an AI summary", points: [7.3, 1.6] },
+    { name: "Keywords without an AI summary", points: [7.6, 3.9], muted: true },
+  ]}
+/>
+
+The effect is not limited to the top spot. In the same study, the estimated click loss when an AI
+summary appears shrinks further down the ranking but does not disappear even at position ten.
+
+<BarChart
+  title="Estimated click loss by position when an AI summary appears"
+  caption="Percent. Desktop, December 2023 versus December 2025."
+  unit="%"
+  max={60}
+  dataTableLabel="Show data as a table"
+  data={[
+    { label: "Position 1", value: 58, highlight: true },
+    { label: "Position 2", value: 50.8 },
+    { label: "Position 3", value: 46.4 },
+    { label: "Position 5", value: 32.6 },
+    { label: "Position 10", value: 19.4 },
+  ]}
+/>
+
+<Callout type="info" title="These figures are a correlation, not a Türkiye measurement">
+  Both studies use US data, and by Ahrefs' own note they show a relationship rather than proving
+  causation; other shifts in search behaviour over two years also play a part. The most reliable way
+  to see the effect on your own business is your own Search Console data, which is exactly what the
+  report described below is for.
+</Callout>
+
+## The new control in Search Console: three options
+
+The control lives in Search Console under **Settings → Search generative AI**. Google announced it in
+June, first opened it to a group of sites in the UK, and [as of 31 August 2026](https://support.google.com/webmasters/answer/16908024?hl=en)
+made it available to every website worldwide.
+
+| Option | What happens | When it fits |
+|---|---|---|
+| Include my site's links and content (default) | Your site can be a source link in AI answers and can ground the response | Most businesses |
+| Exclude my site's links and content | Not shown or linked in these features and not used to ground answers; no impressions or traffic from them | Publishers whose revenue comes directly from content |
+| Inherit control from parent | The child property follows the closest parent with its own setting | Several subdomains or directories |
+
+Changes usually apply within a few days; exclusion typically takes 1-2 days, and caching can make some
+pages take longer. One more detail: if a child property chooses a different setting from its parent,
+the owner of the domain property is notified.
+
+## What the control affects, and what it does not
+
+The most common confusion is treating this setting as a single master switch. In reality Google uses
+your content along three separate paths, and each has its own switch.
+
+<BlogFigure name="google-ai-search-controls" alt="Diagram of three separate paths: a single site on the left branches to three destinations on the right. The path to the classic results list at the top is always open; the path to the AI answer in the middle runs through a switch that can be turned off; the path to model training at the bottom is tied to a separate switch." caption="The Search Console setting only closes the middle path. Classic results are unaffected, and model training needs a separate choice." />
+
+| Destination | Does the new control affect it | The actual tool |
+|---|---|---|
+| AI Overviews, AI Mode, Discover's AI features | Yes | Search Console → Search generative AI |
+| Ranking in classic search results | No, it is not used as a signal | Regular SEO work |
+| Training of AI models | No | Google-Extended |
+| Leaving Search entirely | No | noindex |
+| Merchant Center and Google Ads choices | No, it does not override them | Their own dashboards |
+
+Google spells out two limits as well. Even when your site is excluded, **similar content from other
+sites keeps appearing in AI answers**. An excluded site may also still be used for general Search
+functions such as understanding query and page language.
+
+## What the generative AI performance report shows
+
+The [Generative AI performance report](https://support.google.com/webmasters/answer/16984139?hl=en)
+that ships with the control opens as a separate tab under Performance. For the first time it answers
+"do we appear in AI answers" with Google's own data rather than guesswork.
+
+- **What it measures:** impressions, meaning how often a link to your site appeared in AI Overviews
+  or AI Mode. If one answer contains several of your links, the chart counts it once.
+- **Breakdowns:** page, country, date and device. The "Web: multimodal" filter separates impressions
+  from Google Lens and image searches.
+- **What is missing:** clicks, click-through rate, average position and query data. Google says more
+  metrics will follow.
+- **If you cannot see it:** your site may not have enough AI impressions yet, or it may be excluded
+  from these features.
+
+<Callout type="tip" title="Read the report side by side, not on its own">
+  For the same pages, put AI impressions, clicks from the regular performance report and conversions
+  from your analytics in one table. A page with high AI impressions and falling clicks is a page where
+  the AI answer closes the question for you; it is missing a next step that brings the user to your site.
+</Callout>
+
+## Does opting out make sense: a decision guide
+
+There is no single right answer, but the weight is clear by business type. Treat the table below as
+a starting point, not a rule.
+
+| Business type | Suggested setting | Reasoning |
+|---|---|---|
+| Service company, B2B, corporate site | Stay included | Users are looking for a provider; being cited is visibility |
+| Local business (clinic, restaurant, repair) | Stay included | Google says Business Profiles also help you appear in AI answers |
+| E-commerce | Stay included | Product visibility also depends on Merchant Center; the setting does not override it |
+| Guide-heavy content site, ad revenue | Decide with data | Revenue comes from the page being read; collect a few weeks of report data first |
+| Paid content, subscriptions | Evaluate | The content itself is the product; summarising it may be a direct revenue loss |
+
+<Callout type="warn" title="Opting out does not remove your competitors">
+  Exclusion only affects your own site. Competing pages that answer the same question stay in the AI
+  answer. For a business that sells services, that means the answer ends with their link instead of yours.
+</Callout>
+
+## What Google says about staying visible
+
+Google's [generative AI search guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),
+published in May 2026, answers many of the "AI SEO" tips circulating in the market directly. The guide
+says these features are built on Search's core ranking and quality systems, so the ground rule is still SEO.
+
+- **What is required:** the page must be indexed and eligible to show with a snippet, the site must be
+  included in these features, and you need crawlable content, semantic HTML, good page experience and
+  original, first-hand content.
+- **What is not required:** AI-specific text files, special markup or Markdown copies (Google Search
+  ignores them, though other services may use them), splitting content into small chunks, rewriting
+  "for AI", or collecting artificial brand mentions.
+- **What to avoid:** mass-producing pages for query variations. Google treats this as a breach of its
+  scaled content abuse spam policy.
+
+Structured data is not required for these features but remains valuable for rich results. We covered
+content structure in detail in our [SEO to GEO post](/en/blog/search-visibility-in-the-ai-era-seo-to-geo)
+and the technical foundation in [how to build a fast website](/en/blog/how-to-build-a-fast-website).
+
+## A 30-day action plan
+
+1. **Check the setting.** In Search Console, go to Settings → Search generative AI, see which option is
+   active and whether any child properties chose something different.
+2. **Open the report and collect 4 weeks of data.** Export which pages appear in AI answers, in which
+   countries and on which devices.
+3. **Combine three sources.** Put AI impressions, regular search clicks and conversions in one table,
+   page by page.
+4. **Fix pages with high impressions and low clicks.** Move a next step the answer cannot close (a quote
+   form, a calculator, a sample project, contact details) to the top of the page.
+5. **Confirm eligibility.** Check that key pages are indexed, not blocked with nosnippet, and fast on mobile.
+6. **Decide with data.** If you are considering exclusion, do it only after those 4 weeks of data and
+   once it is clear whether your revenue comes from content or from customer demand.
+
+## Conclusion
+
+Google's new control, for the first time, leaves the decision to appear in AI answers to the site
+owner. The data shows clicks fall noticeably on searches with an AI summary, but opting out keeps your
+regular rankings while handing all visibility on that surface to competitors. For most service, local
+and e-commerce sites, the right move is to stay included, use the new report to measure which pages
+are used in AI answers, and strengthen those pages so they bring users to the site.
+
+If you would like to review how your site appears in AI answers together, see our
+[SEO & GEO](/en/services/seo-geo) and [maintenance and support](/en/services/maintenance-support)
+service pages, check the starting bands on our [pricing page](/en/pricing), or
+[get in touch](/en/contact) directly.

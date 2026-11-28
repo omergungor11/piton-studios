@@ -1,0 +1,254 @@
+---
+title: "Yapay zekâ ajanları alışverişe başladı: e-ticaret siteleri neye hazırlanmalı?"
+description: "Google ve OpenAI, yapay zekâ ajanlarının ürün bulup sepeti doldurduğu alışverişi büyütüyor. Türkiye'de henüz yok; mağazanız için hazırlık listesi."
+date: 2026-11-22
+tags: ["e-ticaret", "yapay zeka", "seo"]
+author: "Piton"
+draft: false
+translationKey: agentic-commerce
+sources:
+  - title: "Google — New tech and tools for retailers to succeed in an agentic shopping era (11 Ocak 2026)"
+    url: "https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/"
+  - title: "Google — Universal Cart launch (15 Ekim 2026)"
+    url: "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/"
+  - title: "Google Canada — A more intuitive agentic shopping experience for consumers and retailers in Canada (4 Kasım 2026)"
+    url: "https://blog.google/intl/en-ca/products/explore-get-answers/a-new-way-to-shop-introducing-a-more-intuitive-agentic-shopping-experience-for-consumers-and-retailers-in-canada/"
+  - title: "Google for Developers — How to start UCP integration in Merchant Center (17 Kasım 2026 güncellemesi)"
+    url: "https://developers.google.com/merchant/ucp/guides/merchant-center/integration"
+  - title: "OpenAI — Powering product discovery in ChatGPT (24 Mart 2026)"
+    url: "https://openai.com/index/powering-product-discovery-in-chatgpt/"
+  - title: "Adobe — AI traffic drives 83% higher revenue per visit (29 Ekim 2026)"
+    url: "https://business.adobe.com/blog/ai-traffic-higher-revenue-per-visit-retail-holiday"
+  - title: "Modern Retail — In Graphic Detail: Welcome to the agentic commerce quarter (19 Kasım 2026)"
+    url: "https://www.modernretail.co/technology/in-graphic-detail-welcome-to-the-agentic-commerce-quarter/"
+  - title: "First Page Sage — Agentic commerce statistics (2 Kasım 2026)"
+    url: "https://firstpagesage.com/seo-blog/agentic-commerce-statistics/"
+faq:
+  - q: "Ajanlı ticaret (agentic commerce) nedir?"
+    a: "Ajanlı ticaret, bir yapay zekâ asistanının kullanıcı adına ürün araştırdığı, karşılaştırdığı, sepeti doldurduğu ve kullanıcı onay verdiğinde ödemeyi tamamladığı alışveriş biçimidir. Google'ın AI Mode ve Gemini'deki ödeme özelliği ile ChatGPT'deki ürün keşfi bunun 2026'daki en bilinen örnekleri. Satış yine mağazanın kendisi üzerinden yapılır."
+  - q: "Yapay zekâ ajanıyla alışveriş Türkiye'de kullanılabiliyor mu?"
+    a: "Bu yazının yazıldığı tarihte hayır. Google'ın ajanlı ödeme özelliği ABD'de ve 4 Kasım 2026'dan itibaren Kanada'da açılıyor; Avustralya'nın 2027 başında eklenmesi planlanıyor. Türkiye için duyurulmuş bir tarih yok. ABD veya Kanada'ya satış yapan mağazalar ise bugün bu kanallarda yer alabilir."
+  - q: "Yapay zekâ araçlarından gelen ziyaretçiler daha mı çok satın alıyor?"
+    a: "Adobe'nin ABD perakende verisine göre Eylül 2026'da yapay zekâ araçlarından gelen ziyaretçiler, diğer kanallara göre yüzde 90 daha iyi dönüştü ve ziyaret başına yüzde 83 daha fazla gelir getirdi. Bu, ABD'ye ait bir ölçüm; Türkiye'deki sonuçlar kendi analitiğinizle ölçülmeli. Ağustos 2025'te aynı trafik yüzde 9 daha kötü dönüşüyordu."
+  - q: "Mağazamın yapay zekâ ajanlarına hazır olması için ne yapmalıyım?"
+    a: "Önce ürün verisini düzeltin: eksiksiz bir ürün beslemesi, doğru ürün kimlikleri, güncel fiyat ve stok, açık iade koşulları. Ardından sitede yapılandırılmış ürün verisini kontrol edin ve yapay zekâ kaynaklı trafiği analitikte ayrı ölçün. Ödeme entegrasyonları ülkenize açıldığında, bu temel hazır olan mağaza çok daha hızlı katılır."
+  - q: "Tüketiciler ödemeyi yapay zekâya bırakmaya hazır mı?"
+    a: "Henüz çoğunluk değil. Modern Retail'in aktardığı Okta raporuna göre katılımcıların yüzde 31'i bir yapay zekâ ajanının alışverişi kendi kontrolü olmadan tamamlamasına izin verebileceğini, yüzde 67'si ise vermeyeceğini söylüyor. Bu yüzden ajanlı ödemelerde kullanıcı onayı ve harcama limiti öne çıkıyor."
+---
+
+Bir müşterinin "bütçem 3.000 lira, kışlık koşu ayakkabısı bul, en uygun olanı sepete ekle" demesi ve gerisini bir
+yapay zekâ asistanının yapması artık bir deney değil. 2026'da Google, OpenAI ve büyük perakendeciler bu alışveriş
+biçimini, yani **ajanlı ticareti** (agentic commerce), gerçek ödemelerle büyütmeye başladı. Bu yazıda neyin
+değiştiğini, ilk verilerin ne söylediğini, Türkiye'nin bu tabloda nerede durduğunu ve bir e-ticaret sitesinin şimdiden
+neye hazırlanabileceğini anlatıyoruz. Dönüşüm oranı tarafını merak ediyorsanız
+[SSS sayfamızdaki ilgili soruya](/tr/sss#faq-conversion-optimization) da göz atabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Google, Ocak 2026'da açık bir alışveriş protokolü duyurdu; AI Mode ve Gemini'de ajanlı ödeme ABD'de, Kasım'dan beri Kanada'da açılıyor.",
+    "Türkiye için duyurulmuş bir tarih yok; ABD ve Kanada'ya satış yapan mağazalar bugün bu kanallarda yer alabilir.",
+    "Adobe'ye göre ABD'de Eylül 2026'da yapay zekâ araçlarından gelen ziyaretçiler diğer kanallardan yüzde 90 daha iyi dönüştü.",
+    "Tüketicilerin çoğu ödemeyi henüz ajana bırakmıyor; onaylı ödeme ve harcama limiti öne çıkıyor.",
+    "Hazırlığın temeli ürün verisi: eksiksiz besleme, doğru kimlikler, güncel fiyat ve stok, açık iade koşulları.",
+  ]}
+/>
+
+## Yapay zekâ alışveriş ajanı ne yapıyor?
+
+Klasik aramada kullanıcı sonuçlara tıklar, siteleri gezer ve kendisi karar verir. Alışveriş ajanında ise bu adımların
+bir kısmını asistan üstleniyor: ürünü araştırıyor, seçenekleri karşılaştırıyor, yorumları özetliyor, sepeti
+dolduruyor ve kullanıcı onay verdiğinde ödemeyi başlatıyor. Satış yine mağazanın kendisi üzerinden yapılıyor;
+[Google'ın Universal Cart duyurusuna göre](https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/)
+satıcı, işlemin resmî tarafı (seller of record) olmaya devam ediyor.
+
+Kontrol tamamen ajana geçmiyor. [Modern Retail'in 19 Kasım tarihli derlemesine göre](https://www.modernretail.co/technology/in-graphic-detail-welcome-to-the-agentic-commerce-quarter/)
+Walmart, müşterilerin ajanın harcamasını 50, 100 veya 200 dolarla sınırlamasına izin veriyor. Yani ajanlı alışveriş
+bugün çoğunlukla "ajan hazırlar, insan onaylar" şeklinde işliyor.
+
+## 2026'da neler oldu?
+
+Gelişmeler tek bir duyuruyla değil, yıl boyunca parça parça geldi. Aşağıdaki tabloda her satırın kaynağını belirttik.
+
+| Tarih | Gelişme | Kaynak |
+| --- | --- | --- |
+| 11 Ocak 2026 | Google, açık alışveriş protokolü UCP'yi duyurdu; AI Mode ve Gemini'de ABD'li perakendeciler için ödeme | Google |
+| 24 Mart 2026 | OpenAI, ChatGPT içindeki ilk ödeme sürümünden geri adım attı; alışveriş mağazanın kendi ödeme sayfasında tamamlanıyor | OpenAI |
+| 15 Ekim 2026 | Google Universal Cart ABD'de açıldı: farklı mağazalardan ürünler tek sepette | Google |
+| 4 Kasım 2026 | Google'ın ajanlı ödemesi Kanada'da açılmaya başladı | Google Kanada |
+| 17 Kasım 2026 | Merchant Center entegrasyon rehberi: ABD'de kademeli, Avustralya ve Kanada 2027 başında | Google for Developers |
+| Kasım 2026 | OpenAI, ChatGPT Wallet'ı tanıttı | Modern Retail |
+
+[Google'ın Ocak duyurusuna göre](https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/)
+protokol Shopify, Etsy, Wayfair, Target ve Walmart ile birlikte geliştirildi ve Adyen, Mastercard, Stripe, Visa gibi
+20'den fazla şirket tarafından destekleniyor. Google aynı duyuruda özelliği "önümüzdeki aylarda" küresel ölçekte
+genişletmeyi planladığını söylemişti; Kasım itibarıyla açılan pazarlar ABD ve Kanada.
+
+OpenAI tarafı daha temkinli bir yol izliyor.
+[OpenAI'nin 24 Mart tarihli açıklamasına göre](https://openai.com/index/powering-product-discovery-in-chatgpt/) ilk
+ödeme sürümü "istenen esnekliği sunmadı"; şirket mağazaların kendi ödeme deneyimlerini kullanmasına izin verip ürün
+keşfine odaklanıyor. Mağazalar ürün beslemelerini ve kampanyalarını OpenAI'nin ticaret protokolü üzerinden
+paylaşıyor; Shopify mağazalarının ürün verisi ise Shopify Catalog üzerinden zaten ChatGPT'ye bağlı ve OpenAI'ye göre
+bu mağazaların ayrıca bir şey yapması gerekmiyor. ChatGPT'deki reklam tarafını
+[ChatGPT reklamları yazımızda](/tr/blog/chatgpt-reklamlari-turkiye-rehberi) ayrıca anlattık.
+
+## Yapay zekâdan gelen ziyaretçi ne kadar değerli?
+
+İlk ölçümler bu trafiğin küçük ama değerli olduğunu gösteriyor.
+[Adobe'nin 29 Ekim tarihli raporuna göre](https://business.adobe.com/blog/ai-traffic-higher-revenue-per-visit-retail-holiday)
+Eylül 2026'da ABD perakende sitelerine yapay zekâ araçlarından gelen trafik bir önceki yıla göre yüzde 71 arttı ve bu
+ziyaretçiler diğer kanallardan yüzde 90 daha iyi dönüştü. Adobe'nin verisi ABD perakende sitelerine yapılan 1 trilyonu
+aşkın ziyareti kapsıyor. Aynı trafik Ağustos 2025'te yüzde 9 daha kötü dönüşüyordu; yani tablo bir yılda tersine döndü.
+
+<BarChart
+  title="Yapay zekâ araçlarından gelen ziyaretçiler: diğer kanallara göre fark"
+  caption="Yüzde, Eylül 2026, ABD perakende siteleri. Kaynak: Adobe Digital Insights."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Dönüşüm oranı", value: 90, highlight: true },
+    { label: "Ziyaret başına gelir", value: 83 },
+    { label: "Sitede geçirilen süre", value: 73 },
+    { label: "Sepete ekleme oranı", value: 53 },
+    { label: "Görüntülenen sayfa", value: 25 },
+  ]}
+/>
+
+Payı hâlâ küçük. Bir SEO ajansı olan First Page Sage'in kendi ABD verisiyle yaptığı
+[2 Kasım tarihli çalışmaya göre](https://firstpagesage.com/seo-blog/agentic-commerce-statistics/) yapay zekâ
+araçlarından gelen ziyaretlerin ABD perakende ziyaretleri içindeki payı 2024'ün son çeyreğinde yüzde 0,43 iken Ekim
+2026'da yüzde 5,46'ya çıktı. Bu bağımsız denetlenmiş bir veri değil, ama yönü Adobe'nin ölçümüyle uyumlu.
+
+<TrendChart
+  title="Yapay zekâ kaynaklı ziyaretlerin ABD perakende ziyaretleri içindeki payı"
+  caption="Yüzde. First Page Sage'in kendi veri seti; bağımsız denetlenmemiştir. Kaynak: First Page Sage."
+  unit="%"
+  max={6}
+  labels={["2024 4. çeyrek", "2025 4. çeyrek", "Ekim 2026"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "Yapay zekâ kaynaklı ziyaret payı", points: [0.43, 2.26, 5.46] },
+  ]}
+/>
+
+## Tüketiciler ödemeyi ajana bırakıyor mu?
+
+Araştırma ile ödeme arasında büyük bir fark var. First Page Sage'in 5.212 kişilik ABD panelinde, Ekim 2026'da
+çevrimiçi alışveriş yapanların yüzde 62,3'ü ürün araştırmak için yapay zekâ kullanırken, onay vererek ödemeyi ajana
+bıraktıranların oranı yüzde 7,9'da kalıyor. Tamamen otonom, onaysız alışveriş ise yüzde 1,5.
+
+<BarChart
+  title="Alışveriş adımlarında yapay zekâ kullanımı"
+  caption="Çevrimiçi alışveriş yapanların yüzdesi, Ekim 2026, ABD, 5.212 kişilik panel. Kaynak: First Page Sage."
+  unit="%"
+  max={70}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Ürün araştırma", value: 62.3 },
+    { label: "Fiyat ve özellik karşılaştırma", value: 49.8 },
+    { label: "Yorum özetleri", value: 40.1 },
+    { label: "Ajanın sepeti doldurması", value: 16.1 },
+    { label: "Onaylı ajan ödemesi", value: 7.9, highlight: true },
+    { label: "Onaysız, otonom alışveriş", value: 1.5 },
+  ]}
+/>
+
+Güven tarafı da benzer bir tablo çiziyor. Modern Retail'in aktardığı Okta 2026 raporuna göre katılımcıların yüzde
+31'i bir yapay zekâ ajanının alışverişi kendi kontrolü olmadan tamamlamasına izin verebileceğini, yüzde 67'si
+vermeyeceğini söylüyor. Kısacası bugün ajanın en güçlü olduğu yer karar öncesi: hangi mağazanın, hangi ürünün
+önerileceğini belirliyor.
+
+<StatGrid
+  items={[
+    { value: "%90", label: "Yapay zekâ araçlarından gelen ziyaretçilerin diğer kanallara göre dönüşüm farkı, Eylül 2026, ABD", note: "ADOBE" },
+    { value: "60+ milyar", label: "Google'ın alışveriş ajanlarının dayandığı ürün listesi sayısı", note: "GOOGLE" },
+    { value: "%31", label: "Ajanın alışverişi onaysız tamamlamasına izin verebileceğini söyleyenler", note: "OKTA, MODERN RETAIL" },
+  ]}
+/>
+
+## Türkiye'de durum ne?
+
+Bu yazının yazıldığı tarihte Google'ın ajanlı ödemesi Türkiye'de açık değil ve Türkiye için duyurulmuş bir tarih yok.
+[Google'ın Merchant Center rehberine göre](https://developers.google.com/merchant/ucp/guides/merchant-center/integration)
+entegrasyon ABD'de kademeli olarak açılıyor, Avustralya ve Kanada'nın 2027 başında eklenmesi planlanıyor.
+[Google Kanada'nın 4 Kasım duyurusu](https://blog.google/intl/en-ca/products/explore-get-answers/a-new-way-to-shop-introducing-a-more-intuitive-agentic-shopping-experience-for-consumers-and-retailers-in-canada/)
+da yalnızca Kanadalı perakendecileri kapsıyor.
+
+Bu, Türkiye'deki mağazaları iki gruba ayırıyor. ABD veya Kanada'ya satış yapan ihracatçı mağazalar bugün bu
+kanallarda yer almayı değerlendirebilir. Yalnızca yurt içine satan mağazalar için ise ödeme entegrasyonu henüz bir
+konu değil; ama ajanların ürün bulma ve karşılaştırma tarafı zaten çalışıyor. Google'ın AI Mode ve AI Overviews
+özellikleri Türkiye'de Şubat 2026'dan beri açık; bu tarafı
+[Google yapay zekâ kontrolü yazımızda](/tr/blog/google-yapay-zeka-kontrolu-ai-bakisi-ai-modu) anlattık.
+
+<Callout type="info" title="Hazırlık ödeme düğmesinden önce başlıyor">
+  Ajanlı ödeme ülkenize geldiğinde katılabilmek için gereken temel, bugün de işe yarayan şeyler: düzgün ürün verisi,
+  doğru fiyat ve stok, açık iade koşulları. Bunlar hem klasik aramada hem yapay zekâ yanıtlarında mağazanızın
+  önerilme şansını etkiliyor.
+</Callout>
+
+## Ajanlar bir mağazayı nasıl okuyor?
+
+Bir ajan, ürün sayfanızı bir insan gibi gezmez; yapılandırılmış veriyi okur. Google tarafında bu verinin merkezi
+Merchant Center. Google'ın rehberine göre ajanlı ödemeye katılmak için bir Merchant Center hesabı, sitede yayımlanan
+bir alışveriş profili, sipariş oluşturma, güncelleme ve tamamlama için üç arayüz ve sipariş durumunu bildiren
+bildirimler gerekiyor. Yalnızca "sepeti mağazaya aktar" seçeneğinde ise Merchant Center'daki ürün kimliklerinin sitedeki
+kimliklerle eşleşmesi yeterli. Google'ın yardım sayfası, ürün beslemesinde, iade koşullarında veya hesap ayarlarında
+eksik olduğunda Merchant Center'ın uyarı vereceğini söylüyor.
+
+<BlogFigure name="agentic-commerce" alt="Soldan sağa bir alışveriş akışı. Kullanıcının isteği bir yapay zekâ ajanına gidiyor. Ajan üç kaynaktan besleniyor: mağazanın ürün beslemesi, mağazanın sipariş arayüzü ve dijital cüzdan. Ajan bir sepet hazırlıyor, sepetin yanında kullanıcı onayını gösteren bir anahtar var. Onaydan sonra sipariş mağazaya ulaşıyor ve mağaza siparişi kendi sisteminde tamamlıyor." caption="Ajanlı alışverişte ajan ürün verisini, sipariş arayüzünü ve ödeme bilgisini bir araya getirir; kullanıcı onay verdikten sonra sipariş yine mağazanın kendi sisteminde tamamlanır. Verisi eksik mağaza bu akışa hiç giremez." />
+
+Pazarlamacılar da bu değişime hazırlanıyor. Modern Retail'in aktardığı Gartner 2026 anketine göre üst düzey pazarlama
+yöneticilerinin yüzde 61'i içeriğini ve SEO çalışmasını makinelerin okuyabileceği şekilde uyarladı, yüzde 39'u ürün
+bilgisini, fiyatını veya tekliflerini ajanların kararlarına göre düzenledi. Mağaza tarafında bunun karşılığı,
+ürünü bir insan kadar bir makinenin de doğru anlayabilmesi.
+
+## Şimdi yapılabilecekler
+
+Aşağıdaki adımlar ülkeden bağımsız; ajanlı ödeme Türkiye'ye gelmese bile arama ve yapay zekâ yanıtlarındaki
+görünürlüğe katkı sağlıyor.
+
+| Adım | Ne yapılır | Neden |
+| --- | --- | --- |
+| Ürün beslemesi | Merchant Center beslemesini eksiksiz ve hatasız hale getirin | Ajanların ve Google alışveriş yüzeylerinin ana veri kaynağı |
+| Ürün kimlikleri | Beslemedeki kimliklerle sitedeki kimlikleri eşleştirin | Sepet aktarımı için Google'ın açık şartı |
+| Fiyat ve stok | Sitedeki, beslemedeki ve sepetteki fiyatın aynı olduğundan emin olun | Ajan yanlış fiyatla sepet hazırlarsa sipariş ve güven kaybolur |
+| İade koşulları | İade ve kargo koşullarını açık ve tutarlı yazın | Merchant Center bu alanlarda eksik olduğunda uyarı veriyor |
+| Yapılandırılmış veri | Ürün sayfalarında ürün, fiyat, stok ve yorum verisini işaretleyin | Makinelerin sayfayı doğru okuması için |
+| Ölçüm | Yapay zekâ araçlarından gelen trafiği analitikte ayrı bir kanal olarak izleyin | Kendi verinizle değerini görmek için |
+| Altyapı | Sipariş ve ödeme akışını dışarıdan bağlanabilir arayüzlerle kurun | Entegrasyon açıldığında hızlı katılım için |
+
+Fiyat tutarlılığı Türkiye'de ayrıca hukuki bir konu: 1 Ağustos 2026'dan beri indirim reklamlarında son 10 günün en
+düşük fiyatı esas alınıyor ve yorumlar için yeni kurallar var. Ayrıntıları
+[e-ticaret yorum ve indirim kuralları yazımızda](/tr/blog/e-ticaret-yorum-indirim-kurallari-1-agustos) bulabilirsiniz.
+
+<Callout type="warn" title="Henüz açılmamış bir entegrasyona yatırım yapmadan önce düşünün">
+  OpenAI'nin ilk ödeme sürümünden birkaç ay içinde geri adım atması, bu alanın hâlâ hızla değiştiğini gösteriyor.
+  Türkiye'de açık olmayan bir platforma özel entegrasyona bütçe ayırmak yerine, her platformun ihtiyaç duyduğu
+  ortak temeli, yani ürün verisini ve esnek bir sipariş altyapısını güçlendirmek daha güvenli bir yatırım.
+</Callout>
+
+## Yaygın hatalar
+
+- **Ajanlı ticareti yalnızca ödeme düğmesi sanmak.** Bugün ajanların en çok etkilediği yer ürün araştırması ve
+  karşılaştırma; ödeme bu zincirin son halkası.
+- **Ürün beslemesini bir kez kurup unutmak.** Fiyatı veya stoğu güncel olmayan besleme, ajanın yanlış ürünü önermesine
+  ya da mağazayı hiç önermemesine yol açar.
+- **ABD verisini doğrudan Türkiye'ye taşımak.** Yüzde 90'lık dönüşüm farkı ABD'deki bir ölçüm; kendi mağazanızda
+  sonucu kendi analitiğinizle görün.
+- **Yapay zekâ trafiğini ölçmemek.** Bu kanal ayrı izlenmezse, değeri diğer kanalların içinde kaybolur.
+- **Platforma özel geçici çözümlere bağlanmak.** Kurallar ve ülke listeleri değişiyor; esnek bir altyapı, tek bir
+  platforma bağımlı kalmaktan daha az risklidir.
+
+## Sonuç
+
+Yapay zekâ alışveriş ajanları 2026'da deneme aşamasını geçti: Google ABD ve Kanada'da ödemeyi açtı, ChatGPT ürün
+keşfini büyüttü ve ilk veriler bu kanaldan gelen ziyaretçinin değerli olduğunu gösteriyor. Türkiye'de ödeme tarafı
+henüz açık değil, ama ajanların ürün bulma ve karşılaştırma tarafı zaten çalışıyor. Bugün yapılacak en doğru iş,
+ürün verisini, fiyat tutarlılığını ve ölçümü sağlam hale getirmek; ödeme entegrasyonu geldiğinde bu temel hazır olan
+mağaza öne geçecek.
+
+Mağazanızı bu değişime hazırlamak isterseniz [e-ticaret](/tr/hizmetler/e-ticaret),
+[yapay zekâ entegrasyonu](/tr/hizmetler/yapay-zeka-entegrasyonu) ve [SEO & GEO](/tr/hizmetler/seo-geo) hizmet
+sayfalarımıza bakabilir, dönüşüm tarafı için [e-ticaret dönüşüm oranı yazımızı](/tr/blog/e-ticaret-donusum-orani-optimizasyonu)
+okuyabilir ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

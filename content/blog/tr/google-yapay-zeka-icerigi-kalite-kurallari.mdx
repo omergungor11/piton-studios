@@ -1,0 +1,266 @@
+---
+title: "Google ve yapay zekâ içeriği: spam güncellemesi bitti, kurallar netleşti"
+description: "Eylül 2026 spam güncellemesi tamamlandı, Google yapay zekâ içeriği ve yazar bilgisi kurallarını güncelledi. Ne değişti, siteniz için ne yapmalı?"
+date: 2026-11-07
+tags: ["seo", "geo", "yapay zeka", "içerik"]
+author: "Piton"
+draft: false
+translationKey: google-ai-content-quality
+sources:
+  - title: "Google Search Status Dashboard — September 2026 spam update"
+    url: "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu"
+  - title: "Search Engine Roundtable — Google September 2026 spam update is done rolling out"
+    url: "https://www.seroundtable.com/google-september-2026-spam-update-done-42235.html"
+  - title: "Google Search Central — Guidance on using generative AI content on your website"
+    url: "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+  - title: "Google Search Central — Creating helpful, reliable, people-first content"
+    url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+  - title: "Google Search Central — Spam policies for Google web search"
+    url: "https://developers.google.com/search/docs/essentials/spam-policies"
+  - title: "Search Engine Roundtable — Google warns against deceptive authorship information"
+    url: "https://www.seroundtable.com/google-warns-against-deceptive-authorship-information-42238.html"
+  - title: "Search Engine Roundtable — Google warns tools on user-generated spam guidance"
+    url: "https://www.seroundtable.com/google-user-generated-spam-guidance-tools-42378.html"
+  - title: "Search Engine Roundtable — Over 80% of Google searches have AI Overviews"
+    url: "https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html"
+  - title: "Search Engine Roundtable — AI Overviews & AI Mode 0.9% click-through rate, opt out study says"
+    url: "https://www.seroundtable.com/google-ai-overviews-mode-ctr-42421.html"
+faq:
+  - q: "Google yapay zekâyla yazılmış içeriği cezalandırıyor mu?"
+    a: "İçeriğin yapay zekâyla yazılmış olması tek başına sorun değil. Google'ın belgesine göre sorun, üretken yapay zekâyla kullanıcıya değer katmadan çok sayıda sayfa üretmek; bu, ölçekli içerik kötüye kullanımı adlı spam politikasını ihlal edebilir. Google ayrıca yapay zekâ çıktısının yayından önce elle doğrulanmasını istiyor."
+  - q: "Eylül 2026 spam güncellemesi ne zaman bitti?"
+    a: "Google Search Status Dashboard'a göre güncelleme 24 Eylül 2026'da başladı ve 8 Ekim 2026'da tamamlandı. Tüm dillerde ve ülkelerde geçerliydi. Google hangi spam politikalarının hedeflendiğini ayrıca açıklamadı; Search Engine Roundtable'a göre bağlantı spam'ini hedeflemiyordu."
+  - q: "Google'ın içerik kalitesinde baktığı dört nitelik nedir?"
+    a: "Google'ın güncel faydalı içerik belgesine göre arama kalitesi değerlendiricileri ana içerikte dört temel niteliğe bakıyor: emek, özgünlük, yetenek veya beceri ve doğruluk. Denetimsiz biçimde yapay zekâyla büyük miktarda metin üretmek, belgede açıkça emeğin az ya da hiç olmadığı örneği olarak geçiyor."
+  - q: "Yazar adı ve fotoğrafı için yapay zekâ kullanabilir miyim?"
+    a: "Hayır. Google'ın belgesi yapay zekâyla üretilmiş portre fotoğrafları, uydurma isimler veya sahte unvanlarla yazar profili oluşturmayı açıkça bir aldatma biçimi olarak tanımlıyor. Bunun yerine okurun beklediği yerlerde doğru yazar bilgisi, örneğin gerçek bir imza eklemeyi öneriyor."
+  - q: "Yapay zekâ kullandığımızı okura söylemek zorunda mıyız?"
+    a: "Google bunu bir zorunluluk olarak koymuyor ama öneriyor. Belgeye göre içeriği otomatik üretiyorsanız nasıl üretildiğini kitlenize anlamlı bir şekilde açıklamayı düşünmelisiniz. Okurun 'bu nasıl hazırlandı?' diye soracağı içeriklerde bu tür açıklamalar özellikle faydalı."
+---
+
+Eylül sonu ile Ekim başı arasında Google, yapay zekâyla içerik üreten her siteyi ilgilendiren birkaç adım attı:
+iki hafta süren bir spam güncellemesi tamamlandı, yapay zekâ içeriği belgesi yenilendi, faydalı içerik belgesine
+"ana içerik" tanımı ve dört kalite niteliği eklendi, uydurma yazar profilleri açıkça aldatma sayıldı. Bu yazıda
+neyin değiştiğini Google'ın kendi belgelerinden aktarıyor, AI Bakışı'nın yaygınlaşmasıyla bunun neden daha önemli
+hale geldiğini gösteriyor ve yapay zekâyla içerik üretirken izlenecek bir iş akışı öneriyoruz. İçerik ve metin
+desteğinin projelerde nasıl ele alındığını [SSS sayfamızda](/tr/sss#faq-content-and-copy) kısaca anlattık.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "Eylül 2026 spam güncellemesi 24 Eylül'de başladı, 8 Ekim'de bitti; 2026'nın önceki spam güncellemeleri birkaç günde tamamlanmıştı.",
+    "Google, yapay zekâ içeriğinin yayından önce elle doğrulanmasını istiyor; bu kural başlık, meta açıklama, yapılandırılmış veri ve alt metin için de geçerli.",
+    "Faydalı içerik belgesi ana içeriği tanımlıyor ve dört nitelik sayıyor: emek, özgünlük, yetenek veya beceri, doğruluk.",
+    "Yapay zekâyla üretilmiş fotoğraf, uydurma isim veya sahte unvanla yazar profili oluşturmak artık açıkça aldatma.",
+    "Ölçüm araçlarına göre Google aramalarının %62 ile %80'den fazlası arasında AI Bakışı çıkıyor; özgün ve doğru içerik daha da belirleyici.",
+  ]}
+/>
+
+## Ne değişti?
+
+Değişiklikler birkaç hafta içinde, farklı belgelerde geldi. Tarihleri Google'ın durum panelinden, belgelerin
+"son güncelleme" satırlarından ve Search Engine Roundtable'ın haberlerinden derledik.
+
+| Tarih | Gelişme | Kaynak |
+|---|---|---|
+| 24 Eylül 2026 | Eylül 2026 spam güncellemesi başladı | Google Search Status Dashboard |
+| 1 Ekim 2026 | Yapay zekâ içeriği belgesine elle doğrulama kuralı eklendi | Google Search Central |
+| Ekim 2026, ilk hafta | Faydalı içerik belgesine ana içerik tanımı, dört nitelik ve yazar bilgisi uyarısı eklendi | Google Search Central, Search Engine Roundtable |
+| 8 Ekim 2026 | Spam güncellemesi tamamlandı | Google Search Status Dashboard |
+| 26 Ekim 2026 | Kullanıcı içeriği barındıran araçlar için dizinleme önerisi eklendi | Search Engine Roundtable |
+
+Bunların hiçbiri yepyeni bir sıralama kuralı değil. Google'ın değerlendiricilere ve geliştirici etkinliklerinde
+anlattığı ilkeler, artık herkesin okuduğu belgelere açık cümlelerle yazıldı. Ama yazılı hale gelmeleri, yapay
+zekâyla içerik üreten bir sitenin neye göre değerlendirileceğini çok daha net gösteriyor.
+
+## Eylül 2026 spam güncellemesi
+
+[Google Search Status Dashboard'a göre](https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu)
+güncelleme 24 Eylül 2026'da "tüm dillerde ve küresel olarak" yayına alındı ve 8 Ekim 2026'da tamamlandı. Google
+yayılmanın iki haftaya kadar sürebileceğini önceden söylemişti. [Search Engine Roundtable'a göre](https://www.seroundtable.com/google-september-2026-spam-update-done-42235.html)
+bu, 2026'nın önceki spam güncellemelerinden belirgin biçimde uzundu; güncelleme bağlantı spam'ini hedeflemiyordu
+ve Google ne kadar sorgunun etkilendiğini paylaşmadı.
+
+<BarChart
+  title="2026 spam güncellemelerinin yayılma süresi"
+  caption="Takvim günü, başlangıç ve bitiş günü dahil. Mart 24-25, Haziran 24-26, Ağustos 18-21, Eylül 24 - Ekim 8. Kaynak: Search Engine Roundtable, Google Search Status Dashboard."
+  max={16}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Mart 2026", value: 2 },
+    { label: "Haziran 2026", value: 3 },
+    { label: "Ağustos 2026", value: 4 },
+    { label: "Eylül 2026", value: 15, highlight: true },
+  ]}
+/>
+
+Google güncellemenin hangi politikaları hedeflediğini ayrıca açıklamadı. Bu yüzden belirli bir site için
+"şu nedenle düştü" demek mümkün değil. Google'ın spam güncellemeleri için genel önerisi aynı: güncellemeden
+sonra trafiği değişen site, spam politikalarını gözden geçirmeli.
+
+<Callout type="info" title="Manuel işlemler artıyor mu?">
+  Ekim'de bazı SEO danışmanları, ince içerik ve ölçekli içerik nedeniyle verilen manuel işlem bildirimlerinde
+  artış gördüklerini paylaştı. Bu gözlemler tekil ve Google tarafından doğrulanmadı. Siteniz Search Console'da
+  doğrulanmışsa manuel işlem bildirimi oraya gelir; hesabın kurulu ve bildirimlerin açık olması yeterli.
+</Callout>
+
+## Google yapay zekâ içeriği hakkında ne diyor?
+
+[Google'ın yapay zekâ içeriği belgesi](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content)
+1 Ekim 2026'da güncellendi. En önemli cümle şu: yapay zekâyla üretilen tüm içeriğin yayımlanmadan önce doğruluk
+ve güvenilirlik açısından elle kontrol edilmesi ve gözden geçirilmesi "kritik". Belge bunun nedenini de açıkça
+yazıyor: üretken modeller bilgi getirmiyor, eğitim verilerine göre olası bir kelime dizisini tahmin ediyor; bu
+yüzden çıktılarda yanlışlar, yani halüsinasyonlar olabilir.
+
+Gözden kaçan ayrıntı, kuralın yalnızca gövde metniyle sınırlı olmaması. Belgeye göre aynı kontrol sayfa başlığı,
+meta açıklama, yapılandırılmış veri ve görsellerin alternatif metni için de geçerli. Yapay zekâya toplu biçimde
+yazdırılan yüzlerce ürün açıklaması veya meta etiketi, bu kapsamın tam ortasında duruyor.
+
+Sınırı çizen ise [spam politikaları](https://developers.google.com/search/docs/essentials/spam-policies). Google
+ölçekli içerik kötüye kullanımını, birçok sayfanın kullanıcılara yardım etmek için değil, öncelikle arama
+sıralamasını manipüle etmek için üretilmesi olarak tanımlıyor. Örnekler arasında üretken yapay zekâ araçlarıyla
+kullanıcıya değer katmadan çok sayıda sayfa üretmek açıkça sayılıyor. Yani belirleyici olan aracın kendisi
+değil, ölçek ve katılan değer. Yapay zekânın neden yanlış bilgi üretebileceğini [SSS sayfamızda](/tr/sss#faq-hallucination)
+ayrıca açıkladık.
+
+<StatGrid
+  items={[
+    { value: "2 hafta", label: "Eylül 2026 spam güncellemesinin yayılma süresi", note: "GOOGLE" },
+    { value: "4", label: "Ana içerikte değerlendirilen temel nitelik", note: "GOOGLE" },
+    { value: "%80+", label: "AI Bakışı çıkan Google aramalarının payı", note: "SEMRUSH" },
+  ]}
+/>
+
+## Ana içerik ve dört nitelik
+
+[Faydalı içerik belgesi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) artık
+"ana içeriği", sayfanın amacına ulaşmasına doğrudan yardım eden her parça olarak tanımlıyor: ana metin ve
+görseller, etkileşimli özellikler, kullanıcı katkıları, sekmeli veya açılır bölümler, sayfa başlıkları ve ara
+başlıklar. Belgeye göre ana içeriğin kalitesi, sayfa kalitesini değerlendirmedeki en kritik etkenlerden biri.
+
+<BlogFigure name="google-ai-content-quality" alt="Solda bir yapay zekâ küpünden çıkan taslak belge. Belge ortadaki dört kontrol panelinden sırayla geçiyor: emek için metin satırları, özgünlük için tek parlayan nokta, beceri için bir rozet, doğruluk için bir onay işareti. Sağda yazar imzalı, onaylı bir sayfa yayında; altta ise kontrolden geçmeyen, üst üste yığılmış soluk sayfalar çarpı işaretiyle ayrılıyor." caption="Yapay zekâ taslağı bir başlangıç noktası. Google'ın belgesindeki dört nitelikten geçen ve gerçek bir yazarı olan sayfa yayına çıkar; denetimsiz, toplu üretilen sayfalar ölçekli içerik kötüye kullanımı riskini taşır." />
+
+Belgeye göre arama kalitesi değerlendiricileri ana içerikte şu dört niteliğe bakmak üzere eğitiliyor:
+
+| Nitelik | Google'ın tanımı (özet) | Pratikte ne demek? |
+|---|---|---|
+| Emek | İçeriğe veya onu üreten sisteme ne kadar insan emeği girdiği | Denetimsiz yapay zekâ metni belgede "az ya da hiç emek" örneği |
+| Özgünlük | Başka sitelerde bulunmayan özgün bilgi veya bakış açısı sunup sunmadığı | Kendi verinizi, proje deneyiminizi, fotoğraflarınızı ekleyin |
+| Yetenek veya beceri | Tatmin edici bir deneyim için gereken yetenek, beceri veya uzmanlığı gösterip göstermediği | Konuyu bilen birinin yazması veya gözden geçirmesi |
+| Doğruluk | Bilgi sayfalarında içeriğin olgusal olarak doğru olması | Sağlık, para, hukuk gibi konularda uzman görüşüyle uyumlu ve çok doğru olmalı |
+
+Search Engine Roundtable bu dörtlüyü İngilizce baş harflerinden kısaltarak andı, ama Google belgede böyle bir
+kısaltma kullanmıyor. Önemli olan nitelikler: dördünde de yapay zekâ ancak bir taslak aracı, son sözü konuyu bilen
+bir insan söylüyor.
+
+## Yazar bilgisi: uydurma profil aldatmadır
+
+Belgenin "kim oluşturdu?" bölümüne eklenen cümle net. [Search Engine Roundtable'ın da aktardığı](https://www.seroundtable.com/google-warns-against-deceptive-authorship-information-42238.html)
+yeni metne göre yapay zekâyla üretilmiş portre fotoğrafları, uydurma isimler veya sahte unvanlarla yazar profili
+oluşturmak bir aldatma biçimi. Google her türlü aldatmanın sayfayı hem kullanıcılar hem otomatik kalite sistemleri
+için güvenilmez kıldığını ve düşük kaliteli sayfa işareti olduğunu yazıyor.
+
+Aynı belge tersini de öneriyor: okurun bekleyeceği yerlerde doğru yazar bilgisi, örneğin bir imza eklemek.
+Otomasyon veya yapay zekâ kullanıldıysa bunun ziyaretçiye açık olup olmadığını da soruyor ve okurun "bu nasıl
+hazırlandı?" diye merak edeceği içeriklerde böyle açıklamaların faydalı olduğunu belirtiyor.
+
+<Callout type="warn" title="Sahte uzman, sahte yorum">
+  "Uzman diyetisyen", "kıdemli avukat" gibi unvanlarla var olmayan yazarlar yaratmak, artık Google'ın kendi
+  belgesinde adı konmuş bir aldatma. Aynı mantık sahte müşteri yorumları ve uydurma vaka çalışmaları için de
+  geçerli: bunlar hem güveni hem de arama görünürlüğünü riske atar.
+</Callout>
+
+## Kullanıcıların sayfa oluşturduğu araçlar
+
+26 Ekim'de güncellenen kullanıcı içeriği spam belgesi, artık kullanıcıların paylaşılabilir sayfa, üretilmiş
+içerik veya web uygulaması yayımlayabildiği araçları da açıkça kapsıyor. [Search Engine Roundtable'ın aktarımına göre](https://www.seroundtable.com/google-user-generated-spam-guidance-tools-42378.html)
+Google, paylaşım, iş birliği veya araç amaçlı oluşturulan sayfaların varsayılan olarak noindex veya robots.txt
+ile arama dışında tutulmasını öneriyor. Sitenizde müşterilerin teklif, rapor veya yapay zekâ çıktısı sayfası
+oluşturabildiği bir özellik varsa, bu sayfaların dizine girmesi bilinçli bir karar olmalı.
+
+## Neden şimdi daha önemli?
+
+Çünkü arama sonuçlarının üstünde artık çoğu zaman bir yapay zekâ özeti duruyor. [Search Engine Roundtable'ın derlediği ölçümlere göre](https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html)
+Semrush verisinde AI Bakışı çıkan Google aramalarının payı %80'i aştı. Bu oran bir önceki yılın Haziran ayında
+yaklaşık %50, ondan bir yıl önce ise yaklaşık %15'ti.
+
+<TrendChart
+  title="AI Bakışı çıkan Google aramalarının payı"
+  caption="Yaklaşık değerler, yüzde. 2024 ve Haziran 2025 değerleri Search Engine Roundtable'ın aktardığı yaklaşık oranlar. Kaynak: Semrush, Search Engine Roundtable (Ekim 2026)."
+  unit="%"
+  max={100}
+  labels={["2024", "Haziran 2025", "Ekim 2026"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "AI Bakışı çıkan aramalar", points: [15, 50, 80] },
+  ]}
+/>
+
+Ölçüm aracına ve sorgu türüne göre oran değişiyor. seoClarity sorguların %62'sinden fazlasında ve sektöre göre
+%55 ile %84 arasında AI Bakışı gördüğünü, SE Ranking ise ABD'deki marka aramalarının %82,5'inde gördüğünü
+paylaştı. Rakamlar farklı yöntemlerle ölçüldüğü için birebir karşılaştırılamaz, ama yön aynı.
+
+<BarChart
+  title="AI Bakışı payı, ölçüme göre"
+  caption="Yüzde. Her araç farklı sorgu kümesi ve yöntem kullanıyor; SE Ranking yalnızca ABD marka aramalarını ölçüyor. Kaynak: Search Engine Roundtable (Ekim 2026)."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "seoClarity", value: 62 },
+    { label: "Semrush", value: 80, highlight: true },
+    { label: "SE Ranking (ABD marka)", value: 82.5 },
+  ]}
+/>
+
+Tıklamalar tarafında ise veri henüz zayıf. Cyrus Shepard'ın tek bir sitede yaptığı ve Search Engine
+Roundtable'ın da "çok sınırlı" dediği bir denemede, site AI Bakışı ve AI Modu'ndan çıkarıldığında yapay zekâ
+gösterimlerinin tahmini tıklama oranı yaklaşık %0,9 çıktı. İlginç olan, AI özellikleri kapatıldığında normal
+organik tıklamaların da düşmesiydi. Tek sitelik bir deneyden genel sonuç çıkmaz; ama yapay zekâ özetlerinde
+kaynak olarak görünmenin, klasik sıralamadan ayrı düşünülemeyeceğini gösteriyor. Google'ın bu alanlar için
+sunduğu kontrolü [Google'ın yeni yapay zekâ kontrolü yazımızda](/tr/blog/google-yapay-zeka-kontrolu-ai-bakisi-ai-modu)
+anlattık.
+
+## Yapay zekâyla içerik üretirken iş akışı
+
+| Adım | Ne yapılır? | Hangi niteliği karşılar? |
+|---|---|---|
+| 1. Konu ve amaç | Sayfanın kime, hangi soruya yanıt verdiğini yazın | Emek |
+| 2. Kendi malzemeniz | Proje deneyimi, kendi fotoğrafınız, kendi veriniz | Özgünlük |
+| 3. Taslak | Yapay zekâyı yapı ve ilk metin için kullanın | Emek (araç olarak) |
+| 4. Uzman gözden geçirmesi | Konuyu bilen biri metni düzeltsin ve onaylasın | Yetenek veya beceri |
+| 5. Doğrulama | Her rakamı, tarihi ve iddiayı kaynağından kontrol edin; başlık, meta ve alt metin dahil | Doğruluk |
+| 6. Yazar ve açıklama | Gerçek yazar adı; gerekiyorsa yapay zekâ kullanımını belirtin | Güven |
+
+<Callout type="tip" title="Önce az, sonra çok">
+  Yeni bir içerik bölümünü toplu açmak yerine birkaç sayfayla başlayın, Search Console'da gösterim ve tıklamayı
+  izleyin, sonra genişletin. Spam politikaları ölçekle ilgili; yüzlerce benzer sayfayı bir anda yayına almak,
+  kalite kontrolünü atlamanın en hızlı yolu.
+</Callout>
+
+## Yaygın hatalar
+
+- **Yapay zekâ çıktısını olduğu gibi yayımlamak.** Google'ın belgesi açık: yayından önce elle doğrulama kritik.
+  Uydurma bir istatistik veya yanlış bir tarih, tüm sayfanın güvenilirliğini düşürür.
+- **Yalnızca gövde metnini kontrol etmek.** Toplu üretilmiş başlık, meta açıklama, yapılandırılmış veri ve alt
+  metin de aynı kurala tabi.
+- **Şehir veya ürün adını değiştirip aynı sayfayı çoğaltmak.** Kullanıcıya değer katmayan çok sayıda sayfa,
+  ölçekli içerik kötüye kullanımının tanımına giriyor.
+- **Uydurma yazar profili kullanmak.** Yapay zekâ fotoğrafı, uydurma isim veya sahte unvan artık açıkça aldatma.
+- **Kullanıcıların oluşturduğu sayfaları dizine açık bırakmak.** Paylaşım ve araç sayfaları için varsayılan
+  noindex öneriliyor.
+- **Güncellemeden sonra panikle siteyi baştan yazmak.** Google hedefleri açıklamadı; önce hangi sayfaların
+  etkilendiğini Search Console'da görün, sonra karar verin.
+
+## Sonuç
+
+Google'ın Ekim belgeleri yapay zekâyı yasaklamıyor; yapay zekâyla üretilen içeriğe bir insanın emeği,
+özgün malzemesi, uzmanlığı ve doğrulaması eklenmesini istiyor. Eylül spam güncellemesi ve AI Bakışı'nın
+aramaların büyük bölümüne yayılması, bu dört niteliği taşımayan sayfaların hem sıralamada hem yapay zekâ
+yanıtlarında daha az şansı olacağını gösteriyor. Hızlı üretmek kolaylaştı; değerli olan, doğru ve özgün
+üretmek.
+
+Sitenizin içeriğini Google'ın yeni kurallarına göre gözden geçirmek isterseniz [SEO ve GEO](/tr/hizmetler/seo-geo),
+[yapay zekâ entegrasyonu](/tr/hizmetler/yapay-zeka-entegrasyonu) ve [bakım ve destek](/tr/hizmetler/bakim-ve-destek)
+hizmet sayfalarımıza bakabilir, [yapay zekâ çağında arama görünürlüğü yazımızı](/tr/blog/yapay-zeka-caginda-arama-gorunurlugu-seo-geo)
+okuyabilir ya da doğrudan [iletişime geçebilirsiniz](/tr/iletisim).

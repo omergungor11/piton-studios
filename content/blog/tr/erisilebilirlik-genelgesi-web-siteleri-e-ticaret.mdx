@@ -1,0 +1,221 @@
+---
+title: "Erişilebilirlik genelgesi: ilk süre doldu, sıra e-ticarette"
+description: "2025/10 sayılı genelge bankalardan e-ticarete pek çok sitenin erişilebilir olmasını istiyor. Kimler kapsamda, süreler ne zaman doluyor, nereden başlamalı?"
+date: 2026-10-31
+tags: ["erişilebilirlik", "mevzuat", "e-ticaret"]
+author: "Piton"
+draft: false
+translationKey: turkiye-accessibility-circular
+sources:
+  - title: "Erdem & Erdem — Web siteleri ve mobil uygulamaların erişilebilirliği hakkında 2025/10 sayılı Cumhurbaşkanlığı Genelgesi yayımlandı"
+    url: "https://www.erdem-erdem.av.tr/bilgi-bankasi/web-siteleri-ve-mobil-uygulamalarin-erisilebilirligi-hakkinda-2025-10-sayili-cumhurbaskanligi-genelgesi-yayimlandi"
+  - title: "Legal 500 (KST Law) — Monitoring framework for digital accessibility standards announced for Türkiye"
+    url: "https://www.legal500.com/intelligence/turkey/media-telecoms-it-entertainment/monitoring-framework-for-digital-accessibility-standards-announced-for-t%C3%BCrkiye"
+  - title: "Posta — Zorunlu hale gelen dijital erişilebilirlik neleri kapsıyor"
+    url: "https://www.posta.com.tr/bilim-teknoloji/zorunlu-hale-gelen-dijital-erisilebilirlik-neleri-kapsiyor-2894080"
+  - title: "Hukuki Haber — Erişilebilirlik artık bir zorunluluk: kamu web siteleri ve mobil uygulamalara yeni düzenleme"
+    url: "https://www.hukukihaber.net/erisilebilirlik-artik-bir-zorunluluk-kamu-web-siteleri-ve-mobil-uygulamalara-yeni-duzenleme"
+  - title: "WebAIM — The WebAIM Million, 2026 raporu"
+    url: "https://webaim.org/projects/million/"
+  - title: "WebAIM — The WebAIM Million, 2024 raporu"
+    url: "https://webaim.org/projects/million/2024"
+  - title: "Dünya Sağlık Örgütü — Engellilik ve sağlık bilgi notu"
+    url: "https://www.who.int/news-room/fact-sheets/detail/disability-and-health"
+faq:
+  - q: "Erişilebilirlik genelgesi nedir, ne zaman yayımlandı?"
+    a: "Web siteleri ve mobil uygulamaların erişilebilirliği hakkındaki 2025/10 sayılı Cumhurbaşkanlığı Genelgesi, 21 Haziran 2025 tarihli Resmî Gazete'de yayımlandı. Kamu kurumlarından bankalara, özel hastanelerden e-ticaret sitelerine kadar geniş bir grubun dijital hizmetlerini engelli bireyler için erişilebilir hâle getirmesini istiyor."
+  - q: "Genelge hangi standardı esas alıyor?"
+    a: "Aile ve Sosyal Hizmetler Bakanlığı'nın yayımladığı Web Siteleri ve Mobil Uygulamaların Erişilebilirliği Kontrol Listesi (A seviyesi) ile W3C'nin WCAG 2.2 yönergelerini. İncelediğimiz kaynakların biri WCAG 2.1 yazıyor; diğer kaynaklar 2.2 diyor. Kesin metin için Resmî Gazete'deki genelgeye bakılmalı."
+  - q: "E-ticaret siteleri için süre ne zaman doluyor?"
+    a: "Genelge, 6563 sayılı Kanun kapsamındaki elektronik ticaret hizmet sağlayıcılarına iki yıl süre tanıyor. Süre yayım tarihinden işlediği için bizim hesabımızla Haziran 2027'de doluyor. Bankalar, özel hastaneler, özel okullar ve büyük operatörler gibi diğer özel kurumlar için tanınan bir yıllık süre Haziran 2026'da doldu."
+  - q: "Genelgeye uymamanın cezası var mı?"
+    a: "İncelediğimiz kaynaklara göre genelgede doğrudan bir para cezası tanımlanmıyor. Uyum yıllık izleme planıyla denetleniyor; erişilebilir bulunan kurumlar iki yıl süreyle Erişilebilirlik Logosu kullanabiliyor. Bir hukuk yorumu, uyumun ileride denetimlerde ve kamu harcama kararlarında ölçüt olabileceğini belirtiyor."
+  - q: "Otomatik bir erişilebilirlik taraması yeterli mi?"
+    a: "Hayır. Otomatik araçlar düşük kontrast, eksik alternatif metin veya etiketsiz form alanı gibi yapısal hataları bulur; ama klavyeyle bir işlemin baştan sona tamamlanabildiğini ya da açıklamaların anlaşılır olduğunu doğrulayamaz. Taramayı klavye, ekran okuyucu ve mobil görev testleriyle tamamlamak gerekir."
+---
+
+Web erişilebilirliği Türkiye'de uzun süre "iyi olur" başlığı altında kaldı. Haziran 2025'te yayımlanan
+2025/10 sayılı Cumhurbaşkanlığı Genelgesi bunu değiştirdi: kamu kurumlarının yanında bankalar, özel
+hastaneler, özel okullar, ulaşım firmaları, büyük operatörler ve e-ticaret siteleri dijital
+hizmetlerini engelli bireyler için erişilebilir hâle getirmekle yükümlü. Kurumların çoğu için tanınan
+bir yıllık süre Haziran 2026'da doldu; e-ticaret için tanınan iki yıllık süre ise Haziran 2027'de
+doluyor. Bu yazıda genelgenin kimi kapsadığını, nasıl denetlendiğini, sitelerin bugün nerede
+durduğunu ve kalan sürede nereden başlanacağını anlatıyoruz. Erişilebilirliğin ne olduğuna dair kısa
+cevabı [SSS sayfamızda](/tr/sss#faq-accessibility) bulabilirsiniz.
+
+<KeyTakeaways
+  title="Özet"
+  items={[
+    "2025/10 sayılı genelge 21 Haziran 2025'te yayımlandı; standart olarak Bakanlığın A seviyesi kontrol listesini ve WCAG 2.2'yi esas alıyor.",
+    "Kamu kurumları, bankalar, özel hastaneler, özel okullar, ulaşım firmaları ve 200 binden fazla aboneli operatörler için bir yıllık süre Haziran 2026'da doldu.",
+    "E-ticaret hizmet sağlayıcılarına iki yıl tanındı; süre Haziran 2027'de doluyor.",
+    "WebAIM'in 2026 taramasında en çok ziyaret edilen 1 milyon ana sayfanın %95,9'unda WCAG hatası bulundu; sayfa başına ortalama 56,1 hata var.",
+    "Hataların büyük kısmı altı tekrar eden sorundan geliyor; bu da işe nereden başlanacağını netleştiriyor.",
+  ]}
+/>
+
+## Genelge ne diyor?
+
+[Erdem & Erdem'in özetine göre](https://www.erdem-erdem.av.tr/bilgi-bankasi/web-siteleri-ve-mobil-uygulamalarin-erisilebilirligi-hakkinda-2025-10-sayili-cumhurbaskanligi-genelgesi-yayimlandi)
+genelge 21 Haziran 2025 tarihli ve 32933 sayılı Resmî Gazete'de yayımlandı. Kurumların web siteleri ve
+mobil uygulamaları iki ölçüte göre değerlendiriliyor: Aile ve Sosyal Hizmetler Bakanlığı'nın
+yayımladığı "Web Siteleri ve Mobil Uygulamaların Erişilebilirliği Kontrol Listesi – A Seviyesi" ve
+W3C'nin WCAG 2.2 yönergeleri.
+
+Genelgeyi önemli kılan, kapsamının kamuyla sınırlı olmaması. [KST Law'un Legal 500'de yayımlanan analizi](https://www.legal500.com/intelligence/turkey/media-telecoms-it-entertainment/monitoring-framework-for-digital-accessibility-standards-announced-for-t%C3%BCrkiye)
+kapsamdaki kurumları ve süreleri ayrıntılı veriyor:
+
+| Kurum türü | Süre (yayımdan itibaren) |
+|---|---|
+| Kamu kurumları, üniversiteler, belediyeler ve şirketleri, kamu iktisadi teşebbüsleri | 1 yıl |
+| Kamu kurumu niteliğindeki meslek kuruluşları | 1 yıl |
+| Bankalar ve özel hastaneler | 1 yıl |
+| Millî Eğitim Bakanlığı izniyle açılan özel okullar | 1 yıl |
+| Karayolu, demiryolu, hava ve deniz yolcu taşımacılığı firmaları, A grubu seyahat acenteleri | 1 yıl |
+| 200 binden fazla abonesi olan elektronik haberleşme şirketleri | 1 yıl |
+| 6563 sayılı Kanun kapsamındaki elektronik ticaret hizmet sağlayıcıları | 2 yıl |
+
+Süreler yayım tarihinden işliyor. Bizim hesabımızla bir yıllık süre 21 Haziran 2026'da doldu, iki yıllık
+süre 21 Haziran 2027'de doluyor. Bir e-ticaret sitesi için bu, kalan sürenin yaklaşık sekiz ay olduğu
+anlamına geliyor.
+
+<StatGrid
+  items={[
+    { value: "%95,9", label: "WCAG hatası bulunan ana sayfaların oranı, 2026", note: "WEBAIM" },
+    { value: "56,1", label: "Ana sayfa başına ortalama tespit edilen hata", note: "WEBAIM" },
+    { value: "%16", label: "Dünya nüfusunda belirgin bir engellilik yaşayanların oranı", note: "DSÖ" },
+  ]}
+/>
+
+## Kim denetliyor, nasıl?
+
+Genelge bir izleme yapısı kuruyor. Erdem & Erdem'in aktarımına göre Aile ve Sosyal Hizmetler Bakanı
+başkanlığında bir İzleme Komisyonu ve bakan yardımcısı başkanlığında, kamu ve sivil toplum
+temsilcilerinin yer aldığı bir Danışma Komisyonu bulunuyor. Kapsamdaki her kurum da kendi içinde bir
+inceleme komisyonu kurup sitesini ve uygulamasını teknik olarak inceliyor ve sonucu İzleme
+Komisyonu'na raporluyor.
+
+Legal 500 analizine göre İzleme Komisyonu, hangi sitelerin ve uygulamaların denetleneceğini her yıl
+hazırlanan bir izleme planıyla belirliyor. Denetimde erişilebilir bulunan kurumlar dijital
+platformlarında iki yıl süreyle "Erişilebilirlik Logosu" kullanma hakkı kazanıyor.
+
+<BlogFigure name="turkiye-accessibility-circular" alt="Soldan sağa dört aşama: bir belge, bir sitede onay ve çarpı işaretli ölçüt listesi, bazı kareleri vurgulanmış bir site ızgarası ve altında saat bulunan onaylı bir mühür. Aşamalar ışık çizgileriyle birbirine bağlı." caption="Genelgeden logoya: kurum kendi inceleme komisyonuyla sitesini denetler, İzleme Komisyonu yıllık planla örnek siteleri inceler, erişilebilir bulunan kurum iki yıl süreyle logo kullanır." />
+
+<Callout type="info" title="Doğrudan para cezası tanımlanmıyor">
+  İncelediğimiz kaynaklarda genelgeye bağlı bir para cezası yer almıyor. [Hukuki Haber'deki bir yorum](https://www.hukukihaber.net/erisilebilirlik-artik-bir-zorunluluk-kamu-web-siteleri-ve-mobil-uygulamalara-yeni-duzenleme)
+  doğrudan yaptırım olmasa da uyumun ileride denetimlerde ve kamu harcama kararlarında ölçüt
+  olabileceğini belirtiyor. Cezanın olmaması işi ertelemek için değil, planlı yapmak için bir fırsat.
+</Callout>
+
+## Siteler bugün nerede duruyor?
+
+Türkiye'ye özel kapsamlı bir tarama yayımlanmadı; en güvenilir genel tablo WebAIM'in her yıl en çok
+ziyaret edilen 1 milyon ana sayfayı otomatik taradığı rapor. [2026 raporuna göre](https://webaim.org/projects/million/)
+ana sayfaların %95,9'unda en az bir WCAG hatası tespit edildi. Oran 2019'da %97,8'di ve altı yıl boyunca
+küçük adımlarla iyileşerek 2025'te %94,8'e inmişti; 2026'da bu eğilim tersine döndü.
+
+Sayfa başına hata sayısı da arttı. 2025'te ortalama 51 olan hata sayısı 2026'da 56,1'e çıktı, yani
+%10,1 arttı. [2024 raporu](https://webaim.org/projects/million/2024) 56,8 ve 2023 için 50 hata
+veriyor; tablo düzelmiyor, dalgalanıyor.
+
+<BarChart
+  title="Ana sayfa başına ortalama tespit edilen hata"
+  caption="En çok ziyaret edilen 1 milyon ana sayfa, otomatik tarama. Kaynak: WebAIM Million 2024 ve 2026 raporları."
+  max={60}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "2023", value: 50 },
+    { label: "2024", value: 56.8 },
+    { label: "2025", value: 51 },
+    { label: "2026", value: 56.1, highlight: true },
+  ]}
+/>
+
+## Hataların çoğu altı sorundan geliyor
+
+İyi haber şu: hatalar dağınık değil. WebAIM'e göre aşağıdaki altı hata türü tespit edilen tüm hataların
+%96'sını oluşturuyor. En yaygını, 2026'da ana sayfaların %83,9'unda görülen düşük kontrastlı metin.
+
+<BarChart
+  title="En sık görülen WCAG hataları"
+  caption="Hatanın görüldüğü ana sayfaların oranı, yüzde, 2026. Kaynak: WebAIM Million 2026."
+  unit="%"
+  max={100}
+  dataTableLabel="Veriyi tablo olarak göster"
+  data={[
+    { label: "Düşük kontrastlı metin", value: 83.9, highlight: true },
+    { label: "Görselde eksik alternatif metin", value: 53.1 },
+    { label: "Etiketsiz form alanı", value: 51 },
+    { label: "Boş bağlantı", value: 46.3 },
+    { label: "Boş buton", value: 30.6 },
+    { label: "Sayfa dili belirtilmemiş", value: 13.5 },
+  ]}
+/>
+
+Yedi yıllık seri, hangi sorunun çözüldüğünü, hangisinin inatla kaldığını gösteriyor. Sayfa dili eksikliği
+%33,1'den %13,5'e indi; düzeltmesi tek satır olduğu için hızla azaldı. Eksik alternatif metin %68'den
+%53,1'e geriledi. Düşük kontrast ise yerinde sayıyor ve form etiketi eksikliği 2023'ten beri yeniden artıyor.
+
+<TrendChart
+  title="İki yaygın hatanın yıllara göre seyri"
+  caption="Hatanın görüldüğü ana sayfaların oranı, yüzde. Kaynak: WebAIM Million 2026."
+  unit="%"
+  max={100}
+  labels={["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"]}
+  dataTableLabel="Veriyi tablo olarak göster"
+  series={[
+    { name: "Düşük kontrastlı metin", points: [85.3, 86.3, 86.4, 83.9, 83.6, 81, 79.1, 83.9] },
+    { name: "Eksik alternatif metin", points: [68, 66, 60.6, 55.4, 58.2, 54.5, 55.5, 53.1], muted: true },
+  ]}
+/>
+
+Bu altı hatanın her biri bir e-ticaret sitesinde doğrudan satış yolunu etkiliyor: okunamayan fiyat,
+ekran okuyucunun "görsel" diye geçtiği ürün fotoğrafı, adı olmayan arama kutusu, sepete ekle yerine
+"buton" diye okunan simge. Form tarafındaki ayrıntılar için
+[erişilebilir form tasarımı rehberimize](/tr/blog/erisilebilir-web-tasarimi-form-rehberi) bakabilirsiniz.
+
+## Kalan sürede nereden başlamalı?
+
+E-ticaret siteleri için Haziran 2027'ye kadar yapılabilecek çalışma, sırası doğru kurulduğunda bir
+yeniden tasarım projesi değil, bir düzeltme planıdır:
+
+| Adım | Ne yapılır | Çıktı |
+|---|---|---|
+| 1. Kapsam | Ana sayfa, kategori, ürün, sepet, ödeme, üyelik ve iletişim akışlarını listeleyin | Denetlenecek sayfa ve akış listesi |
+| 2. Otomatik tarama | Bu sayfaları bir erişilebilirlik aracıyla tarayın | Hata türüne göre gruplanmış liste |
+| 3. Hızlı düzeltmeler | Sayfa dili, alternatif metin, boş bağlantı ve butonlara erişilebilir ad | Hataların büyük kısmının kapanması |
+| 4. Tasarım düzeltmeleri | Renk paletinde kontrast, görünür odak halkası, yeterli dokunma alanı | Güncellenmiş tasarım sistemi |
+| 5. Görev testleri | Klavyeyle ve ekran okuyucuyla ürün bulma, sepete ekleme ve ödeme | Akış bazında test sonucu |
+| 6. Süreç | Yeni içerik ve kampanya sayfaları için kontrol listesi | Hatanın geri gelmemesi |
+
+<Callout type="tip" title="Önce ortak bileşenleri düzeltin">
+  Hataların çoğu tekil sayfalarda değil, her sayfada tekrar eden üst menü, ürün kartı, filtre ve
+  form bileşenlerinde. Bir bileşeni düzeltmek, aynı hatayı yüzlerce sayfadan birden kaldırır.
+  Tema veya hazır altyapı kullanıyorsanız sorunun temadan mı, sizin eklemelerinizden mi geldiğini
+  ayırmak da bu aşamada netleşir.
+</Callout>
+
+## Yaygın hatalar
+
+- **Erişilebilirlik eklentisiyle "uyumlu" olduğunu sanmak.** Sayfaya yüklenen bir araç çubuğu kontrast
+  veya yazı boyutu düğmesi ekler; eksik etiketleri, klavyeyle kullanılamayan menüyü veya adı olmayan
+  butonu düzeltmez.
+- **Yalnızca otomatik taramaya güvenmek.** Tarama yapısal hataları bulur; ödeme adımının klavyeyle
+  tamamlanıp tamamlanmadığını göstermez.
+- **Yalnızca ana sayfayı düzeltmek.** Denetlenen ve kullanıcının işini gördüğü yer çoğu zaman ürün,
+  sepet ve ödeme sayfaları.
+- **Mobil uygulamayı unutmak.** Genelge web siteleriyle birlikte mobil uygulamaları da kapsıyor.
+- **Bir kez yapıp bırakmak.** Her yeni kampanya sayfası, banner veya ürün görseli eski hatayı geri
+  getirebilir; kontrol listesi içerik sürecinin parçası olmalı.
+
+## Sonuç
+
+Genelge, Türkiye'de erişilebilirliği ilk kez geniş bir özel sektör grubu için süreli bir yükümlülüğe
+çevirdi. Kurumların çoğu için süre doldu; e-ticaret sitelerinin önünde Haziran 2027'ye kadar zaman
+var. WebAIM verisi hem durumun ne kadar yaygın olduğunu hem de işin nereden başlayacağını gösteriyor:
+hataların %96'sı altı tekrar eden sorundan geliyor ve bunların çoğu ortak bileşenlerde düzeltiliyor.
+
+Mevcut sitenizin erişilebilirlik durumunu birlikte çıkarmak isterseniz
+[web tasarım](/tr/hizmetler/web-tasarim), [e-ticaret](/tr/hizmetler/e-ticaret) ve
+[bakım ve destek](/tr/hizmetler/bakim-ve-destek) hizmet sayfalarımıza bakabilir ya da doğrudan
+[iletişime geçebilirsiniz](/tr/iletisim).
